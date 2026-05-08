@@ -15,6 +15,7 @@
     winnerPages: 1,
     delayMs: 505,
     localServerTimeoutMs: 4000,
+    localServerPostTimeoutMs: 15000,
     retryDelayMs: 8000,
     maxRetries: 3,
   };
@@ -615,13 +616,25 @@
   }
 
   async function postToLocalServer(payload) {
-    const response = await fetch(LOCAL_SERVER_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
-    if (!response.ok) {
-      throw new Error(`Local server responded with ${response.status}`);
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(() => controller.abort(), SETTINGS.localServerPostTimeoutMs);
+    try {
+      const response = await fetch(LOCAL_SERVER_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+        signal: controller.signal,
+      });
+      if (!response.ok) {
+        throw new Error(`Local server responded with ${response.status}`);
+      }
+    } catch (error) {
+      if (error?.name === "AbortError") {
+        throw new Error("Local server save timed out.");
+      }
+      throw error;
+    } finally {
+      window.clearTimeout(timeoutId);
     }
   }
 

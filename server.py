@@ -1509,14 +1509,13 @@ class Handler(SimpleHTTPRequestHandler):
                 payload.setdefault("savedAt", utc_now())
                 existing = load_json(SYNC_PATH, {})
                 merged = merge_sync_payload(existing, payload)
-                enriched = enrich_sync_payload_with_media(merged)
-                save_json(SYNC_PATH, enriched)
+                save_json(SYNC_PATH, merged)
                 self.write_json(
                     {
                         "ok": True,
-                        "savedAt": enriched["savedAt"],
-                        "members": len(enriched.get("members", [])),
-                        "giveaways": len(enriched.get("giveaways", [])),
+                        "savedAt": merged["savedAt"],
+                        "members": len(merged.get("members", [])),
+                        "giveaways": len(merged.get("giveaways", [])),
                     }
                 )
                 return

@@ -19,6 +19,7 @@
   const groupBase = `${window.location.origin}${groupMatch[1]}`;
   const LOCAL_SERVER_URL = "http://127.0.0.1:4173/api/steamgifts-sync";
   const LOCAL_SERVER_TIMEOUT_MS = 4000;
+  const LOCAL_SERVER_POST_TIMEOUT_MS = 15000;
   const state = {
     running: false,
     panel: null,
@@ -659,20 +660,28 @@
   }
 
   async function postToLocalServer(payload) {
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(() => controller.abort(), LOCAL_SERVER_POST_TIMEOUT_MS);
     try {
       const response = await fetch(LOCAL_SERVER_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
+        signal: controller.signal,
       });
       if (!response.ok) {
         throw new Error(`Servidor local respondeu ${response.status}`);
       }
     } catch (error) {
       downloadFallback(payload);
+      if (error?.name === "AbortError") {
+        throw new Error("Local server save timed out. The JSON file was downloaded for manual import.");
+      }
       throw new Error(
         "Could not send data to the local server. The JSON file was downloaded for manual import.",
       );
+    } finally {
+      window.clearTimeout(timeoutId);
     }
   }
 
