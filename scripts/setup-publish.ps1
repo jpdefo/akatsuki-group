@@ -33,6 +33,10 @@ function Test-CommandVersion {
   }
 }
 
+function Test-PythonAvailable {
+  return (Test-CommandVersion -CommandName "python") -or (Test-CommandVersion -CommandName "py" -Arguments @("-3", "--version"))
+}
+
 function Get-BrowserPath {
   $candidates = @(
     "C:\Program Files\Google\Chrome\Application\chrome.exe",
@@ -63,7 +67,8 @@ function Ensure-WingetPackage {
     [string]$PackageId,
     [string]$DisplayName,
     [scriptblock]$InstalledCheck,
-    [switch]$RefreshPathAfterInstall
+    [switch]$RefreshPathAfterInstall,
+    [string]$Scope
   )
 
   if (& $InstalledCheck) {
@@ -80,20 +85,55 @@ function Ensure-WingetPackage {
     "--accept-source-agreements",
     "--disable-interactivity"
   )
+  if ($Scope) {
+    $arguments += @("--scope", $Scope)
+  }
 
   if ($DryRun) {
     Write-Host "[dry-run] winget $($arguments -join ' ')"
+    return
   } else {
     Write-Host "Installing $DisplayName..."
     & winget @arguments
-    if ($LASTEXITCODE -ne 0) {
-      throw "winget failed while installing $DisplayName."
-    }
   }
 
   if ($RefreshPathAfterInstall) {
     Refresh-SessionPath
   }
+
+  if (& $InstalledCheck) {
+    return
+  }
+
+  $exitCode = $LASTEXITCODE
+  $scopeLabel = if ($Scope) { " (scope: $Scope)" } else { "" }
+  throw "winget failed while installing $DisplayName from $PackageId$scopeLabel. Exit code: $exitCode"
+}
+
+function Ensure-PythonInstalled {
+  if (Test-PythonAvailable) {
+    Write-Host "Python 3 already installed."
+    return
+  }
+
+  $pythonPackages = @(
+    "Python.Python.3.13",
+    "Python.Python.3.12",
+    "Python.Python.3.11"
+  )
+
+  foreach ($packageId in $pythonPackages) {
+    try {
+      Ensure-WingetPackage -PackageId $packageId -DisplayName "Python 3" -InstalledCheck {
+        Test-PythonAvailable
+      } -RefreshPathAfterInstall -Scope "user"
+      return
+    } catch {
+      Write-Warning $_.Exception.Message
+    }
+  }
+
+  throw "Could not install Python 3 automatically. Install Python manually from https://www.python.org/downloads/windows/ and rerun setup-publish.cmd."
 }
 
 function Invoke-Checked {
@@ -116,9 +156,7 @@ function Invoke-Checked {
 
 Write-Host "Preparing this machine for publish-snapshot.cmd..."
 
-Ensure-WingetPackage -PackageId "Python.Python.3.13" -DisplayName "Python 3" -InstalledCheck {
-  Test-CommandVersion -CommandName "python"
-} -RefreshPathAfterInstall
+Ensure-PythonInstalled
 
 Ensure-WingetPackage -PackageId "OpenJS.NodeJS.LTS" -DisplayName "Node.js LTS" -InstalledCheck {
   Test-CommandVersion -CommandName "node"

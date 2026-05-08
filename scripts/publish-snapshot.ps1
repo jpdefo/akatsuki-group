@@ -25,6 +25,32 @@ $serverHealthUrl = $bookmarkletHelperUrl
 $syncPath = Join-Path $repoRoot "data\steamgifts-sync.json"
 $startedServer = $null
 
+function Get-PythonRuntime {
+  $python = Get-Command python -ErrorAction SilentlyContinue
+  if ($python) {
+    return [pscustomobject]@{
+      FilePath = $python.Source
+      Arguments = @()
+    }
+  }
+
+  $py = Get-Command py -ErrorAction SilentlyContinue
+  if ($py) {
+    return [pscustomobject]@{
+      FilePath = $py.Source
+      Arguments = @("-3")
+    }
+  }
+
+  return $null
+}
+
+function Invoke-Python {
+  param([string[]]$Arguments)
+
+  & $script:pythonRuntime.FilePath @($script:pythonRuntime.Arguments + $Arguments)
+}
+
 function Get-BrowserPath {
   param([string]$Name)
 
@@ -105,8 +131,7 @@ function Start-LocalServerIfNeeded {
     return $null
   }
 
-  $python = Get-Command python -ErrorAction Stop
-  $serverProcess = Start-Process -FilePath $python.Source -ArgumentList @("server.py") -WorkingDirectory $repoRoot -PassThru
+  $serverProcess = Start-Process -FilePath $script:pythonRuntime.FilePath -ArgumentList @($script:pythonRuntime.Arguments + @("server.py")) -WorkingDirectory $repoRoot -PassThru
   Wait-LocalServer
   return $serverProcess
 }
@@ -201,7 +226,7 @@ function Invoke-CheckedExternal {
   }
 }
 
-if (-not (Get-Command python -ErrorAction SilentlyContinue)) {
+if (-not ($script:pythonRuntime = Get-PythonRuntime)) {
   throw "Python is required."
 }
 
@@ -221,7 +246,7 @@ try {
       throw "Public SteamGifts sync failed."
     }
 
-    Invoke-CheckedExternal "Merging public SteamGifts sync..." { python server.py --merge-sync-file data/steamgifts-sync.public.json }
+    Invoke-CheckedExternal "Merging public SteamGifts sync..." { Invoke-Python @("server.py", "--merge-sync-file", "data/steamgifts-sync.public.json") }
   } else {
     $startedServer = Start-LocalServerIfNeeded
     $baseline = Get-SyncMarker
@@ -235,9 +260,9 @@ try {
   }
 
   if ($FullRefresh) {
-    Invoke-CheckedExternal "Refreshing Steam progress for all active members..." { python server.py --refresh-steam-progress --full-refresh }
+    Invoke-CheckedExternal "Refreshing Steam progress for all active members..." { Invoke-Python @("server.py", "--refresh-steam-progress", "--full-refresh") }
   } else {
-    Invoke-CheckedExternal "Refreshing Steam progress..." { python server.py --refresh-steam-progress }
+    Invoke-CheckedExternal "Refreshing Steam progress..." { Invoke-Python @("server.py", "--refresh-steam-progress") }
   }
 
   if (Test-Path "data/steamgifts-sync.public.json") {
