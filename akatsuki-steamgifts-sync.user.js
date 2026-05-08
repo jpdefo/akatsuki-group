@@ -18,6 +18,7 @@
 
   const groupBase = `${window.location.origin}${groupMatch[1]}`;
   const LOCAL_SERVER_URL = "http://127.0.0.1:4173/api/steamgifts-sync";
+  const LOCAL_SERVER_TIMEOUT_MS = 4000;
   const state = {
     running: false,
     panel: null,
@@ -289,14 +290,21 @@
   }
 
   async function loadExistingSync() {
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(() => controller.abort(), LOCAL_SERVER_TIMEOUT_MS);
     try {
-      const response = await fetch(LOCAL_SERVER_URL);
+      const response = await fetch(LOCAL_SERVER_URL, { signal: controller.signal });
       if (!response.ok) {
         return {};
       }
       return await response.json();
     } catch (error) {
+      if (error?.name === "AbortError") {
+        log("Existing sync timed out; continuing fresh.");
+      }
       return {};
+    } finally {
+      window.clearTimeout(timeoutId);
     }
   }
 

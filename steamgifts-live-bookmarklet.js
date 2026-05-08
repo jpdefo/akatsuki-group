@@ -14,6 +14,7 @@
     giveawayPages: 1,
     winnerPages: 1,
     delayMs: 505,
+    localServerTimeoutMs: 4000,
     retryDelayMs: 8000,
     maxRetries: 3,
   };
@@ -63,6 +64,7 @@
     configureRun();
     state.running = true;
     try {
+      log("Loading existing local sync...");
       const existingSync = await loadExistingSync();
       log("Reading group members...");
       const members = await collectMembers(existingSync);
@@ -283,14 +285,22 @@
   }
 
   async function loadExistingSync() {
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(() => controller.abort(), SETTINGS.localServerTimeoutMs);
     try {
-      const response = await fetch(LOCAL_SERVER_URL);
+      const response = await fetch(LOCAL_SERVER_URL, { signal: controller.signal });
       if (!response.ok) {
         return {};
       }
       return await response.json();
     } catch (error) {
+      if (error?.name === "AbortError") {
+        log("Local sync read timed out; continuing without cached sync.");
+        return {};
+      }
       return {};
+    } finally {
+      window.clearTimeout(timeoutId);
     }
   }
 

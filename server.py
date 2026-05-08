@@ -1242,8 +1242,7 @@ def collect_progress_targets(
     }
     eligible_wins = []
     available_months = set()
-    media_cache = load_json(MEDIA_CACHE_PATH, empty_media_cache())
-    media_cache_changed = False
+    media_lookup = build_media_lookup(load_json(MEDIA_CACHE_PATH, empty_media_cache()))
     release_by_code: dict[str, str] = {}
     release_by_app_id: dict[int, str] = {}
     release_by_title: dict[str, str] = {}
@@ -1252,22 +1251,15 @@ def collect_progress_targets(
         code = str(giveaway.get("code") or "")
         app_id = parse_int(giveaway.get("appId"))
         title = str(giveaway.get("title") or "")
-        release_date = normalize_store_release_date(giveaway.get("releaseDate"))
-        if not release_date and app_id:
-            before = json.dumps(media_cache.get("apps", {}).get(str(app_id)))
-            cached_media = get_media_cache_entry(app_id, media_cache, fetch_missing=True)
-            if json.dumps(cached_media) != before:
-                media_cache_changed = True
-            release_date = normalize_store_release_date(cached_media.get("releaseDate"))
+        release_date = normalize_store_release_date(
+            giveaway.get("releaseDate") or (media_lookup.get(app_id) or {}).get("releaseDate")
+        )
         if code and release_date:
             release_by_code[code] = release_date
         if app_id and release_date:
             release_by_app_id[app_id] = release_date
         if title and release_date:
             release_by_title[title] = release_date
-
-    if media_cache_changed:
-        save_json(MEDIA_CACHE_PATH, media_cache)
 
     for win in derive_wins(sync_payload):
         username = win.get("winnerUsername") or win.get("username")
@@ -1458,7 +1450,15 @@ class Handler(SimpleHTTPRequestHandler):
             parsed = urlparse(self.path)
             query = parse_qs(parsed.query)
             if parsed.path == "/api/steamgifts-sync":
-                self.write_json(enrich_sync_payload_with_media(load_json(SYNC_PATH, {})))
+                if SYNC_PATH.exists():
+                    body = SYNC_PATH.read_bytes()
+                    self.send_response(HTTPStatus.OK)
+                    self.send_header("Content-Type", "application/json; charset=utf-8")
+                    self.send_header("Content-Length", str(len(body)))
+                    self.end_headers()
+                    self.wfile.write(body)
+                else:
+                    self.write_json({})
                 return
             if parsed.path == "/api/steam-progress":
                 self.write_json(load_json(PROGRESS_PATH, empty_progress_payload()))
