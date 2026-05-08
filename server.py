@@ -1557,6 +1557,7 @@ def export_static_site(output_dir: Path) -> None:
     api_dir.mkdir(parents=True, exist_ok=True)
 
     static_files = [
+        "admin.html",
         "index.html",
         "monthly-progress.html",
         "app.js",

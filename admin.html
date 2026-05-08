@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akatsuki Admin Tools</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f1115'/%3E%3Cpath d='M32 10 50 20v24L32 54 14 44V20z' fill='%236ea8fe'/%3E%3Cpath d='M32 18 43 24v16L32 46 21 40V24z' fill='%23171b22'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Admin tools</p>
+          <h1>Akatsuki Sync Tools</h1>
+          <p class="hero-copy">
+            Keep the old JavaScript collector flow here, away from the public dashboard.
+          </p>
+          <p class="hero-copy">
+            You can still run the userscript or bookmarklet exactly like before, let it save/post
+            the SteamGifts data, and then load or publish the updated snapshot.
+          </p>
+        </div>
+        <div class="hero-actions">
+          <a class="button secondary" href="index.html">Overview dashboard</a>
+          <a class="button secondary" href="monthly-progress.html">Monthly-only view</a>
+          <a class="button secondary" href="active-users.html">Active users</a>
+          <a class="button secondary" href="inactive-users.html">Inactive users</a>
+        </div>
+      </header>
+
+      <main class="grid two-columns">
+        <section class="card">
+          <div class="section-heading">
+            <div>
+              <h2>Manual SteamGifts sync</h2>
+              <p class="section-copy">
+                Fast path: run <code>python server.py</code>, open SteamGifts while logged in,
+                run the collector JavaScript, then click <strong>Load server sync</strong>.
+              </p>
+            </div>
+          </div>
+          <div class="sync-actions">
+            <button id="sync-refresh" class="button primary">Load server sync</button>
+            <a class="button secondary" href="akatsuki-steamgifts-sync.user.js" download>Download SteamGifts collector</a>
+            <a class="button secondary" href="bookmarklet-helper.html">Open bookmarklet helper</a>
+            <label class="button secondary">
+              Import SteamGifts JSON
+              <input id="import-data" type="file" accept=".json,application/json" hidden />
+            </label>
+          </div>
+          <div id="sync-status" class="sync-status"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-heading">
+            <div>
+              <h2>Publish snapshot</h2>
+              <p class="section-copy">
+                GitHub Pages is read-only. Importing JSON here updates your browser locally;
+                publishing is what makes the public site change.
+              </p>
+            </div>
+          </div>
+          <div class="sync-actions">
+            <button id="export-data" class="button secondary">Export current browser state</button>
+            <span class="meta-line sync-hint">
+              Preferred local publish command: <code>publish-snapshot.cmd -Browser chrome</code>
+            </span>
+            <span class="meta-line sync-hint">
+              If you only want to preview imported data locally, you do not need to publish.
+            </span>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <template id="empty-state-template">
+      <div class="empty-state">
+        <strong>No data yet.</strong>
+        <span>Run a SteamGifts sync to populate the dashboard.</span>
+      </div>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>

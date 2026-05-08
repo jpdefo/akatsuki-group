@@ -286,7 +286,7 @@ function renderSyncStatus() {
     elements.syncStatus.innerHTML = `
       <article class="alert-card info">
         <h3>No SteamGifts sync loaded</h3>
-        <p>Start the local server and run the collector from the group page to import members, giveaways, wins and Steam profile links automatically.</p>
+        <p>Open the Admin tools page to import a SteamGifts JSON file, or start the local server and run the collector/bookmarklet from the group page.</p>
       </article>
     `;
     return;

@@ -31,6 +31,7 @@
           <a class="button secondary" href="active-users.html">Open active users</a>
           <a class="button secondary" href="inactive-users.html">Open inactive users</a>
           <a class="button secondary" href="monthly-progress.html">Open monthly-only view</a>
+          <a class="button secondary" href="admin.html">Admin tools</a>
         </div>
       </header>
 
@@ -40,8 +41,8 @@
             <div>
               <h2>Automatic sync</h2>
               <p class="section-copy">
-                Run the local server, trigger the collector from a logged-in
-                SteamGifts session, then refresh Steam progress.
+                Local refresh controls for admin use. The collector, bookmarklet,
+                and manual JSON import live in the Admin tools page.
               </p>
             </div>
           </div>
@@ -49,9 +50,6 @@
             <button id="sync-refresh" class="button primary">Load server sync</button>
             <button id="steam-refresh" class="button secondary">Refresh selected month</button>
             <button id="steam-refresh-all" class="button secondary">Full active refresh</button>
-            <a class="button secondary" href="akatsuki-steamgifts-sync.user.js" download
-              >Download SteamGifts collector</a
-            >
             <span class="meta-line sync-hint">Run <code>publish-snapshot.cmd</code> locally when you want to publish a new snapshot.</span>
           </div>
           <div id="sync-status" class="sync-status"></div>
