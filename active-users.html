@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akatsuki Active Users</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f1115'/%3E%3Cpath d='M32 10 50 20v24L32 54 14 44V20z' fill='%236ea8fe'/%3E%3Cpath d='M32 18 43 24v16L32 46 21 40V24z' fill='%23171b22'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Admin dashboard</p>
+          <h1>Akatsuki Active Users</h1>
+          <p class="hero-copy">
+            Current Akatsuki members from the latest group users sync.
+          </p>
+        </div>
+        <div class="sync-actions">
+          <a class="button secondary" href="index.html">Monthly dashboard</a>
+          <a class="button secondary" href="inactive-users.html">Inactive users</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="card">
+          <div class="section-heading">
+            <div>
+              <h2>Automatic sync</h2>
+              <p class="section-copy">
+                Load the server sync here too if you want to refresh this page directly.
+              </p>
+            </div>
+          </div>
+          <div class="sync-actions">
+            <button id="sync-refresh" class="button primary">Load server sync</button>
+            <button id="steam-refresh" class="button secondary">Refresh Steam progress</button>
+          </div>
+          <div id="sync-status" class="sync-status"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-heading">
+            <div>
+              <h2>Group snapshot</h2>
+              <p class="section-copy">
+                Live values derived from the latest SteamGifts sync.
+              </p>
+            </div>
+          </div>
+          <div id="group-snapshot" class="summary-grid"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-heading">
+            <div>
+              <h2>Active users</h2>
+              <p class="section-copy">
+                Current Akatsuki members, with totals built from synced wins and Steam progress.
+              </p>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>User</th>
+                  <th>Total wins</th>
+                  <th>Total playtime</th>
+                  <th>Avg achv %</th>
+                  <th>Threshold met</th>
+                </tr>
+              </thead>
+              <tbody id="active-users-table"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <template id="empty-state-template">
+      <div class="empty-state">
+        <strong>No data yet.</strong>
+        <span>Run a SteamGifts sync to populate the dashboard.</span>
+      </div>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>

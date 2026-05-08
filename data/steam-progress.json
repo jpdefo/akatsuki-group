@@ -1,0 +1,6015 @@
+{
+  "updatedAt": "2026-05-08T05:43:18.780387+00:00",
+  "progress": [
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 813230,
+      "title": "ANIMAL WELL",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/813230/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 1030300,
+      "title": "Hollow Knight: Silksong",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/1030300/achievements/",
+      "visible": true,
+      "earnedAchievements": 7,
+      "totalAchievements": 52,
+      "achievementPercent": 13,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 1111230,
+      "title": "FINAL FANTASY XVI COMPLETE EDITION",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/1111230/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": 5.6,
+      "error": null
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 1121640,
+      "title": "The Wandering Village",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/1121640/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 1262350,
+      "title": "SIGNALIS",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/1262350/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 1449110,
+      "title": "The Outer Worlds 2",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/1449110/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 1501750,
+      "title": "Lords of the Fallen",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/1501750/achievements/",
+      "visible": true,
+      "earnedAchievements": 6,
+      "totalAchievements": 77,
+      "achievementPercent": 8,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 1809540,
+      "title": "Nine Sols",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/1809540/achievements/",
+      "visible": true,
+      "earnedAchievements": 4,
+      "totalAchievements": 35,
+      "achievementPercent": 11,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 1941540,
+      "title": "Mafia: The Old Country",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/1941540/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 2101960,
+      "title": "Cronos: The New Dawn",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2101960/achievements/",
+      "visible": true,
+      "earnedAchievements": 29,
+      "totalAchievements": 47,
+      "achievementPercent": 62,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 2231450,
+      "title": "Pizza Tower",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2231450/achievements/",
+      "visible": true,
+      "earnedAchievements": 2,
+      "totalAchievements": 74,
+      "achievementPercent": 3,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 2362060,
+      "title": "CODE VEIN II",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2362060/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 2420110,
+      "title": "Horizon Forbidden West Complete Edition",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2420110/achievements/",
+      "visible": true,
+      "earnedAchievements": 36,
+      "totalAchievements": 80,
+      "achievementPercent": 45,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 2457220,
+      "title": "Avowed",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2457220/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 2545710,
+      "title": "Tony Hawk's Pro Skater 3 + 4",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2545710/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 2677660,
+      "title": "Indiana Jones and the Great Circle",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2677660/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 3017860,
+      "title": "DOOM: The Dark Ages",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/3017860/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 3288210,
+      "title": "Super Meat Boy 3D",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/3288210/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 3378960,
+      "title": "Lost Soul Aside",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/3378960/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 3489700,
+      "title": "Stellar Blade",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/3489700/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 458430,
+      "title": "Steel Seed",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/458430/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 490110,
+      "title": "The Precinct",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/490110/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 39,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 1004640,
+      "title": "FINAL FANTASY TACTICS - The Ivalice C...",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1004640/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 1030300,
+      "title": "Hollow Knight: Silksong",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1030300/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 1333200,
+      "title": "Song of Nunu: A League of Legends Story",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1333200/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 1466860,
+      "title": "Age of Empires IV: Anniversary Edition",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1466860/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 1627720,
+      "title": "Lies of P",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1627720/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 1805480,
+      "title": "Like a Dragon: Ishin!",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1805480/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 1941540,
+      "title": "Mafia: The Old Country",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1941540/achievements/",
+      "visible": true,
+      "earnedAchievements": 32,
+      "totalAchievements": 55,
+      "achievementPercent": 58,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 2172010,
+      "title": "Until Dawn",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/2172010/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 2239710,
+      "title": "Into the Dead: Our Darkest Days",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/2239710/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": 23.0,
+      "error": null
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 2254890,
+      "title": "The Killing Antidote",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/2254890/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 2377280,
+      "title": "Eriksholm: The Stolen Dream",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/2377280/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 2417610,
+      "title": "METAL GEAR SOLID Δ: SNAKE EATER",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/2417610/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 2564520,
+      "title": "Lost in Random: The Eternal Die",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/2564520/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 41,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 2592160,
+      "title": "Dispatch",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/2592160/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 2742830,
+      "title": "Monster Train 2",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/2742830/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 2868840,
+      "title": "Slay the Spire 2",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/2868840/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": 23.0,
+      "error": null
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 3050900,
+      "title": "ROMEO IS A DEAD MAN",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3050900/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 3164500,
+      "title": "Schedule I",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3164500/achievements/",
+      "visible": true,
+      "earnedAchievements": 2,
+      "totalAchievements": 13,
+      "achievementPercent": 15,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 3321460,
+      "title": "Crimson Desert",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 3489700,
+      "title": "Stellar Blade",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3489700/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 45,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 3768760,
+      "title": "007 First Light",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3768760/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": 23.0,
+      "error": null
+    },
+    {
+      "username": "chOOkity",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
+      "appId": 1030300,
+      "title": "Hollow Knight: Silksong",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/1030300/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "chOOkity",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
+      "appId": 1622910,
+      "title": "Still Wakes the Deep",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/1622910/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "chOOkity",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
+      "appId": 1626170,
+      "title": "People of Note",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/1626170/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "chOOkity",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
+      "appId": 1643320,
+      "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/1643320/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "chOOkity",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
+      "appId": 1903340,
+      "title": "Clair Obscur: Expedition 33",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/1903340/achievements/",
+      "visible": true,
+      "earnedAchievements": 19,
+      "totalAchievements": 55,
+      "achievementPercent": 35,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "chOOkity",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
+      "appId": 2001120,
+      "title": "Split Fiction",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2001120/achievements/",
+      "visible": true,
+      "earnedAchievements": 7,
+      "totalAchievements": 20,
+      "achievementPercent": 35,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "chOOkity",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
+      "appId": 2101960,
+      "title": "Cronos: The New Dawn",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2101960/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "chOOkity",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
+      "appId": 2129530,
+      "title": "REANIMAL",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2129530/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "chOOkity",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
+      "appId": 2138720,
+      "title": "REMATCH",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2138720/achievements/",
+      "visible": true,
+      "earnedAchievements": 6,
+      "totalAchievements": 37,
+      "achievementPercent": 16,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "chOOkity",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
+      "appId": 2183900,
+      "title": "Warhammer 40,000: Space Marine 2",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2183900/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 50,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "chOOkity",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
+      "appId": 2416450,
+      "title": "MOUSE: P.I. For Hire",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2416450/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 34,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null,
+      "checkedAt": "2026-05-08T05:43:18.168485+00:00"
+    },
+    {
+      "username": "chOOkity",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
+      "appId": 2420660,
+      "title": "Neva",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2420660/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "chOOkity",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
+      "appId": 2531310,
+      "title": "The Last of Us Part II Remastered",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2531310/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "chOOkity",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
+      "appId": 2680010,
+      "title": "The First Berserker: Khazan",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2680010/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "chOOkity",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
+      "appId": 2751000,
+      "title": "Prince of Persia The Lost Crown",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2751000/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 40,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "chOOkity",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
+      "appId": 2863640,
+      "title": "The Midnight Walk",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2863640/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "chOOkity",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
+      "appId": 2968420,
+      "title": "PowerWash Simulator 2",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2968420/achievements/",
+      "visible": true,
+      "earnedAchievements": 40,
+      "totalAchievements": 50,
+      "achievementPercent": 80,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "chOOkity",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
+      "appId": 3047750,
+      "title": "Herdling",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/3047750/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "chOOkity",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
+      "appId": 3419520,
+      "title": "Quarantine Zone: The Last Check",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/3419520/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "chOOkity",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
+      "appId": 3489700,
+      "title": "Stellar Blade",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/3489700/achievements/",
+      "visible": true,
+      "earnedAchievements": 5,
+      "totalAchievements": 45,
+      "achievementPercent": 11,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Drain",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197970556600",
+      "appId": 532790,
+      "title": "Vampire: The Masquerade - Bloodlines 2",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197970556600/stats/532790/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Drain",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197970556600",
+      "appId": 1663850,
+      "title": "REPLACED",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197970556600/stats/1663850/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 34,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null,
+      "checkedAt": "2026-05-08T05:43:15.649691+00:00"
+    },
+    {
+      "username": "Drain",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197970556600",
+      "appId": 1969370,
+      "title": "LEGO Party!",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197970556600/stats/1969370/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Drain",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197970556600",
+      "appId": 2057760,
+      "title": "Esoteric Ebb",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197970556600/stats/2057760/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Drain",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197970556600",
+      "appId": 2753970,
+      "title": "MARVEL Cosmic Invasion",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197970556600/stats/2753970/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Drain",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197970556600",
+      "appId": 2989180,
+      "title": "Darwin's Paradox!",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197970556600/stats/2989180/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Drain",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197970556600",
+      "appId": 3288210,
+      "title": "Super Meat Boy 3D",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197970556600/stats/3288210/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 26,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null,
+      "checkedAt": "2026-05-08T05:43:17.220750+00:00"
+    },
+    {
+      "username": "Drain",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197970556600",
+      "appId": 3290690,
+      "title": "Styx: Blades of Greed",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197970556600/stats/3290690/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Drain",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197970556600",
+      "appId": 3747730,
+      "title": "Legacy of Kain: Defiance Remastered",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197970556600/stats/3747730/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "eledhrim",
+      "steamProfile": "https://steamcommunity.com/profiles/76561199085338397",
+      "appId": 1346360,
+      "title": "Old Skies",
+      "progressUrl": "https://steamcommunity.com/profiles/76561199085338397/stats/1346360/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "eledhrim",
+      "steamProfile": "https://steamcommunity.com/profiles/76561199085338397",
+      "appId": 1569580,
+      "title": "Blue Prince",
+      "progressUrl": "https://steamcommunity.com/profiles/76561199085338397/stats/1569580/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 16,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "eledhrim",
+      "steamProfile": "https://steamcommunity.com/profiles/76561199085338397",
+      "appId": 1876590,
+      "title": "I Am Your Beast",
+      "progressUrl": "https://steamcommunity.com/profiles/76561199085338397/stats/1876590/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "eledhrim",
+      "steamProfile": "https://steamcommunity.com/profiles/76561199085338397",
+      "appId": 1934570,
+      "title": "South of Midnight",
+      "progressUrl": "https://steamcommunity.com/profiles/76561199085338397/stats/1934570/achievements/",
+      "visible": true,
+      "earnedAchievements": 5,
+      "totalAchievements": 40,
+      "achievementPercent": 13,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "eledhrim",
+      "steamProfile": "https://steamcommunity.com/profiles/76561199085338397",
+      "appId": 2215430,
+      "title": "Ghost of Tsushima DIRECTOR'S CUT",
+      "progressUrl": "https://steamcommunity.com/profiles/76561199085338397/stats/2215430/achievements/",
+      "visible": true,
+      "earnedAchievements": 7,
+      "totalAchievements": 77,
+      "achievementPercent": 9,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Ernesttico",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
+      "appId": 721180,
+      "title": "Dustborn",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/721180/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Ernesttico",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
+      "appId": 924750,
+      "title": "Harold Halibut",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/924750/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 27,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Ernesttico",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
+      "appId": 1229020,
+      "title": "Kona II: Brume",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/1229020/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Ernesttico",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
+      "appId": 1392860,
+      "title": "Little Nightmares III",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/1392860/achievements/",
+      "visible": true,
+      "earnedAchievements": 6,
+      "totalAchievements": 38,
+      "achievementPercent": 16,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Ernesttico",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
+      "appId": 1660840,
+      "title": "Wild Bastards",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/1660840/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Ernesttico",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
+      "appId": 1771360,
+      "title": "Gerda: A Flame in Winter",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/1771360/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Ernesttico",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
+      "appId": 1903340,
+      "title": "Clair Obscur: Expedition 33",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/1903340/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 55,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Ernesttico",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
+      "appId": 2023360,
+      "title": "The Last Case of Benedict Fox Definit...",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/2023360/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Ernesttico",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
+      "appId": 2361770,
+      "title": "SHINOBI: Art of Vengeance",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/2361770/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Ernesttico",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
+      "appId": 2523720,
+      "title": "Gears of War: Reloaded",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/2523720/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Ernesttico",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
+      "appId": 2530490,
+      "title": "Lost Eidolons: Veil of the Witch",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/2530490/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Ernesttico",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
+      "appId": 2624870,
+      "title": "Life is Strange: Reunion",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/2624870/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Ernesttico",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
+      "appId": 2679460,
+      "title": "Metaphor: ReFantazio",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/2679460/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 44,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Ernesttico",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
+      "appId": 2950340,
+      "title": "LEGO Harry Potter Collection",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/2950340/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Ernesttico",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
+      "appId": 2997230,
+      "title": "Planet of Lana II",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/2997230/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Ernesttico",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
+      "appId": 3065800,
+      "title": "Marathon",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/3065800/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Ernesttico",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
+      "appId": 3337140,
+      "title": "After Inc: Revival",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/3337140/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Ernesttico",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
+      "appId": 3483740,
+      "title": "Cast n Chill",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/3483740/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 33,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Ernesttico",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
+      "appId": 3527760,
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/3527760/achievements/",
+      "visible": true,
+      "earnedAchievements": 4,
+      "totalAchievements": 25,
+      "achievementPercent": 16,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Ernesttico",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
+      "appId": 3552140,
+      "title": "Retro Rewind - Video Store Simulator",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/3552140/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 18,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null,
+      "checkedAt": "2026-05-08T05:43:15.009611+00:00"
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 1172710,
+      "title": "Dune: Awakening",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/1172710/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 1309710,
+      "title": "The Stone of Madness",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/1309710/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 1486920,
+      "title": "Tempest Rising",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/1486920/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 1718460,
+      "title": "Terminator 2D: NO FATE",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/1718460/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 1771300,
+      "title": "Kingdom Come: Deliverance II",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/1771300/achievements/",
+      "visible": true,
+      "earnedAchievements": 14,
+      "totalAchievements": 83,
+      "achievementPercent": 17,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 1783560,
+      "title": "The Last Caretaker",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/1783560/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 15,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null,
+      "checkedAt": "2026-05-08T05:43:14.404791+00:00"
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 1808500,
+      "title": "ARC Raiders",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/1808500/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 50,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 1880620,
+      "title": "Once Upon A KATAMARI",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/1880620/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 1928690,
+      "title": "Bionic Bay",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/1928690/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 2000890,
+      "title": "MechWarrior 5: Clans",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/2000890/achievements/",
+      "visible": true,
+      "earnedAchievements": 29,
+      "totalAchievements": 66,
+      "achievementPercent": 44,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 2129530,
+      "title": "REANIMAL",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/2129530/achievements/",
+      "visible": true,
+      "earnedAchievements": 2,
+      "totalAchievements": 31,
+      "achievementPercent": 6,
+      "playtimeHours": null,
+      "error": null,
+      "checkedAt": "2026-05-08T05:43:15.976257+00:00"
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 2208350,
+      "title": "Total Chaos",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/2208350/achievements/",
+      "visible": true,
+      "earnedAchievements": 13,
+      "totalAchievements": 37,
+      "achievementPercent": 35,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 2295610,
+      "title": "Abathor",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/2295610/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 2300120,
+      "title": "Painkiller",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/2300120/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 2432860,
+      "title": "MENACE",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/2432860/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 15,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null,
+      "checkedAt": "2026-05-08T05:43:17.605084+00:00"
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 2719750,
+      "title": "Star Birds",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/2719750/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 3061810,
+      "title": "Like a Dragon: Pirate Yakuza in Hawaii",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/3061810/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 3179730,
+      "title": "Deck of Haunts",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/3179730/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 3552140,
+      "title": "Retro Rewind - Video Store Simulator",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/3552140/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Koalala",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198065466175",
+      "appId": 1888930,
+      "title": "The Last of Us Part I",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/1888930/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 29,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Koalala",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198065466175",
+      "appId": 1903340,
+      "title": "Clair Obscur: Expedition 33",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/1903340/achievements/",
+      "visible": true,
+      "earnedAchievements": 16,
+      "totalAchievements": 55,
+      "achievementPercent": 29,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Koalala",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198065466175",
+      "appId": 2138720,
+      "title": "REMATCH",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/2138720/achievements/",
+      "visible": true,
+      "earnedAchievements": 4,
+      "totalAchievements": 37,
+      "achievementPercent": 11,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Koalala",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198065466175",
+      "appId": 2592160,
+      "title": "Dispatch",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/2592160/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Koalala",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198065466175",
+      "appId": 2668510,
+      "title": "Red Dead Redemption",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/2668510/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Koalala",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198065466175",
+      "appId": 2784470,
+      "title": "9 Kings",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/2784470/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 54,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Koalala",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198065466175",
+      "appId": 3483740,
+      "title": "Cast n Chill",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/3483740/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Koalala",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198065466175",
+      "appId": 3527760,
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/3527760/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 25,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Krlesnik",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198010348380",
+      "appId": 1608070,
+      "title": "CRISIS CORE –FINAL FANTASY VII– REUNION",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198010348380/stats/1608070/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Krlesnik",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198010348380",
+      "appId": 1941540,
+      "title": "Mafia: The Old Country",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198010348380/stats/1941540/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Krlesnik",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198010348380",
+      "appId": 2072450,
+      "title": "Like a Dragon: Infinite Wealth",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198010348380/stats/2072450/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 74,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Krlesnik",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198010348380",
+      "appId": 2254890,
+      "title": "The Killing Antidote",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198010348380/stats/2254890/achievements/",
+      "visible": true,
+      "earnedAchievements": 2,
+      "totalAchievements": 18,
+      "achievementPercent": 11,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Krlesnik",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198010348380",
+      "appId": 2375550,
+      "title": "Like a Dragon Gaiden: The Man Who Era...",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198010348380/stats/2375550/achievements/",
+      "visible": true,
+      "earnedAchievements": 62,
+      "totalAchievements": 62,
+      "achievementPercent": 100,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Krlesnik",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198010348380",
+      "appId": 2377280,
+      "title": "Eriksholm: The Stolen Dream",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198010348380/stats/2377280/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Krlesnik",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198010348380",
+      "appId": 2651280,
+      "title": "Marvel's Spider-Man 2",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198010348380/stats/2651280/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Krlesnik",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198010348380",
+      "appId": 2658450,
+      "title": "LOLLIPOP CHAINSAW RePOP",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198010348380/stats/2658450/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "leniu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
+      "appId": 686060,
+      "title": "Mewgenics",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/686060/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "leniu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
+      "appId": 1154030,
+      "title": "Titan Quest II",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/1154030/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": 167.0,
+      "error": null
+    },
+    {
+      "username": "leniu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
+      "appId": 1299690,
+      "title": "Gori: Cuddly Carnage",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/1299690/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 34,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "leniu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
+      "appId": 1491410,
+      "title": "Eternal Strands",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/1491410/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "leniu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
+      "appId": 1601570,
+      "title": "The Alters",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/1601570/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "leniu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
+      "appId": 1832040,
+      "title": "Flintlock: The Siege of Dawn",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/1832040/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 38,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "leniu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
+      "appId": 1839810,
+      "title": "Out Of Hands",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/1839810/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "leniu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
+      "appId": 1934570,
+      "title": "South of Midnight",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/1934570/achievements/",
+      "visible": true,
+      "earnedAchievements": 28,
+      "totalAchievements": 40,
+      "achievementPercent": 70,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "leniu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
+      "appId": 1941540,
+      "title": "Mafia: The Old Country",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/1941540/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "leniu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
+      "appId": 2101960,
+      "title": "Cronos: The New Dawn",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2101960/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 47,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "leniu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
+      "appId": 2432860,
+      "title": "MENACE",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2432860/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "leniu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
+      "appId": 2518960,
+      "title": "Wizardry: Proving Grounds of the Mad ...",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2518960/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "leniu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
+      "appId": 2623190,
+      "title": "The Elder Scrolls IV: Oblivion Remast...",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2623190/achievements/",
+      "visible": true,
+      "earnedAchievements": 53,
+      "totalAchievements": 60,
+      "achievementPercent": 88,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "leniu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
+      "appId": 2668510,
+      "title": "Red Dead Redemption",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2668510/achievements/",
+      "visible": true,
+      "earnedAchievements": 15,
+      "totalAchievements": 51,
+      "achievementPercent": 29,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "leniu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
+      "appId": 2840770,
+      "title": "Avatar: Frontiers of Pandora",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2840770/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "leniu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
+      "appId": 3527760,
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/3527760/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Millsshogun",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198075996214",
+      "appId": 866570,
+      "title": "System Shock 2: 25th Anniversary Rema...",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/866570/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Millsshogun",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198075996214",
+      "appId": 2947440,
+      "title": "SILENT HILL f",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/2947440/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Millsshogun",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198075996214",
+      "appId": 2993780,
+      "title": "FANTASY LIFE i: The Girl Who Steals Time",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/2993780/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Oozyyy",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197985486812",
+      "appId": 1466060,
+      "title": "Tainted Grail: The Fall of Avalon",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197985486812/stats/1466060/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Oozyyy",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197985486812",
+      "appId": 2420110,
+      "title": "Horizon Forbidden West Complete Edition",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197985486812/stats/2420110/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Oozyyy",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197985486812",
+      "appId": 2623190,
+      "title": "The Elder Scrolls IV: Oblivion Remast...",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197985486812/stats/2623190/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Oozyyy",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197985486812",
+      "appId": 2631250,
+      "title": "Slitterhead",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197985486812/stats/2631250/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Saikania",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198262118401",
+      "appId": 668580,
+      "title": "Atomic Heart",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/668580/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 82,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Saikania",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198262118401",
+      "appId": 686060,
+      "title": "Mewgenics",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/686060/achievements/",
+      "visible": true,
+      "earnedAchievements": 8,
+      "totalAchievements": 281,
+      "achievementPercent": 3,
+      "playtimeHours": null,
+      "error": null,
+      "checkedAt": "2026-05-08T05:43:15.317220+00:00"
+    },
+    {
+      "username": "Saikania",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198262118401",
+      "appId": 1030300,
+      "title": "Hollow Knight: Silksong",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/1030300/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Saikania",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198262118401",
+      "appId": 1092790,
+      "title": "Inscryption",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/1092790/achievements/",
+      "visible": true,
+      "earnedAchievements": 5,
+      "totalAchievements": 40,
+      "achievementPercent": 13,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Saikania",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198262118401",
+      "appId": 1154030,
+      "title": "Titan Quest II",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/1154030/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": 5.4,
+      "error": null
+    },
+    {
+      "username": "Saikania",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198262118401",
+      "appId": 1332010,
+      "title": "Stray",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/1332010/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Saikania",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198262118401",
+      "appId": 1392860,
+      "title": "Little Nightmares III",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/1392860/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Saikania",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198262118401",
+      "appId": 1446650,
+      "title": "BRAVELY DEFAULT II",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/1446650/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Saikania",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198262118401",
+      "appId": 1492730,
+      "title": "DORAEMON STORY OF SEASONS: Friends of...",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/1492730/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Saikania",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198262118401",
+      "appId": 1493640,
+      "title": "Banishers: Ghosts of New Eden",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/1493640/achievements/",
+      "visible": true,
+      "earnedAchievements": 5,
+      "totalAchievements": 43,
+      "achievementPercent": 12,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Saikania",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198262118401",
+      "appId": 1588550,
+      "title": "Cairn",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/1588550/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Saikania",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198262118401",
+      "appId": 1663850,
+      "title": "REPLACED",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/1663850/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Saikania",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198262118401",
+      "appId": 2450840,
+      "title": "Detective Dotson",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/2450840/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Saikania",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198262118401",
+      "appId": 2784470,
+      "title": "9 Kings",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/2784470/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Saikania",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198262118401",
+      "appId": 2909400,
+      "title": "FINAL FANTASY VII REBIRTH",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/2909400/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Saikania",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198262118401",
+      "appId": 3008130,
+      "title": "Dying Light: The Beast",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/3008130/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Saikania",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198262118401",
+      "appId": 3167020,
+      "title": "Escape From Duckov",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/3167020/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Skull18",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198107454289",
+      "appId": 2062430,
+      "title": "BALL x PIT",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198107454289/stats/2062430/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Thedogma",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198011705129",
+      "appId": 1392860,
+      "title": "Little Nightmares III",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198011705129/stats/1392860/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Thedogma",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198011705129",
+      "appId": 1569580,
+      "title": "Blue Prince",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198011705129/stats/1569580/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Thedogma",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198011705129",
+      "appId": 2592160,
+      "title": "Dispatch",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198011705129/stats/2592160/achievements/",
+      "visible": true,
+      "earnedAchievements": 4,
+      "totalAchievements": 36,
+      "achievementPercent": 11,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Thedogma",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198011705129",
+      "appId": 2968420,
+      "title": "PowerWash Simulator 2",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198011705129/stats/2968420/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Wintermute101",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
+      "appId": 686060,
+      "title": "Mewgenics",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/686060/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Wintermute101",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
+      "appId": 1145350,
+      "title": "Hades II",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/1145350/achievements/",
+      "visible": true,
+      "earnedAchievements": 27,
+      "totalAchievements": 50,
+      "achievementPercent": 54,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Wintermute101",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
+      "appId": 1154030,
+      "title": "Titan Quest II",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/1154030/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": 17.6,
+      "error": null
+    },
+    {
+      "username": "Wintermute101",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
+      "appId": 1626170,
+      "title": "People of Note",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/1626170/achievements/",
+      "visible": true,
+      "earnedAchievements": 1,
+      "totalAchievements": 39,
+      "achievementPercent": 3,
+      "playtimeHours": null,
+      "error": null,
+      "checkedAt": "2026-05-08T05:43:13.958290+00:00"
+    },
+    {
+      "username": "Wintermute101",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
+      "appId": 1718460,
+      "title": "Terminator 2D: NO FATE",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/1718460/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Wintermute101",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
+      "appId": 1902960,
+      "title": "Lost Records: Bloom & Rage",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/1902960/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Wintermute101",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
+      "appId": 1903340,
+      "title": "Clair Obscur: Expedition 33",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/1903340/achievements/",
+      "visible": true,
+      "earnedAchievements": 44,
+      "totalAchievements": 55,
+      "achievementPercent": 80,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Wintermute101",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
+      "appId": 2416450,
+      "title": "MOUSE: P.I. For Hire",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2416450/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Wintermute101",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
+      "appId": 2417610,
+      "title": "METAL GEAR SOLID Δ: SNAKE EATER",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2417610/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Wintermute101",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
+      "appId": 2592160,
+      "title": "Dispatch",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2592160/achievements/",
+      "visible": true,
+      "earnedAchievements": 17,
+      "totalAchievements": 36,
+      "achievementPercent": 47,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Wintermute101",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
+      "appId": 2868840,
+      "title": "Slay the Spire 2",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2868840/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": 17.6,
+      "error": null,
+      "checkedAt": "2026-05-08T05:43:16.560738+00:00"
+    },
+    {
+      "username": "Wintermute101",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
+      "appId": 3489700,
+      "title": "Stellar Blade",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3489700/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Wintermute101",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
+      "appId": 3527760,
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3527760/achievements/",
+      "visible": true,
+      "earnedAchievements": 21,
+      "totalAchievements": 25,
+      "achievementPercent": 84,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "WNDRLST",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198125763485",
+      "appId": 686060,
+      "title": "Mewgenics",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198125763485/stats/686060/achievements/",
+      "visible": true,
+      "earnedAchievements": 85,
+      "totalAchievements": 281,
+      "achievementPercent": 30,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "WNDRLST",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198125763485",
+      "appId": 1809540,
+      "title": "Nine Sols",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198125763485/stats/1809540/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "xMisiu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198082091554",
+      "appId": 1601570,
+      "title": "The Alters",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/1601570/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "xMisiu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198082091554",
+      "appId": 1608070,
+      "title": "CRISIS CORE –FINAL FANTASY VII– REUNION",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/1608070/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "xMisiu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198082091554",
+      "appId": 1934680,
+      "title": "Age of Mythology: Retold",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/1934680/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "xMisiu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198082091554",
+      "appId": 2129530,
+      "title": "REANIMAL",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/2129530/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "xMisiu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198082091554",
+      "appId": 2407270,
+      "title": "AI LIMIT",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/2407270/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "xMisiu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198082091554",
+      "appId": 2416450,
+      "title": "MOUSE: P.I. For Hire",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/2416450/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "xMisiu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198082091554",
+      "appId": 2677660,
+      "title": "Indiana Jones and the Great Circle",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/2677660/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "xMisiu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198082091554",
+      "appId": 2680010,
+      "title": "The First Berserker: Khazan",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/2680010/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "xMisiu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198082091554",
+      "appId": 2756920,
+      "title": "Keep Driving",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/2756920/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Youdontknow",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198121640255",
+      "appId": 881020,
+      "title": "Granblue Fantasy: Relink",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198121640255/stats/881020/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Youdontknow",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198121640255",
+      "appId": 1004640,
+      "title": "FINAL FANTASY TACTICS - The Ivalice C...",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198121640255/stats/1004640/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Youdontknow",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198121640255",
+      "appId": 1659420,
+      "title": "UNCHARTED: Legacy of Thieves Collection",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198121640255/stats/1659420/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 101,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Youdontknow",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198121640255",
+      "appId": 1671210,
+      "title": "DELTARUNE",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198121640255/stats/1671210/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": 264.0,
+      "error": null
+    },
+    {
+      "username": "Youdontknow",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198121640255",
+      "appId": 1783560,
+      "title": "The Last Caretaker",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198121640255/stats/1783560/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Youdontknow",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198121640255",
+      "appId": 2161700,
+      "title": "Persona 3 Reload",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198121640255/stats/2161700/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Youdontknow",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198121640255",
+      "appId": 2288350,
+      "title": "RAIDOU Remastered: The Mystery of the...",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198121640255/stats/2288350/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Youdontknow",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198121640255",
+      "appId": 2393920,
+      "title": "Angeline Era",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198121640255/stats/2393920/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "Youdontknow",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198121640255",
+      "appId": 3156770,
+      "title": "Witchfire",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198121640255/stats/3156770/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "zettaivanugen",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197975039366",
+      "appId": 1147860,
+      "title": "UFO 50",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/1147860/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "zettaivanugen",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197975039366",
+      "appId": 1466060,
+      "title": "Tainted Grail: The Fall of Avalon",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/1466060/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "zettaivanugen",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197975039366",
+      "appId": 1868140,
+      "title": "DAVE THE DIVER",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/1868140/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "zettaivanugen",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197975039366",
+      "appId": 2756920,
+      "title": "Keep Driving",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/2756920/achievements/",
+      "visible": true,
+      "earnedAchievements": 9,
+      "totalAchievements": 17,
+      "achievementPercent": 53,
+      "playtimeHours": null,
+      "error": null
+    },
+    {
+      "username": "zettaivanugen",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197975039366",
+      "appId": 2868840,
+      "title": "Slay the Spire 2",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/2868840/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": 0.3,
+      "error": null
+    }
+  ],
+  "hltb": [
+    {
+      "title": "Tides of Tomorrow 🌊",
+      "appId": 2678080,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Borderlands 4",
+      "appId": 1285190,
+      "hltbHours": 30.35,
+      "matchedTitle": "Borderlands 4",
+      "url": "https://howlongtobeat.com/game/91605"
+    },
+    {
+      "title": "Mewgenics",
+      "appId": 686060,
+      "hltbHours": 72.35,
+      "matchedTitle": "Mewgenics",
+      "url": "https://howlongtobeat.com/game/135404"
+    },
+    {
+      "title": "Pluto",
+      "appId": 3057670,
+      "hltbHours": 0.0,
+      "matchedTitle": "PLUTONIUM",
+      "url": "https://howlongtobeat.com/game/47396"
+    },
+    {
+      "title": "Banquet for Fools",
+      "appId": 3172700,
+      "hltbHours": 68.2,
+      "matchedTitle": "Banquet for Fools",
+      "url": "https://howlongtobeat.com/game/157203"
+    },
+    {
+      "title": "Heroes of Might and Magic: Olden Era",
+      "appId": 3105440,
+      "hltbHours": 18.0,
+      "matchedTitle": "Heroes of Might and Magic: Olden Era",
+      "url": "https://howlongtobeat.com/game/155772"
+    },
+    {
+      "title": "LEGO Batman: Legacy of the Dark Knight",
+      "appId": 2215200,
+      "hltbHours": 0.0,
+      "matchedTitle": "LEGO Batman: Legacy of the Dark Knight",
+      "url": "https://howlongtobeat.com/game/172962"
+    },
+    {
+      "title": "PRAGMATA",
+      "appId": 3357650,
+      "hltbHours": 11.51,
+      "matchedTitle": "Pragmata",
+      "url": "https://howlongtobeat.com/game/80101"
+    },
+    {
+      "title": "Heroes of Might and Magic: Olden Era",
+      "appId": 3105440,
+      "hltbHours": 18.0,
+      "matchedTitle": "Heroes of Might and Magic: Olden Era",
+      "url": "https://howlongtobeat.com/game/155772"
+    },
+    {
+      "title": "Gothic 1 Remake",
+      "appId": 1297900,
+      "hltbHours": 0.0,
+      "matchedTitle": "Gothic 1 Remake",
+      "url": "https://howlongtobeat.com/game/92900"
+    },
+    {
+      "title": "Planet of Lana II",
+      "appId": 2997230,
+      "hltbHours": 6.19,
+      "matchedTitle": "Planet of Lana II: Children of the Leaf",
+      "url": "https://howlongtobeat.com/game/169414"
+    },
+    {
+      "title": "People of Note",
+      "appId": 1626170,
+      "hltbHours": 15.0,
+      "matchedTitle": "People of Note",
+      "url": "https://howlongtobeat.com/game/174905"
+    },
+    {
+      "title": "Slay the Spire 2",
+      "appId": 2868840,
+      "hltbHours": 9.55,
+      "matchedTitle": "Slay the Spire II",
+      "url": "https://howlongtobeat.com/game/148484"
+    },
+    {
+      "title": "The Last Caretaker",
+      "appId": 1783560,
+      "hltbHours": 45.86,
+      "matchedTitle": "The Last Caretaker",
+      "url": "https://howlongtobeat.com/game/164485"
+    },
+    {
+      "title": "GRIME II",
+      "appId": 2529790,
+      "hltbHours": 12.0,
+      "matchedTitle": "GRIME II",
+      "url": "https://howlongtobeat.com/game/134563"
+    },
+    {
+      "title": "Retro Rewind - Video Store Simulator",
+      "appId": 3552140,
+      "hltbHours": 12.64,
+      "matchedTitle": "Retro Rewind - Video Store Simulator",
+      "url": "https://howlongtobeat.com/game/183286"
+    },
+    {
+      "title": "Mewgenics",
+      "appId": 686060,
+      "hltbHours": 72.35,
+      "matchedTitle": "Mewgenics",
+      "url": "https://howlongtobeat.com/game/135404"
+    },
+    {
+      "title": "REPLACED",
+      "appId": 1663850,
+      "hltbHours": 10.8,
+      "matchedTitle": "Replaced",
+      "url": "https://howlongtobeat.com/game/93944"
+    },
+    {
+      "title": "REANIMAL",
+      "appId": 2129530,
+      "hltbHours": 4.55,
+      "matchedTitle": "Reanimal",
+      "url": "https://howlongtobeat.com/game/155644"
+    },
+    {
+      "title": "Slay the Spire 2",
+      "appId": 2868840,
+      "hltbHours": 9.55,
+      "matchedTitle": "Slay the Spire II",
+      "url": "https://howlongtobeat.com/game/148484"
+    },
+    {
+      "title": "Super Meat Boy 3D",
+      "appId": 3288210,
+      "hltbHours": 5.06,
+      "matchedTitle": "Super Meat Boy 3D",
+      "url": "https://howlongtobeat.com/game/169406"
+    },
+    {
+      "title": "MENACE",
+      "appId": 2432860,
+      "hltbHours": 0.34,
+      "matchedTitle": "Menace",
+      "url": "https://howlongtobeat.com/game/58931"
+    },
+    {
+      "title": "MOUSE: P.I. For Hire",
+      "appId": 2416450,
+      "hltbHours": 12.08,
+      "matchedTitle": "MOUSE: P.I. For Hire",
+      "url": "https://howlongtobeat.com/game/128648"
+    },
+    {
+      "title": "Darwin's Paradox!",
+      "appId": 2989180,
+      "hltbHours": 4.54,
+      "matchedTitle": "Darwin's Paradox!",
+      "url": "https://howlongtobeat.com/game/163844"
+    },
+    {
+      "title": "Solasta II",
+      "appId": 2975950,
+      "hltbHours": 0.0,
+      "matchedTitle": "Solasta II",
+      "url": "https://howlongtobeat.com/game/160585"
+    },
+    {
+      "title": "Assetto Corsa Rally",
+      "appId": 3917090,
+      "hltbHours": 0.0,
+      "matchedTitle": "Assetto Corsa Rally",
+      "url": "https://howlongtobeat.com/game/175948"
+    },
+    {
+      "title": "Esoteric Ebb",
+      "appId": 2057760,
+      "hltbHours": 22.05,
+      "matchedTitle": "Esoteric Ebb",
+      "url": "https://howlongtobeat.com/game/143794"
+    },
+    {
+      "title": "Total Chaos",
+      "appId": 2208350,
+      "hltbHours": 10.77,
+      "matchedTitle": "Total Chaos",
+      "url": "https://howlongtobeat.com/game/166129"
+    },
+    {
+      "title": "Planet of Lana II",
+      "appId": 2997230,
+      "hltbHours": 6.19,
+      "matchedTitle": "Planet of Lana II: Children of the Leaf",
+      "url": "https://howlongtobeat.com/game/169414"
+    },
+    {
+      "title": "Marathon",
+      "appId": 3065800,
+      "hltbHours": 7.69,
+      "matchedTitle": "Marathon",
+      "url": "https://howlongtobeat.com/game/5609"
+    },
+    {
+      "title": "Slay the Spire 2",
+      "appId": 2868840,
+      "hltbHours": 9.55,
+      "matchedTitle": "Slay the Spire II",
+      "url": "https://howlongtobeat.com/game/148484"
+    },
+    {
+      "title": "MOUSE: P.I. For Hire",
+      "appId": 2416450,
+      "hltbHours": 12.08,
+      "matchedTitle": "MOUSE: P.I. For Hire",
+      "url": "https://howlongtobeat.com/game/128648"
+    },
+    {
+      "title": "Indiana Jones and the Great Circle",
+      "appId": 2677660,
+      "hltbHours": 16.03,
+      "matchedTitle": "Indiana Jones and the Great Circle",
+      "url": "https://howlongtobeat.com/game/144234"
+    },
+    {
+      "title": "Stellar Blade",
+      "appId": 3489700,
+      "hltbHours": 22.74,
+      "matchedTitle": "Stellar Blade",
+      "url": "https://howlongtobeat.com/game/97758"
+    },
+    {
+      "title": "007 First Light",
+      "appId": 3768760,
+      "hltbHours": 0.0,
+      "matchedTitle": "007 First Light",
+      "url": "https://howlongtobeat.com/game/85276"
+    },
+    {
+      "title": "Mewgenics",
+      "appId": 686060,
+      "hltbHours": 72.35,
+      "matchedTitle": "Mewgenics",
+      "url": "https://howlongtobeat.com/game/135404"
+    },
+    {
+      "title": "Crimson Desert",
+      "appId": 3321460,
+      "hltbHours": 62.73,
+      "matchedTitle": "Crimson Desert",
+      "url": "https://howlongtobeat.com/game/94122"
+    },
+    {
+      "title": "Little Nightmares III",
+      "appId": 1392860,
+      "hltbHours": 5.99,
+      "matchedTitle": "Little Nightmares III",
+      "url": "https://howlongtobeat.com/game/134553"
+    },
+    {
+      "title": "Legacy of Kain: Defiance Remastered",
+      "appId": 3747730,
+      "hltbHours": 9.92,
+      "matchedTitle": "Legacy of Kain: Defiance Remastered",
+      "url": "https://howlongtobeat.com/game/181978"
+    },
+    {
+      "title": "Angeline Era",
+      "appId": 2393920,
+      "hltbHours": 14.32,
+      "matchedTitle": "Angeline Era",
+      "url": "https://howlongtobeat.com/game/129852"
+    },
+    {
+      "title": "Mewgenics",
+      "appId": 686060,
+      "hltbHours": 72.35,
+      "matchedTitle": "Mewgenics",
+      "url": "https://howlongtobeat.com/game/135404"
+    },
+    {
+      "title": "Life is Strange: Reunion",
+      "appId": 2624870,
+      "hltbHours": 9.41,
+      "matchedTitle": "Life Is Strange: Reunion",
+      "url": "https://howlongtobeat.com/game/180400"
+    },
+    {
+      "title": "ROMEO IS A DEAD MAN",
+      "appId": 3050900,
+      "hltbHours": 13.04,
+      "matchedTitle": "Romeo is a Dead Man",
+      "url": "https://howlongtobeat.com/game/169133"
+    },
+    {
+      "title": "Once Upon A KATAMARI",
+      "appId": 1880620,
+      "hltbHours": 7.29,
+      "matchedTitle": "Once Upon a KATAMARI",
+      "url": "https://howlongtobeat.com/game/171891"
+    },
+    {
+      "title": "Quarantine Zone: The Last Check",
+      "appId": 3419520,
+      "hltbHours": 9.33,
+      "matchedTitle": "Quarantine Zone: The Last Check",
+      "url": "https://howlongtobeat.com/game/172920"
+    },
+    {
+      "title": "Cairn",
+      "appId": 1588550,
+      "hltbHours": 11.87,
+      "matchedTitle": "Cairn",
+      "url": "https://howlongtobeat.com/game/151883"
+    },
+    {
+      "title": "Mafia: The Old Country",
+      "appId": 1941540,
+      "hltbHours": 12.27,
+      "matchedTitle": "Mafia: The Old Country",
+      "url": "https://howlongtobeat.com/game/155658"
+    },
+    {
+      "title": "Cast n Chill",
+      "appId": 3483740,
+      "hltbHours": 17.03,
+      "matchedTitle": "Cast n Chill",
+      "url": "https://howlongtobeat.com/game/169433"
+    },
+    {
+      "title": "REANIMAL",
+      "appId": 2129530,
+      "hltbHours": 4.55,
+      "matchedTitle": "Reanimal",
+      "url": "https://howlongtobeat.com/game/155644"
+    },
+    {
+      "title": "Terminator 2D: NO FATE",
+      "appId": 1718460,
+      "hltbHours": 1.22,
+      "matchedTitle": "Terminator 2D: No Fate",
+      "url": "https://howlongtobeat.com/game/164584"
+    },
+    {
+      "title": "Red Dead Redemption",
+      "appId": 2668510,
+      "hltbHours": 17.6,
+      "matchedTitle": "Red Dead Redemption",
+      "url": "https://howlongtobeat.com/game/7676"
+    },
+    {
+      "title": "FINAL FANTASY TACTICS - The Ivalice C...",
+      "appId": 1004640,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Cast n Chill",
+      "appId": 3483740,
+      "hltbHours": 17.03,
+      "matchedTitle": "Cast n Chill",
+      "url": "https://howlongtobeat.com/game/169433"
+    },
+    {
+      "title": "Styx: Blades of Greed",
+      "appId": 3290690,
+      "hltbHours": 14.35,
+      "matchedTitle": "Styx: Blades of Greed",
+      "url": "https://howlongtobeat.com/game/164924"
+    },
+    {
+      "title": "Terminator 2D: NO FATE",
+      "appId": 1718460,
+      "hltbHours": 1.22,
+      "matchedTitle": "Terminator 2D: No Fate",
+      "url": "https://howlongtobeat.com/game/164584"
+    },
+    {
+      "title": "Cronos: The New Dawn",
+      "appId": 2101960,
+      "hltbHours": 14.61,
+      "matchedTitle": "Cronos: The New Dawn",
+      "url": "https://howlongtobeat.com/game/158246"
+    },
+    {
+      "title": "Dispatch",
+      "appId": 2592160,
+      "hltbHours": 8.55,
+      "matchedTitle": "Dispatch",
+      "url": "https://howlongtobeat.com/game/160618"
+    },
+    {
+      "title": "The First Berserker: Khazan",
+      "appId": 2680010,
+      "hltbHours": 34.72,
+      "matchedTitle": "The First Berserker: Khazan",
+      "url": "https://howlongtobeat.com/game/141849"
+    },
+    {
+      "title": "The Elder Scrolls IV: Oblivion Remast...",
+      "appId": 2623190,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Eriksholm: The Stolen Dream",
+      "appId": 2377280,
+      "hltbHours": 9.32,
+      "matchedTitle": "Eriksholm: The Stolen Dream",
+      "url": "https://howlongtobeat.com/game/151968"
+    },
+    {
+      "title": "Stellar Blade",
+      "appId": 3489700,
+      "hltbHours": 22.74,
+      "matchedTitle": "Stellar Blade",
+      "url": "https://howlongtobeat.com/game/97758"
+    },
+    {
+      "title": "CODE VEIN II",
+      "appId": 2362060,
+      "hltbHours": 33.45,
+      "matchedTitle": "Code Vein II",
+      "url": "https://howlongtobeat.com/game/169252"
+    },
+    {
+      "title": "BALL x PIT",
+      "appId": 2062430,
+      "hltbHours": 19.0,
+      "matchedTitle": "BALL x PIT",
+      "url": "https://howlongtobeat.com/game/169298"
+    },
+    {
+      "title": "007 First Light",
+      "appId": 3768760,
+      "hltbHours": 0.0,
+      "matchedTitle": "007 First Light",
+      "url": "https://howlongtobeat.com/game/85276"
+    },
+    {
+      "title": "Indiana Jones and the Great Circle",
+      "appId": 2677660,
+      "hltbHours": 16.03,
+      "matchedTitle": "Indiana Jones and the Great Circle",
+      "url": "https://howlongtobeat.com/game/144234"
+    },
+    {
+      "title": "Cronos: The New Dawn",
+      "appId": 2101960,
+      "hltbHours": 14.61,
+      "matchedTitle": "Cronos: The New Dawn",
+      "url": "https://howlongtobeat.com/game/158246"
+    },
+    {
+      "title": "Into the Dead: Our Darkest Days",
+      "appId": 2239710,
+      "hltbHours": 7.88,
+      "matchedTitle": "Into the Dead: Our Darkest Days",
+      "url": "https://howlongtobeat.com/game/143906"
+    },
+    {
+      "title": "Hollow Knight: Silksong",
+      "appId": 1030300,
+      "hltbHours": 28.2,
+      "matchedTitle": "Hollow Knight: Silksong",
+      "url": "https://howlongtobeat.com/game/65945"
+    },
+    {
+      "title": "Hollow Knight: Silksong",
+      "appId": 1030300,
+      "hltbHours": 28.2,
+      "matchedTitle": "Hollow Knight: Silksong",
+      "url": "https://howlongtobeat.com/game/65945"
+    },
+    {
+      "title": "Little Nightmares III",
+      "appId": 1392860,
+      "hltbHours": 5.99,
+      "matchedTitle": "Little Nightmares III",
+      "url": "https://howlongtobeat.com/game/134553"
+    },
+    {
+      "title": "DOOM: The Dark Ages",
+      "appId": 3017860,
+      "hltbHours": 14.2,
+      "matchedTitle": "Doom: The Dark Ages",
+      "url": "https://howlongtobeat.com/game/151986"
+    },
+    {
+      "title": "MARVEL Cosmic Invasion",
+      "appId": 2753970,
+      "hltbHours": 3.54,
+      "matchedTitle": "Marvel Cosmic Invasion",
+      "url": "https://howlongtobeat.com/game/165834"
+    },
+    {
+      "title": "METAL GEAR SOLID Δ: SNAKE EATER",
+      "appId": 2417610,
+      "hltbHours": 12.18,
+      "matchedTitle": "Metal Gear Solid Δ: Snake Eater",
+      "url": "https://howlongtobeat.com/game/129234"
+    },
+    {
+      "title": "Dispatch",
+      "appId": 2592160,
+      "hltbHours": 8.55,
+      "matchedTitle": "Dispatch",
+      "url": "https://howlongtobeat.com/game/160618"
+    },
+    {
+      "title": "PowerWash Simulator 2",
+      "appId": 2968420,
+      "hltbHours": 35.47,
+      "matchedTitle": "PowerWash Simulator 2",
+      "url": "https://howlongtobeat.com/game/165177"
+    },
+    {
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "appId": 3527760,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "LET IT DIE: INFERNO",
+      "appId": 2576150,
+      "hltbHours": 12.58,
+      "matchedTitle": "LET IT DIE: INFERNO",
+      "url": "https://howlongtobeat.com/game/174946"
+    },
+    {
+      "title": "Star Birds",
+      "appId": 2719750,
+      "hltbHours": 0.0,
+      "matchedTitle": "Star Birds",
+      "url": "https://howlongtobeat.com/game/152044"
+    },
+    {
+      "title": "The Killing Antidote",
+      "appId": 2254890,
+      "hltbHours": 10.0,
+      "matchedTitle": "The Killing Antidote",
+      "url": "https://howlongtobeat.com/game/159582"
+    },
+    {
+      "title": "The Séance of Blake Manor",
+      "appId": 1395520,
+      "hltbHours": 14.76,
+      "matchedTitle": "The Séance of Blake Manor",
+      "url": "https://howlongtobeat.com/game/165387"
+    },
+    {
+      "title": "Tales of Xillia Remastered",
+      "appId": 2246670,
+      "hltbHours": 30.19,
+      "matchedTitle": "Tales of Xillia Remastered",
+      "url": "https://howlongtobeat.com/game/172945"
+    },
+    {
+      "title": "Escape From Duckov",
+      "appId": 3167020,
+      "hltbHours": 40.3,
+      "matchedTitle": "Escape From Duckov",
+      "url": "https://howlongtobeat.com/game/174893"
+    },
+    {
+      "title": "Dispatch",
+      "appId": 2592160,
+      "hltbHours": 8.55,
+      "matchedTitle": "Dispatch",
+      "url": "https://howlongtobeat.com/game/160618"
+    },
+    {
+      "title": "Titan Quest II",
+      "appId": 1154030,
+      "hltbHours": 12.55,
+      "matchedTitle": "Titan Quest II",
+      "url": "https://howlongtobeat.com/game/132803"
+    },
+    {
+      "title": "ARC Raiders",
+      "appId": 1808500,
+      "hltbHours": 46.4,
+      "matchedTitle": "ARC Raiders",
+      "url": "https://howlongtobeat.com/game/101424"
+    },
+    {
+      "title": "PowerWash Simulator 2",
+      "appId": 2968420,
+      "hltbHours": 35.47,
+      "matchedTitle": "PowerWash Simulator 2",
+      "url": "https://howlongtobeat.com/game/165177"
+    },
+    {
+      "title": "Hollow Knight: Silksong",
+      "appId": 1030300,
+      "hltbHours": 28.2,
+      "matchedTitle": "Hollow Knight: Silksong",
+      "url": "https://howlongtobeat.com/game/65945"
+    },
+    {
+      "title": "RAIDOU Remastered: The Mystery of the...",
+      "appId": 2288350,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Dispatch",
+      "appId": 2592160,
+      "hltbHours": 8.55,
+      "matchedTitle": "Dispatch",
+      "url": "https://howlongtobeat.com/game/160618"
+    },
+    {
+      "title": "LEGO Party!",
+      "appId": 1969370,
+      "hltbHours": 3.84,
+      "matchedTitle": "Lego Party!",
+      "url": "https://howlongtobeat.com/game/169264"
+    },
+    {
+      "title": "Lost Eidolons: Veil of the Witch",
+      "appId": 2530490,
+      "hltbHours": 13.3,
+      "matchedTitle": "Lost Eidolons: Veil of the Witch",
+      "url": "https://howlongtobeat.com/game/137348"
+    },
+    {
+      "title": "CRISIS CORE –FINAL FANTASY VII– REUNION",
+      "appId": 1608070,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Mafia: The Old Country",
+      "appId": 1941540,
+      "hltbHours": 12.27,
+      "matchedTitle": "Mafia: The Old Country",
+      "url": "https://howlongtobeat.com/game/155658"
+    },
+    {
+      "title": "Like a Dragon: Pirate Yakuza in Hawaii",
+      "appId": 3061810,
+      "hltbHours": 17.24,
+      "matchedTitle": "Like a Dragon: Pirate Yakuza in Hawaii",
+      "url": "https://howlongtobeat.com/game/157123"
+    },
+    {
+      "title": "Witchfire",
+      "appId": 3156770,
+      "hltbHours": 11.4,
+      "matchedTitle": "Witchfire",
+      "url": "https://howlongtobeat.com/game/51324"
+    },
+    {
+      "title": "Atomic Heart",
+      "appId": 668580,
+      "hltbHours": 16.22,
+      "matchedTitle": "Atomic Heart",
+      "url": "https://howlongtobeat.com/game/56297"
+    },
+    {
+      "title": "Horizon Forbidden West Complete Edition",
+      "appId": 2420110,
+      "hltbHours": 48.23,
+      "matchedTitle": "Horizon Forbidden West - Complete Edition",
+      "url": "https://howlongtobeat.com/game/139665"
+    },
+    {
+      "title": "Vampire: The Masquerade - Bloodlines 2",
+      "appId": 532790,
+      "hltbHours": 16.1,
+      "matchedTitle": "Vampire: The Masquerade - Bloodlines 2",
+      "url": "https://howlongtobeat.com/game/65968"
+    },
+    {
+      "title": "Alien: Rogue Incursion Evolved Edition",
+      "appId": 3655390,
+      "hltbHours": 7.5,
+      "matchedTitle": "Alien: Rogue Incursion",
+      "url": "https://howlongtobeat.com/game/151312"
+    },
+    {
+      "title": "Cronos: The New Dawn",
+      "appId": 2101960,
+      "hltbHours": 14.61,
+      "matchedTitle": "Cronos: The New Dawn",
+      "url": "https://howlongtobeat.com/game/158246"
+    },
+    {
+      "title": "Clair Obscur: Expedition 33",
+      "appId": 1903340,
+      "hltbHours": 29.2,
+      "matchedTitle": "Clair Obscur: Expedition 33",
+      "url": "https://howlongtobeat.com/game/152016"
+    },
+    {
+      "title": "Titan Quest II",
+      "appId": 1154030,
+      "hltbHours": 12.55,
+      "matchedTitle": "Titan Quest II",
+      "url": "https://howlongtobeat.com/game/132803"
+    },
+    {
+      "title": "Dying Light: The Beast",
+      "appId": 3008130,
+      "hltbHours": 18.46,
+      "matchedTitle": "Dying Light: The Beast",
+      "url": "https://howlongtobeat.com/game/155650"
+    },
+    {
+      "title": "Herdling",
+      "appId": 3047750,
+      "hltbHours": 3.34,
+      "matchedTitle": "Herdling",
+      "url": "https://howlongtobeat.com/game/155654"
+    },
+    {
+      "title": "The Last of Us Part II Remastered",
+      "appId": 2531310,
+      "hltbHours": 23.02,
+      "matchedTitle": "The Last of Us Part II Remastered",
+      "url": "https://howlongtobeat.com/game/141122"
+    },
+    {
+      "title": "TEVI",
+      "appId": 2230650,
+      "hltbHours": 22.86,
+      "matchedTitle": "TEVI",
+      "url": "https://howlongtobeat.com/game/130195"
+    },
+    {
+      "title": "The Last of Us Part I",
+      "appId": 1888930,
+      "hltbHours": 14.32,
+      "matchedTitle": "The Last of Us Part I",
+      "url": "https://howlongtobeat.com/game/109104"
+    },
+    {
+      "title": "Vampire: The Masquerade - Bloodlines 2",
+      "appId": 532790,
+      "hltbHours": 16.1,
+      "matchedTitle": "Vampire: The Masquerade - Bloodlines 2",
+      "url": "https://howlongtobeat.com/game/65968"
+    },
+    {
+      "title": "Tainted Grail: The Fall of Avalon",
+      "appId": 1466060,
+      "hltbHours": 28.2,
+      "matchedTitle": "Tainted Grail: The Fall of Avalon",
+      "url": "https://howlongtobeat.com/game/93631"
+    },
+    {
+      "title": "Clair Obscur: Expedition 33",
+      "appId": 1903340,
+      "hltbHours": 29.2,
+      "matchedTitle": "Clair Obscur: Expedition 33",
+      "url": "https://howlongtobeat.com/game/152016"
+    },
+    {
+      "title": "Metaphor: ReFantazio",
+      "appId": 2679460,
+      "hltbHours": 65.19,
+      "matchedTitle": "Metaphor: ReFantazio",
+      "url": "https://howlongtobeat.com/game/129956"
+    },
+    {
+      "title": "The Alters",
+      "appId": 1601570,
+      "hltbHours": 19.33,
+      "matchedTitle": "The Alters",
+      "url": "https://howlongtobeat.com/game/109255"
+    },
+    {
+      "title": "Painkiller",
+      "appId": 2300120,
+      "hltbHours": 10.08,
+      "matchedTitle": "Painkiller",
+      "url": "https://howlongtobeat.com/game/6871"
+    },
+    {
+      "title": "The King is Watching",
+      "appId": 2753900,
+      "hltbHours": 4.44,
+      "matchedTitle": "The King is Watching",
+      "url": "https://howlongtobeat.com/game/154243"
+    },
+    {
+      "title": "Eriksholm: The Stolen Dream",
+      "appId": 2377280,
+      "hltbHours": 9.32,
+      "matchedTitle": "Eriksholm: The Stolen Dream",
+      "url": "https://howlongtobeat.com/game/151968"
+    },
+    {
+      "title": "Blue Prince",
+      "appId": 1569580,
+      "hltbHours": 17.98,
+      "matchedTitle": "Blue Prince",
+      "url": "https://howlongtobeat.com/game/136426"
+    },
+    {
+      "title": "Sword of the Sea",
+      "appId": 2453160,
+      "hltbHours": 2.75,
+      "matchedTitle": "Sword of the Sea",
+      "url": "https://howlongtobeat.com/game/129238"
+    },
+    {
+      "title": "Titan Quest II",
+      "appId": 1154030,
+      "hltbHours": 12.55,
+      "matchedTitle": "Titan Quest II",
+      "url": "https://howlongtobeat.com/game/132803"
+    },
+    {
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "appId": 3527760,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Hollow Knight: Silksong",
+      "appId": 1030300,
+      "hltbHours": 28.2,
+      "matchedTitle": "Hollow Knight: Silksong",
+      "url": "https://howlongtobeat.com/game/65945"
+    },
+    {
+      "title": "Mafia: The Old Country",
+      "appId": 1941540,
+      "hltbHours": 12.27,
+      "matchedTitle": "Mafia: The Old Country",
+      "url": "https://howlongtobeat.com/game/155658"
+    },
+    {
+      "title": "REMATCH",
+      "appId": 2138720,
+      "hltbHours": 13.22,
+      "matchedTitle": "REMATCH",
+      "url": "https://howlongtobeat.com/game/160620"
+    },
+    {
+      "title": "Still Wakes the Deep",
+      "appId": 1622910,
+      "hltbHours": 4.66,
+      "matchedTitle": "Still Wakes The Deep",
+      "url": "https://howlongtobeat.com/game/129960"
+    },
+    {
+      "title": "The Midnight Walk",
+      "appId": 2863640,
+      "hltbHours": 4.96,
+      "matchedTitle": "The Midnight Walk",
+      "url": "https://howlongtobeat.com/game/157305"
+    },
+    {
+      "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "appId": 1643320,
+      "hltbHours": 36.73,
+      "matchedTitle": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "url": "https://howlongtobeat.com/game/81121"
+    },
+    {
+      "title": "Until Dawn",
+      "appId": 2172010,
+      "hltbHours": 8.02,
+      "matchedTitle": "Until Dawn",
+      "url": "https://howlongtobeat.com/game/21924"
+    },
+    {
+      "title": "Schedule I",
+      "appId": 3164500,
+      "hltbHours": 16.41,
+      "matchedTitle": "Schedule I",
+      "url": "https://howlongtobeat.com/game/165767"
+    },
+    {
+      "title": "The Precinct",
+      "appId": 490110,
+      "hltbHours": 12.13,
+      "matchedTitle": "The Precinct",
+      "url": "https://howlongtobeat.com/game/129891"
+    },
+    {
+      "title": "Monster Train 2",
+      "appId": 2742830,
+      "hltbHours": 5.68,
+      "matchedTitle": "Monster Train 2",
+      "url": "https://howlongtobeat.com/game/164271"
+    },
+    {
+      "title": "Darkest Dungeon II",
+      "appId": 1940340,
+      "hltbHours": 30.85,
+      "matchedTitle": "Darkest Dungeon II",
+      "url": "https://howlongtobeat.com/game/85972"
+    },
+    {
+      "title": "Lies of P",
+      "appId": 1627720,
+      "hltbHours": 28.33,
+      "matchedTitle": "Lies of P",
+      "url": "https://howlongtobeat.com/game/92418"
+    },
+    {
+      "title": "Mafia: The Old Country",
+      "appId": 1941540,
+      "hltbHours": 12.27,
+      "matchedTitle": "Mafia: The Old Country",
+      "url": "https://howlongtobeat.com/game/155658"
+    },
+    {
+      "title": "9 Kings",
+      "appId": 2784470,
+      "hltbHours": 4.3,
+      "matchedTitle": "9 Kings",
+      "url": "https://howlongtobeat.com/game/164495"
+    },
+    {
+      "title": "Gori: Cuddly Carnage",
+      "appId": 1299690,
+      "hltbHours": 7.21,
+      "matchedTitle": "Gori: Cuddly Carnage",
+      "url": "https://howlongtobeat.com/game/110165"
+    },
+    {
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "appId": 3527760,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Slitterhead",
+      "appId": 2631250,
+      "hltbHours": 13.55,
+      "matchedTitle": "Slitterhead",
+      "url": "https://howlongtobeat.com/game/101287"
+    },
+    {
+      "title": "Inscryption",
+      "appId": 1092790,
+      "hltbHours": 12.76,
+      "matchedTitle": "Inscryption",
+      "url": "https://howlongtobeat.com/game/91622"
+    },
+    {
+      "title": "God of War",
+      "appId": 1593500,
+      "hltbHours": 20.55,
+      "matchedTitle": "God of War",
+      "url": "https://howlongtobeat.com/game/38050"
+    },
+    {
+      "title": "DORAEMON STORY OF SEASONS: Friends of...",
+      "appId": 1492730,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Bionic Bay",
+      "appId": 1928690,
+      "hltbHours": 7.88,
+      "matchedTitle": "Bionic Bay",
+      "url": "https://howlongtobeat.com/game/123330"
+    },
+    {
+      "title": "Abathor",
+      "appId": 2295610,
+      "hltbHours": 8.41,
+      "matchedTitle": "Abathor",
+      "url": "https://howlongtobeat.com/game/154370"
+    },
+    {
+      "title": "Song of Nunu: A League of Legends Story",
+      "appId": 1333200,
+      "hltbHours": 6.16,
+      "matchedTitle": "Song of Nunu: A League of Legends Story",
+      "url": "https://howlongtobeat.com/game/100440"
+    },
+    {
+      "title": "The Killing Antidote",
+      "appId": 2254890,
+      "hltbHours": 10.0,
+      "matchedTitle": "The Killing Antidote",
+      "url": "https://howlongtobeat.com/game/159582"
+    },
+    {
+      "title": "Steel Seed",
+      "appId": 458430,
+      "hltbHours": 9.37,
+      "matchedTitle": "Steel Seed",
+      "url": "https://howlongtobeat.com/game/129898"
+    },
+    {
+      "title": "I Am Your Beast",
+      "appId": 1876590,
+      "hltbHours": 2.56,
+      "matchedTitle": "I Am Your Beast",
+      "url": "https://howlongtobeat.com/game/152030"
+    },
+    {
+      "title": "Metaphor: ReFantazio",
+      "appId": 2679460,
+      "hltbHours": 65.19,
+      "matchedTitle": "Metaphor: ReFantazio",
+      "url": "https://howlongtobeat.com/game/129956"
+    },
+    {
+      "title": "METAL GEAR SOLID Δ: SNAKE EATER",
+      "appId": 2417610,
+      "hltbHours": 12.18,
+      "matchedTitle": "Metal Gear Solid Δ: Snake Eater",
+      "url": "https://howlongtobeat.com/game/129234"
+    },
+    {
+      "title": "Stellar Blade",
+      "appId": 3489700,
+      "hltbHours": 22.74,
+      "matchedTitle": "Stellar Blade",
+      "url": "https://howlongtobeat.com/game/97758"
+    },
+    {
+      "title": "FINAL FANTASY XVI COMPLETE EDITION",
+      "appId": 1111230,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Tony Hawk's Pro Skater 3 + 4",
+      "appId": 2545710,
+      "hltbHours": 7.82,
+      "matchedTitle": "Tony Hawk's Pro Skater 3 + 4",
+      "url": "https://howlongtobeat.com/game/164871"
+    },
+    {
+      "title": "Lost Soul Aside",
+      "appId": 3378960,
+      "hltbHours": 18.48,
+      "matchedTitle": "Lost Soul Aside",
+      "url": "https://howlongtobeat.com/game/66499"
+    },
+    {
+      "title": "Pizza Tower",
+      "appId": 2231450,
+      "hltbHours": 6.28,
+      "matchedTitle": "Pizza Tower",
+      "url": "https://howlongtobeat.com/game/118236"
+    },
+    {
+      "title": "ANIMAL WELL",
+      "appId": 813230,
+      "hltbHours": 7.01,
+      "matchedTitle": "Animal Well",
+      "url": "https://howlongtobeat.com/game/109108"
+    },
+    {
+      "title": "SIGNALIS",
+      "appId": 1262350,
+      "hltbHours": 9.22,
+      "matchedTitle": "Signalis",
+      "url": "https://howlongtobeat.com/game/57149"
+    },
+    {
+      "title": "The Wandering Village",
+      "appId": 1121640,
+      "hltbHours": 13.14,
+      "matchedTitle": "The Wandering Village",
+      "url": "https://howlongtobeat.com/game/94069"
+    },
+    {
+      "title": "Lords of the Fallen",
+      "appId": 1501750,
+      "hltbHours": 28.5,
+      "matchedTitle": "Lords of the Fallen",
+      "url": "https://howlongtobeat.com/game/112684"
+    },
+    {
+      "title": "Horizon Forbidden West Complete Edition",
+      "appId": 2420110,
+      "hltbHours": 48.23,
+      "matchedTitle": "Horizon Forbidden West - Complete Edition",
+      "url": "https://howlongtobeat.com/game/139665"
+    },
+    {
+      "title": "Nine Sols",
+      "appId": 1809540,
+      "hltbHours": 21.36,
+      "matchedTitle": "Nine Sols",
+      "url": "https://howlongtobeat.com/game/107896"
+    },
+    {
+      "title": "Have a Nice Death",
+      "appId": 1740720,
+      "hltbHours": 9.47,
+      "matchedTitle": "Have a Nice Death",
+      "url": "https://howlongtobeat.com/game/101233"
+    },
+    {
+      "title": "The Outer Worlds 2",
+      "appId": 1449110,
+      "hltbHours": 18.37,
+      "matchedTitle": "The Outer Worlds 2",
+      "url": "https://howlongtobeat.com/game/93946"
+    },
+    {
+      "title": "Avowed",
+      "appId": 2457220,
+      "hltbHours": 20.15,
+      "matchedTitle": "Avowed",
+      "url": "https://howlongtobeat.com/game/81115"
+    },
+    {
+      "title": "Lost in Random: The Eternal Die",
+      "appId": 2564520,
+      "hltbHours": 7.08,
+      "matchedTitle": "Lost in Random: The Eternal Die",
+      "url": "https://howlongtobeat.com/game/155771"
+    },
+    {
+      "title": "UFO 50",
+      "appId": 1147860,
+      "hltbHours": 53.34,
+      "matchedTitle": "UFO 50",
+      "url": "https://howlongtobeat.com/game/75152"
+    },
+    {
+      "title": "Clair Obscur: Expedition 33",
+      "appId": 1903340,
+      "hltbHours": 29.2,
+      "matchedTitle": "Clair Obscur: Expedition 33",
+      "url": "https://howlongtobeat.com/game/152016"
+    },
+    {
+      "title": "Kona II: Brume",
+      "appId": 1229020,
+      "hltbHours": 8.02,
+      "matchedTitle": "Kona II: Brume",
+      "url": "https://howlongtobeat.com/game/138961"
+    },
+    {
+      "title": "The Last Case of Benedict Fox Definit...",
+      "appId": 2023360,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Gerda: A Flame in Winter",
+      "appId": 1771360,
+      "hltbHours": 6.56,
+      "matchedTitle": "Gerda: A Flame in Winter",
+      "url": "https://howlongtobeat.com/game/101451"
+    },
+    {
+      "title": "Wild Bastards",
+      "appId": 1660840,
+      "hltbHours": 14.83,
+      "matchedTitle": "Wild Bastards",
+      "url": "https://howlongtobeat.com/game/141559"
+    },
+    {
+      "title": "Broken Sword - Shadow of the Templars...",
+      "appId": 2544110,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "SHINOBI: Art of Vengeance",
+      "appId": 2361770,
+      "hltbHours": 9.52,
+      "matchedTitle": "Shinobi: Art of Vengeance",
+      "url": "https://howlongtobeat.com/game/163815"
+    },
+    {
+      "title": "LEGO Harry Potter Collection",
+      "appId": 2950340,
+      "hltbHours": 27.41,
+      "matchedTitle": "LEGO Harry Potter Collection",
+      "url": "https://howlongtobeat.com/game/47803"
+    },
+    {
+      "title": "After Inc: Revival",
+      "appId": 3337140,
+      "hltbHours": 9.83,
+      "matchedTitle": "After Inc: Revival",
+      "url": "https://howlongtobeat.com/game/170527"
+    },
+    {
+      "title": "Harold Halibut",
+      "appId": 924750,
+      "hltbHours": 10.65,
+      "matchedTitle": "Harold Halibut",
+      "url": "https://howlongtobeat.com/game/69307"
+    },
+    {
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "appId": 3527760,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Dustborn",
+      "appId": 721180,
+      "hltbHours": 16.81,
+      "matchedTitle": "Dustborn",
+      "url": "https://howlongtobeat.com/game/79898"
+    },
+    {
+      "title": "Little Nightmares III",
+      "appId": 1392860,
+      "hltbHours": 5.99,
+      "matchedTitle": "Little Nightmares III",
+      "url": "https://howlongtobeat.com/game/134553"
+    },
+    {
+      "title": "Gears of War: Reloaded",
+      "appId": 2523720,
+      "hltbHours": 7.15,
+      "matchedTitle": "Gears of War: Reloaded",
+      "url": "https://howlongtobeat.com/game/167795"
+    },
+    {
+      "title": "Prince of Persia The Lost Crown",
+      "appId": 2751000,
+      "hltbHours": 16.68,
+      "matchedTitle": "Prince of Persia: The Lost Crown",
+      "url": "https://howlongtobeat.com/game/129785"
+    },
+    {
+      "title": "The First Berserker: Khazan",
+      "appId": 2680010,
+      "hltbHours": 34.72,
+      "matchedTitle": "The First Berserker: Khazan",
+      "url": "https://howlongtobeat.com/game/141849"
+    },
+    {
+      "title": "The Last of Us Part II Remastered",
+      "appId": 2531310,
+      "hltbHours": 23.02,
+      "matchedTitle": "The Last of Us Part II Remastered",
+      "url": "https://howlongtobeat.com/game/141122"
+    },
+    {
+      "title": "Clair Obscur: Expedition 33",
+      "appId": 1903340,
+      "hltbHours": 29.2,
+      "matchedTitle": "Clair Obscur: Expedition 33",
+      "url": "https://howlongtobeat.com/game/152016"
+    },
+    {
+      "title": "Split Fiction",
+      "appId": 2001120,
+      "hltbHours": 13.62,
+      "matchedTitle": "Split Fiction",
+      "url": "https://howlongtobeat.com/game/160592"
+    },
+    {
+      "title": "Date Everything!",
+      "appId": 2201320,
+      "hltbHours": 18.13,
+      "matchedTitle": "Date Everything!",
+      "url": "https://howlongtobeat.com/game/154409"
+    },
+    {
+      "title": "Warhammer 40,000: Space Marine 2",
+      "appId": 2183900,
+      "hltbHours": 9.47,
+      "matchedTitle": "Warhammer 40,000: Space Marine II",
+      "url": "https://howlongtobeat.com/game/101254"
+    },
+    {
+      "title": "REMATCH",
+      "appId": 2138720,
+      "hltbHours": 13.22,
+      "matchedTitle": "REMATCH",
+      "url": "https://howlongtobeat.com/game/160620"
+    },
+    {
+      "title": "The Stone of Madness",
+      "appId": 1309710,
+      "hltbHours": 26.27,
+      "matchedTitle": "The Stone of Madness",
+      "url": "https://howlongtobeat.com/game/124067"
+    },
+    {
+      "title": "MechWarrior 5: Clans",
+      "appId": 2000890,
+      "hltbHours": 23.81,
+      "matchedTitle": "MechWarrior 5: Clans",
+      "url": "https://howlongtobeat.com/game/137939"
+    },
+    {
+      "title": "Hades II",
+      "appId": 1145350,
+      "hltbHours": 30.53,
+      "matchedTitle": "Hades II",
+      "url": "https://howlongtobeat.com/game/118218"
+    },
+    {
+      "title": "Grand Theft Auto: The Trilogy – The D...",
+      "appId": 817628,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Tainted Grail: The Fall of Avalon",
+      "appId": 1466060,
+      "hltbHours": 28.2,
+      "matchedTitle": "Tainted Grail: The Fall of Avalon",
+      "url": "https://howlongtobeat.com/game/93631"
+    },
+    {
+      "title": "Keep Driving",
+      "appId": 2756920,
+      "hltbHours": 3.47,
+      "matchedTitle": "Keep Driving",
+      "url": "https://howlongtobeat.com/game/157686"
+    },
+    {
+      "title": "DAVE THE DIVER",
+      "appId": 1868140,
+      "hltbHours": 25.0,
+      "matchedTitle": "Dave the Diver",
+      "url": "https://howlongtobeat.com/game/115577"
+    },
+    {
+      "title": "Age of Empires IV: Anniversary Edition",
+      "appId": 1466860,
+      "hltbHours": 28.23,
+      "matchedTitle": "Age of Empires IV",
+      "url": "https://howlongtobeat.com/game/48733"
+    },
+    {
+      "title": "Banishers: Ghosts of New Eden",
+      "appId": 1493640,
+      "hltbHours": 22.89,
+      "matchedTitle": "Banishers: Ghosts of New Eden",
+      "url": "https://howlongtobeat.com/game/118229"
+    },
+    {
+      "title": "LOLLIPOP CHAINSAW RePOP",
+      "appId": 2658450,
+      "hltbHours": 6.12,
+      "matchedTitle": "Lollipop Chainsaw RePOP",
+      "url": "https://howlongtobeat.com/game/128035"
+    },
+    {
+      "title": "CRISIS CORE –FINAL FANTASY VII– REUNION",
+      "appId": 1608070,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Like a Dragon Gaiden: The Man Who Era...",
+      "appId": 2375550,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Like a Dragon: Infinite Wealth",
+      "appId": 2072450,
+      "hltbHours": 56.31,
+      "matchedTitle": "Like a Dragon: Infinite Wealth",
+      "url": "https://howlongtobeat.com/game/113583"
+    },
+    {
+      "title": "Marvel's Spider-Man 2",
+      "appId": 2651280,
+      "hltbHours": 17.19,
+      "matchedTitle": "Marvel's Spider-Man 2",
+      "url": "https://howlongtobeat.com/game/79769"
+    },
+    {
+      "title": "FINAL FANTASY TACTICS - The Ivalice C...",
+      "appId": 1004640,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Flintlock: The Siege of Dawn",
+      "appId": 1832040,
+      "hltbHours": 8.94,
+      "matchedTitle": "Flintlock: The Siege of Dawn",
+      "url": "https://howlongtobeat.com/game/105586"
+    },
+    {
+      "title": "Eternal Strands",
+      "appId": 1491410,
+      "hltbHours": 18.83,
+      "matchedTitle": "Eternal Strands",
+      "url": "https://howlongtobeat.com/game/148004"
+    },
+    {
+      "title": "Avatar: Frontiers of Pandora",
+      "appId": 2840770,
+      "hltbHours": 23.57,
+      "matchedTitle": "Avatar: Frontiers of Pandora",
+      "url": "https://howlongtobeat.com/game/93907"
+    },
+    {
+      "title": "The Elder Scrolls IV: Oblivion Remast...",
+      "appId": 2623190,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Caravan SandWitch",
+      "appId": 1582650,
+      "hltbHours": 6.67,
+      "matchedTitle": "Caravan SandWitch",
+      "url": "https://howlongtobeat.com/game/151283"
+    },
+    {
+      "title": "Kingdom Come: Deliverance II",
+      "appId": 1771300,
+      "hltbHours": 54.76,
+      "matchedTitle": "Kingdom Come: Deliverance II",
+      "url": "https://howlongtobeat.com/game/148973"
+    },
+    {
+      "title": "Dune: Awakening",
+      "appId": 1172710,
+      "hltbHours": 53.5,
+      "matchedTitle": "Dune: Awakening",
+      "url": "https://howlongtobeat.com/game/118779"
+    },
+    {
+      "title": "Lost Records: Bloom & Rage",
+      "appId": 1902960,
+      "hltbHours": 11.19,
+      "matchedTitle": "Lost Records: Bloom & Rage",
+      "url": "https://howlongtobeat.com/game/141844"
+    },
+    {
+      "title": "UNCHARTED: Legacy of Thieves Collection",
+      "appId": 1659420,
+      "hltbHours": 20.53,
+      "matchedTitle": "Uncharted: Legacy of Thieves Collection",
+      "url": "https://howlongtobeat.com/game/101083"
+    },
+    {
+      "title": "Persona 3 Reload",
+      "appId": 2161700,
+      "hltbHours": 64.62,
+      "matchedTitle": "Persona 3 Reload",
+      "url": "https://howlongtobeat.com/game/129805"
+    },
+    {
+      "title": "Dead Space",
+      "appId": 1693980,
+      "hltbHours": 12.12,
+      "matchedTitle": "Dead Space",
+      "url": "https://howlongtobeat.com/game/95927"
+    },
+    {
+      "title": "Granblue Fantasy: Relink",
+      "appId": 881020,
+      "hltbHours": 15.56,
+      "matchedTitle": "Granblue Fantasy: Relink",
+      "url": "https://howlongtobeat.com/game/66500"
+    },
+    {
+      "title": "The Alters",
+      "appId": 1601570,
+      "hltbHours": 19.33,
+      "matchedTitle": "The Alters",
+      "url": "https://howlongtobeat.com/game/109255"
+    },
+    {
+      "title": "Like a Dragon: Ishin!",
+      "appId": 1805480,
+      "hltbHours": 23.83,
+      "matchedTitle": "Like a Dragon: Ishin!",
+      "url": "https://howlongtobeat.com/game/113549"
+    },
+    {
+      "title": "Age of Mythology: Retold",
+      "appId": 1934680,
+      "hltbHours": 24.46,
+      "matchedTitle": "Age of Mythology: Retold",
+      "url": "https://howlongtobeat.com/game/115181"
+    },
+    {
+      "title": "Keep Driving",
+      "appId": 2756920,
+      "hltbHours": 3.47,
+      "matchedTitle": "Keep Driving",
+      "url": "https://howlongtobeat.com/game/157686"
+    },
+    {
+      "title": "FANTASY LIFE i: The Girl Who Steals Time",
+      "appId": 2993780,
+      "hltbHours": 33.95,
+      "matchedTitle": "Fantasy Life i: The Girl Who Steals Time",
+      "url": "https://howlongtobeat.com/game/124025"
+    },
+    {
+      "title": "System Shock 2: 25th Anniversary Rema...",
+      "appId": 866570,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "SILENT HILL f",
+      "appId": 2947440,
+      "hltbHours": 10.71,
+      "matchedTitle": "Silent Hill f",
+      "url": "https://howlongtobeat.com/game/114901"
+    },
+    {
+      "title": "AI LIMIT",
+      "appId": 2407270,
+      "hltbHours": 18.57,
+      "matchedTitle": "AI Limit",
+      "url": "https://howlongtobeat.com/game/144469"
+    },
+    {
+      "title": "9 Kings",
+      "appId": 2784470,
+      "hltbHours": 4.3,
+      "matchedTitle": "9 Kings",
+      "url": "https://howlongtobeat.com/game/164495"
+    },
+    {
+      "title": "Detective Dotson",
+      "appId": 2450840,
+      "hltbHours": 3.06,
+      "matchedTitle": "Detective Dotson",
+      "url": "https://howlongtobeat.com/game/151964"
+    },
+    {
+      "title": "Cyber Knights: Flashpoint",
+      "appId": 1021210,
+      "hltbHours": 10.0,
+      "matchedTitle": "Cyber Knights: Flashpoint",
+      "url": "https://howlongtobeat.com/game/141274"
+    },
+    {
+      "title": "Drive Beyond Horizons",
+      "appId": 2625420,
+      "hltbHours": 5.39,
+      "matchedTitle": "Drive Beyond Horizons",
+      "url": "https://howlongtobeat.com/game/167242"
+    },
+    {
+      "title": "Schedule I",
+      "appId": 3164500,
+      "hltbHours": 16.41,
+      "matchedTitle": "Schedule I",
+      "url": "https://howlongtobeat.com/game/165767"
+    },
+    {
+      "title": "South of Midnight",
+      "appId": 1934570,
+      "hltbHours": 9.88,
+      "matchedTitle": "South of Midnight",
+      "url": "https://howlongtobeat.com/game/129947"
+    },
+    {
+      "title": "Blue Prince",
+      "appId": 1569580,
+      "hltbHours": 17.98,
+      "matchedTitle": "Blue Prince",
+      "url": "https://howlongtobeat.com/game/136426"
+    },
+    {
+      "title": "Old Skies",
+      "appId": 1346360,
+      "hltbHours": 11.9,
+      "matchedTitle": "Old Skies",
+      "url": "https://howlongtobeat.com/game/108617"
+    },
+    {
+      "title": "Ghost of Tsushima DIRECTOR'S CUT",
+      "appId": 2215430,
+      "hltbHours": 25.11,
+      "matchedTitle": "Ghost of Tsushima",
+      "url": "https://howlongtobeat.com/game/51225"
+    },
+    {
+      "title": "FINAL FANTASY VII REBIRTH",
+      "appId": 2909400,
+      "hltbHours": 48.33,
+      "matchedTitle": "Final Fantasy VII Rebirth",
+      "url": "https://howlongtobeat.com/game/109434"
+    },
+    {
+      "title": "Atomic Heart",
+      "appId": 668580,
+      "hltbHours": 16.22,
+      "matchedTitle": "Atomic Heart",
+      "url": "https://howlongtobeat.com/game/56297"
+    },
+    {
+      "title": "BRAVELY DEFAULT II",
+      "appId": 1446650,
+      "hltbHours": 49.89,
+      "matchedTitle": "Bravely Default II",
+      "url": "https://howlongtobeat.com/game/72838"
+    },
+    {
+      "title": "DELTARUNE",
+      "appId": 1671210,
+      "hltbHours": 16.74,
+      "matchedTitle": "Deltarune",
+      "url": "https://howlongtobeat.com/game/98168"
+    },
+    {
+      "title": "Stray",
+      "appId": 1332010,
+      "hltbHours": 5.15,
+      "matchedTitle": "Stray",
+      "url": "https://howlongtobeat.com/game/79790"
+    },
+    {
+      "title": "The Precinct",
+      "appId": 490110,
+      "hltbHours": 12.13,
+      "matchedTitle": "The Precinct",
+      "url": "https://howlongtobeat.com/game/129891"
+    },
+    {
+      "title": "Keep Driving",
+      "appId": 2756920,
+      "hltbHours": 3.47,
+      "matchedTitle": "Keep Driving",
+      "url": "https://howlongtobeat.com/game/157686"
+    },
+    {
+      "title": "Borderlands 4",
+      "appId": 1285190,
+      "hltbHours": 30.35,
+      "matchedTitle": "Borderlands 4",
+      "url": "https://howlongtobeat.com/game/91605"
+    },
+    {
+      "title": "METAL GEAR SOLID Δ: SNAKE EATER",
+      "appId": 2417610,
+      "hltbHours": 12.18,
+      "matchedTitle": "Metal Gear Solid Δ: Snake Eater",
+      "url": "https://howlongtobeat.com/game/129234"
+    },
+    {
+      "title": "Clair Obscur: Expedition 33",
+      "appId": 1903340,
+      "hltbHours": 29.2,
+      "matchedTitle": "Clair Obscur: Expedition 33",
+      "url": "https://howlongtobeat.com/game/152016"
+    },
+    {
+      "title": "Red Dead Redemption",
+      "appId": 2668510,
+      "hltbHours": 17.6,
+      "matchedTitle": "Red Dead Redemption",
+      "url": "https://howlongtobeat.com/game/7676"
+    },
+    {
+      "title": "Indiana Jones and the Great Circle",
+      "appId": 2677660,
+      "hltbHours": 16.03,
+      "matchedTitle": "Indiana Jones and the Great Circle",
+      "url": "https://howlongtobeat.com/game/144234"
+    },
+    {
+      "title": "Wizardry: Proving Grounds of the Mad ...",
+      "appId": 2518960,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Out Of Hands",
+      "appId": 1839810,
+      "hltbHours": 6.69,
+      "matchedTitle": "Out Of Hands",
+      "url": "https://howlongtobeat.com/game/167294"
+    },
+    {
+      "title": "The Alters",
+      "appId": 1601570,
+      "hltbHours": 19.33,
+      "matchedTitle": "The Alters",
+      "url": "https://howlongtobeat.com/game/109255"
+    },
+    {
+      "title": "Mafia: The Old Country",
+      "appId": 1941540,
+      "hltbHours": 12.27,
+      "matchedTitle": "Mafia: The Old Country",
+      "url": "https://howlongtobeat.com/game/155658"
+    },
+    {
+      "title": "Lost Records: Bloom & Rage",
+      "appId": 1902960,
+      "hltbHours": 11.19,
+      "matchedTitle": "Lost Records: Bloom & Rage",
+      "url": "https://howlongtobeat.com/game/141844"
+    },
+    {
+      "title": "DELTARUNE",
+      "appId": 1671210,
+      "hltbHours": 16.74,
+      "matchedTitle": "Deltarune",
+      "url": "https://howlongtobeat.com/game/98168"
+    },
+    {
+      "title": "Nine Sols",
+      "appId": 1809540,
+      "hltbHours": 21.36,
+      "matchedTitle": "Nine Sols",
+      "url": "https://howlongtobeat.com/game/107896"
+    },
+    {
+      "title": "Neva",
+      "appId": 2420660,
+      "hltbHours": 4.06,
+      "matchedTitle": "Neva",
+      "url": "https://howlongtobeat.com/game/129246"
+    },
+    {
+      "title": "Stellar Blade",
+      "appId": 3489700,
+      "hltbHours": 22.74,
+      "matchedTitle": "Stellar Blade",
+      "url": "https://howlongtobeat.com/game/97758"
+    },
+    {
+      "title": "Tempest Rising",
+      "appId": 1486920,
+      "hltbHours": 16.91,
+      "matchedTitle": "Tempest Rising",
+      "url": "https://howlongtobeat.com/game/125157"
+    },
+    {
+      "title": "Deck of Haunts",
+      "appId": 3179730,
+      "hltbHours": 2.74,
+      "matchedTitle": "Deck of Haunts",
+      "url": "https://howlongtobeat.com/game/158494"
+    },
+    {
+      "title": "Keep Driving",
+      "appId": 2756920,
+      "hltbHours": 3.47,
+      "matchedTitle": "Keep Driving",
+      "url": "https://howlongtobeat.com/game/157686"
+    },
+    {
+      "title": "WUCHANG: Fallen Feathers",
+      "appId": 2277560,
+      "hltbHours": 30.97,
+      "matchedTitle": "Wuchang: Fallen Feathers",
+      "url": "https://howlongtobeat.com/game/152015"
+    },
+    {
+      "title": "Tainted Grail: The Fall of Avalon",
+      "appId": 1466060,
+      "hltbHours": 28.2,
+      "matchedTitle": "Tainted Grail: The Fall of Avalon",
+      "url": "https://howlongtobeat.com/game/93631"
+    },
+    {
+      "title": "Clair Obscur: Expedition 33",
+      "appId": 1903340,
+      "hltbHours": 29.2,
+      "matchedTitle": "Clair Obscur: Expedition 33",
+      "url": "https://howlongtobeat.com/game/152016"
+    },
+    {
+      "title": "South of Midnight",
+      "appId": 1934570,
+      "hltbHours": 9.88,
+      "matchedTitle": "South of Midnight",
+      "url": "https://howlongtobeat.com/game/129947"
+    },
+    {
+      "title": "Red Dead Redemption",
+      "appId": 2668510,
+      "hltbHours": 17.6,
+      "matchedTitle": "Red Dead Redemption",
+      "url": "https://howlongtobeat.com/game/7676"
+    },
+    {
+      "title": "The Precinct",
+      "appId": 490110,
+      "hltbHours": 12.13,
+      "matchedTitle": "The Precinct",
+      "url": "https://howlongtobeat.com/game/129891"
+    },
+    {
+      "title": "WUCHANG: Fallen Feathers",
+      "appId": 2277560,
+      "hltbHours": 30.97,
+      "matchedTitle": "Wuchang: Fallen Feathers",
+      "url": "https://howlongtobeat.com/game/152015"
+    },
+    {
+      "title": "The Precinct",
+      "appId": 490110,
+      "hltbHours": 12.13,
+      "matchedTitle": "The Precinct",
+      "url": "https://howlongtobeat.com/game/129891"
+    },
+    {
+      "title": "Metaphor: ReFantazio",
+      "appId": 2679460,
+      "hltbHours": 65.19,
+      "matchedTitle": "Metaphor: ReFantazio",
+      "url": "https://howlongtobeat.com/game/129956"
+    },
+    {
+      "title": "Clair Obscur: Expedition 33",
+      "appId": 1903340,
+      "hltbHours": 29.2,
+      "matchedTitle": "Clair Obscur: Expedition 33",
+      "url": "https://howlongtobeat.com/game/152016"
+    },
+    {
+      "title": "DOOM: The Dark Ages",
+      "appId": 3017860,
+      "hltbHours": 14.2,
+      "matchedTitle": "Doom: The Dark Ages",
+      "url": "https://howlongtobeat.com/game/151986"
+    },
+    {
+      "title": "Into the Dead: Our Darkest Days",
+      "appId": 2239710,
+      "hltbHours": 7.88,
+      "matchedTitle": "Into the Dead: Our Darkest Days",
+      "url": "https://howlongtobeat.com/game/143906"
+    },
+    {
+      "title": "The Elder Scrolls IV: Oblivion Remast...",
+      "appId": 2623190,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Old Skies",
+      "appId": 1346360,
+      "hltbHours": 11.9,
+      "matchedTitle": "Old Skies",
+      "url": "https://howlongtobeat.com/game/108617"
+    },
+    {
+      "title": "AI LIMIT",
+      "appId": 2407270,
+      "hltbHours": 18.57,
+      "matchedTitle": "AI Limit",
+      "url": "https://howlongtobeat.com/game/144469"
+    },
+    {
+      "title": "Blue Prince",
+      "appId": 1569580,
+      "hltbHours": 17.98,
+      "matchedTitle": "Blue Prince",
+      "url": "https://howlongtobeat.com/game/136426"
+    },
+    {
+      "title": "Schedule I",
+      "appId": 3164500,
+      "hltbHours": 16.41,
+      "matchedTitle": "Schedule I",
+      "url": "https://howlongtobeat.com/game/165767"
+    },
+    {
+      "title": "Metaphor: ReFantazio",
+      "appId": 2679460,
+      "hltbHours": 65.19,
+      "matchedTitle": "Metaphor: ReFantazio",
+      "url": "https://howlongtobeat.com/game/129956"
+    },
+    {
+      "title": "Lost Records: Bloom & Rage",
+      "appId": 1902960,
+      "hltbHours": 11.19,
+      "matchedTitle": "Lost Records: Bloom & Rage",
+      "url": "https://howlongtobeat.com/game/141844"
+    },
+    {
+      "title": "The First Berserker: Khazan",
+      "appId": 2680010,
+      "hltbHours": 34.72,
+      "matchedTitle": "The First Berserker: Khazan",
+      "url": "https://howlongtobeat.com/game/141849"
+    },
+    {
+      "title": "Clair Obscur: Expedition 33",
+      "appId": 1903340,
+      "hltbHours": 29.2,
+      "matchedTitle": "Clair Obscur: Expedition 33",
+      "url": "https://howlongtobeat.com/game/152016"
+    },
+    {
+      "title": "Lost Records: Bloom & Rage",
+      "appId": 1902960,
+      "hltbHours": 11.19,
+      "matchedTitle": "Lost Records: Bloom & Rage",
+      "url": "https://howlongtobeat.com/game/141844"
+    },
+    {
+      "title": "AI LIMIT",
+      "appId": 2407270,
+      "hltbHours": 18.57,
+      "matchedTitle": "AI Limit",
+      "url": "https://howlongtobeat.com/game/144469"
+    },
+    {
+      "title": "Clair Obscur: Expedition 33",
+      "appId": 1903340,
+      "hltbHours": 29.2,
+      "matchedTitle": "Clair Obscur: Expedition 33",
+      "url": "https://howlongtobeat.com/game/152016"
+    },
+    {
+      "title": "Metaphor: ReFantazio",
+      "appId": 2679460,
+      "hltbHours": 65.19,
+      "matchedTitle": "Metaphor: ReFantazio",
+      "url": "https://howlongtobeat.com/game/129956"
+    },
+    {
+      "title": "The Last of Us Part II Remastered",
+      "appId": 2531310,
+      "hltbHours": 23.02,
+      "matchedTitle": "The Last of Us Part II Remastered",
+      "url": "https://howlongtobeat.com/game/141122"
+    },
+    {
+      "title": "Indiana Jones and the Great Circle",
+      "appId": 2677660,
+      "hltbHours": 16.03,
+      "matchedTitle": "Indiana Jones and the Great Circle",
+      "url": "https://howlongtobeat.com/game/144234"
+    },
+    {
+      "title": "South of Midnight",
+      "appId": 1934570,
+      "hltbHours": 9.88,
+      "matchedTitle": "South of Midnight",
+      "url": "https://howlongtobeat.com/game/129947"
+    },
+    {
+      "title": "Split Fiction",
+      "appId": 2001120,
+      "hltbHours": 13.62,
+      "matchedTitle": "Split Fiction",
+      "url": "https://howlongtobeat.com/game/160592"
+    },
+    {
+      "title": "Witchfire",
+      "appId": 3156770,
+      "hltbHours": 11.4,
+      "matchedTitle": "Witchfire",
+      "url": "https://howlongtobeat.com/game/51324"
+    },
+    {
+      "title": "Hades II",
+      "appId": 1145350,
+      "hltbHours": 30.53,
+      "matchedTitle": "Hades II",
+      "url": "https://howlongtobeat.com/game/118218"
+    },
+    {
+      "title": "Metaphor: ReFantazio",
+      "appId": 2679460,
+      "hltbHours": 65.19,
+      "matchedTitle": "Metaphor: ReFantazio",
+      "url": "https://howlongtobeat.com/game/129956"
+    },
+    {
+      "title": "Marvel's Spider-Man 2",
+      "appId": 2651280,
+      "hltbHours": 17.19,
+      "matchedTitle": "Marvel's Spider-Man 2",
+      "url": "https://howlongtobeat.com/game/79769"
+    },
+    {
+      "title": "Eternal Strands",
+      "appId": 1491410,
+      "hltbHours": 18.83,
+      "matchedTitle": "Eternal Strands",
+      "url": "https://howlongtobeat.com/game/148004"
+    },
+    {
+      "title": "The Last of Us Part II Remastered",
+      "appId": 2531310,
+      "hltbHours": 23.02,
+      "matchedTitle": "The Last of Us Part II Remastered",
+      "url": "https://howlongtobeat.com/game/141122"
+    },
+    {
+      "title": "ANIMAL WELL",
+      "appId": 813230,
+      "hltbHours": 7.01,
+      "matchedTitle": "Animal Well",
+      "url": "https://howlongtobeat.com/game/109108"
+    },
+    {
+      "title": "Clair Obscur: Expedition 33",
+      "appId": 1903340,
+      "hltbHours": 29.2,
+      "matchedTitle": "Clair Obscur: Expedition 33",
+      "url": "https://howlongtobeat.com/game/152016"
+    },
+    {
+      "title": "FINAL FANTASY VII REBIRTH",
+      "appId": 2909400,
+      "hltbHours": 48.33,
+      "matchedTitle": "Final Fantasy VII Rebirth",
+      "url": "https://howlongtobeat.com/game/109434"
+    },
+    {
+      "title": "Avowed",
+      "appId": 2457220,
+      "hltbHours": 20.15,
+      "matchedTitle": "Avowed",
+      "url": "https://howlongtobeat.com/game/81115"
+    },
+    {
+      "title": "Neva",
+      "appId": 2420660,
+      "hltbHours": 4.06,
+      "matchedTitle": "Neva",
+      "url": "https://howlongtobeat.com/game/129246"
+    },
+    {
+      "title": "Hades II",
+      "appId": 1145350,
+      "hltbHours": 30.53,
+      "matchedTitle": "Hades II",
+      "url": "https://howlongtobeat.com/game/118218"
+    },
+    {
+      "title": "Kingdom Come: Deliverance II",
+      "appId": 1771300,
+      "hltbHours": 54.76,
+      "matchedTitle": "Kingdom Come: Deliverance II",
+      "url": "https://howlongtobeat.com/game/148973"
+    },
+    {
+      "title": "ANIMAL WELL",
+      "appId": 813230,
+      "hltbHours": 7.01,
+      "matchedTitle": "Animal Well",
+      "url": "https://howlongtobeat.com/game/109108"
+    },
+    {
+      "title": "The First Berserker: Khazan",
+      "appId": 2680010,
+      "hltbHours": 34.72,
+      "matchedTitle": "The First Berserker: Khazan",
+      "url": "https://howlongtobeat.com/game/141849"
+    },
+    {
+      "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "appId": 1643320,
+      "hltbHours": 36.73,
+      "matchedTitle": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "url": "https://howlongtobeat.com/game/81121"
+    },
+    {
+      "title": "Red Dead Redemption",
+      "appId": 2668510,
+      "hltbHours": 17.6,
+      "matchedTitle": "Red Dead Redemption",
+      "url": "https://howlongtobeat.com/game/7676"
+    },
+    {
+      "title": "UNCHARTED: Legacy of Thieves Collection",
+      "appId": 1659420,
+      "hltbHours": 20.53,
+      "matchedTitle": "Uncharted: Legacy of Thieves Collection",
+      "url": "https://howlongtobeat.com/game/101083"
+    },
+    {
+      "title": "Metaphor: ReFantazio",
+      "appId": 2679460,
+      "hltbHours": 65.19,
+      "matchedTitle": "Metaphor: ReFantazio",
+      "url": "https://howlongtobeat.com/game/129956"
+    },
+    {
+      "title": "Red Dead Redemption",
+      "appId": 2668510,
+      "hltbHours": 17.6,
+      "matchedTitle": "Red Dead Redemption",
+      "url": "https://howlongtobeat.com/game/7676"
+    },
+    {
+      "title": "Nine Sols",
+      "appId": 1809540,
+      "hltbHours": 21.36,
+      "matchedTitle": "Nine Sols",
+      "url": "https://howlongtobeat.com/game/107896"
+    },
+    {
+      "title": "UFO 50",
+      "appId": 1147860,
+      "hltbHours": 53.34,
+      "matchedTitle": "UFO 50",
+      "url": "https://howlongtobeat.com/game/75152"
+    },
+    {
+      "title": "Witchfire",
+      "appId": 3156770,
+      "hltbHours": 11.4,
+      "matchedTitle": "Witchfire",
+      "url": "https://howlongtobeat.com/game/51324"
+    },
+    {
+      "title": "Slitterhead",
+      "appId": 2631250,
+      "hltbHours": 13.55,
+      "matchedTitle": "Slitterhead",
+      "url": "https://howlongtobeat.com/game/101287"
+    },
+    {
+      "title": "Red Dead Redemption",
+      "appId": 2668510,
+      "hltbHours": 17.6,
+      "matchedTitle": "Red Dead Redemption",
+      "url": "https://howlongtobeat.com/game/7676"
+    },
+    {
+      "title": "Indiana Jones and the Great Circle",
+      "appId": 2677660,
+      "hltbHours": 16.03,
+      "matchedTitle": "Indiana Jones and the Great Circle",
+      "url": "https://howlongtobeat.com/game/144234"
+    },
+    {
+      "title": "Flintlock: The Siege of Dawn",
+      "appId": 1832040,
+      "hltbHours": 8.94,
+      "matchedTitle": "Flintlock: The Siege of Dawn",
+      "url": "https://howlongtobeat.com/game/105586"
+    },
+    {
+      "title": "Hades II",
+      "appId": 1145350,
+      "hltbHours": 30.53,
+      "matchedTitle": "Hades II",
+      "url": "https://howlongtobeat.com/game/118218"
+    },
+    {
+      "title": "Neva",
+      "appId": 2420660,
+      "hltbHours": 4.06,
+      "matchedTitle": "Neva",
+      "url": "https://howlongtobeat.com/game/129246"
+    },
+    {
+      "title": "Metaphor: ReFantazio",
+      "appId": 2679460,
+      "hltbHours": 65.19,
+      "matchedTitle": "Metaphor: ReFantazio",
+      "url": "https://howlongtobeat.com/game/129956"
+    },
+    {
+      "title": "Like a Dragon: Ishin!",
+      "appId": 1805480,
+      "hltbHours": 23.83,
+      "matchedTitle": "Like a Dragon: Ishin!",
+      "url": "https://howlongtobeat.com/game/113549"
+    },
+    {
+      "title": "Witchfire",
+      "appId": 3156770,
+      "hltbHours": 11.4,
+      "matchedTitle": "Witchfire",
+      "url": "https://howlongtobeat.com/game/51324"
+    },
+    {
+      "title": "Ghost of Tsushima DIRECTOR'S CUT",
+      "appId": 2215430,
+      "hltbHours": 25.11,
+      "matchedTitle": "Ghost of Tsushima",
+      "url": "https://howlongtobeat.com/game/51225"
+    },
+    {
+      "title": "Nine Sols",
+      "appId": 1809540,
+      "hltbHours": 21.36,
+      "matchedTitle": "Nine Sols",
+      "url": "https://howlongtobeat.com/game/107896"
+    },
+    {
+      "title": "Age of Mythology: Retold",
+      "appId": 1934680,
+      "hltbHours": 24.46,
+      "matchedTitle": "Age of Mythology: Retold",
+      "url": "https://howlongtobeat.com/game/115181"
+    },
+    {
+      "title": "UNCHARTED: Legacy of Thieves Collection",
+      "appId": 1659420,
+      "hltbHours": 20.53,
+      "matchedTitle": "Uncharted: Legacy of Thieves Collection",
+      "url": "https://howlongtobeat.com/game/101083"
+    },
+    {
+      "title": "Banishers: Ghosts of New Eden",
+      "appId": 1493640,
+      "hltbHours": 22.89,
+      "matchedTitle": "Banishers: Ghosts of New Eden",
+      "url": "https://howlongtobeat.com/game/118229"
+    },
+    {
+      "title": "Warhammer 40,000: Space Marine 2",
+      "appId": 2183900,
+      "hltbHours": 9.47,
+      "matchedTitle": "Warhammer 40,000: Space Marine II",
+      "url": "https://howlongtobeat.com/game/101254"
+    },
+    {
+      "title": "DAVE THE DIVER",
+      "appId": 1868140,
+      "hltbHours": 25.0,
+      "matchedTitle": "Dave the Diver",
+      "url": "https://howlongtobeat.com/game/115577"
+    },
+    {
+      "title": "Horizon Forbidden West Complete Edition",
+      "appId": 2420110,
+      "hltbHours": 48.23,
+      "matchedTitle": "Horizon Forbidden West - Complete Edition",
+      "url": "https://howlongtobeat.com/game/139665"
+    },
+    {
+      "title": "Nine Sols",
+      "appId": 1809540,
+      "hltbHours": 21.36,
+      "matchedTitle": "Nine Sols",
+      "url": "https://howlongtobeat.com/game/107896"
+    },
+    {
+      "title": "DAVE THE DIVER",
+      "appId": 1868140,
+      "hltbHours": 25.0,
+      "matchedTitle": "Dave the Diver",
+      "url": "https://howlongtobeat.com/game/115577"
+    },
+    {
+      "title": "Hades II",
+      "appId": 1145350,
+      "hltbHours": 30.53,
+      "matchedTitle": "Hades II",
+      "url": "https://howlongtobeat.com/game/118218"
+    },
+    {
+      "title": "Granblue Fantasy: Relink",
+      "appId": 881020,
+      "hltbHours": 15.56,
+      "matchedTitle": "Granblue Fantasy: Relink",
+      "url": "https://howlongtobeat.com/game/66500"
+    },
+    {
+      "title": "The Last of Us Part I",
+      "appId": 1888930,
+      "hltbHours": 14.32,
+      "matchedTitle": "The Last of Us Part I",
+      "url": "https://howlongtobeat.com/game/109104"
+    },
+    {
+      "title": "Horizon Forbidden West Complete Edition",
+      "appId": 2420110,
+      "hltbHours": 48.23,
+      "matchedTitle": "Horizon Forbidden West - Complete Edition",
+      "url": "https://howlongtobeat.com/game/139665"
+    },
+    {
+      "title": "Still Wakes the Deep",
+      "appId": 1622910,
+      "hltbHours": 4.66,
+      "matchedTitle": "Still Wakes The Deep",
+      "url": "https://howlongtobeat.com/game/129960"
+    },
+    {
+      "title": "Banishers: Ghosts of New Eden",
+      "appId": 1493640,
+      "hltbHours": 22.89,
+      "matchedTitle": "Banishers: Ghosts of New Eden",
+      "url": "https://howlongtobeat.com/game/118229"
+    },
+    {
+      "title": "Song of Nunu: A League of Legends Story",
+      "appId": 1333200,
+      "hltbHours": 6.16,
+      "matchedTitle": "Song of Nunu: A League of Legends Story",
+      "url": "https://howlongtobeat.com/game/100440"
+    },
+    {
+      "title": "Lies of P",
+      "appId": 1627720,
+      "hltbHours": 28.33,
+      "matchedTitle": "Lies of P",
+      "url": "https://howlongtobeat.com/game/92418"
+    },
+    {
+      "title": "ANIMAL WELL",
+      "appId": 813230,
+      "hltbHours": 7.01,
+      "matchedTitle": "Animal Well",
+      "url": "https://howlongtobeat.com/game/109108"
+    },
+    {
+      "title": "Warhammer 40,000: Space Marine 2",
+      "appId": 2183900,
+      "hltbHours": 9.47,
+      "matchedTitle": "Warhammer 40,000: Space Marine II",
+      "url": "https://howlongtobeat.com/game/101254"
+    },
+    {
+      "title": "Granblue Fantasy: Relink",
+      "appId": 881020,
+      "hltbHours": 15.56,
+      "matchedTitle": "Granblue Fantasy: Relink",
+      "url": "https://howlongtobeat.com/game/66500"
+    },
+    {
+      "title": "ANIMAL WELL",
+      "appId": 813230,
+      "hltbHours": 7.01,
+      "matchedTitle": "Animal Well",
+      "url": "https://howlongtobeat.com/game/109108"
+    },
+    {
+      "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "appId": 1643320,
+      "hltbHours": 36.73,
+      "matchedTitle": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "url": "https://howlongtobeat.com/game/81121"
+    },
+    {
+      "title": "Flintlock: The Siege of Dawn",
+      "appId": 1832040,
+      "hltbHours": 8.94,
+      "matchedTitle": "Flintlock: The Siege of Dawn",
+      "url": "https://howlongtobeat.com/game/105586"
+    },
+    {
+      "title": "Lies of P",
+      "appId": 1627720,
+      "hltbHours": 28.33,
+      "matchedTitle": "Lies of P",
+      "url": "https://howlongtobeat.com/game/92418"
+    },
+    {
+      "title": "ANIMAL WELL",
+      "appId": 813230,
+      "hltbHours": 7.01,
+      "matchedTitle": "Animal Well",
+      "url": "https://howlongtobeat.com/game/109108"
+    },
+    {
+      "title": "Hades II",
+      "appId": 1145350,
+      "hltbHours": 30.53,
+      "matchedTitle": "Hades II",
+      "url": "https://howlongtobeat.com/game/118218"
+    },
+    {
+      "title": "Horizon Forbidden West Complete Edition",
+      "appId": 2420110,
+      "hltbHours": 48.23,
+      "matchedTitle": "Horizon Forbidden West - Complete Edition",
+      "url": "https://howlongtobeat.com/game/139665"
+    },
+    {
+      "title": "Lies of P",
+      "appId": 1627720,
+      "hltbHours": 28.33,
+      "matchedTitle": "Lies of P",
+      "url": "https://howlongtobeat.com/game/92418"
+    },
+    {
+      "title": "Ghost of Tsushima DIRECTOR'S CUT",
+      "appId": 2215430,
+      "hltbHours": 25.11,
+      "matchedTitle": "Ghost of Tsushima",
+      "url": "https://howlongtobeat.com/game/51225"
+    },
+    {
+      "title": "Hades II",
+      "appId": 1145350,
+      "hltbHours": 30.53,
+      "matchedTitle": "Hades II",
+      "url": "https://howlongtobeat.com/game/118218"
+    },
+    {
+      "title": "Horizon Forbidden West Complete Edition",
+      "appId": 2420110,
+      "hltbHours": 48.23,
+      "matchedTitle": "Horizon Forbidden West - Complete Edition",
+      "url": "https://howlongtobeat.com/game/139665"
+    },
+    {
+      "title": "Harold Halibut",
+      "appId": 924750,
+      "hltbHours": 10.65,
+      "matchedTitle": "Harold Halibut",
+      "url": "https://howlongtobeat.com/game/69307"
+    },
+    {
+      "title": "Lies of P",
+      "appId": 1627720,
+      "hltbHours": 28.33,
+      "matchedTitle": "Lies of P",
+      "url": "https://howlongtobeat.com/game/92418"
+    },
+    {
+      "title": "Horizon Forbidden West Complete Edition",
+      "appId": 2420110,
+      "hltbHours": 48.23,
+      "matchedTitle": "Horizon Forbidden West - Complete Edition",
+      "url": "https://howlongtobeat.com/game/139665"
+    },
+    {
+      "title": "Ghost of Tsushima DIRECTOR'S CUT",
+      "appId": 2215430,
+      "hltbHours": 25.11,
+      "matchedTitle": "Ghost of Tsushima",
+      "url": "https://howlongtobeat.com/game/51225"
+    },
+    {
+      "title": "Ghost of Tsushima DIRECTOR'S CUT",
+      "appId": 2215430,
+      "hltbHours": 25.11,
+      "matchedTitle": "Ghost of Tsushima",
+      "url": "https://howlongtobeat.com/game/51225"
+    },
+    {
+      "title": "Lies of P",
+      "appId": 1627720,
+      "hltbHours": 28.33,
+      "matchedTitle": "Lies of P",
+      "url": "https://howlongtobeat.com/game/92418"
+    },
+    {
+      "title": "Banishers: Ghosts of New Eden",
+      "appId": 1493640,
+      "hltbHours": 22.89,
+      "matchedTitle": "Banishers: Ghosts of New Eden",
+      "url": "https://howlongtobeat.com/game/118229"
+    },
+    {
+      "title": "Horizon Forbidden West Complete Edition",
+      "appId": 2420110,
+      "hltbHours": 48.23,
+      "matchedTitle": "Horizon Forbidden West - Complete Edition",
+      "url": "https://howlongtobeat.com/game/139665"
+    },
+    {
+      "title": "Vampire: The Masquerade - Bloodlines 2",
+      "appId": 532790,
+      "hltbHours": 16.1,
+      "matchedTitle": "Vampire: The Masquerade - Bloodlines 2",
+      "url": "https://howlongtobeat.com/game/65968"
+    },
+    {
+      "title": "Horizon Forbidden West Complete Edition",
+      "appId": 2420110,
+      "hltbHours": 48.23,
+      "matchedTitle": "Horizon Forbidden West - Complete Edition",
+      "url": "https://howlongtobeat.com/game/139665"
+    },
+    {
+      "title": "Banishers: Ghosts of New Eden",
+      "appId": 1493640,
+      "hltbHours": 22.89,
+      "matchedTitle": "Banishers: Ghosts of New Eden",
+      "url": "https://howlongtobeat.com/game/118229"
+    },
+    {
+      "title": "Horizon Forbidden West Complete Edition",
+      "appId": 2420110,
+      "hltbHours": 48.23,
+      "matchedTitle": "Horizon Forbidden West - Complete Edition",
+      "url": "https://howlongtobeat.com/game/139665"
+    },
+    {
+      "title": "Lies of P",
+      "appId": 1627720,
+      "hltbHours": 28.33,
+      "matchedTitle": "Lies of P",
+      "url": "https://howlongtobeat.com/game/92418"
+    },
+    {
+      "title": "Banishers: Ghosts of New Eden",
+      "appId": 1493640,
+      "hltbHours": 22.89,
+      "matchedTitle": "Banishers: Ghosts of New Eden",
+      "url": "https://howlongtobeat.com/game/118229"
+    },
+    {
+      "title": "Like a Dragon: Infinite Wealth",
+      "appId": 2072450,
+      "hltbHours": 56.31,
+      "matchedTitle": "Like a Dragon: Infinite Wealth",
+      "url": "https://howlongtobeat.com/game/113583"
+    },
+    {
+      "title": "Song of Nunu: A League of Legends Story",
+      "appId": 1333200,
+      "hltbHours": 6.16,
+      "matchedTitle": "Song of Nunu: A League of Legends Story",
+      "url": "https://howlongtobeat.com/game/100440"
+    },
+    {
+      "title": "Like a Dragon: Infinite Wealth",
+      "appId": 2072450,
+      "hltbHours": 56.31,
+      "matchedTitle": "Like a Dragon: Infinite Wealth",
+      "url": "https://howlongtobeat.com/game/113583"
+    },
+    {
+      "title": "Like a Dragon: Infinite Wealth",
+      "appId": 2072450,
+      "hltbHours": 56.31,
+      "matchedTitle": "Like a Dragon: Infinite Wealth",
+      "url": "https://howlongtobeat.com/game/113583"
+    },
+    {
+      "title": "Lords of the Fallen",
+      "appId": 1501750,
+      "hltbHours": 28.5,
+      "matchedTitle": "Lords of the Fallen",
+      "url": "https://howlongtobeat.com/game/112684"
+    },
+    {
+      "title": "DAVE THE DIVER",
+      "appId": 1868140,
+      "hltbHours": 25.0,
+      "matchedTitle": "Dave the Diver",
+      "url": "https://howlongtobeat.com/game/115577"
+    },
+    {
+      "title": "Lies of P",
+      "appId": 1627720,
+      "hltbHours": 28.33,
+      "matchedTitle": "Lies of P",
+      "url": "https://howlongtobeat.com/game/92418"
+    },
+    {
+      "title": "Like a Dragon Gaiden: The Man Who Era...",
+      "appId": 2375550,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Banishers: Ghosts of New Eden",
+      "appId": 1493640,
+      "hltbHours": 22.89,
+      "matchedTitle": "Banishers: Ghosts of New Eden",
+      "url": "https://howlongtobeat.com/game/118229"
+    },
+    {
+      "title": "Lies of P",
+      "appId": 1627720,
+      "hltbHours": 28.33,
+      "matchedTitle": "Lies of P",
+      "url": "https://howlongtobeat.com/game/92418"
+    },
+    {
+      "title": "Lords of the Fallen",
+      "appId": 1501750,
+      "hltbHours": 28.5,
+      "matchedTitle": "Lords of the Fallen",
+      "url": "https://howlongtobeat.com/game/112684"
+    },
+    {
+      "title": "Banishers: Ghosts of New Eden",
+      "appId": 1493640,
+      "hltbHours": 22.89,
+      "matchedTitle": "Banishers: Ghosts of New Eden",
+      "url": "https://howlongtobeat.com/game/118229"
+    },
+    {
+      "title": "DAVE THE DIVER",
+      "appId": 1868140,
+      "hltbHours": 25.0,
+      "matchedTitle": "Dave the Diver",
+      "url": "https://howlongtobeat.com/game/115577"
+    },
+    {
+      "title": "Like a Dragon: Ishin!",
+      "appId": 1805480,
+      "hltbHours": 23.83,
+      "matchedTitle": "Like a Dragon: Ishin!",
+      "url": "https://howlongtobeat.com/game/113549"
+    },
+    {
+      "title": "Age of Empires IV: Anniversary Edition",
+      "appId": 1466860,
+      "hltbHours": 28.23,
+      "matchedTitle": "Age of Empires IV",
+      "url": "https://howlongtobeat.com/game/48733"
+    },
+    {
+      "title": "Stray",
+      "appId": 1332010,
+      "hltbHours": 5.15,
+      "matchedTitle": "Stray",
+      "url": "https://howlongtobeat.com/game/79790"
+    },
+    {
+      "title": "UNCHARTED: Legacy of Thieves Collection",
+      "appId": 1659420,
+      "hltbHours": 20.53,
+      "matchedTitle": "Uncharted: Legacy of Thieves Collection",
+      "url": "https://howlongtobeat.com/game/101083"
+    },
+    {
+      "title": "The Last of Us Part I",
+      "appId": 1888930,
+      "hltbHours": 14.32,
+      "matchedTitle": "The Last of Us Part I",
+      "url": "https://howlongtobeat.com/game/109104"
+    },
+    {
+      "title": "UNCHARTED: Legacy of Thieves Collection",
+      "appId": 1659420,
+      "hltbHours": 20.53,
+      "matchedTitle": "Uncharted: Legacy of Thieves Collection",
+      "url": "https://howlongtobeat.com/game/101083"
+    },
+    {
+      "title": "Atomic Heart",
+      "appId": 668580,
+      "hltbHours": 16.22,
+      "matchedTitle": "Atomic Heart",
+      "url": "https://howlongtobeat.com/game/56297"
+    },
+    {
+      "title": "Lords of the Fallen",
+      "appId": 1501750,
+      "hltbHours": 28.5,
+      "matchedTitle": "Lords of the Fallen",
+      "url": "https://howlongtobeat.com/game/112684"
+    },
+    {
+      "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "appId": 1643320,
+      "hltbHours": 36.73,
+      "matchedTitle": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "url": "https://howlongtobeat.com/game/81121"
+    },
+    {
+      "title": "Lies of P",
+      "appId": 1627720,
+      "hltbHours": 28.33,
+      "matchedTitle": "Lies of P",
+      "url": "https://howlongtobeat.com/game/92418"
+    },
+    {
+      "title": "Lies of P",
+      "appId": 1627720,
+      "hltbHours": 28.33,
+      "matchedTitle": "Lies of P",
+      "url": "https://howlongtobeat.com/game/92418"
+    },
+    {
+      "title": "UNCHARTED: Legacy of Thieves Collection",
+      "appId": 1659420,
+      "hltbHours": 20.53,
+      "matchedTitle": "Uncharted: Legacy of Thieves Collection",
+      "url": "https://howlongtobeat.com/game/101083"
+    },
+    {
+      "title": "Pizza Tower",
+      "appId": 2231450,
+      "hltbHours": 6.28,
+      "matchedTitle": "Pizza Tower",
+      "url": "https://howlongtobeat.com/game/118236"
+    },
+    {
+      "title": "Banishers: Ghosts of New Eden",
+      "appId": 1493640,
+      "hltbHours": 22.89,
+      "matchedTitle": "Banishers: Ghosts of New Eden",
+      "url": "https://howlongtobeat.com/game/118229"
+    },
+    {
+      "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "appId": 1643320,
+      "hltbHours": 36.73,
+      "matchedTitle": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "url": "https://howlongtobeat.com/game/81121"
+    },
+    {
+      "title": "Lies of P",
+      "appId": 1627720,
+      "hltbHours": 28.33,
+      "matchedTitle": "Lies of P",
+      "url": "https://howlongtobeat.com/game/92418"
+    },
+    {
+      "title": "Atomic Heart",
+      "appId": 668580,
+      "hltbHours": 16.22,
+      "matchedTitle": "Atomic Heart",
+      "url": "https://howlongtobeat.com/game/56297"
+    },
+    {
+      "title": "Like a Dragon: Ishin!",
+      "appId": 1805480,
+      "hltbHours": 23.83,
+      "matchedTitle": "Like a Dragon: Ishin!",
+      "url": "https://howlongtobeat.com/game/113549"
+    },
+    {
+      "title": "Lies of P",
+      "appId": 1627720,
+      "hltbHours": 28.33,
+      "matchedTitle": "Lies of P",
+      "url": "https://howlongtobeat.com/game/92418"
+    },
+    {
+      "title": "Like a Dragon Gaiden: The Man Who Era...",
+      "appId": 2375550,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Lords of the Fallen",
+      "appId": 1501750,
+      "hltbHours": 28.5,
+      "matchedTitle": "Lords of the Fallen",
+      "url": "https://howlongtobeat.com/game/112684"
+    },
+    {
+      "title": "Darkest Dungeon II",
+      "appId": 1940340,
+      "hltbHours": 30.85,
+      "matchedTitle": "Darkest Dungeon II",
+      "url": "https://howlongtobeat.com/game/85972"
+    },
+    {
+      "title": "DAVE THE DIVER",
+      "appId": 1868140,
+      "hltbHours": 25.0,
+      "matchedTitle": "Dave the Diver",
+      "url": "https://howlongtobeat.com/game/115577"
+    },
+    {
+      "title": "The Last of Us Part I",
+      "appId": 1888930,
+      "hltbHours": 14.32,
+      "matchedTitle": "The Last of Us Part I",
+      "url": "https://howlongtobeat.com/game/109104"
+    },
+    {
+      "title": "Atomic Heart",
+      "appId": 668580,
+      "hltbHours": 16.22,
+      "matchedTitle": "Atomic Heart",
+      "url": "https://howlongtobeat.com/game/56297"
+    },
+    {
+      "title": "CRISIS CORE –FINAL FANTASY VII– REUNION",
+      "appId": 1608070,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Like a Dragon: Ishin!",
+      "appId": 1805480,
+      "hltbHours": 23.83,
+      "matchedTitle": "Like a Dragon: Ishin!",
+      "url": "https://howlongtobeat.com/game/113549"
+    },
+    {
+      "title": "Atomic Heart",
+      "appId": 668580,
+      "hltbHours": 16.22,
+      "matchedTitle": "Atomic Heart",
+      "url": "https://howlongtobeat.com/game/56297"
+    },
+    {
+      "title": "Darkest Dungeon II",
+      "appId": 1940340,
+      "hltbHours": 30.85,
+      "matchedTitle": "Darkest Dungeon II",
+      "url": "https://howlongtobeat.com/game/85972"
+    },
+    {
+      "title": "The Last of Us Part I",
+      "appId": 1888930,
+      "hltbHours": 14.32,
+      "matchedTitle": "The Last of Us Part I",
+      "url": "https://howlongtobeat.com/game/109104"
+    },
+    {
+      "title": "UNCHARTED: Legacy of Thieves Collection",
+      "appId": 1659420,
+      "hltbHours": 20.53,
+      "matchedTitle": "Uncharted: Legacy of Thieves Collection",
+      "url": "https://howlongtobeat.com/game/101083"
+    },
+    {
+      "title": "The Last of Us Part I",
+      "appId": 1888930,
+      "hltbHours": 14.32,
+      "matchedTitle": "The Last of Us Part I",
+      "url": "https://howlongtobeat.com/game/109104"
+    },
+    {
+      "title": "Dead Space",
+      "appId": 1693980,
+      "hltbHours": 12.12,
+      "matchedTitle": "Dead Space",
+      "url": "https://howlongtobeat.com/game/95927"
+    },
+    {
+      "title": "Atomic Heart",
+      "appId": 668580,
+      "hltbHours": 16.22,
+      "matchedTitle": "Atomic Heart",
+      "url": "https://howlongtobeat.com/game/56297"
+    },
+    {
+      "title": "UNCHARTED: Legacy of Thieves Collection",
+      "appId": 1659420,
+      "hltbHours": 20.53,
+      "matchedTitle": "Uncharted: Legacy of Thieves Collection",
+      "url": "https://howlongtobeat.com/game/101083"
+    },
+    {
+      "title": "The Last of Us Part I",
+      "appId": 1888930,
+      "hltbHours": 14.32,
+      "matchedTitle": "The Last of Us Part I",
+      "url": "https://howlongtobeat.com/game/109104"
+    },
+    {
+      "title": "CRISIS CORE –FINAL FANTASY VII– REUNION",
+      "appId": 1608070,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "The Last of Us Part I",
+      "appId": 1888930,
+      "hltbHours": 14.32,
+      "matchedTitle": "The Last of Us Part I",
+      "url": "https://howlongtobeat.com/game/109104"
+    },
+    {
+      "title": "Dead Space",
+      "appId": 1693980,
+      "hltbHours": 12.12,
+      "matchedTitle": "Dead Space",
+      "url": "https://howlongtobeat.com/game/95927"
+    },
+    {
+      "title": "UNCHARTED: Legacy of Thieves Collection",
+      "appId": 1659420,
+      "hltbHours": 20.53,
+      "matchedTitle": "Uncharted: Legacy of Thieves Collection",
+      "url": "https://howlongtobeat.com/game/101083"
+    },
+    {
+      "title": "Dead Space",
+      "appId": 1693980,
+      "hltbHours": 12.12,
+      "matchedTitle": "Dead Space",
+      "url": "https://howlongtobeat.com/game/95927"
+    },
+    {
+      "title": "The Last of Us Part I",
+      "appId": 1888930,
+      "hltbHours": 14.32,
+      "matchedTitle": "The Last of Us Part I",
+      "url": "https://howlongtobeat.com/game/109104"
+    },
+    {
+      "title": "UNCHARTED: Legacy of Thieves Collection",
+      "appId": 1659420,
+      "hltbHours": 20.53,
+      "matchedTitle": "Uncharted: Legacy of Thieves Collection",
+      "url": "https://howlongtobeat.com/game/101083"
+    },
+    {
+      "title": "Atomic Heart",
+      "appId": 668580,
+      "hltbHours": 16.22,
+      "matchedTitle": "Atomic Heart",
+      "url": "https://howlongtobeat.com/game/56297"
+    },
+    {
+      "title": "UNCHARTED: Legacy of Thieves Collection",
+      "appId": 1659420,
+      "hltbHours": 20.53,
+      "matchedTitle": "Uncharted: Legacy of Thieves Collection",
+      "url": "https://howlongtobeat.com/game/101083"
+    },
+    {
+      "title": "Like a Dragon: Ishin!",
+      "appId": 1805480,
+      "hltbHours": 23.83,
+      "matchedTitle": "Like a Dragon: Ishin!",
+      "url": "https://howlongtobeat.com/game/113549"
+    },
+    {
+      "title": "Atomic Heart",
+      "appId": 668580,
+      "hltbHours": 16.22,
+      "matchedTitle": "Atomic Heart",
+      "url": "https://howlongtobeat.com/game/56297"
+    },
+    {
+      "title": "Have a Nice Death",
+      "appId": 1740720,
+      "hltbHours": 9.47,
+      "matchedTitle": "Have a Nice Death",
+      "url": "https://howlongtobeat.com/game/101233"
+    },
+    {
+      "title": "SIGNALIS",
+      "appId": 1262350,
+      "hltbHours": 9.22,
+      "matchedTitle": "Signalis",
+      "url": "https://howlongtobeat.com/game/57149"
+    },
+    {
+      "title": "Stray",
+      "appId": 1332010,
+      "hltbHours": 5.15,
+      "matchedTitle": "Stray",
+      "url": "https://howlongtobeat.com/game/79790"
+    },
+    {
+      "title": "CRISIS CORE –FINAL FANTASY VII– REUNION",
+      "appId": 1608070,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "UNCHARTED: Legacy of Thieves Collection",
+      "appId": 1659420,
+      "hltbHours": 20.53,
+      "matchedTitle": "Uncharted: Legacy of Thieves Collection",
+      "url": "https://howlongtobeat.com/game/101083"
+    },
+    {
+      "title": "UNCHARTED: Legacy of Thieves Collection",
+      "appId": 1659420,
+      "hltbHours": 20.53,
+      "matchedTitle": "Uncharted: Legacy of Thieves Collection",
+      "url": "https://howlongtobeat.com/game/101083"
+    },
+    {
+      "title": "God of War",
+      "appId": 1593500,
+      "hltbHours": 20.55,
+      "matchedTitle": "God of War",
+      "url": "https://howlongtobeat.com/game/38050"
+    },
+    {
+      "title": "Stray",
+      "appId": 1332010,
+      "hltbHours": 5.15,
+      "matchedTitle": "Stray",
+      "url": "https://howlongtobeat.com/game/79790"
+    },
+    {
+      "title": "BRAVELY DEFAULT II",
+      "appId": 1446650,
+      "hltbHours": 49.89,
+      "matchedTitle": "Bravely Default II",
+      "url": "https://howlongtobeat.com/game/72838"
+    },
+    {
+      "title": "God of War",
+      "appId": 1593500,
+      "hltbHours": 20.55,
+      "matchedTitle": "God of War",
+      "url": "https://howlongtobeat.com/game/38050"
+    },
+    {
+      "title": "Stray",
+      "appId": 1332010,
+      "hltbHours": 5.15,
+      "matchedTitle": "Stray",
+      "url": "https://howlongtobeat.com/game/79790"
+    },
+    {
+      "title": "Stray",
+      "appId": 1332010,
+      "hltbHours": 5.15,
+      "matchedTitle": "Stray",
+      "url": "https://howlongtobeat.com/game/79790"
+    },
+    {
+      "title": "Have a Nice Death",
+      "appId": 1740720,
+      "hltbHours": 9.47,
+      "matchedTitle": "Have a Nice Death",
+      "url": "https://howlongtobeat.com/game/101233"
+    },
+    {
+      "title": "Stray",
+      "appId": 1332010,
+      "hltbHours": 5.15,
+      "matchedTitle": "Stray",
+      "url": "https://howlongtobeat.com/game/79790"
+    },
+    {
+      "title": "Age of Empires IV: Anniversary Edition",
+      "appId": 1466860,
+      "hltbHours": 28.23,
+      "matchedTitle": "Age of Empires IV",
+      "url": "https://howlongtobeat.com/game/48733"
+    },
+    {
+      "title": "God of War",
+      "appId": 1593500,
+      "hltbHours": 20.55,
+      "matchedTitle": "God of War",
+      "url": "https://howlongtobeat.com/game/38050"
+    },
+    {
+      "title": "Stray",
+      "appId": 1332010,
+      "hltbHours": 5.15,
+      "matchedTitle": "Stray",
+      "url": "https://howlongtobeat.com/game/79790"
+    },
+    {
+      "title": "Stray",
+      "appId": 1332010,
+      "hltbHours": 5.15,
+      "matchedTitle": "Stray",
+      "url": "https://howlongtobeat.com/game/79790"
+    },
+    {
+      "title": "Stray",
+      "appId": 1332010,
+      "hltbHours": 5.15,
+      "matchedTitle": "Stray",
+      "url": "https://howlongtobeat.com/game/79790"
+    },
+    {
+      "title": "Have a Nice Death",
+      "appId": 1740720,
+      "hltbHours": 9.47,
+      "matchedTitle": "Have a Nice Death",
+      "url": "https://howlongtobeat.com/game/101233"
+    },
+    {
+      "title": "Stray",
+      "appId": 1332010,
+      "hltbHours": 5.15,
+      "matchedTitle": "Stray",
+      "url": "https://howlongtobeat.com/game/79790"
+    },
+    {
+      "title": "Stray",
+      "appId": 1332010,
+      "hltbHours": 5.15,
+      "matchedTitle": "Stray",
+      "url": "https://howlongtobeat.com/game/79790"
+    },
+    {
+      "title": "God of War",
+      "appId": 1593500,
+      "hltbHours": 20.55,
+      "matchedTitle": "God of War",
+      "url": "https://howlongtobeat.com/game/38050"
+    },
+    {
+      "title": "Have a Nice Death",
+      "appId": 1740720,
+      "hltbHours": 9.47,
+      "matchedTitle": "Have a Nice Death",
+      "url": "https://howlongtobeat.com/game/101233"
+    },
+    {
+      "title": "God of War",
+      "appId": 1593500,
+      "hltbHours": 20.55,
+      "matchedTitle": "God of War",
+      "url": "https://howlongtobeat.com/game/38050"
+    },
+    {
+      "title": "God of War",
+      "appId": 1593500,
+      "hltbHours": 20.55,
+      "matchedTitle": "God of War",
+      "url": "https://howlongtobeat.com/game/38050"
+    },
+    {
+      "title": "BRAVELY DEFAULT II",
+      "appId": 1446650,
+      "hltbHours": 49.89,
+      "matchedTitle": "Bravely Default II",
+      "url": "https://howlongtobeat.com/game/72838"
+    },
+    {
+      "title": "God of War",
+      "appId": 1593500,
+      "hltbHours": 20.55,
+      "matchedTitle": "God of War",
+      "url": "https://howlongtobeat.com/game/38050"
+    },
+    {
+      "title": "Inscryption",
+      "appId": 1092790,
+      "hltbHours": 12.76,
+      "matchedTitle": "Inscryption",
+      "url": "https://howlongtobeat.com/game/91622"
+    },
+    {
+      "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "appId": 1643320,
+      "hltbHours": 36.73,
+      "matchedTitle": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "url": "https://howlongtobeat.com/game/81121"
+    },
+    {
+      "title": "God of War",
+      "appId": 1593500,
+      "hltbHours": 20.55,
+      "matchedTitle": "God of War",
+      "url": "https://howlongtobeat.com/game/38050"
+    },
+    {
+      "title": "God of War",
+      "appId": 1593500,
+      "hltbHours": 20.55,
+      "matchedTitle": "God of War",
+      "url": "https://howlongtobeat.com/game/38050"
+    },
+    {
+      "title": "Inscryption",
+      "appId": 1092790,
+      "hltbHours": 12.76,
+      "matchedTitle": "Inscryption",
+      "url": "https://howlongtobeat.com/game/91622"
+    },
+    {
+      "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "appId": 1643320,
+      "hltbHours": 36.73,
+      "matchedTitle": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "url": "https://howlongtobeat.com/game/81121"
+    },
+    {
+      "title": "Age of Empires IV: Anniversary Edition",
+      "appId": 1466860,
+      "hltbHours": 28.23,
+      "matchedTitle": "Age of Empires IV",
+      "url": "https://howlongtobeat.com/game/48733"
+    },
+    {
+      "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "appId": 1643320,
+      "hltbHours": 36.73,
+      "matchedTitle": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "url": "https://howlongtobeat.com/game/81121"
+    },
+    {
+      "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "appId": 1643320,
+      "hltbHours": 36.73,
+      "matchedTitle": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "url": "https://howlongtobeat.com/game/81121"
+    }
+  ],
+  "steamApiEnabled": false,
+  "activeOnly": true,
+  "refreshedMonth": "2026-04",
+  "refreshedScope": "month"
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akatsuki Live Sync Helper</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Inter, "Segoe UI", sans-serif;
+        background: #0f1115;
+        color: #f4f7fb;
+      }
+      .wrap {
+        width: min(900px, calc(100% - 32px));
+        margin: 32px auto;
+        padding: 24px;
+        background: #171b22;
+        border: 1px solid #2a3140;
+        border-radius: 18px;
+      }
+      h1 {
+        margin-top: 0;
+      }
+      p, li {
+        line-height: 1.5;
+        color: #c7d2e2;
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin: 16px 0 20px;
+      }
+      a.button, button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0 14px;
+        border-radius: 12px;
+        border: 0;
+        text-decoration: none;
+        cursor: pointer;
+        font: inherit;
+        font-weight: 700;
+      }
+      .primary {
+        background: #3d7bff;
+        color: white;
+      }
+      .secondary {
+        background: #252d3a;
+        color: white;
+        border: 1px solid #374050;
+      }
+      textarea {
+        width: 100%;
+        min-height: 150px;
+        padding: 12px;
+        border-radius: 12px;
+        background: #0f131a;
+        color: #f4f7fb;
+        border: 1px solid #313948;
+        font: 13px/1.4 Consolas, monospace;
+      }
+      .note {
+        color: #9da8bb;
+      }
+      code {
+        background: #0f131a;
+        padding: 2px 6px;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Akatsuki Live Sync Helper</h1>
+      <p>
+        This page makes the live SteamGifts sync easier to run from your logged-in browser.
+      </p>
+
+      <ol>
+        <li>Keep <code>python server.py</code> running.</li>
+        <li>Open the Akatsuki SteamGifts group in Chrome.</li>
+        <li>Copy the bookmarklet below.</li>
+        <li>In the Chrome address bar, type <code>javascript:</code> manually.</li>
+        <li>Paste only the copied code body after it and press Enter.</li>
+        <li>Use small batches, like <strong>1 giveaway page per run</strong> with a conservative delay.</li>
+        <li>Return to the dashboard and click <strong>Load server sync</strong>.</li>
+      </ol>
+
+      <div class="row">
+        <a
+          class="button secondary"
+          href="https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts"
+          target="_blank"
+          rel="noreferrer"
+          >Open SteamGifts group</a
+        >
+        <a class="button secondary" href="http://127.0.0.1:4173/" target="_blank" rel="noreferrer"
+          >Open dashboard</a
+        >
+        <button id="copy-button" class="button primary">Copy bookmarklet body</button>
+      </div>
+
+      <textarea id="bookmarklet-body" readonly></textarea>
+      <p class="note">
+        Chrome usually strips <code>javascript:</code> if you paste the whole thing at once. That is why you should type
+        <code>javascript:</code> first, then paste the copied body.
+      </p>
+      <p class="note">
+        The local server now merges batches, so you can safely run page 1, then page 2, then page 3 over time instead of scraping too much at once.
+      </p>
+      <p class="note">
+        Since the reported SteamGifts limit is 20 requests/second, the default bookmarklet delay is now set to a much safer and faster <strong>1200ms</strong> between requests.
+      </p>
+      <p class="note">
+        The minimum manual delay is now <strong>100ms</strong> if you want to test more aggressively.
+      </p>
+    </div>
+
+    <script>
+      const textarea = document.querySelector("#bookmarklet-body");
+      fetch("steamgifts-live-bookmarklet.js")
+        .then((response) => response.text())
+        .then((body) => {
+          textarea.value = body.trim();
+          document.querySelector("#copy-button").addEventListener("click", async () => {
+            await navigator.clipboard.writeText(body.trim());
+            document.querySelector("#copy-button").textContent = "Copied";
+            setTimeout(() => {
+              document.querySelector("#copy-button").textContent = "Copy bookmarklet body";
+            }, 1500);
+          });
+        });
+    </script>
+  </body>
+</html>
