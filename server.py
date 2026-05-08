@@ -299,6 +299,56 @@ def fetch_store_media(app_id: int) -> dict[str, str]:
     }
 
 
+def fetch_store_media_batch(app_ids: list[int]) -> dict[int, dict[str, str]]:
+    unique_ids = [app_id for app_id in sorted({parse_int(app_id) for app_id in app_ids if parse_int(app_id)}) if app_id]
+    if not unique_ids:
+        return {}
+    payload = fetch_json(
+        f"https://store.steampowered.com/api/appdetails?{urlencode({'appids': ','.join(str(app_id) for app_id in unique_ids), 'l': 'english'})}"
+    )
+    results: dict[int, dict[str, str]] = {}
+    for app_id in unique_ids:
+        data = (payload.get(str(app_id)) or {}).get("data") or {}
+        release_date = (data.get("release_date") or {})
+        results[app_id] = {
+            "appId": app_id,
+            "headerImageUrl": str(data.get("header_image") or ""),
+            "capsuleImageUrl": str(data.get("capsule_image") or ""),
+            "capsuleSmallUrl": str(data.get("capsule_imagev5") or data.get("capsule_image") or ""),
+            "releaseDate": normalize_store_release_date(release_date.get("date")),
+            "comingSoon": bool(release_date.get("coming_soon")),
+        }
+    return results
+
+
+def hydrate_media_cache_for_sync(sync_payload: dict, media_cache: dict) -> dict:
+    app_ids = sorted({parse_int(win.get("appId")) for win in derive_wins(sync_payload) if parse_int(win.get("appId"))})
+    missing_app_ids = []
+    for app_id in app_ids:
+        cached = media_cache.get("apps", {}).get(str(app_id)) or {}
+        if cached.get("headerImageUrl") and cached.get("capsuleImageUrl") and cached.get("capsuleSmallUrl"):
+            continue
+        missing_app_ids.append(app_id)
+
+    changed = False
+    for app_id in missing_app_ids:
+        try:
+            media = fetch_store_media(app_id)
+        except (HTTPError, URLError, TimeoutError):
+            continue
+        if not any((media.get("headerImageUrl"), media.get("capsuleImageUrl"), media.get("capsuleSmallUrl"))):
+            continue
+        media_cache.setdefault("apps", {})[str(app_id)] = media
+        changed = True
+        time.sleep(0.35)
+        if changed:
+            media_cache["updatedAt"] = utc_now()
+
+    if changed:
+        save_json(MEDIA_CACHE_PATH, media_cache)
+    return media_cache
+
+
 def get_media_cache_entry(app_id: int, media_cache: dict, *, fetch_missing: bool = False) -> dict[str, str]:
     cache_key = str(app_id)
     cached = media_cache.get("apps", {}).get(cache_key)
@@ -311,7 +361,10 @@ def get_media_cache_entry(app_id: int, media_cache: dict, *, fetch_missing: bool
         return cached
     if not fetch_missing:
         return {}
-    fetched = fetch_store_media(app_id)
+    try:
+        fetched = fetch_store_media(app_id)
+    except (HTTPError, URLError, TimeoutError):
+        return {}
     media_cache.setdefault("apps", {})[cache_key] = fetched
     media_cache["updatedAt"] = utc_now()
     return fetched
@@ -360,6 +413,12 @@ def build_sync_export_payload(sync_payload: dict, *, media_lookup: dict[int, dic
         **sync_payload,
         "giveaways": [with_giveaway_media(giveaway, media_lookup) for giveaway in sync_payload.get("giveaways", [])],
     }
+
+
+def enrich_sync_payload_with_media(sync_payload: dict) -> dict:
+    media_cache = hydrate_media_cache_for_sync(sync_payload, load_json(MEDIA_CACHE_PATH, empty_media_cache()))
+    media_lookup = build_media_lookup(media_cache)
+    return build_sync_export_payload(sync_payload, media_lookup=media_lookup)
 
 
 def fetch_html(url: str) -> str:
@@ -1399,7 +1458,7 @@ class Handler(SimpleHTTPRequestHandler):
             parsed = urlparse(self.path)
             query = parse_qs(parsed.query)
             if parsed.path == "/api/steamgifts-sync":
-                self.write_json(load_json(SYNC_PATH, {}))
+                self.write_json(enrich_sync_payload_with_media(load_json(SYNC_PATH, {})))
                 return
             if parsed.path == "/api/steam-progress":
                 self.write_json(load_json(PROGRESS_PATH, empty_progress_payload()))
@@ -1450,13 +1509,14 @@ class Handler(SimpleHTTPRequestHandler):
                 payload.setdefault("savedAt", utc_now())
                 existing = load_json(SYNC_PATH, {})
                 merged = merge_sync_payload(existing, payload)
-                save_json(SYNC_PATH, merged)
+                enriched = enrich_sync_payload_with_media(merged)
+                save_json(SYNC_PATH, enriched)
                 self.write_json(
                     {
                         "ok": True,
-                        "savedAt": merged["savedAt"],
-                        "members": len(merged.get("members", [])),
-                        "giveaways": len(merged.get("giveaways", [])),
+                        "savedAt": enriched["savedAt"],
+                        "members": len(enriched.get("members", [])),
+                        "giveaways": len(enriched.get("giveaways", [])),
                     }
                 )
                 return
@@ -1546,6 +1606,7 @@ def main() -> None:
             raise SystemExit(f"Could not read a JSON object from {incoming_path}")
         existing = load_json(SYNC_PATH, {})
         sync_payload = merge_sync_payload(existing, payload)
+        sync_payload = enrich_sync_payload_with_media(sync_payload)
         save_json(SYNC_PATH, sync_payload)
         print(
             "Merged SteamGifts sync payload:"
@@ -1596,7 +1657,7 @@ def export_static_site(output_dir: Path) -> None:
     sync_payload = load_json(SYNC_PATH, {})
     progress_payload = load_json(PROGRESS_PATH, empty_progress_payload())
     library_payload = load_json(LIBRARY_PATH, empty_library_payload())
-    media_cache = load_json(MEDIA_CACHE_PATH, empty_media_cache())
+    media_cache = hydrate_media_cache_for_sync(sync_payload, load_json(MEDIA_CACHE_PATH, empty_media_cache()))
     media_lookup = build_media_lookup(media_cache)
     sync_export = build_sync_export_payload(sync_payload, media_lookup=media_lookup)
     dashboard_payload = build_dashboard_payload(sync_export, progress_payload, library_payload)

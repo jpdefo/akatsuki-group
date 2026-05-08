@@ -168,9 +168,30 @@ function Publish-ChangedData {
     return
   }
 
+  Write-Host "Committing snapshot data..."
   git commit -m "Publish snapshot update" -m "Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
+  if ($LASTEXITCODE -ne 0) {
+    throw "git commit failed."
+  }
+  Write-Host "Pushing snapshot commit..."
   git push origin HEAD
+  if ($LASTEXITCODE -ne 0) {
+    throw "git push failed."
+  }
   Write-Host "Snapshot published. GitHub Pages will redeploy automatically."
+}
+
+function Invoke-CheckedExternal {
+  param(
+    [string]$Label,
+    [scriptblock]$Command
+  )
+
+  Write-Host $Label
+  & $Command
+  if ($LASTEXITCODE -ne 0) {
+    throw "$Label failed."
+  }
 }
 
 if (-not (Get-Command python -ErrorAction SilentlyContinue)) {
@@ -189,8 +210,11 @@ try {
 
     Write-Host "Opening SteamGifts in $Browser. If Cloudflare asks, complete the human verification in the browser."
     node scripts/steamgifts-public-sync.mjs --browser-channel $Browser --headless false --member-pages 1 --giveaway-pages $GiveawayPages --delay-ms $DelayMs
+    if ($LASTEXITCODE -ne 0) {
+      throw "Public SteamGifts sync failed."
+    }
 
-    python server.py --merge-sync-file data/steamgifts-sync.public.json
+    Invoke-CheckedExternal "Merging public SteamGifts sync..." { python server.py --merge-sync-file data/steamgifts-sync.public.json }
   } else {
     $startedServer = Start-LocalServerIfNeeded
     $baseline = Get-SyncMarker
@@ -204,9 +228,9 @@ try {
   }
 
   if ($FullRefresh) {
-    python server.py --refresh-steam-progress --full-refresh
+    Invoke-CheckedExternal "Refreshing Steam progress for all active members..." { python server.py --refresh-steam-progress --full-refresh }
   } else {
-    python server.py --refresh-steam-progress
+    Invoke-CheckedExternal "Refreshing Steam progress..." { python server.py --refresh-steam-progress }
   }
 
   if (Test-Path "data/steamgifts-sync.public.json") {

@@ -1358,6 +1358,8 @@ function mergeSteamMediaResults(results = []) {
       headerImageUrl: media.headerImageUrl || game.headerImageUrl || "",
       capsuleImageUrl: media.capsuleImageUrl || game.capsuleImageUrl || "",
       capsuleSmallUrl: media.capsuleSmallUrl || game.capsuleSmallUrl || "",
+      releaseDate: media.releaseDate || game.releaseDate || "",
+      comingSoon: typeof media.comingSoon === "boolean" ? media.comingSoon : Boolean(game.comingSoon),
     };
   });
 
@@ -1368,7 +1370,15 @@ function mergeSteamMediaResults(results = []) {
         ...state.sync.dashboard,
         recentGiveaways: state.sync.dashboard.recentGiveaways.map((giveaway) => {
           const media = mediaByAppId.get(Number(giveaway?.appId || 0));
-          return media ? { ...giveaway, ...media } : giveaway;
+          return media
+            ? {
+                ...giveaway,
+                ...media,
+                releaseDate: media.releaseDate || giveaway.releaseDate || "",
+                comingSoon:
+                  typeof media.comingSoon === "boolean" ? media.comingSoon : Boolean(giveaway.comingSoon),
+              }
+            : giveaway;
         }),
       },
     };
