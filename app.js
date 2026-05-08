@@ -47,6 +47,7 @@ const elements = {
   memberOverview: document.querySelector("#member-overview"),
   recentGiveaways: document.querySelector("#recent-giveaways"),
   monthlyFilter: document.querySelector("#monthly-filter"),
+  monthlySort: document.querySelector("#monthly-sort"),
   monthlyProgressTable: document.querySelector("#monthly-progress-table"),
   activeUsersTable: document.querySelector("#active-users-table"),
   activeUsersSort: document.querySelector("#active-users-sort"),
@@ -90,6 +91,7 @@ function bindEvents() {
     renderProgressViews();
     void loadVisibleGameMedia({ silent: true });
   });
+  elements.monthlySort?.addEventListener("change", () => renderProgressViews());
   elements.activeUsersSort?.addEventListener("change", () => renderMemberBuckets());
 
   document.addEventListener("click", (event) => {
@@ -467,7 +469,7 @@ function buildGiveawayCard(giveaway) {
         </h3>
         <span class="meta-line">Created by ${escapeHtml(giveaway.creatorUsername || "-")}</span>
         <div class="giveaway-meta-line">
-          <span>${Number(giveaway.entriesCount || 0).toLocaleString("pt-BR")} entries</span>
+          <span>${Number(giveaway.entriesCount || 0).toLocaleString("en-US")} entries</span>
         </div>
       </div>
     </article>
@@ -552,29 +554,8 @@ function renderMonthlyDetailsTable(target, winsSubset) {
     return;
   }
 
-  const sortedWins = [...winsSubset].sort((left, right) => {
-    const leftMember = findById("members", left.memberId);
-    const rightMember = findById("members", right.memberId);
-    const memberCompare = String(leftMember?.name || "").localeCompare(String(rightMember?.name || ""), "pt-BR", {
-      sensitivity: "base",
-    });
-    if (memberCompare !== 0) {
-      return memberCompare;
-    }
-
-    const leftGame = findById("games", left.gameId);
-    const rightGame = findById("games", right.gameId);
-    const gameCompare = String(leftGame?.title || "").localeCompare(String(rightGame?.title || ""), "pt-BR", {
-      sensitivity: "base",
-    });
-    if (gameCompare !== 0) {
-      return gameCompare;
-    }
-
-    return String(left.creatorUsername || "").localeCompare(String(right.creatorUsername || ""), "pt-BR", {
-      sensitivity: "base",
-    });
-  });
+  const sortMode = elements.monthlySort?.value || "winner";
+  const sortedWins = [...winsSubset].sort((left, right) => compareMonthlyWins(left, right, sortMode));
 
   target.innerHTML = sortedWins
     .map((win) => {
@@ -605,6 +586,57 @@ function renderMonthlyDetailsTable(target, winsSubset) {
       `;
     })
     .join("");
+}
+
+function compareMonthlyWins(left, right, sortMode) {
+  const leftMember = findById("members", left.memberId);
+  const rightMember = findById("members", right.memberId);
+  const leftGame = findById("games", left.gameId);
+  const rightGame = findById("games", right.gameId);
+  const leftProgress = evaluateMonthlyProgress(left);
+  const rightProgress = evaluateMonthlyProgress(right);
+
+  if (sortMode === "creator") {
+    const creatorCompare = String(left.creatorUsername || "").localeCompare(String(right.creatorUsername || ""), "en-US", {
+      sensitivity: "base",
+    });
+    if (creatorCompare !== 0) {
+      return creatorCompare;
+    }
+  }
+
+  if (sortMode === "threshold") {
+    const rank = { danger: 0, warning: 1, success: 2 };
+    const thresholdCompare = (rank[leftProgress.badge] ?? 99) - (rank[rightProgress.badge] ?? 99);
+    if (thresholdCompare !== 0) {
+      return thresholdCompare;
+    }
+  }
+
+  if (sortMode === "hours") {
+    const hoursCompare = Number(right.currentHours || 0) - Number(left.currentHours || 0);
+    if (hoursCompare !== 0) {
+      return hoursCompare;
+    }
+  }
+
+  const memberCompare = String(leftMember?.name || "").localeCompare(String(rightMember?.name || ""), "en-US", {
+    sensitivity: "base",
+  });
+  if (memberCompare !== 0) {
+    return memberCompare;
+  }
+
+  const creatorCompare = String(left.creatorUsername || "").localeCompare(String(right.creatorUsername || ""), "en-US", {
+    sensitivity: "base",
+  });
+  if (creatorCompare !== 0) {
+    return creatorCompare;
+  }
+
+  return String(leftGame?.title || "").localeCompare(String(rightGame?.title || ""), "en-US", {
+    sensitivity: "base",
+  });
 }
 
 function buildGameCell(game) {
@@ -2260,9 +2292,9 @@ function differenceInDays(futureDate, baseDate) {
 }
 
 function formatDate(dateInput) {
-  return parseDate(dateInput).toLocaleDateString("pt-BR", {
+  return parseDate(dateInput).toLocaleDateString("en-US", {
     day: "2-digit",
-    month: "2-digit",
+    month: "short",
     year: "numeric",
   });
 }
@@ -2271,7 +2303,7 @@ function formatDateTime(dateInput) {
   if (!dateInput) {
     return "-";
   }
-  return new Date(dateInput).toLocaleString("pt-BR");
+  return new Date(dateInput).toLocaleString("en-US");
 }
 
 function formatDurationSeconds(seconds) {
@@ -2325,7 +2357,7 @@ function buildLibraryStatsMarkup(stats = {}) {
     bits.push(`${stats.errorProfiles} error(s)`);
   }
   if (stats.totalPlaytimeRows || stats.totalPlaytimeRows === 0) {
-    bits.push(`${Number(stats.totalPlaytimeRows || 0).toLocaleString("pt-BR")} cached app rows`);
+    bits.push(`${Number(stats.totalPlaytimeRows || 0).toLocaleString("en-US")} cached app rows`);
   }
   return `<br />${bits.join(" • ")}`;
 }
@@ -2348,7 +2380,7 @@ function buildPlaytimeSourceLabel(progress) {
 
 function formatMonthKey(key) {
   const [year, month] = key.split("-").map(Number);
-  return new Date(year, month - 1, 1).toLocaleDateString("pt-BR", {
+  return new Date(year, month - 1, 1).toLocaleDateString("en-US", {
     month: "long",
     year: "numeric",
   });

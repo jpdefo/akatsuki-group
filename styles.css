@@ -47,8 +47,8 @@ body {
 }
 
 .hero-logo {
-  width: 88px;
-  height: 88px;
+  width: 128px;
+  height: 128px;
   object-fit: contain;
   align-self: flex-start;
   flex-shrink: 0;
@@ -199,7 +199,7 @@ h2 {
 .giveaway-image {
   width: 92px;
   min-width: 92px;
-  height: 34px;
+  height: 48px;
   object-fit: cover;
   align-self: center;
 }
@@ -592,6 +592,6 @@ td small,
   .giveaway-image {
     width: 82px;
     min-width: 82px;
-    height: 30px;
+    height: 42px;
   }
 }
