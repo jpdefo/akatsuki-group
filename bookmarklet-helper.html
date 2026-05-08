@@ -85,7 +85,8 @@
         <li>Keep <code>python server.py</code> running.</li>
         <li>Open the Akatsuki SteamGifts group in Chrome.</li>
         <li>Copy the bookmarklet below.</li>
-        <li>Paste it in the address bar and press Enter.</li>
+        <li>Type <code>javascript:</code> in the address bar.</li>
+        <li>Paste the copied body after it and press Enter.</li>
         <li>It starts from <strong>page 1</strong> and only asks how many giveaway pages to fetch.</li>
         <li>Return to the dashboard and click <strong>Load server sync</strong>.</li>
       </ol>
@@ -101,12 +102,12 @@
         <a class="button secondary" href="http://127.0.0.1:4173/" target="_blank" rel="noreferrer"
           >Open dashboard</a
         >
-        <button id="copy-button" class="button primary">Copy full bookmarklet</button>
+        <button id="copy-button" class="button primary">Copy bookmarklet body</button>
       </div>
 
       <textarea id="bookmarklet-body" readonly></textarea>
       <p class="note">
-        The copied text already includes <code>javascript:</code> so a single paste is enough.
+        Chrome may reject the full <code>javascript:</code> form when pasted directly, so this copies only the body.
       </p>
       <p class="note">
         The local server now merges batches, so you can safely run page 1, then page 2, then page 3 over time instead of scraping too much at once.
@@ -121,13 +122,13 @@
       fetch("steamgifts-live-bookmarklet.js")
         .then((response) => response.text())
         .then((body) => {
-          const bookmarklet = `javascript:${body.trim()}`;
-          textarea.value = bookmarklet;
+          const bookmarkletBody = body.trim();
+          textarea.value = bookmarkletBody;
           document.querySelector("#copy-button").addEventListener("click", async () => {
-            await navigator.clipboard.writeText(bookmarklet);
+            await navigator.clipboard.writeText(bookmarkletBody);
             document.querySelector("#copy-button").textContent = "Copied";
             setTimeout(() => {
-              document.querySelector("#copy-button").textContent = "Copy full bookmarklet";
+              document.querySelector("#copy-button").textContent = "Copy bookmarklet body";
             }, 1500);
           });
         });
