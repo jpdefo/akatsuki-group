@@ -11,10 +11,9 @@
   const LOCAL_SERVER_URL = "http://127.0.0.1:4173/api/steamgifts-sync";
   const SETTINGS = {
     memberPages: 2,
-    giveawayStartPage: 1,
     giveawayPages: 1,
     winnerPages: 1,
-    delayMs: 1200,
+    delayMs: 505,
     retryDelayMs: 8000,
     maxRetries: 3,
   };
@@ -121,7 +120,7 @@
 
       await postToLocalServer(payload);
       log("Sync finished and saved to the local dashboard.");
-      log(`Batch saved. Next time, try giveaway page ${SETTINGS.giveawayStartPage + SETTINGS.giveawayPages}.`);
+      log(`Batch saved. Next time, try giveaway page ${SETTINGS.giveawayPages + 1}.`);
     } catch (error) {
       log(`Sync failed: ${error.message}`);
     } finally {
@@ -130,24 +129,12 @@
   }
 
   function configureRun() {
-    SETTINGS.giveawayStartPage = Math.max(
-      1,
-      parseInt(window.prompt("Giveaway list start page?", String(SETTINGS.giveawayStartPage)), 10) ||
-        SETTINGS.giveawayStartPage,
-    );
     SETTINGS.giveawayPages = Math.max(
       1,
       parseInt(window.prompt("How many giveaway pages should this run fetch?", String(SETTINGS.giveawayPages)), 10) ||
         SETTINGS.giveawayPages,
     );
-    SETTINGS.delayMs = Math.max(
-      100,
-      parseInt(window.prompt("Delay between SteamGifts requests (ms)?", String(SETTINGS.delayMs)), 10) ||
-        SETTINGS.delayMs,
-    );
-    log(
-      `Configured: giveaway pages ${SETTINGS.giveawayStartPage}-${SETTINGS.giveawayStartPage + SETTINGS.giveawayPages - 1}, delay ${SETTINGS.delayMs}ms.`,
-    );
+    log(`Configured: giveaway pages 1-${SETTINGS.giveawayPages}, delay ${SETTINGS.delayMs}ms.`);
   }
 
   async function collectMembers(existingSync) {
@@ -194,8 +181,9 @@
   async function collectGiveaways() {
     const results = [];
     const seen = new Set();
-    const endPage = SETTINGS.giveawayStartPage + SETTINGS.giveawayPages - 1;
-    for (let page = SETTINGS.giveawayStartPage; page <= endPage; page += 1) {
+    const startPage = 1;
+    const endPage = SETTINGS.giveawayPages;
+    for (let page = startPage; page <= endPage; page += 1) {
       const url = page === 1 ? groupBase : `${groupBase}/search?page=${page}`;
       const doc = await fetchDocument(url);
       const pageResults = parseGiveawayRows(doc);
