@@ -1,6 +1,6 @@
 {
   "source": "akatsuki-steamgifts-sync",
-  "syncedAt": "2026-05-08T05:41:50.458Z",
+  "syncedAt": "2026-05-08T10:51:36.621Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -18793,7 +18793,8 @@
       "endDate": "2023-07-04T19:37:15.000Z",
       "winners": [],
       "resultStatus": "no_winners",
-      "resultLabel": "No winners"
+      "resultLabel": "No winners",
+      "hltbHours": 18.17
     },
     {
       "code": "4mfgQ",
@@ -116233,6 +116234,6 @@
       "winDate": "2016-08-26T06:01:36.000Z"
     }
   ],
-  "savedAt": "2026-05-08T05:41:50.553370+00:00",
-  "mergedAt": "2026-05-08T05:41:50.553380+00:00"
+  "savedAt": "2026-05-08T10:51:36.664708+00:00",
+  "mergedAt": "2026-05-08T10:51:36.664716+00:00"
 }

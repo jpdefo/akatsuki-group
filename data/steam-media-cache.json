@@ -1,10 +1,136 @@
 {
-  "updatedAt": "2026-05-08T06:45:55.858583+00:00",
+  "updatedAt": "2026-05-08T10:48:58.127449+00:00",
   "apps": {
     "3288210": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3288210/2e13226847bb546625411aed75e74471f6705b18/header.jpg?t=1777969480",
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3288210/3de894351f35432432eaf1f38459365d7cc75c82/capsule_231x87.jpg?t=1777969480",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3288210/3de894351f35432432eaf1f38459365d7cc75c82/capsule_184x69.jpg?t=1777969480"
+    },
+    "686060": {
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/686060/aa8075d11165fef4d4d0d09c156f0da0623b5da1/header.jpg?t=1771573546",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/686060/b00ca313f3ac970c3e412280ecc8a5ed65813a0e/capsule_231x87.jpg?t=1771573546",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/686060/b00ca313f3ac970c3e412280ecc8a5ed65813a0e/capsule_184x69.jpg?t=1771573546",
+      "releaseDate": "2026-02-10",
+      "comingSoon": false
+    },
+    "1285190": {
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1285190/986a88d1b0e1420b00183def2a7034508353afa3/header.jpg?t=1777399581",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1285190/7f4b1a9cbe01d19fdcbf10ef5dce492098ef0ba8/capsule_231x87.jpg?t=1777399581",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1285190/7f4b1a9cbe01d19fdcbf10ef5dce492098ef0ba8/capsule_184x69.jpg?t=1777399581",
+      "releaseDate": "2025-09-11",
+      "comingSoon": false
+    },
+    "1297900": {
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1297900/ec2e1d9806c3585c98585c74e9f1df41d5db3305/header_alt_assets_0.jpg?t=1778219871",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1297900/7033871a773fc0f2917207b5a91e80876c300348/capsule_231x87_alt_assets_0.jpg?t=1778219871",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1297900/7033871a773fc0f2917207b5a91e80876c300348/capsule_184x69_alt_assets_0.jpg?t=1778219871",
+      "releaseDate": "2026-06-05",
+      "comingSoon": true
+    },
+    "1626170": {
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1626170/07998a0caa3fb359c3a5432e7ca85f55440383f7/header.jpg?t=1776172132",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1626170/90325a0ba70ed9523b1c487e1867972a219ccf97/capsule_231x87.jpg?t=1776172132",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1626170/90325a0ba70ed9523b1c487e1867972a219ccf97/capsule_184x69.jpg?t=1776172132",
+      "releaseDate": "2026-04-07",
+      "comingSoon": false
+    },
+    "1663850": {
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1663850/9079d7a26c8720ed0616f1bd7f912ccc22a535d4/header.jpg?t=1777974184",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1663850/dc8b06f173ef6404a646accdb0f5efe3824668ff/capsule_231x87.jpg?t=1777974184",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1663850/dc8b06f173ef6404a646accdb0f5efe3824668ff/capsule_184x69.jpg?t=1777974184",
+      "releaseDate": "2026-04-14",
+      "comingSoon": false
+    },
+    "1783560": {
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1783560/d789fb34321e003b6dc064ae7f3a525e70458e0d/header.jpg?t=1777284754",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1783560/a0d2224197e441bac91d2e09438aebb944c6e997/capsule_231x87.jpg?t=1777284754",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1783560/a0d2224197e441bac91d2e09438aebb944c6e997/capsule_184x69.jpg?t=1777284754",
+      "releaseDate": "2025-11-06",
+      "comingSoon": false
+    },
+    "2129530": {
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2129530/4cdda917a0155258a2e7909d7869f35d8f980f96/header.jpg?t=1771918402",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2129530/0e28f1b3446dd979013ca3df83a3ced5d7ca611b/capsule_231x87.jpg?t=1771918402",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2129530/0e28f1b3446dd979013ca3df83a3ced5d7ca611b/capsule_184x69.jpg?t=1771918402",
+      "releaseDate": "2026-02-13",
+      "comingSoon": false
+    },
+    "2215200": {
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215200/a07a9a6c0c9c1225f5b260b4f29fe40e6f099f6b/header.jpg?t=1778166550",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215200/4933722fc48c284f30ea2d0f9eb932c0ab3de1b5/capsule_231x87.jpg?t=1778166550",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215200/4933722fc48c284f30ea2d0f9eb932c0ab3de1b5/capsule_184x69.jpg?t=1778166550",
+      "releaseDate": "2026-05-22",
+      "comingSoon": true
+    },
+    "2416450": {
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2416450/298ff2fc3f6a700d022b8d3ec58047f2b426be03/header.jpg?t=1778117943",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2416450/772ae02fc6ab5734887bc6621ed5cf7bcc739050/capsule_231x87.jpg?t=1778117943",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2416450/772ae02fc6ab5734887bc6621ed5cf7bcc739050/capsule_184x69.jpg?t=1778117943",
+      "releaseDate": "2026-04-16",
+      "comingSoon": false
+    },
+    "2432860": {
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2432860/712ef94aec7a757b3624747424de8336687743ec/header.jpg?t=1776848700",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2432860/f3da7e906c7a3126ad95691f10ee9e8eb8650e09/capsule_231x87.jpg?t=1776848700",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2432860/f3da7e906c7a3126ad95691f10ee9e8eb8650e09/capsule_184x69.jpg?t=1776848700",
+      "releaseDate": "2026-02-05",
+      "comingSoon": false
+    },
+    "2678080": {
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2678080/f08c2daf4aeaa25d443c8a3c40a03261861c7d9c/header.jpg?t=1778158829",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2678080/828aade97ed391db6d7406806357f6619c8075f0/capsule_231x87.jpg?t=1778158829",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2678080/828aade97ed391db6d7406806357f6619c8075f0/capsule_184x69.jpg?t=1778158829",
+      "releaseDate": "2026-04-22",
+      "comingSoon": false
+    },
+    "2868840": {
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2868840/b0958d387dc366211e0f353443710cfcf9fdb020/header.jpg?t=1776735385",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2868840/fb0ad136e9eaa4297a1ab3440d88ecb7209f44a2/capsule_231x87.jpg?t=1776735385",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2868840/fb0ad136e9eaa4297a1ab3440d88ecb7209f44a2/capsule_184x69.jpg?t=1776735385",
+      "releaseDate": "2026-03-05",
+      "comingSoon": false
+    },
+    "2997230": {
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2997230/7712fdf6cd6531709c16920f8b20b6ee146ac9f8/header.jpg?t=1776154869",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2997230/5980b81c301edbca8163ca0df484af8b18f25da6/capsule_231x87.jpg?t=1776154869",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2997230/5980b81c301edbca8163ca0df484af8b18f25da6/capsule_184x69.jpg?t=1776154869",
+      "releaseDate": "2026-03-05",
+      "comingSoon": false
+    },
+    "3057670": {
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3057670/521b1c35d9982c9d90f55dc71b30a5f9c0af8e4f/header.jpg?t=1773430906",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3057670/0c72feeff69a5a0b958604cb42ff24957b923010/capsule_231x87.jpg?t=1773430906",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3057670/0c72feeff69a5a0b958604cb42ff24957b923010/capsule_184x69.jpg?t=1773430906",
+      "releaseDate": "2026-03-09",
+      "comingSoon": false
+    },
+    "3105440": {
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3105440/e2bef853b7cb19e3d5f019022309783609e8454f/header.jpg?t=1777899549",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3105440/740f5a03b7c20044f00041079d77b899a6a435c4/capsule_231x87.jpg?t=1777899549",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3105440/740f5a03b7c20044f00041079d77b899a6a435c4/capsule_184x69.jpg?t=1777899549",
+      "releaseDate": "2026-04-30",
+      "comingSoon": false
+    },
+    "3172700": {
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3172700/946d6b28a7cc79d42a26f16cc3f0b72c41259aa7/header.jpg?t=1775252750",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3172700/0142bcbba7793eb7d5c5fd68ee4d69a40622649f/capsule_231x87.jpg?t=1775252750",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3172700/0142bcbba7793eb7d5c5fd68ee4d69a40622649f/capsule_184x69.jpg?t=1775252750",
+      "releaseDate": "2026-03-05",
+      "comingSoon": false
+    },
+    "3357650": {
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3357650/e32e168b25ed68a0cf6264c220c07e96c2abfb56/header.jpg?t=1777351016",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3357650/3e7cf55cf72a980ac94cf45d4212e8f0cb566f7f/capsule_231x87.jpg?t=1777351016",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3357650/3e7cf55cf72a980ac94cf45d4212e8f0cb566f7f/capsule_184x69.jpg?t=1777351016",
+      "releaseDate": "2026-04-16",
+      "comingSoon": false
+    },
+    "3552140": {
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3552140/5be699540829c76a0d5f7ac5db4bbaf23fa76013/header.jpg?t=1777437290",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3552140/942cdcf14d5185e5f2f8e3999e79ab062b4aad22/capsule_231x87.jpg?t=1777437290",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3552140/942cdcf14d5185e5f2f8e3999e79ab062b4aad22/capsule_184x69.jpg?t=1777437290",
+      "releaseDate": "2026-03-17",
+      "comingSoon": false
     }
   }
 }
