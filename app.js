@@ -569,7 +569,7 @@ function renderMonthlyDetailsTable(target, winsSubset) {
       return `
         <tr class="progress-row ${progress.badge}">
           <td>${buildGiveawayCreatorMarkup(win)}</td>
-          <td>${buildGameCell(game)}</td>
+          <td>${buildGameCell(game, win)}</td>
           <td>${buildWinnerMarkup(member)}</td>
           <td>${hltbHours ? formatHours(hltbHours) : "-"}</td>
           <td>${progress.requiredHours ? formatHours(progress.requiredHours) : "-"}</td>
@@ -641,17 +641,30 @@ function compareMonthlyWins(left, right, sortMode) {
   });
 }
 
-function buildGameCell(game) {
+function buildGameCell(game, win) {
   const title = escapeHtml(game?.title || "Unknown game");
+  const syncedGiveaway = findSyncedGiveawayForWin(win, game);
+  const fallback = getSteamMediaUrls(game?.appId || syncedGiveaway?.appId);
   const image = buildImageMarkup({
     className: "game-thumb",
     alt: title,
-    appId: game?.appId,
-    sources: [game?.capsuleSmallUrl, game?.headerImageUrl, game?.capsuleImageUrl],
+    appId: game?.appId || syncedGiveaway?.appId,
+    sources: [
+      game?.capsuleSmallUrl,
+      syncedGiveaway?.capsuleSmallUrl,
+      game?.headerImageUrl,
+      syncedGiveaway?.headerImageUrl,
+      game?.capsuleImageUrl,
+      syncedGiveaway?.capsuleImageUrl,
+      fallback.capsuleSmallUrl,
+      fallback.headerImageUrl,
+      fallback.capsuleImageUrl,
+    ],
     placeholder: "No art",
   });
-  const titleMarkup = game?.steamAppUrl
-    ? `<a class="linked-title" href="${escapeHtml(game.steamAppUrl)}" target="_blank" rel="noreferrer">${title}</a>`
+  const steamAppUrl = game?.steamAppUrl || syncedGiveaway?.steamAppUrl || "";
+  const titleMarkup = steamAppUrl
+    ? `<a class="linked-title" href="${escapeHtml(steamAppUrl)}" target="_blank" rel="noreferrer">${title}</a>`
     : title;
 
   return `
@@ -663,6 +676,24 @@ function buildGameCell(game) {
       </div>
     </div>
   `;
+}
+
+function findSyncedGiveawayForWin(win, game) {
+  const syncGiveaways = state.sync?.steamgifts?.giveaways || [];
+  const giveawayUrl = getGiveawayUrl(win);
+  if (giveawayUrl) {
+    const byUrl = syncGiveaways.find((giveaway) => giveaway?.url === giveawayUrl);
+    if (byUrl) {
+      return normalizeGiveawayMedia(byUrl);
+    }
+  }
+  const appId = Number(game?.appId || 0);
+  const byAppId = appId ? syncGiveaways.find((giveaway) => Number(giveaway?.appId || 0) === appId) : null;
+  if (byAppId) {
+    return normalizeGiveawayMedia(byAppId);
+  }
+  const byTitle = syncGiveaways.find((giveaway) => giveaway?.title && giveaway.title === game?.title);
+  return byTitle ? normalizeGiveawayMedia(byTitle) : null;
 }
 
 function buildGiveawayCreatorMarkup(win) {
