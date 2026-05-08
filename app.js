@@ -644,11 +644,12 @@ function compareMonthlyWins(left, right, sortMode) {
 function buildGameCell(game, win) {
   const title = escapeHtml(game?.title || "Unknown game");
   const syncedGiveaway = findSyncedGiveawayForWin(win, game);
-  const fallback = getSteamMediaUrls(game?.appId || syncedGiveaway?.appId);
+  const resolvedAppId = getResolvedGameAppId(game, syncedGiveaway);
+  const fallback = getSteamMediaUrls(resolvedAppId);
   const image = buildImageMarkup({
     className: "game-thumb",
     alt: title,
-    appId: game?.appId || syncedGiveaway?.appId,
+    appId: resolvedAppId,
     sources: [
       game?.capsuleSmallUrl,
       syncedGiveaway?.capsuleSmallUrl,
@@ -692,8 +693,51 @@ function findSyncedGiveawayForWin(win, game) {
   if (byAppId) {
     return normalizeGiveawayMedia(byAppId);
   }
-  const byTitle = syncGiveaways.find((giveaway) => giveaway?.title && giveaway.title === game?.title);
-  return byTitle ? normalizeGiveawayMedia(byTitle) : null;
+  const normalizedTitle = normalizeGameTitle(game?.title || "");
+  const byTitle = syncGiveaways.find((giveaway) => normalizeGameTitle(giveaway?.title || "") === normalizedTitle);
+  if (byTitle) {
+    return normalizeGiveawayMedia(byTitle);
+  }
+  const byLooseTitle = syncGiveaways.find((giveaway) => {
+    const giveawayTitle = normalizeGameTitle(giveaway?.title || "");
+    return normalizedTitle && giveawayTitle && (giveawayTitle.includes(normalizedTitle) || normalizedTitle.includes(giveawayTitle));
+  });
+  if (byLooseTitle) {
+    return normalizeGiveawayMedia(byLooseTitle);
+  }
+  const steamAppUrl = String(game?.steamAppUrl || "");
+  const steamUrlAppId = parseSteamAppId(steamAppUrl);
+  const bySteamUrl = steamUrlAppId
+    ? syncGiveaways.find((giveaway) => Number(giveaway?.appId || 0) === steamUrlAppId)
+    : null;
+  if (bySteamUrl) {
+    return normalizeGiveawayMedia(bySteamUrl);
+  }
+  return null;
+}
+
+function getResolvedGameAppId(game, syncedGiveaway) {
+  return (
+    Number(game?.appId || 0) ||
+    parseSteamAppId(game?.steamAppUrl || "") ||
+    Number(syncedGiveaway?.appId || 0) ||
+    parseSteamAppId(syncedGiveaway?.steamAppUrl || "") ||
+    0
+  );
+}
+
+function parseSteamAppId(url) {
+  const match = String(url || "").match(/\/(?:app|sub)\/(\d+)/i);
+  return match ? Number(match[1]) : 0;
+}
+
+function normalizeGameTitle(value) {
+  return String(value || "")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
 }
 
 function buildGiveawayCreatorMarkup(win) {
