@@ -15,7 +15,10 @@
       <header class="hero">
         <div>
           <p class="eyebrow">Admin dashboard</p>
-          <h1>Akatsuki Monitor</h1>
+          <div class="hero-title">
+            <h1>Akatsuki Monitor</h1>
+            <img class="hero-logo-inline" src="akatsuki.png" alt="Akatsuki" />
+          </div>
           <p class="hero-copy">
             Track only the monthly progress for Akatsuki winners.
           </p>
@@ -24,7 +27,11 @@
             This dashboard is focused on the monthly threshold only.
           </p>
         </div>
-        <img class="hero-logo" src="akatsuki.png" alt="Akatsuki" />
+        <div class="hero-actions">
+          <a class="button secondary" href="active-users.html">Open active users</a>
+          <a class="button secondary" href="inactive-users.html">Open inactive users</a>
+          <a class="button secondary" href="monthly-progress.html">Open monthly-only view</a>
+        </div>
       </header>
 
       <main>
@@ -48,22 +55,6 @@
             <span class="meta-line sync-hint">Run <code>publish-snapshot.cmd</code> locally when you want to publish a new snapshot.</span>
           </div>
           <div id="sync-status" class="sync-status"></div>
-        </section>
-
-        <section class="card">
-          <div class="section-heading">
-            <div>
-              <h2>User directories</h2>
-              <p class="section-copy">
-                Open the dedicated pages for current active members and historical inactive users.
-              </p>
-            </div>
-          </div>
-          <div class="sync-actions">
-            <a class="button secondary" href="active-users.html">Open active users</a>
-            <a class="button secondary" href="inactive-users.html">Open inactive users</a>
-            <a class="button secondary" href="monthly-progress.html">Open monthly-only view</a>
-          </div>
         </section>
 
         <section class="card">
