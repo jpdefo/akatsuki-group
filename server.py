@@ -1656,7 +1656,7 @@ def export_static_site(output_dir: Path) -> None:
     sync_payload = load_json(SYNC_PATH, {})
     progress_payload = load_json(PROGRESS_PATH, empty_progress_payload())
     library_payload = load_json(LIBRARY_PATH, empty_library_payload())
-    media_cache = hydrate_media_cache_for_sync(sync_payload, load_json(MEDIA_CACHE_PATH, empty_media_cache()))
+    media_cache = load_json(MEDIA_CACHE_PATH, empty_media_cache())
     media_lookup = build_media_lookup(media_cache)
     sync_export = build_sync_export_payload(sync_payload, media_lookup=media_lookup)
     dashboard_payload = build_dashboard_payload(sync_export, progress_payload, library_payload)
