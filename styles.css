@@ -117,6 +117,19 @@ h2 {
   flex-wrap: wrap;
 }
 
+.section-summary {
+  display: grid;
+  gap: 8px;
+}
+
+.section-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-start;
+  margin-left: auto;
+}
+
 .summary-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -582,6 +595,11 @@ td small,
   .form-grid,
   .form-grid.compact {
     grid-template-columns: 1fr;
+  }
+
+  .section-filters {
+    width: 100%;
+    margin-left: 0;
   }
 
   .game-thumb {

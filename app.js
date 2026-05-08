@@ -1308,6 +1308,8 @@ function normalizeGiveawayMedia(giveaway) {
     headerImageUrl: giveaway?.headerImageUrl || fallback.headerImageUrl,
     capsuleImageUrl: giveaway?.capsuleImageUrl || fallback.capsuleImageUrl,
     capsuleSmallUrl: giveaway?.capsuleSmallUrl || fallback.capsuleSmallUrl,
+    releaseDate: giveaway?.releaseDate || "",
+    comingSoon: Boolean(giveaway?.comingSoon),
   };
 }
 
@@ -1458,6 +1460,8 @@ function upsertGameFromSync(giveawayRecord) {
       hltbHours: Number(giveawayRecord.hltbHours || 0),
       achievementsTotal: Number(giveawayRecord.totalAchievements || 0),
       steamAppUrl: giveawayRecord.steamAppUrl || "",
+      releaseDate: giveawayRecord.releaseDate || "",
+      comingSoon: Boolean(giveawayRecord.comingSoon),
       headerImageUrl: media.headerImageUrl,
       capsuleImageUrl: media.capsuleImageUrl,
       capsuleSmallUrl: media.capsuleSmallUrl,
@@ -1477,6 +1481,12 @@ function upsertGameFromSync(giveawayRecord) {
   }
   if (!game.steamAppUrl && giveawayRecord.steamAppUrl) {
     game.steamAppUrl = giveawayRecord.steamAppUrl;
+  }
+  if (giveawayRecord.releaseDate && game.releaseDate !== giveawayRecord.releaseDate) {
+    game.releaseDate = giveawayRecord.releaseDate;
+  }
+  if (typeof giveawayRecord.comingSoon === "boolean" && game.comingSoon !== giveawayRecord.comingSoon) {
+    game.comingSoon = Boolean(giveawayRecord.comingSoon);
   }
   if (!game.headerImageUrl && media.headerImageUrl) {
     game.headerImageUrl = media.headerImageUrl;
@@ -1717,9 +1727,12 @@ function evaluateWin(win) {
       title: "Jogo removido",
       hltbHours: 0,
       achievementsTotal: 0,
+      releaseDate: "",
+      comingSoon: false,
     };
 
-  const deadline = addMonths(win.winDate, 4);
+  const deadlineBase = getDeadlineBaseDate(win.winDate, game.releaseDate);
+  const deadline = addMonths(deadlineBase, 4);
   const now = parseDate(state.settings.currentDate);
   const daysLeft = differenceInDays(deadline, now);
 
@@ -1752,6 +1765,7 @@ function evaluateWin(win) {
       member,
       game,
       deadline,
+      deadlineBase,
       state: "unknown",
       statusLabel: "Awaiting data",
       statusBadge: "info",
@@ -1788,6 +1802,7 @@ function evaluateWin(win) {
     member,
     game,
     deadline,
+    deadlineBase,
     state: stateLabel,
     statusLabel,
     statusBadge,
@@ -1796,6 +1811,70 @@ function evaluateWin(win) {
     targetLabel: describeTarget(win.ruleMode, requiredHours, requiredAchievements),
     progressLabel: describeProgress(win, game, requiredHours, requiredAchievements, compliant),
   };
+}
+
+function getDeadlineBaseDate(winDate, releaseDate) {
+  if (!releaseDate) {
+    return winDate;
+  }
+  const winMonth = monthKey(winDate);
+  const releaseMonth = getReleaseMonthKey(releaseDate);
+  if (!releaseMonth || releaseMonth <= winMonth) {
+    return winDate;
+  }
+  const [year, month] = releaseMonth.split("-").map(Number);
+  return formatISODateLocal(new Date(year, month - 1, 1, 12));
+}
+
+function getReleaseMonthKey(releaseDate) {
+  const raw = String(releaseDate || "").trim();
+  if (!raw) {
+    return "";
+  }
+  if (/^\d{4}-\d{2}-\d{2}$/.test(raw)) {
+    return raw.slice(0, 7);
+  }
+  const normalized = raw.replace(/,/g, "");
+  const dayMonthYear = normalized.match(/^(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})$/);
+  const monthYear = normalized.match(/^([A-Za-z]+)\s+(\d{4})$/);
+  const monthLookup = {
+    jan: 1,
+    january: 1,
+    feb: 2,
+    february: 2,
+    mar: 3,
+    march: 3,
+    apr: 4,
+    april: 4,
+    may: 5,
+    jun: 6,
+    june: 6,
+    jul: 7,
+    july: 7,
+    aug: 8,
+    august: 8,
+    sep: 9,
+    sept: 9,
+    september: 9,
+    oct: 10,
+    october: 10,
+    nov: 11,
+    november: 11,
+    dec: 12,
+    december: 12,
+  };
+  const match = dayMonthYear || monthYear;
+  if (!match) {
+    return "";
+  }
+  const [, monthName, year] = dayMonthYear
+    ? [match[0], match[2], match[3]]
+    : [match[0], match[1], match[2]];
+  const month = monthLookup[String(monthName).toLowerCase()];
+  if (!month) {
+    return "";
+  }
+  return `${year}-${String(month).padStart(2, "0")}`;
 }
 
 function evaluateGiveaway(giveaway) {

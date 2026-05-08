@@ -2,6 +2,7 @@ param(
   [switch]$FullRefresh,
   [int]$GiveawayPages = 5,
   [int]$DelayMs = 505,
+  [string]$Browser = "chrome",
   [switch]$SkipPush
 )
 
@@ -27,8 +28,8 @@ if (-not (Test-Path "node_modules\playwright")) {
   npm install
 }
 
-Write-Host "Opening SteamGifts in Edge. If Cloudflare asks, complete the human verification in the browser."
-node scripts/steamgifts-public-sync.mjs --browser-channel msedge --headless false --member-pages 1 --giveaway-pages $GiveawayPages --delay-ms $DelayMs
+Write-Host "Opening SteamGifts in $Browser. If Cloudflare asks, complete the human verification in the browser."
+node scripts/steamgifts-public-sync.mjs --browser-channel $Browser --headless false --member-pages 1 --giveaway-pages $GiveawayPages --delay-ms $DelayMs
 
 python server.py --merge-sync-file data/steamgifts-sync.public.json
 if ($FullRefresh) {

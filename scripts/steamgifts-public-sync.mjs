@@ -17,7 +17,7 @@ const CONTEXT_OPTIONS = {
   locale: "en-US",
 };
 let navigationDelayMs = 505;
-const browserChannel = readArg("--browser-channel", process.env.BROWSER_CHANNEL || (process.platform === "win32" ? "msedge" : ""));
+const browserChannel = readArg("--browser-channel", process.env.BROWSER_CHANNEL || (process.platform === "win32" ? "chrome" : ""));
 const browserHeadless = !["0", "false", "no"].includes(
   String(readArg("--headless", process.env.BROWSER_HEADLESS || (process.platform === "win32" ? "false" : "true"))).toLowerCase(),
 );

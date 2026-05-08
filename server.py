@@ -44,6 +44,29 @@ def utc_now() -> str:
     return datetime.now(timezone.utc).isoformat()
 
 
+def normalize_store_release_date(value: str | None) -> str:
+    raw = str(value or "").strip()
+    if not raw:
+        return ""
+    if re.match(r"^\d{4}-\d{2}-\d{2}$", raw):
+        return raw
+    lowered = raw.lower()
+    if any(token in lowered for token in ("coming soon", "to be announced", "tba")):
+        return ""
+    for fmt in ("%d %b, %Y", "%b %d, %Y", "%d %B, %Y", "%B %d, %Y"):
+        try:
+            return datetime.strptime(raw, fmt).date().isoformat()
+        except ValueError:
+            continue
+    for fmt in ("%b %Y", "%B %Y"):
+        try:
+            parsed = datetime.strptime(raw, fmt)
+            return parsed.date().replace(day=1).isoformat()
+        except ValueError:
+            continue
+    return ""
+
+
 def ensure_data_dir() -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -258,10 +281,13 @@ def fetch_store_media(app_id: int) -> dict[str, str]:
         f"https://store.steampowered.com/api/appdetails?{urlencode({'appids': str(app_id), 'l': 'english'})}"
     )
     data = (payload.get(str(app_id)) or {}).get("data") or {}
+    release_date = (data.get("release_date") or {})
     return {
         "headerImageUrl": str(data.get("header_image") or ""),
         "capsuleImageUrl": str(data.get("capsule_image") or ""),
         "capsuleSmallUrl": str(data.get("capsule_imagev5") or data.get("capsule_image") or ""),
+        "releaseDate": normalize_store_release_date(release_date.get("date")),
+        "comingSoon": bool(release_date.get("coming_soon")),
     }
 
 
@@ -269,6 +295,11 @@ def get_media_cache_entry(app_id: int, media_cache: dict, *, fetch_missing: bool
     cache_key = str(app_id)
     cached = media_cache.get("apps", {}).get(cache_key)
     if cached is not None:
+        normalized_release_date = normalize_store_release_date(cached.get("releaseDate"))
+        if normalized_release_date != str(cached.get("releaseDate") or ""):
+            cached["releaseDate"] = normalized_release_date
+            media_cache.setdefault("apps", {})[cache_key] = cached
+            media_cache["updatedAt"] = utc_now()
         return cached
     if not fetch_missing:
         return {}
@@ -288,6 +319,8 @@ def with_giveaway_media(giveaway: dict, media_lookup: dict[int, dict] | None = N
         "headerImageUrl": giveaway.get("headerImageUrl") or cached_media.get("headerImageUrl") or media["headerImageUrl"],
         "capsuleImageUrl": giveaway.get("capsuleImageUrl") or cached_media.get("capsuleImageUrl") or media["capsuleImageUrl"],
         "capsuleSmallUrl": giveaway.get("capsuleSmallUrl") or cached_media.get("capsuleSmallUrl") or media["capsuleSmallUrl"],
+        "releaseDate": normalize_store_release_date(giveaway.get("releaseDate") or cached_media.get("releaseDate")),
+        "comingSoon": bool(giveaway.get("comingSoon") or cached_media.get("comingSoon")),
     }
 
 
@@ -306,6 +339,8 @@ def get_media_payload(app_ids: list[int]) -> dict:
             "headerImageUrl": cached.get("headerImageUrl") or fallback["headerImageUrl"],
             "capsuleImageUrl": cached.get("capsuleImageUrl") or fallback["capsuleImageUrl"],
             "capsuleSmallUrl": cached.get("capsuleSmallUrl") or fallback["capsuleSmallUrl"],
+            "releaseDate": cached.get("releaseDate") or "",
+            "comingSoon": bool(cached.get("comingSoon")),
         }
     if changed:
         save_json(MEDIA_CACHE_PATH, media_cache)
@@ -628,6 +663,8 @@ def build_giveaways_payload(sync_payload: dict, progress_payload: dict, library_
                 "headerImageUrl": giveaway.get("headerImageUrl", ""),
                 "capsuleImageUrl": giveaway.get("capsuleImageUrl", ""),
                 "capsuleSmallUrl": giveaway.get("capsuleSmallUrl", ""),
+                "releaseDate": giveaway.get("releaseDate", ""),
+                "comingSoon": bool(giveaway.get("comingSoon")),
                 "winnerProgress": winner_progress,
                 "primaryProgress": primary_progress,
             }
