@@ -20,7 +20,7 @@ if (Test-Path $nodePath) {
 }
 
 $groupUrl = "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts"
-$adminUrl = "http://127.0.0.1:4173/admin.html"
+$bookmarkletHelperUrl = "http://127.0.0.1:4173/bookmarklet-helper.html"
 $syncEndpoint = "http://127.0.0.1:4173/api/steamgifts-sync"
 $startedServer = $null
 
@@ -195,9 +195,9 @@ try {
     $startedServer = Start-LocalServerIfNeeded
     $baseline = Get-SyncMarker
 
-    Write-Host "Opening admin tools and the SteamGifts group in $Browser."
+    Write-Host "Opening bookmarklet helper and the SteamGifts group in $Browser."
     Write-Host "Run the userscript or bookmarklet from the logged-in SteamGifts tab. This command will continue automatically after the sync is saved."
-    Open-BrowserUrls -Name $Browser -Urls @($adminUrl, $groupUrl)
+    Open-BrowserUrls -Name $Browser -Urls @($bookmarkletHelperUrl, $groupUrl)
 
     $freshSync = Wait-ForFreshCollectorSync -Baseline $baseline -TimeoutSeconds ($TimeoutMinutes * 60)
     Write-Host "Fresh SteamGifts sync received: $($freshSync.Members) member(s), $($freshSync.Giveaways) giveaway(s)."
