@@ -49,6 +49,7 @@ const elements = {
   monthlyFilter: document.querySelector("#monthly-filter"),
   monthlyProgressTable: document.querySelector("#monthly-progress-table"),
   activeUsersTable: document.querySelector("#active-users-table"),
+  activeUsersSort: document.querySelector("#active-users-sort"),
   inactiveUsersTable: document.querySelector("#inactive-users-table"),
   totalProgressTable: document.querySelector("#total-progress-table"),
   seedDemoButton: document.querySelector("#seed-demo"),
@@ -89,6 +90,7 @@ function bindEvents() {
     renderProgressViews();
     void loadVisibleGameMedia({ silent: true });
   });
+  elements.activeUsersSort?.addEventListener("change", () => renderMemberBuckets());
 
   document.addEventListener("click", (event) => {
     const deleteButton = event.target.closest("[data-delete-type]");
@@ -455,20 +457,6 @@ function buildGiveawayCard(giveaway) {
     sources: [giveaway.capsuleImageUrl, giveaway.headerImageUrl, giveaway.capsuleSmallUrl],
     placeholder: "No image",
   });
-  const primaryProgress = giveaway.primaryProgress;
-  const playtime = primaryProgress?.playtimeHours;
-  const achievements = primaryProgress?.totalAchievements
-    ? `${primaryProgress.earnedAchievements}/${primaryProgress.totalAchievements} achievements`
-    : primaryProgress?.earnedAchievements
-      ? `${primaryProgress.earnedAchievements} achievements`
-      : "No synced achievement data";
-  const playtimeSource = buildPlaytimeSourceLabel(primaryProgress);
-  const compactPlaytime = playtime || playtime === 0 ? formatHours(playtime) : "Playtime unavailable";
-  const compactAchievements =
-    primaryProgress?.totalAchievements || primaryProgress?.earnedAchievements
-      ? `${primaryProgress?.earnedAchievements || 0}/${primaryProgress?.totalAchievements || "?"} ach`
-      : "No achievement data";
-  const compactWinner = giveaway.winners?.length ? `Winner: ${escapeHtml(giveaway.winners.join(", "))}` : "No winner";
 
   return `
     <article class="giveaway-card">
@@ -477,15 +465,9 @@ function buildGiveawayCard(giveaway) {
         <h3 class="giveaway-title">
           ${giveaway.url ? `<a href="${escapeHtml(giveaway.url)}" target="_blank" rel="noreferrer">${title}</a>` : title}
         </h3>
-        <span class="meta-line">Created by ${escapeHtml(giveaway.creatorUsername || "-")} • ${giveaway.endDate ? formatDate(giveaway.endDate) : "No end date"}</span>
-        <span class="meta-line">${compactWinner} • ${giveaway.resultLabel ? escapeHtml(giveaway.resultLabel) : escapeHtml(giveaway.resultStatus || "Unknown status")}</span>
-        ${primaryProgress?.playtimeCheckedAt ? `<span class="meta-line">Playtime snapshot: ${escapeHtml(formatDateTime(primaryProgress.playtimeCheckedAt))}</span>` : ""}
-        ${playtimeSource ? `<span class="meta-line">${escapeHtml(playtimeSource)}</span>` : ""}
+        <span class="meta-line">Created by ${escapeHtml(giveaway.creatorUsername || "-")}</span>
         <div class="giveaway-meta-line">
           <span>${Number(giveaway.entriesCount || 0).toLocaleString("pt-BR")} entries</span>
-          <span>${giveaway.winnerCount || 0} winner(s)</span>
-          <span>${compactPlaytime}</span>
-          <span>${escapeHtml(compactAchievements)}</span>
         </div>
       </div>
     </article>
@@ -542,6 +524,7 @@ async function handleImageFallback(event) {
 }
 
 function computeMemberBucketRows(isActiveMember) {
+  const sortMode = isActiveMember ? elements.activeUsersSort?.value || "wins" : "wins";
   return state.members
     .filter((member) => Boolean(member.isActiveMember) === isActiveMember)
     .map((member) => {
@@ -560,7 +543,7 @@ function computeMemberBucketRows(isActiveMember) {
       };
     })
     .filter((row) => row.totalWins > 0 || isActiveMember)
-    .sort((left, right) => right.totalWins - left.totalWins || right.totalPlaytime - left.totalPlaytime);
+    .sort((left, right) => compareMemberBucketRows(left, right, sortMode));
 }
 
 function renderMonthlyDetailsTable(target, winsSubset) {
@@ -569,7 +552,31 @@ function renderMonthlyDetailsTable(target, winsSubset) {
     return;
   }
 
-  target.innerHTML = winsSubset
+  const sortedWins = [...winsSubset].sort((left, right) => {
+    const leftMember = findById("members", left.memberId);
+    const rightMember = findById("members", right.memberId);
+    const memberCompare = String(leftMember?.name || "").localeCompare(String(rightMember?.name || ""), "pt-BR", {
+      sensitivity: "base",
+    });
+    if (memberCompare !== 0) {
+      return memberCompare;
+    }
+
+    const leftGame = findById("games", left.gameId);
+    const rightGame = findById("games", right.gameId);
+    const gameCompare = String(leftGame?.title || "").localeCompare(String(rightGame?.title || ""), "pt-BR", {
+      sensitivity: "base",
+    });
+    if (gameCompare !== 0) {
+      return gameCompare;
+    }
+
+    return String(left.creatorUsername || "").localeCompare(String(right.creatorUsername || ""), "pt-BR", {
+      sensitivity: "base",
+    });
+  });
+
+  target.innerHTML = sortedWins
     .map((win) => {
       const member = findById("members", win.memberId);
       const game = findById("games", win.gameId);
@@ -587,9 +594,11 @@ function renderMonthlyDetailsTable(target, winsSubset) {
           <td>${formatHours(win.currentHours || 0)}</td>
           <td>${buildAchievementCell(win, totalAchievements)}</td>
           <td>${progress.requiredAchievements || 0}</td>
-          <td>
-            ${buildBadge(progress.badge, progress.label)}
-            <span class="meta-line">${escapeHtml(progress.note)}</span>
+          <td class="status-notes-cell">
+            <div class="status-notes-stack">
+              ${buildBadge(progress.badge, progress.label)}
+              <span class="meta-line">${escapeHtml(progress.note)}</span>
+            </div>
             ${buildEvidenceNoteMarkup(win.evidenceNotes)}
           </td>
         </tr>
@@ -2187,6 +2196,32 @@ function monthKey(dateInput) {
 
 function getAvailableMonths() {
   return Array.from(new Set(state.wins.map((win) => monthKey(win.winDate)))).sort().reverse();
+}
+
+function compareMemberBucketRows(left, right, sortMode) {
+  switch (sortMode) {
+    case "name":
+      return String(left.name || "").localeCompare(String(right.name || ""), "pt-BR", {
+        sensitivity: "base",
+      });
+    case "playtime":
+      return right.totalPlaytime - left.totalPlaytime || right.totalWins - left.totalWins || compareMemberBucketRows(left, right, "name");
+    case "achievements":
+      return (
+        (right.averageAchievements ?? -1) - (left.averageAchievements ?? -1) ||
+        right.totalWins - left.totalWins ||
+        compareMemberBucketRows(left, right, "name")
+      );
+    case "threshold":
+      return (
+        right.thresholdMet - left.thresholdMet ||
+        right.totalWins - left.totalWins ||
+        compareMemberBucketRows(left, right, "name")
+      );
+    case "wins":
+    default:
+      return right.totalWins - left.totalWins || right.totalPlaytime - left.totalPlaytime || compareMemberBucketRows(left, right, "name");
+  }
 }
 
 function todayISO() {

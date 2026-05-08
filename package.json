@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "public-sync": "node scripts/steamgifts-public-sync.mjs"
+    "public-sync": "node scripts/steamgifts-public-sync.mjs",
+    "publish-snapshot": "powershell -ExecutionPolicy Bypass -File scripts/publish-snapshot.ps1"
   },
   "dependencies": {
     "playwright": "1.54.0"

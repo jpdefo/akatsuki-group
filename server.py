@@ -1521,12 +1521,14 @@ def export_static_site(output_dir: Path) -> None:
 
     static_files = [
         "index.html",
+        "monthly-progress.html",
         "app.js",
         "styles.css",
         "active-users.html",
         "inactive-users.html",
         "bookmarklet-helper.html",
         "bookmarklet-helper.png",
+        "akatsuki.png",
         "working-dashboard.png",
     ]
     for file_name in static_files:

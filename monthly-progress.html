@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Akatsuki Active Users</title>
+    <title>Akatsuki Monthly Progress</title>
     <link
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f1115'/%3E%3Cpath d='M32 10 50 20v24L32 54 14 44V20z' fill='%236ea8fe'/%3E%3Cpath d='M32 18 43 24v16L32 46 21 40V24z' fill='%23171b22'/%3E%3C/svg%3E"
@@ -15,14 +15,14 @@
       <header class="hero">
         <div>
           <p class="eyebrow">Admin dashboard</p>
-          <h1>Akatsuki Active Users</h1>
+          <h1>Akatsuki Monthly Progress</h1>
           <p class="hero-copy">
-            Current Akatsuki members from the latest group users sync.
+            Monthly-only winner progress view with the same synced SteamGifts and Steam data.
           </p>
         </div>
         <div class="sync-actions">
-          <a class="button secondary" href="index.html">Monthly dashboard</a>
-          <a class="button secondary" href="monthly-progress.html">Monthly-only view</a>
+          <a class="button secondary" href="index.html">Overview dashboard</a>
+          <a class="button secondary" href="active-users.html">Active users</a>
           <a class="button secondary" href="inactive-users.html">Inactive users</a>
         </div>
       </header>
@@ -39,7 +39,8 @@
           </div>
           <div class="sync-actions">
             <button id="sync-refresh" class="button primary">Load server sync</button>
-            <button id="steam-refresh" class="button secondary">Refresh Steam progress</button>
+            <button id="steam-refresh" class="button secondary">Refresh selected month</button>
+            <button id="steam-refresh-all" class="button secondary">Full active refresh</button>
           </div>
           <div id="sync-status" class="sync-status"></div>
         </section>
@@ -47,46 +48,37 @@
         <section class="card">
           <div class="section-heading">
             <div>
-              <h2>Group snapshot</h2>
+              <h2>Monthly progress</h2>
               <p class="section-copy">
-                Live values derived from the latest SteamGifts sync.
+                Green = threshold met, yellow = all achievements completed, red = under the threshold.
+                Threshold = 25% of HLTB time + 10% of achievements.
               </p>
             </div>
-          </div>
-          <div id="group-snapshot" class="summary-grid"></div>
-        </section>
-
-        <section class="card">
-          <div class="section-heading">
             <div>
-              <h2>Active users</h2>
-              <p class="section-copy">
-                Current Akatsuki members, with totals built from synced wins and Steam progress.
-              </p>
+              <div id="storage-status" class="pill"></div>
+              <p id="period-summary" class="section-copy"></p>
             </div>
             <label class="inline-filter">
-              Sort
-              <select id="active-users-sort">
-                <option value="wins">Total wins</option>
-                <option value="name">User</option>
-                <option value="playtime">Total playtime</option>
-                <option value="achievements">Avg achv %</option>
-                <option value="threshold">Threshold met</option>
-              </select>
+              Month
+              <select id="monthly-filter"></select>
             </label>
           </div>
           <div class="table-wrap">
             <table>
               <thead>
                 <tr>
+                  <th>Creator</th>
+                  <th>Game won</th>
                   <th>User</th>
-                  <th>Total wins</th>
-                  <th>Total playtime</th>
-                  <th>Avg achv %</th>
-                  <th>Threshold met</th>
+                  <th>HLTB</th>
+                  <th>Req. 25%</th>
+                  <th>Player time</th>
+                  <th>Achs</th>
+                  <th>Req. 10%</th>
+                  <th>Status / notes</th>
                 </tr>
               </thead>
-              <tbody id="active-users-table"></tbody>
+              <tbody id="monthly-progress-table"></tbody>
             </table>
           </div>
         </section>
