@@ -21,7 +21,8 @@ if (Test-Path $nodePath) {
 
 $groupUrl = "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts"
 $bookmarkletHelperUrl = "http://127.0.0.1:4173/bookmarklet-helper.html"
-$syncEndpoint = "http://127.0.0.1:4173/api/steamgifts-sync"
+$serverHealthUrl = $bookmarkletHelperUrl
+$syncPath = Join-Path $repoRoot "data\steamgifts-sync.json"
 $startedServer = $null
 
 function Get-BrowserPath {
@@ -78,7 +79,7 @@ function Open-BrowserUrls {
 
 function Test-LocalServer {
   try {
-    Invoke-RestMethod -Uri $syncEndpoint -Method Get -TimeoutSec 5 | Out-Null
+    Invoke-WebRequest -Uri $serverHealthUrl -Method Head -TimeoutSec 5 | Out-Null
     return $true
   } catch {
     return $false
@@ -96,7 +97,7 @@ function Wait-LocalServer {
     Start-Sleep -Seconds 1
   }
 
-  throw "Timed out waiting for the local server at $syncEndpoint."
+  throw "Timed out waiting for the local server at $serverHealthUrl."
 }
 
 function Start-LocalServerIfNeeded {
@@ -111,8 +112,20 @@ function Start-LocalServerIfNeeded {
 }
 
 function Get-SyncMarker {
+  $emptyMarker = [pscustomobject]@{
+    Source = ""
+    SavedAt = ""
+    SyncedAt = ""
+    Members = 0
+    Giveaways = 0
+  }
+
+  if (-not (Test-Path $syncPath)) {
+    return $emptyMarker
+  }
+
   try {
-    $payload = Invoke-RestMethod -Uri $syncEndpoint -Method Get -TimeoutSec 10
+    $payload = Get-Content -Path $syncPath -Raw | ConvertFrom-Json
     $memberCount = if ($payload.PSObject.Properties.Name -contains "members" -and $payload.members) { @($payload.members).Count } else { 0 }
     $giveawayCount = if ($payload.PSObject.Properties.Name -contains "giveaways" -and $payload.giveaways) { @($payload.giveaways).Count } else { 0 }
     return [pscustomobject]@{
@@ -123,13 +136,7 @@ function Get-SyncMarker {
       Giveaways = [int]$giveawayCount
     }
   } catch {
-    return [pscustomobject]@{
-      Source = ""
-      SavedAt = ""
-      SyncedAt = ""
-      Members = 0
-      Giveaways = 0
-    }
+    return $emptyMarker
   }
 }
 
