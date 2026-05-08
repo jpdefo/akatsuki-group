@@ -208,7 +208,6 @@ function renderSettings() {
       "Latest sync",
       dashboardSummary?.syncedAt ? formatDateTime(dashboardSummary.syncedAt) : formatDate(state.settings.currentDate),
     ],
-    ["SteamGifts URL", sync?.group?.url ? `<a href="${escapeHtml(sync.group.url)}" target="_blank" rel="noreferrer">Open group</a>` : "Waiting for sync"],
   ];
   elements.groupSnapshot.innerHTML = cards
     .map(
@@ -294,20 +293,13 @@ function renderSyncStatus() {
   const winCount = sync.wins?.length || 0;
 
   if (elements.syncRefreshButton) {
-    elements.syncRefreshButton.disabled = runtime.staticApi;
-    elements.syncRefreshButton.title = runtime.staticApi ? "GitHub Pages uses published snapshots." : "";
+    elements.syncRefreshButton.hidden = runtime.staticApi;
   }
   if (elements.steamRefreshButton) {
-    elements.steamRefreshButton.disabled = runtime.staticApi;
-    elements.steamRefreshButton.title = runtime.staticApi
-      ? "GitHub Pages is read-only. Refresh via GitHub Actions or the local server."
-      : "";
+    elements.steamRefreshButton.hidden = runtime.staticApi;
   }
   if (elements.steamRefreshAllButton) {
-    elements.steamRefreshAllButton.disabled = runtime.staticApi;
-    elements.steamRefreshAllButton.title = runtime.staticApi
-      ? "GitHub Pages is read-only. Refresh via GitHub Actions or the local server."
-      : "";
+    elements.steamRefreshAllButton.hidden = runtime.staticApi;
   }
 
   elements.syncStatus.innerHTML = `
@@ -316,7 +308,7 @@ function renderSyncStatus() {
       <p>
         Last sync: <strong>${formatDateTime(sync.syncedAt)}</strong><br />
         ${escapeHtml(sync.group?.name || "Group")} • ${memberCount} member(s) • ${giveawayCount} giveaway(s) • ${winCount} win(s)
-        ${runtime.staticApi ? `<br /><span class="meta-line">GitHub Pages snapshot mode: refresh buttons are disabled here.</span>` : ""}
+        ${runtime.staticApi ? `<br /><span class="meta-line">GitHub Pages snapshot mode: data changes only after a new publish.</span>` : ""}
       </p>
     </article>
     <article class="alert-card info">
@@ -471,6 +463,12 @@ function buildGiveawayCard(giveaway) {
       ? `${primaryProgress.earnedAchievements} achievements`
       : "No synced achievement data";
   const playtimeSource = buildPlaytimeSourceLabel(primaryProgress);
+  const compactPlaytime = playtime || playtime === 0 ? formatHours(playtime) : "Playtime unavailable";
+  const compactAchievements =
+    primaryProgress?.totalAchievements || primaryProgress?.earnedAchievements
+      ? `${primaryProgress?.earnedAchievements || 0}/${primaryProgress?.totalAchievements || "?"} ach`
+      : "No achievement data";
+  const compactWinner = giveaway.winners?.length ? `Winner: ${escapeHtml(giveaway.winners.join(", "))}` : "No winner";
 
   return `
     <article class="giveaway-card">
@@ -480,26 +478,14 @@ function buildGiveawayCard(giveaway) {
           ${giveaway.url ? `<a href="${escapeHtml(giveaway.url)}" target="_blank" rel="noreferrer">${title}</a>` : title}
         </h3>
         <span class="meta-line">Created by ${escapeHtml(giveaway.creatorUsername || "-")} • ${giveaway.endDate ? formatDate(giveaway.endDate) : "No end date"}</span>
-        <span class="meta-line">${giveaway.resultLabel ? escapeHtml(giveaway.resultLabel) : escapeHtml(giveaway.resultStatus || "Unknown status")}</span>
+        <span class="meta-line">${compactWinner} • ${giveaway.resultLabel ? escapeHtml(giveaway.resultLabel) : escapeHtml(giveaway.resultStatus || "Unknown status")}</span>
         ${primaryProgress?.playtimeCheckedAt ? `<span class="meta-line">Playtime snapshot: ${escapeHtml(formatDateTime(primaryProgress.playtimeCheckedAt))}</span>` : ""}
         ${playtimeSource ? `<span class="meta-line">${escapeHtml(playtimeSource)}</span>` : ""}
-        <div class="giveaway-meta-grid">
-          <div class="giveaway-meta-card">
-            <span>Entries</span>
-            <strong>${Number(giveaway.entriesCount || 0).toLocaleString("pt-BR")}</strong>
-          </div>
-          <div class="giveaway-meta-card">
-            <span>Winners</span>
-            <strong>${giveaway.winnerCount || 0}</strong>
-          </div>
-          <div class="giveaway-meta-card">
-            <span>Playtime</span>
-            <strong>${playtime || playtime === 0 ? formatHours(playtime) : "Unavailable"}</strong>
-          </div>
-          <div class="giveaway-meta-card">
-            <span>Achievements</span>
-            <strong>${escapeHtml(achievements)}</strong>
-          </div>
+        <div class="giveaway-meta-line">
+          <span>${Number(giveaway.entriesCount || 0).toLocaleString("pt-BR")} entries</span>
+          <span>${giveaway.winnerCount || 0} winner(s)</span>
+          <span>${compactPlaytime}</span>
+          <span>${escapeHtml(compactAchievements)}</span>
         </div>
       </div>
     </article>

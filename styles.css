@@ -147,19 +147,31 @@ h2 {
 
 .giveaway-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(280px, 320px);
+  gap: 14px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scroll-snap-type: x proximity;
 }
 
 .giveaway-card {
-  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
   background: var(--panel-strong);
   border: 1px solid var(--line);
-  border-radius: 18px;
+  border-radius: 16px;
+  padding: 12px;
+  min-height: 96px;
+  scroll-snap-align: start;
 }
 
 .giveaway-card-body {
-  padding: 18px;
+  padding: 0;
+  min-width: 0;
+  display: grid;
+  gap: 6px;
 }
 
 .giveaway-image,
@@ -171,9 +183,11 @@ h2 {
 }
 
 .giveaway-image {
-  width: 100%;
-  aspect-ratio: 616 / 353;
+  width: 118px;
+  min-width: 118px;
+  height: 44px;
   object-fit: cover;
+  align-self: center;
 }
 
 .game-thumb {
@@ -192,8 +206,9 @@ h2 {
 }
 
 .giveaway-title {
-  margin: 0 0 8px;
-  font-size: 1.05rem;
+  margin: 0;
+  font-size: 0.96rem;
+  line-height: 1.25;
 }
 
 .giveaway-title a,
@@ -207,32 +222,12 @@ h2 {
   color: var(--accent);
 }
 
-.giveaway-meta-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-  margin-top: 14px;
-}
-
-.giveaway-meta-card {
-  background: rgba(15, 19, 26, 0.9);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 10px 12px;
-}
-
-.giveaway-meta-card span {
-  display: block;
+.giveaway-meta-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
   color: var(--muted);
-  font-size: 0.78rem;
-  margin-bottom: 6px;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.giveaway-meta-card strong {
-  display: block;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .game-cell {
@@ -521,13 +516,16 @@ td small,
   .two-columns,
   .summary-grid,
   .member-grid,
-  .giveaway-grid,
   .form-grid.wide {
     grid-template-columns: 1fr;
   }
 
   .span-2 {
     grid-column: auto;
+  }
+
+  .giveaway-grid {
+    grid-auto-columns: minmax(260px, 280px);
   }
 }
 
@@ -561,5 +559,15 @@ td small,
     width: 184px;
     min-width: 184px;
     height: 68px;
+  }
+
+  .giveaway-grid {
+    grid-auto-columns: minmax(220px, 250px);
+  }
+
+  .giveaway-image {
+    width: 92px;
+    min-width: 92px;
+    height: 34px;
   }
 }
