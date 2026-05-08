@@ -4,3 +4,4 @@ data/steamgifts-sync.backup-*.json
 .env
 site/
 dist/
+node_modules/

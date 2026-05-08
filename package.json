@@ -1,0 +1,11 @@
+{
+  "name": "akatsuki-group",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "public-sync": "node scripts/steamgifts-public-sync.mjs"
+  },
+  "dependencies": {
+    "playwright": "1.54.0"
+  }
+}

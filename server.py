@@ -1440,11 +1440,63 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Akatsuki Monitor server utilities")
     parser.add_argument("--export-static", action="store_true", help="Export a static site for GitHub Pages")
     parser.add_argument("--output-dir", default=str(STATIC_EXPORT_DIR), help="Static export output directory")
+    parser.add_argument("--merge-sync-file", help="Merge a SteamGifts sync JSON file into data/steamgifts-sync.json")
+    parser.add_argument("--refresh-steam-library", action="store_true", help="Refresh cached Steam library data")
+    parser.add_argument("--refresh-steam-progress", action="store_true", help="Refresh cached Steam progress data")
+    parser.add_argument("--month", help="Refresh only the specified month (YYYY-MM) when applicable")
+    parser.add_argument("--full-refresh", action="store_true", help="Refresh the full active-member history instead of a single month")
     args = parser.parse_args()
 
     ensure_data_dir()
+    performed_task = False
+    sync_payload: dict | None = None
+
+    if args.merge_sync_file:
+        incoming_path = Path(args.merge_sync_file)
+        payload = load_json(incoming_path, None)
+        if not isinstance(payload, dict):
+            raise SystemExit(f"Could not read a JSON object from {incoming_path}")
+        existing = load_json(SYNC_PATH, {})
+        sync_payload = merge_sync_payload(existing, payload)
+        save_json(SYNC_PATH, sync_payload)
+        print(
+            "Merged SteamGifts sync payload:"
+            f" {len(sync_payload.get('members', []))} member(s),"
+            f" {len(sync_payload.get('giveaways', []))} giveaway(s)."
+        )
+        performed_task = True
+
+    if args.refresh_steam_library or args.refresh_steam_progress:
+        sync_payload = sync_payload or load_json(SYNC_PATH, {})
+        if not sync_payload.get("giveaways"):
+            raise SystemExit("No SteamGifts sync data available yet.")
+        if args.refresh_steam_library and not args.refresh_steam_progress:
+            library_payload = refresh_steam_library(
+                sync_payload,
+                target_month=args.month,
+                full_refresh=args.full_refresh,
+            )
+            print(
+                "Refreshed Steam library:"
+                f" {library_payload.get('stats', {}).get('profilesTargeted', 0)} targeted profile(s)."
+            )
+        if args.refresh_steam_progress:
+            progress_payload = refresh_steam_progress(
+                sync_payload,
+                target_month=args.month,
+                full_refresh=args.full_refresh,
+            )
+            print(
+                "Refreshed Steam progress:"
+                f" {progress_payload.get('stats', {}).get('uniqueProgressTargets', 0)} target(s)."
+            )
+        performed_task = True
+
     if args.export_static:
         export_static_site(Path(args.output_dir))
+        performed_task = True
+
+    if performed_task:
         return
 
     server = ThreadingHTTPServer((HOST, PORT), Handler)
