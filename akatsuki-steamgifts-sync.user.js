@@ -229,6 +229,7 @@
         ? Number(timestamps[timestamps.length - 1].getAttribute("data-timestamp")) * 1000
         : null;
       const { appId, steamAppUrl } = extractAppInfo(row);
+      const media = extractSteamMedia(row, appId);
       const winnerInfo = extractWinnerInfo(rowText, primaryUser, secondaryUsers, endTimestamp);
       const creator = resolveCreatorRecord(primaryUser, secondaryUsers, winnerInfo.resultStatus);
 
@@ -240,6 +241,9 @@
         creatorProfileUrl: creator ? creator.profileUrl : "",
         appId,
         steamAppUrl,
+        headerImageUrl: media.headerImageUrl,
+        capsuleImageUrl: media.capsuleImageUrl,
+        capsuleSmallUrl: media.capsuleSmallUrl,
         entriesCount: entryLink ? parseInt(entryLink.textContent.replace(/[^\d]/g, ""), 10) || 0 : 0,
         endDate: endTimestamp ? new Date(endTimestamp).toISOString() : null,
         winners: winnerInfo.winners,
@@ -406,6 +410,45 @@
     };
   }
 
+  function buildSteamMediaUrls(appId) {
+    if (!appId) {
+      return {
+        headerImageUrl: "",
+        capsuleImageUrl: "",
+        capsuleSmallUrl: "",
+      };
+    }
+
+    return {
+      headerImageUrl: `https://cdn.cloudflare.steamstatic.com/steam/apps/${appId}/header.jpg`,
+      capsuleImageUrl: `https://cdn.cloudflare.steamstatic.com/steam/apps/${appId}/capsule_616x353.jpg`,
+      capsuleSmallUrl: `https://cdn.cloudflare.steamstatic.com/steam/apps/${appId}/capsule_184x69.jpg`,
+    };
+  }
+
+  function extractSteamMedia(container, appId) {
+    const fallback = buildSteamMediaUrls(appId);
+    const imageCandidates = Array.from(container.querySelectorAll("img"))
+      .map((image) => image.getAttribute("src") || image.getAttribute("data-src") || "")
+      .filter(Boolean);
+    const html = container.outerHTML;
+    const htmlMatches = Array.from(
+      html.matchAll(/https?:\/\/[^"' )]+(?:header|capsule_[^"' )]+)\.(?:jpg|png|webp)/gi),
+    ).map((match) => match[0]);
+    const candidates = [...imageCandidates, ...htmlMatches];
+
+    return {
+      headerImageUrl:
+        candidates.find((value) => /\/header\.(?:jpg|png|webp)/i.test(value)) || fallback.headerImageUrl,
+      capsuleImageUrl:
+        candidates.find((value) => /\/capsule_(?:616x353|467x181|460x215)\.(?:jpg|png|webp)/i.test(value)) ||
+        fallback.capsuleImageUrl,
+      capsuleSmallUrl:
+        candidates.find((value) => /\/capsule_(?:231x87|184x69|120x45)\.(?:jpg|png|webp)/i.test(value)) ||
+        fallback.capsuleSmallUrl,
+    };
+  }
+
   function extractWinnerInfo(rowText, primaryUser, secondaryUsers, endTimestamp) {
     const ended = Boolean(endTimestamp && endTimestamp <= Date.now());
 
@@ -525,11 +568,16 @@
     const endTimestamp = timestamps.length
       ? Number(timestamps[timestamps.length - 1].getAttribute("data-timestamp")) * 1000
       : null;
+    const appId = appMatch ? Number(appMatch[1]) : giveaway.appId || null;
+    const media = extractSteamMedia(doc.body, appId);
 
     return {
       ...giveaway,
-      appId: appMatch ? Number(appMatch[1]) : null,
-      steamAppUrl: storeLink ? storeLink.href : "",
+      appId,
+      steamAppUrl: storeLink ? storeLink.href : giveaway.steamAppUrl || "",
+      headerImageUrl: media.headerImageUrl || giveaway.headerImageUrl || "",
+      capsuleImageUrl: media.capsuleImageUrl || giveaway.capsuleImageUrl || "",
+      capsuleSmallUrl: media.capsuleSmallUrl || giveaway.capsuleSmallUrl || "",
       entriesCount:
         giveaway.entriesCount ||
         parseInt(String(featureMap.Entries || "").replace(/[^\d]/g, ""), 10) ||

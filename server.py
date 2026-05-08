@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import argparse
 import json
 import os
 import re
@@ -12,18 +13,25 @@ from html import unescape
 from http import HTTPStatus
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
+from shutil import copy2
 from urllib.error import HTTPError, URLError
-from urllib.parse import urlencode, urlparse
+from urllib.parse import parse_qs, urlencode, urlparse
 from urllib.request import Request, urlopen
 
 
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
+ENV_PATH = BASE_DIR / ".env"
 SYNC_PATH = DATA_DIR / "steamgifts-sync.json"
 PROGRESS_PATH = DATA_DIR / "steam-progress.json"
+LIBRARY_PATH = DATA_DIR / "steam-library.json"
 HLTB_CACHE_PATH = DATA_DIR / "hltb-cache.json"
+MEDIA_CACHE_PATH = DATA_DIR / "steam-media-cache.json"
+STATIC_EXPORT_DIR = BASE_DIR / "site"
 HOST = "127.0.0.1"
 PORT = 4173
+LIBRARY_SNAPSHOT_TTL_HOURS = 48
+PROGRESS_SNAPSHOT_TTL_HOURS = 48
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
@@ -54,8 +62,74 @@ def save_json(path: Path, payload) -> None:
     path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
+def empty_progress_payload() -> dict:
+    return {"updatedAt": None, "progress": [], "stats": {}, "libraryStats": {}}
+
+
+def empty_library_payload() -> dict:
+    return {
+        "updatedAt": None,
+        "apiEnabled": False,
+        "refreshedScope": None,
+        "refreshedMonth": None,
+        "profiles": [],
+        "playtimes": [],
+        "source": "steam-web-api",
+        "stats": {},
+    }
+
+
+def empty_media_cache() -> dict:
+    return {"updatedAt": None, "apps": {}}
+
+
+def build_media_lookup(media_cache: dict) -> dict[int, dict]:
+    lookup = {}
+    for key, value in (media_cache.get("apps") or {}).items():
+        app_id = parse_int(key)
+        if app_id:
+            lookup[app_id] = value
+    return lookup
+
+
+def parse_datetime(value: str | None) -> datetime | None:
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
+def load_dotenv_values(path: Path = ENV_PATH) -> dict[str, str]:
+    if not path.exists():
+        return {}
+    values = {}
+    for raw_line in path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if line.startswith("export "):
+            line = line[7:].strip()
+        if "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        value = value.strip()
+        if len(value) >= 2 and value[0] == value[-1] and value[0] in {'"', "'"}:
+            value = value[1:-1]
+        values[key.strip()] = value
+    return values
+
+
 def month_key(value: str | None) -> str:
     return str(value or "")[:7]
+
+
+def parse_int(value, default: int = 0) -> int:
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return default
 
 
 def compute_retry_delay(error: HTTPError | URLError | TimeoutError, attempt: int) -> float:
@@ -164,6 +238,87 @@ def merge_sync_payload(existing: dict, incoming: dict) -> dict:
     return merged
 
 
+def build_steam_media(app_id: int | None) -> dict[str, str]:
+    if not app_id:
+        return {
+            "headerImageUrl": "",
+            "capsuleImageUrl": "",
+            "capsuleSmallUrl": "",
+        }
+
+    return {
+        "headerImageUrl": f"https://cdn.cloudflare.steamstatic.com/steam/apps/{app_id}/header.jpg",
+        "capsuleImageUrl": f"https://cdn.cloudflare.steamstatic.com/steam/apps/{app_id}/capsule_616x353.jpg",
+        "capsuleSmallUrl": f"https://cdn.cloudflare.steamstatic.com/steam/apps/{app_id}/capsule_184x69.jpg",
+    }
+
+
+def fetch_store_media(app_id: int) -> dict[str, str]:
+    payload = fetch_json(
+        f"https://store.steampowered.com/api/appdetails?{urlencode({'appids': str(app_id), 'l': 'english'})}"
+    )
+    data = (payload.get(str(app_id)) or {}).get("data") or {}
+    return {
+        "headerImageUrl": str(data.get("header_image") or ""),
+        "capsuleImageUrl": str(data.get("capsule_image") or ""),
+        "capsuleSmallUrl": str(data.get("capsule_imagev5") or data.get("capsule_image") or ""),
+    }
+
+
+def get_media_cache_entry(app_id: int, media_cache: dict, *, fetch_missing: bool = False) -> dict[str, str]:
+    cache_key = str(app_id)
+    cached = media_cache.get("apps", {}).get(cache_key)
+    if cached is not None:
+        return cached
+    if not fetch_missing:
+        return {}
+    fetched = fetch_store_media(app_id)
+    media_cache.setdefault("apps", {})[cache_key] = fetched
+    media_cache["updatedAt"] = utc_now()
+    return fetched
+
+
+def with_giveaway_media(giveaway: dict, media_lookup: dict[int, dict] | None = None) -> dict:
+    app_id = parse_int(giveaway.get("appId")) or None
+    media = build_steam_media(app_id)
+    cached_media = (media_lookup or {}).get(app_id or 0, {})
+    return {
+        **giveaway,
+        "appId": app_id,
+        "headerImageUrl": giveaway.get("headerImageUrl") or cached_media.get("headerImageUrl") or media["headerImageUrl"],
+        "capsuleImageUrl": giveaway.get("capsuleImageUrl") or cached_media.get("capsuleImageUrl") or media["capsuleImageUrl"],
+        "capsuleSmallUrl": giveaway.get("capsuleSmallUrl") or cached_media.get("capsuleSmallUrl") or media["capsuleSmallUrl"],
+    }
+
+
+def get_media_payload(app_ids: list[int]) -> dict:
+    media_cache = load_json(MEDIA_CACHE_PATH, empty_media_cache())
+    results = {}
+    changed = False
+    for app_id in sorted({app_id for app_id in app_ids if app_id}):
+        before = json.dumps(media_cache.get("apps", {}).get(str(app_id)))
+        cached = get_media_cache_entry(app_id, media_cache, fetch_missing=True)
+        if json.dumps(cached) != before:
+            changed = True
+        fallback = build_steam_media(app_id)
+        results[str(app_id)] = {
+            "appId": app_id,
+            "headerImageUrl": cached.get("headerImageUrl") or fallback["headerImageUrl"],
+            "capsuleImageUrl": cached.get("capsuleImageUrl") or fallback["capsuleImageUrl"],
+            "capsuleSmallUrl": cached.get("capsuleSmallUrl") or fallback["capsuleSmallUrl"],
+        }
+    if changed:
+        save_json(MEDIA_CACHE_PATH, media_cache)
+    return {"updatedAt": media_cache.get("updatedAt"), "results": results}
+
+
+def build_sync_export_payload(sync_payload: dict, *, media_lookup: dict[int, dict] | None = None) -> dict:
+    return {
+        **sync_payload,
+        "giveaways": [with_giveaway_media(giveaway, media_lookup) for giveaway in sync_payload.get("giveaways", [])],
+    }
+
+
 def fetch_html(url: str) -> str:
     request = Request(url, headers={"User-Agent": USER_AGENT})
     with open_url(request) as response:
@@ -192,21 +347,17 @@ def build_achievement_url(steam_profile: str, app_id: int | str) -> str:
 def parse_achievement_summary(html: str) -> dict:
     text = strip_html(html)
     match = re.search(r"(\d+)\s+of\s+(\d+)\s+\((\d+)%\)\s+achievements earned", text, re.I)
-    hours_match = re.search(r"([\d.,]+)\s*hrs on record", text, re.I)
 
     earned = int(match.group(1)) if match else 0
     total = int(match.group(2)) if match else 0
     percent = int(match.group(3)) if match else 0
-    playtime_hours = None
-    if hours_match:
-        playtime_hours = float(hours_match.group(1).replace(",", "."))
 
     return {
         "visible": bool(match),
         "earnedAchievements": earned,
         "totalAchievements": total,
         "achievementPercent": percent,
-        "playtimeHours": playtime_hours,
+        "playtimeHours": None,
     }
 
 
@@ -256,6 +407,10 @@ def merge_progress_item(base: dict | None, *, username: str, steam_profile: str,
     item.setdefault("totalAchievements", 0)
     item.setdefault("achievementPercent", 0)
     item.setdefault("playtimeHours", None)
+    item.setdefault("playtimeCheckedAt", None)
+    item.setdefault("playtimeSource", "")
+    item.setdefault("playtimeVisible", None)
+    item.setdefault("gamesVisible", None)
     item.setdefault("error", None)
     return item
 
@@ -285,8 +440,254 @@ def build_wins_from_giveaways(sync_payload: dict) -> list[dict]:
     return derived
 
 
+def build_progress_lookup(progress_payload: dict) -> dict[tuple[str, int], dict]:
+    lookup = {}
+    for item in progress_payload.get("progress", []):
+        steam_profile = item.get("steamProfile")
+        app_id = parse_int(item.get("appId"))
+        if steam_profile and app_id:
+            lookup[(steam_profile, app_id)] = item
+    return lookup
+
+
+def build_library_playtime_lookup(library_payload: dict) -> dict[tuple[str, int], dict]:
+    lookup = {}
+    for item in library_payload.get("playtimes", []):
+        steam_profile = item.get("steamProfile")
+        app_id = parse_int(item.get("appId"))
+        if steam_profile and app_id:
+            lookup[(steam_profile, app_id)] = item
+    return lookup
+
+
+def build_library_profile_lookup(library_payload: dict) -> dict[str, dict]:
+    return {
+        item.get("steamProfile"): item
+        for item in library_payload.get("profiles", [])
+        if item.get("steamProfile")
+    }
+
+
+def is_library_profile_fresh(item: dict, *, ttl_hours: int = LIBRARY_SNAPSHOT_TTL_HOURS) -> bool:
+    checked_at = parse_datetime(item.get("checkedAt"))
+    if not checked_at:
+        return False
+    age_seconds = (datetime.now(timezone.utc) - checked_at).total_seconds()
+    return age_seconds < ttl_hours * 3600
+
+
+def is_progress_item_fresh(item: dict, *, ttl_hours: int = PROGRESS_SNAPSHOT_TTL_HOURS) -> bool:
+    checked_at = parse_datetime(item.get("checkedAt"))
+    if not checked_at:
+        return False
+    age_seconds = (datetime.now(timezone.utc) - checked_at).total_seconds()
+    return age_seconds < ttl_hours * 3600
+
+
+def build_members_payload(sync_payload: dict) -> dict:
+    win_counts: dict[str, int] = {}
+    latest_wins: dict[str, str] = {}
+
+    for win in derive_wins(sync_payload):
+        username = win.get("winnerUsername") or win.get("username")
+        if not username:
+            continue
+        win_counts[username] = win_counts.get(username, 0) + 1
+        win_date = win.get("winDate") or ""
+        if win_date and win_date > latest_wins.get(username, ""):
+            latest_wins[username] = win_date
+
+    active = []
+    inactive = []
+    for member in sorted(sync_payload.get("members", []), key=lambda item: str(item.get("username") or "").lower()):
+        username = member.get("username")
+        if not username:
+            continue
+        item = {
+            "username": username,
+            "profileUrl": member.get("profileUrl", ""),
+            "steamProfile": member.get("steamProfile", ""),
+            "isActiveMember": bool(member.get("isActiveMember")),
+            "winsCount": win_counts.get(username, 0),
+            "lastWinDate": latest_wins.get(username) or None,
+        }
+        if item["isActiveMember"]:
+            active.append(item)
+        else:
+            inactive.append(item)
+
+    return {
+        "active": active,
+        "inactive": inactive,
+        "counts": {
+            "all": len(active) + len(inactive),
+            "active": len(active),
+            "inactive": len(inactive),
+        },
+    }
+
+
+def build_winner_progress_items(
+    giveaway: dict,
+    members_by_username: dict[str, dict],
+    progress_lookup: dict[tuple[str, int], dict],
+    library_playtime_lookup: dict[tuple[str, int], dict],
+    library_profile_lookup: dict[str, dict],
+) -> list[dict]:
+    app_id = parse_int(giveaway.get("appId"))
+    items = []
+    for winner in giveaway.get("winners", []):
+        username = winner.get("username")
+        steam_profile = members_by_username.get(username, {}).get("steamProfile", "")
+        library_profile = library_profile_lookup.get(steam_profile, {})
+        if not username or not app_id:
+            items.append(
+                {
+                    "username": username or "",
+                    "steamProfile": steam_profile,
+                    "playtimeHours": None,
+                    "playtimeCheckedAt": library_profile.get("checkedAt"),
+                    "playtimeSource": "",
+                    "playtimeVisible": library_profile.get("playtimeVisible"),
+                    "gamesVisible": library_profile.get("gamesVisible"),
+                    "earnedAchievements": 0,
+                    "totalAchievements": 0,
+                    "visible": False,
+                    "progressUrl": "",
+                    "achievementCheckedAt": None,
+                    "error": None,
+                }
+            )
+            continue
+        progress = progress_lookup.get((steam_profile, app_id), {})
+        playtime = library_playtime_lookup.get((steam_profile, app_id), {})
+        items.append(
+            {
+                "username": username,
+                "steamProfile": steam_profile,
+                "playtimeHours": playtime.get("playtimeHours", progress.get("playtimeHours")),
+                "playtimeCheckedAt": playtime.get("checkedAt"),
+                "playtimeSource": playtime.get("source", ""),
+                "playtimeVisible": library_profile.get("playtimeVisible"),
+                "gamesVisible": library_profile.get("gamesVisible"),
+                "earnedAchievements": parse_int(progress.get("earnedAchievements")),
+                "totalAchievements": parse_int(progress.get("totalAchievements")),
+                "visible": bool(progress.get("visible")),
+                "progressUrl": progress.get("progressUrl", ""),
+                "achievementCheckedAt": progress.get("checkedAt"),
+                "error": progress.get("error"),
+            }
+        )
+    return items
+
+
+def build_giveaways_payload(sync_payload: dict, progress_payload: dict, library_payload: dict, *, limit: int | None = 24) -> dict:
+    media_lookup = build_media_lookup(load_json(MEDIA_CACHE_PATH, empty_media_cache()))
+    members_by_username = {
+        member.get("username"): member
+        for member in sync_payload.get("members", [])
+        if member.get("username")
+    }
+    progress_lookup = build_progress_lookup(progress_payload)
+    library_playtime_lookup = build_library_playtime_lookup(library_payload)
+    library_profile_lookup = build_library_profile_lookup(library_payload)
+    giveaways = sorted(
+        (with_giveaway_media(giveaway, media_lookup) for giveaway in sync_payload.get("giveaways", [])),
+        key=lambda item: (item.get("endDate") or "", item.get("code") or ""),
+        reverse=True,
+    )
+    if limit is not None:
+        giveaways = giveaways[:limit]
+
+    results = []
+    for giveaway in giveaways:
+        winner_progress = build_winner_progress_items(
+            giveaway,
+            members_by_username,
+            progress_lookup,
+            library_playtime_lookup,
+            library_profile_lookup,
+        )
+        primary_progress = winner_progress[0] if len(winner_progress) == 1 else None
+        results.append(
+            {
+                "code": giveaway.get("code", ""),
+                "title": giveaway.get("title", ""),
+                "url": giveaway.get("url", ""),
+                "steamAppUrl": giveaway.get("steamAppUrl", ""),
+                "appId": giveaway.get("appId"),
+                "creatorUsername": giveaway.get("creatorUsername", ""),
+                "creatorProfileUrl": giveaway.get("creatorProfileUrl", ""),
+                "entriesCount": parse_int(giveaway.get("entriesCount")),
+                "points": parse_int(giveaway.get("points")),
+                "resultStatus": giveaway.get("resultStatus", ""),
+                "resultLabel": giveaway.get("resultLabel", ""),
+                "endDate": giveaway.get("endDate"),
+                "winnerCount": len(giveaway.get("winners", [])),
+                "winners": [winner.get("username", "") for winner in giveaway.get("winners", []) if winner.get("username")],
+                "headerImageUrl": giveaway.get("headerImageUrl", ""),
+                "capsuleImageUrl": giveaway.get("capsuleImageUrl", ""),
+                "capsuleSmallUrl": giveaway.get("capsuleSmallUrl", ""),
+                "winnerProgress": winner_progress,
+                "primaryProgress": primary_progress,
+            }
+        )
+
+    return {
+        "updatedAt": utc_now(),
+        "results": results,
+        "total": len(sync_payload.get("giveaways", [])),
+        "progressUpdatedAt": progress_payload.get("updatedAt"),
+        "libraryUpdatedAt": library_payload.get("updatedAt"),
+    }
+
+
+def build_dashboard_payload(sync_payload: dict, progress_payload: dict, library_payload: dict) -> dict:
+    wins = derive_wins(sync_payload)
+    members_payload = build_members_payload(sync_payload)
+    giveaways_payload = build_giveaways_payload(sync_payload, progress_payload, library_payload, limit=12)
+    library_profiles = library_payload.get("profiles", [])
+    return {
+        "updatedAt": utc_now(),
+        "group": sync_payload.get("group") or {},
+        "summary": {
+            "syncedAt": sync_payload.get("syncedAt") or sync_payload.get("savedAt"),
+            "members": len(sync_payload.get("members", [])),
+            "activeMembers": members_payload["counts"]["active"],
+            "giveaways": len(sync_payload.get("giveaways", [])),
+            "wins": len(wins),
+            "steamProgressUpdatedAt": progress_payload.get("updatedAt"),
+            "refreshedScope": progress_payload.get("refreshedScope"),
+            "refreshedMonth": progress_payload.get("refreshedMonth"),
+            "steamApiEnabled": bool(progress_payload.get("steamApiEnabled")),
+            "libraryUpdatedAt": library_payload.get("updatedAt"),
+            "libraryApiEnabled": bool(library_payload.get("apiEnabled")),
+            "libraryProfiles": len(library_profiles),
+            "libraryFreshProfiles": sum(1 for item in library_profiles if is_library_profile_fresh(item)),
+            "librarySnapshotTtlHours": LIBRARY_SNAPSHOT_TTL_HOURS,
+            "libraryRefreshedScope": library_payload.get("refreshedScope"),
+            "libraryRefreshedMonth": library_payload.get("refreshedMonth"),
+            "progressStats": progress_payload.get("stats") or {},
+            "libraryStats": library_payload.get("stats") or {},
+        },
+        "members": members_payload,
+        "recentGiveaways": giveaways_payload["results"],
+    }
+
+
+def parse_limit(query: dict[str, list[str]], *, default: int | None, maximum: int = 200) -> int | None:
+    value = (query.get("limit") or [None])[0]
+    if value in (None, "", "all"):
+        return default
+    limit = parse_int(value, default or maximum)
+    return max(1, min(maximum, limit))
+
+
 def get_steam_api_key() -> str:
-    return os.environ.get("STEAM_WEB_API_KEY", "").strip()
+    api_key = os.environ.get("STEAM_WEB_API_KEY", "").strip()
+    if api_key:
+        return api_key
+    return load_dotenv_values().get("STEAM_WEB_API_KEY", "").strip()
 
 
 def extract_steam_id_from_profile(steam_profile: str, api_key: str, cache: dict[str, str]) -> str | None:
@@ -332,6 +733,200 @@ def fetch_owned_games_playtime(steam_id: str, api_key: str) -> dict[str, float]:
         for game in games
         if game.get("appid")
     }
+
+
+def fetch_owned_games_snapshot(steam_id: str, api_key: str) -> dict:
+    if not steam_id or not api_key:
+        return {
+            "gamesVisible": False,
+            "playtimeVisible": False,
+            "gameCount": 0,
+            "playtimes": [],
+        }
+
+    query = urlencode(
+        {
+            "key": api_key,
+            "steamid": steam_id,
+            "include_appinfo": "0",
+            "include_played_free_games": "1",
+            "format": "json",
+        }
+    )
+    payload = fetch_json(f"{STEAM_API_BASE}/IPlayerService/GetOwnedGames/v1/?{query}")
+    response = payload.get("response", {})
+    games = response.get("games")
+    if games is None:
+        return {
+            "gamesVisible": False,
+            "playtimeVisible": False,
+            "gameCount": 0,
+            "playtimes": [],
+        }
+
+    playtimes = [
+        {
+            "appId": parse_int(game.get("appid")),
+            "playtimeMinutes": parse_int(game.get("playtime_forever")),
+            "playtimeHours": round(float(game.get("playtime_forever", 0)) / 60, 2),
+        }
+        for game in games
+        if game.get("appid")
+    ]
+    return {
+        "gamesVisible": True,
+        "playtimeVisible": True,
+        "gameCount": parse_int(response.get("game_count"), len(playtimes)) or len(playtimes),
+        "playtimes": playtimes,
+    }
+
+
+def collect_library_targets(
+    sync_payload: dict,
+    target_month: str | None = None,
+    *,
+    full_refresh: bool = False,
+) -> tuple[list[dict], str | None]:
+    if full_refresh:
+        targets = []
+        for member in sync_payload.get("members", []):
+            if member.get("isActiveMember") is not True or not member.get("steamProfile") or not member.get("username"):
+                continue
+            targets.append(
+                {
+                    "username": member.get("username"),
+                    "steamProfile": member.get("steamProfile"),
+                }
+            )
+        return targets, None
+
+    target_wins, members, _, selected_month = collect_progress_targets(sync_payload, target_month)
+    targets = []
+    seen = set()
+    for win in target_wins:
+        username = win.get("winnerUsername") or win.get("username")
+        steam_profile = members.get(username, {}).get("steamProfile", "")
+        if not username or not steam_profile or steam_profile in seen:
+            continue
+        seen.add(steam_profile)
+        targets.append({"username": username, "steamProfile": steam_profile})
+    return targets, selected_month
+
+
+def refresh_steam_library(
+    sync_payload: dict,
+    target_month: str | None = None,
+    *,
+    full_refresh: bool = False,
+) -> dict:
+    started_at = time.perf_counter()
+    existing_payload = load_json(LIBRARY_PATH, empty_library_payload())
+    playtime_cache = build_library_playtime_lookup(existing_payload)
+    profile_cache = build_library_profile_lookup(existing_payload)
+    targets, selected_month = collect_library_targets(sync_payload, target_month, full_refresh=full_refresh)
+    steam_api_key = get_steam_api_key()
+    steam_id_cache: dict[str, str] = {}
+    refreshed_profiles = 0
+    reused_profiles = 0
+    error_profiles = 0
+    missing_api_profiles = 0
+
+    for target in targets:
+        username = target.get("username", "")
+        steam_profile = target.get("steamProfile", "")
+        existing_profile = dict(profile_cache.get(steam_profile, {}))
+        if not steam_profile:
+            continue
+
+        if not steam_api_key:
+            missing_api_profiles += 1
+            profile_cache[steam_profile] = {
+                **existing_profile,
+                "username": username or existing_profile.get("username", ""),
+                "steamProfile": steam_profile,
+                "error": "STEAM_WEB_API_KEY is not configured.",
+            }
+            continue
+
+        if existing_profile and is_library_profile_fresh(existing_profile):
+            reused_profiles += 1
+            profile_cache[steam_profile] = {
+                **existing_profile,
+                "username": username or existing_profile.get("username", ""),
+                "steamProfile": steam_profile,
+                "error": existing_profile.get("error"),
+            }
+            continue
+
+        try:
+            steam_id = extract_steam_id_from_profile(steam_profile, steam_api_key, steam_id_cache)
+            snapshot = fetch_owned_games_snapshot(steam_id or "", steam_api_key)
+            checked_at = utc_now()
+
+            stale_keys = [key for key in playtime_cache if key[0] == steam_profile]
+            for key in stale_keys:
+                del playtime_cache[key]
+
+            for item in snapshot["playtimes"]:
+                app_id = parse_int(item.get("appId"))
+                if not app_id:
+                    continue
+                playtime_cache[(steam_profile, app_id)] = {
+                    "username": username,
+                    "steamProfile": steam_profile,
+                    "appId": app_id,
+                    "playtimeMinutes": parse_int(item.get("playtimeMinutes")),
+                    "playtimeHours": item.get("playtimeHours"),
+                    "checkedAt": checked_at,
+                    "source": "steam-web-api",
+                }
+
+            profile_cache[steam_profile] = {
+                "username": username,
+                "steamProfile": steam_profile,
+                "steamId": steam_id or "",
+                "checkedAt": checked_at,
+                "gamesVisible": snapshot.get("gamesVisible"),
+                "playtimeVisible": snapshot.get("playtimeVisible"),
+                "gameCount": snapshot.get("gameCount", 0),
+                "error": None,
+            }
+            refreshed_profiles += 1
+        except (HTTPError, URLError, TimeoutError, json.JSONDecodeError, RuntimeError) as error:
+            error_profiles += 1
+            profile_cache[steam_profile] = {
+                **existing_profile,
+                "username": username or existing_profile.get("username", ""),
+                "steamProfile": steam_profile,
+                "checkedAt": utc_now(),
+                "error": str(error),
+            }
+
+    payload = {
+        "updatedAt": utc_now(),
+        "apiEnabled": bool(steam_api_key),
+        "refreshedScope": "all" if full_refresh else "month",
+        "refreshedMonth": selected_month,
+        "profiles": sorted(profile_cache.values(), key=lambda item: str(item.get("username") or "").lower()),
+        "playtimes": sorted(
+            playtime_cache.values(),
+            key=lambda item: (str(item.get("username") or "").lower(), parse_int(item.get("appId"))),
+        ),
+        "source": "steam-web-api",
+        "stats": {
+            "durationSeconds": round(time.perf_counter() - started_at, 2),
+            "targetProfiles": len(targets),
+            "refreshedProfiles": refreshed_profiles,
+            "reusedProfiles": reused_profiles,
+            "errorProfiles": error_profiles,
+            "missingApiProfiles": missing_api_profiles,
+            "totalProfiles": len(profile_cache),
+            "freshProfiles": sum(1 for item in profile_cache.values() if is_library_profile_fresh(item)),
+            "totalPlaytimeRows": len(playtime_cache),
+        },
+    }
+    save_json(LIBRARY_PATH, payload)
+    return payload
 
 
 def normalize_title(value: str) -> str:
@@ -569,21 +1164,32 @@ def refresh_steam_progress(
     *,
     full_refresh: bool = False,
 ) -> dict:
+    started_at = time.perf_counter()
     target_wins, members, active_usernames, selected_month = collect_progress_targets(
         sync_payload,
         target_month,
         full_refresh=full_refresh,
     )
+    library_payload = refresh_steam_library(
+        sync_payload,
+        target_month=target_month,
+        full_refresh=full_refresh,
+    )
+    library_playtime_lookup = build_library_playtime_lookup(library_payload)
+    library_profile_lookup = build_library_profile_lookup(library_payload)
+    remote_titles = set() if full_refresh else {win.get("title") for win in target_wins if win.get("title")}
     sync_payload, hltb_items = enrich_sync_with_hltb(
         sync_payload,
-        remote_titles=set() if full_refresh else {win.get("title") for win in target_wins if win.get("title")},
+        remote_titles=remote_titles,
     )
-    existing_progress_payload = load_json(PROGRESS_PATH, {"progress": []})
+    existing_progress_payload = load_json(PROGRESS_PATH, empty_progress_payload())
     progress_cache = build_progress_cache(existing_progress_payload)
-    steam_api_key = get_steam_api_key()
-    steam_id_cache: dict[str, str] = {}
-    owned_games_cache: dict[str, dict[str, float]] = {}
     seen = set()
+    achievement_successes = 0
+    achievement_errors = 0
+    cached_fallbacks = 0
+    cached_reuses = 0
+    library_playtime_hits = 0
 
     for win in target_wins:
         username = win.get("winnerUsername") or win.get("username")
@@ -595,17 +1201,11 @@ def refresh_steam_progress(
         seen.add(key)
 
         cached_item = progress_cache.get((steam_profile, int(app_id)))
-        api_playtime = None
-        if steam_api_key:
-            try:
-                if steam_profile not in owned_games_cache:
-                    steam_id = extract_steam_id_from_profile(steam_profile, steam_api_key, steam_id_cache)
-                    owned_games_cache[steam_profile] = (
-                        fetch_owned_games_playtime(steam_id, steam_api_key) if steam_id else {}
-                    )
-                api_playtime = owned_games_cache.get(steam_profile, {}).get(str(app_id))
-            except (HTTPError, URLError, TimeoutError, json.JSONDecodeError):
-                api_playtime = None
+        library_item = library_playtime_lookup.get((steam_profile, int(app_id)), {})
+        library_profile = library_profile_lookup.get(steam_profile, {})
+        api_playtime = library_item.get("playtimeHours")
+        if api_playtime is not None:
+            library_playtime_hits += 1
 
         progress_url = build_achievement_url(steam_profile, app_id)
         item = {
@@ -620,6 +1220,16 @@ def refresh_steam_progress(
             ),
             "checkedAt": utc_now(),
         }
+        item["playtimeCheckedAt"] = library_item.get("checkedAt")
+        item["playtimeSource"] = library_item.get("source", "")
+        item["playtimeVisible"] = library_profile.get("playtimeVisible")
+        item["gamesVisible"] = library_profile.get("gamesVisible")
+
+        if cached_item and is_progress_item_fresh(cached_item):
+            item["error"] = cached_item.get("error")
+            progress_cache[(steam_profile, int(app_id))] = item
+            cached_reuses += 1
+            continue
 
         try:
             html = fetch_html(progress_url)
@@ -629,7 +1239,9 @@ def refresh_steam_progress(
             if api_playtime is not None:
                 item["playtimeHours"] = api_playtime
             item["error"] = None
+            achievement_successes += 1
         except (HTTPError, URLError, TimeoutError, RuntimeError) as error:
+            achievement_errors += 1
             if cached_item:
                 item = merge_progress_item(
                     cached_item,
@@ -640,6 +1252,11 @@ def refresh_steam_progress(
                     progress_url=progress_url,
                     api_playtime=api_playtime,
                 )
+                item["playtimeCheckedAt"] = library_item.get("checkedAt")
+                item["playtimeSource"] = library_item.get("source", "")
+                item["playtimeVisible"] = library_profile.get("playtimeVisible")
+                item["gamesVisible"] = library_profile.get("gamesVisible")
+                cached_fallbacks += 1
             item["error"] = str(error)
             item["checkedAt"] = utc_now()
 
@@ -652,10 +1269,24 @@ def refresh_steam_progress(
             key=lambda item: (str(item.get("username") or "").lower(), int(item.get("appId") or 0)),
         ),
         "hltb": hltb_items,
-        "steamApiEnabled": bool(steam_api_key),
+        "steamApiEnabled": bool(library_payload.get("apiEnabled")),
         "activeOnly": bool(active_usernames),
         "refreshedMonth": selected_month,
         "refreshedScope": "all" if full_refresh else "month",
+        "libraryUpdatedAt": library_payload.get("updatedAt"),
+        "libraryStats": library_payload.get("stats") or {},
+        "stats": {
+            "durationSeconds": round(time.perf_counter() - started_at, 2),
+            "targetWins": len(target_wins),
+            "uniqueProgressTargets": len(seen),
+            "libraryPlaytimeHits": library_playtime_hits,
+            "cachedReuses": cached_reuses,
+            "achievementSuccesses": achievement_successes,
+            "achievementErrors": achievement_errors,
+            "cachedFallbacks": cached_fallbacks,
+            "hltbTitlesRequested": len(remote_titles),
+            "hltbResultsAvailable": len(hltb_items),
+        },
     }
     save_json(PROGRESS_PATH, payload)
     return payload
@@ -678,11 +1309,43 @@ class Handler(SimpleHTTPRequestHandler):
     def do_GET(self) -> None:
         try:
             parsed = urlparse(self.path)
+            query = parse_qs(parsed.query)
             if parsed.path == "/api/steamgifts-sync":
                 self.write_json(load_json(SYNC_PATH, {}))
                 return
             if parsed.path == "/api/steam-progress":
-                self.write_json(load_json(PROGRESS_PATH, {"updatedAt": None, "progress": []}))
+                self.write_json(load_json(PROGRESS_PATH, empty_progress_payload()))
+                return
+            if parsed.path == "/api/steam-library":
+                self.write_json(load_json(LIBRARY_PATH, empty_library_payload()))
+                return
+            if parsed.path == "/api/steam-media":
+                raw_app_ids = ",".join(query.get("appIds", []))
+                app_ids = [parse_int(part) for part in raw_app_ids.split(",") if parse_int(part)]
+                self.write_json(get_media_payload(app_ids))
+                return
+            if parsed.path == "/api/dashboard":
+                sync_payload = load_json(SYNC_PATH, {})
+                progress_payload = load_json(PROGRESS_PATH, empty_progress_payload())
+                library_payload = load_json(LIBRARY_PATH, empty_library_payload())
+                self.write_json(build_dashboard_payload(sync_payload, progress_payload, library_payload))
+                return
+            if parsed.path == "/api/members":
+                sync_payload = load_json(SYNC_PATH, {})
+                self.write_json(build_members_payload(sync_payload))
+                return
+            if parsed.path == "/api/giveaways":
+                sync_payload = load_json(SYNC_PATH, {})
+                progress_payload = load_json(PROGRESS_PATH, empty_progress_payload())
+                library_payload = load_json(LIBRARY_PATH, empty_library_payload())
+                self.write_json(
+                    build_giveaways_payload(
+                        sync_payload,
+                        progress_payload,
+                        library_payload,
+                        limit=parse_limit(query, default=24),
+                    )
+                )
                 return
             super().do_GET()
         except Exception as error:  # noqa: BLE001
@@ -728,6 +1391,19 @@ class Handler(SimpleHTTPRequestHandler):
                     )
                 )
                 return
+            if parsed.path == "/api/refresh-steam-library":
+                sync_payload = load_json(SYNC_PATH, {})
+                payload = self.read_json()
+                target_month = payload.get("month") if isinstance(payload, dict) else None
+                full_refresh = bool(payload.get("fullRefresh")) if isinstance(payload, dict) else False
+                self.write_json(
+                    refresh_steam_library(
+                        sync_payload,
+                        target_month=target_month,
+                        full_refresh=full_refresh,
+                    )
+                )
+                return
 
             self.write_json({"error": "Not found."}, status=HTTPStatus.NOT_FOUND)
         except Exception as error:  # noqa: BLE001
@@ -761,10 +1437,61 @@ class Handler(SimpleHTTPRequestHandler):
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description="Akatsuki Monitor server utilities")
+    parser.add_argument("--export-static", action="store_true", help="Export a static site for GitHub Pages")
+    parser.add_argument("--output-dir", default=str(STATIC_EXPORT_DIR), help="Static export output directory")
+    args = parser.parse_args()
+
     ensure_data_dir()
+    if args.export_static:
+        export_static_site(Path(args.output_dir))
+        return
+
     server = ThreadingHTTPServer((HOST, PORT), Handler)
     print(f"Akatsuki Monitor server running at http://{HOST}:{PORT}")
     server.serve_forever()
+
+
+def export_static_site(output_dir: Path) -> None:
+    sync_payload = load_json(SYNC_PATH, {})
+    progress_payload = load_json(PROGRESS_PATH, empty_progress_payload())
+    library_payload = load_json(LIBRARY_PATH, empty_library_payload())
+    media_cache = load_json(MEDIA_CACHE_PATH, empty_media_cache())
+    media_lookup = build_media_lookup(media_cache)
+    sync_export = build_sync_export_payload(sync_payload, media_lookup=media_lookup)
+    dashboard_payload = build_dashboard_payload(sync_export, progress_payload, library_payload)
+    members_payload = build_members_payload(sync_export)
+    giveaways_payload = build_giveaways_payload(sync_export, progress_payload, library_payload, limit=24)
+
+    output_dir.mkdir(parents=True, exist_ok=True)
+    api_dir = output_dir / "api"
+    api_dir.mkdir(parents=True, exist_ok=True)
+
+    static_files = [
+        "index.html",
+        "app.js",
+        "styles.css",
+        "active-users.html",
+        "inactive-users.html",
+        "bookmarklet-helper.html",
+        "bookmarklet-helper.png",
+        "working-dashboard.png",
+    ]
+    for file_name in static_files:
+        source = BASE_DIR / file_name
+        if source.exists():
+            copy2(source, output_dir / file_name)
+
+    (output_dir / ".nojekyll").write_text("", encoding="utf-8")
+    copy2(output_dir / "index.html", output_dir / "404.html")
+
+    save_json(api_dir / "steamgifts-sync.json", sync_export)
+    save_json(api_dir / "steam-progress.json", progress_payload)
+    save_json(api_dir / "steam-library.json", library_payload)
+    save_json(api_dir / "dashboard.json", dashboard_payload)
+    save_json(api_dir / "members.json", members_payload)
+    save_json(api_dir / "giveaways.json", giveaways_payload)
+    print(f"Static site exported to {output_dir}")
 
 
 if __name__ == "__main__":

@@ -121,6 +121,126 @@ h2 {
   color: var(--muted);
 }
 
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.member-card {
+  background: var(--panel-strong);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 16px;
+}
+
+.member-card h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+.member-card strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.3rem;
+}
+
+.giveaway-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.giveaway-card {
+  overflow: hidden;
+  background: var(--panel-strong);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
+.giveaway-card-body {
+  padding: 18px;
+}
+
+.giveaway-image,
+.game-thumb {
+  display: block;
+  background: linear-gradient(135deg, #1d2633 0%, #11161e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+}
+
+.giveaway-image {
+  width: 100%;
+  aspect-ratio: 616 / 353;
+  object-fit: cover;
+}
+
+.game-thumb {
+  width: 230px;
+  min-width: 230px;
+  height: 85px;
+  object-fit: cover;
+}
+
+.giveaway-image.placeholder,
+.game-thumb.placeholder {
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.giveaway-title {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+.giveaway-title a,
+.linked-title {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.giveaway-title a:hover,
+.linked-title:hover {
+  color: var(--accent);
+}
+
+.giveaway-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.giveaway-meta-card {
+  background: rgba(15, 19, 26, 0.9);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 10px 12px;
+}
+
+.giveaway-meta-card span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.78rem;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.giveaway-meta-card strong {
+  display: block;
+  font-size: 1rem;
+}
+
+.game-cell {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
 .stack {
   display: grid;
   gap: 12px;
@@ -400,6 +520,8 @@ td small,
 @media (max-width: 1080px) {
   .two-columns,
   .summary-grid,
+  .member-grid,
+  .giveaway-grid,
   .form-grid.wide {
     grid-template-columns: 1fr;
   }
@@ -433,5 +555,11 @@ td small,
   .form-grid,
   .form-grid.compact {
     grid-template-columns: 1fr;
+  }
+
+  .game-thumb {
+    width: 184px;
+    min-width: 184px;
+    height: 68px;
   }
 }

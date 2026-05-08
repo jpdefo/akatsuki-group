@@ -10,6 +10,9 @@ const defaultState = {
   sync: {
     steamgifts: null,
     steamProgressUpdatedAt: null,
+    dashboard: null,
+    lastProgressStats: null,
+    lastLibraryStats: null,
   },
   members: [],
   games: [],
@@ -18,6 +21,12 @@ const defaultState = {
 };
 
 let state = loadState();
+const loadedMediaAppIds = new Set();
+const attemptedMediaAppIds = new Set();
+const pendingMediaRequests = new Map();
+const runtime = {
+  staticApi: false,
+};
 
 const elements = {
   settingsForm: document.querySelector("#settings-form"),
@@ -35,6 +44,8 @@ const elements = {
   periodSummary: document.querySelector("#period-summary"),
   storageStatus: document.querySelector("#storage-status"),
   syncStatus: document.querySelector("#sync-status"),
+  memberOverview: document.querySelector("#member-overview"),
+  recentGiveaways: document.querySelector("#recent-giveaways"),
   monthlyFilter: document.querySelector("#monthly-filter"),
   monthlyProgressTable: document.querySelector("#monthly-progress-table"),
   activeUsersTable: document.querySelector("#active-users-table"),
@@ -55,7 +66,10 @@ bootstrap();
 function bootstrap() {
   bindEvents();
   render();
-  refreshRemoteSync({ silent: true }).then(() => loadStoredSteamProgress({ silent: true }));
+  refreshRemoteSync({ silent: true })
+    .then(() => loadStoredSteamProgress({ silent: true }))
+    .then(() => loadDashboardData({ silent: true }))
+    .then(() => loadVisibleGameMedia({ silent: true }));
 }
 
 function bindEvents() {
@@ -71,7 +85,10 @@ function bindEvents() {
   elements.syncRefreshButton?.addEventListener("click", () => refreshRemoteSync());
   elements.steamRefreshButton?.addEventListener("click", () => refreshSteamProgress());
   elements.steamRefreshAllButton?.addEventListener("click", () => refreshSteamProgress({ fullRefresh: true }));
-  elements.monthlyFilter?.addEventListener("change", renderProgressViews);
+  elements.monthlyFilter?.addEventListener("change", () => {
+    renderProgressViews();
+    void loadVisibleGameMedia({ silent: true });
+  });
 
   document.addEventListener("click", (event) => {
     const deleteButton = event.target.closest("[data-delete-type]");
@@ -165,22 +182,32 @@ function handleGiveawaySubmit(event) {
 function render() {
   renderSettings();
   renderSyncStatus();
+  renderServerViews();
   renderProgressViews();
   renderMemberBuckets();
 }
 
 function renderSettings() {
   if (elements.storageStatus) {
-    elements.storageStatus.textContent = "Saved in browser";
+    elements.storageStatus.textContent = runtime.staticApi
+      ? "GitHub Pages snapshot"
+      : state.sync?.dashboard
+        ? "Server-backed + browser cache"
+        : "Saved in browser";
   }
   if (!elements.groupSnapshot) {
     return;
   }
   const sync = state.sync?.steamgifts;
+  const dashboardSummary = state.sync?.dashboard?.summary;
   const cards = [
     ["Group", state.settings.groupName],
-    ["Active members", state.settings.activeMembers],
-    ["Reference date", formatDate(state.settings.currentDate)],
+    ["Active members", dashboardSummary?.activeMembers ?? state.settings.activeMembers],
+    ["Tracked giveaways", dashboardSummary?.giveaways ?? state.giveaways.length],
+    [
+      "Latest sync",
+      dashboardSummary?.syncedAt ? formatDateTime(dashboardSummary.syncedAt) : formatDate(state.settings.currentDate),
+    ],
     ["SteamGifts URL", sync?.group?.url ? `<a href="${escapeHtml(sync.group.url)}" target="_blank" rel="noreferrer">Open group</a>` : "Waiting for sync"],
   ];
   elements.groupSnapshot.innerHTML = cards
@@ -247,6 +274,10 @@ function renderSyncStatus() {
   }
   const sync = state.sync?.steamgifts;
   const progressUpdatedAt = state.sync?.steamProgressUpdatedAt;
+  const dashboardSummary = state.sync?.dashboard?.summary;
+  const librarySummary = dashboardSummary;
+  const progressStats = dashboardSummary?.progressStats || state.sync?.lastProgressStats || {};
+  const libraryStats = dashboardSummary?.libraryStats || state.sync?.lastLibraryStats || {};
 
   if (!sync) {
     elements.syncStatus.innerHTML = `
@@ -262,19 +293,90 @@ function renderSyncStatus() {
   const giveawayCount = sync.giveaways?.length || 0;
   const winCount = sync.wins?.length || 0;
 
+  if (elements.syncRefreshButton) {
+    elements.syncRefreshButton.disabled = runtime.staticApi;
+    elements.syncRefreshButton.title = runtime.staticApi ? "GitHub Pages uses published snapshots." : "";
+  }
+  if (elements.steamRefreshButton) {
+    elements.steamRefreshButton.disabled = runtime.staticApi;
+    elements.steamRefreshButton.title = runtime.staticApi
+      ? "GitHub Pages is read-only. Refresh via GitHub Actions or the local server."
+      : "";
+  }
+  if (elements.steamRefreshAllButton) {
+    elements.steamRefreshAllButton.disabled = runtime.staticApi;
+    elements.steamRefreshAllButton.title = runtime.staticApi
+      ? "GitHub Pages is read-only. Refresh via GitHub Actions or the local server."
+      : "";
+  }
+
   elements.syncStatus.innerHTML = `
       <article class="alert-card success">
       <h3>SteamGifts synced</h3>
       <p>
         Last sync: <strong>${formatDateTime(sync.syncedAt)}</strong><br />
         ${escapeHtml(sync.group?.name || "Group")} • ${memberCount} member(s) • ${giveawayCount} giveaway(s) • ${winCount} win(s)
+        ${runtime.staticApi ? `<br /><span class="meta-line">GitHub Pages snapshot mode: refresh buttons are disabled here.</span>` : ""}
       </p>
     </article>
     <article class="alert-card info">
       <h3>Steam progress</h3>
-      <p>${progressUpdatedAt ? `Last refresh: <strong>${formatDateTime(progressUpdatedAt)}</strong>` : "Steam progress has not been refreshed yet."}</p>
+      <p>${
+        progressUpdatedAt
+          ? `Last refresh: <strong>${formatDateTime(progressUpdatedAt)}</strong>${buildProgressStatsMarkup(progressStats)}`
+          : "Steam progress has not been refreshed yet."
+      }</p>
+    </article>
+    <article class="alert-card ${librarySummary?.libraryApiEnabled ? "success" : "warning"}">
+      <h3>Playtime library snapshot</h3>
+      <p>${
+        librarySummary?.libraryUpdatedAt
+          ? `Last library sync: <strong>${formatDateTime(librarySummary.libraryUpdatedAt)}</strong><br />${librarySummary.libraryProfiles || 0} tracked profile(s) cached for total playtime, with ${librarySummary.libraryFreshProfiles || 0} still fresh for incremental month refreshes (${librarySummary.librarySnapshotTtlHours || 48}h cache window).${buildLibraryStatsMarkup(libraryStats)}`
+          : librarySummary?.libraryApiEnabled
+            ? "Library playtime is enabled, but no snapshot has been stored yet."
+            : "Configure STEAM_WEB_API_KEY to source total playtime from Steam per-user library snapshots."
+      }</p>
     </article>
   `;
+}
+
+function renderServerViews() {
+  renderMemberOverview();
+  renderRecentGiveaways();
+}
+
+function renderMemberOverview() {
+  if (!elements.memberOverview) {
+    return;
+  }
+
+  const activeMembers = state.sync?.dashboard?.members?.active || [];
+  if (!activeMembers.length) {
+    elements.memberOverview.innerHTML = buildEmptyPanel(
+      "No tracked members yet.",
+      "Run the SteamGifts sync to populate the server-backed member directory.",
+    );
+    return;
+  }
+
+  elements.memberOverview.innerHTML = activeMembers.slice(0, 12).map(buildMemberCard).join("");
+}
+
+function renderRecentGiveaways() {
+  if (!elements.recentGiveaways) {
+    return;
+  }
+
+  const giveaways = state.sync?.dashboard?.recentGiveaways || [];
+  if (!giveaways.length) {
+    elements.recentGiveaways.innerHTML = buildEmptyPanel(
+      "No synced giveaways yet.",
+      "Recent giveaway cards will appear here after the next SteamGifts sync.",
+    );
+    return;
+  }
+
+  elements.recentGiveaways.innerHTML = giveaways.map(buildGiveawayCard).join("");
 }
 
 function renderProgressViews() {
@@ -335,6 +437,124 @@ function renderMemberBucketTable(target, isActiveMember) {
     .join("");
 }
 
+function buildMemberCard(member) {
+  const title = escapeHtml(member.username || "Unknown member");
+  const usernameMarkup = member.steamProfile
+    ? `<a class="linked-title" href="${escapeHtml(member.steamProfile)}" target="_blank" rel="noreferrer">${title}</a>`
+    : title;
+
+  return `
+    <article class="member-card">
+      ${buildBadge(member.isActiveMember ? "success" : "info", member.isActiveMember ? "Active" : "Inactive")}
+      <h3>${usernameMarkup}</h3>
+      <span class="meta-line">${member.winsCount || 0} tracked win(s)</span>
+      <strong>${member.lastWinDate ? formatDate(member.lastWinDate) : "No wins yet"}</strong>
+      <span class="meta-line">${member.profileUrl ? `<a class="linked-title" href="${escapeHtml(member.profileUrl)}" target="_blank" rel="noreferrer">Open SteamGifts profile</a>` : "SteamGifts profile unavailable"}</span>
+    </article>
+  `;
+}
+
+function buildGiveawayCard(giveaway) {
+  const title = escapeHtml(giveaway.title || "Unknown giveaway");
+  const image = buildImageMarkup({
+    className: "giveaway-image",
+    alt: title,
+    appId: giveaway?.appId,
+    sources: [giveaway.capsuleImageUrl, giveaway.headerImageUrl, giveaway.capsuleSmallUrl],
+    placeholder: "No image",
+  });
+  const primaryProgress = giveaway.primaryProgress;
+  const playtime = primaryProgress?.playtimeHours;
+  const achievements = primaryProgress?.totalAchievements
+    ? `${primaryProgress.earnedAchievements}/${primaryProgress.totalAchievements} achievements`
+    : primaryProgress?.earnedAchievements
+      ? `${primaryProgress.earnedAchievements} achievements`
+      : "No synced achievement data";
+  const playtimeSource = buildPlaytimeSourceLabel(primaryProgress);
+
+  return `
+    <article class="giveaway-card">
+      ${giveaway.steamAppUrl ? `<a href="${escapeHtml(giveaway.steamAppUrl)}" target="_blank" rel="noreferrer">${image}</a>` : image}
+      <div class="giveaway-card-body">
+        <h3 class="giveaway-title">
+          ${giveaway.url ? `<a href="${escapeHtml(giveaway.url)}" target="_blank" rel="noreferrer">${title}</a>` : title}
+        </h3>
+        <span class="meta-line">Created by ${escapeHtml(giveaway.creatorUsername || "-")} • ${giveaway.endDate ? formatDate(giveaway.endDate) : "No end date"}</span>
+        <span class="meta-line">${giveaway.resultLabel ? escapeHtml(giveaway.resultLabel) : escapeHtml(giveaway.resultStatus || "Unknown status")}</span>
+        ${primaryProgress?.playtimeCheckedAt ? `<span class="meta-line">Playtime snapshot: ${escapeHtml(formatDateTime(primaryProgress.playtimeCheckedAt))}</span>` : ""}
+        ${playtimeSource ? `<span class="meta-line">${escapeHtml(playtimeSource)}</span>` : ""}
+        <div class="giveaway-meta-grid">
+          <div class="giveaway-meta-card">
+            <span>Entries</span>
+            <strong>${Number(giveaway.entriesCount || 0).toLocaleString("pt-BR")}</strong>
+          </div>
+          <div class="giveaway-meta-card">
+            <span>Winners</span>
+            <strong>${giveaway.winnerCount || 0}</strong>
+          </div>
+          <div class="giveaway-meta-card">
+            <span>Playtime</span>
+            <strong>${playtime || playtime === 0 ? formatHours(playtime) : "Unavailable"}</strong>
+          </div>
+          <div class="giveaway-meta-card">
+            <span>Achievements</span>
+            <strong>${escapeHtml(achievements)}</strong>
+          </div>
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+function buildEmptyPanel(title, description) {
+  return `
+    <div class="empty-state">
+      <strong>${escapeHtml(title)}</strong>
+      <span>${escapeHtml(description)}</span>
+    </div>
+  `;
+}
+
+function buildImageMarkup({ className, alt, sources, placeholder }) {
+  const uniqueSources = Array.from(new Set((sources || []).filter(Boolean)));
+  if (!uniqueSources.length) {
+    return `<div class="${className} placeholder">${escapeHtml(placeholder)}</div>`;
+  }
+
+  const appId = arguments[0]?.appId ? ` data-app-id="${escapeHtml(String(arguments[0].appId))}"` : "";
+  return `<img class="${className}" src="${escapeHtml(uniqueSources[0])}" alt="${escapeHtml(alt)}" loading="lazy"${appId} data-fallbacks="${escapeHtml(uniqueSources.slice(1).join("|"))}" data-placeholder="${escapeHtml(placeholder)}" onerror="handleImageFallback(event)" />`;
+}
+
+async function handleImageFallback(event) {
+  const image = event.target;
+  const remaining = (image.dataset.fallbacks || "").split("|").filter(Boolean);
+  const nextSource = remaining.shift();
+  if (nextSource) {
+    image.dataset.fallbacks = remaining.join("|");
+    image.src = nextSource;
+    return;
+  }
+
+  const appId = Number(image.dataset.appId || 0);
+  if (appId && image.dataset.storeMediaTried !== "1") {
+    image.dataset.storeMediaTried = "1";
+    const media = await fetchSteamMediaForApp(appId);
+    const storeSources = [media?.capsuleSmallUrl, media?.headerImageUrl, media?.capsuleImageUrl]
+      .filter(Boolean)
+      .filter((source) => source !== image.currentSrc && source !== image.src);
+    if (storeSources.length) {
+      image.dataset.fallbacks = storeSources.slice(1).join("|");
+      image.src = storeSources[0];
+      return;
+    }
+  }
+
+  const placeholder = document.createElement("div");
+  placeholder.className = `${image.className} placeholder`;
+  placeholder.textContent = image.dataset.placeholder || "No image";
+  image.replaceWith(placeholder);
+}
+
 function computeMemberBucketRows(isActiveMember) {
   return state.members
     .filter((member) => Boolean(member.isActiveMember) === isActiveMember)
@@ -359,7 +579,7 @@ function computeMemberBucketRows(isActiveMember) {
 
 function renderMonthlyDetailsTable(target, winsSubset) {
   if (!winsSubset.length) {
-    target.innerHTML = buildEmptyRow(10);
+    target.innerHTML = buildEmptyRow(9);
     return;
   }
 
@@ -373,24 +593,82 @@ function renderMonthlyDetailsTable(target, winsSubset) {
 
       return `
         <tr class="progress-row ${progress.badge}">
-          <td>${escapeHtml(member?.name || "Unknown member")}</td>
-          <td>${escapeHtml(game?.title || "Unknown game")}</td>
-          <td>${escapeHtml(win.creatorUsername || "-")}</td>
-          <td>${hltbHours ? formatHours(hltbHours) : "-"} / ${totalAchievements || "-"}</td>
+          <td>${buildGiveawayCreatorMarkup(win)}</td>
+          <td>${buildGameCell(game)}</td>
+          <td>${buildWinnerMarkup(member)}</td>
+          <td>${hltbHours ? formatHours(hltbHours) : "-"}</td>
           <td>${progress.requiredHours ? formatHours(progress.requiredHours) : "-"}</td>
           <td>${formatHours(win.currentHours || 0)}</td>
-          <td>${totalAchievements || 0}</td>
+          <td>${buildAchievementCell(win, totalAchievements)}</td>
           <td>${progress.requiredAchievements || 0}</td>
-          <td>${win.earnedAchievements || 0}</td>
           <td>
             ${buildBadge(progress.badge, progress.label)}
             <span class="meta-line">${escapeHtml(progress.note)}</span>
-            ${win.evidenceNotes ? `<span class="meta-line">${escapeHtml(win.evidenceNotes)}</span>` : ""}
+            ${buildEvidenceNoteMarkup(win.evidenceNotes)}
           </td>
         </tr>
       `;
     })
     .join("");
+}
+
+function buildGameCell(game) {
+  const title = escapeHtml(game?.title || "Unknown game");
+  const image = buildImageMarkup({
+    className: "game-thumb",
+    alt: title,
+    appId: game?.appId,
+    sources: [game?.capsuleSmallUrl, game?.headerImageUrl, game?.capsuleImageUrl],
+    placeholder: "No art",
+  });
+  const titleMarkup = game?.steamAppUrl
+    ? `<a class="linked-title" href="${escapeHtml(game.steamAppUrl)}" target="_blank" rel="noreferrer">${title}</a>`
+    : title;
+
+  return `
+    <div class="game-cell">
+      ${image}
+      <div>
+        <strong>${titleMarkup}</strong>
+        ${game?.appId ? `<span class="meta-line">App ${game.appId}</span>` : ""}
+      </div>
+    </div>
+  `;
+}
+
+function buildGiveawayCreatorMarkup(win) {
+  const creatorName = escapeHtml(win?.creatorUsername || "-");
+  const giveawayUrl = getGiveawayUrl(win);
+  if (!giveawayUrl) {
+    return creatorName;
+  }
+  return `<a class="linked-title" href="${escapeHtml(giveawayUrl)}" target="_blank" rel="noreferrer">${creatorName}</a>`;
+}
+
+function buildWinnerMarkup(member) {
+  const winnerName = escapeHtml(member?.name || "Unknown member");
+  if (!member?.steamProfile) {
+    return winnerName;
+  }
+  return `<a class="linked-title" href="${escapeHtml(member.steamProfile)}" target="_blank" rel="noreferrer">${winnerName}</a>`;
+}
+
+function buildAchievementCell(win, totalAchievements) {
+  const earned = Number(win?.earnedAchievements || 0);
+  if (!totalAchievements) {
+    return earned ? `${earned}/?` : "-";
+  }
+  return `${earned}/${totalAchievements}`;
+}
+
+function getGiveawayUrl(win) {
+  const directUrl = String(win?.giveawayUrl || "").trim();
+  if (directUrl) {
+    return directUrl;
+  }
+  const note = String(win?.evidenceNotes || "").trim();
+  const steamGiftsMatch = note.match(/^SteamGifts sync:\s*(https?:\/\/\S+)$/i);
+  return steamGiftsMatch ? steamGiftsMatch[1] : "";
 }
 
 function evaluateMonthlyProgress(win) {
@@ -681,13 +959,41 @@ function renderGiveaways() {
     .join("");
 }
 
+function getApiCandidates(path, method = "GET") {
+  if (String(method).toUpperCase() !== "GET") {
+    return [path];
+  }
+  const normalized = path.startsWith("./") ? path.slice(2) : path;
+  return [path, `./${normalized}.json`];
+}
+
+async function fetchApiJson(path, options = {}) {
+  const method = String(options.method || "GET").toUpperCase();
+  let lastError = null;
+
+  for (const candidate of getApiCandidates(path, method)) {
+    try {
+      const response = await fetch(candidate, options);
+      if (!response.ok) {
+        lastError = new Error(`Request failed for ${candidate}`);
+        continue;
+      }
+      const payload = await response.json().catch(() => null);
+      if (candidate.endsWith(".json")) {
+        runtime.staticApi = true;
+      }
+      return { response, payload, staticApi: runtime.staticApi };
+    } catch (error) {
+      lastError = error;
+    }
+  }
+
+  throw lastError || new Error(`Could not load ${path}`);
+}
+
 async function refreshRemoteSync(options = {}) {
   try {
-    const response = await fetch("./api/steamgifts-sync");
-    if (!response.ok) {
-      throw new Error("sync indisponivel");
-    }
-    const payload = await response.json();
+    const { payload } = await fetchApiJson("./api/steamgifts-sync");
     if (payload?.source === "akatsuki-steamgifts-sync") {
       importSteamGiftsSync(payload, { persist: true });
     } else if (isEmptySyncPayload(payload)) {
@@ -695,9 +1001,29 @@ async function refreshRemoteSync(options = {}) {
     } else if (!options.silent) {
       window.alert("The server responded, but there is no SteamGifts sync stored yet.");
     }
+    await loadDashboardData({ silent: true });
   } catch (error) {
     if (!options.silent) {
       window.alert("Could not load automatic sync. Start the local server with python server.py.");
+    }
+  }
+}
+
+async function loadDashboardData(options = {}) {
+  try {
+    const { payload } = await fetchApiJson("./api/dashboard");
+    state.sync = {
+      ...state.sync,
+      dashboard: payload,
+    };
+    render();
+    void loadVisibleGameMedia({ silent: true });
+  } catch (error) {
+    if (!options.silent && elements.recentGiveaways) {
+      elements.recentGiveaways.innerHTML = buildEmptyPanel(
+        "Server dashboard unavailable.",
+        "Start the local server to load the richer giveaway and member views.",
+      );
     }
   }
 }
@@ -711,6 +1037,9 @@ async function refreshSteamProgress(options = {}) {
   const secondaryLabel = secondaryButton?.textContent;
 
   try {
+    if (runtime.staticApi) {
+      throw new Error("GitHub Pages is read-only. Refresh cached data through GitHub Actions or the local server.");
+    }
     if (primaryButton) {
       primaryButton.disabled = true;
       primaryButton.textContent = fullRefresh ? "Refreshing all..." : "Refreshing month...";
@@ -729,7 +1058,8 @@ async function refreshSteamProgress(options = {}) {
     if (!response.ok) {
       throw new Error(payload?.error || "Could not refresh Steam progress.");
     }
-    applySteamProgress(payload);
+    await loadStoredSteamProgress({ silent: true });
+    await loadDashboardData({ silent: true });
   } catch (error) {
     window.alert(
       error?.message ||
@@ -751,11 +1081,7 @@ async function refreshSteamProgress(options = {}) {
 
 async function loadStoredSteamProgress(options = {}) {
   try {
-    const response = await fetch("./api/steam-progress");
-    if (!response.ok) {
-      throw new Error("no stored progress");
-    }
-    const payload = await response.json();
+    const { payload } = await fetchApiJson("./api/steam-progress");
     if (payload?.progress?.length) {
       applySteamProgress(payload);
     } else if (!options.silent) {
@@ -868,14 +1194,163 @@ function applySteamProgress(payload) {
   state.sync = {
     ...state.sync,
     steamProgressUpdatedAt: payload?.updatedAt || new Date().toISOString(),
+    lastProgressStats: payload?.stats || null,
+    lastLibraryStats: payload?.libraryStats || state.sync?.lastLibraryStats || null,
   };
 
   persistAndRender();
 }
 
+function getSteamMediaUrls(appId) {
+  const numericAppId = Number(appId || 0);
+  if (!numericAppId) {
+    return {
+      headerImageUrl: "",
+      capsuleImageUrl: "",
+      capsuleSmallUrl: "",
+    };
+  }
+
+  return {
+    headerImageUrl: `https://cdn.cloudflare.steamstatic.com/steam/apps/${numericAppId}/header.jpg`,
+    capsuleImageUrl: `https://cdn.cloudflare.steamstatic.com/steam/apps/${numericAppId}/capsule_616x353.jpg`,
+    capsuleSmallUrl: `https://cdn.cloudflare.steamstatic.com/steam/apps/${numericAppId}/capsule_184x69.jpg`,
+  };
+}
+
+function hasMediaUrls(item) {
+  return Boolean(item?.headerImageUrl || item?.capsuleImageUrl || item?.capsuleSmallUrl);
+}
+
+function mergeSteamMediaResults(results = []) {
+  if (!results.length) {
+    return null;
+  }
+
+  const mediaByAppId = new Map();
+  for (const item of results) {
+    const appId = Number(item?.appId || 0);
+    if (!appId) {
+      continue;
+    }
+    attemptedMediaAppIds.add(appId);
+    if (hasMediaUrls(item)) {
+      loadedMediaAppIds.add(appId);
+    }
+    mediaByAppId.set(appId, item);
+  }
+
+  if (!mediaByAppId.size) {
+    return null;
+  }
+
+  state.games = state.games.map((game) => {
+    const media = mediaByAppId.get(Number(game?.appId || 0));
+    if (!media) {
+      return game;
+    }
+    return {
+      ...game,
+      headerImageUrl: media.headerImageUrl || game.headerImageUrl || "",
+      capsuleImageUrl: media.capsuleImageUrl || game.capsuleImageUrl || "",
+      capsuleSmallUrl: media.capsuleSmallUrl || game.capsuleSmallUrl || "",
+    };
+  });
+
+  if (state.sync?.dashboard?.recentGiveaways?.length) {
+    state.sync = {
+      ...state.sync,
+      dashboard: {
+        ...state.sync.dashboard,
+        recentGiveaways: state.sync.dashboard.recentGiveaways.map((giveaway) => {
+          const media = mediaByAppId.get(Number(giveaway?.appId || 0));
+          return media ? { ...giveaway, ...media } : giveaway;
+        }),
+      },
+    };
+  }
+
+  persistAndRender();
+  return mediaByAppId;
+}
+
+function normalizeGiveawayMedia(giveaway) {
+  const fallback = getSteamMediaUrls(giveaway?.appId);
+  return {
+    ...giveaway,
+    headerImageUrl: giveaway?.headerImageUrl || fallback.headerImageUrl,
+    capsuleImageUrl: giveaway?.capsuleImageUrl || fallback.capsuleImageUrl,
+    capsuleSmallUrl: giveaway?.capsuleSmallUrl || fallback.capsuleSmallUrl,
+  };
+}
+
+function getVisibleMediaAppIds() {
+  const appIds = new Set();
+  const months = getAvailableMonths();
+  const selectedMonth =
+    months.includes(elements.monthlyFilter?.value || "") ? elements.monthlyFilter.value : months[0] || "";
+  const monthlyWins = selectedMonth ? state.wins.filter((win) => monthKey(win.winDate) === selectedMonth) : [];
+  for (const win of monthlyWins) {
+    const game = findById("games", win.gameId);
+    const appId = Number(game?.appId || 0);
+    if (appId) {
+      appIds.add(appId);
+    }
+  }
+  for (const giveaway of state.sync?.dashboard?.recentGiveaways || []) {
+    const appId = Number(giveaway?.appId || 0);
+    if (appId) {
+      appIds.add(appId);
+    }
+  }
+  return Array.from(appIds);
+}
+
+async function loadVisibleGameMedia(options = {}) {
+  if (runtime.staticApi) {
+    return;
+  }
+  const appIds = getVisibleMediaAppIds().filter((appId) => !attemptedMediaAppIds.has(appId));
+  if (!appIds.length) {
+    return;
+  }
+
+  try {
+    const { payload } = await fetchApiJson(`./api/steam-media?appIds=${encodeURIComponent(appIds.join(","))}`);
+    mergeSteamMediaResults(Object.values(payload?.results || {}));
+  } catch (error) {
+    if (!options.silent) {
+      window.alert("Could not load Steam media fallbacks.");
+    }
+  }
+}
+
+async function fetchSteamMediaForApp(appId) {
+  const numericAppId = Number(appId || 0);
+  if (!numericAppId || runtime.staticApi) {
+    return null;
+  }
+  if (pendingMediaRequests.has(numericAppId)) {
+    return pendingMediaRequests.get(numericAppId);
+  }
+
+  const request = fetchApiJson(`./api/steam-media?appIds=${encodeURIComponent(String(numericAppId))}`)
+    .then((payload) => {
+      const mediaByAppId = mergeSteamMediaResults(Object.values(payload?.payload?.results || {}));
+      return mediaByAppId?.get(numericAppId) || null;
+    })
+    .catch(() => null)
+    .finally(() => {
+      pendingMediaRequests.delete(numericAppId);
+    });
+
+  pendingMediaRequests.set(numericAppId, request);
+  return request;
+}
+
 function normalizeSteamGiftsSync(payload) {
   const members = payload.members || [];
-  const giveaways = payload.giveaways || [];
+  const giveaways = (payload.giveaways || []).map(normalizeGiveawayMedia);
   const memberSteamProfiles = Object.fromEntries(
     members
       .filter((member) => member.username)
@@ -946,6 +1421,7 @@ function upsertGameFromSync(giveawayRecord) {
   let game = state.games.find((item) =>
     appId ? Number(item.appId) === appId : item.title === giveawayRecord.title,
   );
+  const media = normalizeGiveawayMedia(giveawayRecord);
 
   if (!game) {
     game = {
@@ -954,6 +1430,10 @@ function upsertGameFromSync(giveawayRecord) {
       appId,
       hltbHours: Number(giveawayRecord.hltbHours || 0),
       achievementsTotal: Number(giveawayRecord.totalAchievements || 0),
+      steamAppUrl: giveawayRecord.steamAppUrl || "",
+      headerImageUrl: media.headerImageUrl,
+      capsuleImageUrl: media.capsuleImageUrl,
+      capsuleSmallUrl: media.capsuleSmallUrl,
     };
     state.games.unshift(game);
     return game.id;
@@ -967,6 +1447,18 @@ function upsertGameFromSync(giveawayRecord) {
   }
   if (!game.achievementsTotal && giveawayRecord.totalAchievements) {
     game.achievementsTotal = Number(giveawayRecord.totalAchievements);
+  }
+  if (!game.steamAppUrl && giveawayRecord.steamAppUrl) {
+    game.steamAppUrl = giveawayRecord.steamAppUrl;
+  }
+  if (!game.headerImageUrl && media.headerImageUrl) {
+    game.headerImageUrl = media.headerImageUrl;
+  }
+  if (!game.capsuleImageUrl && media.capsuleImageUrl) {
+    game.capsuleImageUrl = media.capsuleImageUrl;
+  }
+  if (!game.capsuleSmallUrl && media.capsuleSmallUrl) {
+    game.capsuleSmallUrl = media.capsuleSmallUrl;
   }
   return game.id;
 }
@@ -1004,6 +1496,7 @@ function upsertWinFromSync(giveawayRecord, winnerRecord, memberId, gameId) {
     memberId,
     gameId,
     creatorUsername: giveawayRecord.creatorUsername || existing?.creatorUsername || "",
+    giveawayUrl: giveawayRecord.url || existing?.giveawayUrl || "",
     winDate: giveawayRecord.endDate || state.settings.currentDate,
     ruleMode: "standard-25",
     currentHours: Number(existing?.currentHours ?? giveawayRecord.currentHours ?? 0),
@@ -1019,13 +1512,14 @@ function upsertWinFromSync(giveawayRecord, winnerRecord, memberId, gameId) {
   if (!existing) {
     state.wins.unshift(payload);
   } else {
-    Object.assign(existing, {
-      ...payload,
-      currentHours: existing.currentHours,
-      earnedAchievements: existing.earnedAchievements,
-      proofProvided: existing.proofProvided,
-      evidenceNotes: existing.evidenceNotes || payload.evidenceNotes,
-    });
+      Object.assign(existing, {
+        ...payload,
+        currentHours: existing.currentHours,
+        earnedAchievements: existing.earnedAchievements,
+        proofProvided: existing.proofProvided,
+        giveawayUrl: existing.giveawayUrl || payload.giveawayUrl,
+        evidenceNotes: existing.evidenceNotes || payload.evidenceNotes,
+      });
   }
 }
 
@@ -1342,6 +1836,25 @@ function describeProgress(win, game, requiredHours, requiredAchievements, compli
     progressBits.push(win.proofProvided ? "proof attached" : "no proof");
   }
   return progressBits.join(" • ");
+}
+
+function buildEvidenceNoteMarkup(note) {
+  const value = String(note || "").trim();
+  if (!value) {
+    return "";
+  }
+
+  const steamSyncMatch = value.match(/^Steam sync:\s*(https?:\/\/\S+)$/i);
+  if (steamSyncMatch) {
+    return `<span class="meta-line">Steam sync: <a class="linked-title" href="${escapeHtml(steamSyncMatch[1])}" target="_blank" rel="noreferrer">Open achievements page</a></span>`;
+  }
+
+  const urlOnlyMatch = value.match(/^(https?:\/\/\S+)$/i);
+  if (urlOnlyMatch) {
+    return `<span class="meta-line"><a class="linked-title" href="${escapeHtml(urlOnlyMatch[1])}" target="_blank" rel="noreferrer">Open evidence link</a></span>`;
+  }
+
+  return `<span class="meta-line">${escapeHtml(value)}</span>`;
 }
 
 function getRequiredHours(hltbHours, ruleMode) {
@@ -1738,6 +2251,78 @@ function formatDateTime(dateInput) {
     return "-";
   }
   return new Date(dateInput).toLocaleString("pt-BR");
+}
+
+function formatDurationSeconds(seconds) {
+  const value = Number(seconds);
+  if (!Number.isFinite(value)) {
+    return "-";
+  }
+  if (value < 1) {
+    return `${value.toFixed(2)}s`;
+  }
+  if (value < 10) {
+    return `${value.toFixed(1)}s`;
+  }
+  return `${Math.round(value)}s`;
+}
+
+function buildProgressStatsMarkup(stats = {}) {
+  if (!stats || !stats.uniqueProgressTargets) {
+    return "";
+  }
+
+  const bits = [];
+  if (stats.durationSeconds || stats.durationSeconds === 0) {
+    bits.push(`Completed in <strong>${formatDurationSeconds(stats.durationSeconds)}</strong>`);
+  }
+  bits.push(
+    `${stats.uniqueProgressTargets || 0} game profile(s) checked across ${stats.targetWins || 0} tracked win(s)`,
+  );
+  if (stats.libraryPlaytimeHits || stats.libraryPlaytimeHits === 0) {
+    bits.push(`${stats.libraryPlaytimeHits || 0} used cached library playtime`);
+  }
+  if (stats.achievementErrors) {
+    bits.push(`${stats.achievementErrors} achievement request error(s)`);
+  }
+  return `<br />${bits.join(" • ")}`;
+}
+
+function buildLibraryStatsMarkup(stats = {}) {
+  if (!stats || !stats.targetProfiles) {
+    return "";
+  }
+
+  const bits = [];
+  if (stats.durationSeconds || stats.durationSeconds === 0) {
+    bits.push(`Last run: <strong>${formatDurationSeconds(stats.durationSeconds)}</strong>`);
+  }
+  bits.push(`${stats.targetProfiles || 0} targeted profile(s)`);
+  bits.push(`${stats.reusedProfiles || 0} reused`);
+  bits.push(`${stats.refreshedProfiles || 0} fetched from Steam`);
+  if (stats.errorProfiles) {
+    bits.push(`${stats.errorProfiles} error(s)`);
+  }
+  if (stats.totalPlaytimeRows || stats.totalPlaytimeRows === 0) {
+    bits.push(`${Number(stats.totalPlaytimeRows || 0).toLocaleString("pt-BR")} cached app rows`);
+  }
+  return `<br />${bits.join(" • ")}`;
+}
+
+function buildPlaytimeSourceLabel(progress) {
+  if (!progress) {
+    return "";
+  }
+  if (progress.playtimeSource === "steam-web-api") {
+    return "Playtime source: Steam library snapshot";
+  }
+  if (progress.playtimeVisible === false) {
+    return "Playtime hidden on Steam";
+  }
+  if (progress.gamesVisible === false) {
+    return "Games list hidden on Steam";
+  }
+  return "";
 }
 
 function formatMonthKey(key) {
