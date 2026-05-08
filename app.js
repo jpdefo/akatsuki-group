@@ -383,7 +383,7 @@ function renderProgressViews() {
   const months = getAvailableMonths();
   const currentSelection = elements.monthlyFilter.value;
   const selectedMonth = months.includes(currentSelection) ? currentSelection : months[0] || "";
-  const monthlyWins = selectedMonth ? state.wins.filter((win) => monthKey(win.winDate) === selectedMonth) : [];
+  const monthlyWins = selectedMonth ? state.wins.filter((win) => getEffectiveWinMonth(win) === selectedMonth) : [];
 
   elements.monthlyFilter.innerHTML = months.length
     ? months
@@ -562,6 +562,7 @@ function renderMonthlyDetailsTable(target, winsSubset) {
       const member = findById("members", win.memberId);
       const game = findById("games", win.gameId);
       const progress = evaluateMonthlyProgress(win);
+      const prereleaseNote = buildPrereleaseMonthNote(win, game);
       const hltbHours = Number(game?.hltbHours || 0);
       const totalAchievements = Number(game?.achievementsTotal || 0);
 
@@ -579,6 +580,7 @@ function renderMonthlyDetailsTable(target, winsSubset) {
             <div class="status-notes-stack">
               ${buildBadge(progress.badge, progress.label)}
               <span class="meta-line">${escapeHtml(progress.note)}</span>
+              ${prereleaseNote ? `<span class="meta-line">${escapeHtml(prereleaseNote)}</span>` : ""}
             </div>
             ${buildEvidenceNoteMarkup(win.evidenceNotes)}
           </td>
@@ -1318,7 +1320,7 @@ function getVisibleMediaAppIds() {
   const months = getAvailableMonths();
   const selectedMonth =
     months.includes(elements.monthlyFilter?.value || "") ? elements.monthlyFilter.value : months[0] || "";
-  const monthlyWins = selectedMonth ? state.wins.filter((win) => monthKey(win.winDate) === selectedMonth) : [];
+  const monthlyWins = selectedMonth ? state.wins.filter((win) => getEffectiveWinMonth(win) === selectedMonth) : [];
   for (const win of monthlyWins) {
     const game = findById("games", win.gameId);
     const appId = Number(game?.appId || 0);
@@ -1826,6 +1828,47 @@ function getDeadlineBaseDate(winDate, releaseDate) {
   return formatISODateLocal(new Date(year, month - 1, 1, 12));
 }
 
+function getEffectiveMonthKey(baseDate, releaseDate) {
+  const baseMonth = monthKey(baseDate);
+  const releaseMonth = getReleaseMonthKey(releaseDate);
+  if (!releaseMonth || releaseMonth <= baseMonth) {
+    return baseMonth;
+  }
+  return releaseMonth;
+}
+
+function getWinReleaseDate(win, game) {
+  if (game?.releaseDate) {
+    return game.releaseDate;
+  }
+  const syncGiveaways = state.sync?.steamgifts?.giveaways || [];
+  const giveawayByUrl = syncGiveaways.find((giveaway) => giveaway?.url && giveaway.url === win.giveawayUrl);
+  if (giveawayByUrl?.releaseDate) {
+    return giveawayByUrl.releaseDate;
+  }
+  const giveawayByGame = syncGiveaways.find(
+    (giveaway) =>
+      (Number(giveaway?.appId || 0) && Number(giveaway?.appId || 0) === Number(game?.appId || 0)) ||
+      (giveaway?.title && giveaway.title === game?.title),
+  );
+  return giveawayByGame?.releaseDate || "";
+}
+
+function getEffectiveWinMonth(win) {
+  const game = findById("games", win.gameId);
+  return getEffectiveMonthKey(win.winDate, getWinReleaseDate(win, game));
+}
+
+function buildPrereleaseMonthNote(win, game) {
+  const releaseDate = getWinReleaseDate(win, game);
+  const winMonth = monthKey(win.winDate);
+  const releaseMonth = getReleaseMonthKey(releaseDate);
+  if (!releaseMonth || releaseMonth <= winMonth) {
+    return "";
+  }
+  return `Won in ${formatMonthKey(winMonth)}, released ${formatDate(releaseDate)}`;
+}
+
 function getReleaseMonthKey(releaseDate) {
   const raw = String(releaseDate || "").trim();
   if (!raw) {
@@ -2306,7 +2349,7 @@ function monthKey(dateInput) {
 }
 
 function getAvailableMonths() {
-  return Array.from(new Set(state.wins.map((win) => monthKey(win.winDate)))).sort().reverse();
+  return Array.from(new Set(state.wins.map((win) => getEffectiveWinMonth(win)).filter(Boolean))).sort().reverse();
 }
 
 function compareMemberBucketRows(left, right, sortMode) {

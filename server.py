@@ -148,6 +148,14 @@ def month_key(value: str | None) -> str:
     return str(value or "")[:7]
 
 
+def get_effective_month_key(base_date: str | None, release_date: str | None) -> str:
+    base_month = month_key(base_date)
+    release_month = month_key(normalize_store_release_date(release_date))
+    if not release_month or release_month <= base_month:
+        return base_month
+    return release_month
+
+
 def parse_int(value, default: int = 0) -> int:
     try:
         return int(value)
@@ -1175,12 +1183,44 @@ def collect_progress_targets(
     }
     eligible_wins = []
     available_months = set()
+    media_cache = load_json(MEDIA_CACHE_PATH, empty_media_cache())
+    media_cache_changed = False
+    release_by_code: dict[str, str] = {}
+    release_by_app_id: dict[int, str] = {}
+    release_by_title: dict[str, str] = {}
+
+    for giveaway in sync_payload.get("giveaways", []):
+        code = str(giveaway.get("code") or "")
+        app_id = parse_int(giveaway.get("appId"))
+        title = str(giveaway.get("title") or "")
+        release_date = normalize_store_release_date(giveaway.get("releaseDate"))
+        if not release_date and app_id:
+            before = json.dumps(media_cache.get("apps", {}).get(str(app_id)))
+            cached_media = get_media_cache_entry(app_id, media_cache, fetch_missing=True)
+            if json.dumps(cached_media) != before:
+                media_cache_changed = True
+            release_date = normalize_store_release_date(cached_media.get("releaseDate"))
+        if code and release_date:
+            release_by_code[code] = release_date
+        if app_id and release_date:
+            release_by_app_id[app_id] = release_date
+        if title and release_date:
+            release_by_title[title] = release_date
+
+    if media_cache_changed:
+        save_json(MEDIA_CACHE_PATH, media_cache)
 
     for win in derive_wins(sync_payload):
         username = win.get("winnerUsername") or win.get("username")
-        app_id = win.get("appId")
+        app_id = parse_int(win.get("appId"))
         steam_profile = members.get(username, {}).get("steamProfile", "")
-        win_month = month_key(win.get("winDate"))
+        release_date = (
+            release_by_code.get(str(win.get("giveawayCode") or ""))
+            or release_by_app_id.get(app_id)
+            or release_by_title.get(str(win.get("title") or ""))
+            or ""
+        )
+        win_month = get_effective_month_key(win.get("winDate"), release_date)
         if active_usernames and username not in active_usernames:
             continue
         if not username or not app_id or not steam_profile:
@@ -1191,7 +1231,18 @@ def collect_progress_targets(
 
     selected_month = None if full_refresh else target_month or (max(available_months) if available_months else None)
     if selected_month:
-        eligible_wins = [win for win in eligible_wins if month_key(win.get("winDate")) == selected_month]
+        eligible_wins = [
+            win
+            for win in eligible_wins
+            if get_effective_month_key(
+                win.get("winDate"),
+                release_by_code.get(str(win.get("giveawayCode") or ""))
+                or release_by_app_id.get(parse_int(win.get("appId")))
+                or release_by_title.get(str(win.get("title") or ""))
+                or "",
+            )
+            == selected_month
+        ]
     return eligible_wins, members, active_usernames, selected_month
 
 
