@@ -79,7 +79,7 @@ function Open-BrowserUrls {
 
 function Test-LocalServer {
   try {
-    Invoke-WebRequest -Uri $serverHealthUrl -Method Head -TimeoutSec 5 | Out-Null
+    Invoke-WebRequest -Uri $serverHealthUrl -Method Head -TimeoutSec 5 -UseBasicParsing | Out-Null
     return $true
   } catch {
     return $false
