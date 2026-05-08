@@ -119,7 +119,7 @@
 
     <script>
       const textarea = document.querySelector("#bookmarklet-body");
-      fetch("steamgifts-live-bookmarklet.js")
+      fetch("steamgifts-live-bookmarklet.js?v=20260508b", { cache: "no-store" })
         .then((response) => response.text())
         .then((body) => {
           const bookmarkletBody = body.trim();
