@@ -6,7 +6,7 @@ import os
 import re
 import time
 import traceback
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from difflib import SequenceMatcher
 from email.utils import parsedate_to_datetime
 from html import unescape
@@ -321,32 +321,79 @@ def fetch_store_media_batch(app_ids: list[int]) -> dict[int, dict[str, str]]:
     return results
 
 
-def hydrate_media_cache_for_sync(sync_payload: dict, media_cache: dict) -> dict:
-    app_ids = sorted({parse_int(win.get("appId")) for win in derive_wins(sync_payload) if parse_int(win.get("appId"))})
+def has_complete_media_entry(media_entry: dict | None) -> bool:
+    entry = media_entry or {}
+    return bool(
+        entry.get("headerImageUrl")
+        and entry.get("capsuleImageUrl")
+        and entry.get("capsuleSmallUrl")
+        and (normalize_store_release_date(entry.get("releaseDate")) or entry.get("comingSoon"))
+    )
+
+
+def collect_sync_media_app_ids(sync_payload: dict, *, recent_days: int | None = None) -> list[int]:
+    if recent_days is None:
+        return sorted({parse_int(win.get("appId")) for win in derive_wins(sync_payload) if parse_int(win.get("appId"))})
+
+    threshold = datetime.now(timezone.utc) - timedelta(days=max(1, recent_days))
+    app_ids = {
+        parse_int(giveaway.get("appId"))
+        for giveaway in sync_payload.get("giveaways", [])
+        if parse_int(giveaway.get("appId"))
+        and parse_datetime(giveaway.get("endDate"))
+        and parse_datetime(giveaway.get("endDate")) >= threshold
+    }
+    return sorted(app_id for app_id in app_ids if app_id)
+
+
+def hydrate_media_cache_for_sync(sync_payload: dict, media_cache: dict, *, recent_days: int | None = None) -> dict:
+    app_ids = collect_sync_media_app_ids(sync_payload, recent_days=recent_days)
     missing_app_ids = []
     for app_id in app_ids:
         cached = media_cache.get("apps", {}).get(str(app_id)) or {}
-        if cached.get("headerImageUrl") and cached.get("capsuleImageUrl") and cached.get("capsuleSmallUrl"):
+        if has_complete_media_entry(cached):
             continue
         missing_app_ids.append(app_id)
 
     changed = False
-    for app_id in missing_app_ids:
+    for start in range(0, len(missing_app_ids), 50):
+        batch = missing_app_ids[start : start + 50]
         try:
-            media = fetch_store_media(app_id)
-        except (HTTPError, URLError, TimeoutError):
-            continue
-        if not any((media.get("headerImageUrl"), media.get("capsuleImageUrl"), media.get("capsuleSmallUrl"))):
-            continue
-        media_cache.setdefault("apps", {})[str(app_id)] = media
-        changed = True
-        time.sleep(0.35)
-        if changed:
-            media_cache["updatedAt"] = utc_now()
+            batch_results = fetch_store_media_batch(batch)
+        except (HTTPError, URLError, TimeoutError, json.JSONDecodeError):
+            batch_results = {}
+
+        for app_id in batch:
+            media = batch_results.get(app_id)
+            if not media:
+                try:
+                    media = fetch_store_media(app_id)
+                except (HTTPError, URLError, TimeoutError, json.JSONDecodeError):
+                    continue
+            if not any(
+                (
+                    media.get("headerImageUrl"),
+                    media.get("capsuleImageUrl"),
+                    media.get("capsuleSmallUrl"),
+                    media.get("releaseDate"),
+                    media.get("comingSoon"),
+                )
+            ):
+                continue
+            media_cache.setdefault("apps", {})[str(app_id)] = media
+            changed = True
+
+    if changed:
+        media_cache["updatedAt"] = utc_now()
 
     if changed:
         save_json(MEDIA_CACHE_PATH, media_cache)
     return media_cache
+
+
+def count_missing_media_entries(sync_payload: dict, media_cache: dict, *, recent_days: int | None = None) -> int:
+    app_ids = collect_sync_media_app_ids(sync_payload, recent_days=recent_days)
+    return sum(1 for app_id in app_ids if not has_complete_media_entry((media_cache.get("apps", {}) or {}).get(str(app_id))))
 
 
 def get_media_cache_entry(app_id: int, media_cache: dict, *, fetch_missing: bool = False) -> dict[str, str]:
@@ -1588,6 +1635,8 @@ def main() -> None:
     parser.add_argument("--export-static", action="store_true", help="Export a static site for GitHub Pages")
     parser.add_argument("--output-dir", default=str(STATIC_EXPORT_DIR), help="Static export output directory")
     parser.add_argument("--merge-sync-file", help="Merge a SteamGifts sync JSON file into data/steamgifts-sync.json")
+    parser.add_argument("--hydrate-sync-media", action="store_true", help="Fetch missing cached media and release dates for SteamGifts wins")
+    parser.add_argument("--recent-days", type=int, default=365, help="Limit sync media hydration to giveaways from the last N days")
     parser.add_argument("--refresh-steam-library", action="store_true", help="Refresh cached Steam library data")
     parser.add_argument("--refresh-steam-progress", action="store_true", help="Refresh cached Steam progress data")
     parser.add_argument("--month", help="Refresh only the specified month (YYYY-MM) when applicable")
@@ -1605,12 +1654,26 @@ def main() -> None:
             raise SystemExit(f"Could not read a JSON object from {incoming_path}")
         existing = load_json(SYNC_PATH, {})
         sync_payload = merge_sync_payload(existing, payload)
-        sync_payload = enrich_sync_payload_with_media(sync_payload)
         save_json(SYNC_PATH, sync_payload)
         print(
             "Merged SteamGifts sync payload:"
             f" {len(sync_payload.get('members', []))} member(s),"
             f" {len(sync_payload.get('giveaways', []))} giveaway(s)."
+        )
+        performed_task = True
+
+    if args.hydrate_sync_media:
+        sync_payload = sync_payload or load_json(SYNC_PATH, {})
+        if not sync_payload.get("giveaways"):
+            raise SystemExit("No SteamGifts sync data available yet.")
+        media_cache = load_json(MEDIA_CACHE_PATH, empty_media_cache())
+        missing_before = count_missing_media_entries(sync_payload, media_cache, recent_days=args.recent_days)
+        media_cache = hydrate_media_cache_for_sync(sync_payload, media_cache, recent_days=args.recent_days)
+        missing_after = count_missing_media_entries(sync_payload, media_cache, recent_days=args.recent_days)
+        print(
+            "Hydrated Steam media cache:"
+            f" {max(0, missing_before - missing_after)} app(s) updated,"
+            f" {missing_after} still missing."
         )
         performed_task = True
 

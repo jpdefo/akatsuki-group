@@ -24,6 +24,8 @@ $bookmarkletHelperUrl = "http://127.0.0.1:4173/bookmarklet-helper.html"
 $serverHealthUrl = $bookmarkletHelperUrl
 $syncPath = Join-Path $repoRoot "data\steamgifts-sync.json"
 $startedServer = $null
+$serverStdOutPath = $null
+$serverStdErrPath = $null
 
 function Get-PythonRuntime {
   $python = Get-Command python -ErrorAction SilentlyContinue
@@ -105,25 +107,92 @@ function Open-BrowserUrls {
 
 function Test-LocalServer {
   try {
-    Invoke-WebRequest -Uri $serverHealthUrl -Method Head -TimeoutSec 5 -UseBasicParsing | Out-Null
+    Invoke-WebRequest -Uri $serverHealthUrl -TimeoutSec 5 -UseBasicParsing | Out-Null
     return $true
   } catch {
     return $false
   }
 }
 
+function Get-LogTail {
+  param([string]$Path)
+
+  if (-not $Path -or -not (Test-Path $Path)) {
+    return ""
+  }
+
+  $lines = Get-Content -Path $Path -Tail 20 -ErrorAction SilentlyContinue
+  return (($lines | Where-Object { $_ -ne $null }) -join [Environment]::NewLine).Trim()
+}
+
+function Get-PortConflictMessage {
+  $listener = Get-NetTCPConnection -LocalPort 4173 -State Listen -ErrorAction SilentlyContinue | Select-Object -First 1
+  if (-not $listener) {
+    return ""
+  }
+
+  $processName = ""
+  try {
+    $processName = (Get-Process -Id $listener.OwningProcess -ErrorAction SilentlyContinue).ProcessName
+  } catch {
+  }
+
+  if ($processName) {
+    return "Port 4173 is already in use by PID $($listener.OwningProcess) ($processName)."
+  }
+
+  return "Port 4173 is already in use by PID $($listener.OwningProcess)."
+}
+
 function Wait-LocalServer {
-  param([int]$TimeoutSeconds = 60)
+  param(
+    [System.Diagnostics.Process]$Process,
+    [int]$TimeoutSeconds = 60
+  )
 
   $deadline = (Get-Date).AddSeconds($TimeoutSeconds)
   while ((Get-Date) -lt $deadline) {
     if (Test-LocalServer) {
       return
     }
+
+    if ($Process) {
+      try {
+        $null = $Process.Refresh()
+      } catch {
+      }
+
+      if ($Process.HasExited) {
+        $details = @("Local server exited before becoming ready (exit code $($Process.ExitCode)).")
+        $stdoutTail = Get-LogTail $serverStdOutPath
+        $stderrTail = Get-LogTail $serverStdErrPath
+        if ($stderrTail) {
+          $details += "stderr:`n$stderrTail"
+        }
+        if ($stdoutTail) {
+          $details += "stdout:`n$stdoutTail"
+        }
+        throw ($details -join [Environment]::NewLine)
+      }
+    }
+
     Start-Sleep -Seconds 1
   }
 
-  throw "Timed out waiting for the local server at $serverHealthUrl."
+  $details = @("Timed out waiting for the local server at $serverHealthUrl.")
+  $portConflict = Get-PortConflictMessage
+  if ($portConflict) {
+    $details += $portConflict
+  }
+  $stdoutTail = Get-LogTail $serverStdOutPath
+  $stderrTail = Get-LogTail $serverStdErrPath
+  if ($stderrTail) {
+    $details += "stderr:`n$stderrTail"
+  }
+  if ($stdoutTail) {
+    $details += "stdout:`n$stdoutTail"
+  }
+  throw ($details -join [Environment]::NewLine)
 }
 
 function Start-LocalServerIfNeeded {
@@ -131,8 +200,15 @@ function Start-LocalServerIfNeeded {
     return $null
   }
 
-  $serverProcess = Start-Process -FilePath $script:pythonRuntime.FilePath -ArgumentList @($script:pythonRuntime.Arguments + @("server.py")) -WorkingDirectory $repoRoot -PassThru
-  Wait-LocalServer
+  $portConflict = Get-PortConflictMessage
+  if ($portConflict) {
+    throw "$portConflict The local helper page is not responding, so another process is blocking the Akatsuki local server."
+  }
+
+  $serverStdOutPath = Join-Path ([System.IO.Path]::GetTempPath()) ("akatsuki-server-stdout-" + [guid]::NewGuid().ToString("N") + ".log")
+  $serverStdErrPath = Join-Path ([System.IO.Path]::GetTempPath()) ("akatsuki-server-stderr-" + [guid]::NewGuid().ToString("N") + ".log")
+  $serverProcess = Start-Process -FilePath $script:pythonRuntime.FilePath -ArgumentList @($script:pythonRuntime.Arguments + @("server.py")) -WorkingDirectory $repoRoot -RedirectStandardOutput $serverStdOutPath -RedirectStandardError $serverStdErrPath -PassThru
+  Wait-LocalServer -Process $serverProcess
   return $serverProcess
 }
 
@@ -259,6 +335,8 @@ try {
     Write-Host "Fresh SteamGifts sync received: $($freshSync.Members) member(s), $($freshSync.Giveaways) giveaway(s)."
   }
 
+  Invoke-CheckedExternal "Hydrating Steam media cache..." { Invoke-Python @("server.py", "--hydrate-sync-media", "--recent-days", "365") }
+
   if ($FullRefresh) {
     Invoke-CheckedExternal "Refreshing Steam progress for all active members..." { Invoke-Python @("server.py", "--refresh-steam-progress", "--full-refresh") }
   } else {
@@ -273,5 +351,10 @@ try {
 } finally {
   if ($startedServer -and -not $startedServer.HasExited) {
     Stop-Process -Id $startedServer.Id
+  }
+  foreach ($logPath in @($serverStdOutPath, $serverStdErrPath)) {
+    if ($logPath -and (Test-Path $logPath)) {
+      Remove-Item $logPath -Force -ErrorAction SilentlyContinue
+    }
   }
 }
