@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-08T19:32:51.228451+00:00",
+  "updatedAt": "2026-05-09T02:35:52.663397+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -8977,7 +8977,7 @@
       "achievementPercent": 0,
       "playtimeHours": 0.0,
       "error": null,
-      "checkedAt": "2026-05-08T06:59:22.123924+00:00",
+      "checkedAt": "2026-05-09T02:35:52.663376+00:00",
       "playtimeCheckedAt": "2026-05-08T06:43:31.656802+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -68489,14 +68489,14 @@
   ],
   "steamApiEnabled": true,
   "activeOnly": true,
-  "refreshedMonth": "2026-04",
+  "refreshedMonth": "2026-05",
   "refreshedScope": "month",
-  "libraryUpdatedAt": "2026-05-08T19:32:51.017047+00:00",
+  "libraryUpdatedAt": "2026-05-09T02:35:52.465019+00:00",
   "libraryStats": {
-    "durationSeconds": 0.14,
-    "targetProfiles": 6,
+    "durationSeconds": 0.16,
+    "targetProfiles": 1,
     "refreshedProfiles": 0,
-    "reusedProfiles": 6,
+    "reusedProfiles": 1,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
@@ -68504,15 +68504,15 @@
     "totalPlaytimeRows": 86320
   },
   "stats": {
-    "durationSeconds": 0.34,
-    "targetWins": 11,
-    "uniqueProgressTargets": 11,
-    "libraryPlaytimeHits": 11,
-    "cachedReuses": 11,
+    "durationSeconds": 0.36,
+    "targetWins": 1,
+    "uniqueProgressTargets": 1,
+    "libraryPlaytimeHits": 1,
+    "cachedReuses": 1,
     "achievementSuccesses": 0,
     "achievementErrors": 0,
     "cachedFallbacks": 0,
-    "hltbTitlesRequested": 10,
+    "hltbTitlesRequested": 1,
     "hltbResultsAvailable": 3959
   }
 }
