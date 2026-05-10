@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-09T02:35:52.663397+00:00",
+  "updatedAt": "2026-05-10T21:52:37.346513+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -6700,6 +6700,24 @@
     {
       "username": "burntreynolds444",
       "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 3057670,
+      "title": "Pluto",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3057670/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 10,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "playtimeCheckedAt": null,
+      "playtimeSource": "",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "checkedAt": "2026-05-10T21:52:37.346476+00:00"
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
       "appId": 3164500,
       "title": "Schedule I",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3164500/achievements/",
@@ -8977,7 +8995,7 @@
       "achievementPercent": 0,
       "playtimeHours": 0.0,
       "error": null,
-      "checkedAt": "2026-05-09T02:35:52.663376+00:00",
+      "checkedAt": "2026-05-10T21:52:37.346510+00:00",
       "playtimeCheckedAt": "2026-05-08T06:43:31.656802+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -28620,6 +28638,24 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true
+    },
+    {
+      "username": "Saikania",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198262118401",
+      "appId": 3105440,
+      "title": "Heroes of Might and Magic: Olden Era",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/3105440/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 22,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "playtimeCheckedAt": null,
+      "playtimeSource": "",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "checkedAt": "2026-05-10T21:52:37.346500+00:00"
     },
     {
       "username": "Saikania",
@@ -68487,32 +68523,32 @@
       "url": "https://howlongtobeat.com/game/34230"
     }
   ],
-  "steamApiEnabled": true,
+  "steamApiEnabled": false,
   "activeOnly": true,
   "refreshedMonth": "2026-05",
   "refreshedScope": "month",
-  "libraryUpdatedAt": "2026-05-09T02:35:52.465019+00:00",
+  "libraryUpdatedAt": "2026-05-10T21:52:37.136204+00:00",
   "libraryStats": {
-    "durationSeconds": 0.16,
-    "targetProfiles": 1,
+    "durationSeconds": 0.15,
+    "targetProfiles": 3,
     "refreshedProfiles": 0,
-    "reusedProfiles": 1,
+    "reusedProfiles": 0,
     "errorProfiles": 0,
-    "missingApiProfiles": 0,
+    "missingApiProfiles": 3,
     "totalProfiles": 23,
-    "freshProfiles": 23,
+    "freshProfiles": 0,
     "totalPlaytimeRows": 86320
   },
   "stats": {
-    "durationSeconds": 0.36,
-    "targetWins": 1,
-    "uniqueProgressTargets": 1,
+    "durationSeconds": 0.35,
+    "targetWins": 3,
+    "uniqueProgressTargets": 3,
     "libraryPlaytimeHits": 1,
-    "cachedReuses": 1,
+    "cachedReuses": 3,
     "achievementSuccesses": 0,
     "achievementErrors": 0,
     "cachedFallbacks": 0,
-    "hltbTitlesRequested": 1,
+    "hltbTitlesRequested": 3,
     "hltbResultsAvailable": 3959
   }
 }

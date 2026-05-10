@@ -1,6 +1,6 @@
 {
   "source": "akatsuki-steamgifts-sync",
-  "syncedAt": "2026-05-09T02:34:50.152Z",
+  "syncedAt": "2026-05-10T21:52:35.735Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -2151,6 +2151,20 @@
   ],
   "giveaways": [
     {
+      "code": "yLzZl",
+      "url": "https://www.steamgifts.com/giveaway/yLzZl/mixtape",
+      "title": "Mixtape",
+      "creatorUsername": "Ernesttico",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/Ernesttico",
+      "appId": 2582320,
+      "steamAppUrl": "https://store.steampowered.com/app/2582320?utm_source=SteamGifts",
+      "entriesCount": 2,
+      "endDate": "2026-05-10T15:18:06.000Z",
+      "winners": [],
+      "resultStatus": "open",
+      "resultLabel": "Open"
+    },
+    {
       "code": "x8SJ2",
       "url": "https://www.steamgifts.com/giveaway/x8SJ2/tides-of-tomorrow",
       "title": "Tides of Tomorrow 🌊",
@@ -2204,9 +2218,15 @@
       "steamAppUrl": "https://store.steampowered.com/app/3057670?utm_source=SteamGifts",
       "entriesCount": 2,
       "endDate": "2026-05-01T23:26:23.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback"
+      "winners": [
+        {
+          "username": "burntreynolds444",
+          "profileUrl": "https://www.steamgifts.com/user/burntreynolds444",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "burntreynolds444"
     },
     {
       "code": "bvc8x",
@@ -2277,9 +2297,15 @@
       "steamAppUrl": "https://store.steampowered.com/app/3105440?utm_source=SteamGifts",
       "entriesCount": 6,
       "endDate": "2026-05-01T16:14:07.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "Saikania",
+          "profileUrl": "https://www.steamgifts.com/user/Saikania",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "Saikania",
       "hltbHours": 18.0
     },
     {
@@ -2342,9 +2368,15 @@
       "steamAppUrl": "https://store.steampowered.com/app/2868840?utm_source=SteamGifts",
       "entriesCount": 2,
       "endDate": "2026-04-13T20:56:03.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "BojanNS987",
+          "profileUrl": "https://www.steamgifts.com/user/BojanNS987",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "BojanNS987",
       "hltbHours": 9.55
     },
     {
@@ -85026,12 +85058,36 @@
   ],
   "wins": [
     {
+      "giveawayCode": "8jrA5",
+      "title": "Pluto",
+      "appId": 3057670,
+      "winnerUsername": "burntreynolds444",
+      "creatorUsername": "Thedogma",
+      "winDate": "2026-05-01T23:26:23.000Z"
+    },
+    {
+      "giveawayCode": "R91uQ",
+      "title": "Heroes of Might and Magic: Olden Era",
+      "appId": 3105440,
+      "winnerUsername": "Saikania",
+      "creatorUsername": "Drain",
+      "winDate": "2026-05-01T16:14:07.000Z"
+    },
+    {
       "giveawayCode": "W2Nnj",
       "title": "People of Note",
       "appId": 1626170,
       "winnerUsername": "Wintermute101",
       "creatorUsername": "chOOkity",
       "winDate": "2026-04-14T13:23:43.000Z"
+    },
+    {
+      "giveawayCode": "vWNke",
+      "title": "Slay the Spire 2",
+      "appId": 2868840,
+      "winnerUsername": "BojanNS987",
+      "creatorUsername": "Koalala",
+      "winDate": "2026-04-13T20:56:03.000Z"
     },
     {
       "giveawayCode": "LleZ2",
@@ -116234,6 +116290,6 @@
       "winDate": "2016-08-26T06:01:36.000Z"
     }
   ],
-  "savedAt": "2026-05-09T02:34:50.209591+00:00",
-  "mergedAt": "2026-05-09T02:34:50.209602+00:00"
+  "savedAt": "2026-05-10T21:52:35.788549+00:00",
+  "mergedAt": "2026-05-10T21:52:35.788561+00:00"
 }
