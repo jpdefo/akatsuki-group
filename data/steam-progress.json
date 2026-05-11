@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-11T07:58:36.427247+00:00",
+  "updatedAt": "2026-05-11T15:33:40.841385+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -6713,7 +6713,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-05-11T07:03:49.136859+00:00"
+      "checkedAt": "2026-05-11T15:33:40.841359+00:00"
     },
     {
       "username": "burntreynolds444",
@@ -28655,7 +28655,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-05-11T07:03:49.136882+00:00"
+      "checkedAt": "2026-05-11T15:33:40.841380+00:00"
     },
     {
       "username": "Saikania",
@@ -40810,6 +40810,41 @@
   ],
   "hltb": [
     {
+      "title": "Tides of Tomorrow 🌊",
+      "appId": 2678080,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Borderlands 4",
+      "appId": 1285190,
+      "hltbHours": 30.35,
+      "matchedTitle": "Borderlands 4",
+      "url": "https://howlongtobeat.com/game/91605"
+    },
+    {
+      "title": "Mewgenics",
+      "appId": 686060,
+      "hltbHours": 72.35,
+      "matchedTitle": "Mewgenics",
+      "url": "https://howlongtobeat.com/game/135404"
+    },
+    {
+      "title": "Pluto",
+      "appId": 3057670,
+      "hltbHours": 0.0,
+      "matchedTitle": "PLUTONIUM",
+      "url": "https://howlongtobeat.com/game/47396"
+    },
+    {
+      "title": "Banquet for Fools",
+      "appId": 3172700,
+      "hltbHours": 68.2,
+      "matchedTitle": "Banquet for Fools",
+      "url": "https://howlongtobeat.com/game/157203"
+    },
+    {
       "title": "Heroes of Might and Magic: Olden Era",
       "appId": 3105440,
       "hltbHours": 18.0,
@@ -40824,46 +40859,11 @@
       "url": "https://howlongtobeat.com/game/172962"
     },
     {
-      "title": "Tides of Tomorrow 🌊",
-      "appId": 2678080,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
-    },
-    {
-      "title": "Mewgenics",
-      "appId": 686060,
-      "hltbHours": 72.35,
-      "matchedTitle": "Mewgenics",
-      "url": "https://howlongtobeat.com/game/135404"
-    },
-    {
-      "title": "Banquet for Fools",
-      "appId": 3172700,
-      "hltbHours": 68.2,
-      "matchedTitle": "Banquet for Fools",
-      "url": "https://howlongtobeat.com/game/157203"
-    },
-    {
       "title": "PRAGMATA",
       "appId": 3357650,
       "hltbHours": 11.51,
       "matchedTitle": "Pragmata",
       "url": "https://howlongtobeat.com/game/80101"
-    },
-    {
-      "title": "Borderlands 4",
-      "appId": 1285190,
-      "hltbHours": 30.35,
-      "matchedTitle": "Borderlands 4",
-      "url": "https://howlongtobeat.com/game/91605"
-    },
-    {
-      "title": "Pluto",
-      "appId": 3057670,
-      "hltbHours": 0.0,
-      "matchedTitle": "PLUTONIUM",
-      "url": "https://howlongtobeat.com/game/47396"
     },
     {
       "title": "Heroes of Might and Magic: Olden Era",
@@ -40873,88 +40873,11 @@
       "url": "https://howlongtobeat.com/game/155772"
     },
     {
-      "title": "Super Meat Boy 3D",
-      "appId": 3288210,
-      "hltbHours": 5.06,
-      "matchedTitle": "Super Meat Boy 3D",
-      "url": "https://howlongtobeat.com/game/169406"
-    },
-    {
-      "title": "REPLACED",
-      "appId": 1663850,
-      "hltbHours": 10.8,
-      "matchedTitle": "Replaced",
-      "url": "https://howlongtobeat.com/game/93944"
-    },
-    {
-      "title": "GRIME II",
-      "appId": 2529790,
-      "hltbHours": 12.0,
-      "matchedTitle": "GRIME II",
-      "url": "https://howlongtobeat.com/game/134563"
-    },
-    {
-      "title": "MENACE",
-      "appId": 2432860,
-      "hltbHours": 0.34,
-      "matchedTitle": "Menace",
-      "url": "https://howlongtobeat.com/game/58931"
-    },
-    {
-      "title": "Mewgenics",
-      "appId": 686060,
-      "hltbHours": 72.35,
-      "matchedTitle": "Mewgenics",
-      "url": "https://howlongtobeat.com/game/135404"
-    },
-    {
-      "title": "People of Note",
-      "appId": 1626170,
-      "hltbHours": 15.0,
-      "matchedTitle": "People of Note",
-      "url": "https://howlongtobeat.com/game/174905"
-    },
-    {
-      "title": "The Last Caretaker",
-      "appId": 1783560,
-      "hltbHours": 45.86,
-      "matchedTitle": "The Last Caretaker",
-      "url": "https://howlongtobeat.com/game/164485"
-    },
-    {
       "title": "Gothic 1 Remake",
       "appId": 1297900,
       "hltbHours": 0.0,
       "matchedTitle": "Gothic 1 Remake",
       "url": "https://howlongtobeat.com/game/92900"
-    },
-    {
-      "title": "Slay the Spire 2",
-      "appId": 2868840,
-      "hltbHours": 9.55,
-      "matchedTitle": "Slay the Spire II",
-      "url": "https://howlongtobeat.com/game/148484"
-    },
-    {
-      "title": "Retro Rewind - Video Store Simulator",
-      "appId": 3552140,
-      "hltbHours": 12.64,
-      "matchedTitle": "Retro Rewind - Video Store Simulator",
-      "url": "https://howlongtobeat.com/game/183286"
-    },
-    {
-      "title": "MOUSE: P.I. For Hire",
-      "appId": 2416450,
-      "hltbHours": 12.08,
-      "matchedTitle": "MOUSE: P.I. For Hire",
-      "url": "https://howlongtobeat.com/game/128648"
-    },
-    {
-      "title": "Slay the Spire 2",
-      "appId": 2868840,
-      "hltbHours": 9.55,
-      "matchedTitle": "Slay the Spire II",
-      "url": "https://howlongtobeat.com/game/148484"
     },
     {
       "title": "Planet of Lana II",
@@ -40964,11 +40887,88 @@
       "url": "https://howlongtobeat.com/game/169414"
     },
     {
+      "title": "People of Note",
+      "appId": 1626170,
+      "hltbHours": 15.0,
+      "matchedTitle": "People of Note",
+      "url": "https://howlongtobeat.com/game/174905"
+    },
+    {
+      "title": "Slay the Spire 2",
+      "appId": 2868840,
+      "hltbHours": 9.55,
+      "matchedTitle": "Slay the Spire II",
+      "url": "https://howlongtobeat.com/game/148484"
+    },
+    {
+      "title": "The Last Caretaker",
+      "appId": 1783560,
+      "hltbHours": 45.86,
+      "matchedTitle": "The Last Caretaker",
+      "url": "https://howlongtobeat.com/game/164485"
+    },
+    {
+      "title": "GRIME II",
+      "appId": 2529790,
+      "hltbHours": 12.0,
+      "matchedTitle": "GRIME II",
+      "url": "https://howlongtobeat.com/game/134563"
+    },
+    {
+      "title": "Retro Rewind - Video Store Simulator",
+      "appId": 3552140,
+      "hltbHours": 12.64,
+      "matchedTitle": "Retro Rewind - Video Store Simulator",
+      "url": "https://howlongtobeat.com/game/183286"
+    },
+    {
+      "title": "Mewgenics",
+      "appId": 686060,
+      "hltbHours": 72.35,
+      "matchedTitle": "Mewgenics",
+      "url": "https://howlongtobeat.com/game/135404"
+    },
+    {
+      "title": "REPLACED",
+      "appId": 1663850,
+      "hltbHours": 10.8,
+      "matchedTitle": "Replaced",
+      "url": "https://howlongtobeat.com/game/93944"
+    },
+    {
       "title": "REANIMAL",
       "appId": 2129530,
       "hltbHours": 4.55,
       "matchedTitle": "Reanimal",
       "url": "https://howlongtobeat.com/game/155644"
+    },
+    {
+      "title": "Slay the Spire 2",
+      "appId": 2868840,
+      "hltbHours": 9.55,
+      "matchedTitle": "Slay the Spire II",
+      "url": "https://howlongtobeat.com/game/148484"
+    },
+    {
+      "title": "Super Meat Boy 3D",
+      "appId": 3288210,
+      "hltbHours": 5.06,
+      "matchedTitle": "Super Meat Boy 3D",
+      "url": "https://howlongtobeat.com/game/169406"
+    },
+    {
+      "title": "MENACE",
+      "appId": 2432860,
+      "hltbHours": 0.34,
+      "matchedTitle": "Menace",
+      "url": "https://howlongtobeat.com/game/58931"
+    },
+    {
+      "title": "MOUSE: P.I. For Hire",
+      "appId": 2416450,
+      "hltbHours": 12.08,
+      "matchedTitle": "MOUSE: P.I. For Hire",
+      "url": "https://howlongtobeat.com/game/128648"
     },
     {
       "title": "Darwin's Paradox!",
@@ -68385,14 +68385,14 @@
   ],
   "steamApiEnabled": true,
   "activeOnly": true,
-  "refreshedMonth": "2025-10",
+  "refreshedMonth": "2026-05",
   "refreshedScope": "month",
-  "libraryUpdatedAt": "2026-05-11T07:58:36.196272+00:00",
+  "libraryUpdatedAt": "2026-05-11T15:33:40.615303+00:00",
   "libraryStats": {
-    "durationSeconds": 0.16,
-    "targetProfiles": 1,
+    "durationSeconds": 0.17,
+    "targetProfiles": 2,
     "refreshedProfiles": 0,
-    "reusedProfiles": 1,
+    "reusedProfiles": 2,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
@@ -68400,15 +68400,15 @@
     "totalPlaytimeRows": 86342
   },
   "stats": {
-    "durationSeconds": 0.39,
-    "targetWins": 1,
-    "uniqueProgressTargets": 1,
-    "libraryPlaytimeHits": 1,
-    "cachedReuses": 1,
+    "durationSeconds": 0.38,
+    "targetWins": 2,
+    "uniqueProgressTargets": 2,
+    "libraryPlaytimeHits": 2,
+    "cachedReuses": 2,
     "achievementSuccesses": 0,
     "achievementErrors": 0,
     "cachedFallbacks": 0,
-    "hltbTitlesRequested": 1,
+    "hltbTitlesRequested": 2,
     "hltbResultsAvailable": 3939
   }
 }
