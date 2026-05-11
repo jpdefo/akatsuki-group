@@ -46,6 +46,7 @@ STATIC_FILE_NAMES = [
     "index.html",
     "monthly-progress.html",
     "app.js",
+    "steamgifts-live-bookmarklet.js",
     "styles.css",
     "active-users.html",
     "inactive-users.html",
