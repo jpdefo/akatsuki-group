@@ -1,6 +1,6 @@
 {
   "source": "akatsuki-steamgifts-sync",
-  "syncedAt": "2026-05-11T07:43:18.254Z",
+  "syncedAt": "2026-05-11T07:49:31.158Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -2164,7 +2164,7 @@
       "resultStatus": "open",
       "resultLabel": "Open",
       "hltbHours": 18,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2182,7 +2182,7 @@
       "winners": [],
       "resultStatus": "open",
       "resultLabel": "Open",
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2200,7 +2200,7 @@
       "winners": [],
       "resultStatus": "open",
       "resultLabel": "Open",
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2218,7 +2218,7 @@
       "winners": [],
       "resultStatus": "open",
       "resultLabel": "Open",
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2237,7 +2237,7 @@
       "resultStatus": "open",
       "resultLabel": "Open",
       "hltbHours": 72.35,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2256,7 +2256,7 @@
       "resultStatus": "open",
       "resultLabel": "Open",
       "hltbHours": 68.2,
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2275,7 +2275,7 @@
       "resultStatus": "open",
       "resultLabel": "Open",
       "hltbHours": 11.51,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2294,7 +2294,7 @@
       "resultStatus": "open",
       "resultLabel": "Open",
       "hltbHours": 30.35,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "extra",
       "giveawayKindChecked": true
@@ -2312,7 +2312,7 @@
       "winners": [],
       "resultStatus": "won",
       "resultLabel": "burntreynolds444",
-      "points": 0,
+      "points": 18,
       "regionRestricted": false,
       "giveawayKindChecked": true
     },
@@ -2330,7 +2330,7 @@
       "resultStatus": "won",
       "resultLabel": "Saikania",
       "hltbHours": 18,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
       "giveawayKindChecked": true
     },
@@ -2348,7 +2348,7 @@
       "resultStatus": "won",
       "resultLabel": "Drain",
       "hltbHours": 5.06,
-      "points": 0,
+      "points": 25,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2367,7 +2367,7 @@
       "resultStatus": "won",
       "resultLabel": "Drain",
       "hltbHours": 10.8,
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2386,7 +2386,7 @@
       "resultStatus": "no_winners",
       "resultLabel": "No winners",
       "hltbHours": 12,
-      "points": 0,
+      "points": 28,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2405,7 +2405,7 @@
       "resultStatus": "won",
       "resultLabel": "Horseflesh",
       "hltbHours": 0.34,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2424,7 +2424,7 @@
       "resultStatus": "won",
       "resultLabel": "Saikania",
       "hltbHours": 72.35,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2443,7 +2443,7 @@
       "resultStatus": "won",
       "resultLabel": "Wintermute101",
       "hltbHours": 15,
-      "points": 0,
+      "points": 25,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2462,7 +2462,7 @@
       "resultStatus": "won",
       "resultLabel": "Horseflesh",
       "hltbHours": 45.86,
-      "points": 0,
+      "points": 35,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2499,7 +2499,7 @@
       "resultStatus": "won",
       "resultLabel": "Wintermute101",
       "hltbHours": 9.55,
-      "points": 0,
+      "points": 25,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2518,7 +2518,7 @@
       "resultStatus": "won",
       "resultLabel": "Ernesttico",
       "hltbHours": 12.64,
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2537,7 +2537,7 @@
       "resultStatus": "won",
       "resultLabel": "chOOkity",
       "hltbHours": 12.08,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2556,7 +2556,7 @@
       "resultStatus": "won",
       "resultLabel": "BojanNS987",
       "hltbHours": 9.55,
-      "points": 0,
+      "points": 25,
       "regionRestricted": false,
       "giveawayKindChecked": true
     },
@@ -2574,7 +2574,7 @@
       "resultStatus": "no_winners",
       "resultLabel": "No winners",
       "hltbHours": 6.19,
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2593,7 +2593,7 @@
       "resultStatus": "won",
       "resultLabel": "Horseflesh",
       "hltbHours": 4.55,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2612,7 +2612,7 @@
       "resultStatus": "won",
       "resultLabel": "Koalala",
       "hltbHours": 4.54,
-      "points": 0,
+      "points": 25,
       "regionRestricted": false,
       "giveawayKindChecked": true
     },
@@ -2630,7 +2630,7 @@
       "resultStatus": "won",
       "resultLabel": "Drain",
       "hltbHours": 12.08,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2649,7 +2649,7 @@
       "resultStatus": "won",
       "resultLabel": "Drain",
       "hltbHours": 16.03,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKindChecked": true
     },
@@ -2685,7 +2685,7 @@
       "resultStatus": "won",
       "resultLabel": "Ernesttico",
       "hltbHours": 22.74,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKindChecked": true
     },
@@ -2703,7 +2703,7 @@
       "resultStatus": "won",
       "resultLabel": "Saikania",
       "hltbHours": 62.73,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2722,7 +2722,7 @@
       "resultStatus": "won",
       "resultLabel": "leniu",
       "hltbHours": 10.77,
-      "points": 0,
+      "points": 25,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2741,7 +2741,7 @@
       "resultStatus": "won",
       "resultLabel": "Horseflesh",
       "hltbHours": 7.69,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2760,7 +2760,7 @@
       "resultStatus": "won",
       "resultLabel": "xMisiu",
       "hltbHours": 6.19,
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
       "giveawayKindChecked": true
     },
@@ -2778,7 +2778,7 @@
       "resultStatus": "won",
       "resultLabel": "Youdontknow",
       "hltbHours": 9.55,
-      "points": 0,
+      "points": 25,
       "regionRestricted": false,
       "giveawayKindChecked": true
     },
@@ -2796,7 +2796,7 @@
       "resultStatus": "won",
       "resultLabel": "Wintermute101",
       "hltbHours": 22.05,
-      "points": 0,
+      "points": 25,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2814,7 +2814,7 @@
       "winners": [],
       "resultStatus": "no_winners",
       "resultLabel": "No winners",
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2832,7 +2832,7 @@
       "winners": [],
       "resultStatus": "no_winners",
       "resultLabel": "No winners",
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2851,7 +2851,7 @@
       "resultStatus": "won",
       "resultLabel": "Drain",
       "hltbHours": 72.35,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKindChecked": true
     },
@@ -2869,7 +2869,7 @@
       "resultStatus": "won",
       "resultLabel": "burntreynolds444",
       "hltbHours": 14.32,
-      "points": 0,
+      "points": 25,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2888,7 +2888,7 @@
       "resultStatus": "won",
       "resultLabel": "Horseflesh",
       "hltbHours": 5.99,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2907,7 +2907,7 @@
       "resultStatus": "won",
       "resultLabel": "Ernesttico",
       "hltbHours": 11.87,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2926,7 +2926,7 @@
       "resultStatus": "won",
       "resultLabel": "Horseflesh",
       "hltbHours": 13.04,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2945,7 +2945,7 @@
       "resultStatus": "won",
       "resultLabel": "burntreynolds444",
       "hltbHours": 12.27,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2964,7 +2964,7 @@
       "resultStatus": "won",
       "resultLabel": "chOOkity",
       "hltbHours": 7.29,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -2983,7 +2983,7 @@
       "resultStatus": "won",
       "resultLabel": "xMisiu",
       "hltbHours": 9.41,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3002,7 +3002,7 @@
       "resultStatus": "won",
       "resultLabel": "BojanNS987",
       "hltbHours": 4.55,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3021,7 +3021,7 @@
       "resultStatus": "won",
       "resultLabel": "BojanNS987",
       "hltbHours": 9.92,
-      "points": 0,
+      "points": 25,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3040,7 +3040,7 @@
       "resultStatus": "won",
       "resultLabel": "Drain",
       "hltbHours": 9.33,
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3059,7 +3059,7 @@
       "resultStatus": "won",
       "resultLabel": "burntreynolds444",
       "hltbHours": 72.35,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3078,7 +3078,7 @@
       "resultStatus": "won",
       "resultLabel": "Ernesttico",
       "hltbHours": 17.03,
-      "points": 0,
+      "points": 15,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3097,7 +3097,7 @@
       "resultStatus": "won",
       "resultLabel": "chOOkity",
       "hltbHours": 1.22,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3116,7 +3116,7 @@
       "resultStatus": "won",
       "resultLabel": "Wintermute101",
       "hltbHours": 17.6,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3134,7 +3134,7 @@
       "winners": [],
       "resultStatus": "won",
       "resultLabel": "xMisiu",
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3153,7 +3153,7 @@
       "resultStatus": "won",
       "resultLabel": "xMisiu",
       "hltbHours": 33.45,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3172,7 +3172,7 @@
       "resultStatus": "won",
       "resultLabel": "BojanNS987",
       "hltbHours": 8.55,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3191,7 +3191,7 @@
       "resultStatus": "won",
       "resultLabel": "BojanNS987",
       "hltbHours": 14.61,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3210,7 +3210,7 @@
       "resultStatus": "won",
       "resultLabel": "Drain",
       "hltbHours": 1.22,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3229,7 +3229,7 @@
       "resultStatus": "won",
       "resultLabel": "xMisiu",
       "hltbHours": 17.03,
-      "points": 0,
+      "points": 15,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3248,7 +3248,7 @@
       "resultStatus": "won",
       "resultLabel": "BojanNS987",
       "hltbHours": 34.72,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3267,7 +3267,7 @@
       "resultStatus": "won",
       "resultLabel": "leniu",
       "hltbHours": 14.35,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3286,7 +3286,7 @@
       "resultStatus": "won",
       "resultLabel": "Ernesttico",
       "hltbHours": 9.32,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3305,7 +3305,7 @@
       "resultStatus": "won",
       "resultLabel": "Koalala",
       "hltbHours": 22.74,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3323,7 +3323,7 @@
       "winners": [],
       "resultStatus": "won",
       "resultLabel": "Drain",
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3342,7 +3342,7 @@
       "resultStatus": "won",
       "resultLabel": "LastM",
       "hltbHours": 19,
-      "points": 0,
+      "points": 15,
       "regionRestricted": false,
       "giveawayKindChecked": true
     },
@@ -3360,7 +3360,7 @@
       "resultStatus": "won",
       "resultLabel": "Skull18",
       "hltbHours": 14.61,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKindChecked": true
     },
@@ -3378,7 +3378,7 @@
       "resultStatus": "won",
       "resultLabel": "chOOkity",
       "hltbHours": 16.03,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKindChecked": true
     },
@@ -3395,7 +3395,7 @@
       "winners": [],
       "resultStatus": "won",
       "resultLabel": "chOOkity",
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKindChecked": true
     },
@@ -3413,7 +3413,7 @@
       "resultStatus": "won",
       "resultLabel": "Ernesttico",
       "hltbHours": 5.99,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
       "giveawayKind": "extra",
       "giveawayKindChecked": true
@@ -3432,7 +3432,7 @@
       "resultStatus": "won",
       "resultLabel": "Youdontknow",
       "hltbHours": 28.2,
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
       "giveawayKind": "extra",
       "giveawayKindChecked": true
@@ -3451,7 +3451,7 @@
       "resultStatus": "won",
       "resultLabel": "Drain",
       "hltbHours": 7.88,
-      "points": 0,
+      "points": 25,
       "regionRestricted": false,
       "giveawayKindChecked": true
     },
@@ -3469,7 +3469,7 @@
       "resultStatus": "won",
       "resultLabel": "Krlesnik",
       "hltbHours": 3.54,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3488,7 +3488,7 @@
       "resultStatus": "won",
       "resultLabel": "Wintermute101",
       "hltbHours": 28.2,
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
       "giveawayKindChecked": true
     },
@@ -3506,7 +3506,7 @@
       "resultStatus": "won",
       "resultLabel": "burntreynolds444",
       "hltbHours": 14.2,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKindChecked": true
     },
@@ -3524,7 +3524,7 @@
       "resultStatus": "won",
       "resultLabel": "Koalala",
       "hltbHours": 12.18,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKindChecked": true
     },
@@ -3542,7 +3542,7 @@
       "resultStatus": "won",
       "resultLabel": "zettaivanugen",
       "hltbHours": 8.55,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKindChecked": true
     },
@@ -3560,7 +3560,7 @@
       "resultStatus": "won",
       "resultLabel": "Horseflesh",
       "hltbHours": 40.3,
-      "points": 0,
+      "points": 18,
       "regionRestricted": false,
       "giveawayKind": "extra",
       "giveawayKindChecked": true
@@ -3579,7 +3579,7 @@
       "resultStatus": "won",
       "resultLabel": "leniu",
       "hltbHours": 10,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3598,7 +3598,7 @@
       "resultStatus": "won",
       "resultLabel": "xMisiu",
       "hltbHours": 8.55,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKindChecked": true
     },
@@ -3616,7 +3616,7 @@
       "resultStatus": "no_winners",
       "resultLabel": "No winners",
       "hltbHours": 12.58,
-      "points": 0,
+      "points": 25,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3635,7 +3635,7 @@
       "resultStatus": "won",
       "resultLabel": "Koalala",
       "hltbHours": 30.19,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3653,7 +3653,7 @@
       "winners": [],
       "resultStatus": "won",
       "resultLabel": "Wintermute101",
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3671,7 +3671,7 @@
       "winners": [],
       "resultStatus": "won",
       "resultLabel": "chOOkity",
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3690,7 +3690,7 @@
       "resultStatus": "won",
       "resultLabel": "chOOkity",
       "hltbHours": 12.55,
-      "points": 0,
+      "points": 35,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3709,7 +3709,7 @@
       "resultStatus": "won",
       "resultLabel": "Ernesttico",
       "hltbHours": 46.4,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3728,7 +3728,7 @@
       "resultStatus": "won",
       "resultLabel": "Koalala",
       "hltbHours": 35.47,
-      "points": 0,
+      "points": 25,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3747,7 +3747,7 @@
       "resultStatus": "won",
       "resultLabel": "xMisiu",
       "hltbHours": 14.76,
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3766,7 +3766,7 @@
       "resultStatus": "won",
       "resultLabel": "Koalala",
       "hltbHours": 28.2,
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
       "giveawayKind": "extra",
       "giveawayKindChecked": true
@@ -3785,7 +3785,7 @@
       "resultStatus": "won",
       "resultLabel": "Horseflesh",
       "hltbHours": 35.47,
-      "points": 0,
+      "points": 25,
       "regionRestricted": false,
       "giveawayKindChecked": true
     },
@@ -3803,7 +3803,7 @@
       "resultStatus": "won",
       "resultLabel": "DeliberateTaco",
       "hltbHours": 48.23,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3822,7 +3822,7 @@
       "resultStatus": "won",
       "resultLabel": "chOOkity",
       "hltbHours": 12.27,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3840,7 +3840,7 @@
       "winners": [],
       "resultStatus": "won",
       "resultLabel": "Wintermute101",
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3859,7 +3859,7 @@
       "resultStatus": "won",
       "resultLabel": "Wintermute101",
       "hltbHours": 8.55,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3877,7 +3877,7 @@
       "winners": [],
       "resultStatus": "won",
       "resultLabel": "Wintermute101",
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3896,7 +3896,7 @@
       "resultStatus": "won",
       "resultLabel": "Horseflesh",
       "hltbHours": 3.34,
-      "points": 0,
+      "points": 25,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3915,7 +3915,7 @@
       "resultStatus": "won",
       "resultLabel": "Wintermute101",
       "hltbHours": 17.24,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3934,7 +3934,7 @@
       "resultStatus": "won",
       "resultLabel": "Youdontknow",
       "hltbHours": 14.61,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3953,7 +3953,7 @@
       "resultStatus": "no_winners",
       "resultLabel": "No winners",
       "hltbHours": 16.22,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -3972,7 +3972,7 @@
       "resultStatus": "won",
       "resultLabel": "Saikania",
       "hltbHours": 16.1,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKindChecked": true
     },
@@ -3990,7 +3990,7 @@
       "resultStatus": "won",
       "resultLabel": "Drain",
       "hltbHours": 7.5,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -4009,7 +4009,7 @@
       "resultStatus": "won",
       "resultLabel": "DeliberateTaco",
       "hltbHours": 13.3,
-      "points": 0,
+      "points": 25,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true
@@ -115493,6 +115493,6 @@
       "winDate": "2016-08-26T06:01:36.000Z"
     }
   ],
-  "savedAt": "2026-05-11T07:43:18.324375+00:00",
-  "mergedAt": "2026-05-11T07:43:18.324390+00:00"
+  "savedAt": "2026-05-11T07:49:31.208066+00:00",
+  "mergedAt": "2026-05-11T07:49:31.208077+00:00"
 }
