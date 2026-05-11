@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-11T06:27:47.930810+00:00",
+  "updatedAt": "2026-05-11T07:03:49.136897+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -6713,7 +6713,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-05-11T06:27:47.930774+00:00"
+      "checkedAt": "2026-05-11T07:03:49.136859+00:00"
     },
     {
       "username": "burntreynolds444",
@@ -8995,7 +8995,7 @@
       "achievementPercent": 0,
       "playtimeHours": 0.0,
       "error": null,
-      "checkedAt": "2026-05-11T06:27:47.930807+00:00",
+      "checkedAt": "2026-05-11T07:03:49.136893+00:00",
       "playtimeCheckedAt": "2026-05-11T06:27:47.697701+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -28655,7 +28655,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-05-11T06:27:47.930797+00:00"
+      "checkedAt": "2026-05-11T07:03:49.136882+00:00"
     },
     {
       "username": "Saikania",
@@ -68527,12 +68527,12 @@
   "activeOnly": true,
   "refreshedMonth": "2026-05",
   "refreshedScope": "month",
-  "libraryUpdatedAt": "2026-05-11T06:27:47.702220+00:00",
+  "libraryUpdatedAt": "2026-05-11T07:03:48.929030+00:00",
   "libraryStats": {
-    "durationSeconds": 2.74,
+    "durationSeconds": 0.15,
     "targetProfiles": 3,
-    "refreshedProfiles": 3,
-    "reusedProfiles": 0,
+    "refreshedProfiles": 0,
+    "reusedProfiles": 3,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
@@ -68540,7 +68540,7 @@
     "totalPlaytimeRows": 86338
   },
   "stats": {
-    "durationSeconds": 2.94,
+    "durationSeconds": 0.35,
     "targetWins": 3,
     "uniqueProgressTargets": 3,
     "libraryPlaytimeHits": 3,
