@@ -1,3 +1,33 @@
+import {
+  addMonths,
+  cloneState,
+  differenceInDays,
+  escapeHtml,
+  formatDate,
+  formatDateTime,
+  formatDurationSeconds,
+  formatHours,
+  formatISODateLocal,
+  formatMonthKey,
+  getAchievementPercent,
+  monthKey,
+  normalizeGameTitle,
+  parseDate,
+  parseSteamAppId,
+  setDayOfCurrentMonth,
+  shiftDate,
+  startOfCurrentMonth,
+  todayISO,
+  uid,
+} from "./client/utils.js";
+import {
+  getCycleKey,
+  getCycleMonthKeys,
+  getNextCycleExemptionInfo,
+  getPeriodInfo,
+  getRequiredHours,
+} from "./client/cycle-rules.js";
+
 const STORAGE_KEY = "akatsuki-monitor-state-v1";
 
 const defaultState = {
@@ -908,6 +938,8 @@ async function handleImageFallback(event) {
   image.replaceWith(placeholder);
 }
 
+window.handleImageFallback = handleImageFallback;
+
 function computeMemberBucketRows(isActiveMember) {
   const sortMode = isActiveMember ? elements.activeUsersSort?.value || "wins" : "wins";
   return state.members
@@ -1124,20 +1156,6 @@ function getResolvedGameAppId(game, syncedGiveaway) {
     parseSteamAppId(syncedGiveaway?.steamAppUrl || "") ||
     0
   );
-}
-
-function parseSteamAppId(url) {
-  const match = String(url || "").match(/\/(?:app|sub)\/(\d+)/i);
-  return match ? Number(match[1]) : 0;
-}
-
-function normalizeGameTitle(value) {
-  return String(value || "")
-    .normalize("NFKD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, " ")
-    .trim();
 }
 
 function buildGiveawayCreatorMarkup(win) {
@@ -2394,20 +2412,6 @@ function getWinReleaseDate(win, game) {
   return giveawayByGame?.releaseDate || "";
 }
 
-function getCycleMonthKeys(period) {
-  if (!period || period.kind !== "cycle") {
-    return [];
-  }
-
-  if (period.cycleNumber === 1) {
-    return [1, 2, 3].map((month) => `${period.year}-${String(month).padStart(2, "0")}`);
-  }
-  if (period.cycleNumber === 2) {
-    return [4, 5, 6].map((month) => `${period.year}-${String(month).padStart(2, "0")}`);
-  }
-  return [9, 10, 11].map((month) => `${period.year}-${String(month).padStart(2, "0")}`);
-}
-
 function getRenderableCycleMonths(cycle) {
   const months = Array.isArray(cycle?.months) ? cycle.months : [];
   const currentMonth = monthKey(state.settings.currentDate || "");
@@ -2437,26 +2441,6 @@ function getAvailableCycles() {
   }
 
   return Array.from(cyclesByKey.values()).sort((left, right) => right.year - left.year || right.cycleNumber - left.cycleNumber);
-}
-
-function getNextCycleExemptionInfo(cycleMonths) {
-  const lastMonth = cycleMonths[cycleMonths.length - 1];
-  if (!lastMonth) {
-    return {
-      key: "",
-      label: "the next month",
-      hasMandatoryGiveaway: false,
-    };
-  }
-
-  const [year, month] = lastMonth.split("-").map(Number);
-  const nextMonth = formatISODateLocal(new Date(year, month, 1, 12)).slice(0, 7);
-  const nextPeriod = getPeriodInfo(`${nextMonth}-01`);
-  return {
-    key: nextMonth,
-    label: nextPeriod.kind === "cycle" ? formatMonthKey(nextMonth) : nextPeriod.label,
-    hasMandatoryGiveaway: nextPeriod.kind === "cycle",
-  };
 }
 
 function buildCycleBestGifterAward(selectedCycle, cycleMonths, cycleGiveaways) {
@@ -2806,66 +2790,6 @@ function buildEvidenceNoteMarkup(note) {
   }
 
   return `<span class="meta-line">${escapeHtml(value)}</span>`;
-}
-
-function getRequiredHours(hltbHours, ruleMode) {
-  switch (ruleMode) {
-    case "custom-50":
-      return hltbHours * 0.5;
-    case "custom-75":
-      return hltbHours * 0.75;
-    case "custom-100":
-      return hltbHours;
-    case "standard-25":
-    default:
-      return hltbHours * 0.25;
-  }
-}
-
-function getPeriodInfo(dateInput) {
-  const date = parseDate(dateInput);
-  const month = date.getMonth();
-  const year = date.getFullYear();
-
-  if (month <= 2) {
-    return {
-      kind: "cycle",
-      label: `Cycle 1 (${year})`,
-      cycleNumber: 1,
-      monthPosition: month + 1,
-      year,
-    };
-  }
-
-  if (month >= 3 && month <= 5) {
-    return {
-      kind: "cycle",
-      label: `Cycle 2 (${year})`,
-      cycleNumber: 2,
-      monthPosition: month - 2,
-      year,
-    };
-  }
-
-  if (month === 6) {
-    return { kind: "special", label: `Summer event (${year})`, year };
-  }
-
-  if (month === 7) {
-    return { kind: "special", label: `Pause (${year})`, year };
-  }
-
-  if (month >= 8 && month <= 10) {
-    return {
-      kind: "cycle",
-      label: `Cycle 3 (${year})`,
-      cycleNumber: 3,
-      monthPosition: month - 7,
-      year,
-    };
-  }
-
-  return { kind: "special", label: `Secret Santa (${year})`, year };
 }
 
 function computeMinimumEntriesRequired() {
@@ -3322,17 +3246,6 @@ function getStableCycleMemberKey(memberId) {
   return rawKey ? normalizeGameTitle(rawKey).replace(/\s+/g, "-") : "";
 }
 
-function getCycleKey(selectedMonth) {
-  if (typeof selectedMonth === "string" && /^\d{4}-cycle-[1-3]$/.test(selectedMonth)) {
-    return selectedMonth;
-  }
-  const period = typeof selectedMonth === "string" ? getPeriodInfo(`${selectedMonth}-01`) : selectedMonth;
-  if (!period || period.kind !== "cycle") {
-    return "";
-  }
-  return `${period.year}-cycle-${period.cycleNumber}`;
-}
-
 function getCycleMemberStatus(memberId, selectedMonth) {
   const key = getCycleMemberOverrideKey(memberId, selectedMonth);
   if (!key) {
@@ -3734,14 +3647,6 @@ function buildMessageRow(colspan, title, description) {
   return `<tr><td colspan="${colspan}"><div class="empty-state"><strong>${escapeHtml(title)}</strong><span>${escapeHtml(description)}</span></div></td></tr>`;
 }
 
-function uid(prefix) {
-  return `${prefix}-${Math.random().toString(36).slice(2, 10)}`;
-}
-
-function monthKey(dateInput) {
-  return String(dateInput).slice(0, 7);
-}
-
 function getAvailableMonths() {
   return Array.from(
     new Set([
@@ -3777,70 +3682,6 @@ function compareMemberBucketRows(left, right, sortMode) {
     default:
       return right.totalWins - left.totalWins || right.totalPlaytime - left.totalPlaytime || compareMemberBucketRows(left, right, "name");
   }
-}
-
-function todayISO() {
-  return formatISODateLocal(new Date());
-}
-
-function startOfCurrentMonth() {
-  const date = new Date();
-  date.setDate(1);
-  return formatISODateLocal(date);
-}
-
-function setDayOfCurrentMonth(day) {
-  const date = new Date();
-  date.setDate(day);
-  return formatISODateLocal(date);
-}
-
-function shiftDate(dateInput, days) {
-  const date = parseDate(dateInput);
-  date.setDate(date.getDate() + days);
-  return formatISODateLocal(date);
-}
-
-function addMonths(dateInput, months) {
-  const date = parseDate(dateInput);
-  date.setMonth(date.getMonth() + months);
-  return formatISODateLocal(date);
-}
-
-function differenceInDays(futureDate, baseDate) {
-  const future = typeof futureDate === "string" ? parseDate(futureDate) : futureDate;
-  const base = typeof baseDate === "string" ? parseDate(baseDate) : baseDate;
-  const diff = future.getTime() - base.getTime();
-  return Math.ceil(diff / (1000 * 60 * 60 * 24));
-}
-
-function formatDate(dateInput) {
-  return parseDate(dateInput).toLocaleDateString("en-US", {
-    day: "2-digit",
-    month: "short",
-    year: "numeric",
-  });
-}
-
-function formatDateTime(dateInput) {
-  if (!dateInput) {
-    return "-";
-  }
-  return new Date(dateInput).toLocaleString("en-US");
-}
-
-function formatDurationSeconds(seconds) {
-  const value = Number(seconds);
-  if (!Number.isFinite(value)) {
-    return "-";
-  }
-  if (value < 1) {
-    return `${value.toFixed(2)}s`;
-  }
-  if (value < 10) {
-    return `${value.toFixed(1)}s`;
-  }
-  return `${Math.round(value)}s`;
 }
 
 function buildProgressStatsMarkup(stats = {}) {
@@ -3901,56 +3742,3 @@ function buildPlaytimeSourceLabel(progress) {
   return "";
 }
 
-function formatMonthKey(key) {
-  const [year, month] = key.split("-").map(Number);
-  return new Date(year, month - 1, 1).toLocaleDateString("en-US", {
-    month: "long",
-    year: "numeric",
-  });
-}
-
-function parseDate(dateInput) {
-  if (dateInput instanceof Date) {
-    return new Date(dateInput.getFullYear(), dateInput.getMonth(), dateInput.getDate(), 12);
-  }
-
-  const raw = String(dateInput);
-  if (raw.includes("T")) {
-    const parsed = new Date(raw);
-    return new Date(parsed.getFullYear(), parsed.getMonth(), parsed.getDate(), 12);
-  }
-
-  const [year, month, day] = raw.split("-").map(Number);
-  return new Date(year, month - 1, day, 12);
-}
-
-function formatISODateLocal(date) {
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const day = String(date.getDate()).padStart(2, "0");
-  return `${year}-${month}-${day}`;
-}
-
-function cloneState(value) {
-  return JSON.parse(JSON.stringify(value));
-}
-
-function formatHours(hours) {
-  return `${Number(hours).toFixed(1)}h`;
-}
-
-function getAchievementPercent(win, game) {
-  if (!game?.achievementsTotal) {
-    return win.proofProvided ? 100 : null;
-  }
-  return Math.round((Number(win.earnedAchievements || 0) / game.achievementsTotal) * 100);
-}
-
-function escapeHtml(value) {
-  return String(value)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#39;");
-}

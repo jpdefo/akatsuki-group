@@ -14,18 +14,19 @@
     <div class="app-shell">
       <header class="hero">
         <div>
-          <p class="eyebrow">Admin dashboard</p>
+          <p class="eyebrow">Monthly review</p>
           <h1>Akatsuki Monthly Progress</h1>
           <p class="hero-copy">
-            Monthly-only winner progress view with the same synced SteamGifts and Steam data.
+            Focused winner threshold review without cycle administration mixed into the page.
           </p>
         </div>
-        <div class="sync-actions">
-          <a class="button secondary" href="index.html">Overview dashboard</a>
+        <div class="hero-actions page-nav">
+          <a class="button secondary" href="index.html">Overview</a>
           <a class="button secondary" href="cycles.html">Cycles</a>
+          <a class="button secondary" href="monthly-progress.html" aria-current="page">Monthly</a>
           <a class="button secondary" href="active-users.html">Active users</a>
           <a class="button secondary" href="inactive-users.html">Inactive users</a>
-          <a class="button secondary" href="admin.html">Admin tools</a>
+          <a class="button secondary" href="admin.html">Admin</a>
         </div>
       </header>
 
@@ -99,51 +100,6 @@
           </div>
         </section>
 
-        <section class="card">
-          <div class="section-heading">
-            <div>
-              <h2>Cycle tracker</h2>
-              <p class="section-copy">
-                The selected month follows the Akatsuki 3-month cycle rules. Mark giveaways as extra when they should stay outside cycle obligations.
-              </p>
-            </div>
-            <div class="section-summary">
-              <p id="cycle-summary" class="section-copy"></p>
-            </div>
-          </div>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Member</th>
-                  <th>Wins before month</th>
-                  <th>Cycle wins</th>
-                  <th>Cycle GAs</th>
-                  <th>Extra GAs</th>
-                  <th>Required</th>
-                  <th>Participation</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody id="cycle-table"></tbody>
-            </table>
-          </div>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Creator</th>
-                  <th>Giveaway</th>
-                  <th>Month</th>
-                  <th>Kind</th>
-                  <th>Entries</th>
-                  <th>Track</th>
-                </tr>
-              </thead>
-              <tbody id="cycle-giveaways-table"></tbody>
-            </table>
-          </div>
-        </section>
       </main>
     </div>
 
@@ -154,6 +110,6 @@
       </div>
     </template>
 
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
   </body>
 </html>

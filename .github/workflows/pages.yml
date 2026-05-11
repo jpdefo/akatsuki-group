@@ -30,6 +30,9 @@ jobs:
       - name: Export static site
         run: python server.py --export-static --output-dir dist
 
+      - name: Validate static snapshot
+        run: python server.py --validate-static --output-dir dist
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 

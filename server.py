@@ -13,7 +13,7 @@ from html import unescape
 from http import HTTPStatus
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from shutil import copy2
+from shutil import copy2, copytree
 from urllib.error import HTTPError, URLError
 from urllib.parse import parse_qs, urlencode, urlparse
 from urllib.request import Request, urlopen
@@ -39,6 +39,41 @@ USER_AGENT = (
 )
 STEAM_API_BASE = "https://api.steampowered.com"
 HLTB_BASE = "https://howlongtobeat.com"
+SNAPSHOT_CONTRACT_VERSION = 1
+STATIC_FILE_NAMES = [
+    "admin.html",
+    "cycles.html",
+    "index.html",
+    "monthly-progress.html",
+    "app.js",
+    "styles.css",
+    "active-users.html",
+    "inactive-users.html",
+    "bookmarklet-helper.html",
+    "bookmarklet-helper.png",
+    "akatsuki.png",
+    "working-dashboard.png",
+]
+STATIC_DIRECTORIES = ["client"]
+PUBLIC_PAGE_FILES = [
+    "index.html",
+    "cycles.html",
+    "monthly-progress.html",
+    "active-users.html",
+    "inactive-users.html",
+    "admin.html",
+    "404.html",
+]
+PUBLIC_API_FILES = [
+    "steamgifts-sync.json",
+    "steam-progress.json",
+    "steam-library.json",
+    "dashboard.json",
+    "members.json",
+    "giveaways.json",
+    "overrides.json",
+    "snapshot.json",
+]
 
 
 def utc_now() -> str:
@@ -133,6 +168,149 @@ def normalize_overrides_payload(payload=None) -> dict:
             "cycleMembers": dict(raw_overrides.get("cycleMembers") or {}),
         },
     }
+
+
+def build_snapshot_manifest(
+    sync_export: dict,
+    progress_payload: dict,
+    library_payload: dict,
+    overrides_payload: dict,
+    dashboard_payload: dict,
+    members_payload: dict,
+    giveaways_payload: dict,
+) -> dict:
+    return {
+        "contractVersion": SNAPSHOT_CONTRACT_VERSION,
+        "generatedAt": utc_now(),
+        "pages": list(PUBLIC_PAGE_FILES),
+        "apiFiles": list(PUBLIC_API_FILES),
+        "frontend": {
+            "files": list(STATIC_FILE_NAMES),
+            "directories": list(STATIC_DIRECTORIES),
+        },
+        "source": {
+            "steamgiftsUpdatedAt": sync_export.get("syncedAt") or sync_export.get("savedAt") or sync_export.get("updatedAt"),
+            "steamProgressUpdatedAt": progress_payload.get("updatedAt"),
+            "steamLibraryUpdatedAt": library_payload.get("updatedAt"),
+            "overridesSavedAt": overrides_payload.get("savedAt"),
+        },
+        "counts": {
+            "members": len(sync_export.get("members", [])),
+            "activeMembers": members_payload.get("counts", {}).get("active", 0),
+            "inactiveMembers": members_payload.get("counts", {}).get("inactive", 0),
+            "giveaways": len(sync_export.get("giveaways", [])),
+            "wins": len(sync_export.get("wins", [])),
+            "dashboardGiveaways": len(dashboard_payload.get("recentGiveaways", [])),
+            "publicGiveawayRows": len(giveaways_payload.get("results", [])),
+        },
+    }
+
+
+def validate_static_site(output_dir: Path) -> None:
+    errors: list[str] = []
+
+    def expect_path(path: Path, label: str) -> None:
+        if not path.exists():
+            errors.append(f"Missing {label}: {path}")
+
+    def read_mapping(path: Path, label: str) -> dict | None:
+        if not path.exists():
+            errors.append(f"Missing {label}: {path}")
+            return None
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as error:
+            errors.append(f"Invalid JSON in {label}: {error}")
+            return None
+        if not isinstance(payload, dict):
+            errors.append(f"Expected {label} to be a JSON object.")
+            return None
+        return payload
+
+    def expect_list(payload: dict | None, key: str, label: str) -> None:
+        if payload is None:
+            return
+        if not isinstance(payload.get(key), list):
+            errors.append(f"Expected {label}.{key} to be a list.")
+
+    for file_name in PUBLIC_PAGE_FILES:
+        expect_path(output_dir / file_name, f"public page {file_name}")
+    for file_name in STATIC_FILE_NAMES:
+        expect_path(output_dir / file_name, f"static file {file_name}")
+    for directory_name in STATIC_DIRECTORIES:
+        path = output_dir / directory_name
+        if not path.is_dir():
+            errors.append(f"Missing static directory {directory_name}: {path}")
+
+    api_dir = output_dir / "api"
+    if not api_dir.is_dir():
+        errors.append(f"Missing API directory: {api_dir}")
+
+    sync_export = read_mapping(api_dir / "steamgifts-sync.json", "steamgifts-sync.json")
+    progress_payload = read_mapping(api_dir / "steam-progress.json", "steam-progress.json")
+    library_payload = read_mapping(api_dir / "steam-library.json", "steam-library.json")
+    dashboard_payload = read_mapping(api_dir / "dashboard.json", "dashboard.json")
+    members_payload = read_mapping(api_dir / "members.json", "members.json")
+    giveaways_payload = read_mapping(api_dir / "giveaways.json", "giveaways.json")
+    overrides_payload = read_mapping(api_dir / "overrides.json", "overrides.json")
+    manifest_payload = read_mapping(api_dir / "snapshot.json", "snapshot.json")
+
+    expect_list(sync_export, "members", "steamgifts-sync.json")
+    expect_list(sync_export, "giveaways", "steamgifts-sync.json")
+    expect_list(sync_export, "wins", "steamgifts-sync.json")
+    expect_list(progress_payload, "progress", "steam-progress.json")
+    expect_list(library_payload, "profiles", "steam-library.json")
+    expect_list(library_payload, "playtimes", "steam-library.json")
+    expect_list(dashboard_payload, "recentGiveaways", "dashboard.json")
+    expect_list(members_payload, "active", "members.json")
+    expect_list(members_payload, "inactive", "members.json")
+    expect_list(giveaways_payload, "results", "giveaways.json")
+
+    if overrides_payload is not None and not isinstance(overrides_payload.get("overrides"), dict):
+        errors.append("Expected overrides.json.overrides to be an object.")
+
+    if manifest_payload is not None:
+        if manifest_payload.get("contractVersion") != SNAPSHOT_CONTRACT_VERSION:
+            errors.append("snapshot.json has an unexpected contractVersion.")
+        if sorted(manifest_payload.get("pages") or []) != sorted(PUBLIC_PAGE_FILES):
+            errors.append("snapshot.json pages do not match the exported public pages.")
+        if sorted(manifest_payload.get("apiFiles") or []) != sorted(PUBLIC_API_FILES):
+            errors.append("snapshot.json apiFiles do not match the exported API payloads.")
+        if not isinstance(manifest_payload.get("counts"), dict):
+            errors.append("Expected snapshot.json.counts to be an object.")
+
+    if manifest_payload is not None and sync_export is not None:
+        counts = manifest_payload.get("counts") or {}
+        if counts.get("members") != len(sync_export.get("members", [])):
+            errors.append("snapshot.json member count does not match steamgifts-sync.json.")
+        if counts.get("giveaways") != len(sync_export.get("giveaways", [])):
+            errors.append("snapshot.json giveaway count does not match steamgifts-sync.json.")
+        if counts.get("wins") != len(sync_export.get("wins", [])):
+            errors.append("snapshot.json win count does not match steamgifts-sync.json.")
+
+    if manifest_payload is not None and members_payload is not None:
+        counts = manifest_payload.get("counts") or {}
+        member_counts = members_payload.get("counts") or {}
+        if counts.get("activeMembers") != member_counts.get("active"):
+            errors.append("snapshot.json active member count does not match members.json.")
+        if counts.get("inactiveMembers") != member_counts.get("inactive"):
+            errors.append("snapshot.json inactive member count does not match members.json.")
+
+    if manifest_payload is not None and giveaways_payload is not None and dashboard_payload is not None:
+        counts = manifest_payload.get("counts") or {}
+        if counts.get("publicGiveawayRows") != len(giveaways_payload.get("results", [])):
+            errors.append("snapshot.json publicGiveawayRows does not match giveaways.json.")
+        if counts.get("dashboardGiveaways") != len(dashboard_payload.get("recentGiveaways", [])):
+            errors.append("snapshot.json dashboardGiveaways does not match dashboard.json.")
+
+    if errors:
+        raise SystemExit("Static site validation failed:\n - " + "\n - ".join(errors))
+
+    print(
+        f"Validated static site snapshot at {output_dir}:"
+        f" {len(PUBLIC_PAGE_FILES)} pages,"
+        f" {len(PUBLIC_API_FILES)} API payloads."
+    )
 
 
 def build_media_lookup(media_cache: dict) -> dict[int, dict]:
@@ -1675,6 +1853,7 @@ class Handler(SimpleHTTPRequestHandler):
 def main() -> None:
     parser = argparse.ArgumentParser(description="Akatsuki Monitor server utilities")
     parser.add_argument("--export-static", action="store_true", help="Export a static site for GitHub Pages")
+    parser.add_argument("--validate-static", action="store_true", help="Validate the exported static snapshot contract")
     parser.add_argument("--output-dir", default=str(STATIC_EXPORT_DIR), help="Static export output directory")
     parser.add_argument("--merge-sync-file", help="Merge a SteamGifts sync JSON file into data/steamgifts-sync.json")
     parser.add_argument("--hydrate-sync-media", action="store_true", help="Fetch missing cached media and release dates for SteamGifts wins")
@@ -1749,6 +1928,10 @@ def main() -> None:
         export_static_site(Path(args.output_dir))
         performed_task = True
 
+    if args.validate_static:
+        validate_static_site(Path(args.output_dir))
+        performed_task = True
+
     if performed_task:
         return
 
@@ -1768,29 +1951,29 @@ def export_static_site(output_dir: Path) -> None:
     dashboard_payload = build_dashboard_payload(sync_export, progress_payload, library_payload)
     members_payload = build_members_payload(sync_export)
     giveaways_payload = build_giveaways_payload(sync_export, progress_payload, library_payload, limit=24)
+    manifest_payload = build_snapshot_manifest(
+        sync_export,
+        progress_payload,
+        library_payload,
+        overrides_payload,
+        dashboard_payload,
+        members_payload,
+        giveaways_payload,
+    )
 
     output_dir.mkdir(parents=True, exist_ok=True)
     api_dir = output_dir / "api"
     api_dir.mkdir(parents=True, exist_ok=True)
 
-    static_files = [
-        "admin.html",
-        "cycles.html",
-        "index.html",
-        "monthly-progress.html",
-        "app.js",
-        "styles.css",
-        "active-users.html",
-        "inactive-users.html",
-        "bookmarklet-helper.html",
-        "bookmarklet-helper.png",
-        "akatsuki.png",
-        "working-dashboard.png",
-    ]
-    for file_name in static_files:
+    for file_name in STATIC_FILE_NAMES:
         source = BASE_DIR / file_name
         if source.exists():
             copy2(source, output_dir / file_name)
+
+    for directory_name in STATIC_DIRECTORIES:
+        source_dir = BASE_DIR / directory_name
+        if source_dir.exists():
+            copytree(source_dir, output_dir / directory_name, dirs_exist_ok=True)
 
     (output_dir / ".nojekyll").write_text("", encoding="utf-8")
     copy2(output_dir / "index.html", output_dir / "404.html")
@@ -1802,6 +1985,8 @@ def export_static_site(output_dir: Path) -> None:
     save_json(api_dir / "members.json", members_payload)
     save_json(api_dir / "giveaways.json", giveaways_payload)
     save_json(api_dir / "overrides.json", overrides_payload)
+    save_json(api_dir / "snapshot.json", manifest_payload)
+    validate_static_site(output_dir)
     print(f"Static site exported to {output_dir}")
 
 

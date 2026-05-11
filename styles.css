@@ -89,6 +89,18 @@ h2 {
   justify-content: flex-end;
 }
 
+.page-nav {
+  gap: 10px;
+}
+
+.page-nav .button[aria-current="page"] {
+  background: rgba(110, 168, 254, 0.18);
+  border-color: rgba(110, 168, 254, 0.58);
+  color: var(--text);
+  box-shadow: inset 0 0 0 1px rgba(110, 168, 254, 0.18);
+  pointer-events: none;
+}
+
 .sync-hint {
   width: 100%;
   font-size: 0.82rem;

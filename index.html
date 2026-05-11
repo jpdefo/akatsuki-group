@@ -14,25 +14,25 @@
     <div class="app-shell">
       <header class="hero">
         <div>
-          <p class="eyebrow">Admin dashboard</p>
+          <p class="eyebrow">Overview</p>
           <div class="hero-title">
             <h1>Akatsuki Monitor</h1>
             <img class="hero-logo-inline" src="akatsuki.png" alt="Akatsuki" />
           </div>
           <p class="hero-copy">
-            Track only the monthly progress for Akatsuki winners.
+            Operational overview for monthly thresholds, synced group state, and recent activity.
           </p>
           <p class="hero-copy">
-            SteamGifts provides the winners and Steam provides the player progress.
-            This dashboard is focused on the monthly threshold only.
+            Use Monthly for focused threshold review, Cycles for obligation tracking, and Admin for publish operations.
           </p>
         </div>
-        <div class="hero-actions">
-          <a class="button secondary" href="cycles.html">Open cycles</a>
-          <a class="button secondary" href="active-users.html">Open active users</a>
-          <a class="button secondary" href="inactive-users.html">Open inactive users</a>
-          <a class="button secondary" href="monthly-progress.html">Open monthly-only view</a>
-          <a class="button secondary" href="admin.html">Admin tools</a>
+        <div class="hero-actions page-nav">
+          <a class="button secondary" href="index.html" aria-current="page">Overview</a>
+          <a class="button secondary" href="cycles.html">Cycles</a>
+          <a class="button secondary" href="monthly-progress.html">Monthly</a>
+          <a class="button secondary" href="active-users.html">Active users</a>
+          <a class="button secondary" href="inactive-users.html">Inactive users</a>
+          <a class="button secondary" href="admin.html">Admin</a>
         </div>
       </header>
 
@@ -160,6 +160,6 @@
       </div>
     </template>
 
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
   </body>
 </html>

@@ -344,6 +344,7 @@ try {
   }
 
   Invoke-CheckedExternal "Exporting static site snapshot..." { Invoke-Python @("server.py", "--export-static") }
+  Invoke-CheckedExternal "Validating static site snapshot..." { Invoke-Python @("server.py", "--validate-static") }
 
   if (Test-Path "data/steamgifts-sync.public.json") {
     Remove-Item "data/steamgifts-sync.public.json" -Force
