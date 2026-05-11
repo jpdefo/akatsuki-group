@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-11T15:33:40.841385+00:00",
+  "updatedAt": "2026-05-11T15:37:03.542964+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -6713,7 +6713,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-05-11T15:33:40.841359+00:00"
+      "checkedAt": "2026-05-11T15:37:03.542928+00:00"
     },
     {
       "username": "burntreynolds444",
@@ -8995,7 +8995,7 @@
       "achievementPercent": 0,
       "playtimeHours": 0.0,
       "error": null,
-      "checkedAt": "2026-05-11T07:03:49.136893+00:00",
+      "checkedAt": "2026-05-11T15:37:03.542960+00:00",
       "playtimeCheckedAt": "2026-05-11T06:27:47.697701+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -28655,7 +28655,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-05-11T15:33:40.841380+00:00"
+      "checkedAt": "2026-05-11T15:37:03.542951+00:00"
     },
     {
       "username": "Saikania",
@@ -40978,76 +40978,6 @@
       "url": "https://howlongtobeat.com/game/163844"
     },
     {
-      "title": "MOUSE: P.I. For Hire",
-      "appId": 2416450,
-      "hltbHours": 12.08,
-      "matchedTitle": "MOUSE: P.I. For Hire",
-      "url": "https://howlongtobeat.com/game/128648"
-    },
-    {
-      "title": "Indiana Jones and the Great Circle",
-      "appId": 2677660,
-      "hltbHours": 16.03,
-      "matchedTitle": "Indiana Jones and the Great Circle",
-      "url": "https://howlongtobeat.com/game/144234"
-    },
-    {
-      "title": "007 First Light",
-      "appId": 3768760,
-      "hltbHours": 0.0,
-      "matchedTitle": "007 First Light",
-      "url": "https://howlongtobeat.com/game/85276"
-    },
-    {
-      "title": "Stellar Blade",
-      "appId": 3489700,
-      "hltbHours": 22.74,
-      "matchedTitle": "Stellar Blade",
-      "url": "https://howlongtobeat.com/game/97758"
-    },
-    {
-      "title": "Crimson Desert",
-      "appId": 3321460,
-      "hltbHours": 62.73,
-      "matchedTitle": "Crimson Desert",
-      "url": "https://howlongtobeat.com/game/94122"
-    },
-    {
-      "title": "Total Chaos",
-      "appId": 2208350,
-      "hltbHours": 10.77,
-      "matchedTitle": "Total Chaos",
-      "url": "https://howlongtobeat.com/game/166129"
-    },
-    {
-      "title": "Marathon",
-      "appId": 3065800,
-      "hltbHours": 7.69,
-      "matchedTitle": "Marathon",
-      "url": "https://howlongtobeat.com/game/5609"
-    },
-    {
-      "title": "Planet of Lana II",
-      "appId": 2997230,
-      "hltbHours": 6.19,
-      "matchedTitle": "Planet of Lana II: Children of the Leaf",
-      "url": "https://howlongtobeat.com/game/169414"
-    },
-    {
-      "title": "Slay the Spire 2",
-      "appId": 2868840,
-      "hltbHours": 9.55,
-      "matchedTitle": "Slay the Spire II",
-      "url": "https://howlongtobeat.com/game/148484"
-    },
-    {
-      "title": "Esoteric Ebb",
-      "appId": 2057760,
-      "hltbHours": 22.05,
-      "matchedTitle": "Esoteric Ebb",
-      "url": "https://howlongtobeat.com/game/143794"
-    },
-    {
       "title": "Solasta II",
       "appId": 2975950,
       "hltbHours": 0.0,
@@ -41062,6 +40992,69 @@
       "url": "https://howlongtobeat.com/game/175948"
     },
     {
+      "title": "Esoteric Ebb",
+      "appId": 2057760,
+      "hltbHours": 22.05,
+      "matchedTitle": "Esoteric Ebb",
+      "url": "https://howlongtobeat.com/game/143794"
+    },
+    {
+      "title": "Total Chaos",
+      "appId": 2208350,
+      "hltbHours": 10.77,
+      "matchedTitle": "Total Chaos",
+      "url": "https://howlongtobeat.com/game/166129"
+    },
+    {
+      "title": "Planet of Lana II",
+      "appId": 2997230,
+      "hltbHours": 6.19,
+      "matchedTitle": "Planet of Lana II: Children of the Leaf",
+      "url": "https://howlongtobeat.com/game/169414"
+    },
+    {
+      "title": "Marathon",
+      "appId": 3065800,
+      "hltbHours": 7.69,
+      "matchedTitle": "Marathon",
+      "url": "https://howlongtobeat.com/game/5609"
+    },
+    {
+      "title": "Slay the Spire 2",
+      "appId": 2868840,
+      "hltbHours": 9.55,
+      "matchedTitle": "Slay the Spire II",
+      "url": "https://howlongtobeat.com/game/148484"
+    },
+    {
+      "title": "MOUSE: P.I. For Hire",
+      "appId": 2416450,
+      "hltbHours": 12.08,
+      "matchedTitle": "MOUSE: P.I. For Hire",
+      "url": "https://howlongtobeat.com/game/128648"
+    },
+    {
+      "title": "Indiana Jones and the Great Circle",
+      "appId": 2677660,
+      "hltbHours": 16.03,
+      "matchedTitle": "Indiana Jones and the Great Circle",
+      "url": "https://howlongtobeat.com/game/144234"
+    },
+    {
+      "title": "Stellar Blade",
+      "appId": 3489700,
+      "hltbHours": 22.74,
+      "matchedTitle": "Stellar Blade",
+      "url": "https://howlongtobeat.com/game/97758"
+    },
+    {
+      "title": "007 First Light",
+      "appId": 3768760,
+      "hltbHours": 0.0,
+      "matchedTitle": "007 First Light",
+      "url": "https://howlongtobeat.com/game/85276"
+    },
+    {
       "title": "Mewgenics",
       "appId": 686060,
       "hltbHours": 72.35,
@@ -41069,11 +41062,11 @@
       "url": "https://howlongtobeat.com/game/135404"
     },
     {
-      "title": "Angeline Era",
-      "appId": 2393920,
-      "hltbHours": 14.32,
-      "matchedTitle": "Angeline Era",
-      "url": "https://howlongtobeat.com/game/129852"
+      "title": "Crimson Desert",
+      "appId": 3321460,
+      "hltbHours": 62.73,
+      "matchedTitle": "Crimson Desert",
+      "url": "https://howlongtobeat.com/game/94122"
     },
     {
       "title": "Little Nightmares III",
@@ -41083,48 +41076,6 @@
       "url": "https://howlongtobeat.com/game/134553"
     },
     {
-      "title": "Cairn",
-      "appId": 1588550,
-      "hltbHours": 11.87,
-      "matchedTitle": "Cairn",
-      "url": "https://howlongtobeat.com/game/151883"
-    },
-    {
-      "title": "ROMEO IS A DEAD MAN",
-      "appId": 3050900,
-      "hltbHours": 13.04,
-      "matchedTitle": "Romeo is a Dead Man",
-      "url": "https://howlongtobeat.com/game/169133"
-    },
-    {
-      "title": "Mafia: The Old Country",
-      "appId": 1941540,
-      "hltbHours": 12.27,
-      "matchedTitle": "Mafia: The Old Country",
-      "url": "https://howlongtobeat.com/game/155658"
-    },
-    {
-      "title": "Once Upon A KATAMARI",
-      "appId": 1880620,
-      "hltbHours": 7.29,
-      "matchedTitle": "Once Upon a KATAMARI",
-      "url": "https://howlongtobeat.com/game/171891"
-    },
-    {
-      "title": "Life is Strange: Reunion",
-      "appId": 2624870,
-      "hltbHours": 9.41,
-      "matchedTitle": "Life Is Strange: Reunion",
-      "url": "https://howlongtobeat.com/game/180400"
-    },
-    {
-      "title": "REANIMAL",
-      "appId": 2129530,
-      "hltbHours": 4.55,
-      "matchedTitle": "Reanimal",
-      "url": "https://howlongtobeat.com/game/155644"
-    },
-    {
       "title": "Legacy of Kain: Defiance Remastered",
       "appId": 3747730,
       "hltbHours": 9.92,
@@ -41132,11 +41083,11 @@
       "url": "https://howlongtobeat.com/game/181978"
     },
     {
-      "title": "Quarantine Zone: The Last Check",
-      "appId": 3419520,
-      "hltbHours": 9.33,
-      "matchedTitle": "Quarantine Zone: The Last Check",
-      "url": "https://howlongtobeat.com/game/172920"
+      "title": "Angeline Era",
+      "appId": 2393920,
+      "hltbHours": 14.32,
+      "matchedTitle": "Angeline Era",
+      "url": "https://howlongtobeat.com/game/129852"
     },
     {
       "title": "Mewgenics",
@@ -41146,11 +41097,60 @@
       "url": "https://howlongtobeat.com/game/135404"
     },
     {
+      "title": "Life is Strange: Reunion",
+      "appId": 2624870,
+      "hltbHours": 9.41,
+      "matchedTitle": "Life Is Strange: Reunion",
+      "url": "https://howlongtobeat.com/game/180400"
+    },
+    {
+      "title": "ROMEO IS A DEAD MAN",
+      "appId": 3050900,
+      "hltbHours": 13.04,
+      "matchedTitle": "Romeo is a Dead Man",
+      "url": "https://howlongtobeat.com/game/169133"
+    },
+    {
+      "title": "Once Upon A KATAMARI",
+      "appId": 1880620,
+      "hltbHours": 7.29,
+      "matchedTitle": "Once Upon a KATAMARI",
+      "url": "https://howlongtobeat.com/game/171891"
+    },
+    {
+      "title": "Quarantine Zone: The Last Check",
+      "appId": 3419520,
+      "hltbHours": 9.33,
+      "matchedTitle": "Quarantine Zone: The Last Check",
+      "url": "https://howlongtobeat.com/game/172920"
+    },
+    {
+      "title": "Cairn",
+      "appId": 1588550,
+      "hltbHours": 11.87,
+      "matchedTitle": "Cairn",
+      "url": "https://howlongtobeat.com/game/151883"
+    },
+    {
+      "title": "Mafia: The Old Country",
+      "appId": 1941540,
+      "hltbHours": 12.27,
+      "matchedTitle": "Mafia: The Old Country",
+      "url": "https://howlongtobeat.com/game/155658"
+    },
+    {
       "title": "Cast n Chill",
       "appId": 3483740,
       "hltbHours": 17.03,
       "matchedTitle": "Cast n Chill",
       "url": "https://howlongtobeat.com/game/169433"
+    },
+    {
+      "title": "REANIMAL",
+      "appId": 2129530,
+      "hltbHours": 4.55,
+      "matchedTitle": "Reanimal",
+      "url": "https://howlongtobeat.com/game/155644"
     },
     {
       "title": "Terminator 2D: NO FATE",
@@ -41167,32 +41167,11 @@
       "url": "https://howlongtobeat.com/game/7676"
     },
     {
-      "title": "CODE VEIN II",
-      "appId": 2362060,
-      "hltbHours": 33.45,
-      "matchedTitle": "Code Vein II",
-      "url": "https://howlongtobeat.com/game/169252"
-    },
-    {
-      "title": "Dispatch",
-      "appId": 2592160,
-      "hltbHours": 8.55,
-      "matchedTitle": "Dispatch",
-      "url": "https://howlongtobeat.com/game/160618"
-    },
-    {
-      "title": "Cronos: The New Dawn",
-      "appId": 2101960,
-      "hltbHours": 14.61,
-      "matchedTitle": "Cronos: The New Dawn",
-      "url": "https://howlongtobeat.com/game/158246"
-    },
-    {
-      "title": "Terminator 2D: NO FATE",
-      "appId": 1718460,
-      "hltbHours": 1.22,
-      "matchedTitle": "Terminator 2D: No Fate",
-      "url": "https://howlongtobeat.com/game/164584"
+      "title": "FINAL FANTASY TACTICS - The Ivalice C...",
+      "appId": 1004640,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "Cast n Chill",
@@ -41202,6 +41181,34 @@
       "url": "https://howlongtobeat.com/game/169433"
     },
     {
+      "title": "Styx: Blades of Greed",
+      "appId": 3290690,
+      "hltbHours": 14.35,
+      "matchedTitle": "Styx: Blades of Greed",
+      "url": "https://howlongtobeat.com/game/164924"
+    },
+    {
+      "title": "Terminator 2D: NO FATE",
+      "appId": 1718460,
+      "hltbHours": 1.22,
+      "matchedTitle": "Terminator 2D: No Fate",
+      "url": "https://howlongtobeat.com/game/164584"
+    },
+    {
+      "title": "Cronos: The New Dawn",
+      "appId": 2101960,
+      "hltbHours": 14.61,
+      "matchedTitle": "Cronos: The New Dawn",
+      "url": "https://howlongtobeat.com/game/158246"
+    },
+    {
+      "title": "Dispatch",
+      "appId": 2592160,
+      "hltbHours": 8.55,
+      "matchedTitle": "Dispatch",
+      "url": "https://howlongtobeat.com/game/160618"
+    },
+    {
       "title": "The First Berserker: Khazan",
       "appId": 2680010,
       "hltbHours": 34.72,
@@ -41209,11 +41216,11 @@
       "url": "https://howlongtobeat.com/game/141849"
     },
     {
-      "title": "Styx: Blades of Greed",
-      "appId": 3290690,
-      "hltbHours": 14.35,
-      "matchedTitle": "Styx: Blades of Greed",
-      "url": "https://howlongtobeat.com/game/164924"
+      "title": "The Elder Scrolls IV: Oblivion Remast...",
+      "appId": 2623190,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "Eriksholm: The Stolen Dream",
@@ -41230,25 +41237,18 @@
       "url": "https://howlongtobeat.com/game/97758"
     },
     {
+      "title": "CODE VEIN II",
+      "appId": 2362060,
+      "hltbHours": 33.45,
+      "matchedTitle": "Code Vein II",
+      "url": "https://howlongtobeat.com/game/169252"
+    },
+    {
       "title": "BALL x PIT",
       "appId": 2062430,
       "hltbHours": 19.0,
       "matchedTitle": "BALL x PIT",
       "url": "https://howlongtobeat.com/game/169298"
-    },
-    {
-      "title": "Cronos: The New Dawn",
-      "appId": 2101960,
-      "hltbHours": 14.61,
-      "matchedTitle": "Cronos: The New Dawn",
-      "url": "https://howlongtobeat.com/game/158246"
-    },
-    {
-      "title": "Indiana Jones and the Great Circle",
-      "appId": 2677660,
-      "hltbHours": 16.03,
-      "matchedTitle": "Indiana Jones and the Great Circle",
-      "url": "https://howlongtobeat.com/game/144234"
     },
     {
       "title": "007 First Light",
@@ -41258,18 +41258,18 @@
       "url": "https://howlongtobeat.com/game/85276"
     },
     {
-      "title": "Little Nightmares III",
-      "appId": 1392860,
-      "hltbHours": 5.99,
-      "matchedTitle": "Little Nightmares III",
-      "url": "https://howlongtobeat.com/game/134553"
+      "title": "Indiana Jones and the Great Circle",
+      "appId": 2677660,
+      "hltbHours": 16.03,
+      "matchedTitle": "Indiana Jones and the Great Circle",
+      "url": "https://howlongtobeat.com/game/144234"
     },
     {
-      "title": "Hollow Knight: Silksong",
-      "appId": 1030300,
-      "hltbHours": 28.2,
-      "matchedTitle": "Hollow Knight: Silksong",
-      "url": "https://howlongtobeat.com/game/65945"
+      "title": "Cronos: The New Dawn",
+      "appId": 2101960,
+      "hltbHours": 14.61,
+      "matchedTitle": "Cronos: The New Dawn",
+      "url": "https://howlongtobeat.com/game/158246"
     },
     {
       "title": "Into the Dead: Our Darkest Days",
@@ -41279,11 +41279,11 @@
       "url": "https://howlongtobeat.com/game/143906"
     },
     {
-      "title": "MARVEL Cosmic Invasion",
-      "appId": 2753970,
-      "hltbHours": 3.54,
-      "matchedTitle": "Marvel Cosmic Invasion",
-      "url": "https://howlongtobeat.com/game/165834"
+      "title": "Hollow Knight: Silksong",
+      "appId": 1030300,
+      "hltbHours": 28.2,
+      "matchedTitle": "Hollow Knight: Silksong",
+      "url": "https://howlongtobeat.com/game/65945"
     },
     {
       "title": "Hollow Knight: Silksong",
@@ -41293,11 +41293,25 @@
       "url": "https://howlongtobeat.com/game/65945"
     },
     {
+      "title": "Little Nightmares III",
+      "appId": 1392860,
+      "hltbHours": 5.99,
+      "matchedTitle": "Little Nightmares III",
+      "url": "https://howlongtobeat.com/game/134553"
+    },
+    {
       "title": "DOOM: The Dark Ages",
       "appId": 3017860,
       "hltbHours": 14.2,
       "matchedTitle": "Doom: The Dark Ages",
       "url": "https://howlongtobeat.com/game/151986"
+    },
+    {
+      "title": "MARVEL Cosmic Invasion",
+      "appId": 2753970,
+      "hltbHours": 3.54,
+      "matchedTitle": "Marvel Cosmic Invasion",
+      "url": "https://howlongtobeat.com/game/165834"
     },
     {
       "title": "METAL GEAR SOLID Δ: SNAKE EATER",
@@ -41314,25 +41328,18 @@
       "url": "https://howlongtobeat.com/game/160618"
     },
     {
-      "title": "Escape From Duckov",
-      "appId": 3167020,
-      "hltbHours": 40.3,
-      "matchedTitle": "Escape From Duckov",
-      "url": "https://howlongtobeat.com/game/174893"
+      "title": "PowerWash Simulator 2",
+      "appId": 2968420,
+      "hltbHours": 35.47,
+      "matchedTitle": "PowerWash Simulator 2",
+      "url": "https://howlongtobeat.com/game/165177"
     },
     {
-      "title": "The Killing Antidote",
-      "appId": 2254890,
-      "hltbHours": 10.0,
-      "matchedTitle": "The Killing Antidote",
-      "url": "https://howlongtobeat.com/game/159582"
-    },
-    {
-      "title": "Dispatch",
-      "appId": 2592160,
-      "hltbHours": 8.55,
-      "matchedTitle": "Dispatch",
-      "url": "https://howlongtobeat.com/game/160618"
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "appId": 3527760,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "LET IT DIE: INFERNO",
@@ -41342,6 +41349,27 @@
       "url": "https://howlongtobeat.com/game/174946"
     },
     {
+      "title": "Star Birds",
+      "appId": 2719750,
+      "hltbHours": 0.0,
+      "matchedTitle": "Star Birds",
+      "url": "https://howlongtobeat.com/game/152044"
+    },
+    {
+      "title": "The Killing Antidote",
+      "appId": 2254890,
+      "hltbHours": 10.0,
+      "matchedTitle": "The Killing Antidote",
+      "url": "https://howlongtobeat.com/game/159582"
+    },
+    {
+      "title": "The Séance of Blake Manor",
+      "appId": 1395520,
+      "hltbHours": 14.76,
+      "matchedTitle": "The Séance of Blake Manor",
+      "url": "https://howlongtobeat.com/game/165387"
+    },
+    {
       "title": "Tales of Xillia Remastered",
       "appId": 2246670,
       "hltbHours": 30.19,
@@ -41349,11 +41377,18 @@
       "url": "https://howlongtobeat.com/game/172945"
     },
     {
-      "title": "Star Birds",
-      "appId": 2719750,
-      "hltbHours": 0.0,
-      "matchedTitle": "Star Birds",
-      "url": "https://howlongtobeat.com/game/152044"
+      "title": "Escape From Duckov",
+      "appId": 3167020,
+      "hltbHours": 40.3,
+      "matchedTitle": "Escape From Duckov",
+      "url": "https://howlongtobeat.com/game/174893"
+    },
+    {
+      "title": "Dispatch",
+      "appId": 2592160,
+      "hltbHours": 8.55,
+      "matchedTitle": "Dispatch",
+      "url": "https://howlongtobeat.com/game/160618"
     },
     {
       "title": "Titan Quest II",
@@ -41377,13 +41412,6 @@
       "url": "https://howlongtobeat.com/game/165177"
     },
     {
-      "title": "The Séance of Blake Manor",
-      "appId": 1395520,
-      "hltbHours": 14.76,
-      "matchedTitle": "The Séance of Blake Manor",
-      "url": "https://howlongtobeat.com/game/165387"
-    },
-    {
       "title": "Hollow Knight: Silksong",
       "appId": 1030300,
       "hltbHours": 28.2,
@@ -41391,29 +41419,8 @@
       "url": "https://howlongtobeat.com/game/65945"
     },
     {
-      "title": "PowerWash Simulator 2",
-      "appId": 2968420,
-      "hltbHours": 35.47,
-      "matchedTitle": "PowerWash Simulator 2",
-      "url": "https://howlongtobeat.com/game/165177"
-    },
-    {
-      "title": "Horizon Forbidden West Complete Edition",
-      "appId": 2420110,
-      "hltbHours": 48.23,
-      "matchedTitle": "Horizon Forbidden West - Complete Edition",
-      "url": "https://howlongtobeat.com/game/139665"
-    },
-    {
-      "title": "Mafia: The Old Country",
-      "appId": 1941540,
-      "hltbHours": 12.27,
-      "matchedTitle": "Mafia: The Old Country",
-      "url": "https://howlongtobeat.com/game/155658"
-    },
-    {
-      "title": "CRISIS CORE –FINAL FANTASY VII– REUNION",
-      "appId": 1608070,
+      "title": "RAIDOU Remastered: The Mystery of the...",
+      "appId": 2288350,
       "hltbHours": null,
       "matchedTitle": "",
       "url": ""
@@ -41426,60 +41433,11 @@
       "url": "https://howlongtobeat.com/game/160618"
     },
     {
-      "title": "Herdling",
-      "appId": 3047750,
-      "hltbHours": 3.34,
-      "matchedTitle": "Herdling",
-      "url": "https://howlongtobeat.com/game/155654"
-    },
-    {
-      "title": "Titan Quest II",
-      "appId": 1154030,
-      "hltbHours": 12.55,
-      "matchedTitle": "Titan Quest II",
-      "url": "https://howlongtobeat.com/game/132803"
-    },
-    {
-      "title": "Like a Dragon: Pirate Yakuza in Hawaii",
-      "appId": 3061810,
-      "hltbHours": 17.24,
-      "matchedTitle": "Like a Dragon: Pirate Yakuza in Hawaii",
-      "url": "https://howlongtobeat.com/game/157123"
-    },
-    {
-      "title": "Cronos: The New Dawn",
-      "appId": 2101960,
-      "hltbHours": 14.61,
-      "matchedTitle": "Cronos: The New Dawn",
-      "url": "https://howlongtobeat.com/game/158246"
-    },
-    {
-      "title": "Atomic Heart",
-      "appId": 668580,
-      "hltbHours": 16.22,
-      "matchedTitle": "Atomic Heart",
-      "url": "https://howlongtobeat.com/game/56297"
-    },
-    {
-      "title": "Vampire: The Masquerade - Bloodlines 2",
-      "appId": 532790,
-      "hltbHours": 16.1,
-      "matchedTitle": "Vampire: The Masquerade - Bloodlines 2",
-      "url": "https://howlongtobeat.com/game/65968"
-    },
-    {
-      "title": "Clair Obscur: Expedition 33",
-      "appId": 1903340,
-      "hltbHours": 29.2,
-      "matchedTitle": "Clair Obscur: Expedition 33",
-      "url": "https://howlongtobeat.com/game/152016"
-    },
-    {
-      "title": "Alien: Rogue Incursion Evolved Edition",
-      "appId": 3655390,
-      "hltbHours": 7.5,
-      "matchedTitle": "Alien: Rogue Incursion",
-      "url": "https://howlongtobeat.com/game/151312"
+      "title": "LEGO Party!",
+      "appId": 1969370,
+      "hltbHours": 3.84,
+      "matchedTitle": "Lego Party!",
+      "url": "https://howlongtobeat.com/game/169264"
     },
     {
       "title": "Lost Eidolons: Veil of the Witch",
@@ -41489,130 +41447,11 @@
       "url": "https://howlongtobeat.com/game/137348"
     },
     {
-      "title": "LEGO Party!",
-      "appId": 1969370,
-      "hltbHours": 3.84,
-      "matchedTitle": "Lego Party!",
-      "url": "https://howlongtobeat.com/game/169264"
-    },
-    {
-      "title": "Witchfire",
-      "appId": 3156770,
-      "hltbHours": 11.4,
-      "matchedTitle": "Witchfire",
-      "url": "https://howlongtobeat.com/game/51324"
-    },
-    {
-      "title": "Dying Light: The Beast",
-      "appId": 3008130,
-      "hltbHours": 18.46,
-      "matchedTitle": "Dying Light: The Beast",
-      "url": "https://howlongtobeat.com/game/155650"
-    },
-    {
-      "title": "Titan Quest II",
-      "appId": 1154030,
-      "hltbHours": 12.55,
-      "matchedTitle": "Titan Quest II",
-      "url": "https://howlongtobeat.com/game/132803"
-    },
-    {
-      "title": "Clair Obscur: Expedition 33",
-      "appId": 1903340,
-      "hltbHours": 29.2,
-      "matchedTitle": "Clair Obscur: Expedition 33",
-      "url": "https://howlongtobeat.com/game/152016"
-    },
-    {
-      "title": "TEVI",
-      "appId": 2230650,
-      "hltbHours": 22.86,
-      "matchedTitle": "TEVI",
-      "url": "https://howlongtobeat.com/game/130195"
-    },
-    {
-      "title": "Painkiller",
-      "appId": 2300120,
-      "hltbHours": 10.08,
-      "matchedTitle": "Painkiller",
-      "url": "https://howlongtobeat.com/game/6871"
-    },
-    {
-      "title": "The Alters",
-      "appId": 1601570,
-      "hltbHours": 19.33,
-      "matchedTitle": "The Alters",
-      "url": "https://howlongtobeat.com/game/109255"
-    },
-    {
-      "title": "Tainted Grail: The Fall of Avalon",
-      "appId": 1466060,
-      "hltbHours": 28.2,
-      "matchedTitle": "Tainted Grail: The Fall of Avalon",
-      "url": "https://howlongtobeat.com/game/93631"
-    },
-    {
-      "title": "The Last of Us Part I",
-      "appId": 1888930,
-      "hltbHours": 14.32,
-      "matchedTitle": "The Last of Us Part I",
-      "url": "https://howlongtobeat.com/game/109104"
-    },
-    {
-      "title": "Hollow Knight: Silksong",
-      "appId": 1030300,
-      "hltbHours": 28.2,
-      "matchedTitle": "Hollow Knight: Silksong",
-      "url": "https://howlongtobeat.com/game/65945"
-    },
-    {
-      "title": "Metaphor: ReFantazio",
-      "appId": 2679460,
-      "hltbHours": 65.19,
-      "matchedTitle": "Metaphor: ReFantazio",
-      "url": "https://howlongtobeat.com/game/129956"
-    },
-    {
-      "title": "The Last of Us Part II Remastered",
-      "appId": 2531310,
-      "hltbHours": 23.02,
-      "matchedTitle": "The Last of Us Part II Remastered",
-      "url": "https://howlongtobeat.com/game/141122"
-    },
-    {
-      "title": "Eriksholm: The Stolen Dream",
-      "appId": 2377280,
-      "hltbHours": 9.32,
-      "matchedTitle": "Eriksholm: The Stolen Dream",
-      "url": "https://howlongtobeat.com/game/151968"
-    },
-    {
-      "title": "Vampire: The Masquerade - Bloodlines 2",
-      "appId": 532790,
-      "hltbHours": 16.1,
-      "matchedTitle": "Vampire: The Masquerade - Bloodlines 2",
-      "url": "https://howlongtobeat.com/game/65968"
-    },
-    {
-      "title": "Sword of the Sea",
-      "appId": 2453160,
-      "hltbHours": 2.75,
-      "matchedTitle": "Sword of the Sea",
-      "url": "https://howlongtobeat.com/game/129238"
-    },
-    {
-      "title": "The King is Watching",
-      "appId": 2753900,
-      "hltbHours": 4.44,
-      "matchedTitle": "The King is Watching",
-      "url": "https://howlongtobeat.com/game/154243"
-    },
-    {
-      "title": "Blue Prince",
-      "appId": 1569580,
-      "hltbHours": 17.98,
-      "matchedTitle": "Blue Prince",
-      "url": "https://howlongtobeat.com/game/136426"
+      "title": "CRISIS CORE –FINAL FANTASY VII– REUNION",
+      "appId": 1608070,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "Mafia: The Old Country",
@@ -41622,11 +41461,417 @@
       "url": "https://howlongtobeat.com/game/155658"
     },
     {
+      "title": "Like a Dragon: Pirate Yakuza in Hawaii",
+      "appId": 3061810,
+      "hltbHours": 17.24,
+      "matchedTitle": "Like a Dragon: Pirate Yakuza in Hawaii",
+      "url": "https://howlongtobeat.com/game/157123"
+    },
+    {
+      "title": "Witchfire",
+      "appId": 3156770,
+      "hltbHours": 11.4,
+      "matchedTitle": "Witchfire",
+      "url": "https://howlongtobeat.com/game/51324"
+    },
+    {
+      "title": "Atomic Heart",
+      "appId": 668580,
+      "hltbHours": 16.22,
+      "matchedTitle": "Atomic Heart",
+      "url": "https://howlongtobeat.com/game/56297"
+    },
+    {
+      "title": "Horizon Forbidden West Complete Edition",
+      "appId": 2420110,
+      "hltbHours": 48.23,
+      "matchedTitle": "Horizon Forbidden West - Complete Edition",
+      "url": "https://howlongtobeat.com/game/139665"
+    },
+    {
+      "title": "Vampire: The Masquerade - Bloodlines 2",
+      "appId": 532790,
+      "hltbHours": 16.1,
+      "matchedTitle": "Vampire: The Masquerade - Bloodlines 2",
+      "url": "https://howlongtobeat.com/game/65968"
+    },
+    {
+      "title": "Alien: Rogue Incursion Evolved Edition",
+      "appId": 3655390,
+      "hltbHours": 7.5,
+      "matchedTitle": "Alien: Rogue Incursion",
+      "url": "https://howlongtobeat.com/game/151312"
+    },
+    {
+      "title": "Cronos: The New Dawn",
+      "appId": 2101960,
+      "hltbHours": 14.61,
+      "matchedTitle": "Cronos: The New Dawn",
+      "url": "https://howlongtobeat.com/game/158246"
+    },
+    {
+      "title": "Clair Obscur: Expedition 33",
+      "appId": 1903340,
+      "hltbHours": 29.2,
+      "matchedTitle": "Clair Obscur: Expedition 33",
+      "url": "https://howlongtobeat.com/game/152016"
+    },
+    {
+      "title": "Titan Quest II",
+      "appId": 1154030,
+      "hltbHours": 12.55,
+      "matchedTitle": "Titan Quest II",
+      "url": "https://howlongtobeat.com/game/132803"
+    },
+    {
+      "title": "Dying Light: The Beast",
+      "appId": 3008130,
+      "hltbHours": 18.46,
+      "matchedTitle": "Dying Light: The Beast",
+      "url": "https://howlongtobeat.com/game/155650"
+    },
+    {
+      "title": "Herdling",
+      "appId": 3047750,
+      "hltbHours": 3.34,
+      "matchedTitle": "Herdling",
+      "url": "https://howlongtobeat.com/game/155654"
+    },
+    {
+      "title": "The Last of Us Part II Remastered",
+      "appId": 2531310,
+      "hltbHours": 23.02,
+      "matchedTitle": "The Last of Us Part II Remastered",
+      "url": "https://howlongtobeat.com/game/141122"
+    },
+    {
+      "title": "TEVI",
+      "appId": 2230650,
+      "hltbHours": 22.86,
+      "matchedTitle": "TEVI",
+      "url": "https://howlongtobeat.com/game/130195"
+    },
+    {
+      "title": "The Last of Us Part I",
+      "appId": 1888930,
+      "hltbHours": 14.32,
+      "matchedTitle": "The Last of Us Part I",
+      "url": "https://howlongtobeat.com/game/109104"
+    },
+    {
+      "title": "Vampire: The Masquerade - Bloodlines 2",
+      "appId": 532790,
+      "hltbHours": 16.1,
+      "matchedTitle": "Vampire: The Masquerade - Bloodlines 2",
+      "url": "https://howlongtobeat.com/game/65968"
+    },
+    {
+      "title": "Tainted Grail: The Fall of Avalon",
+      "appId": 1466060,
+      "hltbHours": 28.2,
+      "matchedTitle": "Tainted Grail: The Fall of Avalon",
+      "url": "https://howlongtobeat.com/game/93631"
+    },
+    {
+      "title": "Clair Obscur: Expedition 33",
+      "appId": 1903340,
+      "hltbHours": 29.2,
+      "matchedTitle": "Clair Obscur: Expedition 33",
+      "url": "https://howlongtobeat.com/game/152016"
+    },
+    {
+      "title": "Metaphor: ReFantazio",
+      "appId": 2679460,
+      "hltbHours": 65.19,
+      "matchedTitle": "Metaphor: ReFantazio",
+      "url": "https://howlongtobeat.com/game/129956"
+    },
+    {
+      "title": "The Alters",
+      "appId": 1601570,
+      "hltbHours": 19.33,
+      "matchedTitle": "The Alters",
+      "url": "https://howlongtobeat.com/game/109255"
+    },
+    {
+      "title": "Painkiller",
+      "appId": 2300120,
+      "hltbHours": 10.08,
+      "matchedTitle": "Painkiller",
+      "url": "https://howlongtobeat.com/game/6871"
+    },
+    {
+      "title": "The King is Watching",
+      "appId": 2753900,
+      "hltbHours": 4.44,
+      "matchedTitle": "The King is Watching",
+      "url": "https://howlongtobeat.com/game/154243"
+    },
+    {
+      "title": "Eriksholm: The Stolen Dream",
+      "appId": 2377280,
+      "hltbHours": 9.32,
+      "matchedTitle": "Eriksholm: The Stolen Dream",
+      "url": "https://howlongtobeat.com/game/151968"
+    },
+    {
+      "title": "Blue Prince",
+      "appId": 1569580,
+      "hltbHours": 17.98,
+      "matchedTitle": "Blue Prince",
+      "url": "https://howlongtobeat.com/game/136426"
+    },
+    {
+      "title": "Sword of the Sea",
+      "appId": 2453160,
+      "hltbHours": 2.75,
+      "matchedTitle": "Sword of the Sea",
+      "url": "https://howlongtobeat.com/game/129238"
+    },
+    {
+      "title": "Titan Quest II",
+      "appId": 1154030,
+      "hltbHours": 12.55,
+      "matchedTitle": "Titan Quest II",
+      "url": "https://howlongtobeat.com/game/132803"
+    },
+    {
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "appId": 3527760,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Hollow Knight: Silksong",
+      "appId": 1030300,
+      "hltbHours": 28.2,
+      "matchedTitle": "Hollow Knight: Silksong",
+      "url": "https://howlongtobeat.com/game/65945"
+    },
+    {
+      "title": "Mafia: The Old Country",
+      "appId": 1941540,
+      "hltbHours": 12.27,
+      "matchedTitle": "Mafia: The Old Country",
+      "url": "https://howlongtobeat.com/game/155658"
+    },
+    {
+      "title": "REMATCH",
+      "appId": 2138720,
+      "hltbHours": 13.22,
+      "matchedTitle": "REMATCH",
+      "url": "https://howlongtobeat.com/game/160620"
+    },
+    {
+      "title": "Still Wakes the Deep",
+      "appId": 1622910,
+      "hltbHours": 4.66,
+      "matchedTitle": "Still Wakes The Deep",
+      "url": "https://howlongtobeat.com/game/129960"
+    },
+    {
+      "title": "The Midnight Walk",
+      "appId": 2863640,
+      "hltbHours": 4.96,
+      "matchedTitle": "The Midnight Walk",
+      "url": "https://howlongtobeat.com/game/157305"
+    },
+    {
+      "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "appId": 1643320,
+      "hltbHours": 36.73,
+      "matchedTitle": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "url": "https://howlongtobeat.com/game/81121"
+    },
+    {
+      "title": "Until Dawn",
+      "appId": 2172010,
+      "hltbHours": 8.02,
+      "matchedTitle": "Until Dawn",
+      "url": "https://howlongtobeat.com/game/21924"
+    },
+    {
+      "title": "Schedule I",
+      "appId": 3164500,
+      "hltbHours": 16.41,
+      "matchedTitle": "Schedule I",
+      "url": "https://howlongtobeat.com/game/165767"
+    },
+    {
+      "title": "The Precinct",
+      "appId": 490110,
+      "hltbHours": 12.13,
+      "matchedTitle": "The Precinct",
+      "url": "https://howlongtobeat.com/game/129891"
+    },
+    {
+      "title": "Monster Train 2",
+      "appId": 2742830,
+      "hltbHours": 5.68,
+      "matchedTitle": "Monster Train 2",
+      "url": "https://howlongtobeat.com/game/164271"
+    },
+    {
+      "title": "Darkest Dungeon II",
+      "appId": 1940340,
+      "hltbHours": 30.85,
+      "matchedTitle": "Darkest Dungeon II",
+      "url": "https://howlongtobeat.com/game/85972"
+    },
+    {
+      "title": "Lies of P",
+      "appId": 1627720,
+      "hltbHours": 28.33,
+      "matchedTitle": "Lies of P",
+      "url": "https://howlongtobeat.com/game/92418"
+    },
+    {
+      "title": "Mafia: The Old Country",
+      "appId": 1941540,
+      "hltbHours": 12.27,
+      "matchedTitle": "Mafia: The Old Country",
+      "url": "https://howlongtobeat.com/game/155658"
+    },
+    {
+      "title": "9 Kings",
+      "appId": 2784470,
+      "hltbHours": 4.3,
+      "matchedTitle": "9 Kings",
+      "url": "https://howlongtobeat.com/game/164495"
+    },
+    {
       "title": "Gori: Cuddly Carnage",
       "appId": 1299690,
       "hltbHours": 7.21,
       "matchedTitle": "Gori: Cuddly Carnage",
       "url": "https://howlongtobeat.com/game/110165"
+    },
+    {
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "appId": 3527760,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Slitterhead",
+      "appId": 2631250,
+      "hltbHours": 13.55,
+      "matchedTitle": "Slitterhead",
+      "url": "https://howlongtobeat.com/game/101287"
+    },
+    {
+      "title": "Inscryption",
+      "appId": 1092790,
+      "hltbHours": 12.76,
+      "matchedTitle": "Inscryption",
+      "url": "https://howlongtobeat.com/game/91622"
+    },
+    {
+      "title": "God of War",
+      "appId": 1593500,
+      "hltbHours": 20.55,
+      "matchedTitle": "God of War",
+      "url": "https://howlongtobeat.com/game/38050"
+    },
+    {
+      "title": "DORAEMON STORY OF SEASONS: Friends of...",
+      "appId": 1492730,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Bionic Bay",
+      "appId": 1928690,
+      "hltbHours": 7.88,
+      "matchedTitle": "Bionic Bay",
+      "url": "https://howlongtobeat.com/game/123330"
+    },
+    {
+      "title": "Abathor",
+      "appId": 2295610,
+      "hltbHours": 8.41,
+      "matchedTitle": "Abathor",
+      "url": "https://howlongtobeat.com/game/154370"
+    },
+    {
+      "title": "Song of Nunu: A League of Legends Story",
+      "appId": 1333200,
+      "hltbHours": 6.16,
+      "matchedTitle": "Song of Nunu: A League of Legends Story",
+      "url": "https://howlongtobeat.com/game/100440"
+    },
+    {
+      "title": "The Killing Antidote",
+      "appId": 2254890,
+      "hltbHours": 10.0,
+      "matchedTitle": "The Killing Antidote",
+      "url": "https://howlongtobeat.com/game/159582"
+    },
+    {
+      "title": "Steel Seed",
+      "appId": 458430,
+      "hltbHours": 9.37,
+      "matchedTitle": "Steel Seed",
+      "url": "https://howlongtobeat.com/game/129898"
+    },
+    {
+      "title": "I Am Your Beast",
+      "appId": 1876590,
+      "hltbHours": 2.56,
+      "matchedTitle": "I Am Your Beast",
+      "url": "https://howlongtobeat.com/game/152030"
+    },
+    {
+      "title": "Metaphor: ReFantazio",
+      "appId": 2679460,
+      "hltbHours": 65.19,
+      "matchedTitle": "Metaphor: ReFantazio",
+      "url": "https://howlongtobeat.com/game/129956"
+    },
+    {
+      "title": "METAL GEAR SOLID Δ: SNAKE EATER",
+      "appId": 2417610,
+      "hltbHours": 12.18,
+      "matchedTitle": "Metal Gear Solid Δ: Snake Eater",
+      "url": "https://howlongtobeat.com/game/129234"
+    },
+    {
+      "title": "Stellar Blade",
+      "appId": 3489700,
+      "hltbHours": 22.74,
+      "matchedTitle": "Stellar Blade",
+      "url": "https://howlongtobeat.com/game/97758"
+    },
+    {
+      "title": "FINAL FANTASY XVI COMPLETE EDITION",
+      "appId": 1111230,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Tony Hawk's Pro Skater 3 + 4",
+      "appId": 2545710,
+      "hltbHours": 7.82,
+      "matchedTitle": "Tony Hawk's Pro Skater 3 + 4",
+      "url": "https://howlongtobeat.com/game/164871"
+    },
+    {
+      "title": "Lost Soul Aside",
+      "appId": 3378960,
+      "hltbHours": 18.48,
+      "matchedTitle": "Lost Soul Aside",
+      "url": "https://howlongtobeat.com/game/66499"
+    },
+    {
+      "title": "Pizza Tower",
+      "appId": 2231450,
+      "hltbHours": 6.28,
+      "matchedTitle": "Pizza Tower",
+      "url": "https://howlongtobeat.com/game/118236"
     },
     {
       "title": "ANIMAL WELL",
@@ -41650,368 +41895,11 @@
       "url": "https://howlongtobeat.com/game/94069"
     },
     {
-      "title": "Lost Soul Aside",
-      "appId": 3378960,
-      "hltbHours": 18.48,
-      "matchedTitle": "Lost Soul Aside",
-      "url": "https://howlongtobeat.com/game/66499"
-    },
-    {
-      "title": "FINAL FANTASY XVI COMPLETE EDITION",
-      "appId": 1111230,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
-    },
-    {
-      "title": "Tony Hawk's Pro Skater 3 + 4",
-      "appId": 2545710,
-      "hltbHours": 7.82,
-      "matchedTitle": "Tony Hawk's Pro Skater 3 + 4",
-      "url": "https://howlongtobeat.com/game/164871"
-    },
-    {
-      "title": "Pizza Tower",
-      "appId": 2231450,
-      "hltbHours": 6.28,
-      "matchedTitle": "Pizza Tower",
-      "url": "https://howlongtobeat.com/game/118236"
-    },
-    {
-      "title": "REMATCH",
-      "appId": 2138720,
-      "hltbHours": 13.22,
-      "matchedTitle": "REMATCH",
-      "url": "https://howlongtobeat.com/game/160620"
-    },
-    {
-      "title": "Schedule I",
-      "appId": 3164500,
-      "hltbHours": 16.41,
-      "matchedTitle": "Schedule I",
-      "url": "https://howlongtobeat.com/game/165767"
-    },
-    {
-      "title": "Until Dawn",
-      "appId": 2172010,
-      "hltbHours": 8.02,
-      "matchedTitle": "Until Dawn",
-      "url": "https://howlongtobeat.com/game/21924"
-    },
-    {
-      "title": "Still Wakes the Deep",
-      "appId": 1622910,
-      "hltbHours": 4.66,
-      "matchedTitle": "Still Wakes The Deep",
-      "url": "https://howlongtobeat.com/game/129960"
-    },
-    {
-      "title": "The Precinct",
-      "appId": 490110,
-      "hltbHours": 12.13,
-      "matchedTitle": "The Precinct",
-      "url": "https://howlongtobeat.com/game/129891"
-    },
-    {
-      "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
-      "appId": 1643320,
-      "hltbHours": 36.73,
-      "matchedTitle": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
-      "url": "https://howlongtobeat.com/game/81121"
-    },
-    {
-      "title": "The Midnight Walk",
-      "appId": 2863640,
-      "hltbHours": 4.96,
-      "matchedTitle": "The Midnight Walk",
-      "url": "https://howlongtobeat.com/game/157305"
-    },
-    {
-      "title": "Lies of P",
-      "appId": 1627720,
-      "hltbHours": 28.33,
-      "matchedTitle": "Lies of P",
-      "url": "https://howlongtobeat.com/game/92418"
-    },
-    {
-      "title": "Mafia: The Old Country",
-      "appId": 1941540,
-      "hltbHours": 12.27,
-      "matchedTitle": "Mafia: The Old Country",
-      "url": "https://howlongtobeat.com/game/155658"
-    },
-    {
-      "title": "Darkest Dungeon II",
-      "appId": 1940340,
-      "hltbHours": 30.85,
-      "matchedTitle": "Darkest Dungeon II",
-      "url": "https://howlongtobeat.com/game/85972"
-    },
-    {
-      "title": "Monster Train 2",
-      "appId": 2742830,
-      "hltbHours": 5.68,
-      "matchedTitle": "Monster Train 2",
-      "url": "https://howlongtobeat.com/game/164271"
-    },
-    {
-      "title": "I Am Your Beast",
-      "appId": 1876590,
-      "hltbHours": 2.56,
-      "matchedTitle": "I Am Your Beast",
-      "url": "https://howlongtobeat.com/game/152030"
-    },
-    {
-      "title": "Steel Seed",
-      "appId": 458430,
-      "hltbHours": 9.37,
-      "matchedTitle": "Steel Seed",
-      "url": "https://howlongtobeat.com/game/129898"
-    },
-    {
-      "title": "The Killing Antidote",
-      "appId": 2254890,
-      "hltbHours": 10.0,
-      "matchedTitle": "The Killing Antidote",
-      "url": "https://howlongtobeat.com/game/159582"
-    },
-    {
-      "title": "Song of Nunu: A League of Legends Story",
-      "appId": 1333200,
-      "hltbHours": 6.16,
-      "matchedTitle": "Song of Nunu: A League of Legends Story",
-      "url": "https://howlongtobeat.com/game/100440"
-    },
-    {
-      "title": "Ghost of Tsushima DIRECTOR'S CUT",
-      "appId": 2215430,
-      "hltbHours": 25.11,
-      "matchedTitle": "Ghost of Tsushima",
-      "url": "https://howlongtobeat.com/game/51225"
-    },
-    {
-      "title": "Old Skies",
-      "appId": 1346360,
-      "hltbHours": 11.9,
-      "matchedTitle": "Old Skies",
-      "url": "https://howlongtobeat.com/game/108617"
-    },
-    {
-      "title": "South of Midnight",
-      "appId": 1934570,
-      "hltbHours": 9.88,
-      "matchedTitle": "South of Midnight",
-      "url": "https://howlongtobeat.com/game/129947"
-    },
-    {
-      "title": "SHINOBI: Art of Vengeance",
-      "appId": 2361770,
-      "hltbHours": 9.52,
-      "matchedTitle": "Shinobi: Art of Vengeance",
-      "url": "https://howlongtobeat.com/game/163815"
-    },
-    {
-      "title": "Wild Bastards",
-      "appId": 1660840,
-      "hltbHours": 14.83,
-      "matchedTitle": "Wild Bastards",
-      "url": "https://howlongtobeat.com/game/141559"
-    },
-    {
-      "title": "Kona II: Brume",
-      "appId": 1229020,
-      "hltbHours": 8.02,
-      "matchedTitle": "Kona II: Brume",
-      "url": "https://howlongtobeat.com/game/138961"
-    },
-    {
-      "title": "Gerda: A Flame in Winter",
-      "appId": 1771360,
-      "hltbHours": 6.56,
-      "matchedTitle": "Gerda: A Flame in Winter",
-      "url": "https://howlongtobeat.com/game/101451"
-    },
-    {
-      "title": "Blue Prince",
-      "appId": 1569580,
-      "hltbHours": 17.98,
-      "matchedTitle": "Blue Prince",
-      "url": "https://howlongtobeat.com/game/136426"
-    },
-    {
-      "title": "9 Kings",
-      "appId": 2784470,
-      "hltbHours": 4.3,
-      "matchedTitle": "9 Kings",
-      "url": "https://howlongtobeat.com/game/164495"
-    },
-    {
-      "title": "Metaphor: ReFantazio",
-      "appId": 2679460,
-      "hltbHours": 65.19,
-      "matchedTitle": "Metaphor: ReFantazio",
-      "url": "https://howlongtobeat.com/game/129956"
-    },
-    {
-      "title": "Slitterhead",
-      "appId": 2631250,
-      "hltbHours": 13.55,
-      "matchedTitle": "Slitterhead",
-      "url": "https://howlongtobeat.com/game/101287"
-    },
-    {
-      "title": "Warhammer 40,000: Space Marine 2",
-      "appId": 2183900,
-      "hltbHours": 9.47,
-      "matchedTitle": "Warhammer 40,000: Space Marine II",
-      "url": "https://howlongtobeat.com/game/101254"
-    },
-    {
-      "title": "The Last of Us Part II Remastered",
-      "appId": 2531310,
-      "hltbHours": 23.02,
-      "matchedTitle": "The Last of Us Part II Remastered",
-      "url": "https://howlongtobeat.com/game/141122"
-    },
-    {
-      "title": "The First Berserker: Khazan",
-      "appId": 2680010,
-      "hltbHours": 34.72,
-      "matchedTitle": "The First Berserker: Khazan",
-      "url": "https://howlongtobeat.com/game/141849"
-    },
-    {
-      "title": "REMATCH",
-      "appId": 2138720,
-      "hltbHours": 13.22,
-      "matchedTitle": "REMATCH",
-      "url": "https://howlongtobeat.com/game/160620"
-    },
-    {
-      "title": "Date Everything!",
-      "appId": 2201320,
-      "hltbHours": 18.13,
-      "matchedTitle": "Date Everything!",
-      "url": "https://howlongtobeat.com/game/154409"
-    },
-    {
-      "title": "Split Fiction",
-      "appId": 2001120,
-      "hltbHours": 13.62,
-      "matchedTitle": "Split Fiction",
-      "url": "https://howlongtobeat.com/game/160592"
-    },
-    {
-      "title": "Clair Obscur: Expedition 33",
-      "appId": 1903340,
-      "hltbHours": 29.2,
-      "matchedTitle": "Clair Obscur: Expedition 33",
-      "url": "https://howlongtobeat.com/game/152016"
-    },
-    {
-      "title": "Prince of Persia The Lost Crown",
-      "appId": 2751000,
-      "hltbHours": 16.68,
-      "matchedTitle": "Prince of Persia: The Lost Crown",
-      "url": "https://howlongtobeat.com/game/129785"
-    },
-    {
-      "title": "UFO 50",
-      "appId": 1147860,
-      "hltbHours": 53.34,
-      "matchedTitle": "UFO 50",
-      "url": "https://howlongtobeat.com/game/75152"
-    },
-    {
-      "title": "LEGO Harry Potter Collection",
-      "appId": 2950340,
-      "hltbHours": 27.41,
-      "matchedTitle": "LEGO Harry Potter Collection",
-      "url": "https://howlongtobeat.com/game/47803"
-    },
-    {
-      "title": "After Inc: Revival",
-      "appId": 3337140,
-      "hltbHours": 9.83,
-      "matchedTitle": "After Inc: Revival",
-      "url": "https://howlongtobeat.com/game/170527"
-    },
-    {
-      "title": "Gears of War: Reloaded",
-      "appId": 2523720,
-      "hltbHours": 7.15,
-      "matchedTitle": "Gears of War: Reloaded",
-      "url": "https://howlongtobeat.com/game/167795"
-    },
-    {
-      "title": "Inscryption",
-      "appId": 1092790,
-      "hltbHours": 12.76,
-      "matchedTitle": "Inscryption",
-      "url": "https://howlongtobeat.com/game/91622"
-    },
-    {
-      "title": "Dustborn",
-      "appId": 721180,
-      "hltbHours": 16.81,
-      "matchedTitle": "Dustborn",
-      "url": "https://howlongtobeat.com/game/79898"
-    },
-    {
-      "title": "Harold Halibut",
-      "appId": 924750,
-      "hltbHours": 10.65,
-      "matchedTitle": "Harold Halibut",
-      "url": "https://howlongtobeat.com/game/69307"
-    },
-    {
-      "title": "God of War",
-      "appId": 1593500,
-      "hltbHours": 20.55,
-      "matchedTitle": "God of War",
-      "url": "https://howlongtobeat.com/game/38050"
-    },
-    {
-      "title": "Little Nightmares III",
-      "appId": 1392860,
-      "hltbHours": 5.99,
-      "matchedTitle": "Little Nightmares III",
-      "url": "https://howlongtobeat.com/game/134553"
-    },
-    {
-      "title": "Bionic Bay",
-      "appId": 1928690,
-      "hltbHours": 7.88,
-      "matchedTitle": "Bionic Bay",
-      "url": "https://howlongtobeat.com/game/123330"
-    },
-    {
-      "title": "Abathor",
-      "appId": 2295610,
-      "hltbHours": 8.41,
-      "matchedTitle": "Abathor",
-      "url": "https://howlongtobeat.com/game/154370"
-    },
-    {
-      "title": "METAL GEAR SOLID Δ: SNAKE EATER",
-      "appId": 2417610,
-      "hltbHours": 12.18,
-      "matchedTitle": "Metal Gear Solid Δ: Snake Eater",
-      "url": "https://howlongtobeat.com/game/129234"
-    },
-    {
-      "title": "Nine Sols",
-      "appId": 1809540,
-      "hltbHours": 21.36,
-      "matchedTitle": "Nine Sols",
-      "url": "https://howlongtobeat.com/game/107896"
-    },
-    {
-      "title": "The Outer Worlds 2",
-      "appId": 1449110,
-      "hltbHours": 18.37,
-      "matchedTitle": "The Outer Worlds 2",
-      "url": "https://howlongtobeat.com/game/93946"
+      "title": "Lords of the Fallen",
+      "appId": 1501750,
+      "hltbHours": 28.5,
+      "matchedTitle": "Lords of the Fallen",
+      "url": "https://howlongtobeat.com/game/112684"
     },
     {
       "title": "Horizon Forbidden West Complete Edition",
@@ -42021,11 +41909,11 @@
       "url": "https://howlongtobeat.com/game/139665"
     },
     {
-      "title": "Avowed",
-      "appId": 2457220,
-      "hltbHours": 20.15,
-      "matchedTitle": "Avowed",
-      "url": "https://howlongtobeat.com/game/81115"
+      "title": "Nine Sols",
+      "appId": 1809540,
+      "hltbHours": 21.36,
+      "matchedTitle": "Nine Sols",
+      "url": "https://howlongtobeat.com/game/107896"
     },
     {
       "title": "Have a Nice Death",
@@ -42035,403 +41923,18 @@
       "url": "https://howlongtobeat.com/game/101233"
     },
     {
-      "title": "Lords of the Fallen",
-      "appId": 1501750,
-      "hltbHours": 28.5,
-      "matchedTitle": "Lords of the Fallen",
-      "url": "https://howlongtobeat.com/game/112684"
+      "title": "The Outer Worlds 2",
+      "appId": 1449110,
+      "hltbHours": 18.37,
+      "matchedTitle": "The Outer Worlds 2",
+      "url": "https://howlongtobeat.com/game/93946"
     },
     {
-      "title": "Cyber Knights: Flashpoint",
-      "appId": 1021210,
-      "hltbHours": 10.0,
-      "matchedTitle": "Cyber Knights: Flashpoint",
-      "url": "https://howlongtobeat.com/game/141274"
-    },
-    {
-      "title": "The Alters",
-      "appId": 1601570,
-      "hltbHours": 19.33,
-      "matchedTitle": "The Alters",
-      "url": "https://howlongtobeat.com/game/109255"
-    },
-    {
-      "title": "Stellar Blade",
-      "appId": 3489700,
-      "hltbHours": 22.74,
-      "matchedTitle": "Stellar Blade",
-      "url": "https://howlongtobeat.com/game/97758"
-    },
-    {
-      "title": "The Stone of Madness",
-      "appId": 1309710,
-      "hltbHours": 26.27,
-      "matchedTitle": "The Stone of Madness",
-      "url": "https://howlongtobeat.com/game/124067"
-    },
-    {
-      "title": "MechWarrior 5: Clans",
-      "appId": 2000890,
-      "hltbHours": 23.81,
-      "matchedTitle": "MechWarrior 5: Clans",
-      "url": "https://howlongtobeat.com/game/137939"
-    },
-    {
-      "title": "Lost in Random: The Eternal Die",
-      "appId": 2564520,
-      "hltbHours": 7.08,
-      "matchedTitle": "Lost in Random: The Eternal Die",
-      "url": "https://howlongtobeat.com/game/155771"
-    },
-    {
-      "title": "Marvel's Spider-Man 2",
-      "appId": 2651280,
-      "hltbHours": 17.19,
-      "matchedTitle": "Marvel's Spider-Man 2",
-      "url": "https://howlongtobeat.com/game/79769"
-    },
-    {
-      "title": "CRISIS CORE –FINAL FANTASY VII– REUNION",
-      "appId": 1608070,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
-    },
-    {
-      "title": "LOLLIPOP CHAINSAW RePOP",
-      "appId": 2658450,
-      "hltbHours": 6.12,
-      "matchedTitle": "Lollipop Chainsaw RePOP",
-      "url": "https://howlongtobeat.com/game/128035"
-    },
-    {
-      "title": "Like a Dragon: Infinite Wealth",
-      "appId": 2072450,
-      "hltbHours": 56.31,
-      "matchedTitle": "Like a Dragon: Infinite Wealth",
-      "url": "https://howlongtobeat.com/game/113583"
-    },
-    {
-      "title": "Flintlock: The Siege of Dawn",
-      "appId": 1832040,
-      "hltbHours": 8.94,
-      "matchedTitle": "Flintlock: The Siege of Dawn",
-      "url": "https://howlongtobeat.com/game/105586"
-    },
-    {
-      "title": "Mafia: The Old Country",
-      "appId": 1941540,
-      "hltbHours": 12.27,
-      "matchedTitle": "Mafia: The Old Country",
-      "url": "https://howlongtobeat.com/game/155658"
-    },
-    {
-      "title": "Out Of Hands",
-      "appId": 1839810,
-      "hltbHours": 6.69,
-      "matchedTitle": "Out Of Hands",
-      "url": "https://howlongtobeat.com/game/167294"
-    },
-    {
-      "title": "Eternal Strands",
-      "appId": 1491410,
-      "hltbHours": 18.83,
-      "matchedTitle": "Eternal Strands",
-      "url": "https://howlongtobeat.com/game/148004"
-    },
-    {
-      "title": "Avatar: Frontiers of Pandora",
-      "appId": 2840770,
-      "hltbHours": 23.57,
-      "matchedTitle": "Avatar: Frontiers of Pandora",
-      "url": "https://howlongtobeat.com/game/93907"
-    },
-    {
-      "title": "Clair Obscur: Expedition 33",
-      "appId": 1903340,
-      "hltbHours": 29.2,
-      "matchedTitle": "Clair Obscur: Expedition 33",
-      "url": "https://howlongtobeat.com/game/152016"
-    },
-    {
-      "title": "The Alters",
-      "appId": 1601570,
-      "hltbHours": 19.33,
-      "matchedTitle": "The Alters",
-      "url": "https://howlongtobeat.com/game/109255"
-    },
-    {
-      "title": "SILENT HILL f",
-      "appId": 2947440,
-      "hltbHours": 10.71,
-      "matchedTitle": "Silent Hill f",
-      "url": "https://howlongtobeat.com/game/114901"
-    },
-    {
-      "title": "FANTASY LIFE i: The Girl Who Steals Time",
-      "appId": 2993780,
-      "hltbHours": 33.95,
-      "matchedTitle": "Fantasy Life i: The Girl Who Steals Time",
-      "url": "https://howlongtobeat.com/game/124025"
-    },
-    {
-      "title": "Tainted Grail: The Fall of Avalon",
-      "appId": 1466060,
-      "hltbHours": 28.2,
-      "matchedTitle": "Tainted Grail: The Fall of Avalon",
-      "url": "https://howlongtobeat.com/game/93631"
-    },
-    {
-      "title": "Age of Empires IV: Anniversary Edition",
-      "appId": 1466860,
-      "hltbHours": 28.23,
-      "matchedTitle": "Age of Empires IV",
-      "url": "https://howlongtobeat.com/game/48733"
-    },
-    {
-      "title": "Keep Driving",
-      "appId": 2756920,
-      "hltbHours": 3.47,
-      "matchedTitle": "Keep Driving",
-      "url": "https://howlongtobeat.com/game/157686"
-    },
-    {
-      "title": "DAVE THE DIVER",
-      "appId": 1868140,
-      "hltbHours": 25.0,
-      "matchedTitle": "Dave the Diver",
-      "url": "https://howlongtobeat.com/game/115577"
-    },
-    {
-      "title": "Banishers: Ghosts of New Eden",
-      "appId": 1493640,
-      "hltbHours": 22.89,
-      "matchedTitle": "Banishers: Ghosts of New Eden",
-      "url": "https://howlongtobeat.com/game/118229"
-    },
-    {
-      "title": "Caravan SandWitch",
-      "appId": 1582650,
-      "hltbHours": 6.67,
-      "matchedTitle": "Caravan SandWitch",
-      "url": "https://howlongtobeat.com/game/151283"
-    },
-    {
-      "title": "Kingdom Come: Deliverance II",
-      "appId": 1771300,
-      "hltbHours": 54.76,
-      "matchedTitle": "Kingdom Come: Deliverance II",
-      "url": "https://howlongtobeat.com/game/148973"
-    },
-    {
-      "title": "Dune: Awakening",
-      "appId": 1172710,
-      "hltbHours": 53.5,
-      "matchedTitle": "Dune: Awakening",
-      "url": "https://howlongtobeat.com/game/118779"
-    },
-    {
-      "title": "Keep Driving",
-      "appId": 2756920,
-      "hltbHours": 3.47,
-      "matchedTitle": "Keep Driving",
-      "url": "https://howlongtobeat.com/game/157686"
-    },
-    {
-      "title": "UNCHARTED: Legacy of Thieves Collection",
-      "appId": 1659420,
-      "hltbHours": 20.53,
-      "matchedTitle": "Uncharted: Legacy of Thieves Collection",
-      "url": "https://howlongtobeat.com/game/101083"
-    },
-    {
-      "title": "Dead Space",
-      "appId": 1693980,
-      "hltbHours": 12.12,
-      "matchedTitle": "Dead Space",
-      "url": "https://howlongtobeat.com/game/95927"
-    },
-    {
-      "title": "Persona 3 Reload",
-      "appId": 2161700,
-      "hltbHours": 64.62,
-      "matchedTitle": "Persona 3 Reload",
-      "url": "https://howlongtobeat.com/game/129805"
-    },
-    {
-      "title": "Age of Mythology: Retold",
-      "appId": 1934680,
-      "hltbHours": 24.46,
-      "matchedTitle": "Age of Mythology: Retold",
-      "url": "https://howlongtobeat.com/game/115181"
-    },
-    {
-      "title": "Granblue Fantasy: Relink",
-      "appId": 881020,
-      "hltbHours": 15.56,
-      "matchedTitle": "Granblue Fantasy: Relink",
-      "url": "https://howlongtobeat.com/game/66500"
-    },
-    {
-      "title": "Drive Beyond Horizons",
-      "appId": 2625420,
-      "hltbHours": 5.39,
-      "matchedTitle": "Drive Beyond Horizons",
-      "url": "https://howlongtobeat.com/game/167242"
-    },
-    {
-      "title": "Schedule I",
-      "appId": 3164500,
-      "hltbHours": 16.41,
-      "matchedTitle": "Schedule I",
-      "url": "https://howlongtobeat.com/game/165767"
-    },
-    {
-      "title": "Indiana Jones and the Great Circle",
-      "appId": 2677660,
-      "hltbHours": 16.03,
-      "matchedTitle": "Indiana Jones and the Great Circle",
-      "url": "https://howlongtobeat.com/game/144234"
-    },
-    {
-      "title": "Tainted Grail: The Fall of Avalon",
-      "appId": 1466060,
-      "hltbHours": 28.2,
-      "matchedTitle": "Tainted Grail: The Fall of Avalon",
-      "url": "https://howlongtobeat.com/game/93631"
-    },
-    {
-      "title": "DELTARUNE",
-      "appId": 1671210,
-      "hltbHours": 16.74,
-      "matchedTitle": "Deltarune",
-      "url": "https://howlongtobeat.com/game/98168"
-    },
-    {
-      "title": "Stellar Blade",
-      "appId": 3489700,
-      "hltbHours": 22.74,
-      "matchedTitle": "Stellar Blade",
-      "url": "https://howlongtobeat.com/game/97758"
-    },
-    {
-      "title": "Deck of Haunts",
-      "appId": 3179730,
-      "hltbHours": 2.74,
-      "matchedTitle": "Deck of Haunts",
-      "url": "https://howlongtobeat.com/game/158494"
-    },
-    {
-      "title": "Red Dead Redemption",
-      "appId": 2668510,
-      "hltbHours": 17.6,
-      "matchedTitle": "Red Dead Redemption",
-      "url": "https://howlongtobeat.com/game/7676"
-    },
-    {
-      "title": "South of Midnight",
-      "appId": 1934570,
-      "hltbHours": 9.88,
-      "matchedTitle": "South of Midnight",
-      "url": "https://howlongtobeat.com/game/129947"
-    },
-    {
-      "title": "AI LIMIT",
-      "appId": 2407270,
-      "hltbHours": 18.57,
-      "matchedTitle": "AI Limit",
-      "url": "https://howlongtobeat.com/game/144469"
-    },
-    {
-      "title": "Tempest Rising",
-      "appId": 1486920,
-      "hltbHours": 16.91,
-      "matchedTitle": "Tempest Rising",
-      "url": "https://howlongtobeat.com/game/125157"
-    },
-    {
-      "title": "Nine Sols",
-      "appId": 1809540,
-      "hltbHours": 21.36,
-      "matchedTitle": "Nine Sols",
-      "url": "https://howlongtobeat.com/game/107896"
-    },
-    {
-      "title": "Neva",
-      "appId": 2420660,
-      "hltbHours": 4.06,
-      "matchedTitle": "Neva",
-      "url": "https://howlongtobeat.com/game/129246"
-    },
-    {
-      "title": "Clair Obscur: Expedition 33",
-      "appId": 1903340,
-      "hltbHours": 29.2,
-      "matchedTitle": "Clair Obscur: Expedition 33",
-      "url": "https://howlongtobeat.com/game/152016"
-    },
-    {
-      "title": "Like a Dragon: Ishin!",
-      "appId": 1805480,
-      "hltbHours": 23.83,
-      "matchedTitle": "Like a Dragon: Ishin!",
-      "url": "https://howlongtobeat.com/game/113549"
-    },
-    {
-      "title": "Hades II",
-      "appId": 1145350,
-      "hltbHours": 30.53,
-      "matchedTitle": "Hades II",
-      "url": "https://howlongtobeat.com/game/118218"
-    },
-    {
-      "title": "WUCHANG: Fallen Feathers",
-      "appId": 2277560,
-      "hltbHours": 30.97,
-      "matchedTitle": "Wuchang: Fallen Feathers",
-      "url": "https://howlongtobeat.com/game/152015"
-    },
-    {
-      "title": "Keep Driving",
-      "appId": 2756920,
-      "hltbHours": 3.47,
-      "matchedTitle": "Keep Driving",
-      "url": "https://howlongtobeat.com/game/157686"
-    },
-    {
-      "title": "BRAVELY DEFAULT II",
-      "appId": 1446650,
-      "hltbHours": 49.89,
-      "matchedTitle": "Bravely Default II",
-      "url": "https://howlongtobeat.com/game/72838"
-    },
-    {
-      "title": "9 Kings",
-      "appId": 2784470,
-      "hltbHours": 4.3,
-      "matchedTitle": "9 Kings",
-      "url": "https://howlongtobeat.com/game/164495"
-    },
-    {
-      "title": "Detective Dotson",
-      "appId": 2450840,
-      "hltbHours": 3.06,
-      "matchedTitle": "Detective Dotson",
-      "url": "https://howlongtobeat.com/game/151964"
-    },
-    {
-      "title": "Atomic Heart",
-      "appId": 668580,
-      "hltbHours": 16.22,
-      "matchedTitle": "Atomic Heart",
-      "url": "https://howlongtobeat.com/game/56297"
-    },
-    {
-      "title": "Lost Records: Bloom & Rage",
-      "appId": 1902960,
-      "hltbHours": 11.19,
-      "matchedTitle": "Lost Records: Bloom & Rage",
-      "url": "https://howlongtobeat.com/game/141844"
+      "title": "Avowed",
+      "appId": 2457220,
+      "hltbHours": 20.15,
+      "matchedTitle": "Avowed",
+      "url": "https://howlongtobeat.com/game/81115"
     },
     {
       "title": "Stray",
@@ -42441,11 +41944,18 @@
       "url": "https://howlongtobeat.com/game/79790"
     },
     {
-      "title": "FINAL FANTASY VII REBIRTH",
-      "appId": 2909400,
-      "hltbHours": 48.33,
-      "matchedTitle": "Final Fantasy VII Rebirth",
-      "url": "https://howlongtobeat.com/game/109434"
+      "title": "Lost in Random: The Eternal Die",
+      "appId": 2564520,
+      "hltbHours": 7.08,
+      "matchedTitle": "Lost in Random: The Eternal Die",
+      "url": "https://howlongtobeat.com/game/155771"
+    },
+    {
+      "title": "UFO 50",
+      "appId": 1147860,
+      "hltbHours": 53.34,
+      "matchedTitle": "UFO 50",
+      "url": "https://howlongtobeat.com/game/75152"
     },
     {
       "title": "Sea of Stars",
@@ -42518,6 +42028,174 @@
       "url": "https://howlongtobeat.com/game/162523"
     },
     {
+      "title": "Clair Obscur: Expedition 33",
+      "appId": 1903340,
+      "hltbHours": 29.2,
+      "matchedTitle": "Clair Obscur: Expedition 33",
+      "url": "https://howlongtobeat.com/game/152016"
+    },
+    {
+      "title": "Kona II: Brume",
+      "appId": 1229020,
+      "hltbHours": 8.02,
+      "matchedTitle": "Kona II: Brume",
+      "url": "https://howlongtobeat.com/game/138961"
+    },
+    {
+      "title": "The Last Case of Benedict Fox Definit...",
+      "appId": 2023360,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Gerda: A Flame in Winter",
+      "appId": 1771360,
+      "hltbHours": 6.56,
+      "matchedTitle": "Gerda: A Flame in Winter",
+      "url": "https://howlongtobeat.com/game/101451"
+    },
+    {
+      "title": "Wild Bastards",
+      "appId": 1660840,
+      "hltbHours": 14.83,
+      "matchedTitle": "Wild Bastards",
+      "url": "https://howlongtobeat.com/game/141559"
+    },
+    {
+      "title": "Broken Sword - Shadow of the Templars...",
+      "appId": 2544110,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "SHINOBI: Art of Vengeance",
+      "appId": 2361770,
+      "hltbHours": 9.52,
+      "matchedTitle": "Shinobi: Art of Vengeance",
+      "url": "https://howlongtobeat.com/game/163815"
+    },
+    {
+      "title": "LEGO Harry Potter Collection",
+      "appId": 2950340,
+      "hltbHours": 27.41,
+      "matchedTitle": "LEGO Harry Potter Collection",
+      "url": "https://howlongtobeat.com/game/47803"
+    },
+    {
+      "title": "After Inc: Revival",
+      "appId": 3337140,
+      "hltbHours": 9.83,
+      "matchedTitle": "After Inc: Revival",
+      "url": "https://howlongtobeat.com/game/170527"
+    },
+    {
+      "title": "Harold Halibut",
+      "appId": 924750,
+      "hltbHours": 10.65,
+      "matchedTitle": "Harold Halibut",
+      "url": "https://howlongtobeat.com/game/69307"
+    },
+    {
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "appId": 3527760,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Dustborn",
+      "appId": 721180,
+      "hltbHours": 16.81,
+      "matchedTitle": "Dustborn",
+      "url": "https://howlongtobeat.com/game/79898"
+    },
+    {
+      "title": "Little Nightmares III",
+      "appId": 1392860,
+      "hltbHours": 5.99,
+      "matchedTitle": "Little Nightmares III",
+      "url": "https://howlongtobeat.com/game/134553"
+    },
+    {
+      "title": "Gears of War: Reloaded",
+      "appId": 2523720,
+      "hltbHours": 7.15,
+      "matchedTitle": "Gears of War: Reloaded",
+      "url": "https://howlongtobeat.com/game/167795"
+    },
+    {
+      "title": "Prince of Persia The Lost Crown",
+      "appId": 2751000,
+      "hltbHours": 16.68,
+      "matchedTitle": "Prince of Persia: The Lost Crown",
+      "url": "https://howlongtobeat.com/game/129785"
+    },
+    {
+      "title": "The First Berserker: Khazan",
+      "appId": 2680010,
+      "hltbHours": 34.72,
+      "matchedTitle": "The First Berserker: Khazan",
+      "url": "https://howlongtobeat.com/game/141849"
+    },
+    {
+      "title": "The Last of Us Part II Remastered",
+      "appId": 2531310,
+      "hltbHours": 23.02,
+      "matchedTitle": "The Last of Us Part II Remastered",
+      "url": "https://howlongtobeat.com/game/141122"
+    },
+    {
+      "title": "Clair Obscur: Expedition 33",
+      "appId": 1903340,
+      "hltbHours": 29.2,
+      "matchedTitle": "Clair Obscur: Expedition 33",
+      "url": "https://howlongtobeat.com/game/152016"
+    },
+    {
+      "title": "Split Fiction",
+      "appId": 2001120,
+      "hltbHours": 13.62,
+      "matchedTitle": "Split Fiction",
+      "url": "https://howlongtobeat.com/game/160592"
+    },
+    {
+      "title": "Date Everything!",
+      "appId": 2201320,
+      "hltbHours": 18.13,
+      "matchedTitle": "Date Everything!",
+      "url": "https://howlongtobeat.com/game/154409"
+    },
+    {
+      "title": "Warhammer 40,000: Space Marine 2",
+      "appId": 2183900,
+      "hltbHours": 9.47,
+      "matchedTitle": "Warhammer 40,000: Space Marine II",
+      "url": "https://howlongtobeat.com/game/101254"
+    },
+    {
+      "title": "REMATCH",
+      "appId": 2138720,
+      "hltbHours": 13.22,
+      "matchedTitle": "REMATCH",
+      "url": "https://howlongtobeat.com/game/160620"
+    },
+    {
+      "title": "The Stone of Madness",
+      "appId": 1309710,
+      "hltbHours": 26.27,
+      "matchedTitle": "The Stone of Madness",
+      "url": "https://howlongtobeat.com/game/124067"
+    },
+    {
+      "title": "MechWarrior 5: Clans",
+      "appId": 2000890,
+      "hltbHours": 23.81,
+      "matchedTitle": "MechWarrior 5: Clans",
+      "url": "https://howlongtobeat.com/game/137939"
+    },
+    {
       "title": "The Precinct",
       "appId": 490110,
       "hltbHours": 12.13,
@@ -42525,11 +42203,445 @@
       "url": "https://howlongtobeat.com/game/129891"
     },
     {
+      "title": "Hades II",
+      "appId": 1145350,
+      "hltbHours": 30.53,
+      "matchedTitle": "Hades II",
+      "url": "https://howlongtobeat.com/game/118218"
+    },
+    {
+      "title": "Grand Theft Auto: The Trilogy – The D...",
+      "appId": 817628,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Tainted Grail: The Fall of Avalon",
+      "appId": 1466060,
+      "hltbHours": 28.2,
+      "matchedTitle": "Tainted Grail: The Fall of Avalon",
+      "url": "https://howlongtobeat.com/game/93631"
+    },
+    {
+      "title": "Keep Driving",
+      "appId": 2756920,
+      "hltbHours": 3.47,
+      "matchedTitle": "Keep Driving",
+      "url": "https://howlongtobeat.com/game/157686"
+    },
+    {
+      "title": "DAVE THE DIVER",
+      "appId": 1868140,
+      "hltbHours": 25.0,
+      "matchedTitle": "Dave the Diver",
+      "url": "https://howlongtobeat.com/game/115577"
+    },
+    {
+      "title": "Age of Empires IV: Anniversary Edition",
+      "appId": 1466860,
+      "hltbHours": 28.23,
+      "matchedTitle": "Age of Empires IV",
+      "url": "https://howlongtobeat.com/game/48733"
+    },
+    {
+      "title": "Banishers: Ghosts of New Eden",
+      "appId": 1493640,
+      "hltbHours": 22.89,
+      "matchedTitle": "Banishers: Ghosts of New Eden",
+      "url": "https://howlongtobeat.com/game/118229"
+    },
+    {
+      "title": "LOLLIPOP CHAINSAW RePOP",
+      "appId": 2658450,
+      "hltbHours": 6.12,
+      "matchedTitle": "Lollipop Chainsaw RePOP",
+      "url": "https://howlongtobeat.com/game/128035"
+    },
+    {
+      "title": "CRISIS CORE –FINAL FANTASY VII– REUNION",
+      "appId": 1608070,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Like a Dragon Gaiden: The Man Who Era...",
+      "appId": 2375550,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Like a Dragon: Infinite Wealth",
+      "appId": 2072450,
+      "hltbHours": 56.31,
+      "matchedTitle": "Like a Dragon: Infinite Wealth",
+      "url": "https://howlongtobeat.com/game/113583"
+    },
+    {
+      "title": "Marvel's Spider-Man 2",
+      "appId": 2651280,
+      "hltbHours": 17.19,
+      "matchedTitle": "Marvel's Spider-Man 2",
+      "url": "https://howlongtobeat.com/game/79769"
+    },
+    {
+      "title": "FINAL FANTASY TACTICS - The Ivalice C...",
+      "appId": 1004640,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Flintlock: The Siege of Dawn",
+      "appId": 1832040,
+      "hltbHours": 8.94,
+      "matchedTitle": "Flintlock: The Siege of Dawn",
+      "url": "https://howlongtobeat.com/game/105586"
+    },
+    {
+      "title": "Eternal Strands",
+      "appId": 1491410,
+      "hltbHours": 18.83,
+      "matchedTitle": "Eternal Strands",
+      "url": "https://howlongtobeat.com/game/148004"
+    },
+    {
+      "title": "Avatar: Frontiers of Pandora",
+      "appId": 2840770,
+      "hltbHours": 23.57,
+      "matchedTitle": "Avatar: Frontiers of Pandora",
+      "url": "https://howlongtobeat.com/game/93907"
+    },
+    {
+      "title": "The Elder Scrolls IV: Oblivion Remast...",
+      "appId": 2623190,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
       "title": "Lost Records: Bloom & Rage",
       "appId": 1902960,
       "hltbHours": 11.19,
       "matchedTitle": "Lost Records: Bloom & Rage",
       "url": "https://howlongtobeat.com/game/141844"
+    },
+    {
+      "title": "Caravan SandWitch",
+      "appId": 1582650,
+      "hltbHours": 6.67,
+      "matchedTitle": "Caravan SandWitch",
+      "url": "https://howlongtobeat.com/game/151283"
+    },
+    {
+      "title": "Kingdom Come: Deliverance II",
+      "appId": 1771300,
+      "hltbHours": 54.76,
+      "matchedTitle": "Kingdom Come: Deliverance II",
+      "url": "https://howlongtobeat.com/game/148973"
+    },
+    {
+      "title": "Dune: Awakening",
+      "appId": 1172710,
+      "hltbHours": 53.5,
+      "matchedTitle": "Dune: Awakening",
+      "url": "https://howlongtobeat.com/game/118779"
+    },
+    {
+      "title": "Lost Records: Bloom & Rage",
+      "appId": 1902960,
+      "hltbHours": 11.19,
+      "matchedTitle": "Lost Records: Bloom & Rage",
+      "url": "https://howlongtobeat.com/game/141844"
+    },
+    {
+      "title": "UNCHARTED: Legacy of Thieves Collection",
+      "appId": 1659420,
+      "hltbHours": 20.53,
+      "matchedTitle": "Uncharted: Legacy of Thieves Collection",
+      "url": "https://howlongtobeat.com/game/101083"
+    },
+    {
+      "title": "Persona 3 Reload",
+      "appId": 2161700,
+      "hltbHours": 64.62,
+      "matchedTitle": "Persona 3 Reload",
+      "url": "https://howlongtobeat.com/game/129805"
+    },
+    {
+      "title": "Dead Space",
+      "appId": 1693980,
+      "hltbHours": 12.12,
+      "matchedTitle": "Dead Space",
+      "url": "https://howlongtobeat.com/game/95927"
+    },
+    {
+      "title": "Granblue Fantasy: Relink",
+      "appId": 881020,
+      "hltbHours": 15.56,
+      "matchedTitle": "Granblue Fantasy: Relink",
+      "url": "https://howlongtobeat.com/game/66500"
+    },
+    {
+      "title": "The Alters",
+      "appId": 1601570,
+      "hltbHours": 19.33,
+      "matchedTitle": "The Alters",
+      "url": "https://howlongtobeat.com/game/109255"
+    },
+    {
+      "title": "Like a Dragon: Ishin!",
+      "appId": 1805480,
+      "hltbHours": 23.83,
+      "matchedTitle": "Like a Dragon: Ishin!",
+      "url": "https://howlongtobeat.com/game/113549"
+    },
+    {
+      "title": "Age of Mythology: Retold",
+      "appId": 1934680,
+      "hltbHours": 24.46,
+      "matchedTitle": "Age of Mythology: Retold",
+      "url": "https://howlongtobeat.com/game/115181"
+    },
+    {
+      "title": "Keep Driving",
+      "appId": 2756920,
+      "hltbHours": 3.47,
+      "matchedTitle": "Keep Driving",
+      "url": "https://howlongtobeat.com/game/157686"
+    },
+    {
+      "title": "FANTASY LIFE i: The Girl Who Steals Time",
+      "appId": 2993780,
+      "hltbHours": 33.95,
+      "matchedTitle": "Fantasy Life i: The Girl Who Steals Time",
+      "url": "https://howlongtobeat.com/game/124025"
+    },
+    {
+      "title": "System Shock 2: 25th Anniversary Rema...",
+      "appId": 866570,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "SILENT HILL f",
+      "appId": 2947440,
+      "hltbHours": 10.71,
+      "matchedTitle": "Silent Hill f",
+      "url": "https://howlongtobeat.com/game/114901"
+    },
+    {
+      "title": "AI LIMIT",
+      "appId": 2407270,
+      "hltbHours": 18.57,
+      "matchedTitle": "AI Limit",
+      "url": "https://howlongtobeat.com/game/144469"
+    },
+    {
+      "title": "9 Kings",
+      "appId": 2784470,
+      "hltbHours": 4.3,
+      "matchedTitle": "9 Kings",
+      "url": "https://howlongtobeat.com/game/164495"
+    },
+    {
+      "title": "Detective Dotson",
+      "appId": 2450840,
+      "hltbHours": 3.06,
+      "matchedTitle": "Detective Dotson",
+      "url": "https://howlongtobeat.com/game/151964"
+    },
+    {
+      "title": "Cyber Knights: Flashpoint",
+      "appId": 1021210,
+      "hltbHours": 10.0,
+      "matchedTitle": "Cyber Knights: Flashpoint",
+      "url": "https://howlongtobeat.com/game/141274"
+    },
+    {
+      "title": "Drive Beyond Horizons",
+      "appId": 2625420,
+      "hltbHours": 5.39,
+      "matchedTitle": "Drive Beyond Horizons",
+      "url": "https://howlongtobeat.com/game/167242"
+    },
+    {
+      "title": "Schedule I",
+      "appId": 3164500,
+      "hltbHours": 16.41,
+      "matchedTitle": "Schedule I",
+      "url": "https://howlongtobeat.com/game/165767"
+    },
+    {
+      "title": "South of Midnight",
+      "appId": 1934570,
+      "hltbHours": 9.88,
+      "matchedTitle": "South of Midnight",
+      "url": "https://howlongtobeat.com/game/129947"
+    },
+    {
+      "title": "Blue Prince",
+      "appId": 1569580,
+      "hltbHours": 17.98,
+      "matchedTitle": "Blue Prince",
+      "url": "https://howlongtobeat.com/game/136426"
+    },
+    {
+      "title": "Old Skies",
+      "appId": 1346360,
+      "hltbHours": 11.9,
+      "matchedTitle": "Old Skies",
+      "url": "https://howlongtobeat.com/game/108617"
+    },
+    {
+      "title": "Ghost of Tsushima DIRECTOR'S CUT",
+      "appId": 2215430,
+      "hltbHours": 25.11,
+      "matchedTitle": "Ghost of Tsushima",
+      "url": "https://howlongtobeat.com/game/51225"
+    },
+    {
+      "title": "FINAL FANTASY VII REBIRTH",
+      "appId": 2909400,
+      "hltbHours": 48.33,
+      "matchedTitle": "Final Fantasy VII Rebirth",
+      "url": "https://howlongtobeat.com/game/109434"
+    },
+    {
+      "title": "Atomic Heart",
+      "appId": 668580,
+      "hltbHours": 16.22,
+      "matchedTitle": "Atomic Heart",
+      "url": "https://howlongtobeat.com/game/56297"
+    },
+    {
+      "title": "BRAVELY DEFAULT II",
+      "appId": 1446650,
+      "hltbHours": 49.89,
+      "matchedTitle": "Bravely Default II",
+      "url": "https://howlongtobeat.com/game/72838"
+    },
+    {
+      "title": "Indiana Jones and the Great Circle",
+      "appId": 2677660,
+      "hltbHours": 16.03,
+      "matchedTitle": "Indiana Jones and the Great Circle",
+      "url": "https://howlongtobeat.com/game/144234"
+    },
+    {
+      "title": "Wizardry: Proving Grounds of the Mad ...",
+      "appId": 2518960,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Out Of Hands",
+      "appId": 1839810,
+      "hltbHours": 6.69,
+      "matchedTitle": "Out Of Hands",
+      "url": "https://howlongtobeat.com/game/167294"
+    },
+    {
+      "title": "The Alters",
+      "appId": 1601570,
+      "hltbHours": 19.33,
+      "matchedTitle": "The Alters",
+      "url": "https://howlongtobeat.com/game/109255"
+    },
+    {
+      "title": "Mafia: The Old Country",
+      "appId": 1941540,
+      "hltbHours": 12.27,
+      "matchedTitle": "Mafia: The Old Country",
+      "url": "https://howlongtobeat.com/game/155658"
+    },
+    {
+      "title": "DELTARUNE",
+      "appId": 1671210,
+      "hltbHours": 16.74,
+      "matchedTitle": "Deltarune",
+      "url": "https://howlongtobeat.com/game/98168"
+    },
+    {
+      "title": "Nine Sols",
+      "appId": 1809540,
+      "hltbHours": 21.36,
+      "matchedTitle": "Nine Sols",
+      "url": "https://howlongtobeat.com/game/107896"
+    },
+    {
+      "title": "Neva",
+      "appId": 2420660,
+      "hltbHours": 4.06,
+      "matchedTitle": "Neva",
+      "url": "https://howlongtobeat.com/game/129246"
+    },
+    {
+      "title": "Stellar Blade",
+      "appId": 3489700,
+      "hltbHours": 22.74,
+      "matchedTitle": "Stellar Blade",
+      "url": "https://howlongtobeat.com/game/97758"
+    },
+    {
+      "title": "Tempest Rising",
+      "appId": 1486920,
+      "hltbHours": 16.91,
+      "matchedTitle": "Tempest Rising",
+      "url": "https://howlongtobeat.com/game/125157"
+    },
+    {
+      "title": "Deck of Haunts",
+      "appId": 3179730,
+      "hltbHours": 2.74,
+      "matchedTitle": "Deck of Haunts",
+      "url": "https://howlongtobeat.com/game/158494"
+    },
+    {
+      "title": "Keep Driving",
+      "appId": 2756920,
+      "hltbHours": 3.47,
+      "matchedTitle": "Keep Driving",
+      "url": "https://howlongtobeat.com/game/157686"
+    },
+    {
+      "title": "WUCHANG: Fallen Feathers",
+      "appId": 2277560,
+      "hltbHours": 30.97,
+      "matchedTitle": "Wuchang: Fallen Feathers",
+      "url": "https://howlongtobeat.com/game/152015"
+    },
+    {
+      "title": "Tainted Grail: The Fall of Avalon",
+      "appId": 1466060,
+      "hltbHours": 28.2,
+      "matchedTitle": "Tainted Grail: The Fall of Avalon",
+      "url": "https://howlongtobeat.com/game/93631"
+    },
+    {
+      "title": "Clair Obscur: Expedition 33",
+      "appId": 1903340,
+      "hltbHours": 29.2,
+      "matchedTitle": "Clair Obscur: Expedition 33",
+      "url": "https://howlongtobeat.com/game/152016"
+    },
+    {
+      "title": "South of Midnight",
+      "appId": 1934570,
+      "hltbHours": 9.88,
+      "matchedTitle": "South of Midnight",
+      "url": "https://howlongtobeat.com/game/129947"
+    },
+    {
+      "title": "Red Dead Redemption",
+      "appId": 2668510,
+      "hltbHours": 17.6,
+      "matchedTitle": "Red Dead Redemption",
+      "url": "https://howlongtobeat.com/game/7676"
     },
     {
       "title": "Wanderstop",
@@ -68387,12 +68499,12 @@
   "activeOnly": true,
   "refreshedMonth": "2026-05",
   "refreshedScope": "month",
-  "libraryUpdatedAt": "2026-05-11T15:33:40.615303+00:00",
+  "libraryUpdatedAt": "2026-05-11T15:37:03.334268+00:00",
   "libraryStats": {
-    "durationSeconds": 0.17,
-    "targetProfiles": 2,
+    "durationSeconds": 0.15,
+    "targetProfiles": 3,
     "refreshedProfiles": 0,
-    "reusedProfiles": 2,
+    "reusedProfiles": 3,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
@@ -68400,15 +68512,15 @@
     "totalPlaytimeRows": 86342
   },
   "stats": {
-    "durationSeconds": 0.38,
-    "targetWins": 2,
-    "uniqueProgressTargets": 2,
-    "libraryPlaytimeHits": 2,
-    "cachedReuses": 2,
+    "durationSeconds": 0.35,
+    "targetWins": 3,
+    "uniqueProgressTargets": 3,
+    "libraryPlaytimeHits": 3,
+    "cachedReuses": 3,
     "achievementSuccesses": 0,
     "achievementErrors": 0,
     "cachedFallbacks": 0,
-    "hltbTitlesRequested": 2,
-    "hltbResultsAvailable": 3939
+    "hltbTitlesRequested": 3,
+    "hltbResultsAvailable": 3955
   }
 }
