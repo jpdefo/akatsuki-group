@@ -75,27 +75,16 @@
       const giveaways = await collectGiveaways(existingSync);
       log(`Giveaways found: ${giveaways.length}`);
 
-      const pendingGiveaways = getPendingGiveawaysToRefresh(existingSync, giveaways);
-      if (pendingGiveaways.length) {
-        log(`Refreshing ${pendingGiveaways.length} unresolved giveaway(s) from earlier pages...`);
-      }
-
       let detailedGiveaways = giveaways;
       const unresolvedGiveaways = giveaways.filter(needsGiveawayDetails);
-      const followUpGiveaways = [...unresolvedGiveaways, ...pendingGiveaways];
-      if (followUpGiveaways.length) {
-        log(`Resolving ${followUpGiveaways.length} giveaway(s) missing app, winner, or label data...`);
+      if (unresolvedGiveaways.length) {
+        log(`Resolving ${unresolvedGiveaways.length} giveaway(s) missing app, winner, or label data...`);
         const resolvedGiveaways = new Map();
-        for (const [index, giveaway] of followUpGiveaways.entries()) {
-          log(`Resolving giveaway ${index + 1}/${followUpGiveaways.length}: ${giveaway.title}`);
+        for (const [index, giveaway] of unresolvedGiveaways.entries()) {
+          log(`Resolving giveaway ${index + 1}/${unresolvedGiveaways.length}: ${giveaway.title}`);
           resolvedGiveaways.set(giveaway.code, await enrichGiveaway(giveaway));
         }
-        detailedGiveaways = [
-          ...giveaways.map((giveaway) => resolvedGiveaways.get(giveaway.code) || giveaway),
-          ...pendingGiveaways
-            .map((giveaway) => resolvedGiveaways.get(giveaway.code) || giveaway)
-            .filter((giveaway) => !giveaways.some((current) => current.code === giveaway.code)),
-        ];
+        detailedGiveaways = giveaways.map((giveaway) => resolvedGiveaways.get(giveaway.code) || giveaway);
       }
       const mergedMembers = mergeMembersWithGiveawayUsers(members, detailedGiveaways);
 
@@ -190,14 +179,9 @@
     const startPage = 1;
     const endPage = SETTINGS.giveawayPages;
     for (let page = startPage; page <= endPage; page += 1) {
-      let pageResults = [];
-      try {
-        pageResults = await fetchGiveawayPageJson(page, existingGiveaways);
-      } catch (error) {
-        const url = page === 1 ? groupBase : `${groupBase}/search?page=${page}`;
-        const doc = await fetchDocument(url);
-        pageResults = parseGiveawayRows(doc, existingGiveaways);
-      }
+      const url = page === 1 ? groupBase : `${groupBase}/search?page=${page}`;
+      const doc = await fetchDocument(url);
+      const pageResults = parseGiveawayRows(doc, existingGiveaways);
       if (!pageResults.length) {
         break;
       }
@@ -510,24 +494,6 @@
     );
   }
 
-  function getPendingGiveawaysToRefresh(existingSync, currentGiveaways) {
-    const currentCodes = new Set(currentGiveaways.map((giveaway) => giveaway.code));
-    const maxAgeMs = 120 * 24 * 60 * 60 * 1000;
-    const now = Date.now();
-    return (existingSync?.giveaways || []).filter((giveaway) => {
-      if (!giveaway?.code || currentCodes.has(giveaway.code) || !giveaway.url) {
-        return false;
-      }
-      if (!["open", "awaiting_feedback", "unknown"].includes(giveaway.resultStatus)) {
-        return false;
-      }
-      if (!giveaway.endDate) {
-        return true;
-      }
-      return Math.abs(now - new Date(giveaway.endDate).getTime()) <= maxAgeMs;
-    });
-  }
-
   function normalizeText(value) {
     return String(value || "").replace(/\s+/g, " ").trim();
   }
@@ -563,59 +529,6 @@
           ? giveaway.giveawayKindChecked
           : Boolean(existingGiveaway.giveawayKindChecked),
     };
-  }
-
-  function buildGiveawayFromJsonRecord(record, existingGiveaway) {
-    const giveawayUrl = String(record?.link || "");
-    const codeMatch = giveawayUrl.match(/\/giveaway\/([^/]+)\//);
-    if (!codeMatch) {
-      return null;
-    }
-
-    const appId = Number(record?.app_id || 0) || null;
-    const packageId = Number(record?.package_id || 0) || null;
-    const endTimestamp = Number(record?.end_timestamp || 0) * 1000;
-    return mergeGiveawayWithExisting(
-      {
-        code: codeMatch[1],
-        url: giveawayUrl,
-        title: normalizeText(record?.name || ""),
-        creatorUsername: normalizeText(record?.creator?.username || ""),
-        creatorProfileUrl: record?.creator?.username
-          ? `https://www.steamgifts.com/user/${encodeURIComponent(record.creator.username)}`
-          : "",
-        appId,
-        steamAppUrl: buildSteamStoreUrl(appId, packageId),
-        entriesCount: Number(record?.entry_count || 0),
-        endDate: endTimestamp ? new Date(endTimestamp).toISOString() : null,
-        winners: existingGiveaway?.winners || [],
-        resultStatus: endTimestamp && endTimestamp <= Date.now() ? existingGiveaway?.resultStatus || "unknown" : "open",
-        resultLabel: endTimestamp && endTimestamp <= Date.now() ? existingGiveaway?.resultLabel || "" : "Open",
-        points: Number(record?.points || 0),
-        regionRestricted: Boolean(record?.region_restricted),
-      },
-      existingGiveaway,
-    );
-  }
-
-  async function fetchGiveawayPageJson(pageNumber, existingGiveaways = new Map()) {
-    const url = new URL(groupBase);
-    url.searchParams.set("page", String(pageNumber));
-    url.searchParams.set("format", "json");
-
-    const response = await fetch(url.href, { credentials: "include" });
-    if (!response.ok) {
-      throw new Error(`Could not load ${url.href} (${response.status})`);
-    }
-
-    const payload = await response.json().catch(() => null);
-    if (!payload?.success || !Array.isArray(payload.results)) {
-      throw new Error(`Invalid JSON payload for ${url.href}`);
-    }
-
-    return payload.results
-      .map((record) => buildGiveawayFromJsonRecord(record, existingGiveaways.get(String(record?.link || "").match(/\/giveaway\/([^/]+)\//)?.[1] || "")))
-      .filter(Boolean);
   }
 
   function getGiveawayDescriptionText(doc) {

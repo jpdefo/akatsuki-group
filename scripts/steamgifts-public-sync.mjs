@@ -47,16 +47,6 @@ function normalizeText(value) {
   return String(value || "").replace(/\s+/g, " ").trim();
 }
 
-function buildSteamStoreUrl(appId, packageId) {
-  if (appId) {
-    return `https://store.steampowered.com/app/${appId}?utm_source=SteamGifts`;
-  }
-  if (packageId) {
-    return `https://store.steampowered.com/sub/${packageId}?utm_source=SteamGifts`;
-  }
-  return "";
-}
-
 function buildSteamMediaUrls(appId) {
   if (!appId) {
     return {
@@ -92,77 +82,6 @@ function mergeGiveawayWithExisting(giveaway, existingGiveaway) {
   };
 }
 
-function buildGiveawayFromJsonRecord(record, existingGiveaway) {
-  const giveawayUrl = String(record?.link || "");
-  const codeMatch = giveawayUrl.match(/\/giveaway\/([^/]+)\//);
-  if (!codeMatch) {
-    return null;
-  }
-
-  const appId = Number(record?.app_id || 0) || null;
-  const packageId = Number(record?.package_id || 0) || null;
-  const media = buildSteamMediaUrls(appId);
-  const endTimestamp = Number(record?.end_timestamp || 0) * 1000;
-  return mergeGiveawayWithExisting(
-    {
-      code: codeMatch[1],
-      url: giveawayUrl,
-      title: normalizeText(record?.name || ""),
-      creatorUsername: normalizeText(record?.creator?.username || ""),
-      creatorProfileUrl: record?.creator?.username
-        ? `https://www.steamgifts.com/user/${encodeURIComponent(record.creator.username)}`
-        : "",
-      appId,
-      steamAppUrl: buildSteamStoreUrl(appId, packageId),
-      headerImageUrl: media.headerImageUrl,
-      capsuleImageUrl: media.capsuleImageUrl,
-      capsuleSmallUrl: media.capsuleSmallUrl,
-      entriesCount: Number(record?.entry_count || 0),
-      endDate: endTimestamp ? new Date(endTimestamp).toISOString() : null,
-      winners: existingGiveaway?.winners || [],
-      resultStatus: endTimestamp && endTimestamp <= Date.now() ? existingGiveaway?.resultStatus || "unknown" : "open",
-      resultLabel: endTimestamp && endTimestamp <= Date.now() ? existingGiveaway?.resultLabel || "" : "Open",
-      points: Number(record?.points || 0),
-      regionRestricted: Boolean(record?.region_restricted),
-    },
-    existingGiveaway,
-  );
-}
-
-async function fetchGiveawayPageJson(page, groupBase, pageNumber, existingGiveaways = new Map()) {
-  const url = new URL(groupBase);
-  url.searchParams.set("page", String(pageNumber));
-  url.searchParams.set("format", "json");
-
-  const result = await page.evaluate(async (jsonUrl) => {
-    const response = await fetch(jsonUrl, { credentials: "include" });
-    return {
-      ok: response.ok,
-      status: response.status,
-      text: await response.text(),
-    };
-  }, url.href);
-
-  if (!result.ok) {
-    throw new Error(`Could not load ${url.href} (${result.status})`);
-  }
-
-  let payload = null;
-  try {
-    payload = JSON.parse(result.text);
-  } catch {
-    throw new Error(`Invalid JSON payload for ${url.href}`);
-  }
-
-  if (!payload?.success || !Array.isArray(payload.results)) {
-    throw new Error(`Invalid JSON payload for ${url.href}`);
-  }
-
-  return payload.results
-    .map((record) => buildGiveawayFromJsonRecord(record, existingGiveaways.get(String(record?.link || "").match(/\/giveaway\/([^/]+)\//)?.[1] || "")))
-    .filter(Boolean);
-}
-
 function detectGiveawayKindFromDescription(descriptionText) {
   const text = normalizeText(descriptionText || "");
   const matches = [
@@ -186,24 +105,6 @@ function needsGiveawayDetails(giveaway) {
     !giveaway.giveawayKindChecked ||
     (ended && ["open", "awaiting_feedback", "unknown"].includes(String(giveaway.resultStatus || "")))
   );
-}
-
-function getPendingGiveawaysToRefresh(existingSync, currentGiveaways) {
-  const currentCodes = new Set(currentGiveaways.map((giveaway) => giveaway.code));
-  const maxAgeMs = 120 * 24 * 60 * 60 * 1000;
-  const now = Date.now();
-  return (existingSync?.giveaways || []).filter((giveaway) => {
-    if (!giveaway?.code || currentCodes.has(giveaway.code) || !giveaway.url) {
-      return false;
-    }
-    if (!["open", "awaiting_feedback", "unknown"].includes(giveaway.resultStatus)) {
-      return false;
-    }
-    if (!giveaway.endDate) {
-      return true;
-    }
-    return Math.abs(now - new Date(giveaway.endDate).getTime()) <= maxAgeMs;
-  });
 }
 
 function mergeMembersWithGiveawayUsers(members, giveaways) {
@@ -395,13 +296,9 @@ async function collectGiveaways(page, groupBase, maxGiveawayPages, existingSync)
 
   await gotoSteamGifts(page, groupBase);
   for (let pageNumber = 1; pageNumber <= maxGiveawayPages; pageNumber += 1) {
-    let pageGiveaways = [];
-    try {
-      pageGiveaways = await fetchGiveawayPageJson(page, groupBase, pageNumber, existingGiveaways);
-    } catch {
-      const pageUrl = pageNumber === 1 ? groupBase : `${groupBase}/search?page=${pageNumber}`;
-      await gotoSteamGifts(page, pageUrl);
-      pageGiveaways = await page.evaluate(() => {
+    const pageUrl = pageNumber === 1 ? groupBase : `${groupBase}/search?page=${pageNumber}`;
+    await gotoSteamGifts(page, pageUrl);
+    let pageGiveaways = await page.evaluate(() => {
       function normalizeText(value) {
         return String(value || "").replace(/\s+/g, " ").trim();
       }
@@ -657,10 +554,9 @@ async function collectGiveaways(page, groupBase, maxGiveawayPages, existingSync)
         });
       }
 
-        return results;
-      });
-      pageGiveaways = pageGiveaways.map((giveaway) => mergeGiveawayWithExisting(giveaway, existingGiveaways.get(giveaway.code)));
-    }
+      return results;
+    });
+    pageGiveaways = pageGiveaways.map((giveaway) => mergeGiveawayWithExisting(giveaway, existingGiveaways.get(giveaway.code)));
 
     if (!pageGiveaways.length) {
       break;
@@ -915,23 +811,14 @@ try {
     existingSync,
   );
 
-  const pendingGiveaways = getPendingGiveawaysToRefresh(existingSync, giveaways);
   const unresolvedGiveaways = giveaways.filter(needsGiveawayDetails);
-  const followUpGiveaways = Array.from(
-    new Map([...unresolvedGiveaways, ...pendingGiveaways].map((giveaway) => [giveaway.code, giveaway])).values(),
-  );
   const resolvedGiveaways = new Map();
 
-  for (const giveaway of followUpGiveaways) {
+  for (const giveaway of unresolvedGiveaways) {
     resolvedGiveaways.set(giveaway.code, await enrichGiveaway(giveawaysPage, giveaway));
   }
 
-  const detailedGiveaways = [
-    ...giveaways.map((giveaway) => resolvedGiveaways.get(giveaway.code) || giveaway),
-    ...pendingGiveaways
-      .map((giveaway) => resolvedGiveaways.get(giveaway.code) || giveaway)
-      .filter((giveaway) => !giveaways.some((current) => current.code === giveaway.code)),
-  ];
+  const detailedGiveaways = giveaways.map((giveaway) => resolvedGiveaways.get(giveaway.code) || giveaway);
   const mergedMembers = mergeMembersWithGiveawayUsers(members, detailedGiveaways);
   const payload = {
     source: "akatsuki-steamgifts-public-sync",
@@ -958,7 +845,7 @@ try {
   payload.syncStats = {
     memberPagesScanned,
     giveawayPagesScanned,
-    unresolvedGiveawaysResolved: followUpGiveaways.length,
+    unresolvedGiveawaysResolved: unresolvedGiveaways.length,
   };
 
   await mkdir(path.dirname(outputPath), { recursive: true });
