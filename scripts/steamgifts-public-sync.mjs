@@ -47,9 +47,144 @@ function normalizeText(value) {
   return String(value || "").replace(/\s+/g, " ").trim();
 }
 
+function buildSteamStoreUrl(appId, packageId) {
+  if (appId) {
+    return `https://store.steampowered.com/app/${appId}?utm_source=SteamGifts`;
+  }
+  if (packageId) {
+    return `https://store.steampowered.com/sub/${packageId}?utm_source=SteamGifts`;
+  }
+  return "";
+}
+
+function buildSteamMediaUrls(appId) {
+  if (!appId) {
+    return {
+      headerImageUrl: "",
+      capsuleImageUrl: "",
+      capsuleSmallUrl: "",
+    };
+  }
+
+  return {
+    headerImageUrl: `https://cdn.cloudflare.steamstatic.com/steam/apps/${appId}/header.jpg`,
+    capsuleImageUrl: `https://cdn.cloudflare.steamstatic.com/steam/apps/${appId}/capsule_616x353.jpg`,
+    capsuleSmallUrl: `https://cdn.cloudflare.steamstatic.com/steam/apps/${appId}/capsule_184x69.jpg`,
+  };
+}
+
+function mergeGiveawayWithExisting(giveaway, existingGiveaway) {
+  if (!existingGiveaway) {
+    return giveaway;
+  }
+
+  return {
+    ...existingGiveaway,
+    ...giveaway,
+    giveawayKind:
+      typeof giveaway.giveawayKind === "string" && giveaway.giveawayKind
+        ? giveaway.giveawayKind
+        : existingGiveaway.giveawayKind || "",
+    giveawayKindChecked:
+      giveaway.giveawayKindChecked !== undefined
+        ? giveaway.giveawayKindChecked
+        : Boolean(existingGiveaway.giveawayKindChecked),
+  };
+}
+
+function buildGiveawayFromJsonRecord(record, existingGiveaway) {
+  const giveawayUrl = String(record?.link || "");
+  const codeMatch = giveawayUrl.match(/\/giveaway\/([^/]+)\//);
+  if (!codeMatch) {
+    return null;
+  }
+
+  const appId = Number(record?.app_id || 0) || null;
+  const packageId = Number(record?.package_id || 0) || null;
+  const media = buildSteamMediaUrls(appId);
+  const endTimestamp = Number(record?.end_timestamp || 0) * 1000;
+  return mergeGiveawayWithExisting(
+    {
+      code: codeMatch[1],
+      url: giveawayUrl,
+      title: normalizeText(record?.name || ""),
+      creatorUsername: normalizeText(record?.creator?.username || ""),
+      creatorProfileUrl: record?.creator?.username
+        ? `https://www.steamgifts.com/user/${encodeURIComponent(record.creator.username)}`
+        : "",
+      appId,
+      steamAppUrl: buildSteamStoreUrl(appId, packageId),
+      headerImageUrl: media.headerImageUrl,
+      capsuleImageUrl: media.capsuleImageUrl,
+      capsuleSmallUrl: media.capsuleSmallUrl,
+      entriesCount: Number(record?.entry_count || 0),
+      endDate: endTimestamp ? new Date(endTimestamp).toISOString() : null,
+      winners: existingGiveaway?.winners || [],
+      resultStatus: endTimestamp && endTimestamp <= Date.now() ? existingGiveaway?.resultStatus || "unknown" : "open",
+      resultLabel: endTimestamp && endTimestamp <= Date.now() ? existingGiveaway?.resultLabel || "" : "Open",
+      points: Number(record?.points || 0),
+      regionRestricted: Boolean(record?.region_restricted),
+    },
+    existingGiveaway,
+  );
+}
+
+async function fetchGiveawayPageJson(page, groupBase, pageNumber, existingGiveaways = new Map()) {
+  const url = new URL(groupBase);
+  url.searchParams.set("page", String(pageNumber));
+  url.searchParams.set("format", "json");
+
+  const result = await page.evaluate(async (jsonUrl) => {
+    const response = await fetch(jsonUrl, { credentials: "include" });
+    return {
+      ok: response.ok,
+      status: response.status,
+      text: await response.text(),
+    };
+  }, url.href);
+
+  if (!result.ok) {
+    throw new Error(`Could not load ${url.href} (${result.status})`);
+  }
+
+  let payload = null;
+  try {
+    payload = JSON.parse(result.text);
+  } catch {
+    throw new Error(`Invalid JSON payload for ${url.href}`);
+  }
+
+  if (!payload?.success || !Array.isArray(payload.results)) {
+    throw new Error(`Invalid JSON payload for ${url.href}`);
+  }
+
+  return payload.results
+    .map((record) => buildGiveawayFromJsonRecord(record, existingGiveaways.get(String(record?.link || "").match(/\/giveaway\/([^/]+)\//)?.[1] || "")))
+    .filter(Boolean);
+}
+
+function detectGiveawayKindFromDescription(descriptionText) {
+  const text = normalizeText(descriptionText || "");
+  const matches = [
+    { kind: "extra", index: text.search(/\bextra\b/i) },
+    { kind: "cycle", index: text.search(/\bmonthly\b/i) },
+  ].filter((match) => match.index >= 0);
+
+  if (!matches.length) {
+    return "";
+  }
+
+  matches.sort((left, right) => left.index - right.index);
+  return matches[0].kind;
+}
+
 function needsGiveawayDetails(giveaway) {
   const ended = Boolean(giveaway.endDate && new Date(giveaway.endDate).getTime() <= Date.now());
-  return !giveaway.appId || (ended && giveaway.resultStatus === "unknown");
+  return (
+    !giveaway.appId ||
+    !giveaway.giveawayKindChecked ||
+    (ended && ["open", "awaiting_feedback", "unknown"].includes(String(giveaway.resultStatus || "")))
+  );
 }
 
 function getPendingGiveawaysToRefresh(existingSync, currentGiveaways) {
@@ -249,14 +384,23 @@ async function collectMembers(page, groupBase, existingSync, maxMemberPages) {
   return { members: results, pagesScanned, groupName };
 }
 
-async function collectGiveaways(page, groupBase, maxGiveawayPages) {
+async function collectGiveaways(page, groupBase, maxGiveawayPages, existingSync) {
   const results = [];
   const seen = new Set();
+  const existingGiveaways = new Map(
+    (existingSync?.giveaways || []).filter((giveaway) => giveaway?.code).map((giveaway) => [giveaway.code, giveaway]),
+  );
   let pagesScanned = 0;
 
   await gotoSteamGifts(page, groupBase);
   for (let pageNumber = 1; pageNumber <= maxGiveawayPages; pageNumber += 1) {
-    const pageGiveaways = await page.evaluate(() => {
+    let pageGiveaways = [];
+    try {
+      pageGiveaways = await fetchGiveawayPageJson(page, groupBase, pageNumber, existingGiveaways);
+    } catch {
+      const pageUrl = pageNumber === 1 ? groupBase : `${groupBase}/search?page=${pageNumber}`;
+      await gotoSteamGifts(page, pageUrl);
+      pageGiveaways = await page.evaluate(() => {
       function normalizeText(value) {
         return String(value || "").replace(/\s+/g, " ").trim();
       }
@@ -512,8 +656,10 @@ async function collectGiveaways(page, groupBase, maxGiveawayPages) {
         });
       }
 
-      return results;
-    });
+        return results;
+      });
+      pageGiveaways = pageGiveaways.map((giveaway) => mergeGiveawayWithExisting(giveaway, existingGiveaways.get(giveaway.code)));
+    }
 
     if (!pageGiveaways.length) {
       break;
@@ -533,19 +679,6 @@ async function collectGiveaways(page, groupBase, maxGiveawayPages) {
       break;
     }
     pagesScanned = pageNumber;
-
-    if (pageNumber >= maxGiveawayPages) {
-      break;
-    }
-
-    const nextUrl = await page.evaluate((nextPage) => {
-      const link = document.querySelector(`a[href*="/search?page=${nextPage}"]`);
-      return link ? link.href : "";
-    }, pageNumber + 1);
-    if (!nextUrl) {
-      break;
-    }
-    await gotoSteamGifts(page, nextUrl);
   }
 
   return { giveaways: results, pagesScanned };
@@ -654,6 +787,29 @@ async function enrichGiveaway(page, giveaway) {
       };
     }
 
+    function getGiveawayDescriptionText() {
+      const description =
+        document.querySelector(".page__description .markdown") ||
+        document.querySelector(".page__description") ||
+        document.querySelector(".markdown");
+      return normalizeText(description?.textContent || "");
+    }
+
+    function detectGiveawayKindFromDescription(descriptionText) {
+      const text = normalizeText(descriptionText || "");
+      const matches = [
+        { kind: "extra", index: text.search(/\bextra\b/i) },
+        { kind: "cycle", index: text.search(/\bmonthly\b/i) },
+      ].filter((match) => match.index >= 0);
+
+      if (!matches.length) {
+        return "";
+      }
+
+      matches.sort((left, right) => left.index - right.index);
+      return matches[0].kind;
+    }
+
     const featureRows = Array.from(document.querySelectorAll(".featured__table__row__left"));
     const featureMap = {};
     for (const label of featureRows) {
@@ -668,6 +824,7 @@ async function enrichGiveaway(page, giveaway) {
       : null;
     const { appId, steamAppUrl } = extractAppInfo(document.body);
     const media = extractSteamMedia(document.body, appId);
+    const giveawayKind = detectGiveawayKindFromDescription(getGiveawayDescriptionText());
 
     return {
       appId,
@@ -679,6 +836,8 @@ async function enrichGiveaway(page, giveaway) {
       points: Number.parseInt(String(featureMap.Points || "").replace(/[^\d]/g, ""), 10) || 0,
       endDate: endTimestamp ? new Date(endTimestamp).toISOString() : null,
       regionRestricted: /region/i.test(String(featureMap.Type || "")),
+      giveawayKind,
+      giveawayKindChecked: true,
     };
   });
 
@@ -693,6 +852,8 @@ async function enrichGiveaway(page, giveaway) {
     points: details.points || giveaway.points || 0,
     endDate: giveaway.endDate || details.endDate || null,
     regionRestricted: details.regionRestricted || giveaway.regionRestricted || false,
+    giveawayKind: details.giveawayKind || giveaway.giveawayKind || "",
+    giveawayKindChecked: details.giveawayKindChecked || giveaway.giveawayKindChecked || false,
     winners: await fetchWinners(page, giveaway.url),
   };
 }
@@ -749,6 +910,7 @@ try {
     giveawaysPage,
     groupBase,
     maxGiveawayPages,
+    existingSync,
   );
 
   const pendingGiveaways = getPendingGiveawaysToRefresh(existingSync, giveaways);

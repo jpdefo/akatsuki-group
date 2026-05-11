@@ -94,6 +94,32 @@ export function getNextCycleExemptionInfo(cycleMonths) {
   };
 }
 
+export function getCyclePeriod(year, cycleNumber) {
+  if (!Number.isInteger(year) || ![1, 2, 3].includes(cycleNumber)) {
+    return null;
+  }
+
+  const firstMonthByCycle = {
+    1: 1,
+    2: 4,
+    3: 9,
+  };
+  return getPeriodInfo(`${year}-${String(firstMonthByCycle[cycleNumber]).padStart(2, "0")}-01`);
+}
+
+export function getPreviousCyclePeriod(selectedMonth) {
+  const period = typeof selectedMonth === "string" ? getPeriodInfo(`${selectedMonth}-01`) : selectedMonth;
+  if (!period || period.kind !== "cycle") {
+    return null;
+  }
+
+  if (period.cycleNumber === 1) {
+    return getCyclePeriod(period.year - 1, 3);
+  }
+
+  return getCyclePeriod(period.year, period.cycleNumber - 1);
+}
+
 export function getCycleKey(selectedMonth) {
   if (typeof selectedMonth === "string" && /^\d{4}-cycle-[1-3]$/.test(selectedMonth)) {
     return selectedMonth;

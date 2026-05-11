@@ -25,6 +25,7 @@ import {
   getCycleMonthKeys,
   getNextCycleExemptionInfo,
   getPeriodInfo,
+  getPreviousCyclePeriod,
   getRequiredHours,
 } from "./client/cycle-rules.js";
 
@@ -511,6 +512,7 @@ function renderCycleViews(selectedMonth) {
       "Cycle requirements are paused for this month. Giveaway classification still applies.",
     );
   } else {
+    const rule9Carryover = getRule9CarryoverForCycle(selectedMonth);
     const cycleRows = state.members
       .filter((member) => member?.isActiveMember !== false)
       .map((member) => {
@@ -520,13 +522,17 @@ function renderCycleViews(selectedMonth) {
         const cycleWinsToDate = computeCycleWinsForMemberInMonth(member.id, selectedMonth);
         const cycleGiveawaysThisMonth = countMemberGiveawaysForMonth(member.id, selectedMonth, "cycle");
         const extraGiveawaysThisMonth = countMemberGiveawaysForMonth(member.id, selectedMonth, "extra");
-        const requiredGiveaways = paused ? 0 : getRequiredCycleGiveawaysForMember(member.id, selectedMonth);
+        const memberRule9Carryover = isRule9CarryoverWinner(rule9Carryover, member.id) ? rule9Carryover : null;
+        const requiredGiveaways = paused
+          ? 0
+          : getRequiredCycleGiveawaysForMember(member.id, selectedMonth, { rule9Carryover });
         const status = buildCycleStatus({
           period,
           winsBeforeMonth,
           cycleWinsToDate,
           cycleGiveawaysThisMonth,
           requiredGiveaways,
+          rule9Carryover: memberRule9Carryover,
           paused,
         });
 
@@ -635,41 +641,63 @@ function renderCycleHistoryPage() {
   const cycleGiveaways = state.giveaways
     .filter((giveaway) => cycleMonths.includes(getGiveawayMonth(giveaway)))
     .sort((left, right) => parseDate(right.createdAt) - parseDate(left.createdAt));
+  const countableCycleGiveaways = cycleGiveaways.filter((giveaway) => doesGiveawayCountForCycleMath(giveaway));
   const cycleOnlyWins = cycleWins.filter((win) => getWinTrackKind(win) === "cycle");
-  const cycleGiveawayCount = cycleGiveaways.filter((giveaway) => getGiveawayKind(giveaway) === "cycle").length;
-  const extraGiveawayCount = cycleGiveaways.filter((giveaway) => getGiveawayKind(giveaway) === "extra").length;
+  const cycleGiveawayCount = countableCycleGiveaways.filter((giveaway) => getGiveawayKind(giveaway) === "cycle").length;
+  const extraGiveawayCount = countableCycleGiveaways.filter((giveaway) => getGiveawayKind(giveaway) === "extra").length;
   const bestGifterAward = buildCycleBestGifterAward(selectedCycle, cycleMonths, cycleGiveaways);
+  const rule9Carryover = getRule9CarryoverForCycle(selectedCycle);
 
   elements.cycleSummary.textContent = `${selectedCycle.label} • ${cycleMonths.map(formatMonthKey).join(" • ")} • ${cycleOnlyWins.length} cycle win(s) • ${cycleGiveawayCount} cycle giveaway(s) • ${extraGiveawayCount} extra giveaway(s)`;
-  renderCycleBestGifterWarning(bestGifterAward, selectedCycle, cycleMonths);
+  renderCycleBestGifterWarning(bestGifterAward, selectedCycle, cycleMonths, rule9Carryover);
 
-  renderCycleHistoryMembersTable(selectedCycle, cycleMonths, cycleWins, cycleGiveaways);
+  renderCycleHistoryMembersTable(selectedCycle, cycleMonths, cycleWins, cycleGiveaways, rule9Carryover);
   renderCycleHistoryResultsTable(cycleGiveaways);
 }
 
-function renderCycleBestGifterWarning(bestGifterAward, selectedCycle, cycleMonths) {
+function renderCycleBestGifterWarning(bestGifterAward, selectedCycle, cycleMonths, rule9Carryover) {
   if (!elements.cycleBestGifterWarning) {
     return;
   }
 
+  const articles = [];
+
+  if (rule9Carryover?.status === "winner" && rule9Carryover.monthKey) {
+    articles.push(`
+      <article class="alert-card info compact-alert">
+        <h3>Previous cycle exemption</h3>
+        <p><strong>${escapeHtml(rule9Carryover.memberName)}</strong> won Rule 9 in ${escapeHtml(rule9Carryover.previousCycle.label)} and is exempt from the regular mandatory giveaway in ${escapeHtml(formatMonthKey(rule9Carryover.monthKey))}.</p>
+      </article>
+    `);
+  } else if (rule9Carryover?.status === "tie" && rule9Carryover.monthKey) {
+    articles.push(`
+      <article class="alert-card warning compact-alert">
+        <h3>Previous cycle exemption pending</h3>
+        <p>${escapeHtml(rule9Carryover.tieMembers.join(", "))} are tied for Rule 9 in ${escapeHtml(rule9Carryover.previousCycle.label)}, so the month 1 exemption for ${escapeHtml(formatMonthKey(rule9Carryover.monthKey))} still needs an admin tie-break.</p>
+      </article>
+    `);
+  }
+
   if (!bestGifterAward.eligibleCount) {
-    elements.cycleBestGifterWarning.innerHTML = `
+    articles.push(`
       <article class="alert-card info compact-alert">
         <h3>Best gifter not decided yet</h3>
         <p>Rule 9 needs at least 2 cycle giveaways from a member before someone can take the exemption lead in ${escapeHtml(selectedCycle.label)}.</p>
       </article>
-    `;
+    `);
+    elements.cycleBestGifterWarning.innerHTML = articles.join("");
     return;
   }
 
   const nextMonthInfo = getNextCycleExemptionInfo(selectedCycle.months);
   if (bestGifterAward.tieMembers.length > 1) {
-    elements.cycleBestGifterWarning.innerHTML = `
+    articles.push(`
       <article class="alert-card warning compact-alert">
         <h3>Best gifter tie</h3>
         <p>${escapeHtml(bestGifterAward.tieMembers.join(", "))} are tied on average entries in ${escapeHtml(selectedCycle.label)}. Highest single giveaway entries are also tied, so this still needs an admin tie-break.</p>
       </article>
-    `;
+    `);
+    elements.cycleBestGifterWarning.innerHTML = articles.join("");
     return;
   }
 
@@ -681,7 +709,7 @@ function renderCycleBestGifterWarning(bestGifterAward, selectedCycle, cycleMonth
     : nextMonthInfo.hasMandatoryGiveaway
       ? `If ${bestGifterAward.winnerName} stays ahead through the end of the cycle, the Rule 9 exemption will apply in ${nextMonthInfo.label}.`
       : `If ${bestGifterAward.winnerName} stays ahead through the end of the cycle, the exemption lands in ${nextMonthInfo.label}, which has no regular mandatory giveaway.`;
-  elements.cycleBestGifterWarning.innerHTML = `
+  articles.push(`
     <article class="alert-card warning compact-alert">
       <h3>${escapeHtml(gifterLabel)}</h3>
       <p>
@@ -689,10 +717,11 @@ function renderCycleBestGifterWarning(bestGifterAward, selectedCycle, cycleMonth
         ${escapeHtml(exemptionText)}
       </p>
     </article>
-  `;
+  `);
+  elements.cycleBestGifterWarning.innerHTML = articles.join("");
 }
 
-function renderCycleHistoryMembersTable(selectedCycle, cycleMonths, cycleWins, cycleGiveaways) {
+function renderCycleHistoryMembersTable(selectedCycle, cycleMonths, cycleWins, cycleGiveaways, rule9Carryover) {
   const participantIds = new Set([
     ...cycleWins.map((win) => win.memberId).filter(Boolean),
     ...cycleGiveaways.map((giveaway) => giveaway.creatorId).filter(Boolean),
@@ -716,25 +745,40 @@ function renderCycleHistoryMembersTable(selectedCycle, cycleMonths, cycleWins, c
         (win) => win.memberId === member.id && getWinTrackKind(win) === "cycle",
       ).length;
       const cycleGiveawaysTotal = cycleGiveaways.filter(
-        (giveaway) => giveaway.creatorId === member.id && getGiveawayKind(giveaway) === "cycle",
+        (giveaway) =>
+          giveaway.creatorId === member.id &&
+          getGiveawayKind(giveaway) === "cycle" &&
+          doesGiveawayCountForCycleMath(giveaway),
       ).length;
       const extraGiveawaysTotal = cycleGiveaways.filter(
-        (giveaway) => giveaway.creatorId === member.id && getGiveawayKind(giveaway) === "extra",
+        (giveaway) =>
+          giveaway.creatorId === member.id &&
+          getGiveawayKind(giveaway) === "extra" &&
+          doesGiveawayCountForCycleMath(giveaway),
       ).length;
       const cycleEntries = cycleGiveaways
-        .filter((giveaway) => giveaway.creatorId === member.id && getGiveawayKind(giveaway) === "cycle")
+        .filter(
+          (giveaway) =>
+            giveaway.creatorId === member.id &&
+            getGiveawayKind(giveaway) === "cycle" &&
+            doesGiveawayCountForCycleMath(giveaway),
+        )
         .map((giveaway) => Number(giveaway.entriesCount || 0));
       const averageEntries = cycleEntries.length
         ? cycleEntries.reduce((sum, value) => sum + value, 0) / cycleEntries.length
         : null;
       const bestEntries = cycleEntries.length ? Math.max(...cycleEntries) : 0;
-      const requiredGiveaways = paused ? 0 : getRequiredCycleGiveawaysForCycle(member.id, cycleMonths);
+      const memberRule9Carryover = isRule9CarryoverWinner(rule9Carryover, member.id) ? rule9Carryover : null;
+      const requiredGiveaways = paused
+        ? 0
+        : getRequiredCycleGiveawaysForCycle(member.id, cycleMonths, { rule9Carryover });
       const status = buildCycleHistoryStatus({
         cycleMonths,
         winsBeforeMonthThree,
         cycleWinsTotal,
         cycleGiveawaysTotal,
         requiredGiveaways,
+        rule9Carryover: memberRule9Carryover,
         paused,
       });
 
@@ -2082,6 +2126,8 @@ function upsertGiveawayFromSync(giveawayRecord, creatorId) {
     regionLocked: Boolean(giveawayRecord.regionRestricted),
     bundled: false,
     notes: giveawayRecord.url || "",
+    giveawayKind: String(giveawayRecord.giveawayKind || "").toLowerCase() === "extra" ? "extra" : "cycle",
+    giveawayKindChecked: Boolean(giveawayRecord.giveawayKindChecked),
   };
 
   if (!existing) {
@@ -2240,10 +2286,13 @@ function computeMemberMetrics(memberId) {
     .filter((evaluation) => evaluation.member.id === memberId && evaluation.penaltyOwed).length;
   const period = getPeriodInfo(state.settings.currentDate);
   const paused = period.kind === "cycle" && getCycleMemberStatus(memberId, monthKey(state.settings.currentDate)) === "paused";
+  const rule9Carryover = period.kind === "cycle" ? getRule9CarryoverForCycle(period) : null;
 
   let cycleAlert = "";
   if (paused) {
     cycleAlert = "paused for this cycle: excluded from joins and mandatory giveaways.";
+  } else if (period.kind === "cycle" && period.monthPosition === 1 && isRule9CarryoverWinner(rule9Carryover, memberId)) {
+    cycleAlert = `Rule 9 winner of ${rule9Carryover.previousCycle.label}: exempt from the regular monthly mandatory giveaway in ${formatMonthKey(rule9Carryover.monthKey)}.`;
   } else if (period.kind === "cycle" && period.monthPosition === 3) {
     if (cycleWins < 2) {
       cycleAlert = "unlucky member: exempt from the regular monthly mandatory giveaway in month 3.";
@@ -2444,7 +2493,9 @@ function getAvailableCycles() {
 }
 
 function buildCycleBestGifterAward(selectedCycle, cycleMonths, cycleGiveaways) {
-  const cycleOnlyGiveaways = cycleGiveaways.filter((giveaway) => getGiveawayKind(giveaway) === "cycle");
+  const cycleOnlyGiveaways = cycleGiveaways.filter(
+    (giveaway) => getGiveawayKind(giveaway) === "cycle" && doesGiveawayCountForCycleMath(giveaway),
+  );
   const grouped = new Map();
 
   for (const giveaway of cycleOnlyGiveaways) {
@@ -2494,6 +2545,7 @@ function buildCycleBestGifterAward(selectedCycle, cycleMonths, cycleGiveaways) {
 
   return {
     eligibleCount: candidates.length,
+    memberId: leader.memberId,
     winnerName: leader.name,
     giveawayCount: leader.giveawayCount,
     averageEntries: leader.averageEntries,
@@ -2537,17 +2589,94 @@ function countMemberGiveawaysForMonth(memberId, selectedMonth, kind) {
     if (giveaway.creatorId !== memberId) {
       return false;
     }
-    return getGiveawayKind(giveaway) === kind;
+    return getGiveawayKind(giveaway) === kind && doesGiveawayCountForCycleMath(giveaway);
   }).length;
 }
 
-function getRequiredCycleGiveawaysForMember(memberId, selectedMonth) {
+function getCyclePeriodInfo(periodOrMonth) {
+  const period = typeof periodOrMonth === "string" ? getPeriodInfo(`${periodOrMonth}-01`) : periodOrMonth;
+  if (!period || period.kind !== "cycle") {
+    return null;
+  }
+
+  return {
+    ...period,
+    key: getCycleKey(period),
+    months: getCycleMonthKeys(period),
+  };
+}
+
+function getRecentRule9CycleKeys() {
+  return new Set(getAvailableCycles().slice(0, 4).map((cycle) => cycle.key));
+}
+
+function getCycleGiveawaysForMonths(cycleMonths) {
+  return cycleMonths.flatMap((month) => getGiveawaysForMonth(month));
+}
+
+function getRule9CarryoverForCycle(periodOrMonth) {
+  const cycle = getCyclePeriodInfo(periodOrMonth);
+  if (!cycle || !getRecentRule9CycleKeys().has(cycle.key)) {
+    return null;
+  }
+
+  const previousCyclePeriod = getPreviousCyclePeriod(cycle);
+  const previousCycle = getCyclePeriodInfo(previousCyclePeriod);
+  if (!previousCycle) {
+    return null;
+  }
+
+  const availableMonths = new Set(getAvailableMonths());
+  if (!previousCycle.months.every((month) => availableMonths.has(month))) {
+    return null;
+  }
+
+  const award = buildCycleBestGifterAward(previousCycle, previousCycle.months, getCycleGiveawaysForMonths(previousCycle.months));
+  const monthKeyValue = cycle.months[0] || "";
+  if (!award.eligibleCount) {
+    return {
+      status: "none",
+      cycle,
+      previousCycle,
+      monthKey: monthKeyValue,
+    };
+  }
+
+  if (award.tieMembers.length > 1) {
+    return {
+      status: "tie",
+      cycle,
+      previousCycle,
+      monthKey: monthKeyValue,
+      tieMembers: award.tieMembers,
+    };
+  }
+
+  return {
+    status: "winner",
+    cycle,
+    previousCycle,
+    monthKey: monthKeyValue,
+    memberId: award.memberId,
+    memberName: award.winnerName,
+  };
+}
+
+function isRule9CarryoverWinner(rule9Carryover, memberId) {
+  return Boolean(rule9Carryover && rule9Carryover.status === "winner" && rule9Carryover.memberId === memberId);
+}
+
+function getRequiredCycleGiveawaysForMember(memberId, selectedMonth, options = {}) {
   const period = getPeriodInfo(`${selectedMonth}-01`);
   if (period.kind !== "cycle") {
     return 0;
   }
 
   if (period.monthPosition < 3) {
+    const rule9Carryover = options.rule9Carryover === undefined ? getRule9CarryoverForCycle(period) : options.rule9Carryover;
+    if (period.monthPosition === 1 && isRule9CarryoverWinner(rule9Carryover, memberId)) {
+      return 0;
+    }
     return 1;
   }
 
@@ -2561,11 +2690,22 @@ function getRequiredCycleGiveawaysForMember(memberId, selectedMonth) {
   return 1;
 }
 
-function getRequiredCycleGiveawaysForCycle(memberId, cycleMonths) {
-  return cycleMonths.reduce((total, month) => total + getRequiredCycleGiveawaysForMember(memberId, month), 0);
+function getRequiredCycleGiveawaysForCycle(memberId, cycleMonths, options = {}) {
+  return cycleMonths.reduce(
+    (total, month) => total + getRequiredCycleGiveawaysForMember(memberId, month, options),
+    0,
+  );
 }
 
-function buildCycleStatus({ period, winsBeforeMonth, cycleWinsToDate, cycleGiveawaysThisMonth, requiredGiveaways, paused }) {
+function buildCycleStatus({
+  period,
+  winsBeforeMonth,
+  cycleWinsToDate,
+  cycleGiveawaysThisMonth,
+  requiredGiveaways,
+  rule9Carryover,
+  paused,
+}) {
   if (paused) {
     return {
       level: "info",
@@ -2574,15 +2714,19 @@ function buildCycleStatus({ period, winsBeforeMonth, cycleWinsToDate, cycleGivea
     };
   }
 
-  let note = "Regular month: one cycle giveaway is required.";
-  if (period.monthPosition === 3) {
+  const noteParts = [];
+  if (period.monthPosition === 1 && rule9Carryover) {
+    noteParts.push(`Rule 9 carryover: month 1 is waived after winning ${rule9Carryover.previousCycle.label}.`);
+  } else if (period.monthPosition === 3) {
     if (winsBeforeMonth < 2) {
-      note = "Unlucky month: regular cycle giveaway is waived.";
+      noteParts.push("Unlucky month: regular cycle giveaway is waived.");
     } else if (winsBeforeMonth > 2) {
-      note = "Lucky month: two cycle giveaways are required.";
+      noteParts.push("Lucky month: two cycle giveaways are required.");
     } else {
-      note = "Balanced month: one cycle giveaway is required.";
+      noteParts.push("Balanced month: one cycle giveaway is required.");
     }
+  } else {
+    noteParts.push("Regular month: one cycle giveaway is required.");
   }
 
   let level = "success";
@@ -2597,13 +2741,21 @@ function buildCycleStatus({ period, winsBeforeMonth, cycleWinsToDate, cycleGivea
 
   if (cycleWinsToDate > 8) {
     level = level === "danger" ? "danger" : "warning";
-    note = `${note} Above the 8-win cycle cap by ${cycleWinsToDate - 8}.`;
+    noteParts.push(`Above the 8-win cycle cap by ${cycleWinsToDate - 8}.`);
   }
 
-  return { level, label, note };
+  return { level, label, note: noteParts.join(" ") };
 }
 
-function buildCycleHistoryStatus({ cycleMonths, winsBeforeMonthThree, cycleWinsTotal, cycleGiveawaysTotal, requiredGiveaways, paused }) {
+function buildCycleHistoryStatus({
+  cycleMonths,
+  winsBeforeMonthThree,
+  cycleWinsTotal,
+  cycleGiveawaysTotal,
+  requiredGiveaways,
+  rule9Carryover,
+  paused,
+}) {
   if (paused) {
     return {
       level: "info",
@@ -2614,16 +2766,24 @@ function buildCycleHistoryStatus({ cycleMonths, winsBeforeMonthThree, cycleWinsT
 
   const lastMonth = cycleMonths[cycleMonths.length - 1] || "";
   const lastPeriod = lastMonth ? getPeriodInfo(`${lastMonth}-01`) : null;
-  let note = lastMonth ? `Compact cycle totals through ${formatMonthKey(lastMonth)}.` : "Compact cycle totals.";
+  const noteParts = [];
+
+  if (rule9Carryover) {
+    noteParts.push(`Month 1 Rule 9 carryover applied after winning ${rule9Carryover.previousCycle.label}.`);
+  }
 
   if (lastPeriod?.kind === "cycle" && lastPeriod.monthPosition === 3) {
     if (winsBeforeMonthThree < 2) {
-      note = "Month 3 waiver applied: under 2 cycle wins before month 3.";
+      noteParts.push("Month 3 waiver applied: under 2 cycle wins before month 3.");
     } else if (winsBeforeMonthThree > 2) {
-      note = "Month 3 lucky-member rule applied: 2 cycle giveaways required in month 3.";
+      noteParts.push("Month 3 lucky-member rule applied: 2 cycle giveaways required in month 3.");
     } else {
-      note = "Month 3 balanced rule applied: 1 cycle giveaway required in month 3.";
+      noteParts.push("Month 3 balanced rule applied: 1 cycle giveaway required in month 3.");
     }
+  }
+
+  if (!noteParts.length) {
+    noteParts.push(lastMonth ? `Compact cycle totals through ${formatMonthKey(lastMonth)}.` : "Compact cycle totals.");
   }
 
   let level = "success";
@@ -2638,10 +2798,10 @@ function buildCycleHistoryStatus({ cycleMonths, winsBeforeMonthThree, cycleWinsT
 
   if (cycleWinsTotal > 8) {
     level = level === "danger" ? "danger" : "warning";
-    note = `${note} Above the 8-win cycle cap by ${cycleWinsTotal - 8}.`;
+    noteParts.push(`Above the 8-win cycle cap by ${cycleWinsTotal - 8}.`);
   }
 
-  return { level, label, note };
+  return { level, label, note: noteParts.join(" ") };
 }
 
 function buildPrereleaseMonthNote(win, game) {
@@ -3309,6 +3469,10 @@ function findWinsForGiveaway(giveaway) {
   }
 
   return [];
+}
+
+function doesGiveawayCountForCycleMath(giveaway) {
+  return findWinsForGiveaway(giveaway).length > 0;
 }
 
 function isCycleWin(win) {
