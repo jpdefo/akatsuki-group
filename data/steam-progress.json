@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-10T21:52:37.346513+00:00",
+  "updatedAt": "2026-05-11T06:27:47.930810+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -6707,13 +6707,13 @@
       "earnedAchievements": 0,
       "totalAchievements": 10,
       "achievementPercent": 0,
-      "playtimeHours": null,
-      "playtimeCheckedAt": null,
-      "playtimeSource": "",
+      "playtimeHours": 0.0,
+      "playtimeCheckedAt": "2026-05-11T06:27:46.098949+00:00",
+      "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-05-10T21:52:37.346476+00:00"
+      "checkedAt": "2026-05-11T06:27:47.930774+00:00"
     },
     {
       "username": "burntreynolds444",
@@ -8995,8 +8995,8 @@
       "achievementPercent": 0,
       "playtimeHours": 0.0,
       "error": null,
-      "checkedAt": "2026-05-10T21:52:37.346510+00:00",
-      "playtimeCheckedAt": "2026-05-08T06:43:31.656802+00:00",
+      "checkedAt": "2026-05-11T06:27:47.930807+00:00",
+      "playtimeCheckedAt": "2026-05-11T06:27:47.697701+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true
@@ -28649,13 +28649,13 @@
       "earnedAchievements": 0,
       "totalAchievements": 22,
       "achievementPercent": 0,
-      "playtimeHours": null,
-      "playtimeCheckedAt": null,
-      "playtimeSource": "",
+      "playtimeHours": 0.0,
+      "playtimeCheckedAt": "2026-05-11T06:27:46.793350+00:00",
+      "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-05-10T21:52:37.346500+00:00"
+      "checkedAt": "2026-05-11T06:27:47.930797+00:00"
     },
     {
       "username": "Saikania",
@@ -68523,27 +68523,27 @@
       "url": "https://howlongtobeat.com/game/34230"
     }
   ],
-  "steamApiEnabled": false,
+  "steamApiEnabled": true,
   "activeOnly": true,
   "refreshedMonth": "2026-05",
   "refreshedScope": "month",
-  "libraryUpdatedAt": "2026-05-10T21:52:37.136204+00:00",
+  "libraryUpdatedAt": "2026-05-11T06:27:47.702220+00:00",
   "libraryStats": {
-    "durationSeconds": 0.15,
+    "durationSeconds": 2.74,
     "targetProfiles": 3,
-    "refreshedProfiles": 0,
+    "refreshedProfiles": 3,
     "reusedProfiles": 0,
     "errorProfiles": 0,
-    "missingApiProfiles": 3,
+    "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "freshProfiles": 0,
-    "totalPlaytimeRows": 86320
+    "freshProfiles": 3,
+    "totalPlaytimeRows": 86338
   },
   "stats": {
-    "durationSeconds": 0.35,
+    "durationSeconds": 2.94,
     "targetWins": 3,
     "uniqueProgressTargets": 3,
-    "libraryPlaytimeHits": 1,
+    "libraryPlaytimeHits": 3,
     "cachedReuses": 3,
     "achievementSuccesses": 0,
     "achievementErrors": 0,

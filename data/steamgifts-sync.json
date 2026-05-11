@@ -1,6 +1,6 @@
 {
   "source": "akatsuki-steamgifts-sync",
-  "syncedAt": "2026-05-10T21:52:35.735Z",
+  "syncedAt": "2026-05-11T06:27:42.998Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -2186,7 +2186,7 @@
       "creatorProfileUrl": "https://www.steamgifts.com/user/BojanNS987",
       "appId": 1285190,
       "steamAppUrl": "https://store.steampowered.com/app/1285190?utm_source=SteamGifts",
-      "entriesCount": 2,
+      "entriesCount": 3,
       "endDate": "2026-05-04T10:03:27.000Z",
       "winners": [],
       "resultStatus": "open",
@@ -2812,7 +2812,9 @@
       "endDate": "2026-03-04T06:56:37.000Z",
       "winners": [],
       "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback"
+      "resultLabel": "Awaiting feedback",
+      "points": 0,
+      "regionRestricted": false
     },
     {
       "code": "16bPT",
@@ -116290,6 +116292,6 @@
       "winDate": "2016-08-26T06:01:36.000Z"
     }
   ],
-  "savedAt": "2026-05-10T21:52:35.788549+00:00",
-  "mergedAt": "2026-05-10T21:52:35.788561+00:00"
+  "savedAt": "2026-05-11T06:27:43.035899+00:00",
+  "mergedAt": "2026-05-11T06:27:43.035905+00:00"
 }
