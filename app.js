@@ -1990,7 +1990,9 @@ async function fetchSteamMediaForApp(appId) {
 
 function normalizeSteamGiftsSync(payload) {
   const members = payload.members || [];
-  const giveaways = (payload.giveaways || []).map(normalizeGiveawayMedia);
+  const giveaways = (payload.giveaways || []).map((giveaway) =>
+    normalizeGiveawaySyncRecord(normalizeGiveawayMedia(giveaway)),
+  );
   const memberSteamProfiles = Object.fromEntries(
     members
       .filter((member) => member.username)
@@ -2001,27 +2003,76 @@ function normalizeSteamGiftsSync(payload) {
       .filter((member) => member.username)
       .map((member) => [member.username, Boolean(member.isActiveMember)]),
   );
+  const derivedWins = giveaways.flatMap((giveaway) =>
+    (giveaway.winners || []).map((winner) => ({
+      giveawayCode: giveaway.code,
+      title: giveaway.title,
+      appId: giveaway.appId || null,
+      winnerUsername: winner.username,
+      creatorUsername: giveaway.creatorUsername,
+      entriesCount: giveaway.entriesCount || 0,
+      winDate: giveaway.endDate || payload.syncedAt,
+    })),
+  );
+  const winsByKey = new Map();
+
+  for (const win of payload.wins || []) {
+    const key = `${String(win?.giveawayCode || "")}::${String(win?.winnerUsername || "")}`;
+    if (!String(win?.giveawayCode || "") || !String(win?.winnerUsername || "")) {
+      continue;
+    }
+    winsByKey.set(key, win);
+  }
+
+  for (const win of derivedWins) {
+    const key = `${win.giveawayCode}::${win.winnerUsername}`;
+    winsByKey.set(key, {
+      ...(winsByKey.get(key) || {}),
+      ...win,
+    });
+  }
 
   return {
     ...payload,
     members,
     giveaways,
-    wins:
-      payload.wins ||
-      giveaways.flatMap((giveaway) =>
-        (giveaway.winners || []).map((winner) => ({
-          giveawayCode: giveaway.code,
-          title: giveaway.title,
-          appId: giveaway.appId || null,
-          winnerUsername: winner.username,
-          creatorUsername: giveaway.creatorUsername,
-          entriesCount: giveaway.entriesCount || 0,
-          winDate: giveaway.endDate || payload.syncedAt,
-        })),
-      ),
+    wins: Array.from(winsByKey.values()),
     memberSteamProfiles,
     memberActivity,
   };
+}
+
+function normalizeGiveawaySyncRecord(giveaway) {
+  const winners = normalizeGiveawaySyncWinners(giveaway);
+  return {
+    ...giveaway,
+    winners,
+  };
+}
+
+function normalizeGiveawaySyncWinners(giveaway) {
+  const winners = Array.isArray(giveaway?.winners) ? giveaway.winners.filter((winner) => winner?.username) : [];
+  if (winners.length || String(giveaway?.resultStatus || "").toLowerCase() !== "won") {
+    return winners;
+  }
+
+  return parseWinnerUsernamesFromResultLabel(giveaway.resultLabel).map((username) => ({
+    username,
+    profileUrl: "",
+    status: "Won",
+  }));
+}
+
+function parseWinnerUsernamesFromResultLabel(resultLabel) {
+  const text = String(resultLabel || "").trim();
+  if (!text || /^(open|awaiting feedback|no winners?)$/i.test(text)) {
+    return [];
+  }
+
+  return text
+    .split(",")
+    .map((part) => part.trim())
+    .filter(Boolean);
 }
 
 function upsertMemberFromSync(memberRecord) {
