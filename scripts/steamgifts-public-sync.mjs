@@ -167,6 +167,7 @@ function detectGiveawayKindFromDescription(descriptionText) {
   const text = normalizeText(descriptionText || "");
   const matches = [
     { kind: "extra", index: text.search(/\bextra\b/i) },
+    { kind: "extra", index: text.search(/\bpenalty\b/i) },
     { kind: "cycle", index: text.search(/\bmonthly\b/i) },
   ].filter((match) => match.index >= 0);
 
@@ -799,6 +800,7 @@ async function enrichGiveaway(page, giveaway) {
       const text = normalizeText(descriptionText || "");
       const matches = [
         { kind: "extra", index: text.search(/\bextra\b/i) },
+        { kind: "extra", index: text.search(/\bpenalty\b/i) },
         { kind: "cycle", index: text.search(/\bmonthly\b/i) },
       ].filter((match) => match.index >= 0);
 

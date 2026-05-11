@@ -2128,6 +2128,8 @@ function upsertGiveawayFromSync(giveawayRecord, creatorId) {
     notes: giveawayRecord.url || "",
     giveawayKind: String(giveawayRecord.giveawayKind || "").toLowerCase() === "extra" ? "extra" : "cycle",
     giveawayKindChecked: Boolean(giveawayRecord.giveawayKindChecked),
+    resultStatus: String(giveawayRecord.resultStatus || "").toLowerCase(),
+    resultLabel: giveawayRecord.resultLabel || "",
   };
 
   if (!existing) {
@@ -3380,7 +3382,8 @@ function getGiveawayMonth(giveaway) {
 
 function getBaseGiveawayKind(giveaway) {
   const kind = String(giveaway?.giveawayKind || giveaway?.type || "").toLowerCase();
-  return kind === "extra" ? "extra" : "cycle";
+  const penaltyText = `${String(giveaway?.title || "")} ${String(giveaway?.notes || "")}`;
+  return kind === "extra" || /\bpenalty\b/i.test(penaltyText) ? "extra" : "cycle";
 }
 
 function getGiveawayKind(giveaway) {
@@ -3471,8 +3474,43 @@ function findWinsForGiveaway(giveaway) {
   return [];
 }
 
+function findSyncGiveawayRecord(giveaway) {
+  if (!giveaway) {
+    return null;
+  }
+
+  const syncGiveaways = state.sync?.steamgifts?.giveaways || [];
+  const sourceId = String(giveaway.sourceId || "").trim();
+  const sourceMatch = sourceId.match(/^sg-(.+)$/);
+  if (sourceMatch) {
+    const byCode = syncGiveaways.find((item) => item?.code === sourceMatch[1]);
+    if (byCode) {
+      return byCode;
+    }
+  }
+
+  const giveawayUrl = String(giveaway.notes || "").trim();
+  if (giveawayUrl) {
+    const byUrl = syncGiveaways.find((item) => item?.url === giveawayUrl);
+    if (byUrl) {
+      return byUrl;
+    }
+  }
+
+  return null;
+}
+
+function getGiveawayResultStatus(giveaway) {
+  const localStatus = String(giveaway?.resultStatus || "").trim().toLowerCase();
+  if (localStatus) {
+    return localStatus;
+  }
+
+  return String(findSyncGiveawayRecord(giveaway)?.resultStatus || "").trim().toLowerCase();
+}
+
 function doesGiveawayCountForCycleMath(giveaway) {
-  return findWinsForGiveaway(giveaway).length > 0;
+  return getGiveawayResultStatus(giveaway) !== "no_winners";
 }
 
 function isCycleWin(win) {
