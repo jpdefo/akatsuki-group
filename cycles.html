@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akatsuki Cycles</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f1115'/%3E%3Cpath d='M32 10 50 20v24L32 54 14 44V20z' fill='%236ea8fe'/%3E%3Cpath d='M32 18 43 24v16L32 46 21 40V24z' fill='%23171b22'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Admin dashboard</p>
+          <h1>Akatsuki Cycles</h1>
+          <p class="hero-copy">
+            Compact cycle history with participation, giveaway classification, and Rule 9 best-gifter tracking.
+          </p>
+        </div>
+        <div class="sync-actions">
+          <a class="button secondary" href="index.html">Overview dashboard</a>
+          <a class="button secondary" href="monthly-progress.html">Monthly-only view</a>
+          <a class="button secondary" href="active-users.html">Active users</a>
+          <a class="button secondary" href="inactive-users.html">Inactive users</a>
+          <a class="button secondary" href="admin.html">Admin tools</a>
+        </div>
+      </header>
+
+      <main class="grid">
+        <section class="card">
+          <div class="section-heading">
+            <div>
+              <h2>Automatic sync</h2>
+              <p class="section-copy">
+                Load the server sync here too if you want to refresh this page directly.
+              </p>
+            </div>
+          </div>
+          <div class="sync-actions">
+            <button id="sync-refresh" class="button primary">Load server sync</button>
+            <button id="steam-refresh" class="button secondary">Refresh latest month</button>
+            <button id="steam-refresh-all" class="button secondary">Full active refresh</button>
+          </div>
+          <div id="sync-status" class="sync-status"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-heading">
+            <div>
+              <h2>Cycle history</h2>
+              <p class="section-copy">
+                Review one full cycle at a time in a denser layout. Rule 9 highlights the best gifter using average entries on cycle giveaways only.
+              </p>
+            </div>
+            <div class="section-summary">
+              <div id="storage-status" class="pill"></div>
+            </div>
+            <div class="section-filters">
+              <label class="inline-filter">
+                Cycle
+                <select id="cycle-filter"></select>
+              </label>
+            </div>
+          </div>
+          <p id="cycle-summary" class="section-copy"></p>
+          <div id="cycle-best-gifter-warning" class="stack"></div>
+        </section>
+
+        <div class="grid two-columns cycle-page-grid">
+          <section class="card">
+            <div class="section-heading">
+              <div>
+                <h2>Members</h2>
+                <p class="section-copy">
+                  Compact cycle status, giveaways logged, and pause controls.
+                </p>
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table class="dense-table">
+                <thead>
+                  <tr>
+                    <th>Member</th>
+                    <th>Wins</th>
+                    <th>Giveaways</th>
+                    <th>Avg entries</th>
+                    <th>Participation</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="cycle-table"></tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="card">
+            <div class="section-heading">
+              <div>
+                <h2>Giveaways and winners</h2>
+                <p class="section-copy">
+                  One row per giveaway, with its winner included so the cycle page stays compact.
+                </p>
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table class="dense-table">
+                <thead>
+                  <tr>
+                    <th>Month</th>
+                    <th>Creator</th>
+                    <th>Giveaway</th>
+                    <th>Winner</th>
+                    <th>Entries</th>
+                    <th>Type</th>
+                  </tr>
+                </thead>
+                <tbody id="cycle-giveaways-table"></tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <template id="empty-state-template">
+      <div class="empty-state">
+        <strong>No data yet.</strong>
+        <span>Run a SteamGifts sync to populate the dashboard.</span>
+      </div>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -22,6 +22,7 @@
         </div>
         <div class="sync-actions">
           <a class="button secondary" href="index.html">Overview dashboard</a>
+          <a class="button secondary" href="cycles.html">Cycles</a>
           <a class="button secondary" href="active-users.html">Active users</a>
           <a class="button secondary" href="inactive-users.html">Inactive users</a>
           <a class="button secondary" href="admin.html">Admin tools</a>
@@ -54,6 +55,9 @@
                 Green = threshold met, yellow = all achievements completed, red = under the threshold.
                 Threshold = 25% of HLTB time + 10% of achievements.
               </p>
+              <p class="section-copy">
+                Use the row actions to correct HLTB, the required 10%, or the counted month without letting the next sync overwrite your edit.
+              </p>
             </div>
             <div class="section-summary">
               <div id="storage-status" class="pill"></div>
@@ -81,7 +85,7 @@
                 <tr>
                   <th>Creator</th>
                   <th>Game won</th>
-                  <th>User</th>
+                  <th>Winner</th>
                   <th>HLTB</th>
                   <th>Req. 25%</th>
                   <th>Player time</th>
@@ -91,6 +95,52 @@
                 </tr>
               </thead>
               <tbody id="monthly-progress-table"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="section-heading">
+            <div>
+              <h2>Cycle tracker</h2>
+              <p class="section-copy">
+                The selected month follows the Akatsuki 3-month cycle rules. Mark giveaways as extra when they should stay outside cycle obligations.
+              </p>
+            </div>
+            <div class="section-summary">
+              <p id="cycle-summary" class="section-copy"></p>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Member</th>
+                  <th>Wins before month</th>
+                  <th>Cycle wins</th>
+                  <th>Cycle GAs</th>
+                  <th>Extra GAs</th>
+                  <th>Required</th>
+                  <th>Participation</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="cycle-table"></tbody>
+            </table>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Creator</th>
+                  <th>Giveaway</th>
+                  <th>Month</th>
+                  <th>Kind</th>
+                  <th>Entries</th>
+                  <th>Track</th>
+                </tr>
+              </thead>
+              <tbody id="cycle-giveaways-table"></tbody>
             </table>
           </div>
         </section>

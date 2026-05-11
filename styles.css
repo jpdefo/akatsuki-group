@@ -522,6 +522,58 @@ td small,
   line-height: 1.35;
 }
 
+.value-stack {
+  display: grid;
+  gap: 4px;
+}
+
+.override-note {
+  color: var(--accent);
+}
+
+.row-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.inline-action {
+  appearance: none;
+  border: 1px solid rgba(110, 168, 254, 0.35);
+  background: rgba(110, 168, 254, 0.08);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 5px 9px;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.inline-action:hover {
+  background: rgba(110, 168, 254, 0.16);
+}
+
+.inline-select-wrap {
+  display: block;
+  max-width: 120px;
+}
+
+.compact-select-wrap {
+  max-width: 110px;
+}
+
+.inline-select {
+  width: 100%;
+  background: #0f131a;
+  border: 1px solid #313948;
+  color: var(--text);
+  border-radius: 10px;
+  padding: 7px 10px;
+  font: inherit;
+}
+
 .status-notes-cell {
   min-width: 220px;
 }
@@ -552,6 +604,95 @@ td small,
   border: 1px dashed var(--line);
   border-radius: 16px;
   color: var(--muted);
+}
+
+.table-wrap + .table-wrap {
+  margin-top: 16px;
+}
+
+.dense-table th,
+.dense-table td {
+  padding: 8px 8px;
+}
+
+.compact-meta-line {
+  font-size: 0.76rem;
+  line-height: 1.25;
+}
+
+.compact-alert p {
+  font-size: 0.88rem;
+}
+
+.cycle-page-grid {
+  margin-top: 0;
+}
+
+#cycle-best-gifter-warning {
+  margin-top: 14px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(11, 13, 18, 0.78);
+  z-index: 50;
+}
+
+.modal-backdrop[hidden] {
+  display: none;
+}
+
+.modal-card {
+  width: min(460px, 100%);
+  display: grid;
+  gap: 14px;
+  background: rgba(23, 27, 34, 0.98);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.modal-copy,
+.modal-error {
+  margin: 0;
+  line-height: 1.45;
+}
+
+.modal-copy {
+  color: var(--muted);
+}
+
+.modal-error {
+  color: #ffd0d0;
+}
+
+.modal-field {
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.modal-field input {
+  width: 100%;
+  background: #0f131a;
+  border: 1px solid #313948;
+  color: var(--text);
+  border-radius: 12px;
+  padding: 11px 12px;
+  font: inherit;
+}
+
+.modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
 }
 
 @media (max-width: 1080px) {

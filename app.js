@@ -18,6 +18,12 @@ const defaultState = {
   games: [],
   wins: [],
   giveaways: [],
+  overrides: {
+    games: {},
+    wins: {},
+    giveaways: {},
+    cycleMembers: {},
+  },
 };
 
 let state = loadState();
@@ -26,7 +32,15 @@ const attemptedMediaAppIds = new Set();
 const pendingMediaRequests = new Map();
 const runtime = {
   staticApi: false,
+  editModal: null,
+  editModalState: null,
+  sharedOverrides: normalizeOverrideState(),
 };
+const GAME_OVERRIDE_FIELDS = ["hltbHoursOverride"];
+const WIN_OVERRIDE_FIELDS = ["requiredAchievementsOverride", "monthOverride"];
+const GIVEAWAY_OVERRIDE_FIELDS = ["giveawayKindOverride"];
+
+applyManualOverrides();
 
 const elements = {
   settingsForm: document.querySelector("#settings-form"),
@@ -49,12 +63,19 @@ const elements = {
   monthlyFilter: document.querySelector("#monthly-filter"),
   monthlySort: document.querySelector("#monthly-sort"),
   monthlyProgressTable: document.querySelector("#monthly-progress-table"),
+  cycleFilter: document.querySelector("#cycle-filter"),
+  cycleSummary: document.querySelector("#cycle-summary"),
+  cycleBestGifterWarning: document.querySelector("#cycle-best-gifter-warning"),
+  cycleTable: document.querySelector("#cycle-table"),
+  cycleGiveawaysTable: document.querySelector("#cycle-giveaways-table"),
+  cycleWinsTable: document.querySelector("#cycle-wins-table"),
   activeUsersTable: document.querySelector("#active-users-table"),
   activeUsersSort: document.querySelector("#active-users-sort"),
   inactiveUsersTable: document.querySelector("#inactive-users-table"),
   totalProgressTable: document.querySelector("#total-progress-table"),
   seedDemoButton: document.querySelector("#seed-demo"),
   exportButton: document.querySelector("#export-data"),
+  publishOverridesButton: document.querySelector("#publish-overrides"),
   importInput: document.querySelector("#import-data"),
   resetButton: document.querySelector("#reset-data"),
   syncRefreshButton: document.querySelector("#sync-refresh"),
@@ -66,10 +87,12 @@ const elements = {
 bootstrap();
 
 function bootstrap() {
+  ensureEditModal();
   bindEvents();
   render();
   refreshRemoteSync({ silent: true })
     .then(() => loadStoredSteamProgress({ silent: true }))
+    .then(() => loadSharedOverrides({ silent: true }))
     .then(() => loadDashboardData({ silent: true }))
     .then(() => loadVisibleGameMedia({ silent: true }));
 }
@@ -82,6 +105,7 @@ function bindEvents() {
   elements.giveawayForm?.addEventListener("submit", handleGiveawaySubmit);
   elements.seedDemoButton?.addEventListener("click", seedDemoData);
   elements.exportButton?.addEventListener("click", exportData);
+  elements.publishOverridesButton?.addEventListener("click", () => publishSharedOverrides());
   elements.importInput?.addEventListener("change", importData);
   elements.resetButton?.addEventListener("click", resetData);
   elements.syncRefreshButton?.addEventListener("click", () => refreshRemoteSync());
@@ -92,9 +116,16 @@ function bindEvents() {
     void loadVisibleGameMedia({ silent: true });
   });
   elements.monthlySort?.addEventListener("change", () => renderProgressViews());
+  elements.cycleFilter?.addEventListener("change", () => renderCycleHistoryPage());
   elements.activeUsersSort?.addEventListener("change", () => renderMemberBuckets());
 
   document.addEventListener("click", (event) => {
+    const editButton = event.target.closest("[data-edit-action]");
+    if (editButton) {
+      handleEditAction(editButton);
+      return;
+    }
+
     const deleteButton = event.target.closest("[data-delete-type]");
     if (!deleteButton) {
       return;
@@ -103,6 +134,20 @@ function bindEvents() {
     const { deleteType, deleteId } = deleteButton.dataset;
     state[deleteType] = state[deleteType].filter((item) => item.id !== deleteId);
     persistAndRender();
+  });
+
+  document.addEventListener("change", (event) => {
+    const cycleMemberStatusSelect = event.target.closest("[data-cycle-member-status-select]");
+    if (cycleMemberStatusSelect) {
+      handleCycleMemberStatusChange(cycleMemberStatusSelect);
+      return;
+    }
+
+    const giveawayKindSelect = event.target.closest("[data-giveaway-kind-select]");
+    if (!giveawayKindSelect) {
+      return;
+    }
+    handleGiveawayKindChange(giveawayKindSelect);
   });
 }
 
@@ -188,6 +233,7 @@ function render() {
   renderSyncStatus();
   renderServerViews();
   renderProgressViews();
+  renderCycleHistoryPage();
   renderMemberBuckets();
 }
 
@@ -384,6 +430,8 @@ function renderProgressViews() {
   const currentSelection = elements.monthlyFilter.value;
   const selectedMonth = months.includes(currentSelection) ? currentSelection : months[0] || "";
   const monthlyWins = selectedMonth ? state.wins.filter((win) => getEffectiveWinMonth(win) === selectedMonth) : [];
+  const monthlyGiveaways = selectedMonth ? getGiveawaysForMonth(selectedMonth) : [];
+  const period = selectedMonth ? getPeriodInfo(`${selectedMonth}-01`) : null;
 
   elements.monthlyFilter.innerHTML = months.length
     ? months
@@ -396,11 +444,346 @@ function renderProgressViews() {
 
   if (elements.periodSummary) {
     elements.periodSummary.textContent = selectedMonth
-      ? `${formatMonthKey(selectedMonth)} • ${monthlyWins.length} tracked win(s)`
+      ? `${formatMonthKey(selectedMonth)} • ${monthlyWins.length} tracked win(s) • ${monthlyGiveaways.length} giveaway(s) • ${period.kind === "cycle" ? `${period.label}, month ${period.monthPosition} of 3` : period.label}`
       : "Waiting for synced wins.";
   }
 
   renderMonthlyDetailsTable(elements.monthlyProgressTable, monthlyWins);
+  renderCycleViews(selectedMonth);
+}
+
+function renderCycleViews(selectedMonth) {
+  if (!elements.cycleSummary || !elements.cycleTable || !elements.cycleGiveawaysTable) {
+    return;
+  }
+
+  if (!selectedMonth) {
+    elements.cycleSummary.textContent = "Waiting for synced wins.";
+    elements.cycleTable.innerHTML = buildEmptyRow(8);
+    elements.cycleGiveawaysTable.innerHTML = buildEmptyRow(6);
+    return;
+  }
+
+  const period = getPeriodInfo(`${selectedMonth}-01`);
+  const monthlyGiveaways = getGiveawaysForMonth(selectedMonth).sort(
+    (left, right) => parseDate(right.createdAt) - parseDate(left.createdAt),
+  );
+
+  elements.cycleSummary.textContent =
+    period.kind === "cycle"
+      ? `${period.label} • month ${period.monthPosition} of 3 • cycle giveaways count toward obligations, extras stay separate.`
+      : `${period.label} • cycle obligations are paused for this month.`;
+
+  if (period.kind !== "cycle") {
+    elements.cycleTable.innerHTML = buildMessageRow(
+      8,
+      period.label,
+      "Cycle requirements are paused for this month. Giveaway classification still applies.",
+    );
+  } else {
+    const cycleRows = state.members
+      .filter((member) => member?.isActiveMember !== false)
+      .map((member) => {
+        const memberCycleStatus = getCycleMemberStatus(member, selectedMonth);
+        const paused = memberCycleStatus === "paused";
+        const winsBeforeMonth = computeCycleWinsForMemberInMonth(member.id, selectedMonth, { beforeSelectedMonth: true });
+        const cycleWinsToDate = computeCycleWinsForMemberInMonth(member.id, selectedMonth);
+        const cycleGiveawaysThisMonth = countMemberGiveawaysForMonth(member.id, selectedMonth, "cycle");
+        const extraGiveawaysThisMonth = countMemberGiveawaysForMonth(member.id, selectedMonth, "extra");
+        const requiredGiveaways = paused ? 0 : getRequiredCycleGiveawaysForMember(member.id, selectedMonth);
+        const status = buildCycleStatus({
+          period,
+          winsBeforeMonth,
+          cycleWinsToDate,
+          cycleGiveawaysThisMonth,
+          requiredGiveaways,
+          paused,
+        });
+
+        return {
+          name: member.name,
+          markup: `
+            <tr>
+              <td>${escapeHtml(member.name)}</td>
+              <td>${winsBeforeMonth}</td>
+              <td>${cycleWinsToDate}</td>
+              <td>${cycleGiveawaysThisMonth}</td>
+              <td>${extraGiveawaysThisMonth}</td>
+              <td>${requiredGiveaways}</td>
+              <td>
+                <label class="inline-select-wrap">
+                  <select class="inline-select" data-cycle-member-status-select="true" data-cycle-member-key="${escapeHtml(getCycleMemberOverrideKey(member, selectedMonth))}">
+                    <option value="active" ${memberCycleStatus === "active" ? "selected" : ""}>Active</option>
+                    <option value="paused" ${memberCycleStatus === "paused" ? "selected" : ""}>Paused</option>
+                  </select>
+                </label>
+              </td>
+              <td>
+                ${buildBadge(status.level, status.label)}
+                <span class="meta-line">${escapeHtml(status.note)}</span>
+              </td>
+            </tr>
+          `,
+        };
+      })
+      .sort((left, right) => left.name.localeCompare(right.name, "en-US", { sensitivity: "base" }));
+
+    elements.cycleTable.innerHTML = cycleRows.length
+      ? cycleRows.map((row) => row.markup).join("")
+      : buildEmptyRow(8);
+  }
+
+  elements.cycleGiveawaysTable.innerHTML = monthlyGiveaways.length
+    ? monthlyGiveaways
+        .map((giveaway) => {
+          const creator = findById("members", giveaway.creatorId);
+          const giveawayUrl = String(giveaway.notes || "").trim();
+          const kind = getGiveawayKind(giveaway);
+          return `
+            <tr>
+              <td>${escapeHtml(creator?.name || "Unknown member")}</td>
+              <td>
+                <strong>${giveawayUrl ? `<a class="linked-title" href="${escapeHtml(giveawayUrl)}" target="_blank" rel="noreferrer">${escapeHtml(giveaway.title)}</a>` : escapeHtml(giveaway.title)}</strong>
+                <span class="meta-line">${formatDate(giveaway.createdAt)}</span>
+              </td>
+              <td>${formatMonthKey(selectedMonth)}</td>
+              <td>
+                <label class="inline-select-wrap">
+                  <select class="inline-select" data-giveaway-kind-select="true" data-giveaway-id="${giveaway.id}">
+                    <option value="cycle" ${kind === "cycle" ? "selected" : ""}>Cycle</option>
+                    <option value="extra" ${kind === "extra" ? "selected" : ""}>Extra</option>
+                  </select>
+                </label>
+                <span class="meta-line">${kind === "extra" ? "Excluded from cycle requirements and standard rule checks." : "Counts toward cycle requirements for this month."}</span>
+              </td>
+              <td>${Number(giveaway.entriesCount || 0).toLocaleString("en-US")}</td>
+              <td>${buildBadge(kind === "extra" ? "info" : "success", kind === "extra" ? "Extra" : "Cycle")}</td>
+            </tr>
+          `;
+        })
+        .join("")
+    : buildMessageRow(6, "No giveaways in this month.", "Use the month filter to inspect a different cycle month.");
+}
+
+function renderCycleHistoryPage() {
+  if (!elements.cycleFilter || !elements.cycleSummary || !elements.cycleTable || !elements.cycleGiveawaysTable) {
+    return;
+  }
+
+  const cycles = getAvailableCycles();
+  const currentSelection = elements.cycleFilter.value;
+  const selectedCycleKey = cycles.some((cycle) => cycle.key === currentSelection) ? currentSelection : cycles[0]?.key || "";
+
+  elements.cycleFilter.innerHTML = cycles.length
+    ? cycles
+        .map(
+          (cycle) =>
+            `<option value="${cycle.key}" ${cycle.key === selectedCycleKey ? "selected" : ""}>${escapeHtml(cycle.label)}</option>`,
+        )
+        .join("")
+    : `<option value="">No cycles</option>`;
+
+  if (!selectedCycleKey) {
+    elements.cycleSummary.textContent = "Waiting for synced cycle history.";
+    if (elements.cycleBestGifterWarning) {
+      elements.cycleBestGifterWarning.innerHTML = "";
+    }
+    elements.cycleTable.innerHTML = buildEmptyRow(6);
+    elements.cycleGiveawaysTable.innerHTML = buildEmptyRow(6);
+    return;
+  }
+
+  const selectedCycle = cycles.find((cycle) => cycle.key === selectedCycleKey);
+  const cycleMonths = getRenderableCycleMonths(selectedCycle);
+  const cycleWins = state.wins
+    .filter((win) => cycleMonths.includes(getEffectiveWinMonth(win)))
+    .sort(
+      (left, right) =>
+        String(getEffectiveWinMonth(right)).localeCompare(String(getEffectiveWinMonth(left)), "en-US") ||
+        parseDate(right.winDate) - parseDate(left.winDate),
+    );
+  const cycleGiveaways = state.giveaways
+    .filter((giveaway) => cycleMonths.includes(getGiveawayMonth(giveaway)))
+    .sort((left, right) => parseDate(right.createdAt) - parseDate(left.createdAt));
+  const cycleOnlyWins = cycleWins.filter((win) => getWinTrackKind(win) === "cycle");
+  const cycleGiveawayCount = cycleGiveaways.filter((giveaway) => getGiveawayKind(giveaway) === "cycle").length;
+  const extraGiveawayCount = cycleGiveaways.filter((giveaway) => getGiveawayKind(giveaway) === "extra").length;
+  const bestGifterAward = buildCycleBestGifterAward(selectedCycle, cycleMonths, cycleGiveaways);
+
+  elements.cycleSummary.textContent = `${selectedCycle.label} • ${cycleMonths.map(formatMonthKey).join(" • ")} • ${cycleOnlyWins.length} cycle win(s) • ${cycleGiveawayCount} cycle giveaway(s) • ${extraGiveawayCount} extra giveaway(s)`;
+  renderCycleBestGifterWarning(bestGifterAward, selectedCycle, cycleMonths);
+
+  renderCycleHistoryMembersTable(selectedCycle, cycleMonths, cycleWins, cycleGiveaways);
+  renderCycleHistoryResultsTable(cycleGiveaways);
+}
+
+function renderCycleBestGifterWarning(bestGifterAward, selectedCycle, cycleMonths) {
+  if (!elements.cycleBestGifterWarning) {
+    return;
+  }
+
+  if (!bestGifterAward.eligibleCount) {
+    elements.cycleBestGifterWarning.innerHTML = `
+      <article class="alert-card info compact-alert">
+        <h3>Best gifter not decided yet</h3>
+        <p>Rule 9 needs at least 2 cycle giveaways from a member before someone can take the exemption lead in ${escapeHtml(selectedCycle.label)}.</p>
+      </article>
+    `;
+    return;
+  }
+
+  const nextMonthInfo = getNextCycleExemptionInfo(selectedCycle.months);
+  if (bestGifterAward.tieMembers.length > 1) {
+    elements.cycleBestGifterWarning.innerHTML = `
+      <article class="alert-card warning compact-alert">
+        <h3>Best gifter tie</h3>
+        <p>${escapeHtml(bestGifterAward.tieMembers.join(", "))} are tied on average entries in ${escapeHtml(selectedCycle.label)}. Highest single giveaway entries are also tied, so this still needs an admin tie-break.</p>
+      </article>
+    `;
+    return;
+  }
+
+  const gifterLabel = bestGifterAward.isComplete ? "Best gifter of the cycle" : "Best gifter so far";
+  const exemptionText = bestGifterAward.isComplete
+    ? nextMonthInfo.hasMandatoryGiveaway
+      ? `${bestGifterAward.winnerName} is exempt from the regular mandatory giveaway in ${nextMonthInfo.label}.`
+      : `${bestGifterAward.winnerName} wins Rule 9, but the next month is ${nextMonthInfo.label}, so there is no regular mandatory giveaway to waive there.`
+    : nextMonthInfo.hasMandatoryGiveaway
+      ? `If ${bestGifterAward.winnerName} stays ahead through the end of the cycle, the Rule 9 exemption will apply in ${nextMonthInfo.label}.`
+      : `If ${bestGifterAward.winnerName} stays ahead through the end of the cycle, the exemption lands in ${nextMonthInfo.label}, which has no regular mandatory giveaway.`;
+  elements.cycleBestGifterWarning.innerHTML = `
+    <article class="alert-card warning compact-alert">
+      <h3>${escapeHtml(gifterLabel)}</h3>
+      <p>
+        <strong>${escapeHtml(bestGifterAward.winnerName)}</strong> averages ${bestGifterAward.averageEntries.toFixed(1)} entries across ${bestGifterAward.giveawayCount} cycle giveaway(s), with a best single result of ${bestGifterAward.bestSingleEntries.toLocaleString("en-US")} entries.<br />
+        ${escapeHtml(exemptionText)}
+      </p>
+    </article>
+  `;
+}
+
+function renderCycleHistoryMembersTable(selectedCycle, cycleMonths, cycleWins, cycleGiveaways) {
+  const participantIds = new Set([
+    ...cycleWins.map((win) => win.memberId).filter(Boolean),
+    ...cycleGiveaways.map((giveaway) => giveaway.creatorId).filter(Boolean),
+  ]);
+
+  const rows = state.members
+    .filter((member) => participantIds.has(member.id) || getCycleMemberStatus(member, selectedCycle.key) === "paused")
+    .map((member) => {
+      const memberCycleStatus = getCycleMemberStatus(member, selectedCycle.key);
+      const paused = memberCycleStatus === "paused";
+      const thirdMonth = cycleMonths[2] || "";
+      const winsBeforeMonthThree = thirdMonth
+        ? cycleWins.filter(
+            (win) =>
+              win.memberId === member.id &&
+              getWinTrackKind(win) === "cycle" &&
+              getEffectiveWinMonth(win) < thirdMonth,
+          ).length
+        : 0;
+      const cycleWinsTotal = cycleWins.filter(
+        (win) => win.memberId === member.id && getWinTrackKind(win) === "cycle",
+      ).length;
+      const cycleGiveawaysTotal = cycleGiveaways.filter(
+        (giveaway) => giveaway.creatorId === member.id && getGiveawayKind(giveaway) === "cycle",
+      ).length;
+      const extraGiveawaysTotal = cycleGiveaways.filter(
+        (giveaway) => giveaway.creatorId === member.id && getGiveawayKind(giveaway) === "extra",
+      ).length;
+      const cycleEntries = cycleGiveaways
+        .filter((giveaway) => giveaway.creatorId === member.id && getGiveawayKind(giveaway) === "cycle")
+        .map((giveaway) => Number(giveaway.entriesCount || 0));
+      const averageEntries = cycleEntries.length
+        ? cycleEntries.reduce((sum, value) => sum + value, 0) / cycleEntries.length
+        : null;
+      const bestEntries = cycleEntries.length ? Math.max(...cycleEntries) : 0;
+      const requiredGiveaways = paused ? 0 : getRequiredCycleGiveawaysForCycle(member.id, cycleMonths);
+      const status = buildCycleHistoryStatus({
+        cycleMonths,
+        winsBeforeMonthThree,
+        cycleWinsTotal,
+        cycleGiveawaysTotal,
+        requiredGiveaways,
+        paused,
+      });
+
+      return {
+        name: member.name,
+        markup: `
+          <tr>
+            <td>${escapeHtml(member.name)}</td>
+            <td>
+              <strong>${cycleWinsTotal}</strong>
+              <span class="meta-line">Before M3: ${winsBeforeMonthThree}</span>
+            </td>
+            <td>
+              <strong>${cycleGiveawaysTotal}</strong>
+              <span class="meta-line">Extra: ${extraGiveawaysTotal} • Required: ${requiredGiveaways}</span>
+            </td>
+            <td>
+              <strong>${averageEntries === null ? "-" : averageEntries.toFixed(1)}</strong>
+              <span class="meta-line">Best: ${bestEntries ? bestEntries.toLocaleString("en-US") : "-"}</span>
+            </td>
+            <td>
+              <label class="inline-select-wrap compact-select-wrap">
+                <select class="inline-select" data-cycle-member-status-select="true" data-cycle-member-key="${escapeHtml(getCycleMemberOverrideKey(member, selectedCycle.key))}">
+                  <option value="active" ${memberCycleStatus === "active" ? "selected" : ""}>Active</option>
+                  <option value="paused" ${memberCycleStatus === "paused" ? "selected" : ""}>Paused</option>
+                </select>
+              </label>
+            </td>
+            <td>
+              ${buildBadge(status.level, status.label)}
+              <span class="meta-line compact-meta-line">${escapeHtml(status.note)}</span>
+            </td>
+          </tr>
+        `,
+      };
+    })
+    .sort((left, right) => left.name.localeCompare(right.name, "en-US", { sensitivity: "base" }));
+
+  elements.cycleTable.innerHTML = rows.length
+    ? rows.map((row) => row.markup).join("")
+    : buildMessageRow(6, "No tracked members in this cycle.", "Wins and giveaway creators for the selected cycle will appear here.");
+}
+
+function renderCycleHistoryResultsTable(cycleGiveaways) {
+  elements.cycleGiveawaysTable.innerHTML = cycleGiveaways.length
+    ? cycleGiveaways
+        .map((giveaway) => {
+          const creator = findById("members", giveaway.creatorId);
+          const giveawayWins = findWinsForGiveaway(giveaway);
+          const winnerMarkup = giveawayWins.length
+            ? giveawayWins.map((win) => buildWinnerMarkup(findById("members", win.memberId))).join(", ")
+            : "-";
+          const giveawayUrl = String(giveaway.notes || "").trim();
+          const kind = getGiveawayKind(giveaway);
+          const giveawayMonth = getGiveawayMonth(giveaway);
+          return `
+            <tr>
+              <td>${giveawayMonth ? formatMonthKey(giveawayMonth) : "-"}</td>
+              <td>${escapeHtml(creator?.name || "Unknown member")}</td>
+              <td>
+                <strong>${giveawayUrl ? `<a class="linked-title" href="${escapeHtml(giveawayUrl)}" target="_blank" rel="noreferrer">${escapeHtml(giveaway.title)}</a>` : escapeHtml(giveaway.title)}</strong>
+                <span class="meta-line">${formatDate(giveaway.createdAt)}</span>
+              </td>
+              <td>${winnerMarkup}</td>
+              <td>${Number(giveaway.entriesCount || 0).toLocaleString("en-US")}</td>
+              <td>
+                <label class="inline-select-wrap compact-select-wrap">
+                  <select class="inline-select" data-giveaway-kind-select="true" data-giveaway-id="${giveaway.id}">
+                    <option value="cycle" ${kind === "cycle" ? "selected" : ""}>Cycle</option>
+                    <option value="extra" ${kind === "extra" ? "selected" : ""}>Extra</option>
+                  </select>
+                </label>
+                <span class="meta-line compact-meta-line">${kind === "extra" ? "Excluded from cycle requirements." : "Counts toward Rule 9 and cycle obligations."}</span>
+              </td>
+            </tr>
+          `;
+        })
+        .join("")
+    : buildMessageRow(6, "No giveaways in this cycle.", "Giveaways from the selected cycle will appear here.");
 }
 
 function renderMemberBuckets() {
@@ -563,26 +946,43 @@ function renderMonthlyDetailsTable(target, winsSubset) {
       const game = findById("games", win.gameId);
       const progress = evaluateMonthlyProgress(win);
       const prereleaseNote = buildPrereleaseMonthNote(win, game);
-      const hltbHours = Number(game?.hltbHours || 0);
-      const totalAchievements = Number(game?.achievementsTotal || 0);
+      const hltbHours = getGameHltbHours(game);
+      const totalAchievements = getGameAchievementsTotal(game);
+      const effectiveMonth = getEffectiveWinMonth(win);
 
       return `
         <tr class="progress-row ${progress.badge}">
           <td>${buildGiveawayCreatorMarkup(win)}</td>
           <td>${buildGameCell(game, win)}</td>
           <td>${buildWinnerMarkup(member)}</td>
-          <td>${hltbHours ? formatHours(hltbHours) : "-"}</td>
+          <td>
+            <div class="value-stack">
+              <span>${hltbHours ? formatHours(hltbHours) : "-"}</span>
+              ${game?.hltbHoursOverride !== undefined && game?.hltbHoursOverride !== null ? `<span class="meta-line override-note">Manual override</span>` : ""}
+              ${game ? `<button class="inline-action" data-edit-action="hltb" data-game-id="${game.id}">Edit HLTB</button>` : ""}
+            </div>
+          </td>
           <td>${progress.requiredHours ? formatHours(progress.requiredHours) : "-"}</td>
           <td>${formatHours(win.currentHours || 0)}</td>
           <td>${buildAchievementCell(win, totalAchievements)}</td>
-          <td>${progress.requiredAchievements || 0}</td>
+          <td>
+            <div class="value-stack">
+              <span>${progress.requiredAchievements || 0}</span>
+              ${win?.requiredAchievementsOverride !== undefined && win?.requiredAchievementsOverride !== null ? `<span class="meta-line override-note">Manual override</span>` : ""}
+              <button class="inline-action" data-edit-action="achievement-target" data-win-id="${win.id}">Edit 10%</button>
+            </div>
+          </td>
           <td class="status-notes-cell">
             <div class="status-notes-stack">
               ${buildBadge(progress.badge, progress.label)}
               <span class="meta-line">${escapeHtml(progress.note)}</span>
+              ${effectiveMonth ? `<span class="meta-line">Counts in ${escapeHtml(formatMonthKey(effectiveMonth))}${win?.monthOverride ? " (manual override)" : ""}</span>` : ""}
               ${prereleaseNote ? `<span class="meta-line">${escapeHtml(prereleaseNote)}</span>` : ""}
             </div>
             ${buildEvidenceNoteMarkup(win.evidenceNotes)}
+            <div class="row-actions">
+              <button class="inline-action" data-edit-action="month" data-win-id="${win.id}">Edit month</button>
+            </div>
           </td>
         </tr>
       `;
@@ -783,12 +1183,12 @@ function evaluateMonthlyProgress(win) {
       hltbHours: 0,
       achievementsTotal: 0,
     };
-  const hltbHours = Number(game.hltbHours || 0);
-  const totalAchievements = Number(game.achievementsTotal || 0);
+  const hltbHours = getGameHltbHours(game);
+  const totalAchievements = getGameAchievementsTotal(game);
   const currentHours = Number(win.currentHours || 0);
   const currentAchievements = Number(win.earnedAchievements || 0);
   const requiredHours = hltbHours > 0 ? getRequiredHours(hltbHours, "standard-25") : 0;
-  const requiredAchievements = totalAchievements > 0 ? Math.max(1, Math.ceil(totalAchievements * 0.1)) : 0;
+  const requiredAchievements = getRequiredAchievementsTarget(win, game);
   const hasThresholdData = hltbHours > 0 || totalAchievements > 0;
   const meetsHours = requiredHours === 0 || currentHours >= requiredHours;
   const meetsAchievements = requiredAchievements === 0 || currentAchievements >= requiredAchievements;
@@ -1132,6 +1532,61 @@ async function loadDashboardData(options = {}) {
   }
 }
 
+async function loadSharedOverrides(options = {}) {
+  try {
+    const { payload } = await fetchApiJson("./api/overrides");
+    runtime.sharedOverrides = normalizeSharedOverridePayload(payload);
+    applyManualOverrides();
+    render();
+  } catch (error) {
+    runtime.sharedOverrides = normalizeOverrideState();
+    if (!options.silent) {
+      window.alert("Could not load published overrides.");
+    }
+  }
+}
+
+async function publishSharedOverrides() {
+  const button = elements.publishOverridesButton;
+  const originalLabel = button?.textContent;
+
+  try {
+    if (runtime.staticApi) {
+      throw new Error("GitHub Pages is read-only. Save shared overrides through the local server, then run publish-snapshot.cmd.");
+    }
+
+    if (button) {
+      button.disabled = true;
+      button.textContent = "Saving overrides...";
+    }
+
+    const response = await fetch("./api/overrides", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ overrides: getPublishableOverrideState() }),
+    });
+    const payload = await response.json().catch(() => null);
+    if (!response.ok) {
+      throw new Error(payload?.error || "Could not save published overrides.");
+    }
+
+    runtime.sharedOverrides = normalizeSharedOverridePayload(payload);
+    state.overrides = normalizeOverrideState();
+    applyManualOverrides();
+    persistAndRender();
+    window.alert("Overrides saved to data/overrides.json. Run publish-snapshot.cmd to publish them to GitHub Pages.");
+  } catch (error) {
+    window.alert(error?.message || "Could not save published overrides.");
+  } finally {
+    if (button) {
+      button.disabled = false;
+      button.textContent = originalLabel || "Save current overrides for publish";
+    }
+  }
+}
+
 async function refreshSteamProgress(options = {}) {
   const fullRefresh = options.fullRefresh === true;
   const month = fullRefresh ? null : elements.monthlyFilter?.value || getAvailableMonths()[0] || null;
@@ -1232,6 +1687,8 @@ function importSteamGiftsSync(payload, options = {}) {
     }
   }
 
+  applyManualOverrides();
+
   if (options.persist !== false) {
     persistAndRender();
   } else {
@@ -1294,6 +1751,8 @@ function applySteamProgress(payload) {
         progress.totalAchievements > 0 ? progress.totalAchievements : game.achievementsTotal,
     };
   });
+
+  applyManualOverrides();
 
   state.sync = {
     ...state.sync,
@@ -1413,12 +1872,14 @@ function getVisibleMediaAppIds() {
       appIds.add(appId);
     }
   }
+
   for (const giveaway of state.sync?.dashboard?.recentGiveaways || []) {
     const appId = Number(giveaway?.appId || 0);
     if (appId) {
       appIds.add(appId);
     }
   }
+
   return Array.from(appIds);
 }
 
@@ -1426,6 +1887,7 @@ async function loadVisibleGameMedia(options = {}) {
   if (runtime.staticApi) {
     return;
   }
+
   const appIds = getVisibleMediaAppIds().filter((appId) => !attemptedMediaAppIds.has(appId));
   if (!appIds.length) {
     return;
@@ -1617,6 +2079,7 @@ function upsertWinFromSync(giveawayRecord, winnerRecord, memberId, gameId) {
   const payload = {
     id: existing?.id || uid("win"),
     sourceId,
+    giveawaySourceId: `sg-${giveawayRecord.code}`,
     memberId,
     gameId,
     creatorUsername: giveawayRecord.creatorUsername || existing?.creatorUsername || "",
@@ -1758,9 +2221,12 @@ function computeMemberMetrics(memberId) {
     .map(evaluateWin)
     .filter((evaluation) => evaluation.member.id === memberId && evaluation.penaltyOwed).length;
   const period = getPeriodInfo(state.settings.currentDate);
+  const paused = period.kind === "cycle" && getCycleMemberStatus(memberId, monthKey(state.settings.currentDate)) === "paused";
 
   let cycleAlert = "";
-  if (period.kind === "cycle" && period.monthPosition === 3) {
+  if (paused) {
+    cycleAlert = "paused for this cycle: excluded from joins and mandatory giveaways.";
+  } else if (period.kind === "cycle" && period.monthPosition === 3) {
     if (cycleWins < 2) {
       cycleAlert = "unlucky member: exempt from the regular monthly mandatory giveaway in month 3.";
     } else if (cycleWins > 2) {
@@ -1788,22 +2254,11 @@ function computeMemberMetrics(memberId) {
 }
 
 function computeCycleWinsForMember(memberId) {
-  const currentPeriod = getPeriodInfo(state.settings.currentDate);
-  if (currentPeriod.kind !== "cycle") {
+  const currentMonth = monthKey(state.settings.currentDate);
+  if (!currentMonth) {
     return 0;
   }
-
-  return state.wins.filter((win) => {
-    if (win.memberId !== memberId) {
-      return false;
-    }
-    const period = getPeriodInfo(win.winDate);
-    return (
-      period.kind === "cycle" &&
-      period.cycleNumber === currentPeriod.cycleNumber &&
-      period.year === currentPeriod.year
-    );
-  }).length;
+  return computeCycleWinsForMemberInMonth(memberId, currentMonth);
 }
 
 function evaluateWin(win) {
@@ -1823,28 +2278,28 @@ function evaluateWin(win) {
   const now = parseDate(state.settings.currentDate);
   const daysLeft = differenceInDays(deadline, now);
 
-  const requiredHours = getRequiredHours(game.hltbHours, win.ruleMode);
+  const requiredHours = getRequiredHours(getGameHltbHours(game), win.ruleMode);
   const requiredAchievements =
-    win.ruleMode === "standard-25" && game.achievementsTotal > 0
-      ? Math.max(1, Math.ceil(game.achievementsTotal * 0.1))
+    win.ruleMode === "standard-25" && getGameAchievementsTotal(game) > 0
+      ? getRequiredAchievementsTarget(win, game)
       : 0;
 
   const hoursOk = win.ruleMode === "true-100" ? true : win.currentHours >= requiredHours;
   const achievementsOk =
     requiredAchievements > 0
       ? win.earnedAchievements >= requiredAchievements
-      : game.achievementsTotal === 0
+      : getGameAchievementsTotal(game) === 0
         ? win.proofProvided
         : true;
   const proofOk =
     win.ruleMode === "standard-25"
-      ? game.achievementsTotal > 0
+      ? getGameAchievementsTotal(game) > 0
         ? achievementsOk
         : win.proofProvided
       : win.proofProvided;
 
   const canEvaluateHours = win.ruleMode === "true-100" || requiredHours > 0;
-  const canEvaluateAchievements = game.achievementsTotal > 0 || win.proofProvided;
+  const canEvaluateAchievements = getGameAchievementsTotal(game) > 0 || win.proofProvided;
   const hasEnoughSignals = canEvaluateHours || canEvaluateAchievements;
 
   if (!hasEnoughSignals) {
@@ -1939,9 +2394,270 @@ function getWinReleaseDate(win, game) {
   return giveawayByGame?.releaseDate || "";
 }
 
-function getEffectiveWinMonth(win) {
-  const game = findById("games", win.gameId);
-  return getEffectiveMonthKey(win.winDate, getWinReleaseDate(win, game));
+function getCycleMonthKeys(period) {
+  if (!period || period.kind !== "cycle") {
+    return [];
+  }
+
+  if (period.cycleNumber === 1) {
+    return [1, 2, 3].map((month) => `${period.year}-${String(month).padStart(2, "0")}`);
+  }
+  if (period.cycleNumber === 2) {
+    return [4, 5, 6].map((month) => `${period.year}-${String(month).padStart(2, "0")}`);
+  }
+  return [9, 10, 11].map((month) => `${period.year}-${String(month).padStart(2, "0")}`);
+}
+
+function getRenderableCycleMonths(cycle) {
+  const months = Array.isArray(cycle?.months) ? cycle.months : [];
+  const currentMonth = monthKey(state.settings.currentDate || "");
+  const visibleMonths = months.filter((month) => !currentMonth || month <= currentMonth);
+  return visibleMonths.length ? visibleMonths : months;
+}
+
+function getAvailableCycles() {
+  const cyclesByKey = new Map();
+
+  for (const month of getAvailableMonths()) {
+    const period = getPeriodInfo(`${month}-01`);
+    if (period.kind !== "cycle") {
+      continue;
+    }
+
+    const key = getCycleKey(period);
+    if (!key || cyclesByKey.has(key)) {
+      continue;
+    }
+
+    cyclesByKey.set(key, {
+      ...period,
+      key,
+      months: getCycleMonthKeys(period),
+    });
+  }
+
+  return Array.from(cyclesByKey.values()).sort((left, right) => right.year - left.year || right.cycleNumber - left.cycleNumber);
+}
+
+function getNextCycleExemptionInfo(cycleMonths) {
+  const lastMonth = cycleMonths[cycleMonths.length - 1];
+  if (!lastMonth) {
+    return {
+      key: "",
+      label: "the next month",
+      hasMandatoryGiveaway: false,
+    };
+  }
+
+  const [year, month] = lastMonth.split("-").map(Number);
+  const nextMonth = formatISODateLocal(new Date(year, month, 1, 12)).slice(0, 7);
+  const nextPeriod = getPeriodInfo(`${nextMonth}-01`);
+  return {
+    key: nextMonth,
+    label: nextPeriod.kind === "cycle" ? formatMonthKey(nextMonth) : nextPeriod.label,
+    hasMandatoryGiveaway: nextPeriod.kind === "cycle",
+  };
+}
+
+function buildCycleBestGifterAward(selectedCycle, cycleMonths, cycleGiveaways) {
+  const cycleOnlyGiveaways = cycleGiveaways.filter((giveaway) => getGiveawayKind(giveaway) === "cycle");
+  const grouped = new Map();
+
+  for (const giveaway of cycleOnlyGiveaways) {
+    if (!grouped.has(giveaway.creatorId)) {
+      grouped.set(giveaway.creatorId, []);
+    }
+    grouped.get(giveaway.creatorId).push(Number(giveaway.entriesCount || 0));
+  }
+
+  const candidates = Array.from(grouped.entries())
+    .map(([memberId, entries]) => {
+      const member = findById("members", memberId);
+      const totalEntries = entries.reduce((sum, value) => sum + value, 0);
+      return {
+        memberId,
+        name: member?.name || "Unknown member",
+        giveawayCount: entries.length,
+        totalEntries,
+        averageEntries: entries.length ? totalEntries / entries.length : 0,
+        bestSingleEntries: entries.length ? Math.max(...entries) : 0,
+      };
+    })
+    .filter((candidate) => candidate.giveawayCount >= 2)
+    .sort(
+      (left, right) =>
+        right.averageEntries - left.averageEntries ||
+        right.bestSingleEntries - left.bestSingleEntries ||
+        left.name.localeCompare(right.name, "en-US", { sensitivity: "base" }),
+    );
+
+  if (!candidates.length) {
+    return {
+      eligibleCount: 0,
+      tieMembers: [],
+      isComplete: cycleMonths.length === selectedCycle.months.length,
+    };
+  }
+
+  const leader = candidates[0];
+  const tieMembers = candidates
+    .filter(
+      (candidate) =>
+        Math.abs(candidate.averageEntries - leader.averageEntries) < 0.001 &&
+        candidate.bestSingleEntries === leader.bestSingleEntries,
+    )
+    .map((candidate) => candidate.name);
+
+  return {
+    eligibleCount: candidates.length,
+    winnerName: leader.name,
+    giveawayCount: leader.giveawayCount,
+    averageEntries: leader.averageEntries,
+    bestSingleEntries: leader.bestSingleEntries,
+    tieMembers,
+    isComplete: cycleMonths.length === selectedCycle.months.length,
+  };
+}
+
+function getWinTrackKind(win) {
+  const giveaway = findGiveawayForWin(win);
+  return giveaway ? getGiveawayKind(giveaway) : "cycle";
+}
+
+function computeCycleWinsForMemberInMonth(memberId, selectedMonth, options = {}) {
+  const period = getPeriodInfo(`${selectedMonth}-01`);
+  if (period.kind !== "cycle") {
+    return 0;
+  }
+
+  const cycleMonths = new Set(getCycleMonthKeys(period));
+  return state.wins.filter((win) => {
+    if (win.memberId !== memberId || !isCycleWin(win)) {
+      return false;
+    }
+
+    const effectiveMonth = getEffectiveWinMonth(win);
+    if (!cycleMonths.has(effectiveMonth)) {
+      return false;
+    }
+
+    if (options.beforeSelectedMonth) {
+      return effectiveMonth < selectedMonth;
+    }
+    return effectiveMonth <= selectedMonth;
+  }).length;
+}
+
+function countMemberGiveawaysForMonth(memberId, selectedMonth, kind) {
+  return getGiveawaysForMonth(selectedMonth).filter((giveaway) => {
+    if (giveaway.creatorId !== memberId) {
+      return false;
+    }
+    return getGiveawayKind(giveaway) === kind;
+  }).length;
+}
+
+function getRequiredCycleGiveawaysForMember(memberId, selectedMonth) {
+  const period = getPeriodInfo(`${selectedMonth}-01`);
+  if (period.kind !== "cycle") {
+    return 0;
+  }
+
+  if (period.monthPosition < 3) {
+    return 1;
+  }
+
+  const winsBeforeMonth = computeCycleWinsForMemberInMonth(memberId, selectedMonth, { beforeSelectedMonth: true });
+  if (winsBeforeMonth < 2) {
+    return 0;
+  }
+  if (winsBeforeMonth > 2) {
+    return 2;
+  }
+  return 1;
+}
+
+function getRequiredCycleGiveawaysForCycle(memberId, cycleMonths) {
+  return cycleMonths.reduce((total, month) => total + getRequiredCycleGiveawaysForMember(memberId, month), 0);
+}
+
+function buildCycleStatus({ period, winsBeforeMonth, cycleWinsToDate, cycleGiveawaysThisMonth, requiredGiveaways, paused }) {
+  if (paused) {
+    return {
+      level: "info",
+      label: "Paused",
+      note: "Paused in this cycle. The member is excluded from joining and from giveaway obligations.",
+    };
+  }
+
+  let note = "Regular month: one cycle giveaway is required.";
+  if (period.monthPosition === 3) {
+    if (winsBeforeMonth < 2) {
+      note = "Unlucky month: regular cycle giveaway is waived.";
+    } else if (winsBeforeMonth > 2) {
+      note = "Lucky month: two cycle giveaways are required.";
+    } else {
+      note = "Balanced month: one cycle giveaway is required.";
+    }
+  }
+
+  let level = "success";
+  let label = "On track";
+  if (cycleGiveawaysThisMonth < requiredGiveaways) {
+    level = "danger";
+    label = `Needs ${requiredGiveaways - cycleGiveawaysThisMonth} more`;
+  } else if (cycleGiveawaysThisMonth > requiredGiveaways) {
+    level = "info";
+    label = `${cycleGiveawaysThisMonth - requiredGiveaways} extra logged`;
+  }
+
+  if (cycleWinsToDate > 8) {
+    level = level === "danger" ? "danger" : "warning";
+    note = `${note} Above the 8-win cycle cap by ${cycleWinsToDate - 8}.`;
+  }
+
+  return { level, label, note };
+}
+
+function buildCycleHistoryStatus({ cycleMonths, winsBeforeMonthThree, cycleWinsTotal, cycleGiveawaysTotal, requiredGiveaways, paused }) {
+  if (paused) {
+    return {
+      level: "info",
+      label: "Paused",
+      note: "Paused in this cycle. The member is excluded from joins and mandatory giveaways.",
+    };
+  }
+
+  const lastMonth = cycleMonths[cycleMonths.length - 1] || "";
+  const lastPeriod = lastMonth ? getPeriodInfo(`${lastMonth}-01`) : null;
+  let note = lastMonth ? `Compact cycle totals through ${formatMonthKey(lastMonth)}.` : "Compact cycle totals.";
+
+  if (lastPeriod?.kind === "cycle" && lastPeriod.monthPosition === 3) {
+    if (winsBeforeMonthThree < 2) {
+      note = "Month 3 waiver applied: under 2 cycle wins before month 3.";
+    } else if (winsBeforeMonthThree > 2) {
+      note = "Month 3 lucky-member rule applied: 2 cycle giveaways required in month 3.";
+    } else {
+      note = "Month 3 balanced rule applied: 1 cycle giveaway required in month 3.";
+    }
+  }
+
+  let level = "success";
+  let label = "On track";
+  if (cycleGiveawaysTotal < requiredGiveaways) {
+    level = "danger";
+    label = `Needs ${requiredGiveaways - cycleGiveawaysTotal} more`;
+  } else if (cycleGiveawaysTotal > requiredGiveaways) {
+    level = "info";
+    label = `${cycleGiveawaysTotal - requiredGiveaways} extra logged`;
+  }
+
+  if (cycleWinsTotal > 8) {
+    level = level === "danger" ? "danger" : "warning";
+    note = `${note} Above the 8-win cycle cap by ${cycleWinsTotal - 8}.`;
+  }
+
+  return { level, label, note };
 }
 
 function buildPrereleaseMonthNote(win, game) {
@@ -2008,7 +2724,8 @@ function getReleaseMonthKey(releaseDate) {
 function evaluateGiveaway(giveaway) {
   const issues = [];
   const threshold = computeMinimumEntriesRequired();
-  const appliesStandardRules = giveaway.type !== "extra" && giveaway.type !== "sync";
+  const kind = getGiveawayKind(giveaway);
+  const appliesStandardRules = kind !== "extra";
 
   if (appliesStandardRules && giveaway.valuePoints < state.settings.minimumValuePoints) {
     issues.push(`below ${state.settings.minimumValuePoints}P`);
@@ -2016,10 +2733,10 @@ function evaluateGiveaway(giveaway) {
   if (appliesStandardRules && parseDate(giveaway.createdAt).getDate() > 15) {
     issues.push("created after the 15th");
   }
-  if (giveaway.regionLocked) {
+  if (appliesStandardRules && giveaway.regionLocked) {
     issues.push("region locked");
   }
-  if (giveaway.bundled && giveaway.type !== "extra") {
+  if (appliesStandardRules && giveaway.bundled) {
     issues.push("invalid bundled game");
   }
   if (appliesStandardRules && giveaway.entriesCount < threshold) {
@@ -2028,8 +2745,8 @@ function evaluateGiveaway(giveaway) {
 
   return {
     issues,
-    label: issues.length ? "Review" : "Valid",
-    level: issues.length ? "warning" : "success",
+    label: issues.length ? "Review" : kind === "extra" ? "Extra" : "Valid",
+    level: issues.length ? "warning" : kind === "extra" ? "info" : "success",
   };
 }
 
@@ -2349,14 +3066,11 @@ function loadState() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) {
-      return cloneState(defaultState);
+      return normalizeLoadedState();
     }
-    return {
-      ...cloneState(defaultState),
-      ...JSON.parse(raw),
-    };
+    return normalizeLoadedState(JSON.parse(raw));
   } catch (error) {
-    return cloneState(defaultState);
+    return normalizeLoadedState();
   }
 }
 
@@ -2368,7 +3082,11 @@ function persistAndRender() {
 function buildPersistedState() {
   const hasServerSync = state.sync?.steamgifts?.source === "akatsuki-steamgifts-sync";
   if (!hasServerSync) {
-    return state;
+    return {
+      ...state,
+      sharedOverrides: undefined,
+      overrides: normalizeOverrideState(state.overrides),
+    };
   }
 
   return {
@@ -2378,7 +3096,594 @@ function buildPersistedState() {
       steamgifts: null,
       steamProgressUpdatedAt: state.sync?.steamProgressUpdatedAt || null,
     },
+    sharedOverrides: undefined,
+    overrides: normalizeOverrideState(state.overrides),
   };
+}
+
+function normalizeLoadedState(rawState = {}) {
+  return {
+    ...cloneState(defaultState),
+    ...rawState,
+    sync: {
+      ...cloneState(defaultState).sync,
+      ...(rawState.sync || {}),
+    },
+    overrides: normalizeOverrideState(rawState.overrides),
+  };
+}
+
+function normalizeOverrideState(overrides = {}) {
+  const source = overrides && typeof overrides === "object" ? overrides : {};
+  return {
+    games: { ...(source.games || {}) },
+    wins: { ...(source.wins || {}) },
+    giveaways: { ...(source.giveaways || {}) },
+    cycleMembers: { ...(source.cycleMembers || {}) },
+  };
+}
+
+function normalizeSharedOverridePayload(payload = {}) {
+  const rawOverrides = payload?.overrides && typeof payload.overrides === "object" ? payload.overrides : payload;
+  const normalized = normalizeOverrideState(rawOverrides);
+  return {
+    ...normalized,
+    cycleMembers: sanitizeCycleMemberOverrides(normalized.cycleMembers),
+  };
+}
+
+function mergeOverrideStates(baseOverrides = {}, overridingOverrides = {}) {
+  const base = normalizeOverrideState(baseOverrides);
+  const overriding = normalizeOverrideState(overridingOverrides);
+  return {
+    games: { ...base.games, ...overriding.games },
+    wins: { ...base.wins, ...overriding.wins },
+    giveaways: { ...base.giveaways, ...overriding.giveaways },
+    cycleMembers: { ...base.cycleMembers, ...overriding.cycleMembers },
+  };
+}
+
+function getEffectiveOverrideState() {
+  return mergeOverrideStates(runtime.sharedOverrides, state.overrides);
+}
+
+function getPublishableOverrideState() {
+  const overrides = getEffectiveOverrideState();
+  return {
+    ...overrides,
+    cycleMembers: sanitizeCycleMemberOverrides(overrides.cycleMembers),
+  };
+}
+
+function sanitizeCycleMemberOverrides(cycleMembers = {}) {
+  const sanitized = {};
+  for (const [key, value] of Object.entries(cycleMembers || {})) {
+    const normalizedKey = normalizeCycleMemberOverrideEntryKey(key);
+    if (!normalizedKey) {
+      continue;
+    }
+    sanitized[normalizedKey] = { ...(value || {}) };
+  }
+  return sanitized;
+}
+
+function normalizeCycleMemberOverrideEntryKey(key) {
+  const rawKey = String(key || "").trim();
+  const separatorIndex = rawKey.indexOf(":");
+  if (separatorIndex <= 0 || separatorIndex === rawKey.length - 1) {
+    return "";
+  }
+
+  const cycleKey = rawKey.slice(0, separatorIndex);
+  const memberKey = rawKey.slice(separatorIndex + 1);
+  if (!memberKey.startsWith("member-")) {
+    return `${cycleKey}:${memberKey}`;
+  }
+
+  const member = findById("members", memberKey);
+  const stableKey = getStableCycleMemberKey(member);
+  return stableKey ? `${cycleKey}:${stableKey}` : "";
+}
+
+function applyManualOverrides() {
+  const overrides = getEffectiveOverrideState();
+  runtime.sharedOverrides = normalizeOverrideState(runtime.sharedOverrides);
+  state.overrides = normalizeOverrideState(state.overrides);
+
+  state.games = state.games.map((game) => {
+    const key = getGameOverrideKey(game);
+    const nextGame = stripOverrideFields(game, GAME_OVERRIDE_FIELDS);
+    return {
+      ...nextGame,
+      ...(key ? overrides.games[key] || {} : {}),
+    };
+  });
+
+  state.wins = state.wins.map((win) => {
+    const key = getWinOverrideKey(win);
+    const nextWin = stripOverrideFields(win, WIN_OVERRIDE_FIELDS);
+    return {
+      ...nextWin,
+      ...(key ? overrides.wins[key] || {} : {}),
+    };
+  });
+
+  state.giveaways = state.giveaways.map((giveaway) => {
+    const key = getGiveawayOverrideKey(giveaway);
+    const nextGiveaway = stripOverrideFields(giveaway, GIVEAWAY_OVERRIDE_FIELDS);
+    return {
+      ...nextGiveaway,
+      ...(key ? overrides.giveaways[key] || {} : {}),
+    };
+  });
+}
+
+function stripOverrideFields(item, fields) {
+  const nextItem = { ...item };
+  for (const field of fields) {
+    delete nextItem[field];
+  }
+  return nextItem;
+}
+
+function getGameOverrideKey(game) {
+  const appId = Number(game?.appId || 0);
+  if (appId) {
+    return `app:${appId}`;
+  }
+  const normalizedTitle = normalizeGameTitle(game?.title || "");
+  if (normalizedTitle) {
+    return `title:${normalizedTitle}`;
+  }
+  return String(game?.id || "");
+}
+
+function getWinOverrideKey(win) {
+  return String(win?.sourceId || win?.id || "");
+}
+
+function getGiveawayOverrideKey(giveaway) {
+  return String(giveaway?.sourceId || giveaway?.id || "");
+}
+
+function getBaseGameHltbHours(game) {
+  return Number(game?.hltbHours || 0);
+}
+
+function getGameHltbHours(game) {
+  if (game?.hltbHoursOverride !== undefined && game?.hltbHoursOverride !== null && game.hltbHoursOverride !== "") {
+    return Number(game.hltbHoursOverride || 0);
+  }
+  return getBaseGameHltbHours(game);
+}
+
+function getGameAchievementsTotal(game) {
+  return Number(game?.achievementsTotal || 0);
+}
+
+function getBaseRequiredAchievementsTarget(win, game) {
+  const totalAchievements = getGameAchievementsTotal(game);
+  return totalAchievements > 0 ? Math.max(1, Math.ceil(totalAchievements * 0.1)) : 0;
+}
+
+function getRequiredAchievementsTarget(win, game) {
+  if (
+    win?.requiredAchievementsOverride !== undefined &&
+    win?.requiredAchievementsOverride !== null &&
+    win.requiredAchievementsOverride !== ""
+  ) {
+    return Number(win.requiredAchievementsOverride || 0);
+  }
+  return getBaseRequiredAchievementsTarget(win, game);
+}
+
+function getBaseEffectiveWinMonth(win) {
+  const game = findById("games", win.gameId);
+  return getEffectiveMonthKey(win.winDate, getWinReleaseDate(win, game));
+}
+
+function getEffectiveWinMonth(win) {
+  const overrideMonth = String(win?.monthOverride || "").trim();
+  if (overrideMonth) {
+    return overrideMonth;
+  }
+  return getBaseEffectiveWinMonth(win);
+}
+
+function getGiveawayMonth(giveaway) {
+  return monthKey(giveaway?.createdAt || "");
+}
+
+function getBaseGiveawayKind(giveaway) {
+  const kind = String(giveaway?.giveawayKind || giveaway?.type || "").toLowerCase();
+  return kind === "extra" ? "extra" : "cycle";
+}
+
+function getGiveawayKind(giveaway) {
+  const overrideKind = String(giveaway?.giveawayKindOverride || "").toLowerCase();
+  if (overrideKind === "cycle" || overrideKind === "extra") {
+    return overrideKind;
+  }
+  return getBaseGiveawayKind(giveaway);
+}
+
+function getCycleMemberOverrideKey(memberId, selectedMonth) {
+  const cycleKey = getCycleKey(selectedMonth);
+  const memberKey = getStableCycleMemberKey(memberId);
+  if (!cycleKey || !memberKey) {
+    return "";
+  }
+  return `${cycleKey}:${memberKey}`;
+}
+
+function getStableCycleMemberKey(memberId) {
+  const member = typeof memberId === "string" ? findById("members", memberId) : memberId;
+  const rawKey = String(member?.steamgiftsUsername || member?.name || member?.id || memberId || "").trim();
+  return rawKey ? normalizeGameTitle(rawKey).replace(/\s+/g, "-") : "";
+}
+
+function getCycleKey(selectedMonth) {
+  if (typeof selectedMonth === "string" && /^\d{4}-cycle-[1-3]$/.test(selectedMonth)) {
+    return selectedMonth;
+  }
+  const period = typeof selectedMonth === "string" ? getPeriodInfo(`${selectedMonth}-01`) : selectedMonth;
+  if (!period || period.kind !== "cycle") {
+    return "";
+  }
+  return `${period.year}-cycle-${period.cycleNumber}`;
+}
+
+function getCycleMemberStatus(memberId, selectedMonth) {
+  const key = getCycleMemberOverrideKey(memberId, selectedMonth);
+  if (!key) {
+    return "active";
+  }
+  return getEffectiveOverrideState().cycleMembers[key]?.status === "paused" ? "paused" : "active";
+}
+
+function getGiveawaysForMonth(monthValue) {
+  return state.giveaways.filter((giveaway) => getGiveawayMonth(giveaway) === monthValue);
+}
+
+function findGiveawayForWin(win) {
+  if (!win) {
+    return null;
+  }
+
+  const sourceId = String(win.giveawaySourceId || "").trim();
+  if (sourceId) {
+    const bySourceId = state.giveaways.find((giveaway) => giveaway.sourceId === sourceId);
+    if (bySourceId) {
+      return bySourceId;
+    }
+  }
+
+  const giveawayUrl = getGiveawayUrl(win);
+  if (giveawayUrl) {
+    const byUrl = state.giveaways.find((giveaway) => String(giveaway.notes || "").trim() === giveawayUrl);
+    if (byUrl) {
+      return byUrl;
+    }
+  }
+
+  const sourceMatch = String(win.sourceId || "").match(/^sg-win-([^-]+)-/);
+  if (sourceMatch) {
+    return state.giveaways.find((giveaway) => giveaway.sourceId === `sg-${sourceMatch[1]}`) || null;
+  }
+
+  return null;
+}
+
+function findWinsForGiveaway(giveaway) {
+  if (!giveaway) {
+    return [];
+  }
+
+  const sourceId = String(giveaway.sourceId || "").trim();
+  if (sourceId) {
+    const winsBySourceId = state.wins.filter((win) => String(win.giveawaySourceId || "").trim() === sourceId);
+    if (winsBySourceId.length) {
+      return winsBySourceId;
+    }
+  }
+
+  const giveawayUrl = String(giveaway.notes || "").trim();
+  if (giveawayUrl) {
+    const winsByUrl = state.wins.filter((win) => getGiveawayUrl(win) === giveawayUrl);
+    if (winsByUrl.length) {
+      return winsByUrl;
+    }
+  }
+
+  return [];
+}
+
+function isCycleWin(win) {
+  const giveaway = findGiveawayForWin(win);
+  return giveaway ? getGiveawayKind(giveaway) !== "extra" : true;
+}
+
+function handleEditAction(button) {
+  const action = button.dataset.editAction;
+
+  if (action === "hltb") {
+    const game = findById("games", button.dataset.gameId);
+    if (!game) {
+      return;
+    }
+    openEditModal({
+      title: `Edit HLTB for ${game.title}`,
+      description: "Leave the field empty to clear the manual override and fall back to synced data.",
+      label: "HLTB hours",
+      initialValue: game.hltbHoursOverride ?? getGameHltbHours(game),
+      inputType: "number",
+      inputAttributes: { min: "0", step: "0.1" },
+      parse: (raw) => parseNumericOverrideInput(raw, { integer: false }),
+      onSave: (nextValue) => {
+        const baseValue = getBaseGameHltbHours(game);
+        updateOverrideField(
+          "games",
+          getGameOverrideKey(game),
+          "hltbHoursOverride",
+          nextValue === null || nextValue === baseValue ? null : nextValue,
+        );
+      },
+    });
+    return;
+  }
+
+  if (action === "achievement-target") {
+    const win = findById("wins", button.dataset.winId);
+    const game = win ? findById("games", win.gameId) : null;
+    if (!win || !game) {
+      return;
+    }
+    openEditModal({
+      title: `Edit 10% target for ${game.title}`,
+      description: "Leave the field empty to clear the manual override and return to the synced 10% requirement.",
+      label: "Required achievements",
+      initialValue: win.requiredAchievementsOverride ?? getRequiredAchievementsTarget(win, game),
+      inputType: "number",
+      inputAttributes: { min: "0", step: "1" },
+      parse: (raw) => parseNumericOverrideInput(raw, { integer: true }),
+      onSave: (nextValue) => {
+        const baseValue = getBaseRequiredAchievementsTarget(win, game);
+        updateOverrideField(
+          "wins",
+          getWinOverrideKey(win),
+          "requiredAchievementsOverride",
+          nextValue === null || nextValue === baseValue ? null : nextValue,
+        );
+      },
+    });
+    return;
+  }
+
+  if (action === "month") {
+    const win = findById("wins", button.dataset.winId);
+    if (!win) {
+      return;
+    }
+    openEditModal({
+      title: "Edit counted month",
+      description: "Use the YYYY-MM format. Leave the field empty to clear the manual override.",
+      label: "Count this win in month",
+      initialValue: win.monthOverride || getEffectiveWinMonth(win),
+      inputType: "text",
+      inputAttributes: { placeholder: "YYYY-MM" },
+      parse: parseMonthOverrideInput,
+      onSave: (nextValue) => {
+        const baseValue = getBaseEffectiveWinMonth(win);
+        updateOverrideField(
+          "wins",
+          getWinOverrideKey(win),
+          "monthOverride",
+          nextValue === null || nextValue === baseValue ? null : nextValue,
+        );
+      },
+    });
+  }
+}
+
+function handleGiveawayKindChange(select) {
+  const giveaway = findById("giveaways", select.dataset.giveawayId);
+  if (!giveaway) {
+    return;
+  }
+  const selectedKind = String(select.value || "cycle").toLowerCase() === "extra" ? "extra" : "cycle";
+  const baseKind = getBaseGiveawayKind(giveaway);
+  updateOverrideField(
+    "giveaways",
+    getGiveawayOverrideKey(giveaway),
+    "giveawayKindOverride",
+    selectedKind === baseKind ? null : selectedKind,
+  );
+}
+
+function handleCycleMemberStatusChange(select) {
+  const overrideKey = String(select.dataset.cycleMemberKey || "");
+  if (!overrideKey) {
+    return;
+  }
+
+  const selectedStatus = String(select.value || "active").toLowerCase() === "paused" ? "paused" : "active";
+  updateOverrideField(
+    "cycleMembers",
+    overrideKey,
+    "status",
+    selectedStatus === "active" ? null : selectedStatus,
+  );
+}
+
+function ensureEditModal() {
+  if (runtime.editModal) {
+    return runtime.editModal;
+  }
+
+  const wrapper = document.createElement("div");
+  wrapper.innerHTML = `
+    <div id="override-edit-modal" class="modal-backdrop" hidden>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="override-edit-title">
+        <h2 id="override-edit-title"></h2>
+        <p id="override-edit-copy" class="modal-copy"></p>
+        <p id="override-edit-error" class="modal-error" hidden></p>
+        <label class="modal-field">
+          <span id="override-edit-label"></span>
+          <input id="override-edit-input" />
+        </label>
+        <div class="modal-actions">
+          <button type="button" class="button secondary" data-modal-clear="true">Clear override</button>
+          <button type="button" class="button secondary" data-modal-cancel="true">Cancel</button>
+          <button type="button" class="button primary" data-modal-save="true">Save</button>
+        </div>
+      </div>
+    </div>
+  `;
+  document.body.append(wrapper.firstElementChild);
+
+  const root = document.querySelector("#override-edit-modal");
+  const modal = {
+    root,
+    title: root.querySelector("#override-edit-title"),
+    copy: root.querySelector("#override-edit-copy"),
+    error: root.querySelector("#override-edit-error"),
+    label: root.querySelector("#override-edit-label"),
+    input: root.querySelector("#override-edit-input"),
+    clearButton: root.querySelector("[data-modal-clear]"),
+    cancelButton: root.querySelector("[data-modal-cancel]"),
+    saveButton: root.querySelector("[data-modal-save]"),
+  };
+
+  modal.clearButton.addEventListener("click", () => saveEditModal(true));
+  modal.cancelButton.addEventListener("click", closeEditModal);
+  modal.saveButton.addEventListener("click", () => saveEditModal(false));
+  modal.input.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      saveEditModal(false);
+    }
+    if (event.key === "Escape") {
+      event.preventDefault();
+      closeEditModal();
+    }
+  });
+  modal.root.addEventListener("click", (event) => {
+    if (event.target === modal.root) {
+      closeEditModal();
+    }
+  });
+
+  runtime.editModal = modal;
+  return modal;
+}
+
+function openEditModal(config) {
+  const modal = ensureEditModal();
+  runtime.editModalState = config;
+  modal.title.textContent = config.title;
+  modal.copy.textContent = config.description;
+  modal.label.textContent = config.label;
+  modal.error.hidden = true;
+  modal.error.textContent = "";
+  modal.input.type = config.inputType || "text";
+  modal.input.value = config.initialValue === null || config.initialValue === undefined ? "" : String(config.initialValue);
+  modal.input.placeholder = config.inputAttributes?.placeholder || "";
+  if (config.inputAttributes) {
+    for (const [attribute, value] of Object.entries(config.inputAttributes)) {
+      if (value === null || value === undefined) {
+        modal.input.removeAttribute(attribute);
+      } else {
+        modal.input.setAttribute(attribute, value);
+      }
+    }
+  }
+  modal.root.hidden = false;
+  modal.input.focus();
+  modal.input.select();
+}
+
+function closeEditModal() {
+  const modal = ensureEditModal();
+  runtime.editModalState = null;
+  modal.root.hidden = true;
+  modal.error.hidden = true;
+  modal.error.textContent = "";
+}
+
+function saveEditModal(clearOverride) {
+  const modal = ensureEditModal();
+  const config = runtime.editModalState;
+  if (!config) {
+    return;
+  }
+
+  if (clearOverride) {
+    config.onSave(null);
+    closeEditModal();
+    return;
+  }
+
+  const rawValue = modal.input.value.trim();
+  if (!rawValue) {
+    config.onSave(null);
+    closeEditModal();
+    return;
+  }
+
+  const parsed = config.parse(rawValue);
+  if (parsed.error) {
+    modal.error.hidden = false;
+    modal.error.textContent = parsed.error;
+    return;
+  }
+
+  config.onSave(parsed.value);
+  closeEditModal();
+}
+
+function parseNumericOverrideInput(rawValue, options = {}) {
+  const value = Number(rawValue);
+  if (!Number.isFinite(value) || value < 0 || (options.integer && !Number.isInteger(value))) {
+    return {
+      error: options.integer ? "Enter a whole number or leave the field empty." : "Enter a valid number or leave the field empty.",
+    };
+  }
+  return { value };
+}
+
+function parseMonthOverrideInput(rawValue) {
+  if (!/^\d{4}-\d{2}$/.test(rawValue)) {
+    return { error: "Use the YYYY-MM format or leave the field empty." };
+  }
+  const [year, month] = rawValue.split("-").map(Number);
+  if (!year || month < 1 || month > 12) {
+    return { error: "Use a valid month in the YYYY-MM format." };
+  }
+  return { value: rawValue };
+}
+
+function updateOverrideField(bucketName, key, fieldName, value) {
+  if (!key) {
+    return;
+  }
+
+  const overrides = normalizeOverrideState(state.overrides);
+  const entry = { ...(overrides[bucketName][key] || {}) };
+  if (value === null || value === undefined || value === "") {
+    delete entry[fieldName];
+  } else {
+    entry[fieldName] = value;
+  }
+
+  if (Object.keys(entry).length) {
+    overrides[bucketName][key] = entry;
+  } else {
+    delete overrides[bucketName][key];
+  }
+
+  state.overrides = overrides;
+  applyManualOverrides();
+  persistAndRender();
 }
 
 function clearStoredSyncState(options = {}) {
@@ -2425,6 +3730,10 @@ function buildEmptyRow(colspan) {
   return `<tr><td colspan="${colspan}">${elements.emptyStateTemplate.innerHTML}</td></tr>`;
 }
 
+function buildMessageRow(colspan, title, description) {
+  return `<tr><td colspan="${colspan}"><div class="empty-state"><strong>${escapeHtml(title)}</strong><span>${escapeHtml(description)}</span></div></td></tr>`;
+}
+
 function uid(prefix) {
   return `${prefix}-${Math.random().toString(36).slice(2, 10)}`;
 }
@@ -2434,7 +3743,14 @@ function monthKey(dateInput) {
 }
 
 function getAvailableMonths() {
-  return Array.from(new Set(state.wins.map((win) => getEffectiveWinMonth(win)).filter(Boolean))).sort().reverse();
+  return Array.from(
+    new Set([
+      ...state.wins.map((win) => getEffectiveWinMonth(win)).filter(Boolean),
+      ...state.giveaways.map((giveaway) => getGiveawayMonth(giveaway)).filter(Boolean),
+    ]),
+  )
+    .sort()
+    .reverse();
 }
 
 function compareMemberBucketRows(left, right, sortMode) {

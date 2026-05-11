@@ -269,7 +269,7 @@ function Publish-ChangedData {
     return
   }
 
-  git add data
+  git add data site
   git diff --cached --quiet
   if ($LASTEXITCODE -eq 0) {
     Write-Host "No snapshot changes to publish."
@@ -342,6 +342,8 @@ try {
   } else {
     Invoke-CheckedExternal "Refreshing Steam progress..." { Invoke-Python @("server.py", "--refresh-steam-progress") }
   }
+
+  Invoke-CheckedExternal "Exporting static site snapshot..." { Invoke-Python @("server.py", "--export-static") }
 
   if (Test-Path "data/steamgifts-sync.public.json") {
     Remove-Item "data/steamgifts-sync.public.json" -Force

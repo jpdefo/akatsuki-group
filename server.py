@@ -27,6 +27,7 @@ PROGRESS_PATH = DATA_DIR / "steam-progress.json"
 LIBRARY_PATH = DATA_DIR / "steam-library.json"
 HLTB_CACHE_PATH = DATA_DIR / "hltb-cache.json"
 MEDIA_CACHE_PATH = DATA_DIR / "steam-media-cache.json"
+OVERRIDES_PATH = DATA_DIR / "overrides.json"
 STATIC_EXPORT_DIR = BASE_DIR / "site"
 HOST = "127.0.0.1"
 PORT = 4173
@@ -104,6 +105,34 @@ def empty_library_payload() -> dict:
 
 def empty_media_cache() -> dict:
     return {"updatedAt": None, "apps": {}}
+
+
+def empty_overrides_payload() -> dict:
+    return {
+        "savedAt": None,
+        "overrides": {
+            "games": {},
+            "wins": {},
+            "giveaways": {},
+            "cycleMembers": {},
+        },
+    }
+
+
+def normalize_overrides_payload(payload=None) -> dict:
+    source = payload if isinstance(payload, dict) else {}
+    raw_overrides = source.get("overrides") if isinstance(source.get("overrides"), dict) else source
+    if not isinstance(raw_overrides, dict):
+        raw_overrides = {}
+    return {
+        "savedAt": str(source.get("savedAt") or "") or None,
+        "overrides": {
+            "games": dict(raw_overrides.get("games") or {}),
+            "wins": dict(raw_overrides.get("wins") or {}),
+            "giveaways": dict(raw_overrides.get("giveaways") or {}),
+            "cycleMembers": dict(raw_overrides.get("cycleMembers") or {}),
+        },
+    }
 
 
 def build_media_lookup(media_cache: dict) -> dict[int, dict]:
@@ -1541,6 +1570,9 @@ class Handler(SimpleHTTPRequestHandler):
                     )
                 )
                 return
+            if parsed.path == "/api/overrides":
+                self.write_json(normalize_overrides_payload(load_json(OVERRIDES_PATH, empty_overrides_payload())))
+                return
             super().do_GET()
         except Exception as error:  # noqa: BLE001
             self.handle_api_exception(error)
@@ -1597,6 +1629,16 @@ class Handler(SimpleHTTPRequestHandler):
                         full_refresh=full_refresh,
                     )
                 )
+                return
+            if parsed.path == "/api/overrides":
+                payload = self.read_json()
+                if not isinstance(payload, dict):
+                    self.write_json({"error": "JSON payload expected."}, status=HTTPStatus.BAD_REQUEST)
+                    return
+                overrides_payload = normalize_overrides_payload(payload)
+                overrides_payload["savedAt"] = utc_now()
+                save_json(OVERRIDES_PATH, overrides_payload)
+                self.write_json({"ok": True, **overrides_payload})
                 return
 
             self.write_json({"error": "Not found."}, status=HTTPStatus.NOT_FOUND)
@@ -1719,6 +1761,7 @@ def export_static_site(output_dir: Path) -> None:
     sync_payload = load_json(SYNC_PATH, {})
     progress_payload = load_json(PROGRESS_PATH, empty_progress_payload())
     library_payload = load_json(LIBRARY_PATH, empty_library_payload())
+    overrides_payload = normalize_overrides_payload(load_json(OVERRIDES_PATH, empty_overrides_payload()))
     media_cache = load_json(MEDIA_CACHE_PATH, empty_media_cache())
     media_lookup = build_media_lookup(media_cache)
     sync_export = build_sync_export_payload(sync_payload, media_lookup=media_lookup)
@@ -1732,6 +1775,7 @@ def export_static_site(output_dir: Path) -> None:
 
     static_files = [
         "admin.html",
+        "cycles.html",
         "index.html",
         "monthly-progress.html",
         "app.js",
@@ -1757,6 +1801,7 @@ def export_static_site(output_dir: Path) -> None:
     save_json(api_dir / "dashboard.json", dashboard_payload)
     save_json(api_dir / "members.json", members_payload)
     save_json(api_dir / "giveaways.json", giveaways_payload)
+    save_json(api_dir / "overrides.json", overrides_payload)
     print(f"Static site exported to {output_dir}")
 
 
