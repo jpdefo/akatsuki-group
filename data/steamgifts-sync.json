@@ -2501,7 +2501,7 @@
       "hltbHours": 9.55,
       "points": 25,
       "regionRestricted": false,
-      "giveawayKind": "extra",
+      "giveawayKind": "cycle",
       "giveawayKindChecked": true
     },
     {
@@ -2558,6 +2558,7 @@
       "hltbHours": 9.55,
       "points": 25,
       "regionRestricted": false,
+      "giveawayKind": "extra",
       "giveawayKindChecked": true
     },
     {
