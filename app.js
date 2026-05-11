@@ -2333,13 +2333,18 @@ function computeMetrics() {
 }
 
 function computeMemberMetrics(memberId) {
+  const currentMonth = monthKey(state.settings.currentDate);
   const cycleWins = computeCycleWinsForMember(memberId);
   const penalties = state.wins
     .map(evaluateWin)
     .filter((evaluation) => evaluation.member.id === memberId && evaluation.penaltyOwed).length;
   const period = getPeriodInfo(state.settings.currentDate);
-  const paused = period.kind === "cycle" && getCycleMemberStatus(memberId, monthKey(state.settings.currentDate)) === "paused";
+  const paused = period.kind === "cycle" && getCycleMemberStatus(memberId, currentMonth) === "paused";
   const rule9Carryover = period.kind === "cycle" ? getRule9CarryoverForCycle(period) : null;
+  const monthThreeWinsBeforeCurrentMonth =
+    period.kind === "cycle" && period.monthPosition === 3 && currentMonth
+      ? computeCycleWinsForMemberInMonth(memberId, currentMonth, { beforeSelectedMonth: true })
+      : cycleWins;
 
   let cycleAlert = "";
   if (paused) {
@@ -2347,9 +2352,9 @@ function computeMemberMetrics(memberId) {
   } else if (period.kind === "cycle" && period.monthPosition === 1 && isRule9CarryoverWinner(rule9Carryover, memberId)) {
     cycleAlert = `Rule 9 winner of ${rule9Carryover.previousCycle.label}: exempt from the regular monthly mandatory giveaway in ${formatMonthKey(rule9Carryover.monthKey)}.`;
   } else if (period.kind === "cycle" && period.monthPosition === 3) {
-    if (cycleWins < 2) {
+    if (monthThreeWinsBeforeCurrentMonth < 2) {
       cycleAlert = "unlucky member: exempt from the regular monthly mandatory giveaway in month 3.";
-    } else if (cycleWins > 2) {
+    } else if (monthThreeWinsBeforeCurrentMonth > 2) {
       cycleAlert = "lucky member: owes one extra giveaway in addition to the regular mandatory one.";
     } else {
       cycleAlert = "balanced member: regular mandatory giveaway only.";
