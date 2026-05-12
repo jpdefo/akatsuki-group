@@ -2012,13 +2012,30 @@ function getApiCandidates(path, method = "GET") {
   return [path, `./${normalized}.json`];
 }
 
+function buildFreshApiRequestUrl(path) {
+  try {
+    const url = new URL(path, window.location.href);
+    url.searchParams.set("_", String(Date.now()));
+    return url.toString();
+  } catch {
+    const separator = String(path).includes("?") ? "&" : "?";
+    return `${path}${separator}_=${Date.now()}`;
+  }
+}
+
 async function fetchApiJson(path, options = {}) {
   const method = String(options.method || "GET").toUpperCase();
+  const requestOptions = method === "GET"
+    ? { ...options, cache: "no-store" }
+    : options;
   let lastError = null;
 
   for (const candidate of getApiCandidates(path, method)) {
     try {
-      const response = await fetch(candidate, options);
+      const response = await fetch(
+        method === "GET" ? buildFreshApiRequestUrl(candidate) : candidate,
+        requestOptions,
+      );
       if (!response.ok) {
         lastError = new Error(`Request failed for ${candidate}`);
         continue;
