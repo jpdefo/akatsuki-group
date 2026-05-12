@@ -754,13 +754,7 @@ function renderCycleBestGifterWarning(bestGifterAward, selectedCycle, cycleMonth
 }
 
 function renderCycleHistoryMembersTable(selectedCycle, cycleMonths, cycleWins, cycleGiveaways, rule9Carryover) {
-  const participantIds = new Set([
-    ...cycleWins.map((win) => win.memberId).filter(Boolean),
-    ...cycleGiveaways.map((giveaway) => giveaway.creatorId).filter(Boolean),
-  ]);
-
-  const rows = state.members
-    .filter((member) => participantIds.has(member.id) || getCycleMemberStatus(member, selectedCycle.key) === "paused")
+  const rows = getCycleHistoryVisibleMembers(selectedCycle, cycleWins, cycleGiveaways)
     .map((member) => {
       const memberCycleStatus = getCycleMemberStatus(member, selectedCycle.key);
       const paused = memberCycleStatus === "paused";
@@ -852,6 +846,18 @@ function renderCycleHistoryMembersTable(selectedCycle, cycleMonths, cycleWins, c
   elements.cycleTable.innerHTML = rows.length
     ? rows.map((row) => row.markup).join("")
     : buildMessageRow(6, "No tracked members in this cycle.", "Wins and giveaway creators for the selected cycle will appear here.");
+}
+
+function getCycleHistoryVisibleMembers(selectedCycle, cycleWins, cycleGiveaways) {
+  const cycleKey = String(selectedCycle?.key || "").trim();
+  const participantIds = new Set([
+    ...cycleWins.map((win) => win.memberId).filter(Boolean),
+    ...cycleGiveaways.map((giveaway) => giveaway.creatorId).filter(Boolean),
+  ]);
+
+  return state.members.filter(
+    (member) => participantIds.has(member.id) || (cycleKey && getCycleMemberStatus(member, cycleKey) === "paused"),
+  );
 }
 
 function renderCycleHistoryResultsTable(cycleGiveaways) {
@@ -1778,13 +1784,16 @@ function getCurrentCycleMissingGiveawaySummary() {
     return null;
   }
 
-  const period = getPeriodInfo(`${currentMonth}-01`);
-  if (period.kind !== "cycle") {
+  const cycle = getCyclePeriodInfo(currentMonth);
+  if (!cycle) {
     return null;
   }
 
-  const rule9Carryover = getRule9CarryoverForCycle(period);
-  const members = state.members
+  const cycleMonths = getRenderableCycleMonths(cycle);
+  const cycleWins = state.wins.filter((win) => cycleMonths.includes(getEffectiveWinMonth(win)));
+  const cycleGiveaways = state.giveaways.filter((giveaway) => cycleMonths.includes(getGiveawayMonth(giveaway)));
+  const rule9Carryover = getRule9CarryoverForCycle(cycle);
+  const members = getCycleHistoryVisibleMembers(cycle, cycleWins, cycleGiveaways)
     .filter((member) => Boolean(member?.isActiveMember))
     .map((member) => {
       if (getCycleMemberStatus(member.id, currentMonth) === "paused") {
