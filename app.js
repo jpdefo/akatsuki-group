@@ -1068,7 +1068,7 @@ function renderSummerEventPage() {
                 </td>
                 <td>
                   <strong>${rewardPoints.toLocaleString("en-US")} P</strong>
-                  <span class="meta-line">Entry swing: ${getSummerEventEntryDelta(giveaway)} P</span>
+                  <span class="meta-line">${getSummerEventValueMeta(giveaway)}</span>
                 </td>
                 <td>
                   <strong>${entryUsers.length.toLocaleString("en-US")}</strong>
@@ -1137,9 +1137,9 @@ function sortSummerEventGiveaways(giveaways, sortValue, memberIndex = getSummerE
       case "winner-desc":
         return getSummerEventWinnerLabel(right, memberIndex).localeCompare(getSummerEventWinnerLabel(left, memberIndex), "en-US", { sensitivity: "base" }) || String(right.endDate || "").localeCompare(String(left.endDate || ""));
       case "points-desc":
-        return Number(right.points || 0) - Number(left.points || 0) || String(right.endDate || "").localeCompare(String(left.endDate || ""));
+        return getSummerEventBasePoints(right) - getSummerEventBasePoints(left) || String(right.endDate || "").localeCompare(String(left.endDate || ""));
       case "points-asc":
-        return Number(left.points || 0) - Number(right.points || 0) || String(left.endDate || "").localeCompare(String(right.endDate || ""));
+        return getSummerEventBasePoints(left) - getSummerEventBasePoints(right) || String(left.endDate || "").localeCompare(String(right.endDate || ""));
       case "entries-desc":
         return getSummerEventEntryUsers(right).length - getSummerEventEntryUsers(left).length || String(right.endDate || "").localeCompare(String(left.endDate || ""));
       case "entries-asc":
@@ -1320,18 +1320,53 @@ function doesSummerEventGiveawayCountForStandings(giveaway) {
 }
 
 function getSummerEventBasePoints(giveaway) {
-  return isSummerEventNoWinners(giveaway) ? 0 : Number(giveaway?.points || 0);
+  if (isSummerEventNoWinners(giveaway)) {
+    return 0;
+  }
+  if (hasSummerEventSteamPrice(giveaway)) {
+    return Number(giveaway?.steamPricePoints || 0);
+  }
+  return Number(giveaway?.points || 0);
 }
 
 function getSummerEventEntryDelta(giveaway) {
   if (isSummerEventNoWinners(giveaway)) {
     return 0;
   }
-  return Number(giveaway?.points || 0) >= 30 ? 10 : 5;
+  return getSummerEventBasePoints(giveaway) >= 30 ? 10 : 5;
 }
 
 function isSummerEventNoWinners(giveaway) {
   return String(giveaway?.resultStatus || "").trim().toLowerCase() === "no_winners";
+}
+
+function hasSummerEventSteamPrice(giveaway) {
+  return Boolean(giveaway?.steamPriceChecked)
+    && giveaway?.steamPricePoints !== null
+    && giveaway?.steamPricePoints !== undefined
+    && giveaway?.steamPricePoints !== "";
+}
+
+function formatSummerEventUsd(cents) {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(Number(cents || 0) / 100);
+}
+
+function getSummerEventValueMeta(giveaway) {
+  const entryDelta = getSummerEventEntryDelta(giveaway);
+  if (
+    Boolean(giveaway?.steamPriceChecked)
+    && giveaway?.steamListPriceCents !== null
+    && giveaway?.steamListPriceCents !== undefined
+    && giveaway?.steamListPriceCents !== ""
+  ) {
+    return `Steam list: ${formatSummerEventUsd(giveaway.steamListPriceCents)} • Swing: ${entryDelta} P`;
+  }
+  return `SteamGifts base • Swing: ${entryDelta} P`;
 }
 
 function buildSummerEventSnapshotBadge(giveaway) {

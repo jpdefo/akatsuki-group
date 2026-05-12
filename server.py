@@ -27,6 +27,7 @@ PROGRESS_PATH = DATA_DIR / "steam-progress.json"
 LIBRARY_PATH = DATA_DIR / "steam-library.json"
 HLTB_CACHE_PATH = DATA_DIR / "hltb-cache.json"
 MEDIA_CACHE_PATH = DATA_DIR / "steam-media-cache.json"
+PRICE_CACHE_PATH = DATA_DIR / "steam-price-cache.json"
 OVERRIDES_PATH = DATA_DIR / "overrides.json"
 STATIC_EXPORT_DIR = BASE_DIR / "site"
 HOST = "127.0.0.1"
@@ -142,6 +143,10 @@ def empty_library_payload() -> dict:
 
 def empty_media_cache() -> dict:
     return {"updatedAt": None, "apps": {}}
+
+
+def empty_price_cache() -> dict:
+    return {"updatedAt": None, "items": {}}
 
 
 def empty_overrides_payload() -> dict:
@@ -372,6 +377,33 @@ def parse_int(value, default: int = 0) -> int:
         return default
 
 
+def is_summer_event_kind(kind: str | None) -> bool:
+    value = str(kind or "").strip().lower()
+    return value in {"summer_event", "summer-event", "summer event"}
+
+
+def parse_store_item_from_url(url: str | None) -> tuple[str, int | None]:
+    match = re.search(r"/(app|sub)/(\d+)", str(url or ""), flags=re.I)
+    if not match:
+        return "", None
+    return match.group(1).lower(), int(match.group(2))
+
+
+def should_lookup_store_price(giveaway: dict) -> bool:
+    return is_summer_event_kind(giveaway.get("giveawayKind")) and parse_int(giveaway.get("points")) == 50
+
+
+def round_store_price_to_points(cents: int | None) -> int | None:
+    if cents is None:
+        return None
+    cents_value = parse_int(cents, None)
+    if cents_value is None:
+        return None
+    if cents_value <= 0:
+        return 0
+    return (cents_value + 50) // 100
+
+
 def compute_retry_delay(error: HTTPError | URLError | TimeoutError, attempt: int) -> float:
     if isinstance(error, HTTPError):
         retry_after = error.headers.get("Retry-After")
@@ -540,6 +572,87 @@ def has_complete_media_entry(media_entry: dict | None) -> bool:
     )
 
 
+def fetch_store_price(store_type: str, store_id: int) -> dict:
+    query = {"cc": "us", "l": "english"}
+    if store_type == "sub":
+        payload = fetch_json(
+            f"https://store.steampowered.com/api/packagedetails?{urlencode({**query, 'packageids': str(store_id)})}"
+        )
+        data = (payload.get(str(store_id)) or {}).get("data") or {}
+        price_data = data.get("price") or {}
+        is_free = False
+    else:
+        payload = fetch_json(
+            f"https://store.steampowered.com/api/appdetails?{urlencode({**query, 'appids': str(store_id)})}"
+        )
+        data = (payload.get(str(store_id)) or {}).get("data") or {}
+        price_data = data.get("price_overview") or {}
+        is_free = bool(data.get("is_free"))
+
+    list_price_cents = 0 if is_free else parse_int(price_data.get("initial"), None)
+    final_price_cents = 0 if is_free else parse_int(price_data.get("final"), None)
+    return {
+        "checkedAt": utc_now(),
+        "storeType": store_type,
+        "storeId": store_id,
+        "currency": "USD" if is_free else str(price_data.get("currency") or ""),
+        "listPriceCents": list_price_cents,
+        "finalPriceCents": final_price_cents,
+        "discountPercent": 0 if is_free else parse_int(price_data.get("discount_percent"), 0),
+        "pricePoints": round_store_price_to_points(list_price_cents),
+        "available": list_price_cents is not None,
+    }
+
+
+def get_price_cache_entry(store_type: str, store_id: int, price_cache: dict, *, fetch_missing: bool = False) -> dict:
+    if not store_type or not store_id:
+        return {}
+
+    cache_key = f"{store_type}:{store_id}"
+    cached = (price_cache.get("items") or {}).get(cache_key)
+    if cached is not None:
+        return cached
+    if not fetch_missing:
+        return {}
+
+    try:
+        fetched = fetch_store_price(store_type, store_id)
+    except (HTTPError, URLError, TimeoutError, json.JSONDecodeError):
+        return {}
+
+    price_cache.setdefault("items", {})[cache_key] = fetched
+    price_cache["updatedAt"] = utc_now()
+    return fetched
+
+
+def with_giveaway_store_price(giveaway: dict, price_cache: dict) -> dict:
+    store_type, store_id = parse_store_item_from_url(giveaway.get("steamAppUrl"))
+    enriched = {**giveaway}
+
+    if store_type and store_id:
+        enriched["steamStoreType"] = store_type
+        enriched["steamStoreId"] = store_id
+
+    price_entry = get_price_cache_entry(
+        store_type,
+        store_id,
+        price_cache,
+        fetch_missing=should_lookup_store_price(giveaway),
+    )
+    if not price_entry:
+        return enriched
+
+    return {
+        **enriched,
+        "steamPriceChecked": True,
+        "steamPriceCheckedAt": price_entry.get("checkedAt") or enriched.get("steamPriceCheckedAt") or "",
+        "steamPriceCurrency": price_entry.get("currency") or enriched.get("steamPriceCurrency") or "",
+        "steamListPriceCents": price_entry.get("listPriceCents"),
+        "steamFinalPriceCents": price_entry.get("finalPriceCents"),
+        "steamPricePoints": price_entry.get("pricePoints"),
+    }
+
+
 def collect_sync_media_app_ids(sync_payload: dict, *, recent_days: int | None = None) -> list[int]:
     if recent_days is None:
         return sorted({parse_int(win.get("appId")) for win in derive_wins(sync_payload) if parse_int(win.get("appId"))})
@@ -669,6 +782,26 @@ def build_sync_export_payload(sync_payload: dict, *, media_lookup: dict[int, dic
         **sync_payload,
         "giveaways": [with_giveaway_media(giveaway, media_lookup) for giveaway in sync_payload.get("giveaways", [])],
     }
+
+
+def enrich_sync_payload_with_store_prices(sync_payload: dict) -> dict:
+    price_cache = load_json(PRICE_CACHE_PATH, empty_price_cache())
+    cache_before = json.dumps(price_cache, sort_keys=True)
+    giveaways = [with_giveaway_store_price(giveaway, price_cache) for giveaway in sync_payload.get("giveaways", [])]
+    if json.dumps(price_cache, sort_keys=True) != cache_before:
+        save_json(PRICE_CACHE_PATH, price_cache)
+    return {
+        **sync_payload,
+        "giveaways": giveaways,
+    }
+
+
+def load_sync_payload_with_store_prices(*, persist: bool = False) -> dict:
+    sync_payload = load_json(SYNC_PATH, {})
+    enriched = enrich_sync_payload_with_store_prices(sync_payload)
+    if persist and enriched != sync_payload:
+        save_json(SYNC_PATH, enriched)
+    return enriched
 
 
 def enrich_sync_payload_with_media(sync_payload: dict) -> dict:
@@ -1706,15 +1839,7 @@ class Handler(SimpleHTTPRequestHandler):
             parsed = urlparse(self.path)
             query = parse_qs(parsed.query)
             if parsed.path == "/api/steamgifts-sync":
-                if SYNC_PATH.exists():
-                    body = SYNC_PATH.read_bytes()
-                    self.send_response(HTTPStatus.OK)
-                    self.send_header("Content-Type", "application/json; charset=utf-8")
-                    self.send_header("Content-Length", str(len(body)))
-                    self.end_headers()
-                    self.wfile.write(body)
-                else:
-                    self.write_json({})
+                self.write_json(load_sync_payload_with_store_prices(persist=True) if SYNC_PATH.exists() else {})
                 return
             if parsed.path == "/api/steam-progress":
                 self.write_json(load_json(PROGRESS_PATH, empty_progress_payload()))
@@ -1728,17 +1853,17 @@ class Handler(SimpleHTTPRequestHandler):
                 self.write_json(get_media_payload(app_ids))
                 return
             if parsed.path == "/api/dashboard":
-                sync_payload = load_json(SYNC_PATH, {})
+                sync_payload = load_sync_payload_with_store_prices(persist=True)
                 progress_payload = load_json(PROGRESS_PATH, empty_progress_payload())
                 library_payload = load_json(LIBRARY_PATH, empty_library_payload())
                 self.write_json(build_dashboard_payload(sync_payload, progress_payload, library_payload))
                 return
             if parsed.path == "/api/members":
-                sync_payload = load_json(SYNC_PATH, {})
+                sync_payload = load_sync_payload_with_store_prices(persist=True)
                 self.write_json(build_members_payload(sync_payload))
                 return
             if parsed.path == "/api/giveaways":
-                sync_payload = load_json(SYNC_PATH, {})
+                sync_payload = load_sync_payload_with_store_prices(persist=True)
                 progress_payload = load_json(PROGRESS_PATH, empty_progress_payload())
                 library_payload = load_json(LIBRARY_PATH, empty_library_payload())
                 self.write_json(
@@ -1768,6 +1893,7 @@ class Handler(SimpleHTTPRequestHandler):
                 payload.setdefault("savedAt", utc_now())
                 existing = load_json(SYNC_PATH, {})
                 merged = merge_sync_payload(existing, payload)
+                merged = enrich_sync_payload_with_store_prices(merged)
                 save_json(SYNC_PATH, merged)
                 self.write_json(
                     {
@@ -1943,7 +2069,7 @@ def main() -> None:
 
 
 def export_static_site(output_dir: Path) -> None:
-    sync_payload = load_json(SYNC_PATH, {})
+    sync_payload = enrich_sync_payload_with_store_prices(load_json(SYNC_PATH, {}))
     progress_payload = load_json(PROGRESS_PATH, empty_progress_payload())
     library_payload = load_json(LIBRARY_PATH, empty_library_payload())
     overrides_payload = normalize_overrides_payload(load_json(OVERRIDES_PATH, empty_overrides_payload()))
