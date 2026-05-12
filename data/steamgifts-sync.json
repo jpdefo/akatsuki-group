@@ -1,6 +1,6 @@
 {
   "source": "akatsuki-steamgifts-sync",
-  "syncedAt": "2026-05-11T15:37:01.634Z",
+  "syncedAt": "2026-05-12T12:52:51.082Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -2163,10 +2163,11 @@
       "winners": [],
       "resultStatus": "open",
       "resultLabel": "Open",
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "x8SJ2",
@@ -2181,10 +2182,11 @@
       "winners": [],
       "resultStatus": "open",
       "resultLabel": "Open",
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "XSQMJ",
@@ -2200,10 +2202,11 @@
       "resultStatus": "awaiting_feedback",
       "resultLabel": "Awaiting feedback",
       "hltbHours": 30.35,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "extra",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "pDPRK",
@@ -2219,10 +2222,11 @@
       "resultStatus": "open",
       "resultLabel": "Open",
       "hltbHours": 72.35,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "8jrA5",
@@ -2245,7 +2249,8 @@
       "resultLabel": "burntreynolds444",
       "points": 18,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "bvc8x",
@@ -2261,10 +2266,11 @@
       "resultStatus": "open",
       "resultLabel": "Open",
       "hltbHours": 68.2,
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "kxEiu",
@@ -2280,10 +2286,11 @@
       "resultStatus": "open",
       "resultLabel": "Open",
       "hltbHours": 18,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "8AV04",
@@ -2298,10 +2305,11 @@
       "winners": [],
       "resultStatus": "open",
       "resultLabel": "Open",
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "Vq2Hc",
@@ -2317,10 +2325,11 @@
       "resultStatus": "open",
       "resultLabel": "Open",
       "hltbHours": 11.51,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "R91uQ",
@@ -2344,7 +2353,8 @@
       "hltbHours": 18,
       "points": 40,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "Gm5Hr",
@@ -2359,10 +2369,11 @@
       "winners": [],
       "resultStatus": "awaiting_feedback",
       "resultLabel": "Awaiting feedback",
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "cnObM",
@@ -2381,7 +2392,8 @@
       "points": 20,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "W2Nnj",
@@ -2406,7 +2418,8 @@
       "points": 25,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "vWNke",
@@ -2431,7 +2444,8 @@
       "points": 25,
       "regionRestricted": false,
       "giveawayKind": "extra",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "LleZ2",
@@ -2456,7 +2470,8 @@
       "points": 35,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "je9HF",
@@ -2475,7 +2490,8 @@
       "points": 28,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "1HSP9",
@@ -2500,7 +2516,8 @@
       "points": 20,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "XAkzm",
@@ -2525,7 +2542,8 @@
       "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "zEwc3",
@@ -2550,7 +2568,8 @@
       "points": 20,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "Cufm2",
@@ -2575,7 +2594,8 @@
       "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "CFqMt",
@@ -2600,7 +2620,8 @@
       "points": 25,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "iWDQT",
@@ -2625,7 +2646,8 @@
       "points": 25,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "XMRO7",
@@ -2650,7 +2672,8 @@
       "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "9So0q",
@@ -2675,7 +2698,8 @@
       "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "9At4Y",
@@ -2699,7 +2723,8 @@
       "hltbHours": 4.54,
       "points": 25,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "BHHqT",
@@ -2717,7 +2742,8 @@
       "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "8ll4Q",
@@ -2735,7 +2761,8 @@
       "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "Ct2Oa",
@@ -2760,7 +2787,8 @@
       "points": 25,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "LzlgY",
@@ -2785,7 +2813,8 @@
       "points": 25,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "G2RfG",
@@ -2809,7 +2838,8 @@
       "hltbHours": 6.19,
       "points": 20,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "Hvrml",
@@ -2834,7 +2864,8 @@
       "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "Cdy3v",
@@ -2858,7 +2889,8 @@
       "hltbHours": 9.55,
       "points": 25,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "zkP7M",
@@ -2883,7 +2915,8 @@
       "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "x1bLK",
@@ -2907,7 +2940,8 @@
       "hltbHours": 16.03,
       "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "onN8N",
@@ -2931,7 +2965,8 @@
       "hltbHours": 22.74,
       "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "tA4L6",
@@ -2946,10 +2981,11 @@
       "winners": [],
       "resultStatus": "awaiting_feedback",
       "resultLabel": "Awaiting feedback",
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "16bPT",
@@ -2973,7 +3009,8 @@
       "hltbHours": 72.35,
       "points": 30,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "kaiKt",
@@ -2998,7 +3035,8 @@
       "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "xfwEj",
@@ -3020,10 +3058,11 @@
       "resultStatus": "won",
       "resultLabel": "Horseflesh",
       "hltbHours": 5.99,
-      "points": 40,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "Xk2A9",
@@ -3048,7 +3087,8 @@
       "points": 25,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "qJDwI",
@@ -3073,7 +3113,8 @@
       "points": 25,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "2HgW9",
@@ -3098,7 +3139,8 @@
       "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "erGtr",
@@ -3123,7 +3165,8 @@
       "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "qqB8C",
@@ -3148,7 +3191,8 @@
       "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "gSzJG",
@@ -3173,7 +3217,8 @@
       "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "HKrbj",
@@ -3198,7 +3243,8 @@
       "points": 20,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "sWkbw",
@@ -3223,7 +3269,8 @@
       "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "q6xBB",
@@ -3248,7 +3295,8 @@
       "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "1ioqU",
@@ -3273,7 +3321,8 @@
       "points": 15,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "egRov",
@@ -3298,7 +3347,8 @@
       "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "3FjZo",
@@ -3323,7 +3373,8 @@
       "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "mez0s",
@@ -3348,7 +3399,8 @@
       "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "LgQJ6",
@@ -3372,7 +3424,8 @@
       "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "auhIy",
@@ -3397,7 +3450,8 @@
       "points": 15,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "O753M",
@@ -3422,7 +3476,8 @@
       "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "iCOz3",
@@ -3447,7 +3502,8 @@
       "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "p3a3r",
@@ -3472,7 +3528,8 @@
       "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "uEE3O",
@@ -3497,7 +3554,8 @@
       "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "TTAT4",
@@ -3522,7 +3580,8 @@
       "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "3Klb9",
@@ -3546,7 +3605,8 @@
       "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "8ADOY",
@@ -3571,7 +3631,8 @@
       "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "3e4UV",
@@ -3596,7 +3657,8 @@
       "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "wsLa6",
@@ -3621,7 +3683,8 @@
       "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "eGZbH",
@@ -3645,7 +3708,8 @@
       "hltbHours": 19,
       "points": 15,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "9zzHp",
@@ -3668,7 +3732,8 @@
       "resultLabel": "chOOkity",
       "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "CzQVS",
@@ -3692,7 +3757,8 @@
       "hltbHours": 16.03,
       "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "paT3e",
@@ -3716,7 +3782,8 @@
       "hltbHours": 14.61,
       "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "Ss2Am",
@@ -3740,7 +3807,8 @@
       "hltbHours": 7.88,
       "points": 25,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "nU9ju",
@@ -3764,7 +3832,8 @@
       "hltbHours": 28.2,
       "points": 20,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "LqrvT",
@@ -3788,8 +3857,14 @@
       "hltbHours": 28.2,
       "points": 20,
       "regionRestricted": false,
-      "giveawayKind": "extra",
-      "giveawayKindChecked": true
+      "giveawayKind": "summer_event",
+      "giveawayKindChecked": true,
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:39:50.513Z",
+      "entryUsers": [
+        "Youdontknow",
+        "xMisiu"
+      ]
     },
     {
       "code": "OKaMy",
@@ -3811,10 +3886,17 @@
       "resultStatus": "won",
       "resultLabel": "Ernesttico",
       "hltbHours": 5.99,
-      "points": 40,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKind": "extra",
-      "giveawayKindChecked": true
+      "giveawayKind": "summer_event",
+      "giveawayKindChecked": true,
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:39:52.773Z",
+      "entryUsers": [
+        "Ernesttico",
+        "Horseflesh",
+        "chOOkity"
+      ]
     },
     {
       "code": "pH1TD",
@@ -3838,7 +3920,8 @@
       "hltbHours": 14.2,
       "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "ss1t3",
@@ -3863,7 +3946,8 @@
       "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "Pur9v",
@@ -3887,7 +3971,8 @@
       "hltbHours": 12.18,
       "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "sggkD",
@@ -3911,7 +3996,8 @@
       "hltbHours": 8.55,
       "points": 30,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "3tY9I",
@@ -3936,7 +4022,8 @@
       "points": 25,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "aQMBR",
@@ -3960,7 +4047,8 @@
       "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "bpRih",
@@ -3979,7 +4067,8 @@
       "points": 25,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "YibWp",
@@ -4003,7 +4092,8 @@
       "points": 20,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "i5PSb",
@@ -4028,7 +4118,8 @@
       "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "1FE9d",
@@ -4053,7 +4144,8 @@
       "points": 20,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "bnjU6",
@@ -4078,7 +4170,8 @@
       "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "jNPYz",
@@ -4103,7 +4196,8 @@
       "points": 18,
       "regionRestricted": false,
       "giveawayKind": "extra",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "dL9pu",
@@ -4127,7 +4221,8 @@
       "hltbHours": 8.55,
       "points": 30,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "QozX3",
@@ -4152,7 +4247,8 @@
       "points": 35,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "LKEa4",
@@ -4177,7 +4273,8 @@
       "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "TOvlq",
@@ -4201,7 +4298,8 @@
       "hltbHours": 35.47,
       "points": 25,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "AytCz",
@@ -4226,7 +4324,8 @@
       "points": 20,
       "regionRestricted": false,
       "giveawayKind": "extra",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "44g1j",
@@ -4250,7 +4349,8 @@
       "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "AAyJb",
@@ -4275,7 +4375,8 @@
       "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "ZpqY9",
@@ -4297,10 +4398,11 @@
       "resultStatus": "won",
       "resultLabel": "Horseflesh",
       "hltbHours": 3.84,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "0i0bS",
@@ -4325,7 +4427,8 @@
       "points": 25,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "UJg4K",
@@ -4349,7 +4452,8 @@
       "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "t1axg",
@@ -4374,7 +4478,8 @@
       "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "fn63t",
@@ -4399,7 +4504,8 @@
       "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "RxszA",
@@ -4421,10 +4527,11 @@
       "resultStatus": "won",
       "resultLabel": "Horseflesh",
       "hltbHours": 11.4,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "QTSky",
@@ -4443,7 +4550,8 @@
       "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "uXSqW",
@@ -4468,7 +4576,8 @@
       "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "MQTKP",
@@ -4492,7 +4601,9 @@
       "hltbHours": 16.1,
       "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "extra",
+      "entriesFinalized": false
     },
     {
       "code": "8FJhp",
@@ -4517,7 +4628,8 @@
       "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "SYvWa",
@@ -4542,7 +4654,8 @@
       "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "KjJkB",
@@ -4564,10 +4677,11 @@
       "resultStatus": "won",
       "resultLabel": "Krlesnik",
       "hltbHours": 29.2,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "uknvG",
@@ -4589,10 +4703,11 @@
       "resultStatus": "won",
       "resultLabel": "Horseflesh",
       "hltbHours": 12.55,
-      "points": 0,
+      "points": 35,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "YahmR",
@@ -4614,9 +4729,10 @@
       "resultStatus": "won",
       "resultLabel": "Koalala",
       "hltbHours": 18.46,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "1bFHU",
@@ -4641,7 +4757,8 @@
       "points": 25,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "4dZgE",
@@ -4663,10 +4780,11 @@
       "resultStatus": "won",
       "resultLabel": "Krlesnik",
       "hltbHours": 23.02,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "extra",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "pgQXh",
@@ -4682,10 +4800,11 @@
       "resultStatus": "no_winners",
       "resultLabel": "No winners",
       "hltbHours": 22.86,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "b4hcd",
@@ -4707,10 +4826,11 @@
       "resultStatus": "won",
       "resultLabel": "Drain",
       "hltbHours": 14.32,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "24ANf",
@@ -4732,10 +4852,11 @@
       "resultStatus": "won",
       "resultLabel": "Wintermute101",
       "hltbHours": 16.1,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "cB09w",
@@ -4757,10 +4878,11 @@
       "resultStatus": "won",
       "resultLabel": "Horseflesh",
       "hltbHours": 28.2,
-      "points": 0,
+      "points": 45,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "xGxIJ",
@@ -4782,10 +4904,11 @@
       "resultStatus": "won",
       "resultLabel": "xMisiu",
       "hltbHours": 29.2,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "extra",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "FpXmM",
@@ -4807,10 +4930,11 @@
       "resultStatus": "won",
       "resultLabel": "Koalala",
       "hltbHours": 65.19,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "kt3Pk",
@@ -4832,10 +4956,11 @@
       "resultStatus": "won",
       "resultLabel": "DeliberateTaco",
       "hltbHours": 19.33,
-      "points": 0,
+      "points": 35,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "nLp5y",
@@ -4857,10 +4982,11 @@
       "resultStatus": "won",
       "resultLabel": "Krlesnik",
       "hltbHours": 10.08,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "BHcmi",
@@ -4876,10 +5002,11 @@
       "resultStatus": "no_winners",
       "resultLabel": "No winners",
       "hltbHours": 4.44,
-      "points": 0,
+      "points": 15,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "3DiHc",
@@ -4901,10 +5028,11 @@
       "resultStatus": "won",
       "resultLabel": "leniu",
       "hltbHours": 9.32,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "VyiPT",
@@ -4926,10 +5054,11 @@
       "resultStatus": "won",
       "resultLabel": "DeliberateTaco",
       "hltbHours": 17.98,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "dXMS8",
@@ -4951,10 +5080,11 @@
       "resultStatus": "won",
       "resultLabel": "chOOkity",
       "hltbHours": 2.75,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "zJXO8",
@@ -4976,10 +5106,11 @@
       "resultStatus": "won",
       "resultLabel": "Saikania",
       "hltbHours": 12.55,
-      "points": 0,
+      "points": 35,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "UtTqc",
@@ -5000,10 +5131,11 @@
       ],
       "resultStatus": "won",
       "resultLabel": "Ernesttico",
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "La736",
@@ -5025,10 +5157,11 @@
       "resultStatus": "won",
       "resultLabel": "Thedogma",
       "hltbHours": 28.2,
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "JBiM3",
@@ -5050,9 +5183,10 @@
       "resultStatus": "won",
       "resultLabel": "Ernesttico",
       "hltbHours": 12.27,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "5mcKW",
@@ -5074,9 +5208,15 @@
       "resultStatus": "won",
       "resultLabel": "chOOkity",
       "hltbHours": 13.22,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:40:11.418Z",
+      "entryUsers": [
+        "chOOkity"
+      ]
     },
     {
       "code": "oOhJY",
@@ -5098,9 +5238,16 @@
       "resultStatus": "won",
       "resultLabel": "BojanNS987",
       "hltbHours": 4.66,
-      "points": 0,
+      "points": 35,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:40:13.786Z",
+      "entryUsers": [
+        "BojanNS987",
+        "DeliberateTaco"
+      ]
     },
     {
       "code": "G7Cn1",
@@ -5122,9 +5269,19 @@
       "resultStatus": "won",
       "resultLabel": "BojanNS987",
       "hltbHours": 4.96,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:40:16.031Z",
+      "entryUsers": [
+        "leniu",
+        "DeliberateTaco",
+        "burntreynolds444",
+        "BojanNS987",
+        "Horseflesh"
+      ]
     },
     {
       "code": "a2LAG",
@@ -5146,9 +5303,17 @@
       "resultStatus": "won",
       "resultLabel": "Youdontknow",
       "hltbHours": 36.73,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:40:18.477Z",
+      "entryUsers": [
+        "Koalala",
+        "burntreynolds444",
+        "Youdontknow"
+      ]
     },
     {
       "code": "pS2nf",
@@ -5170,9 +5335,20 @@
       "resultStatus": "won",
       "resultLabel": "chOOkity",
       "hltbHours": 8.02,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:40:20.817Z",
+      "entryUsers": [
+        "chOOkity",
+        "zettaivanugen",
+        "Koalala",
+        "leniu",
+        "Horseflesh",
+        "BojanNS987"
+      ]
     },
     {
       "code": "xjCwh",
@@ -5194,9 +5370,17 @@
       "resultStatus": "won",
       "resultLabel": "BojanNS987",
       "hltbHours": 16.41,
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:40:23.124Z",
+      "entryUsers": [
+        "BojanNS987",
+        "Ernesttico",
+        "DeliberateTaco"
+      ]
     },
     {
       "code": "kZwV2",
@@ -5218,9 +5402,18 @@
       "resultStatus": "won",
       "resultLabel": "Saikania",
       "hltbHours": 12.13,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:40:25.413Z",
+      "entryUsers": [
+        "Koalala",
+        "Krlesnik",
+        "Horseflesh",
+        "Saikania"
+      ]
     },
     {
       "code": "5ZLWK",
@@ -5242,9 +5435,18 @@
       "resultStatus": "won",
       "resultLabel": "Youdontknow",
       "hltbHours": 5.68,
-      "points": 0,
+      "points": 25,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:40:27.686Z",
+      "entryUsers": [
+        "Koalala",
+        "DeliberateTaco",
+        "Youdontknow",
+        "Wintermute101"
+      ]
     },
     {
       "code": "5g9Fd",
@@ -5260,9 +5462,12 @@
       "resultStatus": "no_winners",
       "resultLabel": "No winners",
       "hltbHours": 30.85,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": ""
     },
     {
       "code": "rONAw",
@@ -5284,9 +5489,15 @@
       "resultStatus": "won",
       "resultLabel": "DeliberateTaco",
       "hltbHours": 28.33,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:40:30.081Z",
+      "entryUsers": [
+        "DeliberateTaco"
+      ]
     },
     {
       "code": "P8Sra",
@@ -5308,9 +5519,21 @@
       "resultStatus": "won",
       "resultLabel": "Saikania",
       "hltbHours": 12.27,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:40:32.227Z",
+      "entryUsers": [
+        "leniu",
+        "zettaivanugen",
+        "Saikania",
+        "Ernesttico",
+        "BojanNS987",
+        "chOOkity",
+        "DeliberateTaco"
+      ]
     },
     {
       "code": "0t1r8",
@@ -5332,9 +5555,10 @@
       "resultStatus": "won",
       "resultLabel": "BojanNS987",
       "hltbHours": 4.3,
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "C4h91",
@@ -5356,10 +5580,11 @@
       "resultStatus": "won",
       "resultLabel": "Horseflesh",
       "hltbHours": 7.21,
-      "points": 0,
+      "points": 22,
       "regionRestricted": false,
       "giveawayKind": "extra",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "6lDgn",
@@ -5380,10 +5605,11 @@
       ],
       "resultStatus": "won",
       "resultLabel": "Horseflesh",
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKind": "extra",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "DLgRo",
@@ -5405,9 +5631,18 @@
       "resultStatus": "won",
       "resultLabel": "BojanNS987",
       "hltbHours": 13.55,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:40:57.330Z",
+      "entryUsers": [
+        "leniu",
+        "Horseflesh",
+        "Krlesnik",
+        "BojanNS987"
+      ]
     },
     {
       "code": "dAS0M",
@@ -5429,9 +5664,17 @@
       "resultStatus": "won",
       "resultLabel": "Krlesnik",
       "hltbHours": 12.76,
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:41:18.610Z",
+      "entryUsers": [
+        "Krlesnik",
+        "xMisiu",
+        "BojanNS987"
+      ]
     },
     {
       "code": "PCxE4",
@@ -5447,9 +5690,12 @@
       "resultStatus": "no_winners",
       "resultLabel": "No winners",
       "hltbHours": 20.55,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": ""
     },
     {
       "code": "ZT672",
@@ -5470,9 +5716,18 @@
       ],
       "resultStatus": "won",
       "resultLabel": "xMisiu",
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:41:20.865Z",
+      "entryUsers": [
+        "Wintermute101",
+        "xMisiu",
+        "zettaivanugen",
+        "burntreynolds444"
+      ]
     },
     {
       "code": "EyObD",
@@ -5494,9 +5749,15 @@
       "resultStatus": "won",
       "resultLabel": "BojanNS987",
       "hltbHours": 7.88,
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:41:39.325Z",
+      "entryUsers": [
+        "BojanNS987"
+      ]
     },
     {
       "code": "184GI",
@@ -5518,9 +5779,15 @@
       "resultStatus": "won",
       "resultLabel": "burntreynolds444",
       "hltbHours": 8.41,
-      "points": 0,
+      "points": 15,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:41:41.937Z",
+      "entryUsers": [
+        "burntreynolds444"
+      ]
     },
     {
       "code": "C8qrh",
@@ -5542,9 +5809,17 @@
       "resultStatus": "won",
       "resultLabel": "Saikania",
       "hltbHours": 6.16,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:40:34.463Z",
+      "entryUsers": [
+        "leniu",
+        "Saikania",
+        "Wintermute101"
+      ]
     },
     {
       "code": "EZDiS",
@@ -5566,9 +5841,19 @@
       "resultStatus": "won",
       "resultLabel": "Krlesnik",
       "hltbHours": 10,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:40:36.798Z",
+      "entryUsers": [
+        "leniu",
+        "BojanNS987",
+        "Oozyyy",
+        "Krlesnik",
+        "Horseflesh"
+      ]
     },
     {
       "code": "LJgrX",
@@ -5590,9 +5875,16 @@
       "resultStatus": "won",
       "resultLabel": "BojanNS987",
       "hltbHours": 9.37,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:40:38.961Z",
+      "entryUsers": [
+        "leniu",
+        "BojanNS987"
+      ]
     },
     {
       "code": "wyAWz",
@@ -5614,9 +5906,10 @@
       "resultStatus": "won",
       "resultLabel": "leniu",
       "hltbHours": 2.56,
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "aByGi",
@@ -5638,9 +5931,20 @@
       "resultStatus": "won",
       "resultLabel": "BojanNS987",
       "hltbHours": 65.19,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:40:55.121Z",
+      "entryUsers": [
+        "Koalala",
+        "Ernesttico",
+        "Saikania",
+        "Millsshogun",
+        "BojanNS987",
+        "Krlesnik"
+      ]
     },
     {
       "code": "gGCsq",
@@ -5662,9 +5966,23 @@
       "resultStatus": "won",
       "resultLabel": "eledhrim",
       "hltbHours": 12.18,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:41:44.198Z",
+      "entryUsers": [
+        "Horseflesh",
+        "Ernesttico",
+        "DeliberateTaco",
+        "leniu",
+        "BojanNS987",
+        "Millsshogun",
+        "Youdontknow",
+        "zettaivanugen",
+        "eledhrim"
+      ]
     },
     {
       "code": "Qm4Jj",
@@ -5686,9 +6004,22 @@
       "resultStatus": "won",
       "resultLabel": "chOOkity",
       "hltbHours": 22.74,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:42:00.146Z",
+      "entryUsers": [
+        "Oozyyy",
+        "leniu",
+        "Koalala",
+        "chOOkity",
+        "Youdontknow",
+        "xMisiu",
+        "BojanNS987",
+        "Millsshogun"
+      ]
     },
     {
       "code": "BdoHA",
@@ -5709,10 +6040,21 @@
       ],
       "resultStatus": "won",
       "resultLabel": "xMisiu",
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKind": "extra",
-      "giveawayKindChecked": true
+      "giveawayKind": "summer_event",
+      "giveawayKindChecked": true,
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:39:55.028Z",
+      "entryUsers": [
+        "xMisiu",
+        "DeliberateTaco",
+        "Wintermute101",
+        "Ernesttico",
+        "leniu",
+        "Krlesnik",
+        "chOOkity"
+      ]
     },
     {
       "code": "28Frt",
@@ -5734,10 +6076,18 @@
       "resultStatus": "won",
       "resultLabel": "Oozyyy",
       "hltbHours": 7.82,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKind": "extra",
-      "giveawayKindChecked": true
+      "giveawayKind": "summer_event",
+      "giveawayKindChecked": true,
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:39:57.335Z",
+      "entryUsers": [
+        "leniu",
+        "Koalala",
+        "Oozyyy",
+        "burntreynolds444"
+      ]
     },
     {
       "code": "KS9dv",
@@ -5759,10 +6109,21 @@
       "resultStatus": "won",
       "resultLabel": "eledhrim",
       "hltbHours": 18.48,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKind": "extra",
-      "giveawayKindChecked": true
+      "giveawayKind": "summer_event",
+      "giveawayKindChecked": true,
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:39:59.768Z",
+      "entryUsers": [
+        "chOOkity",
+        "burntreynolds444",
+        "Krlesnik",
+        "xMisiu",
+        "Koalala",
+        "leniu",
+        "eledhrim"
+      ]
     },
     {
       "code": "0cfrV",
@@ -5784,10 +6145,15 @@
       "resultStatus": "won",
       "resultLabel": "burntreynolds444",
       "hltbHours": 6.28,
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
-      "giveawayKind": "extra",
-      "giveawayKindChecked": true
+      "giveawayKind": "summer_event",
+      "giveawayKindChecked": true,
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:40:02.165Z",
+      "entryUsers": [
+        "burntreynolds444"
+      ]
     },
     {
       "code": "vJe4w",
@@ -5809,10 +6175,16 @@
       "resultStatus": "won",
       "resultLabel": "Millsshogun",
       "hltbHours": 7.01,
-      "points": 0,
+      "points": 25,
       "regionRestricted": false,
-      "giveawayKind": "extra",
-      "giveawayKindChecked": true
+      "giveawayKind": "summer_event",
+      "giveawayKindChecked": true,
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:40:04.346Z",
+      "entryUsers": [
+        "Millsshogun",
+        "Wintermute101"
+      ]
     },
     {
       "code": "XZGrG",
@@ -5834,10 +6206,20 @@
       "resultStatus": "won",
       "resultLabel": "Saikania",
       "hltbHours": 9.22,
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
-      "giveawayKind": "extra",
-      "giveawayKindChecked": true
+      "giveawayKind": "summer_event",
+      "giveawayKindChecked": true,
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:40:06.654Z",
+      "entryUsers": [
+        "leniu",
+        "Saikania",
+        "DeliberateTaco",
+        "Millsshogun",
+        "burntreynolds444",
+        "Wintermute101"
+      ]
     },
     {
       "code": "W4nLH",
@@ -5859,10 +6241,18 @@
       "resultStatus": "won",
       "resultLabel": "Ernesttico",
       "hltbHours": 13.14,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
-      "giveawayKind": "extra",
-      "giveawayKindChecked": true
+      "giveawayKind": "summer_event",
+      "giveawayKindChecked": true,
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:40:09.115Z",
+      "entryUsers": [
+        "DeliberateTaco",
+        "Ernesttico",
+        "xMisiu",
+        "Wintermute101"
+      ]
     },
     {
       "code": "09w07",
@@ -5884,10 +6274,16 @@
       "resultStatus": "won",
       "resultLabel": "DeliberateTaco",
       "hltbHours": 28.5,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
-      "giveawayKind": "extra",
-      "giveawayKindChecked": true
+      "giveawayKind": "summer_event",
+      "giveawayKindChecked": true,
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:41:46.439Z",
+      "entryUsers": [
+        "DeliberateTaco",
+        "burntreynolds444"
+      ]
     },
     {
       "code": "RJZ4J",
@@ -5909,10 +6305,17 @@
       "resultStatus": "won",
       "resultLabel": "Koalala",
       "hltbHours": 48.23,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKind": "extra",
-      "giveawayKindChecked": true
+      "giveawayKind": "summer_event",
+      "giveawayKindChecked": true,
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:41:48.556Z",
+      "entryUsers": [
+        "Ernesttico",
+        "Koalala",
+        "DeliberateTaco"
+      ]
     },
     {
       "code": "sZ8ch",
@@ -5934,10 +6337,15 @@
       "resultStatus": "won",
       "resultLabel": "Millsshogun",
       "hltbHours": 21.36,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
-      "giveawayKind": "extra",
-      "giveawayKindChecked": true
+      "giveawayKind": "summer_event",
+      "giveawayKindChecked": true,
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:41:50.981Z",
+      "entryUsers": [
+        "Millsshogun"
+      ]
     },
     {
       "code": "3tOrn",
@@ -5953,10 +6361,12 @@
       "resultStatus": "no_winners",
       "resultLabel": "No winners",
       "hltbHours": 9.47,
-      "points": 0,
+      "points": 25,
       "regionRestricted": false,
-      "giveawayKind": "extra",
-      "giveawayKindChecked": true
+      "giveawayKind": "summer_event",
+      "giveawayKindChecked": true,
+      "entriesFinalized": true,
+      "entriesSnapshotAt": ""
     },
     {
       "code": "jgBO1",
@@ -5978,10 +6388,22 @@
       "resultStatus": "won",
       "resultLabel": "chOOkity",
       "hltbHours": 18.37,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKind": "extra",
-      "giveawayKindChecked": true
+      "giveawayKind": "summer_event",
+      "giveawayKindChecked": true,
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:41:53.205Z",
+      "entryUsers": [
+        "leniu",
+        "Ernesttico",
+        "DeliberateTaco",
+        "chOOkity",
+        "eledhrim",
+        "Saikania",
+        "Wintermute101",
+        "Horseflesh"
+      ]
     },
     {
       "code": "MyMoh",
@@ -6003,28 +6425,19 @@
       "resultStatus": "won",
       "resultLabel": "Millsshogun",
       "hltbHours": 20.15,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKind": "extra",
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "TQCB5",
-      "url": "https://www.steamgifts.com/giveaway/TQCB5/stray",
-      "title": "Stray",
-      "creatorUsername": "Saikania",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/Saikania",
-      "appId": 1332010,
-      "steamAppUrl": "https://store.steampowered.com/app/1332010?utm_source=SteamGifts",
-      "entriesCount": 1,
-      "endDate": "2025-06-30T15:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "Krlesnik",
-      "hltbHours": 5.15,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKind": "summer_event",
+      "giveawayKindChecked": true,
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:41:55.492Z",
+      "entryUsers": [
+        "leniu",
+        "chOOkity",
+        "DeliberateTaco",
+        "Saikania",
+        "Millsshogun"
+      ]
     },
     {
       "code": "LSZU2",
@@ -6046,9 +6459,18 @@
       "resultStatus": "won",
       "resultLabel": "chOOkity",
       "hltbHours": 7.08,
-      "points": 0,
+      "points": 25,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:42:11.908Z",
+      "entryUsers": [
+        "Wintermute101",
+        "DeliberateTaco",
+        "BojanNS987",
+        "chOOkity"
+      ]
     },
     {
       "code": "mJgr7",
@@ -6070,189 +6492,16 @@
       "resultStatus": "won",
       "resultLabel": "BojanNS987",
       "hltbHours": 53.34,
-      "points": 0,
+      "points": 25,
       "regionRestricted": false,
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "BCqGd",
-      "url": "https://www.steamgifts.com/giveaway/BCqGd/sea-of-stars",
-      "title": "Sea of Stars",
-      "creatorUsername": "Koalala",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/Koalala",
-      "appId": 1244090,
-      "steamAppUrl": "https://store.steampowered.com/app/1244090?utm_source=SteamGifts",
-      "entriesCount": 3,
-      "endDate": "2025-06-29T21:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "xMisiu",
-      "hltbHours": 27.94,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "pZvb6",
-      "url": "https://www.steamgifts.com/giveaway/pZvb6/red-dead-redemption",
-      "title": "Red Dead Redemption",
-      "creatorUsername": "BojanNS987",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/BojanNS987",
-      "appId": 2668510,
-      "steamAppUrl": "https://store.steampowered.com/app/2668510?utm_source=SteamGifts",
-      "entriesCount": 6,
-      "endDate": "2025-06-29T19:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "leniu",
-      "hltbHours": 17.6,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "pLrEL",
-      "url": "https://www.steamgifts.com/giveaway/pLrEL/deltarune",
-      "title": "DELTARUNE",
-      "creatorUsername": "Wintermute101",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/Wintermute101",
-      "appId": 1671210,
-      "steamAppUrl": "https://store.steampowered.com/app/1671210?utm_source=SteamGifts",
-      "entriesCount": 4,
-      "endDate": "2025-06-29T19:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "BojanNS987",
-      "hltbHours": 16.74,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "d2f3X",
-      "url": "https://www.steamgifts.com/giveaway/d2f3X/clair-obscur-expedition-33",
-      "title": "Clair Obscur: Expedition 33",
-      "creatorUsername": "BojanNS987",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/BojanNS987",
-      "appId": 1903340,
-      "steamAppUrl": "https://store.steampowered.com/app/1903340?utm_source=SteamGifts",
-      "entriesCount": 7,
-      "endDate": "2025-06-29T19:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "DeliberateTaco",
-      "hltbHours": 29.2,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "bWuX5",
-      "url": "https://www.steamgifts.com/giveaway/bWuX5/borderlands-4",
-      "title": "Borderlands 4",
-      "creatorUsername": "BojanNS987",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/BojanNS987",
-      "appId": 1285190,
-      "steamAppUrl": "https://store.steampowered.com/app/1285190?utm_source=SteamGifts",
-      "entriesCount": 5,
-      "endDate": "2025-06-29T19:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "zettaivanugen",
-      "hltbHours": 30.35,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "T3MEG",
-      "url": "https://www.steamgifts.com/giveaway/T3MEG/keep-driving",
-      "title": "Keep Driving",
-      "creatorUsername": "Wintermute101",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/Wintermute101",
-      "appId": 2756920,
-      "steamAppUrl": "https://store.steampowered.com/app/2756920?utm_source=SteamGifts",
-      "entriesCount": 7,
-      "endDate": "2025-06-29T19:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "BojanNS987",
-      "hltbHours": 3.47,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "KXV1N",
-      "url": "https://www.steamgifts.com/giveaway/KXV1N/the-precinct",
-      "title": "The Precinct",
-      "creatorUsername": "Wintermute101",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/Wintermute101",
-      "appId": 490110,
-      "steamAppUrl": "https://store.steampowered.com/app/490110?utm_source=SteamGifts",
-      "entriesCount": 3,
-      "endDate": "2025-06-29T19:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "Ernesttico",
-      "hltbHours": 12.13,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "Gy0oM",
-      "url": "https://www.steamgifts.com/giveaway/Gy0oM/metal-gear-solid-d-snake-eater",
-      "title": "METAL GEAR SOLID Δ: SNAKE EATER",
-      "creatorUsername": "BojanNS987",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/BojanNS987",
-      "appId": 2417610,
-      "steamAppUrl": "https://store.steampowered.com/app/2417610?utm_source=SteamGifts",
-      "entriesCount": 8,
-      "endDate": "2025-06-29T19:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "chOOkity",
-      "hltbHours": 12.18,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "NnDNP",
-      "url": "https://www.steamgifts.com/giveaway/NnDNP/hell-is-us",
-      "title": "Hell is Us",
-      "creatorUsername": "burntreynolds444",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/burntreynolds444",
-      "appId": 1620730,
-      "steamAppUrl": "https://store.steampowered.com/app/1620730?utm_source=SteamGifts",
-      "entriesCount": 3,
-      "endDate": "2025-06-29T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "leniu",
-      "hltbHours": 21.23,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "9xdRI",
-      "url": "https://www.steamgifts.com/giveaway/9xdRI/ninja-gaiden-4",
-      "title": "NINJA GAIDEN 4",
-      "creatorUsername": "burntreynolds444",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/burntreynolds444",
-      "appId": 2627260,
-      "steamAppUrl": "https://store.steampowered.com/app/2627260?utm_source=SteamGifts",
-      "entriesCount": 3,
-      "endDate": "2025-06-29T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "BojanNS987",
-      "hltbHours": 11.62,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:41:15.965Z",
+      "entryUsers": [
+        "chOOkity",
+        "BojanNS987"
+      ]
     },
     {
       "code": "BC78y",
@@ -6274,9 +6523,19 @@
       "resultStatus": "won",
       "resultLabel": "Wintermute101",
       "hltbHours": 29.2,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:42:25.956Z",
+      "entryUsers": [
+        "BojanNS987",
+        "Millsshogun",
+        "Krlesnik",
+        "xMisiu",
+        "Wintermute101"
+      ]
     },
     {
       "code": "EloqW",
@@ -6298,9 +6557,15 @@
       "resultStatus": "won",
       "resultLabel": "BojanNS987",
       "hltbHours": 8.02,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:40:41.403Z",
+      "entryUsers": [
+        "BojanNS987"
+      ]
     },
     {
       "code": "gaH1H",
@@ -6321,9 +6586,15 @@
       ],
       "resultStatus": "won",
       "resultLabel": "BojanNS987",
-      "points": 0,
+      "points": 25,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:40:43.737Z",
+      "entryUsers": [
+        "BojanNS987"
+      ]
     },
     {
       "code": "95mXd",
@@ -6345,9 +6616,16 @@
       "resultStatus": "won",
       "resultLabel": "Krlesnik",
       "hltbHours": 6.56,
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:40:46.053Z",
+      "entryUsers": [
+        "Krlesnik",
+        "burntreynolds444"
+      ]
     },
     {
       "code": "G9VuK",
@@ -6369,9 +6647,16 @@
       "resultStatus": "won",
       "resultLabel": "Wintermute101",
       "hltbHours": 14.83,
-      "points": 0,
+      "points": 35,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:40:48.294Z",
+      "entryUsers": [
+        "burntreynolds444",
+        "Wintermute101"
+      ]
     },
     {
       "code": "13YP4",
@@ -6386,9 +6671,12 @@
       "winners": [],
       "resultStatus": "no_winners",
       "resultLabel": "No winners",
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": ""
     },
     {
       "code": "JvfyS",
@@ -6410,9 +6698,16 @@
       "resultStatus": "won",
       "resultLabel": "chOOkity",
       "hltbHours": 9.52,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:40:50.518Z",
+      "entryUsers": [
+        "BojanNS987",
+        "chOOkity"
+      ]
     },
     {
       "code": "wRNbX",
@@ -6434,9 +6729,16 @@
       "resultStatus": "won",
       "resultLabel": "Krlesnik",
       "hltbHours": 27.41,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:41:23.325Z",
+      "entryUsers": [
+        "BojanNS987",
+        "Krlesnik"
+      ]
     },
     {
       "code": "uwzm3",
@@ -6458,9 +6760,17 @@
       "resultStatus": "won",
       "resultLabel": "burntreynolds444",
       "hltbHours": 9.83,
-      "points": 0,
+      "points": 18,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:41:25.566Z",
+      "entryUsers": [
+        "DeliberateTaco",
+        "burntreynolds444",
+        "BojanNS987"
+      ]
     },
     {
       "code": "QnR1R",
@@ -6482,9 +6792,15 @@
       "resultStatus": "won",
       "resultLabel": "BojanNS987",
       "hltbHours": 10.65,
-      "points": 0,
+      "points": 35,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:41:27.948Z",
+      "entryUsers": [
+        "BojanNS987"
+      ]
     },
     {
       "code": "TqjP1",
@@ -6505,9 +6821,22 @@
       ],
       "resultStatus": "won",
       "resultLabel": "chOOkity",
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:41:30.467Z",
+      "entryUsers": [
+        "eledhrim",
+        "Horseflesh",
+        "DeliberateTaco",
+        "BojanNS987",
+        "Krlesnik",
+        "chOOkity",
+        "Koalala",
+        "Wintermute101"
+      ]
     },
     {
       "code": "W4FMr",
@@ -6529,9 +6858,15 @@
       "resultStatus": "won",
       "resultLabel": "Wintermute101",
       "hltbHours": 16.81,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:41:32.725Z",
+      "entryUsers": [
+        "Wintermute101"
+      ]
     },
     {
       "code": "IPnre",
@@ -6553,9 +6888,18 @@
       "resultStatus": "won",
       "resultLabel": "xMisiu",
       "hltbHours": 5.99,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:41:34.887Z",
+      "entryUsers": [
+        "Horseflesh",
+        "chOOkity",
+        "BojanNS987",
+        "xMisiu"
+      ]
     },
     {
       "code": "gXrlZ",
@@ -6577,9 +6921,18 @@
       "resultStatus": "won",
       "resultLabel": "burntreynolds444",
       "hltbHours": 7.15,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:41:37.208Z",
+      "entryUsers": [
+        "burntreynolds444",
+        "chOOkity",
+        "BojanNS987",
+        "Wintermute101"
+      ]
     },
     {
       "code": "05dsa",
@@ -6601,9 +6954,19 @@
       "resultStatus": "won",
       "resultLabel": "Wintermute101",
       "hltbHours": 16.68,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:40:59.681Z",
+      "entryUsers": [
+        "leniu",
+        "Wintermute101",
+        "Krlesnik",
+        "BojanNS987",
+        "Millsshogun"
+      ]
     },
     {
       "code": "kHLrL",
@@ -6625,9 +6988,20 @@
       "resultStatus": "won",
       "resultLabel": "leniu",
       "hltbHours": 34.72,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:41:02.075Z",
+      "entryUsers": [
+        "Koalala",
+        "DeliberateTaco",
+        "xMisiu",
+        "BojanNS987",
+        "leniu",
+        "Krlesnik"
+      ]
     },
     {
       "code": "vaegL",
@@ -6649,9 +7023,18 @@
       "resultStatus": "won",
       "resultLabel": "leniu",
       "hltbHours": 23.02,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:41:04.645Z",
+      "entryUsers": [
+        "Ernesttico",
+        "DeliberateTaco",
+        "Millsshogun",
+        "leniu"
+      ]
     },
     {
       "code": "3cyPx",
@@ -6673,9 +7056,19 @@
       "resultStatus": "won",
       "resultLabel": "Millsshogun",
       "hltbHours": 29.2,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:41:07.058Z",
+      "entryUsers": [
+        "xMisiu",
+        "Millsshogun",
+        "Krlesnik",
+        "Koalala",
+        "BojanNS987"
+      ]
     },
     {
       "code": "662sI",
@@ -6697,9 +7090,17 @@
       "resultStatus": "won",
       "resultLabel": "BojanNS987",
       "hltbHours": 13.62,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:41:09.489Z",
+      "entryUsers": [
+        "Horseflesh",
+        "Koalala",
+        "BojanNS987"
+      ]
     },
     {
       "code": "JJ4so",
@@ -6715,9 +7116,12 @@
       "resultStatus": "no_winners",
       "resultLabel": "No winners",
       "hltbHours": 18.13,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": ""
     },
     {
       "code": "xB5ki",
@@ -6739,9 +7143,16 @@
       "resultStatus": "won",
       "resultLabel": "burntreynolds444",
       "hltbHours": 9.47,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:41:11.700Z",
+      "entryUsers": [
+        "DeliberateTaco",
+        "burntreynolds444"
+      ]
     },
     {
       "code": "iUo8M",
@@ -6763,9 +7174,15 @@
       "resultStatus": "won",
       "resultLabel": "BojanNS987",
       "hltbHours": 13.22,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:41:13.754Z",
+      "entryUsers": [
+        "BojanNS987"
+      ]
     },
     {
       "code": "G11B7",
@@ -6787,9 +7204,17 @@
       "resultStatus": "won",
       "resultLabel": "burntreynolds444",
       "hltbHours": 26.27,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:42:07.364Z",
+      "entryUsers": [
+        "Ernesttico",
+        "DeliberateTaco",
+        "burntreynolds444"
+      ]
     },
     {
       "code": "BVtrg",
@@ -6811,28 +7236,15 @@
       "resultStatus": "won",
       "resultLabel": "Wintermute101",
       "hltbHours": 23.81,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "XL7zN",
-      "url": "https://www.steamgifts.com/giveaway/XL7zN/the-precinct",
-      "title": "The Precinct",
-      "creatorUsername": "Wintermute101",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/Wintermute101",
-      "appId": 490110,
-      "steamAppUrl": "https://store.steampowered.com/app/490110?utm_source=SteamGifts",
-      "entriesCount": 5,
-      "endDate": "2025-06-28T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "eledhrim",
-      "hltbHours": 12.13,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:42:09.636Z",
+      "entryUsers": [
+        "Wintermute101"
+      ]
     },
     {
       "code": "rPyPp",
@@ -6854,9 +7266,16 @@
       "resultStatus": "won",
       "resultLabel": "Youdontknow",
       "hltbHours": 30.53,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:43:36.723Z",
+      "entryUsers": [
+        "Youdontknow",
+        "burntreynolds444"
+      ]
     },
     {
       "code": "vVQZf",
@@ -6877,9 +7296,15 @@
       ],
       "resultStatus": "won",
       "resultLabel": "Krlesnik",
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:42:05.060Z",
+      "entryUsers": [
+        "Krlesnik"
+      ]
     },
     {
       "code": "aub47",
@@ -6901,9 +7326,19 @@
       "resultStatus": "won",
       "resultLabel": "DeliberateTaco",
       "hltbHours": 28.2,
-      "points": 0,
+      "points": 45,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:42:51.714Z",
+      "entryUsers": [
+        "Horseflesh",
+        "BojanNS987",
+        "burntreynolds444",
+        "Millsshogun",
+        "DeliberateTaco"
+      ]
     },
     {
       "code": "3CvFd",
@@ -6925,9 +7360,21 @@
       "resultStatus": "won",
       "resultLabel": "Saikania",
       "hltbHours": 3.47,
-      "points": 0,
+      "points": 18,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:42:56.525Z",
+      "entryUsers": [
+        "Horseflesh",
+        "Millsshogun",
+        "Saikania",
+        "Ernesttico",
+        "burntreynolds444",
+        "Wintermute101",
+        "DeliberateTaco"
+      ]
     },
     {
       "code": "VSjJ4",
@@ -6949,9 +7396,16 @@
       "resultStatus": "won",
       "resultLabel": "Wintermute101",
       "hltbHours": 25,
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:42:59.060Z",
+      "entryUsers": [
+        "Wintermute101",
+        "chOOkity"
+      ]
     },
     {
       "code": "lzWMR",
@@ -6973,9 +7427,16 @@
       "resultStatus": "won",
       "resultLabel": "Wintermute101",
       "hltbHours": 28.23,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:42:54.312Z",
+      "entryUsers": [
+        "Wintermute101",
+        "Horseflesh"
+      ]
     },
     {
       "code": "T3dBI",
@@ -6997,9 +7458,17 @@
       "resultStatus": "won",
       "resultLabel": "Ernesttico",
       "hltbHours": 22.89,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:43:01.317Z",
+      "entryUsers": [
+        "Ernesttico",
+        "DeliberateTaco",
+        "burntreynolds444"
+      ]
     },
     {
       "code": "MFtcr",
@@ -7021,9 +7490,17 @@
       "resultStatus": "won",
       "resultLabel": "Youdontknow",
       "hltbHours": 6.12,
-      "points": 0,
+      "points": 45,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:42:14.191Z",
+      "entryUsers": [
+        "burntreynolds444",
+        "BojanNS987",
+        "Youdontknow"
+      ]
     },
     {
       "code": "T2sPJ",
@@ -7044,9 +7521,17 @@
       ],
       "resultStatus": "won",
       "resultLabel": "burntreynolds444",
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:42:16.541Z",
+      "entryUsers": [
+        "burntreynolds444",
+        "Wintermute101",
+        "Koalala"
+      ]
     },
     {
       "code": "5fFa6",
@@ -7067,9 +7552,16 @@
       ],
       "resultStatus": "won",
       "resultLabel": "burntreynolds444",
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:42:18.827Z",
+      "entryUsers": [
+        "Millsshogun",
+        "burntreynolds444"
+      ]
     },
     {
       "code": "Aa53K",
@@ -7091,9 +7583,17 @@
       "resultStatus": "won",
       "resultLabel": "Millsshogun",
       "hltbHours": 56.31,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:42:21.182Z",
+      "entryUsers": [
+        "burntreynolds444",
+        "Millsshogun",
+        "BojanNS987"
+      ]
     },
     {
       "code": "pKqLo",
@@ -7115,9 +7615,21 @@
       "resultStatus": "won",
       "resultLabel": "BojanNS987",
       "hltbHours": 17.19,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:42:23.560Z",
+      "entryUsers": [
+        "DeliberateTaco",
+        "xMisiu",
+        "Koalala",
+        "BojanNS987",
+        "chOOkity",
+        "eledhrim",
+        "Wintermute101"
+      ]
     },
     {
       "code": "XkGCI",
@@ -7138,9 +7650,21 @@
       ],
       "resultStatus": "won",
       "resultLabel": "zettaivanugen",
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:43:27.213Z",
+      "entryUsers": [
+        "Krlesnik",
+        "Koalala",
+        "Youdontknow",
+        "Millsshogun",
+        "BojanNS987",
+        "zettaivanugen",
+        "DeliberateTaco"
+      ]
     },
     {
       "code": "wwGxv",
@@ -7162,9 +7686,15 @@
       "resultStatus": "won",
       "resultLabel": "burntreynolds444",
       "hltbHours": 8.94,
-      "points": 0,
+      "points": 45,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:42:28.353Z",
+      "entryUsers": [
+        "burntreynolds444"
+      ]
     },
     {
       "code": "RunQB",
@@ -7186,9 +7716,15 @@
       "resultStatus": "won",
       "resultLabel": "burntreynolds444",
       "hltbHours": 18.83,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:42:30.514Z",
+      "entryUsers": [
+        "burntreynolds444"
+      ]
     },
     {
       "code": "JaX7i",
@@ -7210,9 +7746,17 @@
       "resultStatus": "won",
       "resultLabel": "Koalala",
       "hltbHours": 23.57,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:42:32.772Z",
+      "entryUsers": [
+        "chOOkity",
+        "BojanNS987",
+        "Koalala"
+      ]
     },
     {
       "code": "ftcim",
@@ -7233,28 +7777,18 @@
       ],
       "resultStatus": "won",
       "resultLabel": "Millsshogun",
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "PkcHZ",
-      "url": "https://www.steamgifts.com/giveaway/PkcHZ/lost-records-bloom-rage",
-      "title": "Lost Records: Bloom & Rage",
-      "creatorUsername": "Krlesnik",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/Krlesnik",
-      "appId": 1902960,
-      "steamAppUrl": "https://store.steampowered.com/app/1902960?utm_source=SteamGifts",
-      "entriesCount": 7,
-      "endDate": "2025-06-27T16:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "chOOkity",
-      "hltbHours": 11.19,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKind": "extra",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:43:34.372Z",
+      "entryUsers": [
+        "burntreynolds444",
+        "BojanNS987",
+        "Millsshogun",
+        "Horseflesh"
+      ]
     },
     {
       "code": "IFBQo",
@@ -7276,9 +7810,18 @@
       "resultStatus": "won",
       "resultLabel": "leniu",
       "hltbHours": 6.67,
-      "points": 0,
+      "points": 25,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:43:03.849Z",
+      "entryUsers": [
+        "Ernesttico",
+        "chOOkity",
+        "Wintermute101",
+        "leniu"
+      ]
     },
     {
       "code": "zdUKU",
@@ -7300,9 +7843,10 @@
       "resultStatus": "won",
       "resultLabel": "Saikania",
       "hltbHours": 54.76,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "Zr1zf",
@@ -7324,9 +7868,18 @@
       "resultStatus": "won",
       "resultLabel": "zettaivanugen",
       "hltbHours": 53.5,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:43:06.335Z",
+      "entryUsers": [
+        "Koalala",
+        "zettaivanugen",
+        "leniu",
+        "BojanNS987"
+      ]
     },
     {
       "code": "U2QbG",
@@ -7348,9 +7901,17 @@
       "resultStatus": "won",
       "resultLabel": "Ernesttico",
       "hltbHours": 11.19,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:43:39.230Z",
+      "entryUsers": [
+        "Ernesttico",
+        "zettaivanugen",
+        "leniu"
+      ]
     },
     {
       "code": "OZw26",
@@ -7372,9 +7933,16 @@
       "resultStatus": "won",
       "resultLabel": "xMisiu",
       "hltbHours": 20.53,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:43:10.892Z",
+      "entryUsers": [
+        "burntreynolds444",
+        "xMisiu"
+      ]
     },
     {
       "code": "UvPq5",
@@ -7396,9 +7964,18 @@
       "resultStatus": "won",
       "resultLabel": "Krlesnik",
       "hltbHours": 64.62,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:43:13.210Z",
+      "entryUsers": [
+        "Wintermute101",
+        "Krlesnik",
+        "zettaivanugen",
+        "BojanNS987"
+      ]
     },
     {
       "code": "ZQ71c",
@@ -7414,9 +7991,12 @@
       "resultStatus": "no_winners",
       "resultLabel": "No winners",
       "hltbHours": 12.12,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": ""
     },
     {
       "code": "UWIcT",
@@ -7438,9 +8018,17 @@
       "resultStatus": "won",
       "resultLabel": "Millsshogun",
       "hltbHours": 15.56,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:43:17.951Z",
+      "entryUsers": [
+        "Krlesnik",
+        "Millsshogun",
+        "BojanNS987"
+      ]
     },
     {
       "code": "WgK3C",
@@ -7462,9 +8050,20 @@
       "resultStatus": "won",
       "resultLabel": "Wintermute101",
       "hltbHours": 19.33,
-      "points": 0,
+      "points": 35,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:42:02.633Z",
+      "entryUsers": [
+        "BojanNS987",
+        "chOOkity",
+        "Millsshogun",
+        "DeliberateTaco",
+        "burntreynolds444",
+        "Wintermute101"
+      ]
     },
     {
       "code": "8Zmf6",
@@ -7486,9 +8085,15 @@
       "resultStatus": "won",
       "resultLabel": "Millsshogun",
       "hltbHours": 23.83,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:43:29.499Z",
+      "entryUsers": [
+        "Millsshogun"
+      ]
     },
     {
       "code": "T3b7U",
@@ -7510,9 +8115,18 @@
       "resultStatus": "won",
       "resultLabel": "burntreynolds444",
       "hltbHours": 24.46,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:43:15.605Z",
+      "entryUsers": [
+        "burntreynolds444",
+        "chOOkity",
+        "Horseflesh",
+        "Wintermute101"
+      ]
     },
     {
       "code": "5qeFA",
@@ -7534,9 +8148,21 @@
       "resultStatus": "won",
       "resultLabel": "zettaivanugen",
       "hltbHours": 3.47,
-      "points": 0,
+      "points": 18,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:43:08.667Z",
+      "entryUsers": [
+        "Saikania",
+        "zettaivanugen",
+        "Ernesttico",
+        "Wintermute101",
+        "Millsshogun",
+        "burntreynolds444",
+        "DeliberateTaco"
+      ]
     },
     {
       "code": "Kno6W",
@@ -7558,9 +8184,19 @@
       "resultStatus": "won",
       "resultLabel": "Ernesttico",
       "hltbHours": 33.95,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:42:44.686Z",
+      "entryUsers": [
+        "Wintermute101",
+        "zettaivanugen",
+        "Koalala",
+        "Ernesttico",
+        "xMisiu"
+      ]
     },
     {
       "code": "FYPl5",
@@ -7581,9 +8217,16 @@
       ],
       "resultStatus": "won",
       "resultLabel": "Wintermute101",
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:42:47.019Z",
+      "entryUsers": [
+        "Horseflesh",
+        "Wintermute101"
+      ]
     },
     {
       "code": "jYEzk",
@@ -7605,9 +8248,19 @@
       "resultStatus": "won",
       "resultLabel": "zettaivanugen",
       "hltbHours": 10.71,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:42:49.430Z",
+      "entryUsers": [
+        "zettaivanugen",
+        "leniu",
+        "Horseflesh",
+        "BojanNS987",
+        "Youdontknow"
+      ]
     },
     {
       "code": "Pjvad",
@@ -7629,9 +8282,18 @@
       "resultStatus": "won",
       "resultLabel": "Krlesnik",
       "hltbHours": 18.57,
-      "points": 0,
+      "points": 35,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:43:31.944Z",
+      "entryUsers": [
+        "burntreynolds444",
+        "Millsshogun",
+        "Krlesnik",
+        "Youdontknow"
+      ]
     },
     {
       "code": "ldEUU",
@@ -7653,9 +8315,18 @@
       "resultStatus": "won",
       "resultLabel": "Youdontknow",
       "hltbHours": 4.3,
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:43:41.575Z",
+      "entryUsers": [
+        "xMisiu",
+        "Youdontknow",
+        "Wintermute101",
+        "burntreynolds444"
+      ]
     },
     {
       "code": "VzaGi",
@@ -7677,9 +8348,47 @@
       "resultStatus": "won",
       "resultLabel": "chOOkity",
       "hltbHours": 3.06,
-      "points": 0,
+      "points": 15,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:43:43.615Z",
+      "entryUsers": [
+        "chOOkity"
+      ]
+    },
+    {
+      "code": "BCqGd",
+      "url": "https://www.steamgifts.com/giveaway/BCqGd/sea-of-stars",
+      "title": "Sea of Stars",
+      "creatorUsername": "Koalala",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/Koalala",
+      "appId": 1244090,
+      "steamAppUrl": "https://store.steampowered.com/app/1244090?utm_source=SteamGifts",
+      "entriesCount": 3,
+      "endDate": "2025-06-26T20:00:03.000Z",
+      "winners": [
+        {
+          "username": "xMisiu",
+          "profileUrl": "https://www.steamgifts.com/user/xMisiu",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "xMisiu",
+      "hltbHours": 27.94,
+      "points": 35,
+      "regionRestricted": false,
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:43:55.615Z",
+      "entryUsers": [
+        "xMisiu",
+        "leniu",
+        "burntreynolds444"
+      ]
     },
     {
       "code": "ztikS",
@@ -7701,9 +8410,15 @@
       "resultStatus": "won",
       "resultLabel": "Wintermute101",
       "hltbHours": 10,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:41:57.841Z",
+      "entryUsers": [
+        "Wintermute101"
+      ]
     },
     {
       "code": "mnpwu",
@@ -7725,9 +8440,16 @@
       "resultStatus": "won",
       "resultLabel": "BojanNS987",
       "hltbHours": 5.39,
-      "points": 0,
+      "points": 25,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:43:20.204Z",
+      "entryUsers": [
+        "Horseflesh",
+        "BojanNS987"
+      ]
     },
     {
       "code": "HuBzO",
@@ -7749,9 +8471,16 @@
       "resultStatus": "won",
       "resultLabel": "burntreynolds444",
       "hltbHours": 16.41,
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:43:22.386Z",
+      "entryUsers": [
+        "burntreynolds444",
+        "Ernesttico"
+      ]
     },
     {
       "code": "V5S09",
@@ -7773,9 +8502,10 @@
       "resultStatus": "won",
       "resultLabel": "leniu",
       "hltbHours": 9.88,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "1iJMP",
@@ -7797,9 +8527,10 @@
       "resultStatus": "won",
       "resultLabel": "xMisiu",
       "hltbHours": 17.98,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "mxsyt",
@@ -7821,9 +8552,15 @@
       "resultStatus": "won",
       "resultLabel": "Ernesttico",
       "hltbHours": 11.9,
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:40:52.836Z",
+      "entryUsers": [
+        "Ernesttico"
+      ]
     },
     {
       "code": "ut8Z1",
@@ -7845,9 +8582,10 @@
       "resultStatus": "won",
       "resultLabel": "chOOkity",
       "hltbHours": 25.11,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "K55XI",
@@ -7869,9 +8607,19 @@
       "resultStatus": "won",
       "resultLabel": "Wintermute101",
       "hltbHours": 48.33,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:43:45.905Z",
+      "entryUsers": [
+        "Ernesttico",
+        "Koalala",
+        "Millsshogun",
+        "Wintermute101",
+        "Youdontknow"
+      ]
     },
     {
       "code": "VrQEE",
@@ -7893,9 +8641,49 @@
       "resultStatus": "won",
       "resultLabel": "DeliberateTaco",
       "hltbHours": 16.22,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:43:48.459Z",
+      "entryUsers": [
+        "Horseflesh",
+        "DeliberateTaco",
+        "BojanNS987"
+      ]
+    },
+    {
+      "code": "NnDNP",
+      "url": "https://www.steamgifts.com/giveaway/NnDNP/hell-is-us",
+      "title": "Hell is Us",
+      "creatorUsername": "burntreynolds444",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/burntreynolds444",
+      "appId": 1620730,
+      "steamAppUrl": "https://store.steampowered.com/app/1620730?utm_source=SteamGifts",
+      "entriesCount": 3,
+      "endDate": "2025-06-26T18:01:27.000Z",
+      "winners": [
+        {
+          "username": "leniu",
+          "profileUrl": "https://www.steamgifts.com/user/leniu",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "leniu",
+      "hltbHours": 21.23,
+      "points": 50,
+      "regionRestricted": false,
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:44:14.656Z",
+      "entryUsers": [
+        "DeliberateTaco",
+        "Horseflesh",
+        "leniu"
+      ]
     },
     {
       "code": "wv5Uq",
@@ -7917,9 +8705,289 @@
       "resultStatus": "won",
       "resultLabel": "BojanNS987",
       "hltbHours": 49.89,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:43:50.794Z",
+      "entryUsers": [
+        "Krlesnik",
+        "BojanNS987"
+      ]
+    },
+    {
+      "code": "pLrEL",
+      "url": "https://www.steamgifts.com/giveaway/pLrEL/deltarune",
+      "title": "DELTARUNE",
+      "creatorUsername": "Wintermute101",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/Wintermute101",
+      "appId": 1671210,
+      "steamAppUrl": "https://store.steampowered.com/app/1671210?utm_source=SteamGifts",
+      "entriesCount": 4,
+      "endDate": "2025-06-26T17:53:14.000Z",
+      "winners": [
+        {
+          "username": "BojanNS987",
+          "profileUrl": "https://www.steamgifts.com/user/BojanNS987",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "BojanNS987",
+      "hltbHours": 16.74,
+      "points": 25,
+      "regionRestricted": false,
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:43:58.007Z",
+      "entryUsers": [
+        "zettaivanugen",
+        "leniu",
+        "Millsshogun",
+        "BojanNS987"
+      ]
+    },
+    {
+      "code": "TQCB5",
+      "url": "https://www.steamgifts.com/giveaway/TQCB5/stray",
+      "title": "Stray",
+      "creatorUsername": "Saikania",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/Saikania",
+      "appId": 1332010,
+      "steamAppUrl": "https://store.steampowered.com/app/1332010?utm_source=SteamGifts",
+      "entriesCount": 1,
+      "endDate": "2025-06-26T17:49:00.000Z",
+      "winners": [
+        {
+          "username": "Krlesnik",
+          "profileUrl": "https://www.steamgifts.com/user/Krlesnik",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "Krlesnik",
+      "hltbHours": 5.15,
+      "points": 30,
+      "regionRestricted": false,
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:43:53.190Z",
+      "entryUsers": [
+        "Krlesnik"
+      ]
+    },
+    {
+      "code": "KXV1N",
+      "url": "https://www.steamgifts.com/giveaway/KXV1N/the-precinct",
+      "title": "The Precinct",
+      "creatorUsername": "Wintermute101",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/Wintermute101",
+      "appId": 490110,
+      "steamAppUrl": "https://store.steampowered.com/app/490110?utm_source=SteamGifts",
+      "entriesCount": 3,
+      "endDate": "2025-06-26T17:48:11.000Z",
+      "winners": [
+        {
+          "username": "Ernesttico",
+          "profileUrl": "https://www.steamgifts.com/user/Ernesttico",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "Ernesttico",
+      "hltbHours": 12.13,
+      "points": 30,
+      "regionRestricted": false,
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:44:00.420Z",
+      "entryUsers": [
+        "Ernesttico",
+        "Horseflesh",
+        "burntreynolds444"
+      ]
+    },
+    {
+      "code": "T3MEG",
+      "url": "https://www.steamgifts.com/giveaway/T3MEG/keep-driving",
+      "title": "Keep Driving",
+      "creatorUsername": "Wintermute101",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/Wintermute101",
+      "appId": 2756920,
+      "steamAppUrl": "https://store.steampowered.com/app/2756920?utm_source=SteamGifts",
+      "entriesCount": 7,
+      "endDate": "2025-06-26T17:42:29.000Z",
+      "winners": [
+        {
+          "username": "BojanNS987",
+          "profileUrl": "https://www.steamgifts.com/user/BojanNS987",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "BojanNS987",
+      "hltbHours": 3.47,
+      "points": 18,
+      "regionRestricted": false,
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:44:02.663Z",
+      "entryUsers": [
+        "Ernesttico",
+        "burntreynolds444",
+        "Saikania",
+        "eledhrim",
+        "leniu",
+        "BojanNS987",
+        "DeliberateTaco"
+      ]
+    },
+    {
+      "code": "bWuX5",
+      "url": "https://www.steamgifts.com/giveaway/bWuX5/borderlands-4",
+      "title": "Borderlands 4",
+      "creatorUsername": "BojanNS987",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/BojanNS987",
+      "appId": 1285190,
+      "steamAppUrl": "https://store.steampowered.com/app/1285190?utm_source=SteamGifts",
+      "entriesCount": 5,
+      "endDate": "2025-06-26T17:36:09.000Z",
+      "winners": [
+        {
+          "username": "zettaivanugen",
+          "profileUrl": "https://www.steamgifts.com/user/zettaivanugen",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "zettaivanugen",
+      "hltbHours": 30.35,
+      "points": 50,
+      "regionRestricted": false,
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:44:05.134Z",
+      "entryUsers": [
+        "Wintermute101",
+        "Koalala",
+        "Ernesttico",
+        "zettaivanugen",
+        "DeliberateTaco"
+      ]
+    },
+    {
+      "code": "Gy0oM",
+      "url": "https://www.steamgifts.com/giveaway/Gy0oM/metal-gear-solid-d-snake-eater",
+      "title": "METAL GEAR SOLID Δ: SNAKE EATER",
+      "creatorUsername": "BojanNS987",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/BojanNS987",
+      "appId": 2417610,
+      "steamAppUrl": "https://store.steampowered.com/app/2417610?utm_source=SteamGifts",
+      "entriesCount": 8,
+      "endDate": "2025-06-26T17:35:33.000Z",
+      "winners": [
+        {
+          "username": "chOOkity",
+          "profileUrl": "https://www.steamgifts.com/user/chOOkity",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "chOOkity",
+      "hltbHours": 12.18,
+      "points": 50,
+      "regionRestricted": false,
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:44:07.403Z",
+      "entryUsers": [
+        "Koalala",
+        "Ernesttico",
+        "chOOkity",
+        "zettaivanugen",
+        "eledhrim",
+        "Wintermute101",
+        "leniu",
+        "Youdontknow"
+      ]
+    },
+    {
+      "code": "d2f3X",
+      "url": "https://www.steamgifts.com/giveaway/d2f3X/clair-obscur-expedition-33",
+      "title": "Clair Obscur: Expedition 33",
+      "creatorUsername": "BojanNS987",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/BojanNS987",
+      "appId": 1903340,
+      "steamAppUrl": "https://store.steampowered.com/app/1903340?utm_source=SteamGifts",
+      "entriesCount": 7,
+      "endDate": "2025-06-26T17:34:34.000Z",
+      "winners": [
+        {
+          "username": "DeliberateTaco",
+          "profileUrl": "https://www.steamgifts.com/user/DeliberateTaco",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "DeliberateTaco",
+      "hltbHours": 29.2,
+      "points": 50,
+      "regionRestricted": false,
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:44:09.786Z",
+      "entryUsers": [
+        "Krlesnik",
+        "Wintermute101",
+        "leniu",
+        "Millsshogun",
+        "xMisiu",
+        "DeliberateTaco",
+        "Koalala"
+      ]
+    },
+    {
+      "code": "pZvb6",
+      "url": "https://www.steamgifts.com/giveaway/pZvb6/red-dead-redemption",
+      "title": "Red Dead Redemption",
+      "creatorUsername": "BojanNS987",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/BojanNS987",
+      "appId": 2668510,
+      "steamAppUrl": "https://store.steampowered.com/app/2668510?utm_source=SteamGifts",
+      "entriesCount": 6,
+      "endDate": "2025-06-26T17:33:50.000Z",
+      "winners": [
+        {
+          "username": "leniu",
+          "profileUrl": "https://www.steamgifts.com/user/leniu",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "leniu",
+      "hltbHours": 17.6,
+      "points": 50,
+      "regionRestricted": false,
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:44:12.212Z",
+      "entryUsers": [
+        "Ernesttico",
+        "Koalala",
+        "DeliberateTaco",
+        "Krlesnik",
+        "leniu",
+        "Wintermute101"
+      ]
     },
     {
       "code": "WaeNS",
@@ -7941,9 +9009,21 @@
       "resultStatus": "won",
       "resultLabel": "Horseflesh",
       "hltbHours": 16.03,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:43:24.845Z",
+      "entryUsers": [
+        "chOOkity",
+        "burntreynolds444",
+        "Horseflesh",
+        "eledhrim",
+        "leniu",
+        "BojanNS987",
+        "DeliberateTaco"
+      ]
     },
     {
       "code": "sqbNM",
@@ -7964,9 +9044,49 @@
       ],
       "resultStatus": "won",
       "resultLabel": "Krlesnik",
-      "points": 0,
+      "points": 35,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:42:35.152Z",
+      "entryUsers": [
+        "Krlesnik",
+        "burntreynolds444",
+        "Horseflesh"
+      ]
+    },
+    {
+      "code": "9xdRI",
+      "url": "https://www.steamgifts.com/giveaway/9xdRI/ninja-gaiden-4",
+      "title": "NINJA GAIDEN 4",
+      "creatorUsername": "burntreynolds444",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/burntreynolds444",
+      "appId": 2627260,
+      "steamAppUrl": "https://store.steampowered.com/app/2627260?utm_source=SteamGifts",
+      "entriesCount": 3,
+      "endDate": "2025-06-26T17:05:39.000Z",
+      "winners": [
+        {
+          "username": "BojanNS987",
+          "profileUrl": "https://www.steamgifts.com/user/BojanNS987",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "BojanNS987",
+      "hltbHours": 11.62,
+      "points": 50,
+      "regionRestricted": false,
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:44:17.250Z",
+      "entryUsers": [
+        "chOOkity",
+        "BojanNS987",
+        "Youdontknow"
+      ]
     },
     {
       "code": "XUrRM",
@@ -7988,9 +9108,18 @@
       "resultStatus": "won",
       "resultLabel": "burntreynolds444",
       "hltbHours": 6.69,
-      "points": 0,
+      "points": 18,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:42:37.288Z",
+      "entryUsers": [
+        "Wintermute101",
+        "DeliberateTaco",
+        "Youdontknow",
+        "burntreynolds444"
+      ]
     },
     {
       "code": "9755A",
@@ -8012,9 +9141,20 @@
       "resultStatus": "won",
       "resultLabel": "Ernesttico",
       "hltbHours": 19.33,
-      "points": 0,
+      "points": 35,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:42:39.927Z",
+      "entryUsers": [
+        "Millsshogun",
+        "xMisiu",
+        "burntreynolds444",
+        "Ernesttico",
+        "DeliberateTaco",
+        "Wintermute101"
+      ]
     },
     {
       "code": "ayT5u",
@@ -8036,26 +9176,48 @@
       "resultStatus": "won",
       "resultLabel": "Koalala",
       "hltbHours": 12.27,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "giveawayKind": "summer_event",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-05-12T12:42:42.202Z",
+      "entryUsers": [
+        "Koalala",
+        "chOOkity",
+        "Ernesttico",
+        "zettaivanugen",
+        "DeliberateTaco",
+        "burntreynolds444",
+        "BojanNS987",
+        "Saikania"
+      ]
     },
     {
-      "code": "x3Klc",
-      "url": "https://www.steamgifts.com/giveaway/x3Klc/legacy-of-kain-soul-reaver-12-remastered",
-      "title": "Legacy of Kain Soul Reaver 1&2 Remastered",
-      "creatorUsername": "BojanNS987",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/BojanNS987",
-      "appId": 2521380,
-      "steamAppUrl": "https://store.steampowered.com/app/2521380?utm_source=SteamGifts",
-      "entriesCount": 29,
-      "endDate": "2025-06-15T09:15:00.000Z",
-      "winners": [],
+      "code": "PkcHZ",
+      "url": "https://www.steamgifts.com/giveaway/PkcHZ/lost-records-bloom-rage",
+      "title": "Lost Records: Bloom & Rage",
+      "creatorUsername": "Krlesnik",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/Krlesnik",
+      "appId": 1902960,
+      "steamAppUrl": "https://store.steampowered.com/app/1902960?utm_source=SteamGifts",
+      "entriesCount": 7,
+      "endDate": "2025-06-22T11:50:09.000Z",
+      "winners": [
+        {
+          "username": "chOOkity",
+          "profileUrl": "https://www.steamgifts.com/user/chOOkity",
+          "status": "Won"
+        }
+      ],
       "resultStatus": "won",
-      "resultLabel": "steveywonder75",
-      "points": 0,
+      "resultLabel": "chOOkity",
+      "hltbHours": 11.19,
+      "points": 40,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKind": "extra",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "wI7EE",
@@ -8077,10 +9239,11 @@
       "resultStatus": "won",
       "resultLabel": "leniu",
       "hltbHours": 16.74,
-      "points": 0,
+      "points": 25,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "N9qOg",
@@ -8102,10 +9265,35 @@
       "resultStatus": "won",
       "resultLabel": "DogOnSG",
       "hltbHours": 21.36,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
+    },
+    {
+      "code": "x3Klc",
+      "url": "https://www.steamgifts.com/giveaway/x3Klc/legacy-of-kain-soul-reaver-12-remastered",
+      "title": "Legacy of Kain Soul Reaver 1&2 Remast...",
+      "creatorUsername": "BojanNS987",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/BojanNS987",
+      "appId": 2521380,
+      "steamAppUrl": "https://store.steampowered.com/app/2521380?utm_source=SteamGifts",
+      "entriesCount": 29,
+      "endDate": "2025-06-04T08:16:10.000Z",
+      "winners": [
+        {
+          "username": "steveywonder75",
+          "profileUrl": "https://www.steamgifts.com/user/steveywonder75",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "steveywonder75",
+      "points": 30,
+      "regionRestricted": false,
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "IrKLd",
@@ -8127,10 +9315,11 @@
       "resultStatus": "won",
       "resultLabel": "leniu",
       "hltbHours": 4.06,
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "s3OjE",
@@ -8152,10 +9341,11 @@
       "resultStatus": "won",
       "resultLabel": "Horseflesh",
       "hltbHours": 22.74,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "NLhhA",
@@ -8177,10 +9367,11 @@
       "resultStatus": "won",
       "resultLabel": "Wintermute101",
       "hltbHours": 16.91,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "qL3YC",
@@ -8202,10 +9393,11 @@
       "resultStatus": "won",
       "resultLabel": "zettaivanugen",
       "hltbHours": 2.74,
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "1TdVE",
@@ -8227,10 +9419,11 @@
       "resultStatus": "won",
       "resultLabel": "leniu",
       "hltbHours": 3.47,
-      "points": 0,
+      "points": 18,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "orFmd",
@@ -8252,10 +9445,11 @@
       "resultStatus": "won",
       "resultLabel": "burntreynolds444",
       "hltbHours": 30.97,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "wmwSr",
@@ -8277,10 +9471,11 @@
       "resultStatus": "won",
       "resultLabel": "leniu",
       "hltbHours": 28.2,
-      "points": 0,
+      "points": 45,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "I1p2T",
@@ -8302,10 +9497,11 @@
       "resultStatus": "won",
       "resultLabel": "leniu",
       "hltbHours": 29.2,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "TBK7w",
@@ -8327,10 +9523,11 @@
       "resultStatus": "won",
       "resultLabel": "eledhrim",
       "hltbHours": 9.88,
-      "points": 0,
+      "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "U27Lp",
@@ -8352,29 +9549,37 @@
       "resultStatus": "won",
       "resultLabel": "DeliberateTaco",
       "hltbHours": 17.6,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
-      "code": "zuQiZ",
-      "url": "https://www.steamgifts.com/giveaway/zuQiZ/wanderstop",
-      "title": "Wanderstop",
+      "code": "XL7zN",
+      "url": "https://www.steamgifts.com/giveaway/XL7zN/the-precinct",
+      "title": "The Precinct",
       "creatorUsername": "Wintermute101",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Wintermute101",
-      "appId": 1299460,
-      "steamAppUrl": "https://store.steampowered.com/app/1299460?utm_source=SteamGifts",
-      "entriesCount": 3,
-      "endDate": "2025-05-30T18:00:00.000Z",
-      "winners": [],
+      "appId": 490110,
+      "steamAppUrl": "https://store.steampowered.com/app/490110?utm_source=SteamGifts",
+      "entriesCount": 5,
+      "endDate": "2025-05-31T06:47:30.000Z",
+      "winners": [
+        {
+          "username": "eledhrim",
+          "profileUrl": "https://www.steamgifts.com/user/eledhrim",
+          "status": "Won"
+        }
+      ],
       "resultStatus": "won",
-      "resultLabel": "DeliberateTaco",
-      "hltbHours": 10.41,
-      "points": 0,
+      "resultLabel": "eledhrim",
+      "hltbHours": 12.13,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "zYKdC",
@@ -8385,278 +9590,22 @@
       "appId": 2277560,
       "steamAppUrl": "https://store.steampowered.com/app/2277560?utm_source=SteamGifts",
       "entriesCount": 6,
-      "endDate": "2025-05-30T18:00:00.000Z",
-      "winners": [],
+      "endDate": "2025-05-25T21:21:00.000Z",
+      "winners": [
+        {
+          "username": "Oozyyy",
+          "profileUrl": "https://www.steamgifts.com/user/Oozyyy",
+          "status": "Won"
+        }
+      ],
       "resultStatus": "won",
       "resultLabel": "Oozyyy",
       "hltbHours": 30.97,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "wv8G4",
-      "url": "https://www.steamgifts.com/giveaway/wv8G4/doom-the-dark-ages",
-      "title": "DOOM: The Dark Ages",
-      "creatorUsername": "burntreynolds444",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/burntreynolds444",
-      "appId": 3017860,
-      "steamAppUrl": "https://store.steampowered.com/app/3017860?utm_source=SteamGifts",
-      "entriesCount": 4,
-      "endDate": "2025-05-30T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "leniu",
-      "hltbHours": 14.2,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKind": "cycle",
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "thn7B",
-      "url": "https://www.steamgifts.com/giveaway/thn7B/the-elder-scrolls-iv-oblivion-remastered",
-      "title": "The Elder Scrolls IV: Oblivion Remastered",
-      "creatorUsername": "eledhrim",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/eledhrim",
-      "appId": 2623190,
-      "steamAppUrl": "https://store.steampowered.com/app/2623190?utm_source=SteamGifts",
-      "entriesCount": 4,
-      "endDate": "2025-05-30T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "leniu",
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKind": "cycle",
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "tG1li",
-      "url": "https://www.steamgifts.com/giveaway/tG1li/clair-obscur-expedition-33",
-      "title": "Clair Obscur: Expedition 33",
-      "creatorUsername": "chOOkity",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/chOOkity",
-      "appId": 1903340,
-      "steamAppUrl": "https://store.steampowered.com/app/1903340?utm_source=SteamGifts",
-      "entriesCount": 7,
-      "endDate": "2025-05-30T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "Youdontknow",
-      "hltbHours": 29.2,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKind": "cycle",
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "srBY1",
-      "url": "https://www.steamgifts.com/giveaway/srBY1/metal-slug-tactics",
-      "title": "Metal Slug Tactics",
-      "creatorUsername": "chOOkity",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/chOOkity",
-      "appId": 1590760,
-      "steamAppUrl": "https://store.steampowered.com/app/1590760?utm_source=SteamGifts",
-      "entriesCount": 1,
-      "endDate": "2025-05-30T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "burntreynolds444",
-      "hltbHours": 6.37,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKind": "extra",
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "pzZOS",
-      "url": "https://www.steamgifts.com/giveaway/pzZOS/elden-ring-nightreign",
-      "title": "ELDEN RING NIGHTREIGN",
-      "creatorUsername": "BojanNS987",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/BojanNS987",
-      "appId": 2622380,
-      "steamAppUrl": "https://store.steampowered.com/app/2622380?utm_source=SteamGifts",
-      "entriesCount": 1,
-      "endDate": "2025-05-30T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "Horseflesh",
-      "hltbHours": 28.12,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKind": "cycle",
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "hfaC1",
-      "url": "https://www.steamgifts.com/giveaway/hfaC1/suikoden-iii-hd-remaster-gate-rune-and-dunan-unification-wars",
-      "title": "Suikoden I&II HD Remaster Gate Rune and Dunan Unification Wars",
-      "creatorUsername": "DogOnSG",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/DogOnSG",
-      "appId": 1932640,
-      "steamAppUrl": "https://store.steampowered.com/app/1932640?utm_source=SteamGifts",
-      "entriesCount": 3,
-      "endDate": "2025-05-30T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "leniu",
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKind": "cycle",
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "djAmk",
-      "url": "https://www.steamgifts.com/giveaway/djAmk/shin-megami-tensei-v-vengeance",
-      "title": "Shin Megami Tensei V: Vengeance",
-      "creatorUsername": "Youdontknow",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/Youdontknow",
-      "appId": 1875830,
-      "steamAppUrl": "https://store.steampowered.com/app/1875830?utm_source=SteamGifts",
-      "entriesCount": 2,
-      "endDate": "2025-05-30T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "Wintermute101",
-      "hltbHours": 44.94,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKind": "cycle",
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "VJMc9",
-      "url": "https://www.steamgifts.com/giveaway/VJMc9/the-precinct",
-      "title": "The Precinct",
-      "creatorUsername": "zettaivanugen",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/zettaivanugen",
-      "appId": 490110,
-      "steamAppUrl": "https://store.steampowered.com/app/490110?utm_source=SteamGifts",
-      "entriesCount": 5,
-      "endDate": "2025-05-30T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "BojanNS987",
-      "hltbHours": 12.13,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKind": "cycle",
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "FbxDh",
-      "url": "https://www.steamgifts.com/giveaway/FbxDh/deliver-at-all-costs",
-      "title": "Deliver At All Costs",
-      "creatorUsername": "Saikania",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/Saikania",
-      "appId": 1880610,
-      "steamAppUrl": "https://store.steampowered.com/app/1880610?utm_source=SteamGifts",
-      "entriesCount": 3,
-      "endDate": "2025-05-30T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "WNDRLST",
-      "hltbHours": 8.4,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKind": "cycle",
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "9mCfa",
-      "url": "https://www.steamgifts.com/giveaway/9mCfa/promise-mascot-agency",
-      "title": "Promise Mascot Agency",
-      "creatorUsername": "Horseflesh",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/Horseflesh",
-      "appId": 2585830,
-      "steamAppUrl": "https://store.steampowered.com/app/2585830?utm_source=SteamGifts",
-      "entriesCount": 4,
-      "endDate": "2025-05-30T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "WNDRLST",
-      "hltbHours": 14.14,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKind": "cycle",
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "8la0R",
-      "url": "https://www.steamgifts.com/giveaway/8la0R/amerzone-the-explorers-legacy",
-      "title": "Amerzone - The Explorer's Legacy",
-      "creatorUsername": "leniu",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
-      "appId": 2429190,
-      "steamAppUrl": "https://store.steampowered.com/app/2429190?utm_source=SteamGifts",
-      "entriesCount": 1,
-      "endDate": "2025-05-30T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "DeliberateTaco",
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKind": "cycle",
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "8CkPj",
-      "url": "https://www.steamgifts.com/giveaway/8CkPj/metaphor-refantazio",
-      "title": "Metaphor: ReFantazio",
-      "creatorUsername": "Oozyyy",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/Oozyyy",
-      "appId": 2679460,
-      "steamAppUrl": "https://store.steampowered.com/app/2679460?utm_source=SteamGifts",
-      "entriesCount": 6,
-      "endDate": "2025-05-30T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "DogOnSG",
-      "hltbHours": 65.19,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKind": "cycle",
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "1GlTp",
-      "url": "https://www.steamgifts.com/giveaway/1GlTp/the-plucky-squire",
-      "title": "The Plucky Squire",
-      "creatorUsername": "WNDRLST",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/WNDRLST",
-      "appId": 1627570,
-      "steamAppUrl": "https://store.steampowered.com/app/1627570?utm_source=SteamGifts",
-      "entriesCount": 1,
-      "endDate": "2025-05-30T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "DogOnSG",
-      "hltbHours": 8.39,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKind": "cycle",
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "GeTI9",
-      "url": "https://www.steamgifts.com/giveaway/GeTI9/into-the-dead-our-darkest-days",
-      "title": "Into the Dead: Our Darkest Days",
-      "creatorUsername": "DeliberateTaco",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/DeliberateTaco",
-      "appId": 2239710,
-      "steamAppUrl": "https://store.steampowered.com/app/2239710?utm_source=SteamGifts",
-      "entriesCount": 1,
-      "endDate": "2025-05-30T17:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "Horseflesh",
-      "hltbHours": 7.88,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "6yU4n",
@@ -8667,14 +9616,47 @@
       "appId": 1065310,
       "steamAppUrl": "https://store.steampowered.com/app/1065310?utm_source=SteamGifts",
       "entriesCount": 9,
-      "endDate": "2025-05-28T22:00:00.000Z",
-      "winners": [],
+      "endDate": "2025-05-24T08:42:27.000Z",
+      "winners": [
+        {
+          "username": "LittleB",
+          "profileUrl": "https://www.steamgifts.com/user/LittleB",
+          "status": "Won"
+        }
+      ],
       "resultStatus": "won",
       "resultLabel": "LittleB",
       "hltbHours": 10.75,
-      "points": 0,
+      "points": 50,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
+    },
+    {
+      "code": "VJMc9",
+      "url": "https://www.steamgifts.com/giveaway/VJMc9/the-precinct",
+      "title": "The Precinct",
+      "creatorUsername": "zettaivanugen",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/zettaivanugen",
+      "appId": 490110,
+      "steamAppUrl": "https://store.steampowered.com/app/490110?utm_source=SteamGifts",
+      "entriesCount": 5,
+      "endDate": "2025-05-21T07:23:18.000Z",
+      "winners": [
+        {
+          "username": "BojanNS987",
+          "profileUrl": "https://www.steamgifts.com/user/BojanNS987",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "BojanNS987",
+      "hltbHours": 12.13,
+      "points": 30,
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "IVfRE",
@@ -8685,146 +9667,382 @@
       "appId": 1684350,
       "steamAppUrl": "https://store.steampowered.com/app/1684350?utm_source=SteamGifts",
       "entriesCount": 17,
-      "endDate": "2025-05-19T15:04:00.000Z",
-      "winners": [],
+      "endDate": "2025-05-16T14:05:53.000Z",
+      "winners": [
+        {
+          "username": "ElMatadorYTyrannos",
+          "profileUrl": "https://www.steamgifts.com/user/ElMatadorYTyrannos",
+          "status": "Won"
+        }
+      ],
       "resultStatus": "won",
       "resultLabel": "ElMatadorYTyrannos",
       "hltbHours": 15.9,
-      "points": 0,
+      "points": 35,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
-      "code": "mceGt",
-      "url": "https://www.steamgifts.com/giveaway/mceGt/elden-ring-nightreign",
-      "title": "ELDEN RING NIGHTREIGN",
+      "code": "djAmk",
+      "url": "https://www.steamgifts.com/giveaway/djAmk/shin-megami-tensei-v-vengeance",
+      "title": "Shin Megami Tensei V: Vengeance",
       "creatorUsername": "Youdontknow",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Youdontknow",
-      "appId": 2622380,
-      "steamAppUrl": "https://store.steampowered.com/app/2622380?utm_source=SteamGifts",
-      "entriesCount": 3,
-      "endDate": "2025-04-30T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "leniu",
-      "hltbHours": 28.12,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKind": "cycle",
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "lltN3",
-      "url": "https://www.steamgifts.com/giveaway/lltN3/atomfall",
-      "title": "Atomfall",
-      "creatorUsername": "Horseflesh",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/Horseflesh",
-      "appId": 801800,
-      "steamAppUrl": "https://store.steampowered.com/app/801800?utm_source=SteamGifts",
-      "entriesCount": 3,
-      "endDate": "2025-04-30T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "burntreynolds444",
-      "hltbHours": 10.49,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKind": "cycle",
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "ishte",
-      "url": "https://www.steamgifts.com/giveaway/ishte/wanderstop",
-      "title": "Wanderstop",
-      "creatorUsername": "DeliberateTaco",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/DeliberateTaco",
-      "appId": 1299460,
-      "steamAppUrl": "https://store.steampowered.com/app/1299460?utm_source=SteamGifts",
-      "entriesCount": 5,
-      "endDate": "2025-04-30T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "Ernesttico",
-      "hltbHours": 10.41,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKind": "cycle",
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "g9zfs",
-      "url": "https://www.steamgifts.com/giveaway/g9zfs/clair-obscur-expedition-33",
-      "title": "Clair Obscur: Expedition 33",
-      "creatorUsername": "burntreynolds444",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/burntreynolds444",
-      "appId": 1903340,
-      "steamAppUrl": "https://store.steampowered.com/app/1903340?utm_source=SteamGifts",
-      "entriesCount": 10,
-      "endDate": "2025-04-30T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "chOOkity",
-      "hltbHours": 29.2,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKind": "cycle",
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "fqKqw",
-      "url": "https://www.steamgifts.com/giveaway/fqKqw/disney-epic-mickey-rebrushed",
-      "title": "Disney Epic Mickey: Rebrushed",
-      "creatorUsername": "leniu",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
-      "appId": 1522160,
-      "steamAppUrl": "https://store.steampowered.com/app/1522160?utm_source=SteamGifts",
+      "appId": 1875830,
+      "steamAppUrl": "https://store.steampowered.com/app/1875830?utm_source=SteamGifts",
       "entriesCount": 2,
-      "endDate": "2025-04-30T18:00:00.000Z",
-      "winners": [],
+      "endDate": "2025-05-14T10:21:18.000Z",
+      "winners": [
+        {
+          "username": "Wintermute101",
+          "profileUrl": "https://www.steamgifts.com/user/Wintermute101",
+          "status": "Won"
+        }
+      ],
       "resultStatus": "won",
-      "resultLabel": "chOOkity",
-      "hltbHours": 10.22,
-      "points": 0,
+      "resultLabel": "Wintermute101",
+      "hltbHours": 44.94,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
-      "code": "dT8wp",
-      "url": "https://www.steamgifts.com/giveaway/dT8wp/assassins-creed-shadows",
-      "title": "Assassin’s Creed Shadows",
-      "creatorUsername": "BojanNS987",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/BojanNS987",
-      "appId": 3159330,
-      "steamAppUrl": "https://store.steampowered.com/app/3159330?utm_source=SteamGifts",
-      "entriesCount": 5,
-      "endDate": "2025-04-30T18:00:00.000Z",
-      "winners": [],
+      "code": "1GlTp",
+      "url": "https://www.steamgifts.com/giveaway/1GlTp/the-plucky-squire",
+      "title": "The Plucky Squire",
+      "creatorUsername": "WNDRLST",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/WNDRLST",
+      "appId": 1627570,
+      "steamAppUrl": "https://store.steampowered.com/app/1627570?utm_source=SteamGifts",
+      "entriesCount": 1,
+      "endDate": "2025-05-14T09:53:23.000Z",
+      "winners": [
+        {
+          "username": "DogOnSG",
+          "profileUrl": "https://www.steamgifts.com/user/DogOnSG",
+          "status": "Won"
+        }
+      ],
       "resultStatus": "won",
       "resultLabel": "DogOnSG",
-      "points": 0,
+      "hltbHours": 8.39,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
-      "code": "Za8zj",
-      "url": "https://www.steamgifts.com/giveaway/Za8zj/inzoi",
-      "title": "inZOI",
-      "creatorUsername": "Saikania",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/Saikania",
-      "appId": 2456740,
-      "steamAppUrl": "https://store.steampowered.com/app/2456740?utm_source=SteamGifts",
-      "entriesCount": 4,
-      "endDate": "2025-04-30T18:00:00.000Z",
-      "winners": [],
+      "code": "8CkPj",
+      "url": "https://www.steamgifts.com/giveaway/8CkPj/metaphor-refantazio",
+      "title": "Metaphor: ReFantazio",
+      "creatorUsername": "Oozyyy",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/Oozyyy",
+      "appId": 2679460,
+      "steamAppUrl": "https://store.steampowered.com/app/2679460?utm_source=SteamGifts",
+      "entriesCount": 6,
+      "endDate": "2025-05-12T22:32:43.000Z",
+      "winners": [
+        {
+          "username": "DogOnSG",
+          "profileUrl": "https://www.steamgifts.com/user/DogOnSG",
+          "status": "Won"
+        }
+      ],
       "resultStatus": "won",
-      "resultLabel": "zettaivanugen",
-      "hltbHours": 10.67,
-      "points": 0,
+      "resultLabel": "DogOnSG",
+      "hltbHours": 65.19,
+      "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
+    },
+    {
+      "code": "8la0R",
+      "url": "https://www.steamgifts.com/giveaway/8la0R/amerzone-the-explorers-legacy",
+      "title": "Amerzone - The Explorer's Legacy",
+      "creatorUsername": "leniu",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
+      "appId": 2429190,
+      "steamAppUrl": "https://store.steampowered.com/app/2429190?utm_source=SteamGifts",
+      "entriesCount": 1,
+      "endDate": "2025-05-05T21:27:38.000Z",
+      "winners": [
+        {
+          "username": "DeliberateTaco",
+          "profileUrl": "https://www.steamgifts.com/user/DeliberateTaco",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "DeliberateTaco",
+      "points": 40,
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
+    },
+    {
+      "code": "srBY1",
+      "url": "https://www.steamgifts.com/giveaway/srBY1/metal-slug-tactics",
+      "title": "Metal Slug Tactics",
+      "creatorUsername": "chOOkity",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/chOOkity",
+      "appId": 1590760,
+      "steamAppUrl": "https://store.steampowered.com/app/1590760?utm_source=SteamGifts",
+      "entriesCount": 1,
+      "endDate": "2025-05-05T07:40:29.000Z",
+      "winners": [
+        {
+          "username": "burntreynolds444",
+          "profileUrl": "https://www.steamgifts.com/user/burntreynolds444",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "burntreynolds444",
+      "hltbHours": 6.37,
+      "points": 25,
+      "regionRestricted": false,
+      "giveawayKind": "extra",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
+    },
+    {
+      "code": "tG1li",
+      "url": "https://www.steamgifts.com/giveaway/tG1li/clair-obscur-expedition-33",
+      "title": "Clair Obscur: Expedition 33",
+      "creatorUsername": "chOOkity",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/chOOkity",
+      "appId": 1903340,
+      "steamAppUrl": "https://store.steampowered.com/app/1903340?utm_source=SteamGifts",
+      "entriesCount": 7,
+      "endDate": "2025-05-05T07:26:57.000Z",
+      "winners": [
+        {
+          "username": "Youdontknow",
+          "profileUrl": "https://www.steamgifts.com/user/Youdontknow",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "Youdontknow",
+      "hltbHours": 29.2,
+      "points": 50,
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
+    },
+    {
+      "code": "zuQiZ",
+      "url": "https://www.steamgifts.com/giveaway/zuQiZ/wanderstop",
+      "title": "Wanderstop",
+      "creatorUsername": "Wintermute101",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/Wintermute101",
+      "appId": 1299460,
+      "steamAppUrl": "https://store.steampowered.com/app/1299460?utm_source=SteamGifts",
+      "entriesCount": 3,
+      "endDate": "2025-05-01T18:01:04.000Z",
+      "winners": [
+        {
+          "username": "DeliberateTaco",
+          "profileUrl": "https://www.steamgifts.com/user/DeliberateTaco",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "DeliberateTaco",
+      "hltbHours": 10.41,
+      "points": 25,
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
+    },
+    {
+      "code": "wv8G4",
+      "url": "https://www.steamgifts.com/giveaway/wv8G4/doom-the-dark-ages",
+      "title": "DOOM: The Dark Ages",
+      "creatorUsername": "burntreynolds444",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/burntreynolds444",
+      "appId": 3017860,
+      "steamAppUrl": "https://store.steampowered.com/app/3017860?utm_source=SteamGifts",
+      "entriesCount": 4,
+      "endDate": "2025-05-01T15:23:33.000Z",
+      "winners": [
+        {
+          "username": "leniu",
+          "profileUrl": "https://www.steamgifts.com/user/leniu",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "leniu",
+      "hltbHours": 14.2,
+      "points": 50,
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
+    },
+    {
+      "code": "GeTI9",
+      "url": "https://www.steamgifts.com/giveaway/GeTI9/into-the-dead-our-darkest-days",
+      "title": "Into the Dead: Our Darkest Days",
+      "creatorUsername": "DeliberateTaco",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/DeliberateTaco",
+      "appId": 2239710,
+      "steamAppUrl": "https://store.steampowered.com/app/2239710?utm_source=SteamGifts",
+      "entriesCount": 1,
+      "endDate": "2025-05-01T13:52:07.000Z",
+      "winners": [
+        {
+          "username": "Horseflesh",
+          "profileUrl": "https://www.steamgifts.com/user/Horseflesh",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "Horseflesh",
+      "hltbHours": 7.88,
+      "points": 25,
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
+    },
+    {
+      "code": "pzZOS",
+      "url": "https://www.steamgifts.com/giveaway/pzZOS/elden-ring-nightreign",
+      "title": "ELDEN RING NIGHTREIGN",
+      "creatorUsername": "BojanNS987",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/BojanNS987",
+      "appId": 2622380,
+      "steamAppUrl": "https://store.steampowered.com/app/2622380?utm_source=SteamGifts",
+      "entriesCount": 1,
+      "endDate": "2025-05-01T13:23:37.000Z",
+      "winners": [
+        {
+          "username": "Horseflesh",
+          "profileUrl": "https://www.steamgifts.com/user/Horseflesh",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "Horseflesh",
+      "hltbHours": 28.12,
+      "points": 40,
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
+    },
+    {
+      "code": "9mCfa",
+      "url": "https://www.steamgifts.com/giveaway/9mCfa/promise-mascot-agency",
+      "title": "Promise Mascot Agency",
+      "creatorUsername": "Horseflesh",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/Horseflesh",
+      "appId": 2585830,
+      "steamAppUrl": "https://store.steampowered.com/app/2585830?utm_source=SteamGifts",
+      "entriesCount": 4,
+      "endDate": "2025-05-01T12:10:38.000Z",
+      "winners": [
+        {
+          "username": "WNDRLST",
+          "profileUrl": "https://www.steamgifts.com/user/WNDRLST",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "WNDRLST",
+      "hltbHours": 14.14,
+      "points": 25,
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
+    },
+    {
+      "code": "FbxDh",
+      "url": "https://www.steamgifts.com/giveaway/FbxDh/deliver-at-all-costs",
+      "title": "Deliver At All Costs",
+      "creatorUsername": "Saikania",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/Saikania",
+      "appId": 1880610,
+      "steamAppUrl": "https://store.steampowered.com/app/1880610?utm_source=SteamGifts",
+      "entriesCount": 3,
+      "endDate": "2025-05-01T10:56:36.000Z",
+      "winners": [
+        {
+          "username": "WNDRLST",
+          "profileUrl": "https://www.steamgifts.com/user/WNDRLST",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "WNDRLST",
+      "hltbHours": 8.4,
+      "points": 30,
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
+    },
+    {
+      "code": "hfaC1",
+      "url": "https://www.steamgifts.com/giveaway/hfaC1/suikoden-iii-hd-remaster-gate-rune-and-dunan-unification-wars",
+      "title": "Suikoden I&II HD Remaster Gate Rune a...",
+      "creatorUsername": "DogOnSG",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/DogOnSG",
+      "appId": 1932640,
+      "steamAppUrl": "https://store.steampowered.com/app/1932640?utm_source=SteamGifts",
+      "entriesCount": 3,
+      "endDate": "2025-05-01T08:38:04.000Z",
+      "winners": [
+        {
+          "username": "leniu",
+          "profileUrl": "https://www.steamgifts.com/user/leniu",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "leniu",
+      "points": 50,
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
+    },
+    {
+      "code": "thn7B",
+      "url": "https://www.steamgifts.com/giveaway/thn7B/the-elder-scrolls-iv-oblivion-remastered",
+      "title": "The Elder Scrolls IV: Oblivion Remast...",
+      "creatorUsername": "eledhrim",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/eledhrim",
+      "appId": 2623190,
+      "steamAppUrl": "https://store.steampowered.com/app/2623190?utm_source=SteamGifts",
+      "entriesCount": 4,
+      "endDate": "2025-04-30T20:08:33.000Z",
+      "winners": [
+        {
+          "username": "leniu",
+          "profileUrl": "https://www.steamgifts.com/user/leniu",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "leniu",
+      "points": 50,
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "VtIvk",
@@ -8835,15 +10053,48 @@
       "appId": 1346360,
       "steamAppUrl": "https://store.steampowered.com/app/1346360?utm_source=SteamGifts",
       "entriesCount": 2,
-      "endDate": "2025-04-30T18:00:00.000Z",
-      "winners": [],
+      "endDate": "2025-04-25T22:57:23.000Z",
+      "winners": [
+        {
+          "username": "DeliberateTaco",
+          "profileUrl": "https://www.steamgifts.com/user/DeliberateTaco",
+          "status": "Won"
+        }
+      ],
       "resultStatus": "won",
       "resultLabel": "DeliberateTaco",
       "hltbHours": 11.9,
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
+    },
+    {
+      "code": "mceGt",
+      "url": "https://www.steamgifts.com/giveaway/mceGt/elden-ring-nightreign",
+      "title": "ELDEN RING NIGHTREIGN",
+      "creatorUsername": "Youdontknow",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/Youdontknow",
+      "appId": 2622380,
+      "steamAppUrl": "https://store.steampowered.com/app/2622380?utm_source=SteamGifts",
+      "entriesCount": 3,
+      "endDate": "2025-04-25T02:29:54.000Z",
+      "winners": [
+        {
+          "username": "leniu",
+          "profileUrl": "https://www.steamgifts.com/user/leniu",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "leniu",
+      "hltbHours": 28.12,
+      "points": 40,
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "UxcEs",
@@ -8854,53 +10105,22 @@
       "appId": 2407270,
       "steamAppUrl": "https://store.steampowered.com/app/2407270?utm_source=SteamGifts",
       "entriesCount": 4,
-      "endDate": "2025-04-30T18:00:00.000Z",
-      "winners": [],
+      "endDate": "2025-04-14T18:18:26.000Z",
+      "winners": [
+        {
+          "username": "leniu",
+          "profileUrl": "https://www.steamgifts.com/user/leniu",
+          "status": "Won"
+        }
+      ],
       "resultStatus": "won",
       "resultLabel": "leniu",
       "hltbHours": 18.57,
-      "points": 0,
+      "points": 35,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "GPv2c",
-      "url": "https://www.steamgifts.com/giveaway/GPv2c/the-first-berserker-khazan",
-      "title": "The First Berserker: Khazan",
-      "creatorUsername": "DogOnSG",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/DogOnSG",
-      "appId": 2680010,
-      "steamAppUrl": "https://store.steampowered.com/app/2680010?utm_source=SteamGifts",
-      "entriesCount": 4,
-      "endDate": "2025-04-30T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "Youdontknow",
-      "hltbHours": 34.72,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKind": "cycle",
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "F4aA7",
-      "url": "https://www.steamgifts.com/giveaway/F4aA7/lost-records-bloom-rage",
-      "title": "Lost Records: Bloom & Rage",
-      "creatorUsername": "Wintermute101",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/Wintermute101",
-      "appId": 1902960,
-      "steamAppUrl": "https://store.steampowered.com/app/1902960?utm_source=SteamGifts",
-      "entriesCount": 7,
-      "endDate": "2025-04-30T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "Saikania",
-      "hltbHours": 11.19,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "4Kwjb",
@@ -8911,15 +10131,22 @@
       "appId": 1569580,
       "steamAppUrl": "https://store.steampowered.com/app/1569580?utm_source=SteamGifts",
       "entriesCount": 3,
-      "endDate": "2025-04-30T18:00:00.000Z",
-      "winners": [],
+      "endDate": "2025-04-14T10:24:09.000Z",
+      "winners": [
+        {
+          "username": "chOOkity",
+          "profileUrl": "https://www.steamgifts.com/user/chOOkity",
+          "status": "Won"
+        }
+      ],
       "resultStatus": "won",
       "resultLabel": "chOOkity",
       "hltbHours": 17.98,
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "4Bj1b",
@@ -8930,51 +10157,46 @@
       "appId": 3164500,
       "steamAppUrl": "https://store.steampowered.com/app/3164500?utm_source=SteamGifts",
       "entriesCount": 3,
-      "endDate": "2025-04-30T18:00:00.000Z",
-      "winners": [],
+      "endDate": "2025-04-10T17:26:02.000Z",
+      "winners": [
+        {
+          "username": "Horseflesh",
+          "profileUrl": "https://www.steamgifts.com/user/Horseflesh",
+          "status": "Won"
+        }
+      ],
       "resultStatus": "won",
       "resultLabel": "Horseflesh",
       "hltbHours": 16.41,
-      "points": 0,
+      "points": 20,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
-    },
-    {
-      "code": "0QaN1",
-      "url": "https://www.steamgifts.com/giveaway/0QaN1/metaphor-refantazio",
-      "title": "Metaphor: ReFantazio",
-      "creatorUsername": "chOOkity",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/chOOkity",
-      "appId": 2679460,
-      "steamAppUrl": "https://store.steampowered.com/app/2679460?utm_source=SteamGifts",
-      "entriesCount": 7,
-      "endDate": "2025-04-30T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "won",
-      "resultLabel": "Wintermute101",
-      "hltbHours": 65.19,
-      "points": 0,
-      "regionRestricted": false,
-      "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "QbQrc",
       "url": "https://www.steamgifts.com/giveaway/QbQrc/tomb-raider-i-iii-remastered-starring-lara-croft",
-      "title": "Tomb Raider I-III Remastered Starring Lara Croft",
+      "title": "Tomb Raider I-III Remastered Starring...",
       "creatorUsername": "BojanNS987",
       "creatorProfileUrl": "https://www.steamgifts.com/user/BojanNS987",
       "appId": 2478970,
       "steamAppUrl": "https://store.steampowered.com/app/2478970?utm_source=SteamGifts",
       "entriesCount": 32,
-      "endDate": "2025-04-25T10:17:00.000Z",
-      "winners": [],
+      "endDate": "2025-04-10T09:19:20.000Z",
+      "winners": [
+        {
+          "username": "en7erpr1se",
+          "profileUrl": "https://www.steamgifts.com/user/en7erpr1se",
+          "status": "Won"
+        }
+      ],
       "resultStatus": "won",
       "resultLabel": "en7erpr1se",
-      "points": 0,
+      "points": 30,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "eLJpO",
@@ -8985,33 +10207,254 @@
       "appId": 1562430,
       "steamAppUrl": "https://store.steampowered.com/app/1562430?utm_source=SteamGifts",
       "entriesCount": 37,
-      "endDate": "2025-04-18T10:02:00.000Z",
-      "winners": [],
+      "endDate": "2025-04-10T09:03:03.000Z",
+      "winners": [
+        {
+          "username": "axlnase",
+          "profileUrl": "https://www.steamgifts.com/user/axlnase",
+          "status": "Won"
+        }
+      ],
       "resultStatus": "won",
       "resultLabel": "axlnase",
       "hltbHours": 9.69,
-      "points": 0,
+      "points": 27,
       "regionRestricted": false,
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
-      "code": "x7G0p",
-      "url": "https://www.steamgifts.com/giveaway/x7G0p/lost-records-bloom-rage",
-      "title": "Lost Records: Bloom & Rage",
-      "creatorUsername": "Ernesttico",
-      "creatorProfileUrl": "https://www.steamgifts.com/user/Ernesttico",
-      "appId": 1902960,
-      "steamAppUrl": "https://store.steampowered.com/app/1902960?utm_source=SteamGifts",
-      "entriesCount": 9,
-      "endDate": "2025-03-30T19:00:00.000Z",
-      "winners": [],
+      "code": "Za8zj",
+      "url": "https://www.steamgifts.com/giveaway/Za8zj/inzoi",
+      "title": "inZOI",
+      "creatorUsername": "Saikania",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/Saikania",
+      "appId": 2456740,
+      "steamAppUrl": "https://store.steampowered.com/app/2456740?utm_source=SteamGifts",
+      "entriesCount": 4,
+      "endDate": "2025-04-02T20:50:50.000Z",
+      "winners": [
+        {
+          "username": "zettaivanugen",
+          "profileUrl": "https://www.steamgifts.com/user/zettaivanugen",
+          "status": "Won"
+        }
+      ],
       "resultStatus": "won",
-      "resultLabel": "Skull18",
-      "hltbHours": 11.19,
-      "points": 0,
+      "resultLabel": "zettaivanugen",
+      "hltbHours": 10.67,
+      "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
+    },
+    {
+      "code": "0QaN1",
+      "url": "https://www.steamgifts.com/giveaway/0QaN1/metaphor-refantazio",
+      "title": "Metaphor: ReFantazio",
+      "creatorUsername": "chOOkity",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/chOOkity",
+      "appId": 2679460,
+      "steamAppUrl": "https://store.steampowered.com/app/2679460?utm_source=SteamGifts",
+      "entriesCount": 7,
+      "endDate": "2025-04-02T11:28:57.000Z",
+      "winners": [
+        {
+          "username": "Wintermute101",
+          "profileUrl": "https://www.steamgifts.com/user/Wintermute101",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "Wintermute101",
+      "hltbHours": 65.19,
+      "points": 50,
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
+    },
+    {
+      "code": "F4aA7",
+      "url": "https://www.steamgifts.com/giveaway/F4aA7/lost-records-bloom-rage",
+      "title": "Lost Records: Bloom & Rage",
+      "creatorUsername": "Wintermute101",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/Wintermute101",
+      "appId": 1902960,
+      "steamAppUrl": "https://store.steampowered.com/app/1902960?utm_source=SteamGifts",
+      "entriesCount": 7,
+      "endDate": "2025-04-01T17:11:18.000Z",
+      "winners": [
+        {
+          "username": "Saikania",
+          "profileUrl": "https://www.steamgifts.com/user/Saikania",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "Saikania",
+      "hltbHours": 11.19,
+      "points": 40,
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
+    },
+    {
+      "code": "fqKqw",
+      "url": "https://www.steamgifts.com/giveaway/fqKqw/disney-epic-mickey-rebrushed",
+      "title": "Disney Epic Mickey: Rebrushed",
+      "creatorUsername": "leniu",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
+      "appId": 1522160,
+      "steamAppUrl": "https://store.steampowered.com/app/1522160?utm_source=SteamGifts",
+      "entriesCount": 2,
+      "endDate": "2025-04-01T10:15:48.000Z",
+      "winners": [
+        {
+          "username": "chOOkity",
+          "profileUrl": "https://www.steamgifts.com/user/chOOkity",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "chOOkity",
+      "hltbHours": 10.22,
+      "points": 40,
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
+    },
+    {
+      "code": "GPv2c",
+      "url": "https://www.steamgifts.com/giveaway/GPv2c/the-first-berserker-khazan",
+      "title": "The First Berserker: Khazan",
+      "creatorUsername": "DogOnSG",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/DogOnSG",
+      "appId": 2680010,
+      "steamAppUrl": "https://store.steampowered.com/app/2680010?utm_source=SteamGifts",
+      "entriesCount": 4,
+      "endDate": "2025-04-01T09:47:23.000Z",
+      "winners": [
+        {
+          "username": "Youdontknow",
+          "profileUrl": "https://www.steamgifts.com/user/Youdontknow",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "Youdontknow",
+      "hltbHours": 34.72,
+      "points": 50,
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
+    },
+    {
+      "code": "lltN3",
+      "url": "https://www.steamgifts.com/giveaway/lltN3/atomfall",
+      "title": "Atomfall",
+      "creatorUsername": "Horseflesh",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/Horseflesh",
+      "appId": 801800,
+      "steamAppUrl": "https://store.steampowered.com/app/801800?utm_source=SteamGifts",
+      "entriesCount": 3,
+      "endDate": "2025-04-01T09:21:24.000Z",
+      "winners": [
+        {
+          "username": "burntreynolds444",
+          "profileUrl": "https://www.steamgifts.com/user/burntreynolds444",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "burntreynolds444",
+      "hltbHours": 10.49,
+      "points": 50,
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
+    },
+    {
+      "code": "g9zfs",
+      "url": "https://www.steamgifts.com/giveaway/g9zfs/clair-obscur-expedition-33",
+      "title": "Clair Obscur: Expedition 33",
+      "creatorUsername": "burntreynolds444",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/burntreynolds444",
+      "appId": 1903340,
+      "steamAppUrl": "https://store.steampowered.com/app/1903340?utm_source=SteamGifts",
+      "entriesCount": 10,
+      "endDate": "2025-04-01T00:21:54.000Z",
+      "winners": [
+        {
+          "username": "chOOkity",
+          "profileUrl": "https://www.steamgifts.com/user/chOOkity",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "chOOkity",
+      "hltbHours": 29.2,
+      "points": 50,
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
+    },
+    {
+      "code": "ishte",
+      "url": "https://www.steamgifts.com/giveaway/ishte/wanderstop",
+      "title": "Wanderstop",
+      "creatorUsername": "DeliberateTaco",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/DeliberateTaco",
+      "appId": 1299460,
+      "steamAppUrl": "https://store.steampowered.com/app/1299460?utm_source=SteamGifts",
+      "entriesCount": 5,
+      "endDate": "2025-03-31T22:16:35.000Z",
+      "winners": [
+        {
+          "username": "Ernesttico",
+          "profileUrl": "https://www.steamgifts.com/user/Ernesttico",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "Ernesttico",
+      "hltbHours": 10.41,
+      "points": 25,
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
+    },
+    {
+      "code": "dT8wp",
+      "url": "https://www.steamgifts.com/giveaway/dT8wp/assassins-creed-shadows",
+      "title": "Assassin’s Creed Shadows",
+      "creatorUsername": "BojanNS987",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/BojanNS987",
+      "appId": 3159330,
+      "steamAppUrl": "https://store.steampowered.com/app/3159330?utm_source=SteamGifts",
+      "entriesCount": 5,
+      "endDate": "2025-03-31T18:46:26.000Z",
+      "winners": [
+        {
+          "username": "DogOnSG",
+          "profileUrl": "https://www.steamgifts.com/user/DogOnSG",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "DogOnSG",
+      "points": 50,
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "JyI0M",
@@ -9022,15 +10465,48 @@
       "appId": 1299460,
       "steamAppUrl": "https://store.steampowered.com/app/1299460?utm_source=SteamGifts",
       "entriesCount": 8,
-      "endDate": "2025-03-30T19:00:00.000Z",
-      "winners": [],
+      "endDate": "2025-03-14T17:42:53.000Z",
+      "winners": [
+        {
+          "username": "chOOkity",
+          "profileUrl": "https://www.steamgifts.com/user/chOOkity",
+          "status": "Won"
+        }
+      ],
       "resultStatus": "won",
       "resultLabel": "chOOkity",
       "hltbHours": 10.41,
-      "points": 0,
+      "points": 25,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayKindChecked": true
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
+    },
+    {
+      "code": "x7G0p",
+      "url": "https://www.steamgifts.com/giveaway/x7G0p/lost-records-bloom-rage",
+      "title": "Lost Records: Bloom & Rage",
+      "creatorUsername": "Ernesttico",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/Ernesttico",
+      "appId": 1902960,
+      "steamAppUrl": "https://store.steampowered.com/app/1902960?utm_source=SteamGifts",
+      "entriesCount": 9,
+      "endDate": "2025-03-14T17:40:54.000Z",
+      "winners": [
+        {
+          "username": "Skull18",
+          "profileUrl": "https://www.steamgifts.com/user/Skull18",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "Skull18",
+      "hltbHours": 11.19,
+      "points": 40,
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false
     },
     {
       "code": "23bD7",
@@ -9702,7 +11178,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "DogOnSG",
-      "hltbHours": 6.0
+      "hltbHours": 6
     },
     {
       "code": "S5eN8",
@@ -10791,7 +12267,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "Youdontknow",
-      "hltbHours": 2.0
+      "hltbHours": 2
     },
     {
       "code": "6wbfv",
@@ -12076,7 +13552,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "Youdontknow",
-      "hltbHours": 5.0
+      "hltbHours": 5
     },
     {
       "code": "qYnRE",
@@ -12139,7 +13615,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "Ernesttico",
-      "hltbHours": 50.0
+      "hltbHours": 50
     },
     {
       "code": "RV8yD",
@@ -13040,7 +14516,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "Oozyyy",
-      "hltbHours": 25.0
+      "hltbHours": 25
     },
     {
       "code": "i1eHu",
@@ -13221,7 +14697,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "xMisiu",
-      "hltbHours": 25.0
+      "hltbHours": 25
     },
     {
       "code": "kPyfA",
@@ -13325,7 +14801,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "leniu",
-      "hltbHours": 11.0
+      "hltbHours": 11
     },
     {
       "code": "dCrp0",
@@ -17480,7 +18956,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "leniu",
-      "hltbHours": 5.0
+      "hltbHours": 5
     },
     {
       "code": "zjr75",
@@ -17815,7 +19291,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "eledhrim",
-      "hltbHours": 25.0
+      "hltbHours": 25
     },
     {
       "code": "zEbCv",
@@ -17878,7 +19354,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "Kodeta",
-      "hltbHours": 5.0
+      "hltbHours": 5
     },
     {
       "code": "BbA3f",
@@ -18213,7 +19689,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "chOOkity",
-      "hltbHours": 5.0
+      "hltbHours": 5
     },
     {
       "code": "Gwrzm",
@@ -19224,7 +20700,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "Horseflesh",
-      "hltbHours": 25.0
+      "hltbHours": 25
     },
     {
       "code": "RbzIR",
@@ -22488,7 +23964,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "Youdontknow",
-      "hltbHours": 10.0
+      "hltbHours": 10
     },
     {
       "code": "tIR9T",
@@ -23299,7 +24775,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "Oozyyy",
-      "hltbHours": 8.0
+      "hltbHours": 8
     },
     {
       "code": "ZuX2I",
@@ -23654,7 +25130,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "kasztoix",
-      "hltbHours": 25.0
+      "hltbHours": 25
     },
     {
       "code": "szmET",
@@ -27738,7 +29214,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "chOOkity",
-      "hltbHours": 96.0
+      "hltbHours": 96
     },
     {
       "code": "YyQ41",
@@ -33667,7 +35143,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "Wintermute101",
-      "hltbHours": 2.0
+      "hltbHours": 2
     },
     {
       "code": "Codq4",
@@ -35019,7 +36495,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "Deleted-5176114",
-      "hltbHours": 10.0
+      "hltbHours": 10
     },
     {
       "code": "glk58",
@@ -42277,7 +43753,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "leniu",
-      "hltbHours": 18.0
+      "hltbHours": 18
     },
     {
       "code": "8pHft",
@@ -47565,7 +49041,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "MachinesAreHuman",
-      "hltbHours": 2.0
+      "hltbHours": 2
     },
     {
       "code": "uyRLe",
@@ -48018,7 +49494,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "MachinesAreHuman",
-      "hltbHours": 10.0
+      "hltbHours": 10
     },
     {
       "code": "2csbQ",
@@ -50401,7 +51877,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "Youdontknow",
-      "hltbHours": 3.0
+      "hltbHours": 3
     },
     {
       "code": "89up0",
@@ -50478,7 +51954,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "kasztoix",
-      "hltbHours": 3.0
+      "hltbHours": 3
     },
     {
       "code": "EbAyL",
@@ -57865,7 +59341,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "skAd42",
-      "hltbHours": 3.0
+      "hltbHours": 3
     },
     {
       "code": "SPH7R",
@@ -60467,7 +61943,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "Fenchurch",
-      "hltbHours": 3.0
+      "hltbHours": 3
     },
     {
       "code": "bAqdf",
@@ -61427,7 +62903,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "Gladmore",
-      "hltbHours": 18.0
+      "hltbHours": 18
     },
     {
       "code": "lGiGb",
@@ -61859,7 +63335,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "Deleted-6983004",
-      "hltbHours": 12.0
+      "hltbHours": 12
     },
     {
       "code": "WuBP3",
@@ -63437,7 +64913,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "Skull18",
-      "hltbHours": 6.0
+      "hltbHours": 6
     },
     {
       "code": "OyD5n",
@@ -63563,7 +65039,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "Espo",
-      "hltbHours": 39.0
+      "hltbHours": 39
     },
     {
       "code": "2lOP9",
@@ -71226,7 +72702,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "HBRugeO",
-      "hltbHours": 11.0
+      "hltbHours": 11
     },
     {
       "code": "rHtvw",
@@ -71896,7 +73372,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "spacepower",
-      "hltbHours": 6.0
+      "hltbHours": 6
     },
     {
       "code": "GCNSv",
@@ -74862,7 +76338,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "OmniNerdZ",
-      "hltbHours": 10.0
+      "hltbHours": 10
     },
     {
       "code": "qsdOo",
@@ -75322,7 +76798,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "AJIam",
-      "hltbHours": 10.0
+      "hltbHours": 10
     },
     {
       "code": "rGu2F",
@@ -76406,7 +77882,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "varmas",
-      "hltbHours": 46.0
+      "hltbHours": 46
     },
     {
       "code": "xHGPu",
@@ -76679,7 +78155,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "burntreynolds444",
-      "hltbHours": 12.0
+      "hltbHours": 12
     },
     {
       "code": "Sa98N",
@@ -77241,7 +78717,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "Koalix",
-      "hltbHours": 15.0
+      "hltbHours": 15
     },
     {
       "code": "aNSYb",
@@ -77615,7 +79091,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "ercalote",
-      "hltbHours": 9.0
+      "hltbHours": 9
     },
     {
       "code": "dUH2R",
@@ -81750,7 +83226,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "AJIam",
-      "hltbHours": 17.0
+      "hltbHours": 17
     },
     {
       "code": "Fx89z",
@@ -83490,7 +84966,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "Deleted-9574964",
-      "hltbHours": 2.0
+      "hltbHours": 2
     },
     {
       "code": "sXK7Y",
@@ -85690,7 +87166,7 @@
       ],
       "resultStatus": "won",
       "resultLabel": "zettaivanugen",
-      "hltbHours": 21.0
+      "hltbHours": 21
     },
     {
       "code": "QTocj",
@@ -87411,6 +88887,14 @@
       "winDate": "2025-06-26T20:12:46.000Z"
     },
     {
+      "giveawayCode": "BCqGd",
+      "title": "Sea of Stars",
+      "appId": 1244090,
+      "winnerUsername": "xMisiu",
+      "creatorUsername": "Koalala",
+      "winDate": "2025-06-26T20:00:03.000Z"
+    },
+    {
       "giveawayCode": "ztikS",
       "title": "Cyber Knights: Flashpoint",
       "appId": 1021210,
@@ -87483,12 +88967,84 @@
       "winDate": "2025-06-26T18:01:53.000Z"
     },
     {
+      "giveawayCode": "NnDNP",
+      "title": "Hell is Us",
+      "appId": 1620730,
+      "winnerUsername": "leniu",
+      "creatorUsername": "burntreynolds444",
+      "winDate": "2025-06-26T18:01:27.000Z"
+    },
+    {
       "giveawayCode": "wv5Uq",
       "title": "BRAVELY DEFAULT II",
       "appId": 1446650,
       "winnerUsername": "BojanNS987",
       "creatorUsername": "Saikania",
       "winDate": "2025-06-26T17:54:41.000Z"
+    },
+    {
+      "giveawayCode": "pLrEL",
+      "title": "DELTARUNE",
+      "appId": 1671210,
+      "winnerUsername": "BojanNS987",
+      "creatorUsername": "Wintermute101",
+      "winDate": "2025-06-26T17:53:14.000Z"
+    },
+    {
+      "giveawayCode": "TQCB5",
+      "title": "Stray",
+      "appId": 1332010,
+      "winnerUsername": "Krlesnik",
+      "creatorUsername": "Saikania",
+      "winDate": "2025-06-26T17:49:00.000Z"
+    },
+    {
+      "giveawayCode": "KXV1N",
+      "title": "The Precinct",
+      "appId": 490110,
+      "winnerUsername": "Ernesttico",
+      "creatorUsername": "Wintermute101",
+      "winDate": "2025-06-26T17:48:11.000Z"
+    },
+    {
+      "giveawayCode": "T3MEG",
+      "title": "Keep Driving",
+      "appId": 2756920,
+      "winnerUsername": "BojanNS987",
+      "creatorUsername": "Wintermute101",
+      "winDate": "2025-06-26T17:42:29.000Z"
+    },
+    {
+      "giveawayCode": "bWuX5",
+      "title": "Borderlands 4",
+      "appId": 1285190,
+      "winnerUsername": "zettaivanugen",
+      "creatorUsername": "BojanNS987",
+      "winDate": "2025-06-26T17:36:09.000Z"
+    },
+    {
+      "giveawayCode": "Gy0oM",
+      "title": "METAL GEAR SOLID Δ: SNAKE EATER",
+      "appId": 2417610,
+      "winnerUsername": "chOOkity",
+      "creatorUsername": "BojanNS987",
+      "winDate": "2025-06-26T17:35:33.000Z"
+    },
+    {
+      "giveawayCode": "d2f3X",
+      "title": "Clair Obscur: Expedition 33",
+      "appId": 1903340,
+      "winnerUsername": "DeliberateTaco",
+      "creatorUsername": "BojanNS987",
+      "winDate": "2025-06-26T17:34:34.000Z"
+    },
+    {
+      "giveawayCode": "pZvb6",
+      "title": "Red Dead Redemption",
+      "appId": 2668510,
+      "winnerUsername": "leniu",
+      "creatorUsername": "BojanNS987",
+      "winDate": "2025-06-26T17:33:50.000Z"
     },
     {
       "giveawayCode": "WaeNS",
@@ -87505,6 +89061,14 @@
       "winnerUsername": "Krlesnik",
       "creatorUsername": "leniu",
       "winDate": "2025-06-26T17:07:14.000Z"
+    },
+    {
+      "giveawayCode": "9xdRI",
+      "title": "NINJA GAIDEN 4",
+      "appId": 2627260,
+      "winnerUsername": "BojanNS987",
+      "creatorUsername": "burntreynolds444",
+      "winDate": "2025-06-26T17:05:39.000Z"
     },
     {
       "giveawayCode": "XUrRM",
@@ -87531,6 +89095,14 @@
       "winDate": "2025-06-26T16:31:44.000Z"
     },
     {
+      "giveawayCode": "PkcHZ",
+      "title": "Lost Records: Bloom & Rage",
+      "appId": 1902960,
+      "winnerUsername": "chOOkity",
+      "creatorUsername": "Krlesnik",
+      "winDate": "2025-06-22T11:50:09.000Z"
+    },
+    {
       "giveawayCode": "wI7EE",
       "title": "DELTARUNE",
       "appId": 1671210,
@@ -87545,6 +89117,14 @@
       "winnerUsername": "DogOnSG",
       "creatorUsername": "WNDRLST",
       "winDate": "2025-06-12T08:23:14.000Z"
+    },
+    {
+      "giveawayCode": "x3Klc",
+      "title": "Legacy of Kain Soul Reaver 1&2 Remast...",
+      "appId": 2521380,
+      "winnerUsername": "steveywonder75",
+      "creatorUsername": "BojanNS987",
+      "winDate": "2025-06-04T08:16:10.000Z"
     },
     {
       "giveawayCode": "IrKLd",
@@ -87625,6 +89205,302 @@
       "winnerUsername": "DeliberateTaco",
       "creatorUsername": "leniu",
       "winDate": "2025-06-01T07:53:15.000Z"
+    },
+    {
+      "giveawayCode": "XL7zN",
+      "title": "The Precinct",
+      "appId": 490110,
+      "winnerUsername": "eledhrim",
+      "creatorUsername": "Wintermute101",
+      "winDate": "2025-05-31T06:47:30.000Z"
+    },
+    {
+      "giveawayCode": "zYKdC",
+      "title": "WUCHANG: Fallen Feathers",
+      "appId": 2277560,
+      "winnerUsername": "Oozyyy",
+      "creatorUsername": "Ernesttico",
+      "winDate": "2025-05-25T21:21:00.000Z"
+    },
+    {
+      "giveawayCode": "6yU4n",
+      "title": "Evil West",
+      "appId": 1065310,
+      "winnerUsername": "LittleB",
+      "creatorUsername": "Krlesnik",
+      "winDate": "2025-05-24T08:42:27.000Z"
+    },
+    {
+      "giveawayCode": "VJMc9",
+      "title": "The Precinct",
+      "appId": 490110,
+      "winnerUsername": "BojanNS987",
+      "creatorUsername": "zettaivanugen",
+      "winDate": "2025-05-21T07:23:18.000Z"
+    },
+    {
+      "giveawayCode": "IVfRE",
+      "title": "The Thaumaturge",
+      "appId": 1684350,
+      "winnerUsername": "ElMatadorYTyrannos",
+      "creatorUsername": "DeliberateTaco",
+      "winDate": "2025-05-16T14:05:53.000Z"
+    },
+    {
+      "giveawayCode": "djAmk",
+      "title": "Shin Megami Tensei V: Vengeance",
+      "appId": 1875830,
+      "winnerUsername": "Wintermute101",
+      "creatorUsername": "Youdontknow",
+      "winDate": "2025-05-14T10:21:18.000Z"
+    },
+    {
+      "giveawayCode": "1GlTp",
+      "title": "The Plucky Squire",
+      "appId": 1627570,
+      "winnerUsername": "DogOnSG",
+      "creatorUsername": "WNDRLST",
+      "winDate": "2025-05-14T09:53:23.000Z"
+    },
+    {
+      "giveawayCode": "8CkPj",
+      "title": "Metaphor: ReFantazio",
+      "appId": 2679460,
+      "winnerUsername": "DogOnSG",
+      "creatorUsername": "Oozyyy",
+      "winDate": "2025-05-12T22:32:43.000Z"
+    },
+    {
+      "giveawayCode": "8la0R",
+      "title": "Amerzone - The Explorer's Legacy",
+      "appId": 2429190,
+      "winnerUsername": "DeliberateTaco",
+      "creatorUsername": "leniu",
+      "winDate": "2025-05-05T21:27:38.000Z"
+    },
+    {
+      "giveawayCode": "srBY1",
+      "title": "Metal Slug Tactics",
+      "appId": 1590760,
+      "winnerUsername": "burntreynolds444",
+      "creatorUsername": "chOOkity",
+      "winDate": "2025-05-05T07:40:29.000Z"
+    },
+    {
+      "giveawayCode": "tG1li",
+      "title": "Clair Obscur: Expedition 33",
+      "appId": 1903340,
+      "winnerUsername": "Youdontknow",
+      "creatorUsername": "chOOkity",
+      "winDate": "2025-05-05T07:26:57.000Z"
+    },
+    {
+      "giveawayCode": "zuQiZ",
+      "title": "Wanderstop",
+      "appId": 1299460,
+      "winnerUsername": "DeliberateTaco",
+      "creatorUsername": "Wintermute101",
+      "winDate": "2025-05-01T18:01:04.000Z"
+    },
+    {
+      "giveawayCode": "wv8G4",
+      "title": "DOOM: The Dark Ages",
+      "appId": 3017860,
+      "winnerUsername": "leniu",
+      "creatorUsername": "burntreynolds444",
+      "winDate": "2025-05-01T15:23:33.000Z"
+    },
+    {
+      "giveawayCode": "GeTI9",
+      "title": "Into the Dead: Our Darkest Days",
+      "appId": 2239710,
+      "winnerUsername": "Horseflesh",
+      "creatorUsername": "DeliberateTaco",
+      "winDate": "2025-05-01T13:52:07.000Z"
+    },
+    {
+      "giveawayCode": "pzZOS",
+      "title": "ELDEN RING NIGHTREIGN",
+      "appId": 2622380,
+      "winnerUsername": "Horseflesh",
+      "creatorUsername": "BojanNS987",
+      "winDate": "2025-05-01T13:23:37.000Z"
+    },
+    {
+      "giveawayCode": "9mCfa",
+      "title": "Promise Mascot Agency",
+      "appId": 2585830,
+      "winnerUsername": "WNDRLST",
+      "creatorUsername": "Horseflesh",
+      "winDate": "2025-05-01T12:10:38.000Z"
+    },
+    {
+      "giveawayCode": "FbxDh",
+      "title": "Deliver At All Costs",
+      "appId": 1880610,
+      "winnerUsername": "WNDRLST",
+      "creatorUsername": "Saikania",
+      "winDate": "2025-05-01T10:56:36.000Z"
+    },
+    {
+      "giveawayCode": "hfaC1",
+      "title": "Suikoden I&II HD Remaster Gate Rune a...",
+      "appId": 1932640,
+      "winnerUsername": "leniu",
+      "creatorUsername": "DogOnSG",
+      "winDate": "2025-05-01T08:38:04.000Z"
+    },
+    {
+      "giveawayCode": "thn7B",
+      "title": "The Elder Scrolls IV: Oblivion Remast...",
+      "appId": 2623190,
+      "winnerUsername": "leniu",
+      "creatorUsername": "eledhrim",
+      "winDate": "2025-04-30T20:08:33.000Z"
+    },
+    {
+      "giveawayCode": "VtIvk",
+      "title": "Old Skies",
+      "appId": 1346360,
+      "winnerUsername": "DeliberateTaco",
+      "creatorUsername": "zettaivanugen",
+      "winDate": "2025-04-25T22:57:23.000Z"
+    },
+    {
+      "giveawayCode": "mceGt",
+      "title": "ELDEN RING NIGHTREIGN",
+      "appId": 2622380,
+      "winnerUsername": "leniu",
+      "creatorUsername": "Youdontknow",
+      "winDate": "2025-04-25T02:29:54.000Z"
+    },
+    {
+      "giveawayCode": "UxcEs",
+      "title": "AI LIMIT",
+      "appId": 2407270,
+      "winnerUsername": "leniu",
+      "creatorUsername": "Oozyyy",
+      "winDate": "2025-04-14T18:18:26.000Z"
+    },
+    {
+      "giveawayCode": "4Kwjb",
+      "title": "Blue Prince",
+      "appId": 1569580,
+      "winnerUsername": "chOOkity",
+      "creatorUsername": "WNDRLST",
+      "winDate": "2025-04-14T10:24:09.000Z"
+    },
+    {
+      "giveawayCode": "4Bj1b",
+      "title": "Schedule I",
+      "appId": 3164500,
+      "winnerUsername": "Horseflesh",
+      "creatorUsername": "Ernesttico",
+      "winDate": "2025-04-10T17:26:02.000Z"
+    },
+    {
+      "giveawayCode": "QbQrc",
+      "title": "Tomb Raider I-III Remastered Starring...",
+      "appId": 2478970,
+      "winnerUsername": "en7erpr1se",
+      "creatorUsername": "BojanNS987",
+      "winDate": "2025-04-10T09:19:20.000Z"
+    },
+    {
+      "giveawayCode": "eLJpO",
+      "title": "DREDGE",
+      "appId": 1562430,
+      "winnerUsername": "axlnase",
+      "creatorUsername": "BojanNS987",
+      "winDate": "2025-04-10T09:03:03.000Z"
+    },
+    {
+      "giveawayCode": "Za8zj",
+      "title": "inZOI",
+      "appId": 2456740,
+      "winnerUsername": "zettaivanugen",
+      "creatorUsername": "Saikania",
+      "winDate": "2025-04-02T20:50:50.000Z"
+    },
+    {
+      "giveawayCode": "0QaN1",
+      "title": "Metaphor: ReFantazio",
+      "appId": 2679460,
+      "winnerUsername": "Wintermute101",
+      "creatorUsername": "chOOkity",
+      "winDate": "2025-04-02T11:28:57.000Z"
+    },
+    {
+      "giveawayCode": "F4aA7",
+      "title": "Lost Records: Bloom & Rage",
+      "appId": 1902960,
+      "winnerUsername": "Saikania",
+      "creatorUsername": "Wintermute101",
+      "winDate": "2025-04-01T17:11:18.000Z"
+    },
+    {
+      "giveawayCode": "fqKqw",
+      "title": "Disney Epic Mickey: Rebrushed",
+      "appId": 1522160,
+      "winnerUsername": "chOOkity",
+      "creatorUsername": "leniu",
+      "winDate": "2025-04-01T10:15:48.000Z"
+    },
+    {
+      "giveawayCode": "GPv2c",
+      "title": "The First Berserker: Khazan",
+      "appId": 2680010,
+      "winnerUsername": "Youdontknow",
+      "creatorUsername": "DogOnSG",
+      "winDate": "2025-04-01T09:47:23.000Z"
+    },
+    {
+      "giveawayCode": "lltN3",
+      "title": "Atomfall",
+      "appId": 801800,
+      "winnerUsername": "burntreynolds444",
+      "creatorUsername": "Horseflesh",
+      "winDate": "2025-04-01T09:21:24.000Z"
+    },
+    {
+      "giveawayCode": "g9zfs",
+      "title": "Clair Obscur: Expedition 33",
+      "appId": 1903340,
+      "winnerUsername": "chOOkity",
+      "creatorUsername": "burntreynolds444",
+      "winDate": "2025-04-01T00:21:54.000Z"
+    },
+    {
+      "giveawayCode": "ishte",
+      "title": "Wanderstop",
+      "appId": 1299460,
+      "winnerUsername": "Ernesttico",
+      "creatorUsername": "DeliberateTaco",
+      "winDate": "2025-03-31T22:16:35.000Z"
+    },
+    {
+      "giveawayCode": "dT8wp",
+      "title": "Assassin’s Creed Shadows",
+      "appId": 3159330,
+      "winnerUsername": "DogOnSG",
+      "creatorUsername": "BojanNS987",
+      "winDate": "2025-03-31T18:46:26.000Z"
+    },
+    {
+      "giveawayCode": "JyI0M",
+      "title": "Wanderstop",
+      "appId": 1299460,
+      "winnerUsername": "chOOkity",
+      "creatorUsername": "Ernesttico",
+      "winDate": "2025-03-14T17:42:53.000Z"
+    },
+    {
+      "giveawayCode": "x7G0p",
+      "title": "Lost Records: Bloom & Rage",
+      "appId": 1902960,
+      "winnerUsername": "Skull18",
+      "creatorUsername": "Ernesttico",
+      "winDate": "2025-03-14T17:40:54.000Z"
     },
     {
       "giveawayCode": "23bD7",
@@ -116651,6 +118527,6 @@
       "winDate": "2016-08-26T06:01:36.000Z"
     }
   ],
-  "savedAt": "2026-05-11T15:37:01.672462+00:00",
-  "mergedAt": "2026-05-11T15:37:01.672468+00:00"
+  "savedAt": "2026-05-12T12:52:51.121129+00:00",
+  "mergedAt": "2026-05-12T12:52:51.121134+00:00"
 }

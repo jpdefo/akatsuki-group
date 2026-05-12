@@ -90,6 +90,31 @@
                 Entry snapshots keep updating while a giveaway is open, then one final post-close fetch marks the giveaway as finalized.
               </p>
             </div>
+            <div class="section-filters">
+              <label class="inline-filter">
+                Sort
+                <select id="summer-event-sort">
+                  <option value="ended-desc">Latest first</option>
+                  <option value="ended-asc">Oldest first</option>
+                  <option value="points-desc">Highest base points</option>
+                  <option value="points-asc">Lowest base points</option>
+                  <option value="entries-desc">Most tracked entries</option>
+                  <option value="entries-asc">Least tracked entries</option>
+                  <option value="creator-asc">Creator A-Z</option>
+                  <option value="creator-desc">Creator Z-A</option>
+                  <option value="title-asc">Title A-Z</option>
+                  <option value="title-desc">Title Z-A</option>
+                </select>
+              </label>
+              <label class="inline-filter">
+                Creator
+                <input id="summer-event-creator-filter" type="search" placeholder="Filter by creator" />
+              </label>
+              <label class="inline-filter">
+                Winner
+                <input id="summer-event-winner-filter" type="search" placeholder="Filter by winner" />
+              </label>
+            </div>
           </div>
           <div class="table-wrap">
             <table class="dense-table">

@@ -101,6 +101,9 @@ const elements = {
   cycleGiveawaysTable: document.querySelector("#cycle-giveaways-table"),
   cycleWinsTable: document.querySelector("#cycle-wins-table"),
   summerEventFilter: document.querySelector("#summer-event-filter"),
+  summerEventSort: document.querySelector("#summer-event-sort"),
+  summerEventCreatorFilter: document.querySelector("#summer-event-creator-filter"),
+  summerEventWinnerFilter: document.querySelector("#summer-event-winner-filter"),
   summerEventDescription: document.querySelector("#summer-event-description"),
   summerEventSummaryCards: document.querySelector("#summer-event-summary-cards"),
   summerEventMemberGrid: document.querySelector("#summer-event-member-grid"),
@@ -154,6 +157,9 @@ function bindEvents() {
   elements.monthlySort?.addEventListener("change", () => renderProgressViews());
   elements.cycleFilter?.addEventListener("change", () => renderCycleHistoryPage());
   elements.summerEventFilter?.addEventListener("change", () => renderSummerEventPage());
+  elements.summerEventSort?.addEventListener("change", () => renderSummerEventPage());
+  elements.summerEventCreatorFilter?.addEventListener("input", () => renderSummerEventPage());
+  elements.summerEventWinnerFilter?.addEventListener("input", () => renderSummerEventPage());
   elements.activeUsersSort?.addEventListener("change", () => renderMemberBuckets());
 
   document.addEventListener("click", (event) => {
@@ -967,6 +973,8 @@ function renderSummerEventPage() {
                 ? buildBadge("warning", "AT LIMIT")
                 : buildBadge("success", "CAN ENTER");
             const activityBadge = participant.isActiveMember ? buildBadge("info", "Active member") : "";
+            const wonCreatedRatio = buildSummerEventRatioMarkup(participant.wonGiveaways, participant.createdGiveaways);
+            const wonPointsCreatedRatio = buildSummerEventRatioMarkup(participant.wonPoints, participant.createdPoints);
             return `
               <article class="member-card${participant.balance < 0 ? " negative" : participant.balance === 0 ? " neutral" : ""}">
                 <h3>${profileMarkup}</h3>
@@ -974,6 +982,8 @@ function renderSummerEventPage() {
                 <strong>${escapeHtml(formatPointBalance(participant.balance))}</strong>
                 <div class="member-card-meta">
                   <span>Created: ${participant.createdGiveaways} • +${participant.createdPoints.toLocaleString("en-US")} P</span>
+                  <span>Won: ${participant.wonGiveaways} • Won/Created ratio: ${wonCreatedRatio}</span>
+                  <span>Won base: +${participant.wonPoints.toLocaleString("en-US")} P • Base ratio: ${wonPointsCreatedRatio}</span>
                   <span>Entry bonus: +${participant.entryBonusPoints.toLocaleString("en-US")} P from ${participant.receivedEntries.toLocaleString("en-US")} entr${participant.receivedEntries === 1 ? "y" : "ies"}</span>
                   <span>Joined: ${participant.joinedGiveaways} • -${participant.entryCostPoints.toLocaleString("en-US")} P</span>
                 </div>
@@ -988,8 +998,23 @@ function renderSummerEventPage() {
   }
 
   if (elements.summerEventGiveawaysTable) {
-    elements.summerEventGiveawaysTable.innerHTML = giveaways.length
-      ? giveaways
+    const creatorFilter = String(elements.summerEventCreatorFilter?.value || "").trim().toLowerCase();
+    const winnerFilter = String(elements.summerEventWinnerFilter?.value || "").trim().toLowerCase();
+    const sortValue = String(elements.summerEventSort?.value || "ended-desc");
+    const filteredGiveaways = sortSummerEventGiveaways(
+      giveaways.filter((giveaway) => {
+        const creatorLabel = getSummerEventCreatorLabel(giveaway, summerEventMemberIndex).toLowerCase();
+        const winnerLabels = getSummerEventWinnerUsers(giveaway).map((winner) => winner.toLowerCase());
+        const matchesCreator = !creatorFilter || creatorLabel.includes(creatorFilter);
+        const matchesWinner = !winnerFilter || winnerLabels.some((winner) => winner.includes(winnerFilter));
+        return matchesCreator && matchesWinner;
+      }),
+      sortValue,
+      summerEventMemberIndex,
+    );
+
+    elements.summerEventGiveawaysTable.innerHTML = filteredGiveaways.length
+      ? filteredGiveaways
           .map((giveaway) => {
             const creator = summerEventMemberIndex.get(giveaway.creatorUsername) || null;
             const creatorLabel = creator?.displayName || giveaway.creatorUsername || "Unknown member";
@@ -1001,6 +1026,7 @@ function renderSummerEventPage() {
               ? `<a class="linked-title" href="${escapeHtml(giveawayUrl)}" target="_blank" rel="noreferrer">${escapeHtml(giveaway.title || "Untitled giveaway")}</a>`
               : escapeHtml(giveaway.title || "Untitled giveaway");
             const entryUsers = getSummerEventEntryUsers(giveaway);
+            const rewardPoints = getSummerEventBasePoints(giveaway);
             const winners = Array.isArray(giveaway.winners) ? giveaway.winners.map((winner) => winner.username).filter(Boolean) : [];
             const resultStatus = String(giveaway.resultStatus || "").toLowerCase();
             const resultBadge = resultStatus === "won"
@@ -1018,10 +1044,10 @@ function renderSummerEventPage() {
                 </td>
                 <td>
                   <strong>${creatorMarkup}</strong>
-                  <span class="meta-line">+${Number(giveaway.points || 0).toLocaleString("en-US")} P base</span>
+                  <span class="meta-line">+${rewardPoints.toLocaleString("en-US")} P base</span>
                 </td>
                 <td>
-                  <strong>${Number(giveaway.points || 0).toLocaleString("en-US")} P</strong>
+                  <strong>${rewardPoints.toLocaleString("en-US")} P</strong>
                   <span class="meta-line">Entry swing: ${getSummerEventEntryDelta(giveaway)} P</span>
                 </td>
                 <td>
@@ -1040,8 +1066,47 @@ function renderSummerEventPage() {
             `;
           })
           .join("")
-      : buildMessageRow(6, "No summer-event giveaways in this event.", "Choose another event or tag more giveaways as Summer event.");
+      : buildMessageRow(
+          6,
+          giveaways.length ? "No summer-event giveaways match the current filters." : "No summer-event giveaways in this event.",
+          giveaways.length ? "Adjust the creator, winner, or sort controls to see more giveaways." : "Choose another event or tag more giveaways as Summer event.",
+        );
   }
+}
+
+function getSummerEventCreatorLabel(giveaway, memberIndex = getSummerEventMemberIndex()) {
+  const creator = memberIndex.get(giveaway?.creatorUsername) || null;
+  return String(creator?.displayName || giveaway?.creatorUsername || "Unknown member").trim();
+}
+
+function sortSummerEventGiveaways(giveaways, sortValue, memberIndex = getSummerEventMemberIndex()) {
+  const sorted = giveaways.slice();
+  sorted.sort((left, right) => {
+    switch (sortValue) {
+      case "ended-asc":
+        return String(left.endDate || "").localeCompare(String(right.endDate || ""));
+      case "title-asc":
+        return String(left.title || "").localeCompare(String(right.title || ""), "en-US", { sensitivity: "base" });
+      case "title-desc":
+        return String(right.title || "").localeCompare(String(left.title || ""), "en-US", { sensitivity: "base" });
+      case "creator-asc":
+        return getSummerEventCreatorLabel(left, memberIndex).localeCompare(getSummerEventCreatorLabel(right, memberIndex), "en-US", { sensitivity: "base" });
+      case "creator-desc":
+        return getSummerEventCreatorLabel(right, memberIndex).localeCompare(getSummerEventCreatorLabel(left, memberIndex), "en-US", { sensitivity: "base" });
+      case "points-desc":
+        return Number(right.points || 0) - Number(left.points || 0) || String(right.endDate || "").localeCompare(String(left.endDate || ""));
+      case "points-asc":
+        return Number(left.points || 0) - Number(right.points || 0) || String(left.endDate || "").localeCompare(String(right.endDate || ""));
+      case "entries-desc":
+        return getSummerEventEntryUsers(right).length - getSummerEventEntryUsers(left).length || String(right.endDate || "").localeCompare(String(left.endDate || ""));
+      case "entries-asc":
+        return getSummerEventEntryUsers(left).length - getSummerEventEntryUsers(right).length || String(left.endDate || "").localeCompare(String(right.endDate || ""));
+      case "ended-desc":
+      default:
+        return String(right.endDate || "").localeCompare(String(left.endDate || ""));
+    }
+  });
+  return sorted;
 }
 
 function getTrackedSummerEventGiveaways() {
@@ -1125,6 +1190,8 @@ function computeSummerEventStandings(giveaways, memberIndex = getSummerEventMemb
         isActiveMember: Boolean(member?.isActiveMember),
         createdGiveaways: 0,
         createdPoints: 0,
+        wonGiveaways: 0,
+        wonPoints: 0,
         entryBonusPoints: 0,
         receivedEntries: 0,
         joinedGiveaways: 0,
@@ -1137,16 +1204,30 @@ function computeSummerEventStandings(giveaways, memberIndex = getSummerEventMemb
   };
 
   for (const giveaway of giveaways) {
+    if (!doesSummerEventGiveawayCountForStandings(giveaway)) {
+      continue;
+    }
     const entryUsers = getSummerEventEntryUsers(giveaway);
+    const winnerUsers = getSummerEventWinnerUsers(giveaway);
+    const basePoints = getSummerEventBasePoints(giveaway);
     const entryDelta = getSummerEventEntryDelta(giveaway);
     const creator = ensureParticipant(giveaway.creatorUsername);
 
     if (creator) {
       creator.createdGiveaways += 1;
-      creator.createdPoints += Number(giveaway.points || 0);
+      creator.createdPoints += basePoints;
       creator.entryBonusPoints += entryUsers.length * entryDelta;
       creator.receivedEntries += entryUsers.length;
-      creator.balance += Number(giveaway.points || 0) + entryUsers.length * entryDelta;
+      creator.balance += basePoints + entryUsers.length * entryDelta;
+    }
+
+    for (const username of winnerUsers) {
+      const winner = ensureParticipant(username);
+      if (!winner) {
+        continue;
+      }
+      winner.wonGiveaways += 1;
+      winner.wonPoints += basePoints;
     }
 
     for (const username of entryUsers) {
@@ -1181,8 +1262,33 @@ function getSummerEventEntryUsers(giveaway) {
   );
 }
 
+function getSummerEventWinnerUsers(giveaway) {
+  return Array.from(
+    new Set(
+      (Array.isArray(giveaway?.winners) ? giveaway.winners : [])
+        .map((winner) => String(winner?.username || "").trim())
+        .filter(Boolean),
+    ),
+  );
+}
+
+function doesSummerEventGiveawayCountForStandings(giveaway) {
+  return !isSummerEventNoWinners(giveaway);
+}
+
+function getSummerEventBasePoints(giveaway) {
+  return isSummerEventNoWinners(giveaway) ? 0 : Number(giveaway?.points || 0);
+}
+
 function getSummerEventEntryDelta(giveaway) {
+  if (isSummerEventNoWinners(giveaway)) {
+    return 0;
+  }
   return Number(giveaway?.points || 0) >= 30 ? 10 : 5;
+}
+
+function isSummerEventNoWinners(giveaway) {
+  return String(giveaway?.resultStatus || "").trim().toLowerCase() === "no_winners";
 }
 
 function buildSummerEventSnapshotBadge(giveaway) {
@@ -1197,6 +1303,40 @@ function buildSummerEventSnapshotBadge(giveaway) {
 function formatPointBalance(value) {
   const amount = Number(value || 0);
   return `${amount > 0 ? "+" : ""}${amount.toLocaleString("en-US")} P`;
+}
+
+function formatSummerEventRatio(numerator, denominator) {
+  const safeNumerator = Number(numerator || 0);
+  const safeDenominator = Number(denominator || 0);
+  if (safeDenominator <= 0) {
+    return "n/a";
+  }
+  return `${((safeNumerator / safeDenominator) * 100).toFixed(1)}%`;
+}
+
+function getSummerEventRatioTone(numerator, denominator) {
+  const safeNumerator = Number(numerator || 0);
+  const safeDenominator = Number(denominator || 0);
+  if (safeDenominator <= 0) {
+    return "";
+  }
+
+  const ratioPercent = (safeNumerator / safeDenominator) * 100;
+  if (ratioPercent <= 100) {
+    return "ratio-success";
+  }
+  if (ratioPercent <= 150) {
+    return "ratio-warning";
+  }
+  return "ratio-danger";
+}
+
+function buildSummerEventRatioMarkup(numerator, denominator) {
+  const label = formatSummerEventRatio(numerator, denominator);
+  const tone = getSummerEventRatioTone(numerator, denominator);
+  return tone
+    ? `<span class="ratio-value ${tone}">${escapeHtml(label)}</span>`
+    : escapeHtml(label);
 }
 
 function renderMemberBuckets() {

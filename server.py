@@ -54,7 +54,6 @@ STATIC_FILE_NAMES = [
     "bookmarklet-helper.html",
     "bookmarklet-helper.png",
     "akatsuki.png",
-    "working-dashboard.png",
 ]
 STATIC_DIRECTORIES = ["client"]
 PUBLIC_PAGE_FILES = [

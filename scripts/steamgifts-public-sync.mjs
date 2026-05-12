@@ -121,7 +121,28 @@ function isGiveawayEnded(giveaway) {
 }
 
 function shouldRefreshSummerEventEntries(giveaway) {
-  return Boolean(giveaway?.url) && isSummerEventKind(giveaway?.giveawayKind) && (!isGiveawayEnded(giveaway) || !giveaway.entriesFinalized);
+  return Boolean(giveaway?.url) && isSummerEventKind(giveaway?.giveawayKind) && !hasCompletedSummerEventEntryTracking(giveaway);
+}
+
+function hasCompletedSummerEventEntryTracking(giveaway) {
+  const resultStatus = String(giveaway?.resultStatus || "").trim().toLowerCase();
+  return isSummerEventKind(giveaway?.giveawayKind)
+    && (resultStatus === "no_winners" || (Boolean(giveaway?.entriesFinalized) && resultStatus === "won"));
+}
+
+function canReuseSummerEventMetadata(giveaway) {
+  return isSummerEventKind(giveaway?.giveawayKind)
+    && Boolean(giveaway?.appId)
+    && Boolean(giveaway?.giveawayKindChecked)
+    && Number(giveaway?.points || 0) > 0;
+}
+
+function isEntriesPageUrl(url) {
+  try {
+    return /\/entries(?:\/search)?$/.test(new URL(url).pathname);
+  } catch {
+    return false;
+  }
 }
 
 function needsGiveawayDetails(giveaway) {
@@ -132,6 +153,24 @@ function needsGiveawayDetails(giveaway) {
     shouldRefreshSummerEventEntries(giveaway) ||
     (ended && ["open", "awaiting_feedback", "unknown"].includes(String(giveaway.resultStatus || "")))
   );
+}
+
+function extractPointCost(text, title = "") {
+  const normalizedText = normalizeText(text || "");
+  const directMatch = normalizedText.match(/\((\d+)P\)/i);
+  if (directMatch) {
+    return Number(directMatch[1]) || 0;
+  }
+
+  const normalizedTitle = normalizeText(title);
+  if (normalizedTitle) {
+    const titleMatch = normalizedText.match(new RegExp(`${escapeRegex(normalizedTitle)}\\s*\\((\\d+)P\\)`, "i"));
+    if (titleMatch) {
+      return Number(titleMatch[1]) || 0;
+    }
+  }
+
+  return 0;
 }
 
 function mergeMembersWithGiveawayUsers(members, giveaways) {
@@ -339,6 +378,25 @@ async function collectGiveaways(page, groupBase, maxGiveawayPages, existingSync)
     let pageGiveaways = await page.evaluate(() => {
       function normalizeText(value) {
         return String(value || "").replace(/\s+/g, " ").trim();
+      }
+
+      function extractPointCost(text, title = "") {
+        const normalizedText = normalizeText(text || "");
+        const directMatch = normalizedText.match(/\((\d+)P\)/i);
+        if (directMatch) {
+          return Number(directMatch[1]) || 0;
+        }
+
+        const normalizedTitle = normalizeText(title);
+        if (normalizedTitle) {
+          const escapedTitle = normalizedTitle.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+          const titleMatch = normalizedText.match(new RegExp(`${escapedTitle}\\s*\\((\\d+)P\\)`, "i"));
+          if (titleMatch) {
+            return Number(titleMatch[1]) || 0;
+          }
+        }
+
+        return 0;
       }
 
       function escapeRegex(value) {
@@ -560,6 +618,7 @@ async function collectGiveaways(page, groupBase, maxGiveawayPages, existingSync)
           continue;
         }
 
+        const title = giveawayLink.textContent.trim();
         const primaryUser = getCreatorRecord(row);
         const secondaryUsers = getWinnerRecords(row, primaryUser);
         const rowText = normalizeText(row.textContent || "");
@@ -576,11 +635,12 @@ async function collectGiveaways(page, groupBase, maxGiveawayPages, existingSync)
         results.push({
           code: codeMatch[1],
           url: giveawayLink.href,
-          title: giveawayLink.textContent.trim(),
+          title,
           creatorUsername: creator ? creator.username : "",
           creatorProfileUrl: creator ? creator.profileUrl : "",
           appId,
           steamAppUrl,
+          points: extractPointCost(row.textContent || "", title),
           headerImageUrl: media.headerImageUrl,
           capsuleImageUrl: media.capsuleImageUrl,
           capsuleSmallUrl: media.capsuleSmallUrl,
@@ -630,7 +690,8 @@ async function fetchWinners(page, giveawayUrl) {
       return rows
         .map((row) => {
           const userLink = Array.from(row.querySelectorAll('a[href*="/user/"]')).find((anchor) =>
-            /\/user\/[^/]+/.test(anchor.getAttribute("href") || ""),
+            /\/user\/[^/]+/.test(anchor.getAttribute("href") || "")
+            && normalizeText(anchor.textContent || ""),
           );
           if (!userLink) {
             return null;
@@ -667,8 +728,47 @@ async function fetchWinners(page, giveawayUrl) {
 }
 
 async function enrichGiveaway(page, giveaway) {
-  await gotoSteamGifts(page, giveaway.url);
-  const details = await page.evaluate(() => {
+  const shouldLoadDetails = !canReuseSummerEventMetadata(giveaway);
+  let details = {
+    appId: giveaway.appId || null,
+    steamAppUrl: giveaway.steamAppUrl || "",
+    headerImageUrl: giveaway.headerImageUrl || "",
+    capsuleImageUrl: giveaway.capsuleImageUrl || "",
+    capsuleSmallUrl: giveaway.capsuleSmallUrl || "",
+    entriesCount: giveaway.entriesCount || 0,
+    points: Number(giveaway.points || 0),
+    endDate: giveaway.endDate || null,
+    regionRestricted: Boolean(giveaway.regionRestricted),
+    giveawayKind: giveaway.giveawayKind || "",
+    giveawayKindChecked: Boolean(giveaway.giveawayKindChecked),
+  };
+
+  if (shouldLoadDetails) {
+    await gotoSteamGifts(page, giveaway.url);
+    details = await page.evaluate(() => {
+    function extractPointCost(text, title = "") {
+      function normalizeText(value) {
+        return String(value || "").replace(/\s+/g, " ").trim();
+      }
+
+      const normalizedText = normalizeText(text || "");
+      const directMatch = normalizedText.match(/\((\d+)P\)/i);
+      if (directMatch) {
+        return Number(directMatch[1]) || 0;
+      }
+
+      const normalizedTitle = normalizeText(title);
+      if (normalizedTitle) {
+        const escapedTitle = normalizedTitle.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        const titleMatch = normalizedText.match(new RegExp(`${escapedTitle}\\s*\\((\\d+)P\\)`, "i"));
+        if (titleMatch) {
+          return Number(titleMatch[1]) || 0;
+        }
+      }
+
+      return 0;
+    }
+
     function extractAppInfo(container) {
       const storeLink = container.querySelector(
         'a[href*="store.steampowered.com/app/"], a[href*="store.steampowered.com/sub/"]',
@@ -765,27 +865,41 @@ async function enrichGiveaway(page, giveaway) {
     const media = extractSteamMedia(document.body, appId);
     const giveawayKind = detectGiveawayKindFromDescription(getGiveawayDescriptionText());
 
-    return {
-      appId,
-      steamAppUrl,
-      headerImageUrl: media.headerImageUrl,
-      capsuleImageUrl: media.capsuleImageUrl,
-      capsuleSmallUrl: media.capsuleSmallUrl,
-      entriesCount: Number.parseInt(String(featureMap.Entries || "").replace(/[^\d]/g, ""), 10) || 0,
-      points: Number.parseInt(String(featureMap.Points || "").replace(/[^\d]/g, ""), 10) || 0,
-      endDate: endTimestamp ? new Date(endTimestamp).toISOString() : null,
-      regionRestricted: /region/i.test(String(featureMap.Type || "")),
-      giveawayKind,
-      giveawayKindChecked: true,
-    };
-  });
+      return {
+        appId,
+        steamAppUrl,
+        headerImageUrl: media.headerImageUrl,
+        capsuleImageUrl: media.capsuleImageUrl,
+        capsuleSmallUrl: media.capsuleSmallUrl,
+        entriesCount: Number.parseInt(String(featureMap.Entries || "").replace(/[^\d]/g, ""), 10) || 0,
+        points: extractPointCost(document.body?.textContent || "", document.querySelector(".featured__heading")?.textContent || "") || 0,
+        endDate: endTimestamp ? new Date(endTimestamp).toISOString() : null,
+        regionRestricted: /region/i.test(String(featureMap.Type || "")),
+        giveawayKind,
+        giveawayKindChecked: true,
+      };
+    });
+  }
 
   const resolvedEndDate = giveaway.endDate || details.endDate || null;
   const resolvedGiveawayKind = details.giveawayKind || giveaway.giveawayKind || "";
-  const ended = Boolean(resolvedEndDate && new Date(resolvedEndDate).getTime() <= Date.now());
-  const entrySnapshot = isSummerEventKind(resolvedGiveawayKind) && (!ended || !giveaway.entriesFinalized)
+  const winners = await fetchWinners(page, giveaway.url);
+  const resolvedResultStatus = winners.length
+    ? "won"
+    : String(giveaway.resultStatus || "").trim().toLowerCase();
+  const resolvedResultLabel = winners.length
+    ? winners.map((winner) => winner.username).join(", ")
+    : giveaway.resultLabel || "";
+  const entrySnapshot = isSummerEventKind(resolvedGiveawayKind) && !hasCompletedSummerEventEntryTracking({
+    ...giveaway,
+    giveawayKind: resolvedGiveawayKind,
+    resultStatus: resolvedResultStatus,
+  })
     ? await fetchGiveawayEntries(page, giveaway.url)
     : null;
+  const hasTrackedWinnerEntries = Boolean(entrySnapshot?.users?.length);
+  const hasPersistedWinnerEntries = Array.isArray(giveaway.entryUsers) && giveaway.entryUsers.length > 0;
+  const shouldKeepWinnerSnapshot = resolvedResultStatus !== "won" || hasTrackedWinnerEntries;
 
   return {
     ...giveaway,
@@ -800,10 +914,24 @@ async function enrichGiveaway(page, giveaway) {
     regionRestricted: details.regionRestricted || giveaway.regionRestricted || false,
     giveawayKind: resolvedGiveawayKind,
     giveawayKindChecked: details.giveawayKindChecked || giveaway.giveawayKindChecked || false,
-    entryUsers: entrySnapshot ? entrySnapshot.users : Array.isArray(giveaway.entryUsers) ? giveaway.entryUsers : undefined,
-    entriesFinalized: entrySnapshot ? ended : Boolean(giveaway.entriesFinalized),
-    entriesSnapshotAt: entrySnapshot ? entrySnapshot.capturedAt : giveaway.entriesSnapshotAt || "",
-    winners: await fetchWinners(page, giveaway.url),
+    resultStatus: resolvedResultStatus,
+    resultLabel: resolvedResultLabel,
+    entryUsers:
+      shouldKeepWinnerSnapshot && entrySnapshot
+        ? entrySnapshot.users
+        : Array.isArray(giveaway.entryUsers)
+          ? giveaway.entryUsers
+          : undefined,
+    entriesFinalized:
+      resolvedResultStatus === "no_winners"
+      || (resolvedResultStatus === "won" && (hasTrackedWinnerEntries || (Boolean(giveaway.entriesFinalized) && hasPersistedWinnerEntries))),
+    entriesSnapshotAt:
+      shouldKeepWinnerSnapshot && entrySnapshot
+        ? entrySnapshot.capturedAt
+        : resolvedResultStatus === "won"
+          ? ""
+          : giveaway.entriesSnapshotAt || "",
+    winners,
   };
 }
 
@@ -814,12 +942,16 @@ async function fetchGiveawayEntries(page, giveawayUrl) {
   for (let pageNumber = 1; pageNumber <= 100; pageNumber += 1) {
     const url = pageNumber === 1 ? `${giveawayUrl}/entries` : `${giveawayUrl}/entries/search?page=${pageNumber}`;
     await gotoSteamGifts(page, url);
+    if (!isEntriesPageUrl(page.url())) {
+      return null;
+    }
     const pageEntries = await page.evaluate(() => {
       const rows = Array.from(document.querySelectorAll(".table__row-inner-wrap"));
       return rows
         .map((row) => {
           const userLink = Array.from(row.querySelectorAll('a[href*="/user/"]')).find((anchor) =>
-            /\/user\/[^/]+/.test(anchor.getAttribute("href") || ""),
+            /\/user\/[^/]+/.test(anchor.getAttribute("href") || "")
+            && normalizeText(anchor.textContent || ""),
           );
           if (!userLink) {
             return "";

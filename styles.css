@@ -214,6 +214,22 @@ h2 {
   line-height: 1.4;
 }
 
+.ratio-value {
+  font-weight: 700;
+}
+
+.ratio-value.ratio-success {
+  color: var(--success);
+}
+
+.ratio-value.ratio-warning {
+  color: var(--warning);
+}
+
+.ratio-value.ratio-danger {
+  color: var(--danger);
+}
+
 .giveaway-grid {
   display: grid;
   grid-auto-flow: column;
@@ -331,6 +347,15 @@ h2 {
 }
 
 .inline-filter select {
+  background: #0f131a;
+  border: 1px solid #313948;
+  color: var(--text);
+  border-radius: 12px;
+  padding: 9px 12px;
+  font: inherit;
+}
+
+.inline-filter input {
   background: #0f131a;
   border: 1px solid #313948;
   color: var(--text);
