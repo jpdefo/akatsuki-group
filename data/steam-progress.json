@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-12T13:21:23.100549+00:00",
+  "updatedAt": "2026-05-12T18:36:11.186958+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -6713,7 +6713,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-05-12T13:21:23.100513+00:00"
+      "checkedAt": "2026-05-12T18:36:11.186918+00:00"
     },
     {
       "username": "burntreynolds444",
@@ -8995,7 +8995,7 @@
       "achievementPercent": 0,
       "playtimeHours": 0.0,
       "error": null,
-      "checkedAt": "2026-05-12T13:21:23.100545+00:00",
+      "checkedAt": "2026-05-12T18:36:11.186954+00:00",
       "playtimeCheckedAt": "2026-05-11T06:27:47.697701+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -15516,6 +15516,24 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 1285190,
+      "title": "Borderlands 4",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/1285190/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 49,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "playtimeCheckedAt": null,
+      "playtimeSource": "",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "checkedAt": "2026-05-12T18:36:10.541211+00:00"
     },
     {
       "username": "Horseflesh",
@@ -28655,7 +28673,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-05-12T13:21:23.100535+00:00"
+      "checkedAt": "2026-05-12T18:36:11.186944+00:00"
     },
     {
       "username": "Saikania",
@@ -68534,12 +68552,12 @@
   "activeOnly": true,
   "refreshedMonth": "2026-05",
   "refreshedScope": "month",
-  "libraryUpdatedAt": "2026-05-12T13:21:22.904979+00:00",
+  "libraryUpdatedAt": "2026-05-12T18:36:10.338034+00:00",
   "libraryStats": {
-    "durationSeconds": 0.14,
-    "targetProfiles": 3,
+    "durationSeconds": 0.16,
+    "targetProfiles": 4,
     "refreshedProfiles": 0,
-    "reusedProfiles": 3,
+    "reusedProfiles": 4,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
@@ -68547,15 +68565,15 @@
     "totalPlaytimeRows": 86342
   },
   "stats": {
-    "durationSeconds": 0.33,
-    "targetWins": 3,
-    "uniqueProgressTargets": 3,
+    "durationSeconds": 1.02,
+    "targetWins": 4,
+    "uniqueProgressTargets": 4,
     "libraryPlaytimeHits": 3,
     "cachedReuses": 3,
-    "achievementSuccesses": 0,
+    "achievementSuccesses": 1,
     "achievementErrors": 0,
     "cachedFallbacks": 0,
-    "hltbTitlesRequested": 3,
+    "hltbTitlesRequested": 4,
     "hltbResultsAvailable": 3960
   }
 }

@@ -1,6 +1,6 @@
 {
   "source": "akatsuki-steamgifts-sync",
-  "syncedAt": "2026-05-12T13:21:18.812Z",
+  "syncedAt": "2026-05-12T18:36:07.255Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -2151,6 +2151,29 @@
   ],
   "giveaways": [
     {
+      "code": "vxYY4",
+      "url": "https://www.steamgifts.com/giveaway/vxYY4/subnautica-2",
+      "title": "Subnautica 2",
+      "creatorUsername": "Horseflesh",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/Horseflesh",
+      "appId": 1962700,
+      "steamAppUrl": "https://store.steampowered.com/app/1962700?utm_source=SteamGifts",
+      "points": 30,
+      "entriesCount": 0,
+      "endDate": "2026-05-12T18:26:22.000Z",
+      "winners": [],
+      "resultStatus": "open",
+      "resultLabel": "Open",
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayMonthOverride": "2026-05",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false,
+      "entriesSnapshotAt": "",
+      "steamStoreType": "app",
+      "steamStoreId": 1962700
+    },
+    {
       "code": "BN7J1",
       "url": "https://www.steamgifts.com/giveaway/BN7J1/borderlands-3-super-deluxe-edition",
       "title": "Borderlands 3: Super Deluxe Edition",
@@ -2169,7 +2192,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-05-12T13:20:59.800Z",
+      "entriesSnapshotAt": "2026-05-12T18:35:50.698Z",
       "steamStoreType": "sub",
       "steamStoreId": 427289,
       "steamPriceChecked": true,
@@ -2198,7 +2221,8 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 2582320
+      "steamStoreId": 2582320,
+      "giveawayMonthOverride": "2026-05"
     },
     {
       "code": "x8SJ2",
@@ -2219,7 +2243,8 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 2678080
+      "steamStoreId": 2678080,
+      "giveawayMonthOverride": "2026-05"
     },
     {
       "code": "XSQMJ",
@@ -2231,9 +2256,15 @@
       "steamAppUrl": "https://store.steampowered.com/app/1285190?utm_source=SteamGifts",
       "entriesCount": 3,
       "endDate": "2026-05-04T10:03:27.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "Horseflesh",
+          "profileUrl": "https://www.steamgifts.com/user/Horseflesh",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "Horseflesh",
       "hltbHours": 30.35,
       "points": 50,
       "regionRestricted": false,
@@ -2241,7 +2272,13 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 1285190
+      "steamStoreId": 1285190,
+      "steamPriceChecked": true,
+      "steamPriceCheckedAt": "2026-05-12T18:34:07.329777+00:00",
+      "steamPriceCurrency": "USD",
+      "steamListPriceCents": 6999,
+      "steamFinalPriceCents": 4199,
+      "steamPricePoints": 70
     },
     {
       "code": "pDPRK",
@@ -2263,7 +2300,8 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 686060
+      "steamStoreId": 686060,
+      "giveawayMonthOverride": "2026-05"
     },
     {
       "code": "8jrA5",
@@ -2311,7 +2349,8 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 3172700
+      "steamStoreId": 3172700,
+      "giveawayMonthOverride": "2026-05"
     },
     {
       "code": "kxEiu",
@@ -2330,7 +2369,7 @@
       "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
-      "giveawayMonthOverride": "2026-03",
+      "giveawayMonthOverride": "2026-05",
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
@@ -2355,7 +2394,8 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 2215200
+      "steamStoreId": 2215200,
+      "giveawayMonthOverride": "2026-05"
     },
     {
       "code": "Vq2Hc",
@@ -2377,7 +2417,8 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 3357650
+      "steamStoreId": 3357650,
+      "giveawayMonthOverride": "2026-05"
     },
     {
       "code": "R91uQ",
@@ -3039,7 +3080,13 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 2677660
+      "steamStoreId": 2677660,
+      "steamPriceChecked": true,
+      "steamPriceCheckedAt": "2026-05-12T18:34:08.633264+00:00",
+      "steamPriceCurrency": "USD",
+      "steamListPriceCents": 6999,
+      "steamFinalPriceCents": 6999,
+      "steamPricePoints": 70
     },
     {
       "code": "onN8N",
@@ -3066,7 +3113,13 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 3489700
+      "steamStoreId": 3489700,
+      "steamPriceChecked": true,
+      "steamPriceCheckedAt": "2026-05-12T18:33:54.058542+00:00",
+      "steamPriceCurrency": "USD",
+      "steamListPriceCents": 5999,
+      "steamFinalPriceCents": 5999,
+      "steamPricePoints": 60
     },
     {
       "code": "tA4L6",
@@ -3170,7 +3223,13 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 1392860
+      "steamStoreId": 1392860,
+      "steamPriceChecked": true,
+      "steamPriceCheckedAt": "2026-05-12T18:33:50.170987+00:00",
+      "steamPriceCurrency": "USD",
+      "steamListPriceCents": 5999,
+      "steamFinalPriceCents": 3959,
+      "steamPricePoints": 60
     },
     {
       "code": "Xk2A9",
@@ -3422,7 +3481,13 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 1941540
+      "steamStoreId": 1941540,
+      "steamPriceChecked": true,
+      "steamPriceCheckedAt": "2026-05-12T18:33:51.636366+00:00",
+      "steamPriceCurrency": "USD",
+      "steamListPriceCents": 5999,
+      "steamFinalPriceCents": 4799,
+      "steamPricePoints": 60
     },
     {
       "code": "1ioqU",
@@ -3534,7 +3599,13 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 2668510
+      "steamStoreId": 2668510,
+      "steamPriceChecked": true,
+      "steamPriceCheckedAt": "2026-05-12T18:34:07.790142+00:00",
+      "steamPriceCurrency": "USD",
+      "steamListPriceCents": 4999,
+      "steamFinalPriceCents": 4999,
+      "steamPricePoints": 50
     },
     {
       "code": "LgQJ6",
@@ -3561,7 +3632,13 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 1004640
+      "steamStoreId": 1004640,
+      "steamPriceChecked": true,
+      "steamPriceCheckedAt": "2026-05-12T18:34:01.121057+00:00",
+      "steamPriceCurrency": "USD",
+      "steamListPriceCents": 4999,
+      "steamFinalPriceCents": 4999,
+      "steamPricePoints": 50
     },
     {
       "code": "auhIy",
@@ -3729,7 +3806,13 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 2680010
+      "steamStoreId": 2680010,
+      "steamPriceChecked": true,
+      "steamPriceCheckedAt": "2026-05-12T18:33:56.909130+00:00",
+      "steamPriceCurrency": "USD",
+      "steamListPriceCents": 5999,
+      "steamFinalPriceCents": 5999,
+      "steamPricePoints": 60
     },
     {
       "code": "3Klb9",
@@ -3756,7 +3839,13 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 2623190
+      "steamStoreId": 2623190,
+      "steamPriceChecked": true,
+      "steamPriceCheckedAt": "2026-05-12T18:34:01.505480+00:00",
+      "steamPriceCurrency": "USD",
+      "steamListPriceCents": 4999,
+      "steamFinalPriceCents": 4999,
+      "steamPricePoints": 50
     },
     {
       "code": "8ADOY",
@@ -3812,7 +3901,13 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 3489700
+      "steamStoreId": 3489700,
+      "steamPriceChecked": true,
+      "steamPriceCheckedAt": "2026-05-12T18:33:54.058542+00:00",
+      "steamPriceCurrency": "USD",
+      "steamListPriceCents": 5999,
+      "steamFinalPriceCents": 5999,
+      "steamPricePoints": 60
     },
     {
       "code": "wsLa6",
@@ -3920,7 +4015,13 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 2677660
+      "steamStoreId": 2677660,
+      "steamPriceChecked": true,
+      "steamPriceCheckedAt": "2026-05-12T18:34:08.633264+00:00",
+      "steamPriceCurrency": "USD",
+      "steamListPriceCents": 6999,
+      "steamFinalPriceCents": 6999,
+      "steamPricePoints": 70
     },
     {
       "code": "paT3e",
@@ -4156,7 +4257,13 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 2417610
+      "steamStoreId": 2417610,
+      "steamPriceChecked": true,
+      "steamPriceCheckedAt": "2026-05-12T18:33:53.607815+00:00",
+      "steamPriceCurrency": "USD",
+      "steamListPriceCents": 6999,
+      "steamFinalPriceCents": 6999,
+      "steamPricePoints": 70
     },
     {
       "code": "sggkD",
@@ -4675,7 +4782,13 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 1608070
+      "steamStoreId": 1608070,
+      "steamPriceChecked": true,
+      "steamPriceCheckedAt": "2026-05-12T18:33:59.299133+00:00",
+      "steamPriceCurrency": "USD",
+      "steamListPriceCents": 4999,
+      "steamFinalPriceCents": 4999,
+      "steamPricePoints": 50
     },
     {
       "code": "t1axg",
@@ -4703,7 +4816,13 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 1941540
+      "steamStoreId": 1941540,
+      "steamPriceChecked": true,
+      "steamPriceCheckedAt": "2026-05-12T18:33:51.636366+00:00",
+      "steamPriceCurrency": "USD",
+      "steamListPriceCents": 5999,
+      "steamFinalPriceCents": 4799,
+      "steamPricePoints": 60
     },
     {
       "code": "fn63t",
@@ -4781,7 +4900,13 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 668580
+      "steamStoreId": 668580,
+      "steamPriceChecked": true,
+      "steamPriceCheckedAt": "2026-05-12T18:34:05.974698+00:00",
+      "steamPriceCurrency": "USD",
+      "steamListPriceCents": 5999,
+      "steamFinalPriceCents": 5999,
+      "steamPricePoints": 60
     },
     {
       "code": "uXSqW",
@@ -4809,7 +4934,13 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 2420110
+      "steamStoreId": 2420110,
+      "steamPriceChecked": true,
+      "steamPriceCheckedAt": "2026-05-12T18:33:55.460984+00:00",
+      "steamPriceCurrency": "USD",
+      "steamListPriceCents": 5999,
+      "steamFinalPriceCents": 5999,
+      "steamPricePoints": 60
     },
     {
       "code": "MQTKP",
@@ -4921,7 +5052,13 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 1903340
+      "steamStoreId": 1903340,
+      "steamPriceChecked": true,
+      "steamPriceCheckedAt": "2026-05-12T18:33:56.508462+00:00",
+      "steamPriceCurrency": "USD",
+      "steamListPriceCents": 4999,
+      "steamFinalPriceCents": 4999,
+      "steamPricePoints": 50
     },
     {
       "code": "uknvG",
@@ -5032,7 +5169,13 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 2531310
+      "steamStoreId": 2531310,
+      "steamPriceChecked": true,
+      "steamPriceCheckedAt": "2026-05-12T18:33:57.320133+00:00",
+      "steamPriceCurrency": "USD",
+      "steamListPriceCents": 4999,
+      "steamFinalPriceCents": 4999,
+      "steamPricePoints": 50
     },
     {
       "code": "pgQXh",
@@ -5166,7 +5309,13 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 1903340
+      "steamStoreId": 1903340,
+      "steamPriceChecked": true,
+      "steamPriceCheckedAt": "2026-05-12T18:33:56.508462+00:00",
+      "steamPriceCurrency": "USD",
+      "steamListPriceCents": 4999,
+      "steamFinalPriceCents": 4999,
+      "steamPricePoints": 50
     },
     {
       "code": "FpXmM",
@@ -5194,7 +5343,13 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 2679460
+      "steamStoreId": 2679460,
+      "steamPriceChecked": true,
+      "steamPriceCheckedAt": "2026-05-12T18:33:52.880335+00:00",
+      "steamPriceCurrency": "USD",
+      "steamListPriceCents": 6999,
+      "steamFinalPriceCents": 6999,
+      "steamPricePoints": 70
     },
     {
       "code": "kt3Pk",
@@ -5466,7 +5621,13 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 1941540
+      "steamStoreId": 1941540,
+      "steamPriceChecked": true,
+      "steamPriceCheckedAt": "2026-05-12T18:33:51.636366+00:00",
+      "steamPriceCurrency": "USD",
+      "steamListPriceCents": 5999,
+      "steamFinalPriceCents": 4799,
+      "steamPricePoints": 60
     },
     {
       "code": "5mcKW",
@@ -96313,6 +96474,14 @@
   ],
   "wins": [
     {
+      "giveawayCode": "XSQMJ",
+      "title": "Borderlands 4",
+      "appId": 1285190,
+      "winnerUsername": "Horseflesh",
+      "creatorUsername": "BojanNS987",
+      "winDate": "2026-05-04T10:03:27.000Z"
+    },
+    {
       "giveawayCode": "8jrA5",
       "title": "Pluto",
       "appId": 3057670,
@@ -127545,6 +127714,6 @@
       "winDate": "2016-08-26T06:01:36.000Z"
     }
   ],
-  "savedAt": "2026-05-12T13:21:18.873907+00:00",
-  "mergedAt": "2026-05-12T13:21:18.873916+00:00"
+  "savedAt": "2026-05-12T18:36:07.297159+00:00",
+  "mergedAt": "2026-05-12T18:36:07.297168+00:00"
 }
