@@ -1,6 +1,5 @@
 __pycache__/
 *.py[cod]
-data/steamgifts-sync.backup-*.json
 .env
 site/
 dist/
