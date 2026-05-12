@@ -1379,10 +1379,10 @@ function sortSummerEventEntryLedger(rows, sortValue) {
     switch (sortValue) {
       case "ended-asc":
         return String(left.giveaway.endDate || "").localeCompare(String(right.giveaway.endDate || ""));
-      case "deduction-desc":
-        return right.entryDelta - left.entryDelta || String(right.giveaway.endDate || "").localeCompare(String(left.giveaway.endDate || ""));
-      case "deduction-asc":
-        return left.entryDelta - right.entryDelta || String(left.giveaway.endDate || "").localeCompare(String(right.giveaway.endDate || ""));
+      case "points-desc":
+        return right.basePoints - left.basePoints || String(right.giveaway.endDate || "").localeCompare(String(left.giveaway.endDate || ""));
+      case "points-asc":
+        return left.basePoints - right.basePoints || String(left.giveaway.endDate || "").localeCompare(String(right.giveaway.endDate || ""));
       case "entrant-asc":
         return left.entrantLabel.localeCompare(right.entrantLabel, "en-US", { sensitivity: "base" }) || String(right.giveaway.endDate || "").localeCompare(String(left.giveaway.endDate || ""));
       case "creator-asc":
