@@ -6,9 +6,6 @@
     "giveaways": {
       "sg-XSQMJ": {
         "giveawayKindOverride": "extra"
-      },
-      "sg-Cufm2": {
-        "giveawayMonthOverride": "2026-03"
       }
     },
     "cycleMembers": {}
