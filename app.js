@@ -100,6 +100,11 @@ const elements = {
   cycleTable: document.querySelector("#cycle-table"),
   cycleGiveawaysTable: document.querySelector("#cycle-giveaways-table"),
   cycleWinsTable: document.querySelector("#cycle-wins-table"),
+  summerEventFilter: document.querySelector("#summer-event-filter"),
+  summerEventDescription: document.querySelector("#summer-event-description"),
+  summerEventSummaryCards: document.querySelector("#summer-event-summary-cards"),
+  summerEventMemberGrid: document.querySelector("#summer-event-member-grid"),
+  summerEventGiveawaysTable: document.querySelector("#summer-event-giveaways-table"),
   activeUsersTable: document.querySelector("#active-users-table"),
   activeUsersSort: document.querySelector("#active-users-sort"),
   inactiveUsersTable: document.querySelector("#inactive-users-table"),
@@ -148,6 +153,7 @@ function bindEvents() {
   });
   elements.monthlySort?.addEventListener("change", () => renderProgressViews());
   elements.cycleFilter?.addEventListener("change", () => renderCycleHistoryPage());
+  elements.summerEventFilter?.addEventListener("change", () => renderSummerEventPage());
   elements.activeUsersSort?.addEventListener("change", () => renderMemberBuckets());
 
   document.addEventListener("click", (event) => {
@@ -265,6 +271,7 @@ function render() {
   renderServerViews();
   renderProgressViews();
   renderCycleHistoryPage();
+  renderSummerEventPage();
   renderMemberBuckets();
 }
 
@@ -555,7 +562,7 @@ function renderCycleViews(selectedMonth) {
                 </label>
               </td>
               <td>
-                ${buildBadge(status.level, status.label)}
+                ${status.memberTagLabel ? `${buildBadge(status.memberTagLevel, status.memberTagLabel)} ` : ""}${buildBadge(status.level, status.label)}
                 <span class="meta-line">${escapeHtml(status.note)}</span>
               </td>
             </tr>
@@ -588,12 +595,13 @@ function renderCycleViews(selectedMonth) {
                   <select class="inline-select" data-giveaway-kind-select="true" data-giveaway-id="${giveaway.id}">
                     <option value="cycle" ${kind === "cycle" ? "selected" : ""}>Cycle</option>
                     <option value="extra" ${kind === "extra" ? "selected" : ""}>Extra</option>
+                    <option value="summer_event" ${kind === "summer_event" ? "selected" : ""}>Summer event</option>
                   </select>
                 </label>
-                <span class="meta-line">${kind === "extra" ? "Excluded from cycle requirements and standard rule checks." : "Counts toward cycle requirements for this month."}</span>
+                <span class="meta-line">${describeGiveawayKind(kind)}</span>
               </td>
               <td>${Number(giveaway.entriesCount || 0).toLocaleString("en-US")}</td>
-              <td>${buildBadge(kind === "extra" ? "info" : "success", kind === "extra" ? "Extra" : "Cycle")}</td>
+              <td>${buildBadge(getGiveawayKindBadgeLevel(kind), getGiveawayKindLabel(kind))}</td>
             </tr>
           `;
         })
@@ -808,7 +816,7 @@ function renderCycleHistoryMembersTable(selectedCycle, cycleMonths, cycleWins, c
               </label>
             </td>
             <td>
-              ${buildBadge(status.level, status.label)}
+              ${status.memberTagLabel ? `${buildBadge(status.memberTagLevel, status.memberTagLabel)} ` : ""}${buildBadge(status.level, status.label)}
               <span class="meta-line compact-meta-line">${escapeHtml(status.note)}</span>
             </td>
           </tr>
@@ -849,15 +857,346 @@ function renderCycleHistoryResultsTable(cycleGiveaways) {
                   <select class="inline-select" data-giveaway-kind-select="true" data-giveaway-id="${giveaway.id}">
                     <option value="cycle" ${kind === "cycle" ? "selected" : ""}>Cycle</option>
                     <option value="extra" ${kind === "extra" ? "selected" : ""}>Extra</option>
+                    <option value="summer_event" ${kind === "summer_event" ? "selected" : ""}>Summer event</option>
                   </select>
                 </label>
-                <span class="meta-line compact-meta-line">${kind === "extra" ? "Excluded from cycle requirements." : "Counts toward Rule 9 and cycle obligations."}</span>
+                <span class="meta-line compact-meta-line">${describeGiveawayKind(kind)}</span>
               </td>
             </tr>
           `;
         })
         .join("")
     : buildMessageRow(6, "No giveaways in this cycle.", "Giveaways from the selected cycle will appear here.");
+}
+
+function renderSummerEventPage() {
+  if (!elements.summerEventSummaryCards && !elements.summerEventMemberGrid && !elements.summerEventGiveawaysTable) {
+    return;
+  }
+
+  const allGiveaways = getTrackedSummerEventGiveaways();
+  if (!allGiveaways.length) {
+    if (elements.summerEventFilter) {
+      elements.summerEventFilter.innerHTML = "";
+    }
+    if (elements.summerEventDescription) {
+      elements.summerEventDescription.textContent = "Tag a giveaway as Summer event and refresh the sync to start tracking event balances.";
+    }
+    if (elements.summerEventSummaryCards) {
+      elements.summerEventSummaryCards.innerHTML = buildEmptyPanel(
+        "No summer event giveaways yet.",
+        "Summer-event giveaways will appear here after they are tagged in the sync.",
+      );
+    }
+    if (elements.summerEventMemberGrid) {
+      elements.summerEventMemberGrid.innerHTML = buildEmptyPanel(
+        "No participant balances yet.",
+        "Tracked creators and entrants will show up here once summer-event giveaways are synced.",
+      );
+    }
+    if (elements.summerEventGiveawaysTable) {
+      elements.summerEventGiveawaysTable.innerHTML = buildMessageRow(
+        6,
+        "No summer-event giveaways tracked.",
+        "Run the sync again after tagging a giveaway as Summer event.",
+      );
+    }
+    return;
+  }
+
+  const periods = getSummerEventPeriods(allGiveaways);
+  const selectedKey = periods.some((period) => period.key === elements.summerEventFilter?.value)
+    ? elements.summerEventFilter.value
+    : periods[0].key;
+  const selectedPeriod = periods.find((period) => period.key === selectedKey) || periods[0];
+
+  if (elements.summerEventFilter) {
+    elements.summerEventFilter.innerHTML = periods
+      .map(
+        (period) => `<option value="${period.key}">${escapeHtml(period.label)}</option>`,
+      )
+      .join("");
+    elements.summerEventFilter.value = selectedPeriod.key;
+  }
+
+  const giveaways = allGiveaways
+    .filter((giveaway) => getSummerEventPeriodDescriptor(giveaway).key === selectedPeriod.key)
+    .sort((left, right) => String(right.endDate || "").localeCompare(String(left.endDate || "")));
+  const summerEventMemberIndex = getSummerEventMemberIndex();
+  const standings = computeSummerEventStandings(giveaways, summerEventMemberIndex);
+  const trackedEntries = giveaways.reduce((sum, giveaway) => sum + getSummerEventEntryUsers(giveaway).length, 0);
+  const pendingSnapshots = giveaways.filter((giveaway) => !giveaway.entriesFinalized).length;
+  const blockedParticipants = standings.filter((participant) => participant.balance < 0).length;
+
+  if (elements.summerEventDescription) {
+    const blockedLabel = blockedParticipants
+      ? ` ${blockedParticipants} participant${blockedParticipants === 1 ? " is" : "s are"} below zero and should stop entering new giveaways.`
+      : "";
+    elements.summerEventDescription.textContent = `${selectedPeriod.label} has ${giveaways.length} tracked giveaway${giveaways.length === 1 ? "" : "s"}, ${trackedEntries.toLocaleString("en-US")} tracked entr${trackedEntries === 1 ? "y" : "ies"}, and ${pendingSnapshots} snapshot${pendingSnapshots === 1 ? "" : "s"} still waiting for a final post-close capture.${blockedLabel}`;
+  }
+
+  if (elements.summerEventSummaryCards) {
+    const cards = [
+      ["Tracked giveaways", giveaways.length],
+      ["Participants", standings.length],
+      ["Tracked entries", trackedEntries.toLocaleString("en-US")],
+      ["Pending final snapshots", pendingSnapshots],
+    ];
+    elements.summerEventSummaryCards.innerHTML = cards
+      .map(
+        ([label, value]) => `
+          <article class="summary-card">
+            <strong>${value}</strong>
+            <span>${label}</span>
+          </article>
+        `,
+      )
+      .join("");
+  }
+
+  if (elements.summerEventMemberGrid) {
+    elements.summerEventMemberGrid.innerHTML = standings.length
+      ? standings
+          .map((participant) => {
+            const profileMarkup = participant.profileUrl
+              ? `<a class="linked-title" href="${escapeHtml(participant.profileUrl)}" target="_blank" rel="noreferrer">${escapeHtml(participant.displayName)}</a>`
+              : escapeHtml(participant.displayName);
+            const balanceBadge = participant.balance < 0
+              ? buildBadge("danger", "ENTRY BLOCKED")
+              : participant.balance === 0
+                ? buildBadge("warning", "AT LIMIT")
+                : buildBadge("success", "CAN ENTER");
+            const activityBadge = participant.isActiveMember ? buildBadge("info", "Active member") : "";
+            return `
+              <article class="member-card${participant.balance < 0 ? " negative" : participant.balance === 0 ? " neutral" : ""}">
+                <h3>${profileMarkup}</h3>
+                <div class="member-card-badges">${balanceBadge}${activityBadge ? ` ${activityBadge}` : ""}</div>
+                <strong>${escapeHtml(formatPointBalance(participant.balance))}</strong>
+                <div class="member-card-meta">
+                  <span>Created: ${participant.createdGiveaways} • +${participant.createdPoints.toLocaleString("en-US")} P</span>
+                  <span>Entry bonus: +${participant.entryBonusPoints.toLocaleString("en-US")} P from ${participant.receivedEntries.toLocaleString("en-US")} entr${participant.receivedEntries === 1 ? "y" : "ies"}</span>
+                  <span>Joined: ${participant.joinedGiveaways} • -${participant.entryCostPoints.toLocaleString("en-US")} P</span>
+                </div>
+              </article>
+            `;
+          })
+          .join("")
+      : buildEmptyPanel(
+          "No participant balances yet.",
+          "Summer-event creators and entrants will appear here after the first synced entry snapshot.",
+        );
+  }
+
+  if (elements.summerEventGiveawaysTable) {
+    elements.summerEventGiveawaysTable.innerHTML = giveaways.length
+      ? giveaways
+          .map((giveaway) => {
+            const creator = summerEventMemberIndex.get(giveaway.creatorUsername) || null;
+            const creatorLabel = creator?.displayName || giveaway.creatorUsername || "Unknown member";
+            const creatorMarkup = creator?.profileUrl
+              ? `<a class="linked-title" href="${escapeHtml(creator.profileUrl)}" target="_blank" rel="noreferrer">${escapeHtml(creatorLabel)}</a>`
+              : escapeHtml(creatorLabel);
+            const giveawayUrl = String(giveaway.url || "").trim();
+            const titleMarkup = giveawayUrl
+              ? `<a class="linked-title" href="${escapeHtml(giveawayUrl)}" target="_blank" rel="noreferrer">${escapeHtml(giveaway.title || "Untitled giveaway")}</a>`
+              : escapeHtml(giveaway.title || "Untitled giveaway");
+            const entryUsers = getSummerEventEntryUsers(giveaway);
+            const winners = Array.isArray(giveaway.winners) ? giveaway.winners.map((winner) => winner.username).filter(Boolean) : [];
+            const resultStatus = String(giveaway.resultStatus || "").toLowerCase();
+            const resultBadge = resultStatus === "won"
+              ? buildBadge("success", "Winner drawn")
+              : resultStatus === "no_winners"
+                ? buildBadge("warning", "No winners")
+                : resultStatus === "awaiting_feedback"
+                  ? buildBadge("info", "Awaiting feedback")
+                  : buildBadge("info", "Open");
+            return `
+              <tr>
+                <td>
+                  <strong>${titleMarkup}</strong>
+                  <span class="meta-line">${formatDate(giveaway.endDate || state.settings.currentDate)}</span>
+                </td>
+                <td>
+                  <strong>${creatorMarkup}</strong>
+                  <span class="meta-line">+${Number(giveaway.points || 0).toLocaleString("en-US")} P base</span>
+                </td>
+                <td>
+                  <strong>${Number(giveaway.points || 0).toLocaleString("en-US")} P</strong>
+                  <span class="meta-line">Entry swing: ${getSummerEventEntryDelta(giveaway)} P</span>
+                </td>
+                <td>
+                  <strong>${entryUsers.length.toLocaleString("en-US")}</strong>
+                  <span class="meta-line">SteamGifts: ${Number(giveaway.entriesCount || 0).toLocaleString("en-US")}</span>
+                </td>
+                <td>
+                  ${resultBadge}
+                  <span class="meta-line">${escapeHtml(winners.length ? `Winners: ${winners.join(", ")}` : giveaway.resultLabel || "Still running")}</span>
+                </td>
+                <td>
+                  ${buildSummerEventSnapshotBadge(giveaway)}
+                  <span class="meta-line">${escapeHtml(giveaway.entriesSnapshotAt ? `Updated ${formatDateTime(giveaway.entriesSnapshotAt)}` : "No entries snapshot yet")}</span>
+                </td>
+              </tr>
+            `;
+          })
+          .join("")
+      : buildMessageRow(6, "No summer-event giveaways in this event.", "Choose another event or tag more giveaways as Summer event.");
+  }
+}
+
+function getTrackedSummerEventGiveaways() {
+  return (state.sync?.steamgifts?.giveaways || []).filter(
+    (giveaway) => normalizeGiveawayKindValue(giveaway?.giveawayKind, giveaway) === "summer_event",
+  );
+}
+
+function getSummerEventPeriods(giveaways) {
+  const periods = new Map();
+  for (const giveaway of giveaways) {
+    const descriptor = getSummerEventPeriodDescriptor(giveaway);
+    if (!periods.has(descriptor.key)) {
+      periods.set(descriptor.key, descriptor);
+    }
+  }
+  return Array.from(periods.values()).sort((left, right) => right.year - left.year || right.key.localeCompare(left.key));
+}
+
+function getSummerEventPeriodDescriptor(giveaway) {
+  const referenceDate = giveaway?.endDate || giveaway?.createdAt || state.settings.currentDate;
+  const parsed = parseDate(referenceDate);
+  const year = Number.isFinite(parsed.getTime()) ? parsed.getFullYear() : new Date().getFullYear();
+  const period = getPeriodInfo(referenceDate);
+  const label = /^Summer event/i.test(String(period?.label || "")) ? period.label : `Summer event (${year})`;
+  return {
+    key: `summer-event-${year}`,
+    label,
+    year,
+  };
+}
+
+function getSummerEventMemberIndex() {
+  const members = new Map();
+
+  for (const member of state.members) {
+    const username = String(member?.steamgiftsUsername || member?.name || "").trim();
+    if (!username || members.has(username)) {
+      continue;
+    }
+    members.set(username, {
+      username,
+      displayName: member.name || username,
+      profileUrl: `https://www.steamgifts.com/user/${encodeURIComponent(username)}`,
+      isActiveMember: Boolean(member.isActiveMember),
+    });
+  }
+
+  for (const member of state.sync?.steamgifts?.members || []) {
+    const username = String(member?.username || "").trim();
+    if (!username) {
+      continue;
+    }
+    const existing = members.get(username) || {};
+    members.set(username, {
+      username,
+      displayName: existing.displayName || username,
+      profileUrl: member.profileUrl || existing.profileUrl || `https://www.steamgifts.com/user/${encodeURIComponent(username)}`,
+      isActiveMember: typeof member.isActiveMember === "boolean" ? member.isActiveMember : Boolean(existing.isActiveMember),
+    });
+  }
+
+  return members;
+}
+
+function computeSummerEventStandings(giveaways, memberIndex = getSummerEventMemberIndex()) {
+  const standings = new Map();
+
+  const ensureParticipant = (username) => {
+    const normalizedUsername = String(username || "").trim();
+    if (!normalizedUsername) {
+      return null;
+    }
+
+    if (!standings.has(normalizedUsername)) {
+      const member = memberIndex.get(normalizedUsername) || null;
+      standings.set(normalizedUsername, {
+        username: normalizedUsername,
+        displayName: member?.displayName || normalizedUsername,
+        profileUrl: member?.profileUrl || `https://www.steamgifts.com/user/${encodeURIComponent(normalizedUsername)}`,
+        isActiveMember: Boolean(member?.isActiveMember),
+        createdGiveaways: 0,
+        createdPoints: 0,
+        entryBonusPoints: 0,
+        receivedEntries: 0,
+        joinedGiveaways: 0,
+        entryCostPoints: 0,
+        balance: 0,
+      });
+    }
+
+    return standings.get(normalizedUsername);
+  };
+
+  for (const giveaway of giveaways) {
+    const entryUsers = getSummerEventEntryUsers(giveaway);
+    const entryDelta = getSummerEventEntryDelta(giveaway);
+    const creator = ensureParticipant(giveaway.creatorUsername);
+
+    if (creator) {
+      creator.createdGiveaways += 1;
+      creator.createdPoints += Number(giveaway.points || 0);
+      creator.entryBonusPoints += entryUsers.length * entryDelta;
+      creator.receivedEntries += entryUsers.length;
+      creator.balance += Number(giveaway.points || 0) + entryUsers.length * entryDelta;
+    }
+
+    for (const username of entryUsers) {
+      if (!username || username === giveaway.creatorUsername) {
+        continue;
+      }
+      const participant = ensureParticipant(username);
+      if (!participant) {
+        continue;
+      }
+      participant.joinedGiveaways += 1;
+      participant.entryCostPoints += entryDelta;
+      participant.balance -= entryDelta;
+    }
+  }
+
+  return Array.from(standings.values()).sort(
+    (left, right) =>
+      right.balance - left.balance ||
+      right.createdPoints - left.createdPoints ||
+      left.displayName.localeCompare(right.displayName, "en-US", { sensitivity: "base" }),
+  );
+}
+
+function getSummerEventEntryUsers(giveaway) {
+  return Array.from(
+    new Set(
+      (Array.isArray(giveaway?.entryUsers) ? giveaway.entryUsers : [])
+        .map((username) => String(username || "").trim())
+        .filter(Boolean),
+    ),
+  );
+}
+
+function getSummerEventEntryDelta(giveaway) {
+  return Number(giveaway?.points || 0) >= 30 ? 10 : 5;
+}
+
+function buildSummerEventSnapshotBadge(giveaway) {
+  if (giveaway?.entriesFinalized) {
+    return buildBadge("success", "Final snapshot");
+  }
+
+  const ended = Boolean(giveaway?.endDate && new Date(giveaway.endDate).getTime() <= Date.now());
+  return buildBadge(ended ? "warning" : "info", ended ? "Final snapshot pending" : "Tracking open entries");
+}
+
+function formatPointBalance(value) {
+  const amount = Number(value || 0);
+  return `${amount > 0 ? "+" : ""}${amount.toLocaleString("en-US")} P`;
 }
 
 function renderMemberBuckets() {
@@ -2044,9 +2383,19 @@ function normalizeSteamGiftsSync(payload) {
 
 function normalizeGiveawaySyncRecord(giveaway) {
   const winners = normalizeGiveawaySyncWinners(giveaway);
+  const entryUsers = Array.from(
+    new Set(
+      (Array.isArray(giveaway?.entryUsers) ? giveaway.entryUsers : [])
+        .map((username) => String(username || "").trim())
+        .filter(Boolean),
+    ),
+  );
   return {
     ...giveaway,
     winners,
+    entryUsers,
+    entriesFinalized: Boolean(giveaway?.entriesFinalized),
+    entriesSnapshotAt: giveaway?.entriesSnapshotAt || "",
   };
 }
 
@@ -2177,8 +2526,12 @@ function upsertGiveawayFromSync(giveawayRecord, creatorId) {
     regionLocked: Boolean(giveawayRecord.regionRestricted),
     bundled: false,
     notes: giveawayRecord.url || "",
-    giveawayKind: String(giveawayRecord.giveawayKind || "").toLowerCase() === "extra" ? "extra" : "cycle",
+    giveawayKind: normalizeGiveawayKindValue(giveawayRecord.giveawayKind),
     giveawayKindChecked: Boolean(giveawayRecord.giveawayKindChecked),
+    creatorUsername: giveawayRecord.creatorUsername || existing?.creatorUsername || "",
+    entryUsers: Array.isArray(giveawayRecord.entryUsers) ? giveawayRecord.entryUsers.slice() : existing?.entryUsers || [],
+    entriesFinalized: Boolean(giveawayRecord.entriesFinalized),
+    entriesSnapshotAt: giveawayRecord.entriesSnapshotAt || existing?.entriesSnapshotAt || "",
     resultStatus: String(giveawayRecord.resultStatus || "").toLowerCase(),
     resultLabel: giveawayRecord.resultLabel || "",
   };
@@ -2345,6 +2698,7 @@ function computeMemberMetrics(memberId) {
     period.kind === "cycle" && period.monthPosition === 3 && currentMonth
       ? computeCycleWinsForMemberInMonth(memberId, currentMonth, { beforeSelectedMonth: true })
       : cycleWins;
+  const monthThreeLuckStatus = getCycleMonthThreeLuckStatus(monthThreeWinsBeforeCurrentMonth);
 
   let cycleAlert = "";
   if (paused) {
@@ -2352,13 +2706,7 @@ function computeMemberMetrics(memberId) {
   } else if (period.kind === "cycle" && period.monthPosition === 1 && isRule9CarryoverWinner(rule9Carryover, memberId)) {
     cycleAlert = `Rule 9 winner of ${rule9Carryover.previousCycle.label}: exempt from the regular monthly mandatory giveaway in ${formatMonthKey(rule9Carryover.monthKey)}.`;
   } else if (period.kind === "cycle" && period.monthPosition === 3) {
-    if (monthThreeWinsBeforeCurrentMonth < 2) {
-      cycleAlert = "unlucky member: exempt from the regular monthly mandatory giveaway in month 3.";
-    } else if (monthThreeWinsBeforeCurrentMonth > 2) {
-      cycleAlert = "lucky member: owes one extra giveaway in addition to the regular mandatory one.";
-    } else {
-      cycleAlert = "balanced member: regular mandatory giveaway only.";
-    }
+    cycleAlert = monthThreeLuckStatus.alert;
   }
 
   if (cycleWins > 8) {
@@ -2776,13 +3124,7 @@ function buildCycleStatus({
   if (period.monthPosition === 1 && rule9Carryover) {
     noteParts.push(`Rule 9 carryover: month 1 is waived after winning ${rule9Carryover.previousCycle.label}.`);
   } else if (period.monthPosition === 3) {
-    if (winsBeforeMonth < 2) {
-      noteParts.push("Unlucky month: regular cycle giveaway is waived.");
-    } else if (winsBeforeMonth > 2) {
-      noteParts.push("Lucky month: two cycle giveaways are required.");
-    } else {
-      noteParts.push("Balanced month: one cycle giveaway is required.");
-    }
+    noteParts.push(getCycleMonthThreeLuckStatus(winsBeforeMonth).note);
   } else {
     noteParts.push("Regular month: one cycle giveaway is required.");
   }
@@ -2802,7 +3144,15 @@ function buildCycleStatus({
     noteParts.push(`Above the 8-win cycle cap by ${cycleWinsToDate - 8}.`);
   }
 
-  return { level, label, note: noteParts.join(" ") };
+  const memberTag = period.monthPosition === 3 ? getCycleMonthThreeLuckStatus(winsBeforeMonth) : null;
+
+  return {
+    level,
+    label,
+    note: noteParts.join(" "),
+    memberTagLabel: memberTag?.badgeLabel || "",
+    memberTagLevel: memberTag?.badgeLevel || "",
+  };
 }
 
 function buildCycleHistoryStatus({
@@ -2831,13 +3181,7 @@ function buildCycleHistoryStatus({
   }
 
   if (lastPeriod?.kind === "cycle" && lastPeriod.monthPosition === 3) {
-    if (winsBeforeMonthThree < 2) {
-      noteParts.push("Month 3 waiver applied: under 2 cycle wins before month 3.");
-    } else if (winsBeforeMonthThree > 2) {
-      noteParts.push("Month 3 lucky-member rule applied: 2 cycle giveaways required in month 3.");
-    } else {
-      noteParts.push("Month 3 balanced rule applied: 1 cycle giveaway required in month 3.");
-    }
+    noteParts.push(getCycleMonthThreeLuckStatus(winsBeforeMonthThree).historyNote);
   }
 
   if (!noteParts.length) {
@@ -2859,7 +3203,17 @@ function buildCycleHistoryStatus({
     noteParts.push(`Above the 8-win cycle cap by ${cycleWinsTotal - 8}.`);
   }
 
-  return { level, label, note: noteParts.join(" ") };
+  const memberTag = lastPeriod?.kind === "cycle" && lastPeriod.monthPosition === 3
+    ? getCycleMonthThreeLuckStatus(winsBeforeMonthThree)
+    : null;
+
+  return {
+    level,
+    label,
+    note: noteParts.join(" "),
+    memberTagLabel: memberTag?.badgeLabel || "",
+    memberTagLevel: memberTag?.badgeLevel || "",
+  };
 }
 
 function buildPrereleaseMonthNote(win, game) {
@@ -3439,15 +3793,71 @@ function getGiveawayMonth(giveaway) {
 function getBaseGiveawayKind(giveaway) {
   const kind = String(giveaway?.giveawayKind || giveaway?.type || "").toLowerCase();
   const penaltyText = `${String(giveaway?.title || "")} ${String(giveaway?.notes || "")}`;
-  return kind === "extra" || /\bpenalty\b/i.test(penaltyText) ? "extra" : "cycle";
+  if (kind === "summer_event" || kind === "summer-event") {
+    return "summer_event";
+  }
+  if (kind === "extra" || /\bpenalty\b/i.test(penaltyText)) {
+    return "extra";
+  }
+  if (/\bsummer event\b/i.test(penaltyText)) {
+    return "summer_event";
+  }
+  return "cycle";
 }
 
 function getGiveawayKind(giveaway) {
-  const overrideKind = String(giveaway?.giveawayKindOverride || "").toLowerCase();
-  if (overrideKind === "cycle" || overrideKind === "extra") {
-    return overrideKind;
+  const rawOverrideKind = String(giveaway?.giveawayKindOverride || "").trim();
+  if (rawOverrideKind) {
+    return normalizeGiveawayKindValue(rawOverrideKind, giveaway);
   }
-  return getBaseGiveawayKind(giveaway);
+  return normalizeGiveawayKindValue(getBaseGiveawayKind(giveaway), giveaway);
+}
+
+function normalizeGiveawayKindValue(kind, giveaway = null) {
+  const value = String(kind || "").trim().toLowerCase();
+  if (value === "extra") {
+    return "extra";
+  }
+  if (value === "summer_event" || value === "summer-event" || value === "summer event") {
+    return "summer_event";
+  }
+  if (giveaway && /\bsummer event\b/i.test(`${String(giveaway.title || "")} ${String(giveaway.notes || "")}`)) {
+    return "summer_event";
+  }
+  return "cycle";
+}
+
+function getGiveawayKindLabel(kind) {
+  switch (kind) {
+    case "extra":
+      return "Extra";
+    case "summer_event":
+      return "Summer event";
+    default:
+      return "Cycle";
+  }
+}
+
+function getGiveawayKindBadgeLevel(kind) {
+  switch (kind) {
+    case "extra":
+      return "info";
+    case "summer_event":
+      return "warning";
+    default:
+      return "success";
+  }
+}
+
+function describeGiveawayKind(kind) {
+  switch (kind) {
+    case "extra":
+      return "Excluded from cycle requirements and standard rule checks.";
+    case "summer_event":
+      return "Tracked for the summer event point system and excluded from cycle requirements.";
+    default:
+      return "Counts toward Rule 9 and cycle obligations.";
+  }
 }
 
 function getCycleMemberOverrideKey(memberId, selectedMonth) {
@@ -3571,7 +3981,7 @@ function doesGiveawayCountForCycleMath(giveaway) {
 
 function isCycleWin(win) {
   const giveaway = findGiveawayForWin(win);
-  return giveaway ? getGiveawayKind(giveaway) !== "extra" : true;
+  return giveaway ? getGiveawayKind(giveaway) === "cycle" : true;
 }
 
 function handleEditAction(button) {
@@ -3661,7 +4071,7 @@ function handleGiveawayKindChange(select) {
   if (!giveaway) {
     return;
   }
-  const selectedKind = String(select.value || "cycle").toLowerCase() === "extra" ? "extra" : "cycle";
+  const selectedKind = normalizeGiveawayKindValue(select.value, giveaway);
   const baseKind = getBaseGiveawayKind(giveaway);
   updateOverrideField(
     "giveaways",
@@ -3895,6 +4305,34 @@ function buildOptions(items, placeholder, labelGetter) {
 
 function buildBadge(level, label) {
   return `<span class="badge ${level}">${label}</span>`;
+}
+
+function getCycleMonthThreeLuckStatus(winsBeforeMonth) {
+  if (winsBeforeMonth < 2) {
+    return {
+      badgeLabel: "UNLUCKY",
+      badgeLevel: "info",
+      note: "Unlucky month: regular cycle giveaway is waived.",
+      historyNote: "Month 3 waiver applied: under 2 cycle wins before month 3.",
+      alert: "unlucky member: exempt from the regular monthly mandatory giveaway in month 3.",
+    };
+  }
+  if (winsBeforeMonth > 2) {
+    return {
+      badgeLabel: "LUCKY",
+      badgeLevel: "warning",
+      note: "Lucky month: two cycle giveaways are required.",
+      historyNote: "Month 3 lucky-member rule applied: 2 cycle giveaways required in month 3.",
+      alert: "lucky member: owes one extra giveaway in addition to the regular mandatory one.",
+    };
+  }
+  return {
+    badgeLabel: "",
+    badgeLevel: "",
+    note: "Balanced month: one cycle giveaway is required.",
+    historyNote: "Month 3 balanced rule applied: 1 cycle giveaway required in month 3.",
+    alert: "balanced member: regular mandatory giveaway only.",
+  };
 }
 
 function buildEmptyRow(colspan) {

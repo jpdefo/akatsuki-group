@@ -79,11 +79,24 @@ function mergeGiveawayWithExisting(giveaway, existingGiveaway) {
       giveaway.giveawayKindChecked !== undefined
         ? giveaway.giveawayKindChecked
         : Boolean(existingGiveaway.giveawayKindChecked),
+    entryUsers: Array.isArray(giveaway.entryUsers)
+      ? giveaway.entryUsers
+      : Array.isArray(existingGiveaway.entryUsers)
+        ? existingGiveaway.entryUsers
+        : undefined,
+    entriesFinalized:
+      giveaway.entriesFinalized !== undefined
+        ? Boolean(giveaway.entriesFinalized)
+        : Boolean(existingGiveaway.entriesFinalized),
+    entriesSnapshotAt: giveaway.entriesSnapshotAt || existingGiveaway.entriesSnapshotAt || "",
   };
 }
 
 function detectGiveawayKindFromDescription(descriptionText) {
   const text = normalizeText(descriptionText || "");
+  if (/\bsummer event\b/i.test(text)) {
+    return "summer_event";
+  }
   const matches = [
     { kind: "extra", index: text.search(/\bextra\b/i) },
     { kind: "extra", index: text.search(/\bpenalty\b/i) },
@@ -98,11 +111,25 @@ function detectGiveawayKindFromDescription(descriptionText) {
   return matches[0].kind;
 }
 
+function isSummerEventKind(kind) {
+  const value = String(kind || "").trim().toLowerCase();
+  return value === "summer_event" || value === "summer-event" || value === "summer event";
+}
+
+function isGiveawayEnded(giveaway) {
+  return Boolean(giveaway?.endDate && new Date(giveaway.endDate).getTime() <= Date.now());
+}
+
+function shouldRefreshSummerEventEntries(giveaway) {
+  return Boolean(giveaway?.url) && isSummerEventKind(giveaway?.giveawayKind) && (!isGiveawayEnded(giveaway) || !giveaway.entriesFinalized);
+}
+
 function needsGiveawayDetails(giveaway) {
-  const ended = Boolean(giveaway.endDate && new Date(giveaway.endDate).getTime() <= Date.now());
+  const ended = isGiveawayEnded(giveaway);
   return (
     !giveaway.appId ||
     !giveaway.giveawayKindChecked ||
+    shouldRefreshSummerEventEntries(giveaway) ||
     (ended && ["open", "awaiting_feedback", "unknown"].includes(String(giveaway.resultStatus || "")))
   );
 }
@@ -130,6 +157,17 @@ function mergeMembersWithGiveawayUsers(members, giveaways) {
       byUsername.set(winner.username, {
         username: winner.username,
         profileUrl: winner.profileUrl || "",
+        steamProfile: "",
+        isActiveMember: false,
+      });
+    }
+    for (const username of giveaway.entryUsers || []) {
+      if (!username || byUsername.has(username)) {
+        continue;
+      }
+      byUsername.set(username, {
+        username,
+        profileUrl: `https://www.steamgifts.com/user/${encodeURIComponent(username)}`,
         steamProfile: "",
         isActiveMember: false,
       });
@@ -694,6 +732,9 @@ async function enrichGiveaway(page, giveaway) {
 
     function detectGiveawayKindFromDescription(descriptionText) {
       const text = normalizeText(descriptionText || "");
+      if (/\bsummer event\b/i.test(text)) {
+        return "summer_event";
+      }
       const matches = [
         { kind: "extra", index: text.search(/\bextra\b/i) },
         { kind: "extra", index: text.search(/\bpenalty\b/i) },
@@ -739,6 +780,13 @@ async function enrichGiveaway(page, giveaway) {
     };
   });
 
+  const resolvedEndDate = giveaway.endDate || details.endDate || null;
+  const resolvedGiveawayKind = details.giveawayKind || giveaway.giveawayKind || "";
+  const ended = Boolean(resolvedEndDate && new Date(resolvedEndDate).getTime() <= Date.now());
+  const entrySnapshot = isSummerEventKind(resolvedGiveawayKind) && (!ended || !giveaway.entriesFinalized)
+    ? await fetchGiveawayEntries(page, giveaway.url)
+    : null;
+
   return {
     ...giveaway,
     appId: details.appId || giveaway.appId || null,
@@ -746,13 +794,63 @@ async function enrichGiveaway(page, giveaway) {
     headerImageUrl: details.headerImageUrl || giveaway.headerImageUrl || "",
     capsuleImageUrl: details.capsuleImageUrl || giveaway.capsuleImageUrl || "",
     capsuleSmallUrl: details.capsuleSmallUrl || giveaway.capsuleSmallUrl || "",
-    entriesCount: giveaway.entriesCount || details.entriesCount || 0,
+    entriesCount: details.entriesCount || giveaway.entriesCount || 0,
     points: details.points || giveaway.points || 0,
-    endDate: giveaway.endDate || details.endDate || null,
+    endDate: resolvedEndDate,
     regionRestricted: details.regionRestricted || giveaway.regionRestricted || false,
-    giveawayKind: details.giveawayKind || giveaway.giveawayKind || "",
+    giveawayKind: resolvedGiveawayKind,
     giveawayKindChecked: details.giveawayKindChecked || giveaway.giveawayKindChecked || false,
+    entryUsers: entrySnapshot ? entrySnapshot.users : Array.isArray(giveaway.entryUsers) ? giveaway.entryUsers : undefined,
+    entriesFinalized: entrySnapshot ? ended : Boolean(giveaway.entriesFinalized),
+    entriesSnapshotAt: entrySnapshot ? entrySnapshot.capturedAt : giveaway.entriesSnapshotAt || "",
     winners: await fetchWinners(page, giveaway.url),
+  };
+}
+
+async function fetchGiveawayEntries(page, giveawayUrl) {
+  const results = [];
+  const seen = new Set();
+
+  for (let pageNumber = 1; pageNumber <= 100; pageNumber += 1) {
+    const url = pageNumber === 1 ? `${giveawayUrl}/entries` : `${giveawayUrl}/entries/search?page=${pageNumber}`;
+    await gotoSteamGifts(page, url);
+    const pageEntries = await page.evaluate(() => {
+      const rows = Array.from(document.querySelectorAll(".table__row-inner-wrap"));
+      return rows
+        .map((row) => {
+          const userLink = Array.from(row.querySelectorAll('a[href*="/user/"]')).find((anchor) =>
+            /\/user\/[^/]+/.test(anchor.getAttribute("href") || ""),
+          );
+          if (!userLink) {
+            return "";
+          }
+          return normalizeText(userLink.textContent || "");
+        })
+        .filter(Boolean);
+    });
+
+    if (!pageEntries.length) {
+      break;
+    }
+
+    let added = 0;
+    for (const username of pageEntries) {
+      if (!username || seen.has(username)) {
+        continue;
+      }
+      seen.add(username);
+      results.push(username);
+      added += 1;
+    }
+
+    if (!added) {
+      break;
+    }
+  }
+
+  return {
+    users: results,
+    capturedAt: new Date().toISOString(),
   };
 }
 

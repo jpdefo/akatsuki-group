@@ -486,10 +486,11 @@
   }
 
   function needsGiveawayDetails(giveaway) {
-    const ended = Boolean(giveaway.endDate && new Date(giveaway.endDate).getTime() <= Date.now());
+    const ended = isGiveawayEnded(giveaway);
     return (
       !giveaway.appId ||
       !giveaway.giveawayKindChecked ||
+      shouldRefreshSummerEventEntries(giveaway) ||
       (ended && ["open", "awaiting_feedback", "unknown"].includes(String(giveaway.resultStatus || "")))
     );
   }
@@ -528,6 +529,16 @@
         giveaway.giveawayKindChecked !== undefined
           ? giveaway.giveawayKindChecked
           : Boolean(existingGiveaway.giveawayKindChecked),
+      entryUsers: Array.isArray(giveaway.entryUsers)
+        ? giveaway.entryUsers
+        : Array.isArray(existingGiveaway.entryUsers)
+          ? existingGiveaway.entryUsers
+          : undefined,
+      entriesFinalized:
+        giveaway.entriesFinalized !== undefined
+          ? Boolean(giveaway.entriesFinalized)
+          : Boolean(existingGiveaway.entriesFinalized),
+      entriesSnapshotAt: giveaway.entriesSnapshotAt || existingGiveaway.entriesSnapshotAt || "",
     };
   }
 
@@ -541,6 +552,9 @@
 
   function detectGiveawayKindFromDescription(descriptionText) {
     const text = normalizeText(descriptionText || "");
+    if (/\bsummer event\b/i.test(text)) {
+      return "summer_event";
+    }
     const matches = [
       { kind: "extra", index: text.search(/\bextra\b/i) },
       { kind: "extra", index: text.search(/\bpenalty\b/i) },
@@ -555,6 +569,19 @@
     return matches[0].kind;
   }
 
+  function isSummerEventKind(kind) {
+    const value = String(kind || "").trim().toLowerCase();
+    return value === "summer_event" || value === "summer-event" || value === "summer event";
+  }
+
+  function isGiveawayEnded(giveaway) {
+    return Boolean(giveaway?.endDate && new Date(giveaway.endDate).getTime() <= Date.now());
+  }
+
+  function shouldRefreshSummerEventEntries(giveaway) {
+    return Boolean(giveaway?.url) && isSummerEventKind(giveaway?.giveawayKind) && (!isGiveawayEnded(giveaway) || !giveaway.entriesFinalized);
+  }
+
   async function enrichGiveaway(giveaway) {
     const doc = await fetchDocument(giveaway.url);
     const featureMap = parseFeatureMap(doc);
@@ -566,20 +593,62 @@
     const endTimestamp = timestamps.length
       ? Number(timestamps[timestamps.length - 1].getAttribute("data-timestamp")) * 1000
       : null;
+    const resolvedEndDate = giveaway.endDate || (endTimestamp ? new Date(endTimestamp).toISOString() : null);
+    const resolvedGiveawayKind = detectedGiveawayKind || giveaway.giveawayKind || "";
+    const ended = Boolean(resolvedEndDate && new Date(resolvedEndDate).getTime() <= Date.now());
+    const entrySnapshot = isSummerEventKind(resolvedGiveawayKind) && (!ended || !giveaway.entriesFinalized)
+      ? await fetchGiveawayEntries(giveaway.url)
+      : null;
     return {
       ...giveaway,
-      appId: appMatch ? Number(appMatch[1]) : null,
-      steamAppUrl: storeLink ? storeLink.href : "",
-      entriesCount:
-        giveaway.entriesCount ||
-        parseInt(String(featureMap.Entries || "").replace(/[^\d]/g, ""), 10) ||
-        0,
+      appId: appMatch ? Number(appMatch[1]) : giveaway.appId || null,
+      steamAppUrl: storeLink ? storeLink.href : giveaway.steamAppUrl || "",
+      entriesCount: parseInt(String(featureMap.Entries || "").replace(/[^\d]/g, ""), 10) || giveaway.entriesCount || 0,
       points: parseInt(String(featureMap.Points || "").replace(/[^\d]/g, ""), 10) || 0,
-      endDate: giveaway.endDate || (endTimestamp ? new Date(endTimestamp).toISOString() : null),
+      endDate: resolvedEndDate,
       regionRestricted: /region/i.test(String(featureMap.Type || "")),
-      giveawayKind: detectedGiveawayKind || giveaway.giveawayKind || "",
+      giveawayKind: resolvedGiveawayKind,
       giveawayKindChecked: true,
+      entryUsers: entrySnapshot ? entrySnapshot.users : Array.isArray(giveaway.entryUsers) ? giveaway.entryUsers : undefined,
+      entriesFinalized: entrySnapshot ? ended : Boolean(giveaway.entriesFinalized),
+      entriesSnapshotAt: entrySnapshot ? entrySnapshot.capturedAt : giveaway.entriesSnapshotAt || "",
       winners: await fetchWinners(giveaway.url),
+    };
+  }
+
+  async function fetchGiveawayEntries(giveawayUrl) {
+    const results = [];
+    const seen = new Set();
+    for (let page = 1; page <= 100; page += 1) {
+      const url = page === 1 ? `${giveawayUrl}/entries` : `${giveawayUrl}/entries/search?page=${page}`;
+      const doc = await fetchDocument(url);
+      const rows = Array.from(doc.querySelectorAll(".table__row-inner-wrap"));
+      if (!rows.length) {
+        break;
+      }
+      let foundAny = false;
+      for (const row of rows) {
+        const userLink = Array.from(row.querySelectorAll('a[href*="/user/"]')).find((anchor) =>
+          /\/user\/[^/]+/.test(anchor.getAttribute("href") || ""),
+        );
+        if (!userLink) {
+          continue;
+        }
+        const username = normalizeText(userLink.textContent || "");
+        if (!username || seen.has(username)) {
+          continue;
+        }
+        seen.add(username);
+        results.push(username);
+        foundAny = true;
+      }
+      if (!foundAny) {
+        break;
+      }
+    }
+    return {
+      users: results,
+      capturedAt: new Date().toISOString(),
     };
   }
 
