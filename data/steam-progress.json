@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-12T12:52:54.350279+00:00",
+  "updatedAt": "2026-05-12T13:21:23.100549+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -6713,7 +6713,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-05-12T12:52:54.350245+00:00"
+      "checkedAt": "2026-05-12T13:21:23.100513+00:00"
     },
     {
       "username": "burntreynolds444",
@@ -8995,7 +8995,7 @@
       "achievementPercent": 0,
       "playtimeHours": 0.0,
       "error": null,
-      "checkedAt": "2026-05-12T12:52:54.350276+00:00",
+      "checkedAt": "2026-05-12T13:21:23.100545+00:00",
       "playtimeCheckedAt": "2026-05-11T06:27:47.697701+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -28655,7 +28655,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-05-12T12:52:54.350267+00:00"
+      "checkedAt": "2026-05-12T13:21:23.100535+00:00"
     },
     {
       "username": "Saikania",
@@ -40809,6 +40809,13 @@
     }
   ],
   "hltb": [
+    {
+      "title": "Borderlands 3: Super Deluxe Edition",
+      "appId": 427289,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
     {
       "title": "Tides of Tomorrow 🌊",
       "appId": 2678080,
@@ -68527,9 +68534,9 @@
   "activeOnly": true,
   "refreshedMonth": "2026-05",
   "refreshedScope": "month",
-  "libraryUpdatedAt": "2026-05-12T12:52:54.152964+00:00",
+  "libraryUpdatedAt": "2026-05-12T13:21:22.904979+00:00",
   "libraryStats": {
-    "durationSeconds": 0.15,
+    "durationSeconds": 0.14,
     "targetProfiles": 3,
     "refreshedProfiles": 0,
     "reusedProfiles": 3,
@@ -68540,7 +68547,7 @@
     "totalPlaytimeRows": 86342
   },
   "stats": {
-    "durationSeconds": 0.34,
+    "durationSeconds": 0.33,
     "targetWins": 3,
     "uniqueProgressTargets": 3,
     "libraryPlaytimeHits": 3,
@@ -68549,6 +68556,6 @@
     "achievementErrors": 0,
     "cachedFallbacks": 0,
     "hltbTitlesRequested": 3,
-    "hltbResultsAvailable": 3959
+    "hltbResultsAvailable": 3960
   }
 }

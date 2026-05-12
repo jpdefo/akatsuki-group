@@ -1,6 +1,6 @@
 {
   "source": "akatsuki-steamgifts-sync",
-  "syncedAt": "2026-05-12T12:52:51.082Z",
+  "syncedAt": "2026-05-12T13:21:18.812Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -2150,6 +2150,27 @@
     }
   ],
   "giveaways": [
+    {
+      "code": "BN7J1",
+      "url": "https://www.steamgifts.com/giveaway/BN7J1/borderlands-3-super-deluxe-edition",
+      "title": "Borderlands 3: Super Deluxe Edition",
+      "creatorUsername": "Koalala",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/Koalala",
+      "appId": 427289,
+      "steamAppUrl": "https://store.steampowered.com/sub/427289?utm_source=SteamGifts",
+      "points": 50,
+      "entriesCount": 0,
+      "endDate": "2026-05-12T13:18:59.000Z",
+      "winners": [],
+      "resultStatus": "open",
+      "resultLabel": "Open",
+      "regionRestricted": false,
+      "giveawayKind": "summer_event",
+      "giveawayKindChecked": true,
+      "entryUsers": [],
+      "entriesFinalized": false,
+      "entriesSnapshotAt": "2026-05-12T13:20:59.800Z"
+    },
     {
       "code": "yLzZl",
       "url": "https://www.steamgifts.com/giveaway/yLzZl/mixtape",
@@ -118527,6 +118548,6 @@
       "winDate": "2016-08-26T06:01:36.000Z"
     }
   ],
-  "savedAt": "2026-05-12T12:52:51.121129+00:00",
-  "mergedAt": "2026-05-12T12:52:51.121134+00:00"
+  "savedAt": "2026-05-12T13:21:18.873907+00:00",
+  "mergedAt": "2026-05-12T13:21:18.873916+00:00"
 }
