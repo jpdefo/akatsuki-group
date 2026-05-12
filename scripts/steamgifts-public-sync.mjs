@@ -849,6 +849,73 @@ async function enrichGiveaway(page, giveaway) {
       return matches[0].kind;
     }
 
+    const MONTH_NAME_TO_NUMBER = {
+      january: 1,
+      jan: 1,
+      february: 2,
+      feb: 2,
+      march: 3,
+      mar: 3,
+      april: 4,
+      apr: 4,
+      may: 5,
+      june: 6,
+      jun: 6,
+      july: 7,
+      jul: 7,
+      august: 8,
+      aug: 8,
+      september: 9,
+      sept: 9,
+      sep: 9,
+      october: 10,
+      oct: 10,
+      november: 11,
+      nov: 11,
+      december: 12,
+      dec: 12,
+    };
+
+    function detectGiveawayMonthOverride(descriptionText, referenceDate, giveawayKind) {
+      if (String(giveawayKind || "").trim().toLowerCase() !== "cycle") {
+        return "";
+      }
+
+      const text = normalizeText(descriptionText || "");
+      if (!text) {
+        return "";
+      }
+
+      const months = Array.from(
+        new Set(
+          Array.from(
+            text.matchAll(/\b(january|jan|february|feb|march|mar|april|apr|may|june|jun|july|jul|august|aug|september|sept|sep|october|oct|november|nov|december|dec)\b/gi),
+          )
+            .map((match) => MONTH_NAME_TO_NUMBER[String(match[1] || "").toLowerCase()])
+            .filter((monthNumber) => Number.isInteger(monthNumber)),
+        ),
+      );
+      if (months.length !== 1) {
+        return "";
+      }
+
+      const reference = referenceDate ? new Date(referenceDate) : new Date();
+      if (Number.isNaN(reference.getTime())) {
+        return "";
+      }
+
+      const targetMonth = months[0];
+      const referenceMonth = reference.getUTCMonth() + 1;
+      let targetYear = reference.getUTCFullYear();
+      if (targetMonth - referenceMonth >= 6) {
+        targetYear -= 1;
+      } else if (targetMonth - referenceMonth <= -6) {
+        targetYear += 1;
+      }
+
+      return `${targetYear}-${String(targetMonth).padStart(2, "0")}`;
+    }
+
     const featureRows = Array.from(document.querySelectorAll(".featured__table__row__left"));
     const featureMap = {};
     for (const label of featureRows) {
@@ -863,7 +930,13 @@ async function enrichGiveaway(page, giveaway) {
       : null;
     const { appId, steamAppUrl } = extractAppInfo(document.body);
     const media = extractSteamMedia(document.body, appId);
-    const giveawayKind = detectGiveawayKindFromDescription(getGiveawayDescriptionText());
+    const descriptionText = getGiveawayDescriptionText();
+    const giveawayKind = detectGiveawayKindFromDescription(descriptionText);
+    const giveawayMonthOverride = detectGiveawayMonthOverride(
+      descriptionText,
+      endTimestamp ? new Date(endTimestamp).toISOString() : null,
+      giveawayKind,
+    );
 
       return {
         appId,
@@ -876,6 +949,7 @@ async function enrichGiveaway(page, giveaway) {
         endDate: endTimestamp ? new Date(endTimestamp).toISOString() : null,
         regionRestricted: /region/i.test(String(featureMap.Type || "")),
         giveawayKind,
+        giveawayMonthOverride,
         giveawayKindChecked: true,
       };
     });
@@ -913,6 +987,7 @@ async function enrichGiveaway(page, giveaway) {
     endDate: resolvedEndDate,
     regionRestricted: details.regionRestricted || giveaway.regionRestricted || false,
     giveawayKind: resolvedGiveawayKind,
+    giveawayMonthOverride: resolvedGiveawayKind === "cycle" ? details.giveawayMonthOverride || "" : "",
     giveawayKindChecked: details.giveawayKindChecked || giveaway.giveawayKindChecked || false,
     resultStatus: resolvedResultStatus,
     resultLabel: resolvedResultLabel,

@@ -2310,6 +2310,7 @@
       "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
+      "giveawayMonthOverride": "2026-03",
       "giveawayKindChecked": true,
       "entriesFinalized": false
     },

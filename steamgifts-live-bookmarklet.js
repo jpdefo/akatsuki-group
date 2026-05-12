@@ -596,6 +596,73 @@
     return matches[0].kind;
   }
 
+  const MONTH_NAME_TO_NUMBER = {
+    january: 1,
+    jan: 1,
+    february: 2,
+    feb: 2,
+    march: 3,
+    mar: 3,
+    april: 4,
+    apr: 4,
+    may: 5,
+    june: 6,
+    jun: 6,
+    july: 7,
+    jul: 7,
+    august: 8,
+    aug: 8,
+    september: 9,
+    sept: 9,
+    sep: 9,
+    october: 10,
+    oct: 10,
+    november: 11,
+    nov: 11,
+    december: 12,
+    dec: 12,
+  };
+
+  function detectGiveawayMonthOverride(descriptionText, referenceDate, giveawayKind) {
+    if (String(giveawayKind || "").trim().toLowerCase() !== "cycle") {
+      return "";
+    }
+
+    const text = normalizeText(descriptionText || "");
+    if (!text) {
+      return "";
+    }
+
+    const months = Array.from(
+      new Set(
+        Array.from(
+          text.matchAll(/\b(january|jan|february|feb|march|mar|april|apr|may|june|jun|july|jul|august|aug|september|sept|sep|october|oct|november|nov|december|dec)\b/gi),
+        )
+          .map((match) => MONTH_NAME_TO_NUMBER[String(match[1] || "").toLowerCase()])
+          .filter((monthNumber) => Number.isInteger(monthNumber)),
+      ),
+    );
+    if (months.length !== 1) {
+      return "";
+    }
+
+    const reference = referenceDate ? new Date(referenceDate) : new Date();
+    if (Number.isNaN(reference.getTime())) {
+      return "";
+    }
+
+    const targetMonth = months[0];
+    const referenceMonth = reference.getUTCMonth() + 1;
+    let targetYear = reference.getUTCFullYear();
+    if (targetMonth - referenceMonth >= 6) {
+      targetYear -= 1;
+    } else if (targetMonth - referenceMonth <= -6) {
+      targetYear += 1;
+    }
+
+    return `${targetYear}-${String(targetMonth).padStart(2, "0")}`;
+  }
+
   function isSummerEventKind(kind) {
     const value = String(kind || "").trim().toLowerCase();
     return value === "summer_event" || value === "summer-event" || value === "summer event";
@@ -646,6 +713,7 @@
       : null;
     const resolvedEndDate = giveaway.endDate || (endTimestamp ? new Date(endTimestamp).toISOString() : null);
     const resolvedGiveawayKind = detectedGiveawayKind || giveaway.giveawayKind || "";
+    const giveawayMonthOverride = doc ? detectGiveawayMonthOverride(descriptionText, resolvedEndDate, resolvedGiveawayKind) : "";
     const winners = await fetchWinners(giveaway.url);
     const resolvedResultStatus = winners.length
       ? "won"
@@ -676,6 +744,7 @@
       endDate: resolvedEndDate,
       regionRestricted: /region/i.test(String(featureMap.Type || "")),
       giveawayKind: resolvedGiveawayKind,
+      giveawayMonthOverride: resolvedGiveawayKind === "cycle" ? giveawayMonthOverride : "",
       giveawayKindChecked: true,
       resultStatus: resolvedResultStatus,
       resultLabel: resolvedResultLabel,

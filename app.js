@@ -445,7 +445,13 @@ function renderMemberOverview() {
     return;
   }
 
-  elements.memberOverview.innerHTML = activeMembers.slice(0, 12).map(buildMemberCard).join("");
+  const cards = activeMembers.slice(0, 12).map(buildMemberCard);
+  const cycleReminderCard = buildCurrentCycleMissingGiveawaysCard();
+  if (cycleReminderCard) {
+    cards.unshift(cycleReminderCard);
+  }
+
+  elements.memberOverview.innerHTML = cards.join("");
 }
 
 function renderRecentGiveaways() {
@@ -902,7 +908,7 @@ function renderSummerEventPage() {
     }
     if (elements.summerEventGiveawaysTable) {
       elements.summerEventGiveawaysTable.innerHTML = buildMessageRow(
-        6,
+        7,
         "No summer-event giveaways tracked.",
         "Run the sync again after tagging a giveaway as Summer event.",
       );
@@ -1027,7 +1033,18 @@ function renderSummerEventPage() {
               : escapeHtml(giveaway.title || "Untitled giveaway");
             const entryUsers = getSummerEventEntryUsers(giveaway);
             const rewardPoints = getSummerEventBasePoints(giveaway);
-            const winners = Array.isArray(giveaway.winners) ? giveaway.winners.map((winner) => winner.username).filter(Boolean) : [];
+            const winners = getSummerEventWinnerUsers(giveaway);
+            const winnerMarkup = winners.length
+              ? winners
+                  .map((username) => {
+                    const winner = summerEventMemberIndex.get(username) || null;
+                    const winnerLabel = winner?.displayName || username;
+                    return winner?.profileUrl
+                      ? `<a class="linked-title" href="${escapeHtml(winner.profileUrl)}" target="_blank" rel="noreferrer">${escapeHtml(winnerLabel)}</a>`
+                      : escapeHtml(winnerLabel);
+                  })
+                  .join(", ")
+              : "-";
             const resultStatus = String(giveaway.resultStatus || "").toLowerCase();
             const resultBadge = resultStatus === "won"
               ? buildBadge("success", "Winner drawn")
@@ -1036,6 +1053,9 @@ function renderSummerEventPage() {
                 : resultStatus === "awaiting_feedback"
                   ? buildBadge("info", "Awaiting feedback")
                   : buildBadge("info", "Open");
+            const resultMeta = resultStatus === "won"
+              ? `${winners.length} winner${winners.length === 1 ? "" : "s"} confirmed`
+              : giveaway.resultLabel || "Still running";
             return `
               <tr>
                 <td>
@@ -1055,8 +1075,12 @@ function renderSummerEventPage() {
                   <span class="meta-line">SteamGifts: ${Number(giveaway.entriesCount || 0).toLocaleString("en-US")}</span>
                 </td>
                 <td>
+                  <strong>${winnerMarkup}</strong>
+                  <span class="meta-line">${escapeHtml(winners.length ? `${winners.length} winner${winners.length === 1 ? "" : "s"}` : resultStatus === "no_winners" ? "No winners" : "No winner yet")}</span>
+                </td>
+                <td>
                   ${resultBadge}
-                  <span class="meta-line">${escapeHtml(winners.length ? `Winners: ${winners.join(", ")}` : giveaway.resultLabel || "Still running")}</span>
+                  <span class="meta-line">${escapeHtml(resultMeta)}</span>
                 </td>
                 <td>
                   ${buildSummerEventSnapshotBadge(giveaway)}
@@ -1067,7 +1091,7 @@ function renderSummerEventPage() {
           })
           .join("")
       : buildMessageRow(
-          6,
+          7,
           giveaways.length ? "No summer-event giveaways match the current filters." : "No summer-event giveaways in this event.",
           giveaways.length ? "Adjust the creator, winner, or sort controls to see more giveaways." : "Choose another event or tag more giveaways as Summer event.",
         );
@@ -1077,6 +1101,21 @@ function renderSummerEventPage() {
 function getSummerEventCreatorLabel(giveaway, memberIndex = getSummerEventMemberIndex()) {
   const creator = memberIndex.get(giveaway?.creatorUsername) || null;
   return String(creator?.displayName || giveaway?.creatorUsername || "Unknown member").trim();
+}
+
+function getSummerEventWinnerLabel(giveaway, memberIndex = getSummerEventMemberIndex()) {
+  const winners = getSummerEventWinnerUsers(giveaway);
+  if (!winners.length) {
+    return "";
+  }
+
+  return winners
+    .map((username) => {
+      const winner = memberIndex.get(username) || null;
+      return String(winner?.displayName || username || "").trim();
+    })
+    .filter(Boolean)
+    .join(", ");
 }
 
 function sortSummerEventGiveaways(giveaways, sortValue, memberIndex = getSummerEventMemberIndex()) {
@@ -1093,6 +1132,10 @@ function sortSummerEventGiveaways(giveaways, sortValue, memberIndex = getSummerE
         return getSummerEventCreatorLabel(left, memberIndex).localeCompare(getSummerEventCreatorLabel(right, memberIndex), "en-US", { sensitivity: "base" });
       case "creator-desc":
         return getSummerEventCreatorLabel(right, memberIndex).localeCompare(getSummerEventCreatorLabel(left, memberIndex), "en-US", { sensitivity: "base" });
+      case "winner-asc":
+        return getSummerEventWinnerLabel(left, memberIndex).localeCompare(getSummerEventWinnerLabel(right, memberIndex), "en-US", { sensitivity: "base" }) || String(left.endDate || "").localeCompare(String(right.endDate || ""));
+      case "winner-desc":
+        return getSummerEventWinnerLabel(right, memberIndex).localeCompare(getSummerEventWinnerLabel(left, memberIndex), "en-US", { sensitivity: "base" }) || String(right.endDate || "").localeCompare(String(left.endDate || ""));
       case "points-desc":
         return Number(right.points || 0) - Number(left.points || 0) || String(right.endDate || "").localeCompare(String(left.endDate || ""));
       case "points-asc":
@@ -1384,6 +1427,77 @@ function buildMemberCard(member) {
       <span class="meta-line">${member.profileUrl ? `<a class="linked-title" href="${escapeHtml(member.profileUrl)}" target="_blank" rel="noreferrer">Open SteamGifts profile</a>` : "SteamGifts profile unavailable"}</span>
     </article>
   `;
+}
+
+function buildCurrentCycleMissingGiveawaysCard() {
+  const summary = getCurrentCycleMissingGiveawaySummary();
+  if (!summary) {
+    return "";
+  }
+
+  const missingNames = summary.members.map(({ member, missing }) => {
+    const name = String(member?.name || member?.steamgiftsUsername || "Unknown member").trim() || "Unknown member";
+    return missing > 1 ? `${name} (${missing})` : name;
+  });
+
+  return `
+    <article class="member-card neutral">
+      ${buildBadge("warning", "Cycle giveaway pending")}
+      <h3>${escapeHtml(formatMonthKey(summary.monthKey))}</h3>
+      <strong>${summary.members.length}</strong>
+      <div class="member-card-meta">
+        <span>Active members still missing at least one required cycle giveaway.</span>
+        <span>${escapeHtml(missingNames.join(", "))}</span>
+      </div>
+    </article>
+  `;
+}
+
+function getCurrentCycleMissingGiveawaySummary() {
+  const currentMonth = monthKey(state.settings.currentDate || "");
+  if (!currentMonth) {
+    return null;
+  }
+
+  const period = getPeriodInfo(`${currentMonth}-01`);
+  if (period.kind !== "cycle") {
+    return null;
+  }
+
+  const rule9Carryover = getRule9CarryoverForCycle(period);
+  const members = state.members
+    .filter((member) => Boolean(member?.isActiveMember))
+    .map((member) => {
+      if (getCycleMemberStatus(member.id, currentMonth) === "paused") {
+        return null;
+      }
+
+      const requiredGiveaways = getRequiredCycleGiveawaysForMember(member.id, currentMonth, { rule9Carryover });
+      const createdGiveaways = countMemberGiveawaysForMonth(member.id, currentMonth, "cycle");
+      const missing = Math.max(requiredGiveaways - createdGiveaways, 0);
+
+      if (!missing) {
+        return null;
+      }
+
+      return {
+        member,
+        missing,
+      };
+    })
+    .filter(Boolean)
+    .sort(
+      (left, right) =>
+        right.missing - left.missing ||
+        String(left.member?.name || "").localeCompare(String(right.member?.name || ""), "en-US", { sensitivity: "base" }),
+    );
+
+  return members.length
+    ? {
+        monthKey: currentMonth,
+        members,
+      }
+    : null;
 }
 
 function buildGiveawayCard(giveaway) {
@@ -2547,10 +2661,13 @@ function normalizeGiveawaySyncRecord(giveaway) {
         .filter(Boolean),
     ),
   );
+  const giveawayKind = normalizeGiveawayKindValue(giveaway?.giveawayKind, giveaway);
   return {
     ...giveaway,
+    giveawayKind,
     winners,
     entryUsers,
+    giveawayMonthOverride: giveawayKind === "cycle" ? normalizeGiveawayMonthOverrideValue(giveaway?.giveawayMonthOverride) : "",
     entriesFinalized: Boolean(giveaway?.entriesFinalized),
     entriesSnapshotAt: giveaway?.entriesSnapshotAt || "",
   };
@@ -2671,6 +2788,7 @@ function upsertGameFromSync(giveawayRecord) {
 function upsertGiveawayFromSync(giveawayRecord, creatorId) {
   const sourceId = `sg-${giveawayRecord.code}`;
   const existing = state.giveaways.find((item) => item.sourceId === sourceId);
+  const normalizedKind = normalizeGiveawayKindValue(giveawayRecord.giveawayKind, giveawayRecord);
   const payload = {
     id: existing?.id || uid("giveaway"),
     sourceId,
@@ -2683,7 +2801,8 @@ function upsertGiveawayFromSync(giveawayRecord, creatorId) {
     regionLocked: Boolean(giveawayRecord.regionRestricted),
     bundled: false,
     notes: giveawayRecord.url || "",
-    giveawayKind: normalizeGiveawayKindValue(giveawayRecord.giveawayKind),
+    giveawayKind: normalizedKind,
+    giveawayMonthOverride: normalizedKind === "cycle" ? normalizeGiveawayMonthOverrideValue(giveawayRecord.giveawayMonthOverride) : "",
     giveawayKindChecked: Boolean(giveawayRecord.giveawayKindChecked),
     creatorUsername: giveawayRecord.creatorUsername || existing?.creatorUsername || "",
     entryUsers: Array.isArray(giveawayRecord.entryUsers) ? giveawayRecord.entryUsers.slice() : existing?.entryUsers || [],
@@ -3944,6 +4063,10 @@ function getEffectiveWinMonth(win) {
 }
 
 function getGiveawayMonth(giveaway) {
+  const overrideMonth = normalizeGiveawayMonthOverrideValue(giveaway?.giveawayMonthOverride);
+  if (overrideMonth && getGiveawayKind(giveaway) === "cycle") {
+    return overrideMonth;
+  }
   return monthKey(giveaway?.createdAt || "");
 }
 
@@ -4398,6 +4521,16 @@ function parseMonthOverrideInput(rawValue) {
     return { error: "Use a valid month in the YYYY-MM format." };
   }
   return { value: rawValue };
+}
+
+function normalizeGiveawayMonthOverrideValue(rawValue) {
+  const value = String(rawValue || "").trim();
+  if (!value) {
+    return "";
+  }
+
+  const parsed = parseMonthOverrideInput(value);
+  return parsed.error ? "" : parsed.value;
 }
 
 function updateOverrideField(bucketName, key, fieldName, value) {
