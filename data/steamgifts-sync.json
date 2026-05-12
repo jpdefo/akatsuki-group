@@ -1,6 +1,6 @@
 {
   "source": "akatsuki-steamgifts-sync",
-  "syncedAt": "2026-05-12T18:36:07.255Z",
+  "syncedAt": "2026-05-12T19:10:40.600Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -2192,7 +2192,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-05-12T18:35:50.698Z",
+      "entriesSnapshotAt": "2026-05-12T19:10:23.507Z",
       "steamStoreType": "sub",
       "steamStoreId": 427289,
       "steamPriceChecked": true,
@@ -2681,6 +2681,36 @@
       "steamStoreId": 1663850
     },
     {
+      "code": "Cufm2",
+      "url": "https://www.steamgifts.com/giveaway/Cufm2/reanimal",
+      "title": "REANIMAL",
+      "creatorUsername": "chOOkity",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/chOOkity",
+      "appId": 2129530,
+      "steamAppUrl": "https://store.steampowered.com/app/2129530?utm_source=SteamGifts",
+      "points": 40,
+      "entriesCount": 3,
+      "endDate": "2026-04-06T08:51:57.000Z",
+      "winners": [
+        {
+          "username": "Horseflesh",
+          "profileUrl": "https://www.steamgifts.com/user/Horseflesh",
+          "status": "Received"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "Horseflesh",
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayMonthOverride": "2026-03",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false,
+      "entriesSnapshotAt": "",
+      "steamStoreType": "app",
+      "steamStoreId": 2129530,
+      "hltbHours": 4.55
+    },
+    {
       "code": "CFqMt",
       "url": "https://www.steamgifts.com/giveaway/CFqMt/slay-the-spire-2",
       "title": "Slay the Spire 2",
@@ -3112,7 +3142,8 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 3768760
+      "steamStoreId": 3768760,
+      "giveawayMonthOverride": "2026-03"
     },
     {
       "code": "16bPT",
@@ -96518,6 +96549,14 @@
       "winDate": "2026-04-06T12:06:40.000Z"
     },
     {
+      "giveawayCode": "Cufm2",
+      "title": "REANIMAL",
+      "appId": 2129530,
+      "winnerUsername": "Horseflesh",
+      "creatorUsername": "chOOkity",
+      "winDate": "2026-04-06T08:51:57.000Z"
+    },
+    {
       "giveawayCode": "CFqMt",
       "title": "Slay the Spire 2",
       "appId": 2868840,
@@ -127678,6 +127717,6 @@
       "winDate": "2016-08-26T06:01:36.000Z"
     }
   ],
-  "savedAt": "2026-05-12T18:36:07.297159+00:00",
-  "mergedAt": "2026-05-12T18:36:07.297168+00:00"
+  "savedAt": "2026-05-12T19:10:40.638199+00:00",
+  "mergedAt": "2026-05-12T19:10:40.638204+00:00"
 }

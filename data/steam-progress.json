@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-12T18:36:11.186958+00:00",
+  "updatedAt": "2026-05-12T19:10:43.311291+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -6713,7 +6713,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-05-12T18:36:11.186918+00:00"
+      "checkedAt": "2026-05-12T19:10:43.311271+00:00"
     },
     {
       "username": "burntreynolds444",
@@ -8995,7 +8995,7 @@
       "achievementPercent": 0,
       "playtimeHours": 0.0,
       "error": null,
-      "checkedAt": "2026-05-12T18:36:11.186954+00:00",
+      "checkedAt": "2026-05-12T19:10:43.311289+00:00",
       "playtimeCheckedAt": "2026-05-11T06:27:47.697701+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -15533,7 +15533,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-05-12T18:36:10.541211+00:00"
+      "checkedAt": "2026-05-12T19:10:43.311248+00:00"
     },
     {
       "username": "Horseflesh",
@@ -28673,7 +28673,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-05-12T18:36:11.186944+00:00"
+      "checkedAt": "2026-05-12T19:10:43.311282+00:00"
     },
     {
       "username": "Saikania",
@@ -68552,9 +68552,9 @@
   "activeOnly": true,
   "refreshedMonth": "2026-05",
   "refreshedScope": "month",
-  "libraryUpdatedAt": "2026-05-12T18:36:10.338034+00:00",
+  "libraryUpdatedAt": "2026-05-12T19:10:43.067631+00:00",
   "libraryStats": {
-    "durationSeconds": 0.16,
+    "durationSeconds": 0.15,
     "targetProfiles": 4,
     "refreshedProfiles": 0,
     "reusedProfiles": 4,
@@ -68565,12 +68565,12 @@
     "totalPlaytimeRows": 86342
   },
   "stats": {
-    "durationSeconds": 1.02,
+    "durationSeconds": 0.38,
     "targetWins": 4,
     "uniqueProgressTargets": 4,
     "libraryPlaytimeHits": 3,
-    "cachedReuses": 3,
-    "achievementSuccesses": 1,
+    "cachedReuses": 4,
+    "achievementSuccesses": 0,
     "achievementErrors": 0,
     "cachedFallbacks": 0,
     "hltbTitlesRequested": 4,
