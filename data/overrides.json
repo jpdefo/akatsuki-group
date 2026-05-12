@@ -1,11 +1,14 @@
 {
-  "savedAt": "2026-05-11T06:27:28.989186+00:00",
+  "savedAt": "2026-05-12T19:06:33.387812+00:00",
   "overrides": {
     "games": {},
     "wins": {},
     "giveaways": {
       "sg-XSQMJ": {
         "giveawayKindOverride": "extra"
+      },
+      "sg-Cufm2": {
+        "giveawayMonthOverride": "2026-03"
       }
     },
     "cycleMembers": {}
