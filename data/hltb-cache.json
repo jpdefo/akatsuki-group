@@ -13536,5 +13536,40 @@
     "matchedTitle": "The Hunter: Call of the Wild",
     "gameId": 43633,
     "url": "https://howlongtobeat.com/game/43633"
+  },
+  "alabaster dawn": {
+    "title": "Alabaster Dawn",
+    "hltbHours": 6.5,
+    "matchedTitle": "Alabaster Dawn",
+    "gameId": 155056,
+    "url": "https://howlongtobeat.com/game/155056"
+  },
+  "dead as disco": {
+    "title": "Dead as Disco",
+    "hltbHours": 2.33,
+    "matchedTitle": "Dead as Disco",
+    "gameId": 167362,
+    "url": "https://howlongtobeat.com/game/167362"
+  },
+  "froggy hates snow": {
+    "title": "FROGGY HATES SNOW",
+    "hltbHours": 3.59,
+    "matchedTitle": "Froggy Hates Snow",
+    "gameId": 185242,
+    "url": "https://howlongtobeat.com/game/185242"
+  },
+  "mixtape": {
+    "title": "Mixtape",
+    "hltbHours": 3.18,
+    "matchedTitle": "Mixtape",
+    "gameId": 152041,
+    "url": "https://howlongtobeat.com/game/152041"
+  },
+  "subnautica 2": {
+    "title": "Subnautica 2",
+    "hltbHours": 13.11,
+    "matchedTitle": "Subnautica 2",
+    "gameId": 158248,
+    "url": "https://howlongtobeat.com/game/158248"
   }
 }

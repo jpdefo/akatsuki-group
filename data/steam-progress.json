@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-02T22:20:26.861015+00:00",
+  "updatedAt": "2026-06-02T22:22:51.688785+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -6713,7 +6713,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-06-02T22:20:25.633801+00:00"
+      "checkedAt": "2026-06-02T22:22:48.987384+00:00"
     },
     {
       "username": "burntreynolds444",
@@ -6732,6 +6732,24 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 3232380,
+      "title": "FROGGY HATES SNOW",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3232380/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 42,
+      "achievementPercent": 0,
+      "playtimeCheckedAt": "2026-06-02T22:20:23.536904+00:00",
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "checkedAt": "2026-06-02T22:22:45.212088+00:00"
     },
     {
       "username": "burntreynolds444",
@@ -8878,6 +8896,24 @@
     {
       "username": "chOOkity",
       "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
+      "appId": 2582320,
+      "title": "Mixtape",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2582320/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 26,
+      "achievementPercent": 0,
+      "playtimeCheckedAt": "2026-06-02T22:20:24.358770+00:00",
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "checkedAt": "2026-06-02T22:22:46.931704+00:00"
+    },
+    {
+      "username": "chOOkity",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
       "appId": 2668510,
       "title": "Red Dead Redemption",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2668510/achievements/",
@@ -8950,6 +8986,24 @@
     {
       "username": "chOOkity",
       "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
+      "appId": 3404260,
+      "title": "Dead as Disco",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/3404260/achievements/",
+      "playtimeHours": 0.78,
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeCheckedAt": "2026-06-02T22:20:24.358770+00:00",
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "checkedAt": "2026-06-02T22:22:43.842115+00:00"
+    },
+    {
+      "username": "chOOkity",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
       "appId": 3489700,
       "title": "Stellar Blade",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/3489700/achievements/",
@@ -8995,7 +9049,7 @@
       "achievementPercent": 0,
       "playtimeHours": 0.0,
       "error": null,
-      "checkedAt": "2026-06-02T22:20:26.295656+00:00",
+      "checkedAt": "2026-06-02T22:22:51.688767+00:00",
       "playtimeCheckedAt": "2026-06-02T22:20:24.358770+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -15533,7 +15587,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-06-02T22:20:25.182510+00:00"
+      "checkedAt": "2026-06-02T22:22:48.362227+00:00"
     },
     {
       "username": "Horseflesh",
@@ -16344,6 +16398,24 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 2416450,
+      "title": "MOUSE: P.I. For Hire",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/2416450/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 34,
+      "achievementPercent": 0,
+      "playtimeCheckedAt": "2026-06-02T22:20:22.937752+00:00",
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "checkedAt": "2026-06-02T22:22:43.131614+00:00"
     },
     {
       "username": "Horseflesh",
@@ -25996,6 +26068,24 @@
     {
       "username": "leniu",
       "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
+      "appId": 3110760,
+      "title": "Alabaster Dawn",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/3110760/achievements/",
+      "playtimeHours": 1.83,
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeCheckedAt": "2026-06-02T22:22:32.229224+00:00",
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "checkedAt": "2026-06-02T22:22:41.225278+00:00"
+    },
+    {
+      "username": "leniu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
       "appId": 3156770,
       "title": "Witchfire",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/3156770/achievements/",
@@ -26028,6 +26118,24 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true
+    },
+    {
+      "username": "leniu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
+      "appId": 3357650,
+      "title": "PRAGMATA",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/3357650/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 35,
+      "achievementPercent": 0,
+      "playtimeCheckedAt": "2026-06-02T22:22:32.229224+00:00",
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "checkedAt": "2026-06-02T22:22:50.404402+00:00"
     },
     {
       "username": "Millsshogun",
@@ -28673,7 +28781,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-06-02T22:20:25.901368+00:00"
+      "checkedAt": "2026-06-02T22:22:51.058587+00:00"
     },
     {
       "username": "Saikania",
@@ -34114,6 +34222,24 @@
     {
       "username": "Wintermute101",
       "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
+      "appId": 3172700,
+      "title": "Banquet for Fools",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3172700/achievements/",
+      "playtimeHours": 1.53,
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeCheckedAt": "2026-06-02T22:22:33.498987+00:00",
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "checkedAt": "2026-06-02T22:22:48.987420+00:00"
+    },
+    {
+      "username": "Wintermute101",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
       "appId": 3527760,
       "title": "RoboCop: Rogue City - Unfinished Busi...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3527760/achievements/",
@@ -35784,6 +35910,24 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true
+    },
+    {
+      "username": "xMisiu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198082091554",
+      "appId": 3768760,
+      "title": "007 First Light",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/3768760/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 37,
+      "achievementPercent": 0,
+      "playtimeCheckedAt": "2026-06-02T22:22:33.879658+00:00",
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "checkedAt": "2026-06-02T22:22:51.058610+00:00"
     },
     {
       "username": "Youdontknow",
@@ -39532,6 +39676,24 @@
     {
       "username": "zettaivanugen",
       "steamProfile": "https://steamcommunity.com/profiles/76561197975039366",
+      "appId": 686060,
+      "title": "Mewgenics",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/686060/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 281,
+      "achievementPercent": 0,
+      "playtimeCheckedAt": "2026-06-02T22:22:32.626966+00:00",
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "checkedAt": "2026-06-02T22:22:48.362252+00:00"
+    },
+    {
+      "username": "zettaivanugen",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197975039366",
       "appId": 691690,
       "title": "Ash of Gods: Redemption",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/691690/achievements/",
@@ -40576,6 +40738,24 @@
     {
       "username": "zettaivanugen",
       "steamProfile": "https://steamcommunity.com/profiles/76561197975039366",
+      "appId": 1962700,
+      "title": "Subnautica 2",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/1962700/achievements/",
+      "playtimeHours": 0.0,
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeCheckedAt": "2026-06-02T22:22:32.626966+00:00",
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "checkedAt": "2026-06-02T22:22:45.578084+00:00"
+    },
+    {
+      "username": "zettaivanugen",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197975039366",
       "appId": 1989270,
       "title": "Slay the Princess — The Pristine Cut",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/1989270/achievements/",
@@ -40662,6 +40842,24 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true
+    },
+    {
+      "username": "zettaivanugen",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197975039366",
+      "appId": 2215200,
+      "title": "LEGO Batman: Legacy of the Dark Knight",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/2215200/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 52,
+      "achievementPercent": 0,
+      "playtimeCheckedAt": "2026-06-02T22:22:32.626966+00:00",
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "checkedAt": "2026-06-02T22:22:49.705291+00:00"
     },
     {
       "username": "zettaivanugen",
@@ -40774,6 +40972,24 @@
     {
       "username": "zettaivanugen",
       "steamProfile": "https://steamcommunity.com/profiles/76561197975039366",
+      "appId": 2678080,
+      "title": "Tides of Tomorrow 🌊",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/2678080/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 39,
+      "achievementPercent": 0,
+      "playtimeCheckedAt": "2026-06-02T22:22:32.626966+00:00",
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "checkedAt": "2026-06-02T22:22:47.667668+00:00"
+    },
+    {
+      "username": "zettaivanugen",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197975039366",
       "appId": 2756920,
       "title": "Keep Driving",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/2756920/achievements/",
@@ -40828,11 +41044,81 @@
   ],
   "hltb": [
     {
+      "title": "MOUSE: P.I. For Hire",
+      "appId": 2416450,
+      "hltbHours": 12.08,
+      "matchedTitle": "MOUSE: P.I. For Hire",
+      "url": "https://howlongtobeat.com/game/128648"
+    },
+    {
+      "title": "Tides of Tomorrow 🌊",
+      "appId": 2678080,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "REPLACED",
+      "appId": 1663850,
+      "hltbHours": 10.8,
+      "matchedTitle": "Replaced",
+      "url": "https://howlongtobeat.com/game/93944"
+    },
+    {
+      "title": "Alabaster Dawn",
+      "appId": 3110760,
+      "hltbHours": 6.5,
+      "matchedTitle": "Alabaster Dawn",
+      "url": "https://howlongtobeat.com/game/155056"
+    },
+    {
+      "title": "MOUSE: P.I. For Hire",
+      "appId": 2416450,
+      "hltbHours": 12.08,
+      "matchedTitle": "MOUSE: P.I. For Hire",
+      "url": "https://howlongtobeat.com/game/128648"
+    },
+    {
+      "title": "Gothic 1 Remake",
+      "appId": 1297900,
+      "hltbHours": 0.0,
+      "matchedTitle": "Gothic 1 Remake",
+      "url": "https://howlongtobeat.com/game/92900"
+    },
+    {
+      "title": "Dead as Disco",
+      "appId": 3404260,
+      "hltbHours": 2.33,
+      "matchedTitle": "Dead as Disco",
+      "url": "https://howlongtobeat.com/game/167362"
+    },
+    {
+      "title": "FROGGY HATES SNOW",
+      "appId": 3232380,
+      "hltbHours": 3.59,
+      "matchedTitle": "Froggy Hates Snow",
+      "url": "https://howlongtobeat.com/game/185242"
+    },
+    {
+      "title": "Subnautica 2",
+      "appId": 1962700,
+      "hltbHours": 13.11,
+      "matchedTitle": "Subnautica 2",
+      "url": "https://howlongtobeat.com/game/158248"
+    },
+    {
       "title": "Borderlands 3: Super Deluxe Edition",
       "appId": 427289,
       "hltbHours": null,
       "matchedTitle": "",
       "url": ""
+    },
+    {
+      "title": "Mixtape",
+      "appId": 2582320,
+      "hltbHours": 3.18,
+      "matchedTitle": "Mixtape",
+      "url": "https://howlongtobeat.com/game/152041"
     },
     {
       "title": "Tides of Tomorrow 🌊",
@@ -68552,28 +68838,28 @@
   "activeOnly": true,
   "refreshedMonth": "2026-05",
   "refreshedScope": "month",
-  "libraryUpdatedAt": "2026-06-02T22:20:24.929449+00:00",
+  "libraryUpdatedAt": "2026-06-02T22:22:33.882466+00:00",
   "libraryStats": {
-    "durationSeconds": 0.22,
-    "targetProfiles": 4,
-    "refreshedProfiles": 0,
+    "durationSeconds": 2.45,
+    "targetProfiles": 8,
+    "refreshedProfiles": 4,
     "reusedProfiles": 4,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "freshProfiles": 4,
-    "totalPlaytimeRows": 86487
+    "freshProfiles": 8,
+    "totalPlaytimeRows": 86504
   },
   "stats": {
-    "durationSeconds": 2.14,
-    "targetWins": 4,
-    "uniqueProgressTargets": 4,
-    "libraryPlaytimeHits": 4,
-    "cachedReuses": 0,
-    "achievementSuccesses": 4,
+    "durationSeconds": 20.26,
+    "targetWins": 16,
+    "uniqueProgressTargets": 16,
+    "libraryPlaytimeHits": 16,
+    "cachedReuses": 4,
+    "achievementSuccesses": 12,
     "achievementErrors": 0,
     "cachedFallbacks": 0,
-    "hltbTitlesRequested": 4,
-    "hltbResultsAvailable": 3960
+    "hltbTitlesRequested": 15,
+    "hltbResultsAvailable": 3970
   }
 }

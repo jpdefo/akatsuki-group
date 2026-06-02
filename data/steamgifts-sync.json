@@ -1,6 +1,6 @@
 {
   "source": "akatsuki-steamgifts-sync",
-  "syncedAt": "2026-05-12T19:10:40.600Z",
+  "syncedAt": "2026-06-02T22:22:25.236Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -2151,6 +2151,335 @@
   ],
   "giveaways": [
     {
+      "code": "hiVUZ",
+      "url": "https://www.steamgifts.com/giveaway/hiVUZ/keeper",
+      "title": "Keeper",
+      "creatorUsername": "leniu",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
+      "appId": 3043580,
+      "steamAppUrl": "https://store.steampowered.com/app/3043580?utm_source=SteamGifts",
+      "points": 30,
+      "entriesCount": 1,
+      "endDate": "2026-06-02T18:17:02.000Z",
+      "winners": [],
+      "resultStatus": "open",
+      "resultLabel": "Open",
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayMonthOverride": "2026-06",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false,
+      "entriesSnapshotAt": "",
+      "steamStoreType": "app",
+      "steamStoreId": 3043580
+    },
+    {
+      "code": "jSKFe",
+      "url": "https://www.steamgifts.com/giveaway/jSKFe/huntdown-overtime",
+      "title": "HUNTDOWN: OVERTIME",
+      "creatorUsername": "Horseflesh",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/Horseflesh",
+      "appId": 2473350,
+      "steamAppUrl": "https://store.steampowered.com/app/2473350?utm_source=SteamGifts",
+      "points": 17,
+      "entriesCount": 2,
+      "endDate": "2026-06-02T15:19:09.000Z",
+      "winners": [],
+      "resultStatus": "open",
+      "resultLabel": "Open",
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayMonthOverride": "2026-06",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false,
+      "entriesSnapshotAt": "",
+      "steamStoreType": "app",
+      "steamStoreId": 2473350
+    },
+    {
+      "code": "HjK8m",
+      "url": "https://www.steamgifts.com/giveaway/HjK8m/directive-8020",
+      "title": "Directive 8020",
+      "creatorUsername": "Horseflesh",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/Horseflesh",
+      "appId": 2255370,
+      "steamAppUrl": "https://store.steampowered.com/app/2255370?utm_source=SteamGifts",
+      "points": 50,
+      "entriesCount": 1,
+      "endDate": "2026-06-02T15:16:10.000Z",
+      "winners": [],
+      "resultStatus": "open",
+      "resultLabel": "Open",
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayMonthOverride": "2026-06",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false,
+      "entriesSnapshotAt": "",
+      "steamStoreType": "app",
+      "steamStoreId": 2255370
+    },
+    {
+      "code": "C1Flw",
+      "url": "https://www.steamgifts.com/giveaway/C1Flw/paralives",
+      "title": "Paralives",
+      "creatorUsername": "chOOkity",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/chOOkity",
+      "appId": 1118520,
+      "steamAppUrl": "https://store.steampowered.com/app/1118520?utm_source=SteamGifts",
+      "points": 40,
+      "entriesCount": 1,
+      "endDate": "2026-06-02T13:10:44.000Z",
+      "winners": [],
+      "resultStatus": "open",
+      "resultLabel": "Open",
+      "regionRestricted": false,
+      "giveawayKind": "",
+      "giveawayMonthOverride": "",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false,
+      "entriesSnapshotAt": "",
+      "steamStoreType": "app",
+      "steamStoreId": 1118520
+    },
+    {
+      "code": "ezoJp",
+      "url": "https://www.steamgifts.com/giveaway/ezoJp/mina-the-hollower",
+      "title": "Mina the Hollower",
+      "creatorUsername": "chOOkity",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/chOOkity",
+      "appId": 1875580,
+      "steamAppUrl": "https://store.steampowered.com/app/1875580?utm_source=SteamGifts",
+      "points": 20,
+      "entriesCount": 1,
+      "endDate": "2026-06-02T13:08:58.000Z",
+      "winners": [],
+      "resultStatus": "open",
+      "resultLabel": "Open",
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayMonthOverride": "2026-06",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false,
+      "entriesSnapshotAt": "",
+      "steamStoreType": "app",
+      "steamStoreId": 1875580
+    },
+    {
+      "code": "booLQ",
+      "url": "https://www.steamgifts.com/giveaway/booLQ/mouse-pi-for-hire",
+      "title": "MOUSE: P.I. For Hire",
+      "creatorUsername": "Wintermute101",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/Wintermute101",
+      "appId": 2416450,
+      "steamAppUrl": "https://store.steampowered.com/app/2416450?utm_source=SteamGifts",
+      "points": 30,
+      "entriesCount": 1,
+      "endDate": "2026-06-02T06:19:39.000Z",
+      "winners": [],
+      "resultStatus": "open",
+      "resultLabel": "Open",
+      "regionRestricted": false,
+      "giveawayKind": "",
+      "giveawayMonthOverride": "",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false,
+      "entriesSnapshotAt": "",
+      "steamStoreType": "app",
+      "steamStoreId": 2416450,
+      "hltbHours": 12.08
+    },
+    {
+      "code": "RKjdv",
+      "url": "https://www.steamgifts.com/giveaway/RKjdv/tides-of-tomorrow",
+      "title": "Tides of Tomorrow 🌊",
+      "creatorUsername": "Wintermute101",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/Wintermute101",
+      "appId": 2678080,
+      "steamAppUrl": "https://store.steampowered.com/app/2678080?utm_source=SteamGifts",
+      "points": 30,
+      "entriesCount": 1,
+      "endDate": "2026-06-02T06:12:48.000Z",
+      "winners": [],
+      "resultStatus": "open",
+      "resultLabel": "Open",
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayMonthOverride": "2026-06",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false,
+      "entriesSnapshotAt": "",
+      "steamStoreType": "app",
+      "steamStoreId": 2678080
+    },
+    {
+      "code": "xDUes",
+      "url": "https://www.steamgifts.com/giveaway/xDUes/replaced",
+      "title": "REPLACED",
+      "creatorUsername": "burntreynolds444",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/burntreynolds444",
+      "appId": 1663850,
+      "steamAppUrl": "https://store.steampowered.com/app/1663850?utm_source=SteamGifts",
+      "points": 20,
+      "entriesCount": 3,
+      "endDate": "2026-06-02T03:34:07.000Z",
+      "winners": [],
+      "resultStatus": "open",
+      "resultLabel": "Open",
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayMonthOverride": "2026-06",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false,
+      "entriesSnapshotAt": "",
+      "steamStoreType": "app",
+      "steamStoreId": 1663850,
+      "hltbHours": 10.8
+    },
+    {
+      "code": "j0L3n",
+      "url": "https://www.steamgifts.com/giveaway/j0L3n/alabaster-dawn",
+      "title": "Alabaster Dawn",
+      "creatorUsername": "zettaivanugen",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/zettaivanugen",
+      "appId": 3110760,
+      "steamAppUrl": "https://store.steampowered.com/app/3110760?utm_source=SteamGifts",
+      "points": 25,
+      "entriesCount": 2,
+      "endDate": "2026-05-20T23:48:55.000Z",
+      "winners": [
+        {
+          "username": "leniu",
+          "profileUrl": "https://www.steamgifts.com/user/leniu",
+          "status": "Received"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "leniu",
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayMonthOverride": "2026-05",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false,
+      "entriesSnapshotAt": "",
+      "steamStoreType": "app",
+      "steamStoreId": 3110760,
+      "hltbHours": 6.5
+    },
+    {
+      "code": "LvcEX",
+      "url": "https://www.steamgifts.com/giveaway/LvcEX/mouse-pi-for-hire",
+      "title": "MOUSE: P.I. For Hire",
+      "creatorUsername": "WNDRLST",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/WNDRLST",
+      "appId": 2416450,
+      "steamAppUrl": "https://store.steampowered.com/app/2416450?utm_source=SteamGifts",
+      "points": 30,
+      "entriesCount": 6,
+      "endDate": "2026-05-15T21:17:31.000Z",
+      "winners": [
+        {
+          "username": "Horseflesh",
+          "profileUrl": "https://www.steamgifts.com/user/Horseflesh",
+          "status": "Received"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "Horseflesh",
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayMonthOverride": "2026-05",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false,
+      "entriesSnapshotAt": "",
+      "steamStoreType": "app",
+      "steamStoreId": 2416450,
+      "hltbHours": 12.08
+    },
+    {
+      "code": "pijaT",
+      "url": "https://www.steamgifts.com/giveaway/pijaT/gothic-1-remake",
+      "title": "Gothic 1 Remake",
+      "creatorUsername": "Drain",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/Drain",
+      "appId": 1297900,
+      "steamAppUrl": "https://store.steampowered.com/app/1297900?utm_source=SteamGifts",
+      "points": 50,
+      "entriesCount": 2,
+      "endDate": "2026-05-15T08:54:14.000Z",
+      "winners": [],
+      "resultStatus": "awaiting_feedback",
+      "resultLabel": "Awaiting feedback",
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayMonthOverride": "2026-05",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false,
+      "entriesSnapshotAt": "",
+      "steamStoreType": "app",
+      "steamStoreId": 1297900
+    },
+    {
+      "code": "Ll6uo",
+      "url": "https://www.steamgifts.com/giveaway/Ll6uo/dead-as-disco",
+      "title": "Dead as Disco",
+      "creatorUsername": "Youdontknow",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/Youdontknow",
+      "appId": 3404260,
+      "steamAppUrl": "https://store.steampowered.com/app/3404260?utm_source=SteamGifts",
+      "points": 25,
+      "entriesCount": 2,
+      "endDate": "2026-05-13T13:26:57.000Z",
+      "winners": [
+        {
+          "username": "chOOkity",
+          "profileUrl": "https://www.steamgifts.com/user/chOOkity",
+          "status": "Received"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "chOOkity",
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayMonthOverride": "2026-05",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false,
+      "entriesSnapshotAt": "",
+      "steamStoreType": "app",
+      "steamStoreId": 3404260,
+      "hltbHours": 2.33
+    },
+    {
+      "code": "Ao4Uw",
+      "url": "https://www.steamgifts.com/giveaway/Ao4Uw/froggy-hates-snow",
+      "title": "FROGGY HATES SNOW",
+      "creatorUsername": "Thedogma",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/Thedogma",
+      "appId": 3232380,
+      "steamAppUrl": "https://store.steampowered.com/app/3232380?utm_source=SteamGifts",
+      "points": 15,
+      "entriesCount": 2,
+      "endDate": "2026-05-12T19:48:37.000Z",
+      "winners": [
+        {
+          "username": "burntreynolds444",
+          "profileUrl": "https://www.steamgifts.com/user/burntreynolds444",
+          "status": "Received"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "burntreynolds444",
+      "regionRestricted": false,
+      "giveawayKind": "cycle",
+      "giveawayMonthOverride": "2026-05",
+      "giveawayKindChecked": true,
+      "entriesFinalized": false,
+      "entriesSnapshotAt": "",
+      "steamStoreType": "app",
+      "steamStoreId": 3232380,
+      "hltbHours": 3.59
+    },
+    {
       "code": "vxYY4",
       "url": "https://www.steamgifts.com/giveaway/vxYY4/subnautica-2",
       "title": "Subnautica 2",
@@ -2159,11 +2488,17 @@
       "appId": 1962700,
       "steamAppUrl": "https://store.steampowered.com/app/1962700?utm_source=SteamGifts",
       "points": 30,
-      "entriesCount": 0,
+      "entriesCount": 3,
       "endDate": "2026-05-12T18:26:22.000Z",
-      "winners": [],
-      "resultStatus": "open",
-      "resultLabel": "Open",
+      "winners": [
+        {
+          "username": "zettaivanugen",
+          "profileUrl": "https://www.steamgifts.com/user/zettaivanugen",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "zettaivanugen",
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayMonthOverride": "2026-05",
@@ -2171,7 +2506,8 @@
       "entriesFinalized": false,
       "entriesSnapshotAt": "",
       "steamStoreType": "app",
-      "steamStoreId": 1962700
+      "steamStoreId": 1962700,
+      "hltbHours": 13.11
     },
     {
       "code": "BN7J1",
@@ -2185,8 +2521,8 @@
       "entriesCount": 0,
       "endDate": "2026-05-12T13:18:59.000Z",
       "winners": [],
-      "resultStatus": "open",
-      "resultLabel": "Open",
+      "resultStatus": "no_winners",
+      "resultLabel": "No winners",
       "regionRestricted": false,
       "giveawayKind": "summer_event",
       "giveawayKindChecked": true,
@@ -2210,11 +2546,17 @@
       "creatorProfileUrl": "https://www.steamgifts.com/user/Ernesttico",
       "appId": 2582320,
       "steamAppUrl": "https://store.steampowered.com/app/2582320?utm_source=SteamGifts",
-      "entriesCount": 2,
+      "entriesCount": 3,
       "endDate": "2026-05-10T15:18:06.000Z",
-      "winners": [],
-      "resultStatus": "open",
-      "resultLabel": "Open",
+      "winners": [
+        {
+          "username": "chOOkity",
+          "profileUrl": "https://www.steamgifts.com/user/chOOkity",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "chOOkity",
       "points": 20,
       "regionRestricted": false,
       "giveawayKind": "cycle",
@@ -2222,7 +2564,8 @@
       "entriesFinalized": false,
       "steamStoreType": "app",
       "steamStoreId": 2582320,
-      "giveawayMonthOverride": "2026-05"
+      "giveawayMonthOverride": "2026-05",
+      "hltbHours": 3.18
     },
     {
       "code": "x8SJ2",
@@ -2232,11 +2575,17 @@
       "creatorProfileUrl": "https://www.steamgifts.com/user/chOOkity",
       "appId": 2678080,
       "steamAppUrl": "https://store.steampowered.com/app/2678080?utm_source=SteamGifts",
-      "entriesCount": 1,
+      "entriesCount": 4,
       "endDate": "2026-05-04T13:36:02.000Z",
-      "winners": [],
-      "resultStatus": "open",
-      "resultLabel": "Open",
+      "winners": [
+        {
+          "username": "zettaivanugen",
+          "profileUrl": "https://www.steamgifts.com/user/zettaivanugen",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "zettaivanugen",
       "points": 30,
       "regionRestricted": false,
       "giveawayKind": "cycle",
@@ -2290,9 +2639,15 @@
       "steamAppUrl": "https://store.steampowered.com/app/686060?utm_source=SteamGifts",
       "entriesCount": 2,
       "endDate": "2026-05-03T11:22:25.000Z",
-      "winners": [],
-      "resultStatus": "open",
-      "resultLabel": "Open",
+      "winners": [
+        {
+          "username": "zettaivanugen",
+          "profileUrl": "https://www.steamgifts.com/user/zettaivanugen",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "zettaivanugen",
       "hltbHours": 72.35,
       "points": 30,
       "regionRestricted": false,
@@ -2339,9 +2694,15 @@
       "steamAppUrl": "https://store.steampowered.com/app/3172700?utm_source=SteamGifts",
       "entriesCount": 2,
       "endDate": "2026-05-01T22:14:35.000Z",
-      "winners": [],
-      "resultStatus": "open",
-      "resultLabel": "Open",
+      "winners": [
+        {
+          "username": "Wintermute101",
+          "profileUrl": "https://www.steamgifts.com/user/Wintermute101",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "Wintermute101",
       "hltbHours": 68.2,
       "points": 20,
       "regionRestricted": false,
@@ -2360,11 +2721,11 @@
       "creatorProfileUrl": "https://www.steamgifts.com/user/Saikania",
       "appId": 3105440,
       "steamAppUrl": "https://store.steampowered.com/app/3105440?utm_source=SteamGifts",
-      "entriesCount": 4,
+      "entriesCount": 5,
       "endDate": "2026-05-01T19:13:11.000Z",
       "winners": [],
-      "resultStatus": "open",
-      "resultLabel": "Open",
+      "resultStatus": "awaiting_feedback",
+      "resultLabel": "Awaiting feedback",
       "hltbHours": 18,
       "points": 40,
       "regionRestricted": false,
@@ -2383,11 +2744,17 @@
       "creatorProfileUrl": "https://www.steamgifts.com/user/BojanNS987",
       "appId": 2215200,
       "steamAppUrl": "https://store.steampowered.com/app/2215200?utm_source=SteamGifts",
-      "entriesCount": 2,
+      "entriesCount": 3,
       "endDate": "2026-05-01T18:44:04.000Z",
-      "winners": [],
-      "resultStatus": "open",
-      "resultLabel": "Open",
+      "winners": [
+        {
+          "username": "zettaivanugen",
+          "profileUrl": "https://www.steamgifts.com/user/zettaivanugen",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "zettaivanugen",
       "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
@@ -2405,11 +2772,17 @@
       "creatorProfileUrl": "https://www.steamgifts.com/user/burntreynolds444",
       "appId": 3357650,
       "steamAppUrl": "https://store.steampowered.com/app/3357650?utm_source=SteamGifts",
-      "entriesCount": 3,
+      "entriesCount": 7,
       "endDate": "2026-05-01T17:07:41.000Z",
-      "winners": [],
-      "resultStatus": "open",
-      "resultLabel": "Open",
+      "winners": [
+        {
+          "username": "leniu",
+          "profileUrl": "https://www.steamgifts.com/user/leniu",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "leniu",
       "hltbHours": 11.51,
       "points": 50,
       "regionRestricted": false,
@@ -2695,7 +3068,7 @@
         {
           "username": "Horseflesh",
           "profileUrl": "https://www.steamgifts.com/user/Horseflesh",
-          "status": "Received"
+          "status": "Won"
         }
       ],
       "resultStatus": "won",
@@ -3133,9 +3506,15 @@
       "steamAppUrl": "https://store.steampowered.com/app/3768760?utm_source=SteamGifts",
       "entriesCount": 7,
       "endDate": "2026-03-04T06:56:37.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "xMisiu",
+          "profileUrl": "https://www.steamgifts.com/user/xMisiu",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "xMisiu",
       "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
@@ -3220,7 +3599,7 @@
       "resultStatus": "won",
       "resultLabel": "Horseflesh",
       "hltbHours": 5.99,
-      "points": 50,
+      "points": 40,
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true,
@@ -4160,7 +4539,7 @@
       "resultStatus": "won",
       "resultLabel": "Ernesttico",
       "hltbHours": 5.99,
-      "points": 50,
+      "points": 40,
       "regionRestricted": false,
       "giveawayKind": "summer_event",
       "giveawayKindChecked": true,
@@ -96477,6 +96856,62 @@
   ],
   "wins": [
     {
+      "giveawayCode": "j0L3n",
+      "title": "Alabaster Dawn",
+      "appId": 3110760,
+      "winnerUsername": "leniu",
+      "creatorUsername": "zettaivanugen",
+      "winDate": "2026-05-20T23:48:55.000Z"
+    },
+    {
+      "giveawayCode": "LvcEX",
+      "title": "MOUSE: P.I. For Hire",
+      "appId": 2416450,
+      "winnerUsername": "Horseflesh",
+      "creatorUsername": "WNDRLST",
+      "winDate": "2026-05-15T21:17:31.000Z"
+    },
+    {
+      "giveawayCode": "Ll6uo",
+      "title": "Dead as Disco",
+      "appId": 3404260,
+      "winnerUsername": "chOOkity",
+      "creatorUsername": "Youdontknow",
+      "winDate": "2026-05-13T13:26:57.000Z"
+    },
+    {
+      "giveawayCode": "Ao4Uw",
+      "title": "FROGGY HATES SNOW",
+      "appId": 3232380,
+      "winnerUsername": "burntreynolds444",
+      "creatorUsername": "Thedogma",
+      "winDate": "2026-05-12T19:48:37.000Z"
+    },
+    {
+      "giveawayCode": "vxYY4",
+      "title": "Subnautica 2",
+      "appId": 1962700,
+      "winnerUsername": "zettaivanugen",
+      "creatorUsername": "Horseflesh",
+      "winDate": "2026-05-12T18:26:22.000Z"
+    },
+    {
+      "giveawayCode": "yLzZl",
+      "title": "Mixtape",
+      "appId": 2582320,
+      "winnerUsername": "chOOkity",
+      "creatorUsername": "Ernesttico",
+      "winDate": "2026-05-10T15:18:06.000Z"
+    },
+    {
+      "giveawayCode": "x8SJ2",
+      "title": "Tides of Tomorrow 🌊",
+      "appId": 2678080,
+      "winnerUsername": "zettaivanugen",
+      "creatorUsername": "chOOkity",
+      "winDate": "2026-05-04T13:36:02.000Z"
+    },
+    {
       "giveawayCode": "XSQMJ",
       "title": "Borderlands 4",
       "appId": 1285190,
@@ -96485,12 +96920,44 @@
       "winDate": "2026-05-04T10:03:27.000Z"
     },
     {
+      "giveawayCode": "pDPRK",
+      "title": "Mewgenics",
+      "appId": 686060,
+      "winnerUsername": "zettaivanugen",
+      "creatorUsername": "Wintermute101",
+      "winDate": "2026-05-03T11:22:25.000Z"
+    },
+    {
       "giveawayCode": "8jrA5",
       "title": "Pluto",
       "appId": 3057670,
       "winnerUsername": "burntreynolds444",
       "creatorUsername": "Thedogma",
       "winDate": "2026-05-01T23:26:23.000Z"
+    },
+    {
+      "giveawayCode": "bvc8x",
+      "title": "Banquet for Fools",
+      "appId": 3172700,
+      "winnerUsername": "Wintermute101",
+      "creatorUsername": "leniu",
+      "winDate": "2026-05-01T22:14:35.000Z"
+    },
+    {
+      "giveawayCode": "8AV04",
+      "title": "LEGO Batman: Legacy of the Dark Knight",
+      "appId": 2215200,
+      "winnerUsername": "zettaivanugen",
+      "creatorUsername": "BojanNS987",
+      "winDate": "2026-05-01T18:44:04.000Z"
+    },
+    {
+      "giveawayCode": "Vq2Hc",
+      "title": "PRAGMATA",
+      "appId": 3357650,
+      "winnerUsername": "leniu",
+      "creatorUsername": "burntreynolds444",
+      "winDate": "2026-05-01T17:07:41.000Z"
     },
     {
       "giveawayCode": "R91uQ",
@@ -96659,6 +97126,14 @@
       "winnerUsername": "Ernesttico",
       "creatorUsername": "BojanNS987",
       "winDate": "2026-03-04T06:57:38.000Z"
+    },
+    {
+      "giveawayCode": "tA4L6",
+      "title": "007 First Light",
+      "appId": 3768760,
+      "winnerUsername": "xMisiu",
+      "creatorUsername": "BojanNS987",
+      "winDate": "2026-03-04T06:56:37.000Z"
     },
     {
       "giveawayCode": "16bPT",
@@ -127717,6 +128192,6 @@
       "winDate": "2016-08-26T06:01:36.000Z"
     }
   ],
-  "savedAt": "2026-05-12T19:10:40.638199+00:00",
-  "mergedAt": "2026-05-12T19:10:40.638204+00:00"
+  "savedAt": "2026-06-02T22:22:25.296298+00:00",
+  "mergedAt": "2026-06-02T22:22:25.296307+00:00"
 }
