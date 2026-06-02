@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-12T19:10:43.311291+00:00",
+  "updatedAt": "2026-06-02T22:20:26.861015+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -6708,12 +6708,12 @@
       "totalAchievements": 10,
       "achievementPercent": 0,
       "playtimeHours": 0.0,
-      "playtimeCheckedAt": "2026-05-11T06:27:46.098949+00:00",
+      "playtimeCheckedAt": "2026-06-02T22:20:23.536904+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-05-12T19:10:43.311271+00:00"
+      "checkedAt": "2026-06-02T22:20:25.633801+00:00"
     },
     {
       "username": "burntreynolds444",
@@ -8989,14 +8989,14 @@
       "appId": 3768760,
       "title": "007 First Light",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/3768760/achievements/",
-      "visible": false,
+      "visible": true,
       "earnedAchievements": 0,
-      "totalAchievements": 0,
+      "totalAchievements": 37,
       "achievementPercent": 0,
       "playtimeHours": 0.0,
       "error": null,
-      "checkedAt": "2026-05-12T19:10:43.311289+00:00",
-      "playtimeCheckedAt": "2026-05-11T06:27:47.697701+00:00",
+      "checkedAt": "2026-06-02T22:20:26.295656+00:00",
+      "playtimeCheckedAt": "2026-06-02T22:20:24.358770+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true
@@ -15527,13 +15527,13 @@
       "earnedAchievements": 0,
       "totalAchievements": 49,
       "achievementPercent": 0,
-      "playtimeHours": null,
-      "playtimeCheckedAt": null,
-      "playtimeSource": "",
+      "playtimeHours": 0.0,
+      "playtimeCheckedAt": "2026-06-02T22:20:22.937752+00:00",
+      "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-05-12T19:10:43.311248+00:00"
+      "checkedAt": "2026-06-02T22:20:25.182510+00:00"
     },
     {
       "username": "Horseflesh",
@@ -28667,13 +28667,13 @@
       "earnedAchievements": 0,
       "totalAchievements": 22,
       "achievementPercent": 0,
-      "playtimeHours": 0.0,
-      "playtimeCheckedAt": "2026-05-11T06:27:46.793350+00:00",
+      "playtimeHours": 1.37,
+      "playtimeCheckedAt": "2026-06-02T22:20:23.816727+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-05-12T19:10:43.311282+00:00"
+      "checkedAt": "2026-06-02T22:20:25.901368+00:00"
     },
     {
       "username": "Saikania",
@@ -68552,25 +68552,25 @@
   "activeOnly": true,
   "refreshedMonth": "2026-05",
   "refreshedScope": "month",
-  "libraryUpdatedAt": "2026-05-12T19:10:43.067631+00:00",
+  "libraryUpdatedAt": "2026-06-02T22:20:24.929449+00:00",
   "libraryStats": {
-    "durationSeconds": 0.15,
+    "durationSeconds": 0.22,
     "targetProfiles": 4,
     "refreshedProfiles": 0,
     "reusedProfiles": 4,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "freshProfiles": 10,
-    "totalPlaytimeRows": 86342
+    "freshProfiles": 4,
+    "totalPlaytimeRows": 86487
   },
   "stats": {
-    "durationSeconds": 0.38,
+    "durationSeconds": 2.14,
     "targetWins": 4,
     "uniqueProgressTargets": 4,
-    "libraryPlaytimeHits": 3,
-    "cachedReuses": 4,
-    "achievementSuccesses": 0,
+    "libraryPlaytimeHits": 4,
+    "cachedReuses": 0,
+    "achievementSuccesses": 4,
     "achievementErrors": 0,
     "cachedFallbacks": 0,
     "hltbTitlesRequested": 4,
