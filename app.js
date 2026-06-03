@@ -4521,21 +4521,24 @@ function buildManualWinnerMarkup(winner) {
   return `<a class="linked-title" href="${escapeHtml(profileUrl)}" target="_blank" rel="noreferrer">${escapeHtml(label)}</a>`;
 }
 
-function getWinnerDatalistOptions() {
-  const options = new Set();
-  for (const member of state.members) {
-    const username = String(member?.steamgiftsUsername || member?.name || "").trim();
-    if (username) {
-      options.add(username);
+function getActiveMemberWinnerOptions() {
+  return Array.from(getSummerEventMemberIndex().values())
+    .filter((member) => member.isActiveMember)
+    .map((member) => member.username)
+    .sort((left, right) => left.localeCompare(right, "en-US", { sensitivity: "base" }));
+}
+
+function resolveActiveMemberWinner(value) {
+  const normalized = String(value || "").trim().toLowerCase();
+  if (!normalized) {
+    return null;
+  }
+  for (const member of getSummerEventMemberIndex().values()) {
+    if (member.isActiveMember && member.username.toLowerCase() === normalized) {
+      return member;
     }
   }
-  for (const member of state.sync?.steamgifts?.members || []) {
-    const username = String(member?.username || "").trim();
-    if (username) {
-      options.add(username);
-    }
-  }
-  return Array.from(options).sort((left, right) => left.localeCompare(right, "en-US", { sensitivity: "base" }));
+  return null;
 }
 
 function openWinnerEditModal(key, currentWinners) {
@@ -4545,12 +4548,12 @@ function openWinnerEditModal(key, currentWinners) {
   openEditModal({
     title: "Set giveaway winner",
     description:
-      "Type or pick one or more SteamGifts usernames (comma-separated). A manual winner is locked and will not be overwritten by future syncs. Leave empty to clear and fall back to the synced winner.",
-    label: "Winner username(s)",
+      "Pick one or more active members (comma-separated for multiple). Only active members can be set as a winner. A manual winner is locked and will not be overwritten by future syncs. Leave empty to clear and fall back to the synced winner.",
+    label: "Winner (active members)",
     initialValue: currentWinners || "",
     inputType: "text",
-    inputAttributes: { placeholder: "username1, username2" },
-    datalistOptions: getWinnerDatalistOptions(),
+    inputAttributes: { placeholder: "active member username" },
+    datalistOptions: getActiveMemberWinnerOptions(),
     parse: (raw) => {
       const usernames = Array.from(
         new Set(
@@ -4561,12 +4564,16 @@ function openWinnerEditModal(key, currentWinners) {
         ),
       );
       if (!usernames.length) {
-        return { error: "Enter at least one username, or use Clear to remove the manual winner." };
+        return { error: "Enter at least one active member, or use Clear to remove the manual winner." };
       }
-      const winners = usernames.map((username) => {
-        const member = findMemberByUsername(username);
-        return { username, displayName: member?.name || "" };
-      });
+      const winners = [];
+      for (const username of usernames) {
+        const member = resolveActiveMemberWinner(username);
+        if (!member) {
+          return { error: `"${username}" is not an active member. Pick a name from the active-member list.` };
+        }
+        winners.push({ username: member.username, displayName: member.displayName || "" });
+      }
       return { value: winners };
     },
     onSave: (value) => {
