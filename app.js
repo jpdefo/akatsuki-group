@@ -30,6 +30,9 @@ import {
 } from "./client/cycle-rules.js";
 
 const STORAGE_KEY = "akatsuki-monitor-state-v1";
+const GITHUB_PUBLISH_REPO = { owner: "jpdefo", name: "akatsuki-group", branch: "main" };
+const GITHUB_OVERRIDES_PATH = "data/overrides.json";
+const GITHUB_TOKEN_STORAGE_KEY = "akatsuki-github-token";
 
 const defaultState = {
   settings: {
@@ -126,6 +129,7 @@ const elements = {
   publishOverridesButton: document.querySelector("#publish-overrides"),
   publishToPagesButton: document.querySelector("#publish-to-pages"),
   githubTokenButton: document.querySelector("#github-token-button"),
+  quickPublishButton: document.querySelector("#quick-publish"),
   importInput: document.querySelector("#import-data"),
   resetButton: document.querySelector("#reset-data"),
   syncRefreshButton: document.querySelector("#sync-refresh"),
@@ -157,7 +161,12 @@ function bindEvents() {
   elements.exportButton?.addEventListener("click", exportData);
   elements.publishOverridesButton?.addEventListener("click", () => publishSharedOverrides());
   elements.publishToPagesButton?.addEventListener("click", () => publishOverridesToGitHub());
-  elements.githubTokenButton?.addEventListener("click", () => promptForGithubToken({ announce: true }));
+  elements.githubTokenButton?.addEventListener("click", () => {
+    promptForGithubToken({ announce: true });
+    updateQuickPublishVisibility();
+  });
+  elements.quickPublishButton?.addEventListener("click", () => publishOverridesToGitHub());
+  updateQuickPublishVisibility();
   elements.importInput?.addEventListener("change", importData);
   elements.resetButton?.addEventListener("click", resetData);
   elements.syncRefreshButton?.addEventListener("click", () => refreshRemoteSync());
@@ -2672,10 +2681,6 @@ async function loadSharedOverrides(options = {}) {
   }
 }
 
-const GITHUB_PUBLISH_REPO = { owner: "jpdefo", name: "akatsuki-group", branch: "main" };
-const GITHUB_OVERRIDES_PATH = "data/overrides.json";
-const GITHUB_TOKEN_STORAGE_KEY = "akatsuki-github-token";
-
 function getStoredGithubToken() {
   try {
     return localStorage.getItem(GITHUB_TOKEN_STORAGE_KEY) || "";
@@ -2735,8 +2740,16 @@ function encodeBase64Utf8(text) {
   return btoa(binary);
 }
 
+function updateQuickPublishVisibility() {
+  if (!elements.quickPublishButton) {
+    return;
+  }
+  // Only surface the quick publish button to an admin who already saved a token.
+  elements.quickPublishButton.hidden = !getStoredGithubToken();
+}
+
 async function publishOverridesToGitHub() {
-  const button = elements.publishToPagesButton;
+  const button = elements.publishToPagesButton || elements.quickPublishButton;
   const originalLabel = button?.textContent;
 
   let token = getStoredGithubToken();
