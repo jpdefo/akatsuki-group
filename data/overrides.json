@@ -1,13 +1,33 @@
 {
-  "savedAt": "2026-05-12T19:06:33.387812+00:00",
+  "savedAt": "2026-06-03T23:51:37.296Z",
   "overrides": {
     "games": {},
     "wins": {},
     "giveaways": {
       "sg-XSQMJ": {
         "giveawayKindOverride": "extra"
+      },
+      "sg-Gm5Hr": {
+        "manualWinners": [
+          {
+            "username": "Wintermute101",
+            "displayName": "Wintermute101"
+          }
+        ]
+      },
+      "sg-kxEiu": {
+        "manualWinners": [
+          {
+            "username": "zettaivanugen",
+            "displayName": "zettaivanugen"
+          }
+        ]
       }
     },
-    "cycleMembers": {}
+    "cycleMembers": {
+      "2026-cycle-2:koalala": {
+        "status": "paused"
+      }
+    }
   }
 }
