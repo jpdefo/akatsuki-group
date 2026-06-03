@@ -69,7 +69,7 @@ const runtime = {
 };
 const GAME_OVERRIDE_FIELDS = ["hltbHoursOverride"];
 const WIN_OVERRIDE_FIELDS = ["requiredAchievementsOverride", "monthOverride"];
-const GIVEAWAY_OVERRIDE_FIELDS = ["giveawayKindOverride"];
+const GIVEAWAY_OVERRIDE_FIELDS = ["giveawayKindOverride", "manualWinners"];
 
 applyManualOverrides();
 
@@ -99,6 +99,8 @@ const elements = {
   cycleBestGifterWarning: document.querySelector("#cycle-best-gifter-warning"),
   cycleTable: document.querySelector("#cycle-table"),
   cycleGiveawaysTable: document.querySelector("#cycle-giveaways-table"),
+  cycleGiveawayMonthFilter: document.querySelector("#cycle-giveaway-month-filter"),
+  cycleGiveawaySort: document.querySelector("#cycle-giveaway-sort"),
   cycleWinsTable: document.querySelector("#cycle-wins-table"),
   summerEventFilter: document.querySelector("#summer-event-filter"),
   summerEventSort: document.querySelector("#summer-event-sort"),
@@ -163,6 +165,8 @@ function bindEvents() {
   });
   elements.monthlySort?.addEventListener("change", () => renderProgressViews());
   elements.cycleFilter?.addEventListener("change", () => renderCycleHistoryPage());
+  elements.cycleGiveawayMonthFilter?.addEventListener("change", () => renderCycleHistoryPage());
+  elements.cycleGiveawaySort?.addEventListener("change", () => renderCycleHistoryPage());
   elements.summerEventFilter?.addEventListener("change", () => renderSummerEventPage());
   elements.summerEventSort?.addEventListener("change", () => renderSummerEventPage());
   elements.summerEventCreatorFilter?.addEventListener("input", () => renderSummerEventPage());
@@ -684,6 +688,15 @@ function renderCycleHistoryPage() {
   renderCycleBestGifterWarning(bestGifterAward, selectedCycle, cycleMonths, rule9Carryover);
 
   renderCycleHistoryMembersTable(selectedCycle, cycleMonths, cycleWins, cycleGiveaways, rule9Carryover);
+
+  if (elements.cycleGiveawayMonthFilter) {
+    const previousMonth = elements.cycleGiveawayMonthFilter.value;
+    elements.cycleGiveawayMonthFilter.innerHTML = [`<option value="all">All months</option>`]
+      .concat(cycleMonths.map((month) => `<option value="${month}">${escapeHtml(formatMonthKey(month))}</option>`))
+      .join("");
+    elements.cycleGiveawayMonthFilter.value = cycleMonths.includes(previousMonth) ? previousMonth : "all";
+  }
+
   renderCycleHistoryResultsTable(cycleGiveaways);
 }
 
@@ -860,15 +873,86 @@ function getCycleHistoryVisibleMembers(selectedCycle, cycleWins, cycleGiveaways)
   );
 }
 
+function getCycleGiveawayCreatorLabel(giveaway) {
+  return String(findById("members", giveaway.creatorId)?.name || giveaway.creatorUsername || "").trim();
+}
+
+function getCycleGiveawayWinnerLabel(giveaway) {
+  const manualWinners = getGiveawayManualWinners(giveaway);
+  if (manualWinners.length) {
+    return manualWinners
+      .map((winner) => winner.displayName || findMemberByUsername(winner.username)?.name || winner.username)
+      .join(", ");
+  }
+  return findWinsForGiveaway(giveaway)
+    .map((win) => String(findById("members", win.memberId)?.name || "").trim())
+    .filter(Boolean)
+    .join(", ");
+}
+
+function sortCycleGiveaways(giveaways, sortValue) {
+  const sorted = giveaways.slice();
+  sorted.sort((left, right) => {
+    switch (sortValue) {
+      case "created-asc":
+        return parseDate(left.createdAt) - parseDate(right.createdAt);
+      case "creator-asc":
+        return (
+          getCycleGiveawayCreatorLabel(left).localeCompare(getCycleGiveawayCreatorLabel(right), "en-US", { sensitivity: "base" }) ||
+          parseDate(right.createdAt) - parseDate(left.createdAt)
+        );
+      case "creator-desc":
+        return (
+          getCycleGiveawayCreatorLabel(right).localeCompare(getCycleGiveawayCreatorLabel(left), "en-US", { sensitivity: "base" }) ||
+          parseDate(right.createdAt) - parseDate(left.createdAt)
+        );
+      case "winner-asc":
+        return (
+          getCycleGiveawayWinnerLabel(left).localeCompare(getCycleGiveawayWinnerLabel(right), "en-US", { sensitivity: "base" }) ||
+          parseDate(right.createdAt) - parseDate(left.createdAt)
+        );
+      case "winner-desc":
+        return (
+          getCycleGiveawayWinnerLabel(right).localeCompare(getCycleGiveawayWinnerLabel(left), "en-US", { sensitivity: "base" }) ||
+          parseDate(right.createdAt) - parseDate(left.createdAt)
+        );
+      case "created-desc":
+      default:
+        return parseDate(right.createdAt) - parseDate(left.createdAt);
+    }
+  });
+  return sorted;
+}
+
 function renderCycleHistoryResultsTable(cycleGiveaways) {
-  elements.cycleGiveawaysTable.innerHTML = cycleGiveaways.length
-    ? cycleGiveaways
+  const monthFilter = String(elements.cycleGiveawayMonthFilter?.value || "all");
+  const sortValue = String(elements.cycleGiveawaySort?.value || "created-desc");
+  const filteredGiveaways = sortCycleGiveaways(
+    monthFilter === "all" ? cycleGiveaways : cycleGiveaways.filter((giveaway) => getGiveawayMonth(giveaway) === monthFilter),
+    sortValue,
+  );
+
+  elements.cycleGiveawaysTable.innerHTML = filteredGiveaways.length
+    ? filteredGiveaways
         .map((giveaway) => {
           const creator = findById("members", giveaway.creatorId);
           const giveawayWins = findWinsForGiveaway(giveaway);
-          const winnerMarkup = giveawayWins.length
-            ? giveawayWins.map((win) => buildWinnerMarkup(findById("members", win.memberId))).join(", ")
-            : "-";
+          const manualWinners = getGiveawayManualWinners(giveaway);
+          const winnerMarkup = manualWinners.length
+            ? manualWinners.map((winner) => buildManualWinnerMarkup(winner)).join(", ")
+            : giveawayWins.length
+              ? giveawayWins.map((win) => buildWinnerMarkup(findById("members", win.memberId))).join(", ")
+              : "-";
+          const winnerKey = getGiveawayCodeKey(giveaway);
+          const currentWinnerNames = (manualWinners.length
+            ? manualWinners.map((winner) => winner.username)
+            : giveawayWins
+                .map((win) => {
+                  const member = findById("members", win.memberId);
+                  return String(member?.steamgiftsUsername || member?.name || "").trim();
+                })
+                .filter(Boolean)
+          ).join(", ");
           const giveawayUrl = String(giveaway.notes || "").trim();
           const kind = getGiveawayKind(giveaway);
           const giveawayMonth = getGiveawayMonth(giveaway);
@@ -880,7 +964,10 @@ function renderCycleHistoryResultsTable(cycleGiveaways) {
                 <strong>${giveawayUrl ? `<a class="linked-title" href="${escapeHtml(giveawayUrl)}" target="_blank" rel="noreferrer">${escapeHtml(giveaway.title)}</a>` : escapeHtml(giveaway.title)}</strong>
                 <span class="meta-line">${formatDate(giveaway.createdAt)}</span>
               </td>
-              <td>${winnerMarkup}</td>
+              <td>
+                <div>${winnerMarkup}${manualWinners.length ? ` ${buildBadge("info", "Manual")}` : ""}</div>
+                <button class="inline-action" data-edit-action="winner" data-giveaway-key="${escapeHtml(winnerKey)}" data-current-winners="${escapeHtml(currentWinnerNames)}">Edit winner</button>
+              </td>
               <td>${Number(giveaway.entriesCount || 0).toLocaleString("en-US")}</td>
               <td>
                 <label class="inline-select-wrap compact-select-wrap">
@@ -896,7 +983,7 @@ function renderCycleHistoryResultsTable(cycleGiveaways) {
           `;
         })
         .join("")
-    : buildMessageRow(6, "No giveaways in this cycle.", "Giveaways from the selected cycle will appear here.");
+    : buildMessageRow(6, "No giveaways match the current filters.", "Giveaways from the selected cycle will appear here.");
 }
 
 function renderSummerEventPage() {
@@ -1051,7 +1138,12 @@ function renderSummerEventPage() {
               : escapeHtml(giveaway.title || "Untitled giveaway");
             const entryUsers = getSummerEventEntryUsers(giveaway);
             const rewardPoints = getSummerEventBasePoints(giveaway);
+            const entryDelta = getSummerEventEntryDelta(giveaway);
+            const entryPoints = entryUsers.length * entryDelta;
+            const totalPoints = rewardPoints + entryPoints;
             const winners = getSummerEventWinnerUsers(giveaway);
+            const manualWinnerSet = hasManualWinners(giveaway);
+            const winnerKey = getGiveawayCodeKey(giveaway);
             const winnerMarkup = winners.length
               ? winners
                   .map((username) => {
@@ -1063,7 +1155,7 @@ function renderSummerEventPage() {
                   })
                   .join(", ")
               : "-";
-            const resultStatus = String(giveaway.resultStatus || "").toLowerCase();
+            const resultStatus = manualWinnerSet ? "won" : String(giveaway.resultStatus || "").toLowerCase();
             const resultBadge = resultStatus === "won"
               ? buildBadge("success", "Winner drawn")
               : resultStatus === "no_winners"
@@ -1082,19 +1174,25 @@ function renderSummerEventPage() {
                 </td>
                 <td>
                   <strong>${creatorMarkup}</strong>
-                  <span class="meta-line">+${rewardPoints.toLocaleString("en-US")} P base</span>
                 </td>
                 <td>
                   <strong>${rewardPoints.toLocaleString("en-US")} P</strong>
                   <span class="meta-line">${getSummerEventValueMeta(giveaway)}</span>
                 </td>
                 <td>
-                  <strong>${entryUsers.length.toLocaleString("en-US")}</strong>
-                  <span class="meta-line">SteamGifts: ${Number(giveaway.entriesCount || 0).toLocaleString("en-US")}</span>
+                  <strong>${entryPoints.toLocaleString("en-US")} P</strong>
+                  <span class="meta-line">${entryUsers.length.toLocaleString("en-US")} × ${entryDelta} P</span>
                 </td>
                 <td>
-                  <strong>${winnerMarkup}</strong>
+                  <strong>${totalPoints.toLocaleString("en-US")} P</strong>
+                </td>
+                <td>
+                  <strong>${entryUsers.length.toLocaleString("en-US")}</strong>
+                </td>
+                <td>
+                  <strong>${winnerMarkup}</strong>${manualWinnerSet ? ` ${buildBadge("info", "Manual")}` : ""}
                   <span class="meta-line">${escapeHtml(winners.length ? `${winners.length} winner${winners.length === 1 ? "" : "s"}` : resultStatus === "no_winners" ? "No winners" : "No winner yet")}</span>
+                  <button class="inline-action" data-edit-action="winner" data-giveaway-key="${escapeHtml(winnerKey)}" data-current-winners="${escapeHtml(winners.join(", "))}">Edit winner</button>
                 </td>
                 <td>
                   ${resultBadge}
@@ -1109,7 +1207,7 @@ function renderSummerEventPage() {
           })
           .join("")
       : buildMessageRow(
-          7,
+          9,
           giveaways.length ? "No summer-event giveaways match the current filters." : "No summer-event giveaways in this event.",
           giveaways.length ? "Adjust the creator, winner, or sort controls to see more giveaways." : "Choose another event or tag more giveaways as Summer event.",
         );
@@ -1596,6 +1694,10 @@ function getSummerEventEntryUsers(giveaway) {
 }
 
 function getSummerEventWinnerUsers(giveaway) {
+  const manualWinners = getGiveawayManualWinners(giveaway);
+  if (manualWinners.length) {
+    return Array.from(new Set(manualWinners.map((winner) => winner.username)));
+  }
   return Array.from(
     new Set(
       (Array.isArray(giveaway?.winners) ? giveaway.winners : [])
@@ -1627,6 +1729,9 @@ function getSummerEventEntryDelta(giveaway) {
 }
 
 function isSummerEventNoWinners(giveaway) {
+  if (hasManualWinners(giveaway)) {
+    return false;
+  }
   return String(giveaway?.resultStatus || "").trim().toLowerCase() === "no_winners";
 }
 
@@ -4346,6 +4451,120 @@ function getGiveawayOverrideKey(giveaway) {
   return String(giveaway?.sourceId || giveaway?.id || "");
 }
 
+// Stable key shared by both data models: cycle giveaways expose `sourceId`
+// (`sg-<code>`) while summer-event sync records expose the raw `code`.
+function getGiveawayCodeKey(giveaway) {
+  const code = String(giveaway?.code || "").trim();
+  if (code) {
+    return `sg-${code}`;
+  }
+  const sourceId = String(giveaway?.sourceId || "").trim();
+  if (sourceId) {
+    return sourceId;
+  }
+  return String(giveaway?.id || "").trim();
+}
+
+function getGiveawayManualWinners(giveaway) {
+  const key = getGiveawayCodeKey(giveaway);
+  if (!key) {
+    return [];
+  }
+  const overrides = getEffectiveOverrideState();
+  const list = overrides.giveaways?.[key]?.manualWinners;
+  if (!Array.isArray(list)) {
+    return [];
+  }
+  return list
+    .map((entry) => ({
+      username: String(entry?.username || "").trim(),
+      displayName: String(entry?.displayName || "").trim(),
+    }))
+    .filter((entry) => entry.username);
+}
+
+function hasManualWinners(giveaway) {
+  return getGiveawayManualWinners(giveaway).length > 0;
+}
+
+function findMemberByUsername(username) {
+  const normalized = String(username || "").trim().toLowerCase();
+  if (!normalized) {
+    return null;
+  }
+  return (
+    state.members.find((member) => {
+      const sg = String(member?.steamgiftsUsername || "").trim().toLowerCase();
+      const name = String(member?.name || "").trim().toLowerCase();
+      return (sg && sg === normalized) || (name && name === normalized);
+    }) || null
+  );
+}
+
+function buildManualWinnerMarkup(winner) {
+  const member = findMemberByUsername(winner.username);
+  if (member) {
+    return buildWinnerMarkup(member);
+  }
+  const label = winner.displayName || winner.username;
+  const profileUrl = `https://www.steamgifts.com/user/${encodeURIComponent(winner.username)}`;
+  return `<a class="linked-title" href="${escapeHtml(profileUrl)}" target="_blank" rel="noreferrer">${escapeHtml(label)}</a>`;
+}
+
+function getWinnerDatalistOptions() {
+  const options = new Set();
+  for (const member of state.members) {
+    const username = String(member?.steamgiftsUsername || member?.name || "").trim();
+    if (username) {
+      options.add(username);
+    }
+  }
+  for (const member of state.sync?.steamgifts?.members || []) {
+    const username = String(member?.username || "").trim();
+    if (username) {
+      options.add(username);
+    }
+  }
+  return Array.from(options).sort((left, right) => left.localeCompare(right, "en-US", { sensitivity: "base" }));
+}
+
+function openWinnerEditModal(key, currentWinners) {
+  if (!key) {
+    return;
+  }
+  openEditModal({
+    title: "Set giveaway winner",
+    description:
+      "Type or pick one or more SteamGifts usernames (comma-separated). A manual winner is locked and will not be overwritten by future syncs. Leave empty to clear and fall back to the synced winner.",
+    label: "Winner username(s)",
+    initialValue: currentWinners || "",
+    inputType: "text",
+    inputAttributes: { placeholder: "username1, username2" },
+    datalistOptions: getWinnerDatalistOptions(),
+    parse: (raw) => {
+      const usernames = Array.from(
+        new Set(
+          String(raw || "")
+            .split(",")
+            .map((part) => part.trim())
+            .filter(Boolean),
+        ),
+      );
+      if (!usernames.length) {
+        return { error: "Enter at least one username, or use Clear to remove the manual winner." };
+      }
+      const winners = usernames.map((username) => {
+        const member = findMemberByUsername(username);
+        return { username, displayName: member?.name || "" };
+      });
+      return { value: winners };
+    },
+    onSave: (value) => {
+      updateOverrideField("giveaways", key, "manualWinners", value && value.length ? value : null);
+    },
+  });
+}
+
 function getBaseGameHltbHours(game) {
   return Number(game?.hltbHours || 0);
 }
@@ -4595,6 +4814,11 @@ function isCycleWin(win) {
 function handleEditAction(button) {
   const action = button.dataset.editAction;
 
+  if (action === "winner") {
+    openWinnerEditModal(button.dataset.giveawayKey || "", button.dataset.currentWinners || "");
+    return;
+  }
+
   if (action === "hltb") {
     const game = findById("games", button.dataset.gameId);
     if (!game) {
@@ -4718,7 +4942,8 @@ function ensureEditModal() {
         <p id="override-edit-error" class="modal-error" hidden></p>
         <label class="modal-field">
           <span id="override-edit-label"></span>
-          <input id="override-edit-input" />
+          <input id="override-edit-input" list="" />
+          <datalist id="override-edit-datalist"></datalist>
         </label>
         <div class="modal-actions">
           <button type="button" class="button secondary" data-modal-clear="true">Clear override</button>
@@ -4738,6 +4963,7 @@ function ensureEditModal() {
     error: root.querySelector("#override-edit-error"),
     label: root.querySelector("#override-edit-label"),
     input: root.querySelector("#override-edit-input"),
+    datalist: root.querySelector("#override-edit-datalist"),
     clearButton: root.querySelector("[data-modal-clear]"),
     cancelButton: root.querySelector("[data-modal-cancel]"),
     saveButton: root.querySelector("[data-modal-save]"),
@@ -4777,6 +5003,15 @@ function openEditModal(config) {
   modal.input.type = config.inputType || "text";
   modal.input.value = config.initialValue === null || config.initialValue === undefined ? "" : String(config.initialValue);
   modal.input.placeholder = config.inputAttributes?.placeholder || "";
+  if (Array.isArray(config.datalistOptions) && config.datalistOptions.length) {
+    modal.datalist.innerHTML = config.datalistOptions
+      .map((option) => `<option value="${escapeHtml(String(option))}"></option>`)
+      .join("");
+    modal.input.setAttribute("list", "override-edit-datalist");
+  } else {
+    modal.datalist.innerHTML = "";
+    modal.input.removeAttribute("list");
+  }
   if (config.inputAttributes) {
     for (const [attribute, value] of Object.entries(config.inputAttributes)) {
       if (value === null || value === undefined) {
