@@ -73,14 +73,18 @@
             <button id="export-data" class="button secondary">Export current browser state</button>
             <button id="publish-to-pages" class="button primary">Publish to GitHub Pages</button>
             <button id="github-token-button" class="button secondary">Set / change GitHub token</button>
+            <a id="github-token-create" class="button secondary" href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noreferrer">Create a GitHub token ↗</a>
             <button id="publish-overrides" class="button secondary">Save overrides to local server</button>
             <span class="meta-line sync-hint">
               <strong>Publish to GitHub Pages</strong> commits your current overrides (manual winners, kind/HLTB/month edits, pauses)
               straight to the repo using a GitHub token stored only in this browser. The public site rebuilds automatically (~1–2 min).
             </span>
             <span class="meta-line sync-hint">
-              The token needs <code>Contents: Read and write</code> on <code>jpdefo/akatsuki-group</code>. Use
-              <strong>Set / change GitHub token</strong> to paste or clear it.
+              First time? Click <strong>Create a GitHub token ↗</strong>, then set:
+              <strong>Resource owner</strong> = your account,
+              <strong>Repository access</strong> = Only select repositories → <code>jpdefo/akatsuki-group</code>,
+              <strong>Permissions</strong> → Repository → <code>Contents: Read and write</code>.
+              Generate it, copy it, then click <strong>Set / change GitHub token</strong> and paste it.
             </span>
             <span class="meta-line sync-hint">
               Local alternative (from your PC): <code>publish-snapshot.cmd</code>
