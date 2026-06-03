@@ -1770,7 +1770,17 @@ function buildSummerEventSnapshotBadge(giveaway) {
   }
 
   const ended = Boolean(giveaway?.endDate && new Date(giveaway.endDate).getTime() <= Date.now());
-  return buildBadge(ended ? "warning" : "info", ended ? "Final snapshot pending" : "Tracking open entries");
+  if (!ended) {
+    return buildBadge("info", "Tracking open entries");
+  }
+
+  // A giveaway that closed with no winner has nothing left to snapshot, so it
+  // is settled rather than waiting on a final post-close entry fetch.
+  if (isSummerEventNoWinners(giveaway)) {
+    return buildBadge("info", "No snapshot needed");
+  }
+
+  return buildBadge("warning", "Final snapshot pending");
 }
 
 function formatPointBalance(value) {
