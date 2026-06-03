@@ -1042,7 +1042,7 @@ function renderSummerEventPage() {
   const summerEventMemberIndex = getSummerEventMemberIndex();
   const standings = computeSummerEventStandings(giveaways, summerEventMemberIndex);
   const trackedEntries = giveaways.reduce((sum, giveaway) => sum + getSummerEventEntryUsers(giveaway).length, 0);
-  const pendingSnapshots = giveaways.filter((giveaway) => !giveaway.entriesFinalized).length;
+  const pendingSnapshots = giveaways.filter(isSummerEventSnapshotPending).length;
   const blockedParticipants = standings.filter((participant) => participant.balance < 0).length;
 
   if (elements.summerEventDescription) {
@@ -1764,23 +1764,30 @@ function getSummerEventValueMeta(giveaway) {
   return `SteamGifts base • Swing: ${entryDelta} P`;
 }
 
+// A giveaway is waiting on a final post-close snapshot only if it has ended,
+// is not yet finalized, and can still have a winner. Closed no-winner
+// giveaways (and still-open ones) are not pending. Shared by the badge and the
+// "Pending final snapshots" summary counter so they never disagree.
+function isSummerEventSnapshotPending(giveaway) {
+  if (giveaway?.entriesFinalized) {
+    return false;
+  }
+  const ended = Boolean(giveaway?.endDate && new Date(giveaway.endDate).getTime() <= Date.now());
+  return ended && !isSummerEventNoWinners(giveaway);
+}
+
 function buildSummerEventSnapshotBadge(giveaway) {
   if (giveaway?.entriesFinalized) {
     return buildBadge("success", "Final snapshot");
   }
 
+  if (isSummerEventSnapshotPending(giveaway)) {
+    return buildBadge("warning", "Final snapshot pending");
+  }
+
   const ended = Boolean(giveaway?.endDate && new Date(giveaway.endDate).getTime() <= Date.now());
-  if (!ended) {
-    return buildBadge("info", "Tracking open entries");
-  }
-
-  // A giveaway that closed with no winner has nothing left to snapshot, so it
-  // is settled rather than waiting on a final post-close entry fetch.
-  if (isSummerEventNoWinners(giveaway)) {
-    return buildBadge("info", "No snapshot needed");
-  }
-
-  return buildBadge("warning", "Final snapshot pending");
+  // Ended with no possible winner -> nothing to snapshot; otherwise still open.
+  return buildBadge("info", ended ? "No snapshot needed" : "Tracking open entries");
 }
 
 function formatPointBalance(value) {
