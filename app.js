@@ -124,6 +124,8 @@ const elements = {
   seedDemoButton: document.querySelector("#seed-demo"),
   exportButton: document.querySelector("#export-data"),
   publishOverridesButton: document.querySelector("#publish-overrides"),
+  publishToPagesButton: document.querySelector("#publish-to-pages"),
+  githubTokenButton: document.querySelector("#github-token-button"),
   importInput: document.querySelector("#import-data"),
   resetButton: document.querySelector("#reset-data"),
   syncRefreshButton: document.querySelector("#sync-refresh"),
@@ -154,6 +156,8 @@ function bindEvents() {
   elements.seedDemoButton?.addEventListener("click", seedDemoData);
   elements.exportButton?.addEventListener("click", exportData);
   elements.publishOverridesButton?.addEventListener("click", () => publishSharedOverrides());
+  elements.publishToPagesButton?.addEventListener("click", () => publishOverridesToGitHub());
+  elements.githubTokenButton?.addEventListener("click", () => promptForGithubToken({ announce: true }));
   elements.importInput?.addEventListener("change", importData);
   elements.resetButton?.addEventListener("click", resetData);
   elements.syncRefreshButton?.addEventListener("click", () => refreshRemoteSync());
@@ -2664,6 +2668,148 @@ async function loadSharedOverrides(options = {}) {
     runtime.sharedOverrides = normalizeOverrideState();
     if (!options.silent) {
       window.alert("Could not load published overrides.");
+    }
+  }
+}
+
+const GITHUB_PUBLISH_REPO = { owner: "jpdefo", name: "akatsuki-group", branch: "main" };
+const GITHUB_OVERRIDES_PATH = "data/overrides.json";
+const GITHUB_TOKEN_STORAGE_KEY = "akatsuki-github-token";
+
+function getStoredGithubToken() {
+  try {
+    return localStorage.getItem(GITHUB_TOKEN_STORAGE_KEY) || "";
+  } catch {
+    return "";
+  }
+}
+
+function setStoredGithubToken(token) {
+  try {
+    if (token) {
+      localStorage.setItem(GITHUB_TOKEN_STORAGE_KEY, token);
+    } else {
+      localStorage.removeItem(GITHUB_TOKEN_STORAGE_KEY);
+    }
+  } catch {
+    /* ignore storage failures */
+  }
+}
+
+function promptForGithubToken(options = {}) {
+  const existing = getStoredGithubToken();
+  const message =
+    "Paste a GitHub fine-grained token with 'Contents: Read and write' on jpdefo/akatsuki-group.\n" +
+    "It is stored only in this browser. Leave empty to keep the current token; type CLEAR to remove it.";
+  const entered = window.prompt(message, "");
+  if (entered === null) {
+    return existing;
+  }
+  const trimmed = entered.trim();
+  if (!trimmed) {
+    if (options.announce) {
+      window.alert(existing ? "Kept the existing GitHub token." : "No GitHub token is set.");
+    }
+    return existing;
+  }
+  if (trimmed.toUpperCase() === "CLEAR") {
+    setStoredGithubToken("");
+    if (options.announce) {
+      window.alert("GitHub token removed from this browser.");
+    }
+    return "";
+  }
+  setStoredGithubToken(trimmed);
+  if (options.announce) {
+    window.alert("GitHub token saved in this browser.");
+  }
+  return trimmed;
+}
+
+function encodeBase64Utf8(text) {
+  const bytes = new TextEncoder().encode(text);
+  let binary = "";
+  for (const byte of bytes) {
+    binary += String.fromCharCode(byte);
+  }
+  return btoa(binary);
+}
+
+async function publishOverridesToGitHub() {
+  const button = elements.publishToPagesButton;
+  const originalLabel = button?.textContent;
+
+  let token = getStoredGithubToken();
+  if (!token) {
+    token = promptForGithubToken();
+    if (!token) {
+      window.alert("Publishing cancelled: no GitHub token provided.");
+      return;
+    }
+  }
+
+  try {
+    if (button) {
+      button.disabled = true;
+      button.textContent = "Publishing to GitHub...";
+    }
+
+    const apiBase = `https://api.github.com/repos/${GITHUB_PUBLISH_REPO.owner}/${GITHUB_PUBLISH_REPO.name}/contents/${GITHUB_OVERRIDES_PATH}`;
+    const headers = {
+      Authorization: `Bearer ${token}`,
+      Accept: "application/vnd.github+json",
+      "X-GitHub-Api-Version": "2022-11-28",
+    };
+
+    // Look up the current file SHA (required to update; 404 means create new).
+    let sha = null;
+    const getResponse = await fetch(`${apiBase}?ref=${GITHUB_PUBLISH_REPO.branch}&_=${Date.now()}`, {
+      headers,
+      cache: "no-store",
+    });
+    if (getResponse.status === 401) {
+      throw new Error("GitHub rejected the token (401). Use 'Set / change GitHub token' to paste a valid fine-grained token.");
+    }
+    if (getResponse.ok) {
+      const current = await getResponse.json();
+      sha = current?.sha || null;
+    } else if (getResponse.status !== 404) {
+      throw new Error(`Could not read data/overrides.json from GitHub (${getResponse.status}).`);
+    }
+
+    const fileBody = `${JSON.stringify({ savedAt: new Date().toISOString(), overrides: getPublishableOverrideState() }, null, 2)}\n`;
+    const putResponse = await fetch(apiBase, {
+      method: "PUT",
+      headers: { ...headers, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        message: "Publish overrides from live dashboard",
+        content: encodeBase64Utf8(fileBody),
+        branch: GITHUB_PUBLISH_REPO.branch,
+        ...(sha ? { sha } : {}),
+      }),
+    });
+
+    if (putResponse.status === 401) {
+      throw new Error("GitHub rejected the token (401). Set a valid fine-grained token and try again.");
+    }
+    if (putResponse.status === 403) {
+      throw new Error("GitHub denied the write (403). The token needs 'Contents: Read and write' on jpdefo/akatsuki-group.");
+    }
+    if (putResponse.status === 409) {
+      throw new Error("Conflict (409): data/overrides.json changed on GitHub since this page loaded. Reload and publish again.");
+    }
+    if (!putResponse.ok) {
+      const errorPayload = await putResponse.json().catch(() => null);
+      throw new Error(errorPayload?.message || `GitHub write failed (${putResponse.status}).`);
+    }
+
+    window.alert("Overrides published to GitHub. The public site rebuilds in ~1–2 minutes, then every visitor sees the changes.");
+  } catch (error) {
+    window.alert(error?.message || "Could not publish to GitHub.");
+  } finally {
+    if (button) {
+      button.disabled = false;
+      button.textContent = originalLabel || "Publish to GitHub Pages";
     }
   }
 }
