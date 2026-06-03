@@ -966,7 +966,7 @@ function renderCycleHistoryResultsTable(cycleGiveaways) {
               </td>
               <td>
                 <div>${winnerMarkup}${manualWinners.length ? ` ${buildBadge("info", "Manual")}` : ""}</div>
-                <button class="inline-action" data-edit-action="winner" data-giveaway-key="${escapeHtml(winnerKey)}" data-current-winners="${escapeHtml(currentWinnerNames)}">Edit winner</button>
+                ${canEditGiveawayWinner(giveaway) ? `<button class="inline-action" data-edit-action="winner" data-giveaway-key="${escapeHtml(winnerKey)}" data-current-winners="${escapeHtml(currentWinnerNames)}">Edit winner</button>` : ""}
               </td>
               <td>${Number(giveaway.entriesCount || 0).toLocaleString("en-US")}</td>
               <td>
@@ -1192,7 +1192,7 @@ function renderSummerEventPage() {
                 <td>
                   <strong>${winnerMarkup}</strong>${manualWinnerSet ? ` ${buildBadge("info", "Manual")}` : ""}
                   <span class="meta-line">${escapeHtml(winners.length ? `${winners.length} winner${winners.length === 1 ? "" : "s"}` : resultStatus === "no_winners" ? "No winners" : "No winner yet")}</span>
-                  <button class="inline-action" data-edit-action="winner" data-giveaway-key="${escapeHtml(winnerKey)}" data-current-winners="${escapeHtml(winners.join(", "))}">Edit winner</button>
+                  ${canEditGiveawayWinner(giveaway) ? `<button class="inline-action" data-edit-action="winner" data-giveaway-key="${escapeHtml(winnerKey)}" data-current-winners="${escapeHtml(winners.join(", "))}">Edit winner</button>` : ""}
                 </td>
                 <td>
                   ${resultBadge}
@@ -1786,8 +1786,8 @@ function buildSummerEventSnapshotBadge(giveaway) {
   }
 
   const ended = Boolean(giveaway?.endDate && new Date(giveaway.endDate).getTime() <= Date.now());
-  // Ended with no possible winner -> nothing to snapshot; otherwise still open.
-  return buildBadge("info", ended ? "No snapshot needed" : "Tracking open entries");
+  // Ended with no possible winner -> settled, treat as final; otherwise still open.
+  return ended ? buildBadge("success", "Final snapshot") : buildBadge("info", "Tracking open entries");
 }
 
 function formatPointBalance(value) {
@@ -4502,6 +4502,19 @@ function getGiveawayManualWinners(giveaway) {
 
 function hasManualWinners(giveaway) {
   return getGiveawayManualWinners(giveaway).length > 0;
+}
+
+// A giveaway with no entries (neither tracked nor counted) can never have a
+// winner, so the manual-winner control is hidden for it.
+function giveawayHasAnyEntries(giveaway) {
+  const counted = Number(giveaway?.entriesCount || 0);
+  const tracked = Array.isArray(giveaway?.entryUsers) ? giveaway.entryUsers.length : 0;
+  return counted > 0 || tracked > 0;
+}
+
+function canEditGiveawayWinner(giveaway) {
+  // Allow clearing an existing manual winner even on a 0-entry giveaway.
+  return giveawayHasAnyEntries(giveaway) || hasManualWinners(giveaway);
 }
 
 function findMemberByUsername(username) {
