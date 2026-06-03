@@ -1,5 +1,5 @@
 {
-  "savedAt": "2026-06-03T23:51:37.296Z",
+  "savedAt": "2026-06-03T23:53:10.488Z",
   "overrides": {
     "games": {},
     "wins": {},
@@ -20,6 +20,14 @@
           {
             "username": "zettaivanugen",
             "displayName": "zettaivanugen"
+          }
+        ]
+      },
+      "sg-pijaT": {
+        "manualWinners": [
+          {
+            "username": "Saikania",
+            "displayName": "Saikania"
           }
         ]
       }
