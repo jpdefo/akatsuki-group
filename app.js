@@ -688,7 +688,7 @@ function renderCycleHistoryPage() {
         parseDate(right.winDate) - parseDate(left.winDate),
     );
   const cycleGiveaways = state.giveaways
-    .filter((giveaway) => cycleMonths.includes(getGiveawayMonth(giveaway)))
+    .filter((giveaway) => getGiveawayKind(giveaway) !== "summer_event" && cycleMonths.includes(getGiveawayMonth(giveaway)))
     .sort((left, right) => parseDate(right.createdAt) - parseDate(left.createdAt));
   const countableCycleGiveaways = cycleGiveaways.filter((giveaway) => doesGiveawayCountForCycleMath(giveaway));
   const cycleOnlyWins = cycleWins.filter((win) => getWinTrackKind(win) === "cycle");
@@ -1926,7 +1926,9 @@ function getCurrentCycleMissingGiveawaySummary() {
 
   const cycleMonths = getRenderableCycleMonths(cycle);
   const cycleWins = state.wins.filter((win) => cycleMonths.includes(getEffectiveWinMonth(win)));
-  const cycleGiveaways = state.giveaways.filter((giveaway) => cycleMonths.includes(getGiveawayMonth(giveaway)));
+  const cycleGiveaways = state.giveaways.filter(
+    (giveaway) => getGiveawayKind(giveaway) !== "summer_event" && cycleMonths.includes(getGiveawayMonth(giveaway)),
+  );
   const rule9Carryover = getRule9CarryoverForCycle(cycle);
   const members = getCycleHistoryVisibleMembers(cycle, cycleWins, cycleGiveaways)
     .filter((member) => Boolean(member?.isActiveMember))
@@ -4597,6 +4599,67 @@ function applyManualOverrides() {
       ...(key ? overrides.giveaways[key] || {} : {}),
     };
   });
+
+  reconcileManualWinnerWins(overrides);
+}
+
+// Manual winners are stored as a giveaway override but must also count in every
+// statistic that reads state.wins. Here we turn each manual winner into a win
+// record that is identical to a normal synced win (same sourceId shape, real
+// resolved game, naturally-derived month) so every stat treats it the same,
+// while keeping a `manualWinner` tag for the badge. It replaces whatever the
+// sync recorded for that giveaway.
+function reconcileManualWinnerWins(overrides) {
+  // Drop any previously synthesized manual wins so this is fully idempotent.
+  state.wins = state.wins.filter((win) => !win.manualWinner);
+
+  const syncGiveaways = state.sync?.steamgifts?.giveaways || [];
+
+  for (const [key, entry] of Object.entries(overrides.giveaways || {})) {
+    const manualWinners = Array.isArray(entry?.manualWinners) ? entry.manualWinners : [];
+    if (!manualWinners.length) {
+      continue;
+    }
+
+    const giveaway = state.giveaways.find((item) => getGiveawayCodeKey(item) === key);
+    if (!giveaway?.sourceId) {
+      continue;
+    }
+
+    // A manual winner overrides whatever the sync recorded for this giveaway.
+    state.wins = state.wins.filter((win) => String(win.giveawaySourceId || "") !== giveaway.sourceId);
+
+    const code = giveaway.sourceId.replace(/^sg-/, "");
+    const syncGiveaway = syncGiveaways.find((item) => String(item.code) === code) || null;
+    const gameId = syncGiveaway
+      ? upsertGameFromSync(syncGiveaway)
+      : state.games.find((game) => game.title === giveaway.title)?.id || null;
+
+    for (const winnerInfo of manualWinners) {
+      const member = findMemberByUsername(winnerInfo.username);
+      if (!member) {
+        continue;
+      }
+      // Same shape as upsertWinFromSync, plus the manualWinner tag.
+      state.wins.unshift({
+        id: uid("win"),
+        sourceId: `sg-win-${code}-${winnerInfo.username}`,
+        giveawaySourceId: giveaway.sourceId,
+        memberId: member.id,
+        gameId,
+        manualWinner: true,
+        creatorUsername: giveaway.creatorUsername || "",
+        giveawayUrl: String(giveaway.notes || "").trim(),
+        winDate: giveaway.createdAt || state.settings.currentDate,
+        ruleMode: "standard-25",
+        currentHours: 0,
+        earnedAchievements: 0,
+        proofProvided: false,
+        evidenceNotes: "Manual winner set in the dashboard.",
+        createdAt: new Date().toISOString(),
+      });
+    }
+  }
 }
 
 function stripOverrideFields(item, fields) {
