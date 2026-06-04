@@ -4634,6 +4634,10 @@ function reconcileManualWinnerWins(overrides) {
     const gameId = syncGiveaway
       ? upsertGameFromSync(syncGiveaway)
       : state.games.find((game) => game.title === giveaway.title)?.id || null;
+    // Pin the win to the giveaway's own month (its listed month override, else
+    // its creation/end date). Release date must never shift a manual win's
+    // cycle month, so we set monthOverride rather than letting it be derived.
+    const countedMonth = getGiveawayMonth(giveaway);
 
     for (const winnerInfo of manualWinners) {
       const member = findMemberByUsername(winnerInfo.username);
@@ -4655,6 +4659,7 @@ function reconcileManualWinnerWins(overrides) {
         currentHours: 0,
         earnedAchievements: 0,
         proofProvided: false,
+        monthOverride: countedMonth || "",
         evidenceNotes: "Manual winner set in the dashboard.",
         createdAt: new Date().toISOString(),
       });
