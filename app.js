@@ -5360,16 +5360,25 @@ function updateOverrideField(bucketName, key, fieldName, value) {
     return;
   }
 
-  const overrides = normalizeOverrideState(state.overrides);
-  const entry = { ...(overrides[bucketName][key] || {}) };
+  // Base the new entry on the EFFECTIVE (shared + local) state so that editing
+  // one field preserves sibling fields, and clearing a field actually removes
+  // it even when the current value comes from a published (shared) override.
+  const effective = getEffectiveOverrideState();
+  const entry = { ...(effective[bucketName]?.[key] || {}) };
   if (value === null || value === undefined || value === "") {
     delete entry[fieldName];
   } else {
     entry[fieldName] = value;
   }
 
+  const overrides = normalizeOverrideState(state.overrides);
+  const sharedEntry = runtime.sharedOverrides?.[bucketName]?.[key];
   if (Object.keys(entry).length) {
     overrides[bucketName][key] = entry;
+  } else if (sharedEntry && Object.keys(sharedEntry).length) {
+    // Keep an empty local entry as a tombstone so the merge clears the shared
+    // override instead of falling back to it.
+    overrides[bucketName][key] = {};
   } else {
     delete overrides[bucketName][key];
   }
