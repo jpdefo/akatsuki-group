@@ -1,6 +1,6 @@
 {
   "source": "akatsuki-steamgifts-sync",
-  "syncedAt": "2026-06-05T20:26:31.949Z",
+  "syncedAt": "2026-06-05T21:30:02.221Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -2830,9 +2830,15 @@
       "steamAppUrl": "https://store.steampowered.com/app/1297900?utm_source=SteamGifts",
       "entriesCount": 3,
       "endDate": "2026-04-15T20:33:50.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "Wintermute101",
+          "profileUrl": "https://www.steamgifts.com/user/Wintermute101",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "Wintermute101",
       "points": 50,
       "regionRestricted": false,
       "giveawayKind": "cycle",
@@ -96968,6 +96974,14 @@
       "winDate": "2026-05-01T16:14:07.000Z"
     },
     {
+      "giveawayCode": "Gm5Hr",
+      "title": "Gothic 1 Remake",
+      "appId": 1297900,
+      "winnerUsername": "Wintermute101",
+      "creatorUsername": "Ernesttico",
+      "winDate": "2026-04-15T20:33:50.000Z"
+    },
+    {
       "giveawayCode": "W2Nnj",
       "title": "People of Note",
       "appId": 1626170,
@@ -128192,6 +128206,6 @@
       "winDate": "2016-08-26T06:01:36.000Z"
     }
   ],
-  "savedAt": "2026-06-05T20:26:32.002106+00:00",
-  "mergedAt": "2026-06-05T20:26:32.002120+00:00"
+  "savedAt": "2026-06-05T21:30:02.261026+00:00",
+  "mergedAt": "2026-06-05T21:30:02.261038+00:00"
 }

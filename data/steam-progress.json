@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-05T20:26:34.785687+00:00",
+  "updatedAt": "2026-06-05T21:30:05.892766+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -33066,6 +33066,24 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true
+    },
+    {
+      "username": "Wintermute101",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
+      "appId": 1297900,
+      "title": "Gothic 1 Remake",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/1297900/achievements/",
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 42,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "playtimeCheckedAt": null,
+      "playtimeSource": "",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "checkedAt": "2026-06-05T21:30:05.487830+00:00"
     },
     {
       "username": "Wintermute101",
@@ -68836,30 +68854,30 @@
   ],
   "steamApiEnabled": false,
   "activeOnly": true,
-  "refreshedMonth": "2026-05",
+  "refreshedMonth": "2026-06",
   "refreshedScope": "month",
-  "libraryUpdatedAt": "2026-06-05T20:26:34.579038+00:00",
+  "libraryUpdatedAt": "2026-06-05T21:30:05.283306+00:00",
   "libraryStats": {
-    "durationSeconds": 0.15,
-    "targetProfiles": 8,
+    "durationSeconds": 0.14,
+    "targetProfiles": 1,
     "refreshedProfiles": 0,
     "reusedProfiles": 0,
     "errorProfiles": 0,
-    "missingApiProfiles": 8,
+    "missingApiProfiles": 1,
     "totalProfiles": 23,
     "freshProfiles": 8,
     "totalPlaytimeRows": 86510
   },
   "stats": {
-    "durationSeconds": 0.35,
-    "targetWins": 16,
-    "uniqueProgressTargets": 16,
-    "libraryPlaytimeHits": 16,
-    "cachedReuses": 16,
-    "achievementSuccesses": 0,
+    "durationSeconds": 0.74,
+    "targetWins": 1,
+    "uniqueProgressTargets": 1,
+    "libraryPlaytimeHits": 0,
+    "cachedReuses": 0,
+    "achievementSuccesses": 1,
     "achievementErrors": 0,
     "cachedFallbacks": 0,
-    "hltbTitlesRequested": 15,
+    "hltbTitlesRequested": 1,
     "hltbResultsAvailable": 3970
   }
 }
