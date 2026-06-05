@@ -1,6 +1,6 @@
 {
   "source": "akatsuki-steamgifts-sync",
-  "syncedAt": "2026-06-02T22:22:25.236Z",
+  "syncedAt": "2026-06-05T20:26:31.949Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -2159,7 +2159,7 @@
       "appId": 3043580,
       "steamAppUrl": "https://store.steampowered.com/app/3043580?utm_source=SteamGifts",
       "points": 30,
-      "entriesCount": 1,
+      "entriesCount": 3,
       "endDate": "2026-06-02T18:17:02.000Z",
       "winners": [],
       "resultStatus": "open",
@@ -2321,7 +2321,7 @@
       "appId": 1663850,
       "steamAppUrl": "https://store.steampowered.com/app/1663850?utm_source=SteamGifts",
       "points": 20,
-      "entriesCount": 3,
+      "entriesCount": 2,
       "endDate": "2026-06-02T03:34:07.000Z",
       "winners": [],
       "resultStatus": "open",
@@ -2351,7 +2351,7 @@
         {
           "username": "leniu",
           "profileUrl": "https://www.steamgifts.com/user/leniu",
-          "status": "Received"
+          "status": "Won"
         }
       ],
       "resultStatus": "won",
@@ -2381,7 +2381,7 @@
         {
           "username": "Horseflesh",
           "profileUrl": "https://www.steamgifts.com/user/Horseflesh",
-          "status": "Received"
+          "status": "Won"
         }
       ],
       "resultStatus": "won",
@@ -2434,7 +2434,7 @@
         {
           "username": "chOOkity",
           "profileUrl": "https://www.steamgifts.com/user/chOOkity",
-          "status": "Received"
+          "status": "Won"
         }
       ],
       "resultStatus": "won",
@@ -2464,7 +2464,7 @@
         {
           "username": "burntreynolds444",
           "profileUrl": "https://www.steamgifts.com/user/burntreynolds444",
-          "status": "Received"
+          "status": "Won"
         }
       ],
       "resultStatus": "won",
@@ -128192,6 +128192,6 @@
       "winDate": "2016-08-26T06:01:36.000Z"
     }
   ],
-  "savedAt": "2026-06-02T22:22:25.296298+00:00",
-  "mergedAt": "2026-06-02T22:22:25.296307+00:00"
+  "savedAt": "2026-06-05T20:26:32.002106+00:00",
+  "mergedAt": "2026-06-05T20:26:32.002120+00:00"
 }
