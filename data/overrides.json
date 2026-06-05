@@ -1,9 +1,12 @@
 {
-  "savedAt": "2026-06-05T20:00:11.076Z",
+  "savedAt": "2026-06-05T20:05:09.789Z",
   "overrides": {
     "games": {},
     "wins": {},
     "giveaways": {
+      "sg-XSQMJ": {
+        "giveawayKindOverride": "extra"
+      },
       "sg-Gm5Hr": {
         "manualWinners": [
           {
@@ -27,9 +30,6 @@
             "displayName": "Saikania"
           }
         ]
-      },
-      "sg-R91uQ": {
-        "giveawayKindOverride": "summer_event"
       }
     },
     "cycleMembers": {
