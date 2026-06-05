@@ -224,6 +224,9 @@
       const endTimestamp = timestamps.length
         ? Number(timestamps[timestamps.length - 1].getAttribute("data-timestamp")) * 1000
         : null;
+      const startTimestamp = timestamps.length >= 2
+        ? Number(timestamps[0].getAttribute("data-timestamp")) * 1000
+        : null;
       const { appId, steamAppUrl } = extractAppInfo(row);
       const winnerInfo = extractWinnerInfo(rowText, primaryUser, secondaryUsers, endTimestamp);
       const creator = resolveCreatorRecord(primaryUser, secondaryUsers, winnerInfo.resultStatus);
@@ -237,6 +240,7 @@
         steamAppUrl,
         points: extractPointCost(row, title),
         entriesCount: entryLink ? parseInt(entryLink.textContent.replace(/[^\d]/g, ""), 10) || 0 : 0,
+        startDate: startTimestamp ? new Date(startTimestamp).toISOString() : null,
         endDate: endTimestamp ? new Date(endTimestamp).toISOString() : null,
         winners: winnerInfo.winners,
         resultStatus: winnerInfo.resultStatus,
@@ -566,6 +570,7 @@
           ? Boolean(giveaway.entriesFinalized)
           : Boolean(existingGiveaway.entriesFinalized),
       entriesSnapshotAt: giveaway.entriesSnapshotAt || existingGiveaway.entriesSnapshotAt || "",
+      startDate: giveaway.startDate || existingGiveaway.startDate || null,
     };
   }
 

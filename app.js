@@ -446,7 +446,8 @@ function renderAllGiveawaysPage() {
               <td>${thumbCell}</td>
               <td>
                 <strong>${titleMarkup}</strong>
-                <span class="meta-line">${formatDate(giveaway.createdAt)}</span>
+                <span class="meta-line">Created: ${escapeHtml(formatDateTime(giveaway.startDate))}</span>
+                <span class="meta-line">Ended: ${escapeHtml(formatDateTime(giveaway.endDate || giveaway.createdAt))}</span>
               </td>
               <td>${escapeHtml(creator?.name || giveaway.creatorUsername || "Unknown member")}</td>
               <td>
@@ -1348,11 +1349,23 @@ function renderSummerEventPage() {
             const resultMeta = resultStatus === "won"
               ? `${winners.length} winner${winners.length === 1 ? "" : "s"} confirmed`
               : giveaway.resultLabel || "Still running";
+            const thumb = buildImageMarkup({
+              className: "giveaway-thumb",
+              alt: giveaway.title || "Giveaway",
+              appId: giveaway.appId,
+              sources: [giveaway.capsuleSmallUrl, giveaway.headerImageUrl, giveaway.capsuleImageUrl],
+              placeholder: "—",
+            });
+            const thumbCell = giveaway.steamAppUrl
+              ? `<a href="${escapeHtml(giveaway.steamAppUrl)}" target="_blank" rel="noreferrer">${thumb}</a>`
+              : thumb;
             return `
               <tr>
+                <td>${thumbCell}</td>
                 <td>
                   <strong>${titleMarkup}</strong>
-                  <span class="meta-line">${formatDate(giveaway.endDate || state.settings.currentDate)}</span>
+                  <span class="meta-line">Created: ${escapeHtml(formatDateTime(giveaway.startDate))}</span>
+                  <span class="meta-line">Ended: ${escapeHtml(formatDateTime(giveaway.endDate))}</span>
                 </td>
                 <td>
                   <strong>${creatorMarkup}</strong>
@@ -1389,7 +1402,7 @@ function renderSummerEventPage() {
           })
           .join("")
       : buildMessageRow(
-          9,
+          10,
           giveaways.length ? "No summer-event giveaways match the current filters." : "No summer-event giveaways in this event.",
           giveaways.length ? "Adjust the creator, winner, or sort controls to see more giveaways." : "Choose another event or tag more giveaways as Summer event.",
         );
@@ -3595,6 +3608,8 @@ function upsertGiveawayFromSync(giveawayRecord, creatorId) {
     headerImageUrl: giveawayRecord.headerImageUrl || existing?.headerImageUrl || "",
     capsuleImageUrl: giveawayRecord.capsuleImageUrl || existing?.capsuleImageUrl || "",
     capsuleSmallUrl: giveawayRecord.capsuleSmallUrl || existing?.capsuleSmallUrl || "",
+    startDate: giveawayRecord.startDate || existing?.startDate || "",
+    endDate: giveawayRecord.endDate || existing?.endDate || "",
   };
 
   if (!existing) {

@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(awk '/^function getGiveawayKind\\\\\\(/{f=1} f{print} f&&/^}/{exit}' app.js)",
+      "Bash(awk '/function normalizeGiveawayKindValue\\\\\\(/{f=1} f{print} f&&/^}/{exit}' app.js)",
+      "Bash(node --check akatsuki-steamgifts-sync.user.js)",
+      "Bash(node --check steamgifts-live-bookmarklet.js)",
+      "Bash(node --check scripts/steamgifts-public-sync.mjs)",
+      "Bash(python -c ' *)",
+      "Bash(git commit -m 'Read cycle month from description for untagged giveaways + manual month override *)",
+      "Bash(awk '/function buildImageMarkup\\\\\\(/{f=1} f{print} f&&/^}/{exit}' app.js)",
+      "Bash(awk '/function normalizeGiveawayMedia\\\\\\(/{f=1} f{print} f&&/^}/{exit}' app.js)",
+      "Bash(sed -n '3172,3210p' app.js)",
+      "Bash(grep -nA6 '\\\\.giveaway-image' styles.css)",
+      "Bash(git commit -m 'Add all-giveaways management dashboard, giveaway thumbnails; rename Monthly to PoP Monthly Progress *)",
+      "Bash(awk '/function formatDateTime\\\\\\(/{f=1} f{print} f&&/^}/{exit}' app.js)",
+      "Bash(git commit -m 'Rename Monthly->PoP, summer-event thumbnails, created/ended date-time, capture start date *)"
+    ]
+  }
+}

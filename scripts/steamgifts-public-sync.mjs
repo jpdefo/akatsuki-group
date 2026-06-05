@@ -89,6 +89,7 @@ function mergeGiveawayWithExisting(giveaway, existingGiveaway) {
         ? Boolean(giveaway.entriesFinalized)
         : Boolean(existingGiveaway.entriesFinalized),
     entriesSnapshotAt: giveaway.entriesSnapshotAt || existingGiveaway.entriesSnapshotAt || "",
+    startDate: giveaway.startDate || existingGiveaway.startDate || null,
   };
 }
 
@@ -627,6 +628,11 @@ async function collectGiveaways(page, groupBase, maxGiveawayPages, existingSync)
         const endTimestamp = timestamps.length
           ? Number(timestamps[timestamps.length - 1].getAttribute("data-timestamp")) * 1000
           : null;
+        // The first data-timestamp is the created/start time; only trust it when
+        // there are at least two (otherwise the single one is the end time).
+        const startTimestamp = timestamps.length >= 2
+          ? Number(timestamps[0].getAttribute("data-timestamp")) * 1000
+          : null;
         const { appId, steamAppUrl } = extractAppInfo(row);
         const media = extractSteamMedia(row, appId);
         const winnerInfo = extractWinnerInfo(rowText, primaryUser, secondaryUsers, endTimestamp);
@@ -645,6 +651,7 @@ async function collectGiveaways(page, groupBase, maxGiveawayPages, existingSync)
           capsuleImageUrl: media.capsuleImageUrl,
           capsuleSmallUrl: media.capsuleSmallUrl,
           entriesCount: entryLink ? Number.parseInt(entryLink.textContent.replace(/[^\d]/g, ""), 10) || 0 : 0,
+          startDate: startTimestamp ? new Date(startTimestamp).toISOString() : null,
           endDate: endTimestamp ? new Date(endTimestamp).toISOString() : null,
           winners: winnerInfo.winners,
           resultStatus: winnerInfo.resultStatus,
