@@ -4634,10 +4634,6 @@ function reconcileManualWinnerWins(overrides) {
     const gameId = syncGiveaway
       ? upsertGameFromSync(syncGiveaway)
       : state.games.find((game) => game.title === giveaway.title)?.id || null;
-    // Pin the win to the giveaway's own month (its listed month override, else
-    // its creation/end date). Release date must never shift a manual win's
-    // cycle month, so we set monthOverride rather than letting it be derived.
-    const countedMonth = getGiveawayMonth(giveaway);
 
     for (const winnerInfo of manualWinners) {
       const member = findMemberByUsername(winnerInfo.username);
@@ -4659,7 +4655,6 @@ function reconcileManualWinnerWins(overrides) {
         currentHours: 0,
         earnedAchievements: 0,
         proofProvided: false,
-        monthOverride: countedMonth || "",
         evidenceNotes: "Manual winner set in the dashboard.",
         createdAt: new Date().toISOString(),
       });
@@ -4861,8 +4856,15 @@ function getRequiredAchievementsTarget(win, game) {
 }
 
 function getBaseEffectiveWinMonth(win) {
-  const game = findById("games", win.gameId);
-  return getEffectiveMonthKey(win.winDate, getWinReleaseDate(win, game));
+  // A win is always counted in the month the giveaway belongs to: the month
+  // listed in its description (giveawayMonthOverride) when the creator backdated
+  // it, otherwise the giveaway's creation/end date. The game's release date only
+  // affects the play-by deadline, never which cycle month the win counts in.
+  const giveaway = findGiveawayForWin(win);
+  if (giveaway) {
+    return getGiveawayMonth(giveaway);
+  }
+  return monthKey(win.winDate || "");
 }
 
 function getEffectiveWinMonth(win) {
