@@ -113,6 +113,12 @@ const elements = {
   summerEventSummaryCards: document.querySelector("#summer-event-summary-cards"),
   summerEventMemberGrid: document.querySelector("#summer-event-member-grid"),
   summerEventGiveawaysTable: document.querySelector("#summer-event-giveaways-table"),
+  allGiveawaysTable: document.querySelector("#all-giveaways-table"),
+  giveawaysSummary: document.querySelector("#giveaways-summary"),
+  giveawaysSearch: document.querySelector("#giveaways-search"),
+  giveawaysKindFilter: document.querySelector("#giveaways-kind-filter"),
+  giveawaysMonthFilter: document.querySelector("#giveaways-month-filter"),
+  giveawaysSort: document.querySelector("#giveaways-sort"),
   summerEntryEventFilter: document.querySelector("#summer-entry-event-filter"),
   summerEntryMemberFilter: document.querySelector("#summer-entry-member-filter"),
   summerEntryCreatorFilter: document.querySelector("#summer-entry-creator-filter"),
@@ -184,6 +190,10 @@ function bindEvents() {
   elements.summerEventSort?.addEventListener("change", () => renderSummerEventPage());
   elements.summerEventCreatorFilter?.addEventListener("input", () => renderSummerEventPage());
   elements.summerEventWinnerFilter?.addEventListener("input", () => renderSummerEventPage());
+  elements.giveawaysSearch?.addEventListener("input", () => renderAllGiveawaysPage());
+  elements.giveawaysKindFilter?.addEventListener("change", () => renderAllGiveawaysPage());
+  elements.giveawaysMonthFilter?.addEventListener("change", () => renderAllGiveawaysPage());
+  elements.giveawaysSort?.addEventListener("change", () => renderAllGiveawaysPage());
   elements.summerEntryEventFilter?.addEventListener("change", () => renderSummerEventEntriesPage());
   elements.summerEntryMemberFilter?.addEventListener("change", () => renderSummerEventEntriesPage());
   elements.summerEntryCreatorFilter?.addEventListener("change", () => renderSummerEventEntriesPage());
@@ -307,7 +317,163 @@ function render() {
   renderCycleHistoryPage();
   renderSummerEventPage();
   renderSummerEventEntriesPage();
+  renderAllGiveawaysPage();
   renderMemberBuckets();
+}
+
+function sortAllGiveaways(giveaways, sortValue) {
+  const endOf = (g) => String(g.createdAt || ""); // createdAt holds the giveaway end date for synced giveaways
+  const byCreator = (g) => getCycleGiveawayCreatorLabel(g);
+  const byWinner = (g) => getCycleGiveawayWinnerLabel(g);
+  const sorted = giveaways.slice();
+  sorted.sort((a, b) => {
+    switch (sortValue) {
+      case "ended-asc":
+        return endOf(a).localeCompare(endOf(b));
+      case "creator-asc":
+        return byCreator(a).localeCompare(byCreator(b), "en-US", { sensitivity: "base" }) || endOf(b).localeCompare(endOf(a));
+      case "creator-desc":
+        return byCreator(b).localeCompare(byCreator(a), "en-US", { sensitivity: "base" }) || endOf(b).localeCompare(endOf(a));
+      case "winner-asc":
+        return byWinner(a).localeCompare(byWinner(b), "en-US", { sensitivity: "base" }) || endOf(b).localeCompare(endOf(a));
+      case "winner-desc":
+        return byWinner(b).localeCompare(byWinner(a), "en-US", { sensitivity: "base" }) || endOf(b).localeCompare(endOf(a));
+      case "title-asc":
+        return String(a.title || "").localeCompare(String(b.title || ""), "en-US", { sensitivity: "base" });
+      case "title-desc":
+        return String(b.title || "").localeCompare(String(a.title || ""), "en-US", { sensitivity: "base" });
+      case "entries-desc":
+        return Number(b.entriesCount || 0) - Number(a.entriesCount || 0) || endOf(b).localeCompare(endOf(a));
+      case "entries-asc":
+        return Number(a.entriesCount || 0) - Number(b.entriesCount || 0) || endOf(b).localeCompare(endOf(a));
+      case "ended-desc":
+      default:
+        return endOf(b).localeCompare(endOf(a));
+    }
+  });
+  return sorted;
+}
+
+function renderAllGiveawaysPage() {
+  if (!elements.allGiveawaysTable) {
+    return;
+  }
+
+  const all = state.giveaways.slice();
+
+  if (elements.giveawaysMonthFilter) {
+    const months = Array.from(new Set(all.map((giveaway) => getGiveawayMonth(giveaway)).filter(Boolean))).sort((left, right) =>
+      right.localeCompare(left),
+    );
+    const previous = elements.giveawaysMonthFilter.value;
+    elements.giveawaysMonthFilter.innerHTML = [`<option value="all">All months</option>`]
+      .concat(months.map((month) => `<option value="${month}">${escapeHtml(formatMonthKey(month))}</option>`))
+      .join("");
+    elements.giveawaysMonthFilter.value = months.includes(previous) ? previous : "all";
+  }
+
+  const search = String(elements.giveawaysSearch?.value || "").trim().toLowerCase();
+  const kindFilter = String(elements.giveawaysKindFilter?.value || "all");
+  const monthFilter = String(elements.giveawaysMonthFilter?.value || "all");
+  const sortValue = String(elements.giveawaysSort?.value || "ended-desc");
+
+  const filtered = all.filter((giveaway) => {
+    if (kindFilter !== "all" && getGiveawayKind(giveaway) !== kindFilter) {
+      return false;
+    }
+    if (monthFilter !== "all" && getGiveawayMonth(giveaway) !== monthFilter) {
+      return false;
+    }
+    if (search) {
+      const haystack = `${giveaway.title || ""} ${getCycleGiveawayCreatorLabel(giveaway)} ${getCycleGiveawayWinnerLabel(giveaway)}`.toLowerCase();
+      if (!haystack.includes(search)) {
+        return false;
+      }
+    }
+    return true;
+  });
+
+  const sortedRows = sortAllGiveaways(filtered, sortValue);
+  const RENDER_LIMIT = 400;
+  const visibleRows = sortedRows.slice(0, RENDER_LIMIT);
+
+  if (elements.giveawaysSummary) {
+    elements.giveawaysSummary.textContent = sortedRows.length > RENDER_LIMIT
+      ? `${sortedRows.length.toLocaleString("en-US")} giveaways match — showing the first ${RENDER_LIMIT}. Use the filters to narrow down.`
+      : `${sortedRows.length.toLocaleString("en-US")} giveaway${sortedRows.length === 1 ? "" : "s"}.`;
+  }
+
+  elements.allGiveawaysTable.innerHTML = visibleRows.length
+    ? visibleRows
+        .map((giveaway) => {
+          const title = escapeHtml(giveaway.title || "Untitled giveaway");
+          const thumb = buildImageMarkup({
+            className: "giveaway-thumb",
+            alt: title,
+            appId: giveaway.appId,
+            sources: [giveaway.capsuleSmallUrl, giveaway.headerImageUrl, giveaway.capsuleImageUrl],
+            placeholder: "—",
+          });
+          const thumbCell = giveaway.steamAppUrl
+            ? `<a href="${escapeHtml(giveaway.steamAppUrl)}" target="_blank" rel="noreferrer">${thumb}</a>`
+            : thumb;
+          const giveawayUrl = String(giveaway.notes || "").trim();
+          const titleMarkup = giveawayUrl
+            ? `<a class="linked-title" href="${escapeHtml(giveawayUrl)}" target="_blank" rel="noreferrer">${title}</a>`
+            : title;
+          const creator = findById("members", giveaway.creatorId);
+          const kind = getGiveawayKind(giveaway);
+          const month = getGiveawayMonth(giveaway);
+          const manualWinners = getGiveawayManualWinners(giveaway);
+          const wins = findWinsForGiveaway(giveaway);
+          const winnerMarkup = manualWinners.length
+            ? manualWinners.map((winner) => buildManualWinnerMarkup(winner)).join(", ")
+            : wins.length
+              ? wins.map((win) => buildWinnerMarkup(findById("members", win.memberId))).join(", ")
+              : "-";
+          const currentWinnerNames = (manualWinners.length
+            ? manualWinners.map((winner) => winner.username)
+            : wins
+                .map((win) => {
+                  const member = findById("members", win.memberId);
+                  return String(member?.steamgiftsUsername || member?.name || "").trim();
+                })
+                .filter(Boolean)
+          ).join(", ");
+          const winnerKey = getGiveawayCodeKey(giveaway);
+          return `
+            <tr>
+              <td>${thumbCell}</td>
+              <td>
+                <strong>${titleMarkup}</strong>
+                <span class="meta-line">${formatDate(giveaway.createdAt)}</span>
+              </td>
+              <td>${escapeHtml(creator?.name || giveaway.creatorUsername || "Unknown member")}</td>
+              <td>
+                <div>${month ? formatMonthKey(month) : "-"}</div>
+                <button class="inline-action" data-edit-action="giveaway-month" data-giveaway-id="${giveaway.id}">Edit month</button>
+              </td>
+              <td>
+                <label class="inline-select-wrap compact-select-wrap">
+                  <select class="inline-select" data-giveaway-kind-select="true" data-giveaway-id="${giveaway.id}">
+                    <option value="cycle" ${kind === "cycle" ? "selected" : ""}>Cycle</option>
+                    <option value="extra" ${kind === "extra" ? "selected" : ""}>Extra</option>
+                    <option value="summer_event" ${kind === "summer_event" ? "selected" : ""}>Summer event</option>
+                  </select>
+                </label>
+              </td>
+              <td>
+                <div>${winnerMarkup}${manualWinners.length ? ` ${buildBadge("info", "Manual")}` : ""}</div>
+                ${canEditGiveawayWinner(giveaway) ? `<button class="inline-action" data-edit-action="winner" data-giveaway-key="${escapeHtml(winnerKey)}" data-current-winners="${escapeHtml(currentWinnerNames)}">Edit winner</button>` : ""}
+              </td>
+              <td>${Number(giveaway.entriesCount || 0).toLocaleString("en-US")}</td>
+            </tr>
+          `;
+        })
+        .join("")
+    : buildMessageRow(7, "No giveaways match the current filters.", "Adjust the search, type, or month filters.");
+
+  void loadVisibleGameMedia({ silent: true });
 }
 
 function renderSettings() {
@@ -3424,6 +3590,11 @@ function upsertGiveawayFromSync(giveawayRecord, creatorId) {
     entriesSnapshotAt: giveawayRecord.entriesSnapshotAt || existing?.entriesSnapshotAt || "",
     resultStatus: String(giveawayRecord.resultStatus || "").toLowerCase(),
     resultLabel: giveawayRecord.resultLabel || "",
+    appId: Number(giveawayRecord.appId || 0) || existing?.appId || null,
+    steamAppUrl: giveawayRecord.steamAppUrl || existing?.steamAppUrl || "",
+    headerImageUrl: giveawayRecord.headerImageUrl || existing?.headerImageUrl || "",
+    capsuleImageUrl: giveawayRecord.capsuleImageUrl || existing?.capsuleImageUrl || "",
+    capsuleSmallUrl: giveawayRecord.capsuleSmallUrl || existing?.capsuleSmallUrl || "",
   };
 
   if (!existing) {

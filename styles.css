@@ -260,11 +260,26 @@ h2 {
 }
 
 .giveaway-image,
-.game-thumb {
+.game-thumb,
+.giveaway-thumb {
   display: block;
   background: linear-gradient(135deg, #1d2633 0%, #11161e 100%);
   border: 1px solid rgba(255, 255, 255, 0.04);
   border-radius: 12px;
+}
+
+.giveaway-thumb {
+  width: 120px;
+  min-width: 120px;
+  height: 45px;
+  object-fit: cover;
+}
+
+.giveaway-thumb.placeholder {
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-size: 0.8rem;
 }
 
 .giveaway-image {
