@@ -624,7 +624,10 @@
   };
 
   function detectGiveawayMonthOverride(descriptionText, referenceDate, giveawayKind) {
-    if (String(giveawayKind || "").trim().toLowerCase() !== "cycle") {
+    // Untagged giveaways default to cycle, so still read a month from their
+    // description (e.g. "April giveaway"). Only skip explicit non-cycle kinds.
+    const normalizedKind = String(giveawayKind || "").trim().toLowerCase();
+    if (normalizedKind && normalizedKind !== "cycle") {
       return "";
     }
 
@@ -744,7 +747,7 @@
       endDate: resolvedEndDate,
       regionRestricted: /region/i.test(String(featureMap.Type || "")),
       giveawayKind: resolvedGiveawayKind,
-      giveawayMonthOverride: resolvedGiveawayKind === "cycle" ? giveawayMonthOverride : "",
+      giveawayMonthOverride,
       giveawayKindChecked: true,
       resultStatus: resolvedResultStatus,
       resultLabel: resolvedResultLabel,

@@ -877,7 +877,10 @@ async function enrichGiveaway(page, giveaway) {
     };
 
     function detectGiveawayMonthOverride(descriptionText, referenceDate, giveawayKind) {
-      if (String(giveawayKind || "").trim().toLowerCase() !== "cycle") {
+      // Untagged giveaways default to cycle, so still read a month from their
+      // description (e.g. "April giveaway"). Only skip explicit non-cycle kinds.
+      const normalizedKind = String(giveawayKind || "").trim().toLowerCase();
+      if (normalizedKind && normalizedKind !== "cycle") {
         return "";
       }
 
@@ -987,7 +990,7 @@ async function enrichGiveaway(page, giveaway) {
     endDate: resolvedEndDate,
     regionRestricted: details.regionRestricted || giveaway.regionRestricted || false,
     giveawayKind: resolvedGiveawayKind,
-    giveawayMonthOverride: resolvedGiveawayKind === "cycle" ? details.giveawayMonthOverride || "" : "",
+    giveawayMonthOverride: details.giveawayMonthOverride || "",
     giveawayKindChecked: details.giveawayKindChecked || giveaway.giveawayKindChecked || false,
     resultStatus: resolvedResultStatus,
     resultLabel: resolvedResultLabel,

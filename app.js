@@ -72,7 +72,7 @@ const runtime = {
 };
 const GAME_OVERRIDE_FIELDS = ["hltbHoursOverride"];
 const WIN_OVERRIDE_FIELDS = ["requiredAchievementsOverride", "monthOverride"];
-const GIVEAWAY_OVERRIDE_FIELDS = ["giveawayKindOverride", "manualWinners"];
+const GIVEAWAY_OVERRIDE_FIELDS = ["giveawayKindOverride", "manualWinners", "cycleMonthOverride"];
 
 applyManualOverrides();
 
@@ -971,7 +971,10 @@ function renderCycleHistoryResultsTable(cycleGiveaways) {
           const giveawayMonth = getGiveawayMonth(giveaway);
           return `
             <tr>
-              <td>${giveawayMonth ? formatMonthKey(giveawayMonth) : "-"}</td>
+              <td>
+                <div>${giveawayMonth ? formatMonthKey(giveawayMonth) : "-"}</div>
+                <button class="inline-action" data-edit-action="giveaway-month" data-giveaway-id="${giveaway.id}">Edit month</button>
+              </td>
               <td>${escapeHtml(creator?.name || "Unknown member")}</td>
               <td>
                 <strong>${giveawayUrl ? `<a class="linked-title" href="${escapeHtml(giveawayUrl)}" target="_blank" rel="noreferrer">${escapeHtml(giveaway.title)}</a>` : escapeHtml(giveaway.title)}</strong>
@@ -4876,6 +4879,12 @@ function getEffectiveWinMonth(win) {
 }
 
 function getGiveawayMonth(giveaway) {
+  // Admin-set cycle month wins over everything (used when a giveaway can't be
+  // auto-placed, e.g. two same-game giveaways ending the same day).
+  const manualMonth = normalizeGiveawayMonthOverrideValue(giveaway?.cycleMonthOverride);
+  if (manualMonth) {
+    return manualMonth;
+  }
   const overrideMonth = normalizeGiveawayMonthOverrideValue(giveaway?.giveawayMonthOverride);
   if (overrideMonth && getGiveawayKind(giveaway) === "cycle") {
     return overrideMonth;
@@ -5082,6 +5091,26 @@ function handleEditAction(button) {
 
   if (action === "winner") {
     openWinnerEditModal(button.dataset.giveawayKey || "", button.dataset.currentWinners || "");
+    return;
+  }
+
+  if (action === "giveaway-month") {
+    const giveaway = findById("giveaways", button.dataset.giveawayId);
+    if (!giveaway) {
+      return;
+    }
+    openEditModal({
+      title: `Edit cycle month for ${giveaway.title}`,
+      description: "Use the YYYY-MM format. This sets which cycle month the giveaway (and any win on it) counts in. Leave empty to clear and fall back to the description/end date.",
+      label: "Cycle month",
+      initialValue: getGiveawayMonth(giveaway),
+      inputType: "text",
+      inputAttributes: { placeholder: "YYYY-MM" },
+      parse: parseMonthOverrideInput,
+      onSave: (nextValue) => {
+        updateOverrideField("giveaways", getGiveawayOverrideKey(giveaway), "cycleMonthOverride", nextValue);
+      },
+    });
     return;
   }
 
