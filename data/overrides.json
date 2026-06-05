@@ -1,12 +1,9 @@
 {
-  "savedAt": "2026-06-05T20:05:09.789Z",
+  "savedAt": "2026-06-05T20:06:02.990Z",
   "overrides": {
     "games": {},
     "wins": {},
     "giveaways": {
-      "sg-XSQMJ": {
-        "giveawayKindOverride": "extra"
-      },
       "sg-Gm5Hr": {
         "manualWinners": [
           {
@@ -18,8 +15,8 @@
       "sg-kxEiu": {
         "manualWinners": [
           {
-            "username": "zettaivanugen",
-            "displayName": "zettaivanugen"
+            "username": "Ernesttico",
+            "displayName": "Ernesttico"
           }
         ]
       },
@@ -30,6 +27,9 @@
             "displayName": "Saikania"
           }
         ]
+      },
+      "sg-R91uQ": {
+        "giveawayKindOverride": "summer_event"
       }
     },
     "cycleMembers": {
