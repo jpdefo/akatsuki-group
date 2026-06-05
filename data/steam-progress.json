@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-04T07:29:19.507910+00:00",
+  "updatedAt": "2026-06-05T07:21:00.678625+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -6707,13 +6707,13 @@
       "earnedAchievements": 0,
       "totalAchievements": 10,
       "achievementPercent": 0,
-      "playtimeHours": 0.0,
-      "playtimeCheckedAt": "2026-06-02T22:20:23.536904+00:00",
+      "playtimeHours": 0.23,
+      "playtimeCheckedAt": "2026-06-05T07:20:58.863808+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-06-04T07:29:19.507847+00:00"
+      "checkedAt": "2026-06-05T07:21:00.678565+00:00"
     },
     {
       "username": "burntreynolds444",
@@ -6744,12 +6744,12 @@
       "earnedAchievements": 0,
       "totalAchievements": 42,
       "achievementPercent": 0,
-      "playtimeCheckedAt": "2026-06-02T22:20:23.536904+00:00",
+      "playtimeCheckedAt": "2026-06-05T07:20:58.863808+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-06-04T07:29:19.507749+00:00"
+      "checkedAt": "2026-06-05T07:21:00.678504+00:00"
     },
     {
       "username": "burntreynolds444",
@@ -8904,12 +8904,12 @@
       "earnedAchievements": 0,
       "totalAchievements": 26,
       "achievementPercent": 0,
-      "playtimeCheckedAt": "2026-06-02T22:20:24.358770+00:00",
+      "playtimeCheckedAt": "2026-06-05T07:20:58.266587+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-06-04T07:29:19.507771+00:00"
+      "checkedAt": "2026-06-05T07:21:00.678530+00:00"
     },
     {
       "username": "chOOkity",
@@ -8994,12 +8994,12 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeCheckedAt": "2026-06-02T22:20:24.358770+00:00",
+      "playtimeCheckedAt": "2026-06-05T07:20:58.266587+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-06-04T07:29:19.507738+00:00"
+      "checkedAt": "2026-06-05T07:21:00.678492+00:00"
     },
     {
       "username": "chOOkity",
@@ -9049,8 +9049,8 @@
       "achievementPercent": 0,
       "playtimeHours": 0.0,
       "error": null,
-      "checkedAt": "2026-06-04T07:29:19.507906+00:00",
-      "playtimeCheckedAt": "2026-06-02T22:20:24.358770+00:00",
+      "checkedAt": "2026-06-05T07:21:00.678621+00:00",
+      "playtimeCheckedAt": "2026-06-05T07:20:58.266587+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true
@@ -15582,12 +15582,12 @@
       "totalAchievements": 49,
       "achievementPercent": 0,
       "playtimeHours": 0.0,
-      "playtimeCheckedAt": "2026-06-02T22:20:22.937752+00:00",
+      "playtimeCheckedAt": "2026-06-05T07:20:58.007700+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-06-04T07:29:19.507790+00:00"
+      "checkedAt": "2026-06-05T07:21:00.678548+00:00"
     },
     {
       "username": "Horseflesh",
@@ -16410,12 +16410,12 @@
       "earnedAchievements": 0,
       "totalAchievements": 34,
       "achievementPercent": 0,
-      "playtimeCheckedAt": "2026-06-02T22:20:22.937752+00:00",
+      "playtimeCheckedAt": "2026-06-05T07:20:58.007700+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-06-04T07:29:19.507723+00:00"
+      "checkedAt": "2026-06-05T07:21:00.678476+00:00"
     },
     {
       "username": "Horseflesh",
@@ -26076,12 +26076,12 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeCheckedAt": "2026-06-02T22:22:32.229224+00:00",
+      "playtimeCheckedAt": "2026-06-05T07:20:57.743398+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-06-04T07:29:19.507678+00:00"
+      "checkedAt": "2026-06-05T07:21:00.678430+00:00"
     },
     {
       "username": "leniu",
@@ -26130,12 +26130,12 @@
       "earnedAchievements": 0,
       "totalAchievements": 35,
       "achievementPercent": 0,
-      "playtimeCheckedAt": "2026-06-02T22:22:32.229224+00:00",
+      "playtimeCheckedAt": "2026-06-05T07:20:57.743398+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-06-04T07:29:19.507875+00:00"
+      "checkedAt": "2026-06-05T07:21:00.678589+00:00"
     },
     {
       "username": "Millsshogun",
@@ -28776,12 +28776,12 @@
       "totalAchievements": 22,
       "achievementPercent": 0,
       "playtimeHours": 1.37,
-      "playtimeCheckedAt": "2026-06-02T22:20:23.816727+00:00",
+      "playtimeCheckedAt": "2026-06-05T07:20:59.604320+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-06-04T07:29:19.507883+00:00"
+      "checkedAt": "2026-06-05T07:21:00.678597+00:00"
     },
     {
       "username": "Saikania",
@@ -34225,17 +34225,17 @@
       "appId": 3172700,
       "title": "Banquet for Fools",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3172700/achievements/",
-      "playtimeHours": 1.53,
+      "playtimeHours": 1.58,
       "visible": false,
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeCheckedAt": "2026-06-02T22:22:33.498987+00:00",
+      "playtimeCheckedAt": "2026-06-05T07:20:59.356157+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-06-04T07:29:19.507858+00:00"
+      "checkedAt": "2026-06-05T07:21:00.678573+00:00"
     },
     {
       "username": "Wintermute101",
@@ -35922,12 +35922,12 @@
       "earnedAchievements": 0,
       "totalAchievements": 37,
       "achievementPercent": 0,
-      "playtimeCheckedAt": "2026-06-02T22:22:33.879658+00:00",
+      "playtimeCheckedAt": "2026-06-05T07:20:59.842481+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-06-04T07:29:19.507897+00:00"
+      "checkedAt": "2026-06-05T07:21:00.678611+00:00"
     },
     {
       "username": "Youdontknow",
@@ -39684,12 +39684,12 @@
       "earnedAchievements": 0,
       "totalAchievements": 281,
       "achievementPercent": 0,
-      "playtimeCheckedAt": "2026-06-02T22:22:32.626966+00:00",
+      "playtimeCheckedAt": "2026-06-05T07:20:59.114927+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-06-04T07:29:19.507830+00:00"
+      "checkedAt": "2026-06-05T07:21:00.678558+00:00"
     },
     {
       "username": "zettaivanugen",
@@ -40746,12 +40746,12 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeCheckedAt": "2026-06-02T22:22:32.626966+00:00",
+      "playtimeCheckedAt": "2026-06-05T07:20:59.114927+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-06-04T07:29:19.507762+00:00"
+      "checkedAt": "2026-06-05T07:21:00.678521+00:00"
     },
     {
       "username": "zettaivanugen",
@@ -40854,12 +40854,12 @@
       "earnedAchievements": 0,
       "totalAchievements": 52,
       "achievementPercent": 0,
-      "playtimeCheckedAt": "2026-06-02T22:22:32.626966+00:00",
+      "playtimeCheckedAt": "2026-06-05T07:20:59.114927+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-06-04T07:29:19.507866+00:00"
+      "checkedAt": "2026-06-05T07:21:00.678581+00:00"
     },
     {
       "username": "zettaivanugen",
@@ -40980,12 +40980,12 @@
       "earnedAchievements": 0,
       "totalAchievements": 39,
       "achievementPercent": 0,
-      "playtimeCheckedAt": "2026-06-02T22:22:32.626966+00:00",
+      "playtimeCheckedAt": "2026-06-05T07:20:59.114927+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-06-04T07:29:19.507779+00:00"
+      "checkedAt": "2026-06-05T07:21:00.678538+00:00"
     },
     {
       "username": "zettaivanugen",
@@ -68838,9 +68838,9 @@
   "activeOnly": true,
   "refreshedMonth": "2026-05",
   "refreshedScope": "month",
-  "libraryUpdatedAt": "2026-06-04T07:29:19.222452+00:00",
+  "libraryUpdatedAt": "2026-06-05T07:21:00.416365+00:00",
   "libraryStats": {
-    "durationSeconds": 0.22,
+    "durationSeconds": 0.23,
     "targetProfiles": 8,
     "refreshedProfiles": 0,
     "reusedProfiles": 8,
@@ -68848,10 +68848,10 @@
     "missingApiProfiles": 0,
     "totalProfiles": 23,
     "freshProfiles": 8,
-    "totalPlaytimeRows": 86504
+    "totalPlaytimeRows": 86510
   },
   "stats": {
-    "durationSeconds": 0.49,
+    "durationSeconds": 0.47,
     "targetWins": 16,
     "uniqueProgressTargets": 16,
     "libraryPlaytimeHits": 16,
