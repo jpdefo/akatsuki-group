@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-05T21:30:05.892766+00:00",
+  "updatedAt": "2026-06-06T06:58:07.042718+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -33083,7 +33083,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-06-05T21:30:05.487830+00:00"
+      "checkedAt": "2026-06-06T06:58:07.042681+00:00"
     },
     {
       "username": "Wintermute101",
@@ -68852,29 +68852,29 @@
       "url": "https://howlongtobeat.com/game/34230"
     }
   ],
-  "steamApiEnabled": false,
+  "steamApiEnabled": true,
   "activeOnly": true,
   "refreshedMonth": "2026-06",
   "refreshedScope": "month",
-  "libraryUpdatedAt": "2026-06-05T21:30:05.283306+00:00",
+  "libraryUpdatedAt": "2026-06-06T06:58:06.785240+00:00",
   "libraryStats": {
-    "durationSeconds": 0.14,
+    "durationSeconds": 0.22,
     "targetProfiles": 1,
     "refreshedProfiles": 0,
-    "reusedProfiles": 0,
+    "reusedProfiles": 1,
     "errorProfiles": 0,
-    "missingApiProfiles": 1,
+    "missingApiProfiles": 0,
     "totalProfiles": 23,
     "freshProfiles": 8,
     "totalPlaytimeRows": 86510
   },
   "stats": {
-    "durationSeconds": 0.74,
+    "durationSeconds": 0.46,
     "targetWins": 1,
     "uniqueProgressTargets": 1,
     "libraryPlaytimeHits": 0,
-    "cachedReuses": 0,
-    "achievementSuccesses": 1,
+    "cachedReuses": 1,
+    "achievementSuccesses": 0,
     "achievementErrors": 0,
     "cachedFallbacks": 0,
     "hltbTitlesRequested": 1,
