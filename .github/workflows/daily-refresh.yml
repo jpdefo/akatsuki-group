@@ -35,12 +35,11 @@ jobs:
         env:
           STEAM_WEB_API_KEY: ${{ secrets.STEAM_WEB_API_KEY }}
 
-      - name: Refresh Steam library
-        run: python server.py --refresh-steam-library --full-refresh
-        env:
-          STEAM_WEB_API_KEY: ${{ secrets.STEAM_WEB_API_KEY }}
-
-      - name: Refresh Steam progress
+      # Progress refresh also refreshes + saves the Steam library internally
+      # (account-wide GetOwnedGames per active member), so a separate library
+      # step would just double those playtime calls. Achievements are fetched
+      # only for games won by active members.
+      - name: Refresh Steam progress (library + achievements)
         run: python server.py --refresh-steam-progress --full-refresh
         env:
           STEAM_WEB_API_KEY: ${{ secrets.STEAM_WEB_API_KEY }}
