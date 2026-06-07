@@ -2078,7 +2078,11 @@ function renderMemberBucketTable(target, isActiveMember) {
     .map(
       (row) => `
         <tr>
-          <td>${escapeHtml(row.name)}</td>
+          <td>${
+            row.steamgiftsUrl
+              ? `<a class="linked-title" href="${escapeHtml(row.steamgiftsUrl)}" target="_blank" rel="noreferrer">${escapeHtml(row.name)}</a>`
+              : escapeHtml(row.name)
+          }</td>
           <td>${row.totalWins}</td>
           <td>${formatHours(row.totalPlaytime)}</td>
           <td>${row.averageAchievements === null ? "-" : `${row.averageAchievements}%`}</td>
