@@ -3016,7 +3016,7 @@ function setStoredGithubToken(token) {
 function promptForGithubToken(options = {}) {
   const existing = getStoredGithubToken();
   const message =
-    "Paste a GitHub fine-grained token with 'Contents: Read and write' on jpdefo/akatsuki-group.\n" +
+    "Paste a GitHub token with 'Contents: Read and write' on jpdefo/akatsuki-group.\n" +
     "It is stored only in this browser. Leave empty to keep the current token; type CLEAR to remove it.";
   const entered = window.prompt(message, "");
   if (entered === null) {
@@ -3093,7 +3093,7 @@ async function publishOverridesToGitHub() {
       cache: "no-store",
     });
     if (getResponse.status === 401) {
-      throw new Error("GitHub rejected the token (401). Use 'Set / change GitHub token' to paste a valid fine-grained token.");
+      throw new Error("GitHub rejected the token (401). Use 'Set / change GitHub token' to paste a valid token.");
     }
     if (getResponse.ok) {
       const current = await getResponse.json();
@@ -3115,7 +3115,7 @@ async function publishOverridesToGitHub() {
     });
 
     if (putResponse.status === 401) {
-      throw new Error("GitHub rejected the token (401). Set a valid fine-grained token and try again.");
+      throw new Error("GitHub rejected the token (401). Set a valid token and try again.");
     }
     if (putResponse.status === 403) {
       throw new Error("GitHub denied the write (403). The token needs 'Contents: Read and write' on jpdefo/akatsuki-group.");
