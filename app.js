@@ -1778,9 +1778,19 @@ function sortSummerEventGiveaways(giveaways, sortValue, memberIndex = getSummerE
 }
 
 function getTrackedSummerEventGiveaways() {
-  return (state.sync?.steamgifts?.giveaways || []).filter(
-    (giveaway) => normalizeGiveawayKindValue(giveaway?.giveawayKind, giveaway) === "summer_event",
-  );
+  // Honor the manual kind override: the raw sync giveaways don't carry the
+  // override field (it's applied to state.giveaways), so look it up by code key.
+  // This way re-typing a giveaway (summer_event -> extra) removes it here too,
+  // and an override TO summer_event adds it.
+  const overrides = getEffectiveOverrideState().giveaways;
+  return (state.sync?.steamgifts?.giveaways || []).filter((giveaway) => {
+    const key = getGiveawayCodeKey(giveaway);
+    const overrideKind = key ? String(overrides[key]?.giveawayKindOverride || "").trim() : "";
+    const kind = overrideKind
+      ? normalizeGiveawayKindValue(overrideKind, giveaway)
+      : normalizeGiveawayKindValue(giveaway?.giveawayKind, giveaway);
+    return kind === "summer_event";
+  });
 }
 
 function getSummerEventPeriods(giveaways) {
