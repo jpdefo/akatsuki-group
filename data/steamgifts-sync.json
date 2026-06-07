@@ -2863,7 +2863,8 @@
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2215200/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215200/4933722fc48c284f30ea2d0f9eb932c0ab3de1b5/capsule_184x69.jpg",
       "startDate": "2026-05-01T18:44:04.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "hltbHours": 12.77
     },
     {
       "code": "Vq2Hc",
@@ -3774,7 +3775,8 @@
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3768760/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3768760/244e00f17e6d0b5d1e88320dfbb5a12b483be700/capsule_184x69.jpg",
       "startDate": "2026-03-04T06:56:37.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "hltbHours": 15.37
     },
     {
       "code": "16bPT",
@@ -4770,7 +4772,8 @@
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3768760/244e00f17e6d0b5d1e88320dfbb5a12b483be700/capsule_184x69.jpg",
       "startDate": "2025-12-14T16:07:01.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "hltbHours": 15.37
     },
     {
       "code": "CzQVS",
@@ -83313,7 +83316,8 @@
       "resultStatus": "won",
       "resultLabel": "PieceOfMind",
       "steamStoreType": "app",
-      "steamStoreId": 314790
+      "steamStoreId": 314790,
+      "hltbHours": 0.19
     },
     {
       "code": "kYO8w",
@@ -92485,7 +92489,8 @@
       "resultStatus": "won",
       "resultLabel": "Youdontknow",
       "steamStoreType": "app",
-      "steamStoreId": 314790
+      "steamStoreId": 314790,
+      "hltbHours": 0.19
     },
     {
       "code": "yalUL",

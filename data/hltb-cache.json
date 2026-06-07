@@ -11,7 +11,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:26:16.967063+00:00"
   },
   "mewgenics": {
     "title": "Mewgenics",
@@ -36,10 +37,11 @@
   },
   "lego batman legacy of the dark knight": {
     "title": "LEGO Batman: Legacy of the Dark Knight",
-    "hltbHours": 0.0,
+    "hltbHours": 12.77,
     "matchedTitle": "LEGO Batman: Legacy of the Dark Knight",
     "gameId": 172962,
-    "url": "https://howlongtobeat.com/game/172962"
+    "url": "https://howlongtobeat.com/game/172962",
+    "checkedAt": "2026-06-07T11:24:22.645855+00:00"
   },
   "heroes of might and magic olden era": {
     "title": "Heroes of Might and Magic: Olden Era",
@@ -53,7 +55,8 @@
     "hltbHours": 0.0,
     "matchedTitle": "PLUTONIUM",
     "gameId": 47396,
-    "url": "https://howlongtobeat.com/game/47396"
+    "url": "https://howlongtobeat.com/game/47396",
+    "checkedAt": "2026-06-07T11:25:09.272565+00:00"
   },
   "super meat boy 3d": {
     "title": "Super Meat Boy 3D",
@@ -67,7 +70,8 @@
     "hltbHours": 0.0,
     "matchedTitle": "Gothic 1 Remake",
     "gameId": 92900,
-    "url": "https://howlongtobeat.com/game/92900"
+    "url": "https://howlongtobeat.com/game/92900",
+    "checkedAt": "2026-06-07T11:24:04.071425+00:00"
   },
   "people of note": {
     "title": "People of Note",
@@ -176,10 +180,11 @@
   },
   "007 first light": {
     "title": "007 First Light",
-    "hltbHours": 0.0,
+    "hltbHours": 15.37,
     "matchedTitle": "007 First Light",
     "gameId": 85276,
-    "url": "https://howlongtobeat.com/game/85276"
+    "url": "https://howlongtobeat.com/game/85276",
+    "checkedAt": "2026-06-07T11:22:48.915215+00:00"
   },
   "crimson desert": {
     "title": "Crimson Desert",
@@ -298,7 +303,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:03:58.639007+00:00"
   },
   "styx blades of greed": {
     "title": "Styx: Blades of Greed",
@@ -333,7 +339,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:04:00.123886+00:00"
   },
   "eriksholm the stolen dream": {
     "title": "Eriksholm: The Stolen Dream",
@@ -403,7 +410,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:22.602064+00:00"
   },
   "let it die inferno": {
     "title": "LET IT DIE: INFERNO",
@@ -417,7 +425,8 @@
     "hltbHours": 0.0,
     "matchedTitle": "Star Birds",
     "gameId": 152044,
-    "url": "https://howlongtobeat.com/game/152044"
+    "url": "https://howlongtobeat.com/game/152044",
+    "checkedAt": "2026-06-07T11:25:47.252237+00:00"
   },
   "the killing antidote": {
     "title": "The Killing Antidote",
@@ -466,14 +475,16 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:12.399342+00:00"
   },
   "crisis core final fantasy vii reunion": {
     "title": "CRISIS CORE –FINAL FANTASY VII– REUNION",
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:18.521519+00:00"
   },
   "horizon forbidden west complete edition": {
     "title": "Horizon Forbidden West Complete Edition",
@@ -634,7 +645,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:58.231689+00:00"
   },
   "tony hawk s pro skater 3 4": {
     "title": "Tony Hawk's Pro Skater 3 + 4",
@@ -781,7 +793,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:26:06.649571+00:00"
   },
   "gerda a flame in winter": {
     "title": "Gerda: A Flame in Winter",
@@ -900,7 +913,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:33.654130+00:00"
   },
   "lego harry potter collection": {
     "title": "LEGO Harry Potter Collection",
@@ -998,7 +1012,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:07.315147+00:00"
   },
   "the stone of madness": {
     "title": "The Stone of Madness",
@@ -1033,7 +1048,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:30.950895+00:00"
   },
   "like a dragon infinite wealth": {
     "title": "Like a Dragon: Infinite Wealth",
@@ -1075,7 +1091,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:26:38.752633+00:00"
   },
   "out of hands": {
     "title": "Out Of Hands",
@@ -1096,7 +1113,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:50.150903+00:00"
   },
   "silent hill f": {
     "title": "SILENT HILL f",
@@ -1642,7 +1660,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:22:50.186389+00:00"
   },
   "alex kidd in miracle world dx": {
     "title": "Alex Kidd in Miracle World DX",
@@ -1950,7 +1969,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:22:51.807987+00:00"
   },
   "assassin s creed origins": {
     "title": "Assassin's Creed Origins",
@@ -1964,7 +1984,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:22:53.519407+00:00"
   },
   "assassin s creed valhalla": {
     "title": "Assassin's Creed Valhalla",
@@ -1978,14 +1999,16 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:22:55.167857+00:00"
   },
   "assassin s creed iv black flag": {
     "title": "Assassin’s Creed IV Black Flag",
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:22:56.786563+00:00"
   },
   "assassin s creed rogue": {
     "title": "Assassin’s Creed Rogue",
@@ -2027,49 +2050,56 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:22:58.605369+00:00"
   },
   "atelier lydie suelle the alchemist": {
     "title": "Atelier Lydie & Suelle: The Alchemist...",
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:22:59.599041+00:00"
   },
   "atelier ryza 2 lost legends the se": {
     "title": "Atelier Ryza 2: Lost Legends & the Se...",
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:01.396219+00:00"
   },
   "atelier ryza 3 alchemist of the end": {
     "title": "Atelier Ryza 3: Alchemist of the End ...",
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:03.008062+00:00"
   },
   "atelier ryza ever darkness the sec": {
     "title": "Atelier Ryza: Ever Darkness & the Sec...",
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:04.664417+00:00"
   },
   "atelier sophie 2 the alchemist of th": {
     "title": "Atelier Sophie 2: The Alchemist of th...",
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:06.262783+00:00"
   },
   "atelier sophie the alchemist of the": {
     "title": "Atelier Sophie: The Alchemist of the ...",
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:07.958242+00:00"
   },
   "atlas fallen reign of sand": {
     "title": "Atlas Fallen: Reign Of Sand",
@@ -2195,7 +2225,8 @@
     "hltbHours": 0.0,
     "matchedTitle": "Baby Shark: Sing & Swim Party",
     "gameId": 138084,
-    "url": "https://howlongtobeat.com/game/138084"
+    "url": "https://howlongtobeat.com/game/138084",
+    "checkedAt": "2026-06-07T11:23:09.596750+00:00"
   },
   "back 4 blood": {
     "title": "Back 4 Blood",
@@ -2272,7 +2303,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:10.862939+00:00"
   },
   "battle worlds kronos": {
     "title": "Battle Worlds: Kronos",
@@ -2370,7 +2402,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:12.227216+00:00"
   },
   "beyond a steel sky": {
     "title": "Beyond a Steel Sky",
@@ -2468,7 +2501,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:13.586495+00:00"
   },
   "blazblue continuum shift extend": {
     "title": "BlazBlue: Continuum Shift Extend",
@@ -2559,7 +2593,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:14.942379+00:00"
   },
   "boundless": {
     "title": "Boundless",
@@ -2650,7 +2685,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:16.718011+00:00"
   },
   "chrono trigger": {
     "title": "CHRONO TRIGGER",
@@ -2727,7 +2763,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:20.503937+00:00"
   },
   "call of duty ghosts": {
     "title": "Call of Duty: Ghosts",
@@ -2818,7 +2855,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:22.132771+00:00"
   },
   "castlevania lords of shadow ultima": {
     "title": "Castlevania: Lords of Shadow – Ultima...",
@@ -2881,14 +2919,16 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:23.804026+00:00"
   },
   "chicken police paint it red": {
     "title": "Chicken Police - Paint it RED!",
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:25.400625+00:00"
   },
   "chicory a colorful tale": {
     "title": "Chicory: A Colorful Tale",
@@ -2958,7 +2998,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:26.734463+00:00"
   },
   "chrono ark": {
     "title": "Chrono Ark",
@@ -3154,7 +3195,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:28.489466+00:00"
   },
   "crash bandicoot n sane trilogy": {
     "title": "Crash Bandicoot N. Sane Trilogy",
@@ -3238,7 +3280,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:30.096006+00:00"
   },
   "crying suns": {
     "title": "Crying Suns",
@@ -3329,7 +3372,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:31.914232+00:00"
   },
   "dead rising": {
     "title": "DEAD RISING",
@@ -3434,7 +3478,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:35.452173+00:00"
   },
   "dredge": {
     "title": "DREDGE",
@@ -3448,7 +3493,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:36.476946+00:00"
   },
   "dysmantle": {
     "title": "DYSMANTLE",
@@ -3602,7 +3648,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:38.191886+00:00"
   },
   "dead man s draw": {
     "title": "Dead Man's Draw",
@@ -3742,14 +3789,16 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:39.835063+00:00"
   },
   "demoncountdown": {
     "title": "DemonCountdown",
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:41.430876+00:00"
   },
   "deponia doomsday": {
     "title": "Deponia Doomsday",
@@ -3868,14 +3917,16 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:43.085836+00:00"
   },
   "disco elysium the final cut": {
     "title": "Disco Elysium - The Final Cut",
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:44.970978+00:00"
   },
   "disgaea 2 pc": {
     "title": "Disgaea 2 PC",
@@ -3938,7 +3989,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:45.957964+00:00"
   },
   "divinity original sin 2 divine edi": {
     "title": "Divinity: Original Sin 2 - Divine Edi...",
@@ -4064,7 +4116,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:47.748744+00:00"
   },
   "dry drowning": {
     "title": "Dry Drowning",
@@ -4155,14 +4208,16 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:49.380108+00:00"
   },
   "dying light enhanced edition row": {
     "title": "Dying Light Enhanced Edition ROW",
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:50.993180+00:00"
   },
   "dyson sphere program": {
     "title": "Dyson Sphere Program",
@@ -4295,7 +4350,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:52.587019+00:00"
   },
   "edge of eternity": {
     "title": "Edge Of Eternity",
@@ -4393,7 +4449,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:53.913065+00:00"
   },
   "enshrouded": {
     "title": "Enshrouded",
@@ -4512,14 +4569,16 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:55.214186+00:00"
   },
   "fatal frame project zero mask of t": {
     "title": "FATAL FRAME / PROJECT ZERO: Mask of t...",
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:23:56.878843+00:00"
   },
   "final fantasy iv": {
     "title": "FINAL FANTASY IV",
@@ -4890,7 +4949,8 @@
     "hltbHours": 0.0,
     "matchedTitle": "Frequent Flyer",
     "gameId": 45771,
-    "url": "https://howlongtobeat.com/game/45771"
+    "url": "https://howlongtobeat.com/game/45771",
+    "checkedAt": "2026-06-07T11:23:59.591246+00:00"
   },
   "frog detective 1 the haunted island": {
     "title": "Frog Detective 1: The Haunted Island",
@@ -5002,7 +5062,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:00.995269+00:00"
   },
   "gaokao love 100days": {
     "title": "Gaokao.Love.100Days",
@@ -5177,7 +5238,8 @@
     "hltbHours": 0.0,
     "matchedTitle": "Good company",
     "gameId": 67672,
-    "url": "https://howlongtobeat.com/game/67672"
+    "url": "https://howlongtobeat.com/game/67672",
+    "checkedAt": "2026-06-07T11:24:02.826956+00:00"
   },
   "gordian quest": {
     "title": "Gordian Quest",
@@ -5219,7 +5281,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:05.713172+00:00"
   },
   "graveyard keeper": {
     "title": "Graveyard Keeper",
@@ -5275,7 +5338,8 @@
     "hltbHours": 0.0,
     "matchedTitle": "Grimshade",
     "gameId": 66513,
-    "url": "https://howlongtobeat.com/game/66513"
+    "url": "https://howlongtobeat.com/game/66513",
+    "checkedAt": "2026-06-07T11:24:08.676325+00:00"
   },
   "grounded": {
     "title": "Grounded",
@@ -5345,7 +5409,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:10.358126+00:00"
   },
   "hitman world of assassination": {
     "title": "HITMAN World of Assassination",
@@ -5464,7 +5529,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:12.012095+00:00"
   },
   "haven": {
     "title": "Haven",
@@ -5660,7 +5726,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:13.592171+00:00"
   },
   "hokko life": {
     "title": "Hokko Life",
@@ -5800,7 +5867,8 @@
     "hltbHours": 0.0,
     "matchedTitle": "I Am Weapon: Revival",
     "gameId": 31262,
-    "url": "https://howlongtobeat.com/game/31262"
+    "url": "https://howlongtobeat.com/game/31262",
+    "checkedAt": "2026-06-07T11:24:15.406463+00:00"
   },
   "i am not a monster first contact": {
     "title": "I am not a Monster: First Contact",
@@ -6052,7 +6120,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:16.767690+00:00"
   },
   "joe dever s lone wolf hd remastered": {
     "title": "Joe Dever's Lone Wolf HD Remastered",
@@ -6080,7 +6149,8 @@
     "hltbHours": 0.0,
     "matchedTitle": "Journey of Life",
     "gameId": 68961,
-    "url": "https://howlongtobeat.com/game/68961"
+    "url": "https://howlongtobeat.com/game/68961",
+    "checkedAt": "2026-06-07T11:24:18.386155+00:00"
   },
   "journey to the savage planet": {
     "title": "Journey To The Savage Planet",
@@ -6157,14 +6227,16 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:20.081008+00:00"
   },
   "kingdom hearts integrum masterpiece": {
     "title": "KINGDOM HEARTS INTEGRUM MASTERPIECE",
     "hltbHours": 0.0,
     "matchedTitle": "Kingdom Hearts: All-in-One Package",
     "gameId": 96276,
-    "url": "https://howlongtobeat.com/game/96276"
+    "url": "https://howlongtobeat.com/game/96276",
+    "checkedAt": "2026-06-07T11:24:21.725966+00:00"
   },
   "kaiju panic": {
     "title": "Kaiju Panic",
@@ -6458,7 +6530,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:23.987358+00:00"
   },
   "lego star wars iii the clone wars": {
     "title": "LEGO Star Wars III - The Clone Wars",
@@ -6479,7 +6552,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:25.624070+00:00"
   },
   "lego the hobbit": {
     "title": "LEGO The Hobbit",
@@ -6619,7 +6693,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:27.323810+00:00"
   },
   "layers of fear masterpiece edition": {
     "title": "Layers of Fear: Masterpiece Edition",
@@ -6654,7 +6729,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:28.981187+00:00"
   },
   "legend of mana": {
     "title": "Legend of Mana",
@@ -6731,7 +6807,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:32.582153+00:00"
   },
   "little goody two shoes": {
     "title": "Little Goody Two Shoes",
@@ -6913,14 +6990,16 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:34.335639+00:00"
   },
   "metal gear solid master collection v": {
     "title": "METAL GEAR SOLID: MASTER COLLECTION V...",
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:35.964810+00:00"
   },
   "mistover": {
     "title": "MISTOVER",
@@ -7011,7 +7090,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:37.617819+00:00"
   },
   "mainlining": {
     "title": "Mainlining",
@@ -7067,7 +7147,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:39.236723+00:00"
   },
   "marvel s guardians of the galaxy": {
     "title": "Marvel's Guardians of the Galaxy",
@@ -7081,7 +7162,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:40.893554+00:00"
   },
   "marvel s midnight suns": {
     "title": "Marvel's Midnight Suns",
@@ -7095,14 +7177,16 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:42.544214+00:00"
   },
   "marvel s spider man miles morales": {
     "title": "Marvel’s Spider-Man: Miles Morales",
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:43.903936+00:00"
   },
   "masquerada songs and shadows": {
     "title": "Masquerada: Songs and Shadows",
@@ -7116,7 +7200,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:45.138242+00:00"
   },
   "mass effect legendary edition": {
     "title": "Mass Effect Legendary Edition",
@@ -7130,7 +7215,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:47.100595+00:00"
   },
   "master of orion": {
     "title": "Master of Orion",
@@ -7228,7 +7314,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:48.749461+00:00"
   },
   "metal slug tactics": {
     "title": "Metal Slug Tactics",
@@ -7263,7 +7350,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:50.421022+00:00"
   },
   "metro last light redux": {
     "title": "Metro: Last Light Redux",
@@ -7445,7 +7533,8 @@
     "hltbHours": 0.0,
     "matchedTitle": "Moonbreaker",
     "gameId": 112672,
-    "url": "https://howlongtobeat.com/game/112672"
+    "url": "https://howlongtobeat.com/game/112672",
+    "checkedAt": "2026-06-07T11:24:52.086586+00:00"
   },
   "moonlighter": {
     "title": "Moonlighter",
@@ -7543,7 +7632,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:53.679757+00:00"
   },
   "move or die": {
     "title": "Move or Die",
@@ -7662,7 +7752,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:55.403874+00:00"
   },
   "naruto shippuden ultimate ninja storm 4": {
     "title": "NARUTO SHIPPUDEN: Ultimate Ninja STORM 4",
@@ -7830,14 +7921,16 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:56.739853+00:00"
   },
   "ni no kuni wrath of the white witch r": {
     "title": "Ni no Kuni Wrath of the White Witch R...",
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:24:57.776403+00:00"
   },
   "nickelodeon all star brawl": {
     "title": "Nickelodeon All-Star Brawl",
@@ -7886,7 +7979,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:00.137436+00:00"
   },
   "nioh complete edition": {
     "title": "Nioh: Complete Edition",
@@ -8054,7 +8148,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:01.498894+00:00"
   },
   "one finger death punch 2": {
     "title": "One Finger Death Punch 2",
@@ -8173,7 +8268,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:03.118273+00:00"
   },
   "overcooked": {
     "title": "Overcooked",
@@ -8376,7 +8472,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:04.419010+00:00"
   },
   "pathologic classic hd": {
     "title": "Pathologic Classic HD",
@@ -8551,7 +8648,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:05.769194+00:00"
   },
   "pine": {
     "title": "Pine",
@@ -8593,7 +8691,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:07.380255+00:00"
   },
   "planet coaster": {
     "title": "Planet Coaster",
@@ -8810,7 +8909,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:10.938858+00:00"
   },
   "pyre": {
     "title": "Pyre",
@@ -8873,7 +8973,8 @@
     "hltbHours": 0.0,
     "matchedTitle": "REKA",
     "gameId": 112259,
-    "url": "https://howlongtobeat.com/game/112259"
+    "url": "https://howlongtobeat.com/game/112259",
+    "checkedAt": "2026-06-07T11:25:13.979196+00:00"
   },
   "remnant ii": {
     "title": "REMNANT II",
@@ -8929,7 +9030,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:15.723636+00:00"
   },
   "raft": {
     "title": "Raft",
@@ -8943,7 +9045,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:17.045408+00:00"
   },
   "rainswept": {
     "title": "Rainswept",
@@ -9160,7 +9263,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:18.544093+00:00"
   },
   "resident evil village": {
     "title": "Resident Evil Village",
@@ -9174,7 +9278,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:19.872377+00:00"
   },
   "return of the obra dinn": {
     "title": "Return of the Obra Dinn",
@@ -9251,7 +9356,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:21.248567+00:00"
   },
   "road to ballhalla": {
     "title": "Road to Ballhalla",
@@ -9398,7 +9504,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:24.255215+00:00"
   },
   "season a letter to the future": {
     "title": "SEASON: A letter to the future",
@@ -9475,7 +9582,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:25.939299+00:00"
   },
   "star wars battlefront ii": {
     "title": "STAR WARS Battlefront II",
@@ -9496,7 +9604,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:27.645498+00:00"
   },
   "star wars jedi survivor": {
     "title": "STAR WARS Jedi: Survivor",
@@ -9538,14 +9647,16 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:28.950534+00:00"
   },
   "stranger of paradise final fantasy or": {
     "title": "STRANGER OF PARADISE FINAL FANTASY OR...",
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:30.648027+00:00"
   },
   "succubus": {
     "title": "SUCCUBUS",
@@ -9615,7 +9726,8 @@
     "hltbHours": 0.0,
     "matchedTitle": "Salt",
     "gameId": 24367,
-    "url": "https://howlongtobeat.com/game/24367"
+    "url": "https://howlongtobeat.com/game/24367",
+    "checkedAt": "2026-06-07T11:25:32.347690+00:00"
   },
   "salt and sanctuary": {
     "title": "Salt and Sanctuary",
@@ -9727,7 +9839,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:33.984002+00:00"
   },
   "serious sam 4": {
     "title": "Serious Sam 4",
@@ -9790,14 +9903,16 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:35.572412+00:00"
   },
   "shadow of the tomb raider definitive": {
     "title": "Shadow of the Tomb Raider: Definitive...",
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:37.293594+00:00"
   },
   "shadowside": {
     "title": "ShadowSide",
@@ -9944,7 +10059,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:38.590417+00:00"
   },
   "shin megami tensei v vengeance": {
     "title": "Shin Megami Tensei V: Vengeance",
@@ -10025,10 +10141,11 @@
   },
   "silence": {
     "title": "Silence",
-    "hltbHours": 0.0,
-    "matchedTitle": "The Silence",
-    "gameId": 93755,
-    "url": "https://howlongtobeat.com/game/93755"
+    "hltbHours": 0.19,
+    "matchedTitle": "Inner Silence",
+    "gameId": 51346,
+    "url": "https://howlongtobeat.com/game/51346",
+    "checkedAt": "2026-06-07T11:25:40.454422+00:00"
   },
   "simcity 4 deluxe edition": {
     "title": "SimCity 4 Deluxe Edition",
@@ -10084,7 +10201,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:42.108369+00:00"
   },
   "slay the spire": {
     "title": "Slay the Spire",
@@ -10210,7 +10328,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:43.897935+00:00"
   },
   "solasta crown of the magister": {
     "title": "Solasta: Crown of the Magister",
@@ -10371,7 +10490,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:45.655493+00:00"
   },
   "spyparty": {
     "title": "SpyParty",
@@ -10665,7 +10785,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:48.843556+00:00"
   },
   "sumerian six": {
     "title": "Sumerian Six",
@@ -11099,7 +11220,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:51.916790+00:00"
   },
   "tell me why": {
     "title": "Tell Me Why",
@@ -11316,14 +11438,16 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:53.656589+00:00"
   },
   "the dark pictures anthology house of": {
     "title": "The Dark Pictures Anthology: House of...",
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:55.335324+00:00"
   },
   "the dark pictures anthology little hope": {
     "title": "The Dark Pictures Anthology: Little Hope",
@@ -11337,21 +11461,24 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:56.973215+00:00"
   },
   "the dark pictures anthology the devi": {
     "title": "The Dark Pictures Anthology: The Devi...",
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:25:58.626028+00:00"
   },
   "the darkside detective a fumble in t": {
     "title": "The Darkside Detective: A Fumble in t...",
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:26:00.299063+00:00"
   },
   "the deadly tower of monsters": {
     "title": "The Deadly Tower of Monsters",
@@ -11365,7 +11492,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:26:01.851532+00:00"
   },
   "the dwarves": {
     "title": "The Dwarves",
@@ -11428,7 +11556,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:26:03.456483+00:00"
   },
   "the expanse a telltale series": {
     "title": "The Expanse: A Telltale Series",
@@ -11456,7 +11585,8 @@
     "hltbHours": 0.0,
     "matchedTitle": "The Forever Winter",
     "gameId": 145877,
-    "url": "https://howlongtobeat.com/game/145877"
+    "url": "https://howlongtobeat.com/game/145877",
+    "checkedAt": "2026-06-07T11:26:05.022189+00:00"
   },
   "the forgotten city": {
     "title": "The Forgotten City",
@@ -11596,14 +11726,16 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:26:08.260801+00:00"
   },
   "the legend of heroes trails of cold": {
     "title": "The Legend of Heroes: Trails of Cold ...",
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:26:09.893327+00:00"
   },
   "the legend of tianding": {
     "title": "The Legend of Tianding",
@@ -11645,7 +11777,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:26:11.570643+00:00"
   },
   "the many pieces of mr coo": {
     "title": "The Many Pieces of Mr. Coo",
@@ -11995,7 +12128,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:26:13.312981+00:00"
   },
   "the walking dead the final season": {
     "title": "The Walking Dead: The Final Season",
@@ -12051,7 +12185,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:26:15.333474+00:00"
   },
   "they always run": {
     "title": "They Always Run",
@@ -12170,7 +12305,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:26:18.708234+00:00"
   },
   "tinykin": {
     "title": "Tinykin",
@@ -12240,14 +12376,16 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:26:22.172399+00:00"
   },
   "tomb raider i iii remastered starring": {
     "title": "Tomb Raider I-III Remastered Starring...",
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:26:24.320493+00:00"
   },
   "tooth and tail": {
     "title": "Tooth and Tail",
@@ -12436,7 +12574,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:26:25.688000+00:00"
   },
   "turbo overkill": {
     "title": "Turbo Overkill",
@@ -12506,7 +12645,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:26:27.334710+00:00"
   },
   "unloved": {
     "title": "UNLOVED",
@@ -12709,7 +12849,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:26:28.983578+00:00"
   },
   "vampyr": {
     "title": "Vampyr",
@@ -12772,7 +12913,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:26:30.586876+00:00"
   },
   "virginia": {
     "title": "Virginia",
@@ -12814,7 +12956,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:26:32.107003+00:00"
   },
   "warriors abyss": {
     "title": "WARRIORS: Abyss",
@@ -12954,7 +13097,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:26:33.978099+00:00"
   },
   "warhammer 40 000 darktide": {
     "title": "Warhammer 40,000: Darktide",
@@ -12968,7 +13112,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:26:35.569236+00:00"
   },
   "warhammer quest classic": {
     "title": "Warhammer Quest (Classic)",
@@ -13066,7 +13211,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:26:37.125321+00:00"
   },
   "welcome to basingstoke": {
     "title": "Welcome to Basingstoke",
@@ -13304,7 +13450,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:26:40.036755+00:00"
   },
   "yakuza 0": {
     "title": "Yakuza 0",
@@ -13339,7 +13486,8 @@
     "hltbHours": null,
     "matchedTitle": "",
     "gameId": null,
-    "url": ""
+    "url": "",
+    "checkedAt": "2026-06-07T11:26:41.685796+00:00"
   },
   "yakuza like a dragon": {
     "title": "Yakuza: Like a Dragon",
@@ -13402,7 +13550,8 @@
     "hltbHours": 0.0,
     "matchedTitle": "your diary+",
     "gameId": 64373,
-    "url": "https://howlongtobeat.com/game/64373"
+    "url": "https://howlongtobeat.com/game/64373",
+    "checkedAt": "2026-06-07T11:26:43.336421+00:00"
   },
   "ys i ii chronicles": {
     "title": "Ys I & II Chronicles+",
