@@ -57,6 +57,7 @@ const defaultState = {
     wins: {},
     giveaways: {},
     cycleMembers: {},
+    members: {},
   },
 };
 
@@ -73,6 +74,7 @@ const runtime = {
 const GAME_OVERRIDE_FIELDS = ["hltbHoursOverride"];
 const WIN_OVERRIDE_FIELDS = ["requiredAchievementsOverride", "monthOverride"];
 const GIVEAWAY_OVERRIDE_FIELDS = ["giveawayKindOverride", "manualWinners", "cycleMonthOverride"];
+const MEMBER_OVERRIDE_FIELDS = ["membershipStatus"];
 
 applyManualOverrides();
 
@@ -221,6 +223,12 @@ function bindEvents() {
     const cycleMemberStatusSelect = event.target.closest("[data-cycle-member-status-select]");
     if (cycleMemberStatusSelect) {
       handleCycleMemberStatusChange(cycleMemberStatusSelect);
+      return;
+    }
+
+    const memberStatusSelect = event.target.closest("[data-member-status-select]");
+    if (memberStatusSelect) {
+      handleMemberStatusChange(memberStatusSelect);
       return;
     }
 
@@ -645,7 +653,21 @@ function renderMemberOverview() {
     return;
   }
 
-  const activeMembers = state.sync?.dashboard?.members?.active || [];
+  const dashboardMembers = state.sync?.dashboard?.members || {};
+  const allMembers = [...(dashboardMembers.active || []), ...(dashboardMembers.inactive || [])];
+  // Effective membership honors the manual override, so a member set inactive
+  // drops out of the directory (and stays out across future syncs).
+  const activeMembers = allMembers
+    .filter((member) => {
+      const stateMember = findMemberByUsername(member.username);
+      return stateMember
+        ? getMemberMembershipStatus(stateMember) === "active"
+        : Boolean(member.isActiveMember);
+    })
+    .sort((left, right) =>
+      String(left.username || "").localeCompare(String(right.username || ""), "en", { sensitivity: "base" }),
+    );
+
   if (!activeMembers.length) {
     elements.memberOverview.innerHTML = buildEmptyPanel(
       "No tracked members yet.",
@@ -2091,6 +2113,19 @@ function buildMemberCard(member) {
       </label>`
     : "";
 
+  const memberKey = stateMember ? getMemberOverrideKey(stateMember) : "";
+  const isInactive = stateMember ? getMemberMembershipStatus(stateMember) === "inactive" : false;
+  const membershipEditor = memberKey
+    ? `
+      <label class="inline-select-wrap member-status-edit">
+        <span class="meta-line">Membership</span>
+        <select class="inline-select" data-member-status-select="true" data-member-key="${escapeHtml(memberKey)}">
+          <option value="active" ${isInactive ? "" : "selected"}>Active member</option>
+          <option value="inactive" ${isInactive ? "selected" : ""}>Left group (inactive)</option>
+        </select>
+      </label>`
+    : "";
+
   return `
     <article class="member-card">
       ${statusBadge}
@@ -2098,6 +2133,7 @@ function buildMemberCard(member) {
       <span class="meta-line">${member.winsCount || 0} tracked win(s)</span>
       <strong>${member.lastWinDate ? formatDate(member.lastWinDate) : "No wins yet"}</strong>
       ${statusEditor}
+      ${membershipEditor}
       <span class="meta-line">${member.profileUrl ? `<a class="linked-title" href="${escapeHtml(member.profileUrl)}" target="_blank" rel="noreferrer">Open SteamGifts profile</a>` : "SteamGifts profile unavailable"}</span>
     </article>
   `;
@@ -4724,6 +4760,7 @@ function normalizeOverrideState(overrides = {}) {
     wins: { ...(source.wins || {}) },
     giveaways: { ...(source.giveaways || {}) },
     cycleMembers: { ...(source.cycleMembers || {}) },
+    members: { ...(source.members || {}) },
   };
 }
 
@@ -4744,6 +4781,7 @@ function mergeOverrideStates(baseOverrides = {}, overridingOverrides = {}) {
     wins: { ...base.wins, ...overriding.wins },
     giveaways: { ...base.giveaways, ...overriding.giveaways },
     cycleMembers: { ...base.cycleMembers, ...overriding.cycleMembers },
+    members: { ...base.members, ...overriding.members },
   };
 }
 
@@ -4821,7 +4859,35 @@ function applyManualOverrides() {
     };
   });
 
+  // Manual membership override: forces a member active/inactive and survives every
+  // future sync (re-applied here on top of the freshly synced isActiveMember).
+  state.members = state.members.map((member) => {
+    const key = getMemberOverrideKey(member);
+    const nextMember = stripOverrideFields(member, MEMBER_OVERRIDE_FIELDS);
+    const status = key ? String(overrides.members[key]?.membershipStatus || "").toLowerCase() : "";
+    if (status === "inactive") {
+      return { ...nextMember, isActiveMember: false };
+    }
+    if (status === "active") {
+      return { ...nextMember, isActiveMember: true };
+    }
+    return nextMember;
+  });
+
   reconcileManualWinnerWins(overrides);
+}
+
+function getMemberOverrideKey(member) {
+  return getStableCycleMemberKey(member);
+}
+
+function getMemberMembershipStatus(member) {
+  const key = getMemberOverrideKey(member);
+  const status = key ? String(getEffectiveOverrideState().members[key]?.membershipStatus || "").toLowerCase() : "";
+  if (status === "active" || status === "inactive") {
+    return status;
+  }
+  return member?.isActiveMember ? "active" : "inactive";
 }
 
 // Manual winners are stored as a giveaway override but must also count in every
@@ -5452,6 +5518,17 @@ function handleCycleMemberStatusChange(select) {
     "status",
     selectedStatus === "active" ? null : selectedStatus,
   );
+}
+
+function handleMemberStatusChange(select) {
+  const overrideKey = String(select.dataset.memberKey || "");
+  if (!overrideKey) {
+    return;
+  }
+  // "active" clears the override (member follows the sync); "inactive" forces the
+  // member out and keeps them out across future syncs.
+  const inactive = String(select.value || "active").toLowerCase() === "inactive";
+  updateOverrideField("members", overrideKey, "membershipStatus", inactive ? "inactive" : null);
 }
 
 function ensureEditModal() {

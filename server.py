@@ -161,6 +161,7 @@ def empty_overrides_payload() -> dict:
             "wins": {},
             "giveaways": {},
             "cycleMembers": {},
+            "members": {},
         },
     }
 
@@ -177,6 +178,7 @@ def normalize_overrides_payload(payload=None) -> dict:
             "wins": dict(raw_overrides.get("wins") or {}),
             "giveaways": dict(raw_overrides.get("giveaways") or {}),
             "cycleMembers": dict(raw_overrides.get("cycleMembers") or {}),
+            "members": dict(raw_overrides.get("members") or {}),
         },
     }
 
