@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Akatsuki SteamGifts Sync
 // @namespace    akatsuki-monitor
-// @version      1.1.0
+// @version      1.2.0
 // @description  Collect Akatsuki members, giveaways, entries and winners from the logged-in SteamGifts session and send them to the local monitor server.
 // @match        https://www.steamgifts.com/group/*/*
 // @match        https://www.steamgifts.com/group/*/*/users*
@@ -22,11 +22,35 @@
   const LOCAL_SERVER_URL = "http://127.0.0.1:4173/api/steamgifts-sync";
   const LOCAL_SERVER_TIMEOUT_MS = 4000;
   const LOCAL_SERVER_POST_TIMEOUT_MS = 15000;
+  const GITHUB_REPO = { owner: "jpdefo", name: "akatsuki-group", branch: "main" };
+  const GITHUB_SYNC_PATH = "data/steamgifts-sync.json";
+  const GITHUB_TOKEN_KEY = "akatsuki-github-token";
+  const PUBLISHED_SYNC_URL = `https://raw.githubusercontent.com/${GITHUB_REPO.owner}/${GITHUB_REPO.name}/${GITHUB_REPO.branch}/${GITHUB_SYNC_PATH}`;
   const state = {
     running: false,
     panel: null,
     log: null,
   };
+
+  function getStoredToken() {
+    try {
+      return localStorage.getItem(GITHUB_TOKEN_KEY) || "";
+    } catch {
+      return "";
+    }
+  }
+
+  function setStoredToken(token) {
+    try {
+      if (token) {
+        localStorage.setItem(GITHUB_TOKEN_KEY, token);
+      } else {
+        localStorage.removeItem(GITHUB_TOKEN_KEY);
+      }
+    } catch {
+      /* ignore */
+    }
+  }
 
   addPanel();
 
@@ -44,36 +68,60 @@
     panel.style.boxShadow = "0 18px 45px rgba(0,0,0,.35)";
     panel.style.color = "#f4f7fb";
     panel.innerHTML = `
-      <div style="display:grid;gap:10px;">
+      <div style="display:grid;gap:8px;">
         <strong>Akatsuki Sync</strong>
-        <button id="akatsuki-sync-button" style="border:0;border-radius:10px;padding:10px 12px;background:#3d7bff;color:#fff;font:inherit;font-weight:700;cursor:pointer;">Sync group</button>
+        <input id="akatsuki-token" type="password" placeholder="GitHub token (for direct publish)" style="border:1px solid rgba(110,168,254,.35);border-radius:8px;padding:8px;background:#0f1115;color:#f4f7fb;font:inherit;font-size:12px;" />
+        <label style="font-size:12px;color:#c7d2e2;display:flex;align-items:center;gap:6px;">Recent pages to scrape
+          <input id="akatsuki-pages" type="number" min="1" value="10" style="width:64px;border:1px solid rgba(110,168,254,.35);border-radius:8px;padding:6px;background:#0f1115;color:#f4f7fb;font:inherit;font-size:12px;" />
+        </label>
+        <button id="akatsuki-publish-button" style="border:0;border-radius:10px;padding:10px 12px;background:#2ec36b;color:#06210f;font:inherit;font-weight:700;cursor:pointer;">Sync &amp; Publish to GitHub</button>
+        <button id="akatsuki-sync-button" style="border:0;border-radius:10px;padding:8px 12px;background:#3d7bff;color:#fff;font:inherit;font-weight:600;cursor:pointer;">Sync to local server</button>
         <div id="akatsuki-sync-log" style="font-size:12px;line-height:1.5;color:#c7d2e2;max-height:180px;overflow:auto;"></div>
       </div>
     `;
     document.body.appendChild(panel);
     state.panel = panel;
     state.log = panel.querySelector("#akatsuki-sync-log");
-    panel.querySelector("#akatsuki-sync-button").addEventListener("click", runSync);
-    log("Ready. Run it from a logged-in group session.");
+    const tokenInput = panel.querySelector("#akatsuki-token");
+    tokenInput.value = getStoredToken();
+    tokenInput.addEventListener("change", () => setStoredToken(tokenInput.value.trim()));
+    panel.querySelector("#akatsuki-sync-button").addEventListener("click", () => runSync("local"));
+    panel.querySelector("#akatsuki-publish-button").addEventListener("click", () => runSync("github"));
+    log("Ready. Paste a token and use 'Sync & Publish' to commit straight to GitHub (no local server).");
   }
 
-  async function runSync() {
+  async function runSync(destination = "local") {
     if (state.running) {
       log("A sync is already running.");
       return;
     }
+    if (destination === "github" && !getStoredToken()) {
+      log("Paste a GitHub token first (Contents: Read and write) to publish directly.");
+      return;
+    }
 
     state.running = true;
-    log("Reading group members...");
+    log("Reading existing data...");
 
     try {
       const existingSync = await loadExistingSync();
+      const existingGiveaways = Array.isArray(existingSync?.giveaways) ? existingSync.giveaways : [];
+      const existingMembers = Array.isArray(existingSync?.members) ? existingSync.members : [];
+      log(`Existing data: ${existingGiveaways.length} giveaway(s).`);
+
+      const maxPages = Math.max(1, Number(state.panel?.querySelector("#akatsuki-pages")?.value) || 10);
+      if (destination === "github" && maxPages < 500 && existingGiveaways.length === 0) {
+        throw new Error(
+          "Could not load existing data to merge a partial scrape, so publishing would wipe history. Aborted. Check the repo/token, or set pages to 999 for a full scrape.",
+        );
+      }
+
       const members = await collectMembers(existingSync);
       log(`Members found: ${members.length}`);
 
-      log("Reading group giveaways...");
-      const giveaways = await collectGiveaways(existingSync);
-      log(`Giveaways found: ${giveaways.length}`);
+      log(`Reading the ${maxPages} most recent giveaway page(s)...`);
+      const giveaways = await collectGiveaways(existingSync, maxPages);
+      log(`Giveaways scraped: ${giveaways.length}`);
 
       let detailedGiveaways = giveaways;
       const unresolvedGiveaways = giveaways.filter(needsGiveawayDetails);
@@ -86,7 +134,15 @@
         }
         detailedGiveaways = giveaways.map((giveaway) => resolvedGiveaways.get(giveaway.code) || giveaway);
       }
+
+      // Never drop history: keep existing giveaways/members not seen in this scrape.
+      const finalGiveaways = unionByKey(detailedGiveaways, existingGiveaways, (item) => item.code);
       const mergedMembers = mergeMembersWithGiveawayUsers(members, detailedGiveaways);
+      const finalMembers = unionByKey(mergedMembers, existingMembers, (item) => item.username);
+
+      if (!finalGiveaways.length) {
+        throw new Error("No giveaways collected; aborting so empty data is never published.");
+      }
 
       const payload = {
         source: "akatsuki-steamgifts-sync",
@@ -95,10 +151,10 @@
           url: groupBase,
           name: document.title.replace(/\s*\|\s*SteamGifts.*/, "").trim(),
         },
-        members: mergedMembers,
-        giveaways: detailedGiveaways,
+        members: finalMembers,
+        giveaways: finalGiveaways,
       };
-      payload.wins = detailedGiveaways.flatMap((giveaway) =>
+      payload.wins = finalGiveaways.flatMap((giveaway) =>
         (giveaway.winners || []).map((winner) => ({
           giveawayCode: giveaway.code,
           title: giveaway.title,
@@ -110,13 +166,36 @@
         })),
       );
 
-      await postToLocalServer(payload);
-      log("Sync finished and sent to the local server.");
+      if (destination === "github") {
+        log(`Publishing ${finalGiveaways.length} giveaway(s) to GitHub...`);
+        await publishSyncToGitHub(payload);
+        log("Published to GitHub. Pages will rebuild in ~1-2 min.");
+      } else {
+        await postToLocalServer(payload);
+        log("Sync finished and sent to the local server.");
+      }
     } catch (error) {
-      log(`Falha: ${error.message}`);
+      log(`Failed: ${error.message}`);
     } finally {
       state.running = false;
     }
+  }
+
+  function unionByKey(scraped, existing, keyFn) {
+    const map = new Map();
+    for (const item of existing || []) {
+      const key = keyFn(item);
+      if (key) {
+        map.set(key, item);
+      }
+    }
+    for (const item of scraped || []) {
+      const key = keyFn(item);
+      if (key) {
+        map.set(key, item);
+      }
+    }
+    return Array.from(map.values());
   }
 
   async function collectMembers(existingSync) {
@@ -164,14 +243,15 @@
     return results;
   }
 
-  async function collectGiveaways(existingSync) {
+  async function collectGiveaways(existingSync, maxPages = 500) {
     const results = [];
     const seen = new Set();
     const existingGiveaways = new Map(
       (existingSync?.giveaways || []).filter((giveaway) => giveaway?.code).map((giveaway) => [giveaway.code, giveaway]),
     );
 
-    for (let page = 1; page <= 500; page += 1) {
+    const pageCap = Number.isFinite(maxPages) && maxPages > 0 ? maxPages : 500;
+    for (let page = 1; page <= pageCap; page += 1) {
       const url = page === 1 ? groupBase : `${groupBase}/search?page=${page}`;
       const doc = await fetchDocument(url);
       const pageResults = parseGiveawayRows(doc, existingGiveaways);
@@ -293,22 +373,83 @@
   }
 
   async function loadExistingSync() {
+    // Prefer the local server (fast when running); otherwise read the published
+    // data from GitHub so a partial scrape still merges with full history.
     const controller = new AbortController();
     const timeoutId = window.setTimeout(() => controller.abort(), LOCAL_SERVER_TIMEOUT_MS);
     try {
       const response = await fetch(LOCAL_SERVER_URL, { signal: controller.signal });
-      if (!response.ok) {
-        return {};
+      if (response.ok) {
+        return await response.json();
       }
-      return await response.json();
-    } catch (error) {
-      if (error?.name === "AbortError") {
-        log("Existing sync timed out; continuing fresh.");
-      }
-      return {};
+    } catch {
+      /* fall through to the published data */
     } finally {
       window.clearTimeout(timeoutId);
     }
+
+    try {
+      log("Loading existing data from GitHub...");
+      const response = await fetch(`${PUBLISHED_SYNC_URL}?_=${Date.now()}`, { cache: "no-store" });
+      if (response.ok) {
+        return await response.json();
+      }
+      log(`Could not load published data (${response.status}).`);
+    } catch (error) {
+      log(`Could not load published data: ${error.message}`);
+    }
+    return {};
+  }
+
+  async function publishSyncToGitHub(payload) {
+    const token = getStoredToken();
+    if (!token) {
+      throw new Error("No GitHub token set.");
+    }
+    const api = `https://api.github.com/repos/${GITHUB_REPO.owner}/${GITHUB_REPO.name}`;
+    const baseHeaders = {
+      Authorization: `Bearer ${token}`,
+      Accept: "application/vnd.github+json",
+      "X-GitHub-Api-Version": "2022-11-28",
+    };
+    const gh = async (path, options = {}) => {
+      const response = await fetch(`${api}${path}`, {
+        ...options,
+        headers: { ...baseHeaders, ...(options.headers || {}) },
+      });
+      if (!response.ok) {
+        const detail = await response.json().catch(() => null);
+        throw new Error(`GitHub ${path} -> ${response.status}${detail?.message ? ` (${detail.message})` : ""}`);
+      }
+      return response.json();
+    };
+
+    const ref = await gh(`/git/ref/heads/${GITHUB_REPO.branch}`);
+    const baseCommitSha = ref.object.sha;
+    const baseCommit = await gh(`/git/commits/${baseCommitSha}`);
+    const blob = await gh(`/git/blobs`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ content: JSON.stringify(payload, null, 2), encoding: "utf-8" }),
+    });
+    const tree = await gh(`/git/trees`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        base_tree: baseCommit.tree.sha,
+        tree: [{ path: GITHUB_SYNC_PATH, mode: "100644", type: "blob", sha: blob.sha }],
+      }),
+    });
+    const commit = await gh(`/git/commits`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message: "Publish giveaway sync from collector", tree: tree.sha, parents: [baseCommitSha] }),
+    });
+    await gh(`/git/refs/heads/${GITHUB_REPO.branch}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ sha: commit.sha }),
+    });
   }
 
   function getUserRecords(container) {
