@@ -26,6 +26,7 @@ PROGRESS_PATH = DATA_DIR / "steam-progress.json"
 LIBRARY_PATH = DATA_DIR / "steam-library.json"
 HLTB_CACHE_PATH = DATA_DIR / "hltb-cache.json"
 MEDIA_CACHE_PATH = DATA_DIR / "steam-media-cache.json"
+PACKAGE_CACHE_PATH = DATA_DIR / "steam-package-cache.json"
 PRICE_CACHE_PATH = DATA_DIR / "steam-price-cache.json"
 OVERRIDES_PATH = DATA_DIR / "overrides.json"
 STATIC_EXPORT_DIR = BASE_DIR / "site"
@@ -396,6 +397,63 @@ def parse_store_item_from_url(url: str | None) -> tuple[str, int | None]:
     return match.group(1).lower(), int(match.group(2))
 
 
+def fetch_package_base_app(package_id: int) -> int | None:
+    """Return the base app id for a Steam package (sub), or None.
+
+    SteamGifts giveaways for editions/bundles link to /sub/<id>, but Steam tracks
+    playtime + achievements under the base /app/<id>. We resolve the first app in
+    the package (the base game for "Complete/Ultimate Edition" style packages).
+    """
+    payload = fetch_json(f"https://store.steampowered.com/api/packagedetails?packageids={package_id}")
+    entry = payload.get(str(package_id), {}) if isinstance(payload, dict) else {}
+    if not entry.get("success"):
+        return None
+    apps = entry.get("data", {}).get("apps") or []
+    if not apps:
+        return None
+    first = apps[0]
+    app_id = first.get("id") if isinstance(first, dict) else first
+    return parse_int(app_id) or None
+
+
+def resolve_package_app_ids(sync_payload: dict) -> int:
+    """Resolve /sub/ giveaways to their base app id, once, with a persistent cache.
+
+    A giveaway is resolved at most once: after success it carries `packageId`
+    (the sub) and `appId` becomes the base app, and the resolver skips it forever.
+    A package is fetched from Steam at most once (cached in PACKAGE_CACHE_PATH),
+    so repeat runs do no network work for already-seen packages.
+    """
+    cache = load_json(PACKAGE_CACHE_PATH, {})
+    cache_dirty = False
+    resolved = 0
+    for giveaway in sync_payload.get("giveaways", []):
+        if giveaway.get("packageId"):
+            continue  # already resolved — never re-check
+        store_type, store_id = parse_store_item_from_url(giveaway.get("steamAppUrl"))
+        if store_type != "sub" or not store_id:
+            continue
+        key = str(store_id)
+        if key in cache:
+            base_app = cache[key]
+        else:
+            try:
+                base_app = fetch_package_base_app(store_id)
+            except (HTTPError, URLError, TimeoutError, json.JSONDecodeError):
+                continue  # transient failure — leave unresolved, retry next run
+            cache[key] = base_app
+            cache_dirty = True
+        if base_app:
+            giveaway["packageId"] = store_id
+            giveaway["appId"] = base_app
+            resolved += 1
+    if cache_dirty:
+        save_json(PACKAGE_CACHE_PATH, cache)
+    if resolved:
+        save_json(SYNC_PATH, sync_payload)
+    return resolved
+
+
 def should_lookup_store_price(giveaway: dict) -> bool:
     return is_summer_event_kind(giveaway.get("giveawayKind")) and parse_int(giveaway.get("points")) == 50
 
@@ -473,9 +531,14 @@ def merge_sync_payload(existing: dict, incoming: dict) -> dict:
             giveaways[code] = giveaway
             continue
         merged_giveaway = giveaways[code]
+        # Preserve the server-resolved base app id: the collector only sees the
+        # package's /sub/ id and would otherwise clobber it on every re-sync.
+        resolved_app_id = merged_giveaway.get("appId") if merged_giveaway.get("packageId") else None
         for key, value in giveaway.items():
             if value not in (None, "", [], {}):
                 merged_giveaway[key] = value
+        if resolved_app_id:
+            merged_giveaway["appId"] = resolved_app_id
         incoming_status = giveaway.get("resultStatus")
         if incoming_status and incoming_status != "unknown":
             merged_giveaway["winners"] = list(giveaway.get("winners", []))
@@ -2070,6 +2133,9 @@ def main() -> None:
         sync_payload = sync_payload or load_json(SYNC_PATH, {})
         if not sync_payload.get("giveaways"):
             raise SystemExit("No SteamGifts sync data available yet.")
+        resolved_packages = resolve_package_app_ids(sync_payload)
+        if resolved_packages:
+            print(f"Resolved {resolved_packages} package giveaway(s) to their base app id.")
         media_cache = load_json(MEDIA_CACHE_PATH, empty_media_cache())
         missing_before = count_missing_media_entries(sync_payload, media_cache, recent_days=args.recent_days)
         media_cache = hydrate_media_cache_for_sync(sync_payload, media_cache, recent_days=args.recent_days)

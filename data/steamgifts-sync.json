@@ -2571,7 +2571,7 @@
       "title": "Borderlands 3: Super Deluxe Edition",
       "creatorUsername": "Koalala",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Koalala",
-      "appId": 427289,
+      "appId": 397540,
       "steamAppUrl": "https://store.steampowered.com/sub/427289?utm_source=SteamGifts",
       "points": 50,
       "entriesCount": 0,
@@ -2596,7 +2596,8 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/427289/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/427289/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/427289/capsule_184x69.jpg",
-      "startDate": "2026-05-12T13:18:59.000Z"
+      "startDate": "2026-05-12T13:18:59.000Z",
+      "packageId": 427289
     },
     {
       "code": "yLzZl",
@@ -7775,7 +7776,7 @@
       "title": "FINAL FANTASY XVI COMPLETE EDITION",
       "creatorUsername": "BojanNS987",
       "creatorProfileUrl": "https://www.steamgifts.com/user/BojanNS987",
-      "appId": 1111230,
+      "appId": 2515020,
       "steamAppUrl": "https://store.steampowered.com/sub/1111230?utm_source=SteamGifts",
       "entriesCount": 7,
       "endDate": "2025-07-09T12:00:00.000Z",
@@ -7814,7 +7815,8 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1111230/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1111230/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/1111230/capsule_184x69.jpg",
-      "startDate": "2025-07-01T11:23:36.000Z"
+      "startDate": "2025-07-01T11:23:36.000Z",
+      "packageId": 1111230
     },
     {
       "code": "28Frt",
@@ -9345,7 +9347,7 @@
       "title": "Grand Theft Auto: The Trilogy – The D...",
       "creatorUsername": "DeliberateTaco",
       "creatorProfileUrl": "https://www.steamgifts.com/user/DeliberateTaco",
-      "appId": 817628,
+      "appId": 1546970,
       "steamAppUrl": "https://store.steampowered.com/sub/817628?utm_source=SteamGifts",
       "entriesCount": 1,
       "endDate": "2025-07-04T15:56:00.000Z",
@@ -9378,7 +9380,8 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/817628/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/817628/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/817628/capsule_184x69.jpg",
-      "startDate": "2025-06-28T14:58:45.000Z"
+      "startDate": "2025-06-28T14:58:45.000Z",
+      "packageId": 817628
     },
     {
       "code": "aub47",
@@ -14185,7 +14188,7 @@
       "title": "Dead Island 2 Ultimate Edition",
       "creatorUsername": "Horseflesh",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Horseflesh",
-      "appId": 1004410,
+      "appId": 934700,
       "steamAppUrl": "https://store.steampowered.com/sub/1004410?utm_source=SteamGifts",
       "entriesCount": 4,
       "endDate": "2025-01-12T18:20:07.000Z",
@@ -14199,7 +14202,8 @@
       "resultStatus": "won",
       "resultLabel": "WNDRLST",
       "steamStoreType": "sub",
-      "steamStoreId": 1004410
+      "steamStoreId": 1004410,
+      "packageId": 1004410
     },
     {
       "code": "ly4Cw",
@@ -16222,7 +16226,7 @@
       "title": "SCARLET NEXUS Ultimate Edition",
       "creatorUsername": "Ernesttico",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Ernesttico",
-      "appId": 634166,
+      "appId": 775500,
       "steamAppUrl": "https://store.steampowered.com/sub/634166?utm_source=SteamGifts",
       "entriesCount": 2,
       "endDate": "2024-07-07T14:38:15.000Z",
@@ -16236,7 +16240,8 @@
       "resultStatus": "won",
       "resultLabel": "Koalala",
       "steamStoreType": "sub",
-      "steamStoreId": 634166
+      "steamStoreId": 634166,
+      "packageId": 634166
     },
     {
       "code": "s4a5v",
@@ -17037,7 +17042,7 @@
       "title": "KINGDOM HEARTS INTEGRUM MASTERPIECE",
       "creatorUsername": "BojanNS987",
       "creatorProfileUrl": "https://www.steamgifts.com/user/BojanNS987",
-      "appId": 1000794,
+      "appId": 2552430,
       "steamAppUrl": "https://store.steampowered.com/sub/1000794?utm_source=SteamGifts",
       "entriesCount": 4,
       "endDate": "2024-07-01T04:54:04.000Z",
@@ -17051,7 +17056,8 @@
       "resultStatus": "won",
       "resultLabel": "Koalala",
       "steamStoreType": "sub",
-      "steamStoreId": 1000794
+      "steamStoreId": 1000794,
+      "packageId": 1000794
     },
     {
       "code": "4PSgo",
@@ -17768,7 +17774,7 @@
       "title": "LEGO Star Wars: The Skywalker Saga Ga...",
       "creatorUsername": "Ernesttico",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Ernesttico",
-      "appId": 785847,
+      "appId": 920210,
       "steamAppUrl": "https://store.steampowered.com/sub/785847?utm_source=SteamGifts",
       "entriesCount": 2,
       "endDate": "2024-06-29T21:01:11.000Z",
@@ -17782,7 +17788,8 @@
       "resultStatus": "won",
       "resultLabel": "leniu",
       "steamStoreType": "sub",
-      "steamStoreId": 785847
+      "steamStoreId": 785847,
+      "packageId": 785847
     },
     {
       "code": "dSnzm",
@@ -17905,7 +17912,7 @@
       "title": "KINGDOM HEARTS INTEGRUM MASTERPIECE",
       "creatorUsername": "Kodeta",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Kodeta",
-      "appId": 1000794,
+      "appId": 2552430,
       "steamAppUrl": "https://store.steampowered.com/sub/1000794?utm_source=SteamGifts",
       "entriesCount": 7,
       "endDate": "2024-06-29T16:27:09.000Z",
@@ -17919,7 +17926,8 @@
       "resultStatus": "won",
       "resultLabel": "BojanNS987",
       "steamStoreType": "sub",
-      "steamStoreId": 1000794
+      "steamStoreId": 1000794,
+      "packageId": 1000794
     },
     {
       "code": "Hcpvg",
@@ -18179,7 +18187,7 @@
       "title": "Ghostrunner 2 Brutal Edition",
       "creatorUsername": "Krlesnik",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Krlesnik",
-      "appId": 894783,
+      "appId": 2144740,
       "steamAppUrl": "https://store.steampowered.com/sub/894783?utm_source=SteamGifts",
       "entriesCount": 0,
       "endDate": "2024-06-28T21:08:13.000Z",
@@ -18187,7 +18195,8 @@
       "resultStatus": "no_winners",
       "resultLabel": "No winners",
       "steamStoreType": "sub",
-      "steamStoreId": 894783
+      "steamStoreId": 894783,
+      "packageId": 894783
     },
     {
       "code": "iM5tS",
@@ -18424,7 +18433,7 @@
       "title": "Hogwarts Legacy: Digital Deluxe Edition",
       "creatorUsername": "chOOkity",
       "creatorProfileUrl": "https://www.steamgifts.com/user/chOOkity",
-      "appId": 822364,
+      "appId": 990080,
       "steamAppUrl": "https://store.steampowered.com/sub/822364?utm_source=SteamGifts",
       "entriesCount": 5,
       "endDate": "2024-06-28T18:33:00.000Z",
@@ -18438,7 +18447,8 @@
       "resultStatus": "won",
       "resultLabel": "WNDRLST",
       "steamStoreType": "sub",
-      "steamStoreId": 822364
+      "steamStoreId": 822364,
+      "packageId": 822364
     },
     {
       "code": "Dov7B",
@@ -19112,7 +19122,7 @@
       "title": "Assassin's Creed Origins - Gold Edition",
       "creatorUsername": "leniu",
       "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
-      "appId": 215277,
+      "appId": 582160,
       "steamAppUrl": "https://store.steampowered.com/sub/215277?utm_source=SteamGifts",
       "entriesCount": 1,
       "endDate": "2024-06-27T17:42:01.000Z",
@@ -19126,7 +19136,8 @@
       "resultStatus": "won",
       "resultLabel": "Wintermute101",
       "steamStoreType": "sub",
-      "steamStoreId": 215277
+      "steamStoreId": 215277,
+      "packageId": 215277
     },
     {
       "code": "YdXS9",
@@ -19134,7 +19145,7 @@
       "title": "Assassin's Creed Odyssey - Ultimate E...",
       "creatorUsername": "leniu",
       "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
-      "appId": 290658,
+      "appId": 812140,
       "steamAppUrl": "https://store.steampowered.com/sub/290658?utm_source=SteamGifts",
       "entriesCount": 2,
       "endDate": "2024-06-27T17:38:35.000Z",
@@ -19148,7 +19159,8 @@
       "resultStatus": "won",
       "resultLabel": "Youdontknow",
       "steamStoreType": "sub",
-      "steamStoreId": 290658
+      "steamStoreId": 290658,
+      "packageId": 290658
     },
     {
       "code": "HwUea",
@@ -19156,7 +19168,7 @@
       "title": "Assassin's Creed Valhalla - Complete ...",
       "creatorUsername": "leniu",
       "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
-      "appId": 791761,
+      "appId": 2208920,
       "steamAppUrl": "https://store.steampowered.com/sub/791761?utm_source=SteamGifts",
       "entriesCount": 3,
       "endDate": "2024-06-27T17:35:31.000Z",
@@ -19170,7 +19182,8 @@
       "resultStatus": "won",
       "resultLabel": "BojanNS987",
       "steamStoreType": "sub",
-      "steamStoreId": 791761
+      "steamStoreId": 791761,
+      "packageId": 791761
     },
     {
       "code": "sOLZn",
@@ -19899,7 +19912,7 @@
       "title": "LISA: Complete Edition",
       "creatorUsername": "BojanNS987",
       "creatorProfileUrl": "https://www.steamgifts.com/user/BojanNS987",
-      "appId": 77828,
+      "appId": 379310,
       "steamAppUrl": "https://store.steampowered.com/sub/77828?utm_source=SteamGifts",
       "entriesCount": 18,
       "endDate": "2024-05-19T10:46:13.000Z",
@@ -19913,7 +19926,8 @@
       "resultStatus": "won",
       "resultLabel": "kudomonster",
       "steamStoreType": "sub",
-      "steamStoreId": 77828
+      "steamStoreId": 77828,
+      "packageId": 77828
     },
     {
       "code": "Jqcvk",
@@ -22760,7 +22774,7 @@
       "title": "LEGO Star Wars: The Skywalker Saga Ga...",
       "creatorUsername": "BarbaricGenie",
       "creatorProfileUrl": "https://www.steamgifts.com/user/BarbaricGenie",
-      "appId": 785847,
+      "appId": 920210,
       "steamAppUrl": "https://store.steampowered.com/sub/785847?utm_source=SteamGifts",
       "entriesCount": 7,
       "endDate": "2023-12-01T23:21:02.000Z",
@@ -22774,7 +22788,8 @@
       "resultStatus": "won",
       "resultLabel": "chOOkity",
       "steamStoreType": "sub",
-      "steamStoreId": 785847
+      "steamStoreId": 785847,
+      "packageId": 785847
     },
     {
       "code": "Zf4gM",
@@ -24492,7 +24507,7 @@
       "title": "Life is Strange Remastered Collection",
       "creatorUsername": "leniu",
       "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
-      "appId": 440247,
+      "appId": 1265920,
       "steamAppUrl": "https://store.steampowered.com/sub/440247?utm_source=SteamGifts",
       "entriesCount": 4,
       "endDate": "2023-07-07T19:30:46.000Z",
@@ -24507,7 +24522,8 @@
       "resultLabel": "burntreynolds444",
       "hltbHours": 18.75,
       "steamStoreType": "sub",
-      "steamStoreId": 440247
+      "steamStoreId": 440247,
+      "packageId": 440247
     },
     {
       "code": "6bbyv",
@@ -24920,7 +24936,7 @@
       "title": "LEGO Star Wars: The Skywalker Saga Ga...",
       "creatorUsername": "kasztoix",
       "creatorProfileUrl": "https://www.steamgifts.com/user/kasztoix",
-      "appId": 785847,
+      "appId": 920210,
       "steamAppUrl": "https://store.steampowered.com/sub/785847?utm_source=SteamGifts",
       "entriesCount": 5,
       "endDate": "2023-07-06T08:40:12.000Z",
@@ -24934,7 +24950,8 @@
       "resultStatus": "won",
       "resultLabel": "Millsshogun",
       "steamStoreType": "sub",
-      "steamStoreId": 785847
+      "steamStoreId": 785847,
+      "packageId": 785847
     },
     {
       "code": "88xJ0",
@@ -25079,7 +25096,7 @@
       "title": "South Park: The Fractured But Whole -...",
       "creatorUsername": "leniu",
       "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
-      "appId": 242136,
+      "appId": 488790,
       "steamAppUrl": "https://store.steampowered.com/sub/242136?utm_source=SteamGifts",
       "entriesCount": 0,
       "endDate": "2023-07-04T19:37:15.000Z",
@@ -25088,7 +25105,8 @@
       "resultLabel": "No winners",
       "hltbHours": 18.17,
       "steamStoreType": "sub",
-      "steamStoreId": 242136
+      "steamStoreId": 242136,
+      "packageId": 242136
     },
     {
       "code": "4mfgQ",
@@ -25789,7 +25807,7 @@
       "title": "Assassin's Creed Odyssey - Ultimate E...",
       "creatorUsername": "Ernesttico",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Ernesttico",
-      "appId": 290658,
+      "appId": 812140,
       "steamAppUrl": "https://store.steampowered.com/sub/290658?utm_source=SteamGifts",
       "entriesCount": 6,
       "endDate": "2023-07-03T11:10:14.000Z",
@@ -25803,7 +25821,8 @@
       "resultStatus": "won",
       "resultLabel": "Millsshogun",
       "steamStoreType": "sub",
-      "steamStoreId": 290658
+      "steamStoreId": 290658,
+      "packageId": 290658
     },
     {
       "code": "20LhL",
@@ -25811,7 +25830,7 @@
       "title": "Assassin's Creed Origins - Gold Edition",
       "creatorUsername": "Ernesttico",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Ernesttico",
-      "appId": 215277,
+      "appId": 582160,
       "steamAppUrl": "https://store.steampowered.com/sub/215277?utm_source=SteamGifts",
       "entriesCount": 4,
       "endDate": "2023-07-03T11:03:12.000Z",
@@ -25825,7 +25844,8 @@
       "resultStatus": "won",
       "resultLabel": "BarbaricGenie",
       "steamStoreType": "sub",
-      "steamStoreId": 215277
+      "steamStoreId": 215277,
+      "packageId": 215277
     },
     {
       "code": "xLs0j",
@@ -26186,7 +26206,7 @@
       "title": "Assassin's Creed Valhalla - Complete ...",
       "creatorUsername": "leniu",
       "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
-      "appId": 791761,
+      "appId": 2208920,
       "steamAppUrl": "https://store.steampowered.com/sub/791761?utm_source=SteamGifts",
       "entriesCount": 2,
       "endDate": "2023-07-01T20:44:59.000Z",
@@ -26200,7 +26220,8 @@
       "resultStatus": "won",
       "resultLabel": "Milione",
       "steamStoreType": "sub",
-      "steamStoreId": 791761
+      "steamStoreId": 791761,
+      "packageId": 791761
     },
     {
       "code": "2n1eT",
@@ -34566,7 +34587,7 @@
       "title": "Borderlands 3: Super Deluxe Edition",
       "creatorUsername": "Koalala",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Koalala",
-      "appId": 427289,
+      "appId": 397540,
       "steamAppUrl": "https://store.steampowered.com/sub/427289?utm_source=SteamGifts",
       "entriesCount": 3,
       "endDate": "2022-06-29T17:47:56.000Z",
@@ -34586,7 +34607,8 @@
       "steamPriceCurrency": "USD",
       "steamListPriceCents": 7999,
       "steamFinalPriceCents": 7999,
-      "steamPricePoints": 80
+      "steamPricePoints": 80,
+      "packageId": 427289
     },
     {
       "code": "5biEZ",
@@ -35633,7 +35655,7 @@
       "title": "Life is Strange Remastered Collection",
       "creatorUsername": "Wintermute101",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Wintermute101",
-      "appId": 440247,
+      "appId": 1265920,
       "steamAppUrl": "https://store.steampowered.com/sub/440247?utm_source=SteamGifts",
       "entriesCount": 6,
       "endDate": "2022-06-26T18:29:35.000Z",
@@ -35648,7 +35670,8 @@
       "resultLabel": "eledhrim",
       "hltbHours": 18.75,
       "steamStoreType": "sub",
-      "steamStoreId": 440247
+      "steamStoreId": 440247,
+      "packageId": 440247
     },
     {
       "code": "8i5Bj",
@@ -37964,7 +37987,7 @@
       "title": "STAR WARS Jedi: Fallen Order Deluxe E...",
       "creatorUsername": "Ernesttico",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Ernesttico",
-      "appId": 401587,
+      "appId": 1172380,
       "steamAppUrl": "https://store.steampowered.com/sub/401587?utm_source=SteamGifts",
       "entriesCount": 3,
       "endDate": "2022-06-23T22:46:28.000Z",
@@ -37978,7 +38001,8 @@
       "resultStatus": "won",
       "resultLabel": "Koalala",
       "steamStoreType": "sub",
-      "steamStoreId": 401587
+      "steamStoreId": 401587,
+      "packageId": 401587
     },
     {
       "code": "GD3HB",
@@ -39704,7 +39728,7 @@
       "title": "Pillars of Eternity II: Deadfire - Ob...",
       "creatorUsername": "xMisiu",
       "creatorProfileUrl": "https://www.steamgifts.com/user/xMisiu",
-      "appId": 258527,
+      "appId": 560130,
       "steamAppUrl": "https://store.steampowered.com/sub/258527?utm_source=SteamGifts",
       "entriesCount": 0,
       "endDate": "2022-05-12T01:47:14.000Z",
@@ -39712,7 +39736,8 @@
       "resultStatus": "no_winners",
       "resultLabel": "No winners",
       "steamStoreType": "sub",
-      "steamStoreId": 258527
+      "steamStoreId": 258527,
+      "packageId": 258527
     },
     {
       "code": "LE1Ja",
@@ -47390,7 +47415,7 @@
       "title": "Borderlands 3: Super Deluxe Edition",
       "creatorUsername": "trentonlf",
       "creatorProfileUrl": "https://www.steamgifts.com/user/trentonlf",
-      "appId": 427289,
+      "appId": 397540,
       "steamAppUrl": "https://store.steampowered.com/sub/427289?utm_source=SteamGifts",
       "entriesCount": 6,
       "endDate": "2021-06-27T04:50:59.000Z",
@@ -47410,7 +47435,8 @@
       "steamPriceCurrency": "USD",
       "steamListPriceCents": 7999,
       "steamFinalPriceCents": 7999,
-      "steamPricePoints": 80
+      "steamPricePoints": 80,
+      "packageId": 427289
     },
     {
       "code": "a4A0o",
@@ -49248,7 +49274,7 @@
       "title": "NINJA GAIDEN: Master Collection",
       "creatorUsername": "Youdontknow",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Youdontknow",
-      "appId": 575623,
+      "appId": 1369760,
       "steamAppUrl": "https://store.steampowered.com/sub/575623?utm_source=SteamGifts",
       "entriesCount": 6,
       "endDate": "2021-06-14T22:09:37.000Z",
@@ -49263,7 +49289,8 @@
       "resultLabel": "Skull18",
       "hltbHours": 27.05,
       "steamStoreType": "sub",
-      "steamStoreId": 575623
+      "steamStoreId": 575623,
+      "packageId": 575623
     },
     {
       "code": "4Sd8X",
@@ -53777,7 +53804,7 @@
       "title": "Metro Exodus - Gold Edition",
       "creatorUsername": "BarbaricGenie",
       "creatorProfileUrl": "https://www.steamgifts.com/user/BarbaricGenie",
-      "appId": 298833,
+      "appId": 412020,
       "steamAppUrl": "https://store.steampowered.com/sub/298833?utm_source=SteamGifts",
       "entriesCount": 6,
       "endDate": "2020-11-01T19:51:43.000Z",
@@ -53791,7 +53818,8 @@
       "resultStatus": "won",
       "resultLabel": "skAd42",
       "steamStoreType": "sub",
-      "steamStoreId": 298833
+      "steamStoreId": 298833,
+      "packageId": 298833
     },
     {
       "code": "OqKE5",
@@ -58512,7 +58540,7 @@
       "title": "Inquisitor Deluxe Edition",
       "creatorUsername": "Deleted-6983004",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Deleted-6983004",
-      "appId": 29582,
+      "appId": 241620,
       "steamAppUrl": "https://store.steampowered.com/sub/29582?utm_source=SteamGifts",
       "entriesCount": 5,
       "endDate": "2020-03-19T21:17:05.000Z",
@@ -58526,7 +58554,8 @@
       "resultStatus": "won",
       "resultLabel": "Nightmaze",
       "steamStoreType": "sub",
-      "steamStoreId": 29582
+      "steamStoreId": 29582,
+      "packageId": 29582
     },
     {
       "code": "5t3YB",
@@ -59352,7 +59381,7 @@
       "title": "The Council - Complete Season",
       "creatorUsername": "mrGreen82",
       "creatorProfileUrl": "https://www.steamgifts.com/user/mrGreen82",
-      "appId": 40061,
+      "appId": 287630,
       "steamAppUrl": "https://store.steampowered.com/sub/40061?utm_source=SteamGifts",
       "entriesCount": 2,
       "endDate": "2020-02-14T22:21:51.000Z",
@@ -59366,7 +59395,8 @@
       "resultStatus": "won",
       "resultLabel": "zettaivanugen",
       "steamStoreType": "sub",
-      "steamStoreId": 40061
+      "steamStoreId": 40061,
+      "packageId": 40061
     },
     {
       "code": "r5Wa0",
@@ -64758,7 +64788,7 @@
       "title": "Kyn Deluxe Edition",
       "creatorUsername": "Jarlaxe",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Jarlaxe",
-      "appId": 74024,
+      "appId": 314560,
       "steamAppUrl": "https://store.steampowered.com/sub/74024?utm_source=SteamGifts",
       "entriesCount": 1,
       "endDate": "2019-06-16T18:42:30.000Z",
@@ -64772,7 +64802,8 @@
       "resultStatus": "won",
       "resultLabel": "ChessPie",
       "steamStoreType": "sub",
-      "steamStoreId": 74024
+      "steamStoreId": 74024,
+      "packageId": 74024
     },
     {
       "code": "wWIbW",
@@ -70026,7 +70057,7 @@
       "title": "Resident Evil 5 Gold Edition",
       "creatorUsername": "zettaivanugen",
       "creatorProfileUrl": "https://www.steamgifts.com/user/zettaivanugen",
-      "appId": 62118,
+      "appId": 21690,
       "steamAppUrl": "https://store.steampowered.com/sub/62118?utm_source=SteamGifts",
       "entriesCount": 10,
       "endDate": "2019-01-06T18:31:51.000Z",
@@ -70041,7 +70072,8 @@
       "resultLabel": "Zerielle",
       "hltbHours": 11.34,
       "steamStoreType": "sub",
-      "steamStoreId": 62118
+      "steamStoreId": 62118,
+      "packageId": 62118
     },
     {
       "code": "k8ibJ",
@@ -74334,7 +74366,7 @@
       "title": "Tyranny - Deluxe Edition",
       "creatorUsername": "ercalote",
       "creatorProfileUrl": "https://www.steamgifts.com/user/ercalote",
-      "appId": 133812,
+      "appId": 362960,
       "steamAppUrl": "https://store.steampowered.com/sub/133812?utm_source=SteamGifts",
       "entriesCount": 1,
       "endDate": "2018-08-14T17:06:23.000Z",
@@ -74348,7 +74380,8 @@
       "resultStatus": "won",
       "resultLabel": "gizzy831",
       "steamStoreType": "sub",
-      "steamStoreId": 133812
+      "steamStoreId": 133812,
+      "packageId": 133812
     },
     {
       "code": "kEp0W",
@@ -74402,7 +74435,7 @@
       "title": "METAL GEAR SOLID V: The Definitive Ex...",
       "creatorUsername": "Youdontknow",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Youdontknow",
-      "appId": 132479,
+      "appId": 436040,
       "steamAppUrl": "https://store.steampowered.com/sub/132479?utm_source=SteamGifts",
       "entriesCount": 3,
       "endDate": "2018-08-14T15:13:19.000Z",
@@ -74416,7 +74449,8 @@
       "resultStatus": "won",
       "resultLabel": "Horseflesh",
       "steamStoreType": "sub",
-      "steamStoreId": 132479
+      "steamStoreId": 132479,
+      "packageId": 132479
     },
     {
       "code": "eeufZ",
@@ -75012,7 +75046,7 @@
       "title": "Dishonored: Death of the Outsider - D...",
       "creatorUsername": "spacepower",
       "creatorProfileUrl": "https://www.steamgifts.com/user/spacepower",
-      "appId": 183038,
+      "appId": 403640,
       "steamAppUrl": "https://store.steampowered.com/sub/183038?utm_source=SteamGifts",
       "entriesCount": 4,
       "endDate": "2018-08-07T13:29:46.000Z",
@@ -75026,7 +75060,8 @@
       "resultStatus": "won",
       "resultLabel": "ercalote",
       "steamStoreType": "sub",
-      "steamStoreId": 183038
+      "steamStoreId": 183038,
+      "packageId": 183038
     },
     {
       "code": "wckHe",
@@ -79050,7 +79085,7 @@
       "title": "Wolfenstein II: The New Colossus Digi...",
       "creatorUsername": "gizzy831",
       "creatorProfileUrl": "https://www.steamgifts.com/user/gizzy831",
-      "appId": 183036,
+      "appId": 650410,
       "steamAppUrl": "https://store.steampowered.com/sub/183036?utm_source=SteamGifts",
       "entriesCount": 42,
       "endDate": "2018-03-17T11:05:46.000Z",
@@ -79064,7 +79099,8 @@
       "resultStatus": "won",
       "resultLabel": "fantis6",
       "steamStoreType": "sub",
-      "steamStoreId": 183036
+      "steamStoreId": 183036,
+      "packageId": 183036
     },
     {
       "code": "Iakri",
@@ -80425,7 +80461,7 @@
       "title": "Life is Strange Complete Season (Epis...",
       "creatorUsername": "Skull18",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Skull18",
-      "appId": 56692,
+      "appId": 319630,
       "steamAppUrl": "https://store.steampowered.com/sub/56692?utm_source=SteamGifts",
       "entriesCount": 23,
       "endDate": "2018-02-02T20:49:09.000Z",
@@ -80439,7 +80475,8 @@
       "resultStatus": "won",
       "resultLabel": "dubnio",
       "steamStoreType": "sub",
-      "steamStoreId": 56692
+      "steamStoreId": 56692,
+      "packageId": 56692
     },
     {
       "code": "BSuk1",
@@ -83172,7 +83209,7 @@
       "title": "Divinity: Original Sin 2 - Divine Edi...",
       "creatorUsername": "zettaivanugen",
       "creatorProfileUrl": "https://www.steamgifts.com/user/zettaivanugen",
-      "appId": 207167,
+      "appId": 435150,
       "steamAppUrl": "https://store.steampowered.com/sub/207167?utm_source=SteamGifts",
       "entriesCount": 14,
       "endDate": "2017-11-06T17:43:21.000Z",
@@ -83186,7 +83223,8 @@
       "resultStatus": "won",
       "resultLabel": "Deleted-1924302",
       "steamStoreType": "sub",
-      "steamStoreId": 207167
+      "steamStoreId": 207167,
+      "packageId": 207167
     },
     {
       "code": "AG3Fb",
@@ -84264,7 +84302,7 @@
       "title": "METAL GEAR SOLID V: The Definitive Ex...",
       "creatorUsername": "OmniNerdZ",
       "creatorProfileUrl": "https://www.steamgifts.com/user/OmniNerdZ",
-      "appId": 132479,
+      "appId": 436040,
       "steamAppUrl": "https://store.steampowered.com/sub/132479?utm_source=SteamGifts",
       "entriesCount": 9,
       "endDate": "2017-10-11T06:38:48.000Z",
@@ -84278,7 +84316,8 @@
       "resultStatus": "won",
       "resultLabel": "ercalote",
       "steamStoreType": "sub",
-      "steamStoreId": 132479
+      "steamStoreId": 132479,
+      "packageId": 132479
     },
     {
       "code": "2ckgm",
@@ -84790,7 +84829,7 @@
       "title": "Middle-earth: Shadow of Mordor Game o...",
       "creatorUsername": "spacepower",
       "creatorProfileUrl": "https://www.steamgifts.com/user/spacepower",
-      "appId": 51209,
+      "appId": 318550,
       "steamAppUrl": "https://store.steampowered.com/sub/51209?utm_source=SteamGifts",
       "entriesCount": 10,
       "endDate": "2017-09-21T11:09:09.000Z",
@@ -84798,7 +84837,8 @@
       "resultStatus": "awaiting_feedback",
       "resultLabel": "Awaiting feedback",
       "steamStoreType": "sub",
-      "steamStoreId": 51209
+      "steamStoreId": 51209,
+      "packageId": 51209
     },
     {
       "code": "UmBAx",
@@ -85305,7 +85345,7 @@
       "title": "MotoGP15: Special Edition",
       "creatorUsername": "Carnium",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Carnium",
-      "appId": 69069,
+      "appId": 355130,
       "steamAppUrl": "https://store.steampowered.com/sub/69069?utm_source=SteamGifts",
       "entriesCount": 49,
       "endDate": "2017-08-18T21:09:24.000Z",
@@ -85319,7 +85359,8 @@
       "resultStatus": "won",
       "resultLabel": "madsession",
       "steamStoreType": "sub",
-      "steamStoreId": 69069
+      "steamStoreId": 69069,
+      "packageId": 69069
     },
     {
       "code": "UBDDs",
@@ -87499,7 +87540,7 @@
       "title": "Rising Storm 2: Vietnam - Digital Del...",
       "creatorUsername": "ReptilianWorldOrder",
       "creatorProfileUrl": "https://www.steamgifts.com/user/ReptilianWorldOrder",
-      "appId": 171306,
+      "appId": 418460,
       "steamAppUrl": "https://store.steampowered.com/sub/171306?utm_source=SteamGifts",
       "entriesCount": 11,
       "endDate": "2017-06-02T00:56:45.000Z",
@@ -87513,7 +87554,8 @@
       "resultStatus": "won",
       "resultLabel": "Retroboy",
       "steamStoreType": "sub",
-      "steamStoreId": 171306
+      "steamStoreId": 171306,
+      "packageId": 171306
     },
     {
       "code": "8ZA4o",
@@ -88003,7 +88045,7 @@
       "title": "MotoGP15: Special Edition",
       "creatorUsername": "Carnium",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Carnium",
-      "appId": 69069,
+      "appId": 355130,
       "steamAppUrl": "https://store.steampowered.com/sub/69069?utm_source=SteamGifts",
       "entriesCount": 10,
       "endDate": "2017-05-14T22:21:29.000Z",
@@ -88017,7 +88059,8 @@
       "resultStatus": "won",
       "resultLabel": "StankoBubalo",
       "steamStoreType": "sub",
-      "steamStoreId": 69069
+      "steamStoreId": 69069,
+      "packageId": 69069
     },
     {
       "code": "Xqgd7",
@@ -88756,7 +88799,7 @@
       "title": "The Evil Within Bundle",
       "creatorUsername": "Rimberse",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Rimberse",
-      "appId": 65812,
+      "appId": 268050,
       "steamAppUrl": "https://store.steampowered.com/sub/65812?utm_source=SteamGifts",
       "entriesCount": 15,
       "endDate": "2017-05-01T04:11:49.000Z",
@@ -88770,7 +88813,8 @@
       "resultStatus": "won",
       "resultLabel": "Skull18",
       "steamStoreType": "sub",
-      "steamStoreId": 65812
+      "steamStoreId": 65812,
+      "packageId": 65812
     },
     {
       "code": "xilqc",
@@ -88870,7 +88914,7 @@
       "title": "STASIS - Deluxe Edition",
       "creatorUsername": "StankoBubalo",
       "creatorProfileUrl": "https://www.steamgifts.com/user/StankoBubalo",
-      "appId": 76077,
+      "appId": 380150,
       "steamAppUrl": "https://store.steampowered.com/sub/76077?utm_source=SteamGifts",
       "entriesCount": 11,
       "endDate": "2017-04-30T19:05:59.000Z",
@@ -88884,7 +88928,8 @@
       "resultStatus": "won",
       "resultLabel": "lhan",
       "steamStoreType": "sub",
-      "steamStoreId": 76077
+      "steamStoreId": 76077,
+      "packageId": 76077
     },
     {
       "code": "bmzrc",
@@ -88915,7 +88960,7 @@
       "title": "Mortal Kombat XL",
       "creatorUsername": "lhan",
       "creatorProfileUrl": "https://www.steamgifts.com/user/lhan",
-      "appId": 128345,
+      "appId": 347880,
       "steamAppUrl": "https://store.steampowered.com/sub/128345?utm_source=SteamGifts",
       "entriesCount": 8,
       "endDate": "2017-04-30T18:19:50.000Z",
@@ -88930,7 +88975,8 @@
       "resultLabel": "StankoBubalo",
       "hltbHours": 5.68,
       "steamStoreType": "sub",
-      "steamStoreId": 128345
+      "steamStoreId": 128345,
+      "packageId": 128345
     },
     {
       "code": "0n6Vf",
@@ -89235,7 +89281,7 @@
       "title": "Layers of Fear: Masterpiece Edition",
       "creatorUsername": "Skull18",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Skull18",
-      "appId": 116814,
+      "appId": 391720,
       "steamAppUrl": "https://store.steampowered.com/sub/116814?utm_source=SteamGifts",
       "entriesCount": 27,
       "endDate": "2017-04-09T18:36:13.000Z",
@@ -89250,7 +89296,8 @@
       "resultLabel": "JabbaFatt",
       "hltbHours": 3.43,
       "steamStoreType": "sub",
-      "steamStoreId": 116814
+      "steamStoreId": 116814,
+      "packageId": 116814
     },
     {
       "code": "RDQ4U",
@@ -90993,7 +91040,7 @@
       "title": "Mortal Kombat XL",
       "creatorUsername": "ReptilianWorldOrder",
       "creatorProfileUrl": "https://www.steamgifts.com/user/ReptilianWorldOrder",
-      "appId": 128345,
+      "appId": 347880,
       "steamAppUrl": "https://store.steampowered.com/sub/128345?utm_source=SteamGifts",
       "entriesCount": 16,
       "endDate": "2017-02-17T15:10:28.000Z",
@@ -91008,7 +91055,8 @@
       "resultLabel": "varmas",
       "hltbHours": 5.68,
       "steamStoreType": "sub",
-      "steamStoreId": 128345
+      "steamStoreId": 128345,
+      "packageId": 128345
     },
     {
       "code": "BOXnB",
@@ -91039,7 +91087,7 @@
       "title": "Sniper Elite 4 Deluxe Edition",
       "creatorUsername": "AJIam",
       "creatorProfileUrl": "https://www.steamgifts.com/user/AJIam",
-      "appId": 123425,
+      "appId": 312660,
       "steamAppUrl": "https://store.steampowered.com/sub/123425?utm_source=SteamGifts",
       "entriesCount": 22,
       "endDate": "2017-02-17T06:46:54.000Z",
@@ -91053,7 +91101,8 @@
       "resultStatus": "won",
       "resultLabel": "ReptilianWorldOrder",
       "steamStoreType": "sub",
-      "steamStoreId": 123425
+      "steamStoreId": 123425,
+      "packageId": 123425
     },
     {
       "code": "3pxis",
@@ -91450,7 +91499,7 @@
       "title": "STASIS - Deluxe Edition",
       "creatorUsername": "Saotoshi",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Saotoshi",
-      "appId": 76077,
+      "appId": 380150,
       "steamAppUrl": "https://store.steampowered.com/sub/76077?utm_source=SteamGifts",
       "entriesCount": 16,
       "endDate": "2017-02-06T18:13:45.000Z",
@@ -91464,7 +91513,8 @@
       "resultStatus": "won",
       "resultLabel": "djnemonic",
       "steamStoreType": "sub",
-      "steamStoreId": 76077
+      "steamStoreId": 76077,
+      "packageId": 76077
     },
     {
       "code": "GpmKJ",
@@ -91975,7 +92025,7 @@
       "title": "MotoGP15: Special Edition",
       "creatorUsername": "Carnium",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Carnium",
-      "appId": 69069,
+      "appId": 355130,
       "steamAppUrl": "https://store.steampowered.com/sub/69069?utm_source=SteamGifts",
       "entriesCount": 13,
       "endDate": "2017-01-12T23:35:21.000Z",
@@ -91989,7 +92039,8 @@
       "resultStatus": "won",
       "resultLabel": "ReptilianWorldOrder",
       "steamStoreType": "sub",
-      "steamStoreId": 69069
+      "steamStoreId": 69069,
+      "packageId": 69069
     },
     {
       "code": "GTIGG",
@@ -93107,7 +93158,7 @@
       "title": "Batman: Arkham Knight Premium Edition",
       "creatorUsername": "Wintermute75",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Wintermute75",
-      "appId": 85500,
+      "appId": 208650,
       "steamAppUrl": "https://store.steampowered.com/sub/85500?utm_source=SteamGifts",
       "entriesCount": 21,
       "endDate": "2016-12-17T11:11:13.000Z",
@@ -93122,7 +93173,8 @@
       "resultLabel": "Starlynk",
       "hltbHours": 21.13,
       "steamStoreType": "sub",
-      "steamStoreId": 85500
+      "steamStoreId": 85500,
+      "packageId": 85500
     },
     {
       "code": "Zyypy",
@@ -94454,7 +94506,7 @@
       "title": "Asguaard - Deluxe Edition (contains G...",
       "creatorUsername": "Krlesnik",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Krlesnik",
-      "appId": 68765,
+      "appId": 332380,
       "steamAppUrl": "https://store.steampowered.com/sub/68765?utm_source=SteamGifts",
       "entriesCount": 7,
       "endDate": "2016-11-05T12:22:09.000Z",
@@ -94468,7 +94520,8 @@
       "resultStatus": "won",
       "resultLabel": "ercalote",
       "steamStoreType": "sub",
-      "steamStoreId": 68765
+      "steamStoreId": 68765,
+      "packageId": 68765
     },
     {
       "code": "xKvUl",
@@ -94817,7 +94870,7 @@
       "title": "Resident Evil 6 Complete",
       "creatorUsername": "Rimberse",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Rimberse",
-      "appId": 50980,
+      "appId": 221040,
       "steamAppUrl": "https://store.steampowered.com/sub/50980?utm_source=SteamGifts",
       "entriesCount": 14,
       "endDate": "2016-11-01T16:26:24.000Z",
@@ -94831,7 +94884,8 @@
       "resultStatus": "won",
       "resultLabel": "Wintermute75",
       "steamStoreType": "sub",
-      "steamStoreId": 50980
+      "steamStoreId": 50980,
+      "packageId": 50980
     },
     {
       "code": "tezZX",
@@ -94885,7 +94939,7 @@
       "title": "Lords of the Fallen Game of the Year ...",
       "creatorUsername": "Skull18",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Skull18",
-      "appId": 48346,
+      "appId": 333800,
       "steamAppUrl": "https://store.steampowered.com/sub/48346?utm_source=SteamGifts",
       "entriesCount": 14,
       "endDate": "2016-11-01T14:17:03.000Z",
@@ -94899,7 +94953,8 @@
       "resultStatus": "won",
       "resultLabel": "Carnium",
       "steamStoreType": "sub",
-      "steamStoreId": 48346
+      "steamStoreId": 48346,
+      "packageId": 48346
     },
     {
       "code": "bsODO",
@@ -96063,7 +96118,7 @@
       "title": "Men of War: Assault Squad 2 - Gold Ed...",
       "creatorUsername": "HBRugeO",
       "creatorProfileUrl": "https://www.steamgifts.com/user/HBRugeO",
-      "appId": 76328,
+      "appId": 244450,
       "steamAppUrl": "https://store.steampowered.com/sub/76328?utm_source=SteamGifts",
       "entriesCount": 13,
       "endDate": "2016-10-03T01:18:11.000Z",
@@ -96077,7 +96132,8 @@
       "resultStatus": "won",
       "resultLabel": "Krlesnik",
       "steamStoreType": "sub",
-      "steamStoreId": 76328
+      "steamStoreId": 76328,
+      "packageId": 76328
     },
     {
       "code": "oHkEm",
@@ -96177,7 +96233,7 @@
       "title": "LEGO STAR WARS: The Force Awakens - D...",
       "creatorUsername": "Saotoshi",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Saotoshi",
-      "appId": 92660,
+      "appId": 438640,
       "steamAppUrl": "https://store.steampowered.com/sub/92660?utm_source=SteamGifts",
       "entriesCount": 17,
       "endDate": "2016-10-01T07:07:37.000Z",
@@ -96191,7 +96247,8 @@
       "resultStatus": "won",
       "resultLabel": "Krlesnik",
       "steamStoreType": "sub",
-      "steamStoreId": 92660
+      "steamStoreId": 92660,
+      "packageId": 92660
     },
     {
       "code": "h6MiA",
@@ -96199,7 +96256,7 @@
       "title": "Total War: Medieval II - Definitive E...",
       "creatorUsername": "Revenge187",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Revenge187",
-      "appId": 460,
+      "appId": 4780,
       "steamAppUrl": "https://store.steampowered.com/sub/460?utm_source=SteamGifts",
       "entriesCount": 5,
       "endDate": "2016-10-01T06:49:37.000Z",
@@ -96213,7 +96270,8 @@
       "resultStatus": "won",
       "resultLabel": "HBRugeO",
       "steamStoreType": "sub",
-      "steamStoreId": 460
+      "steamStoreId": 460,
+      "packageId": 460
     },
     {
       "code": "8xYB4",
@@ -96883,7 +96941,7 @@
       "title": "Lords of the Fallen Game of the Year ...",
       "creatorUsername": "Sazz",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Sazz",
-      "appId": 48346,
+      "appId": 333800,
       "steamAppUrl": "https://store.steampowered.com/sub/48346?utm_source=SteamGifts",
       "entriesCount": 20,
       "endDate": "2016-09-08T01:04:52.000Z",
@@ -96897,7 +96955,8 @@
       "resultStatus": "won",
       "resultLabel": "djnemonic",
       "steamStoreType": "sub",
-      "steamStoreId": 48346
+      "steamStoreId": 48346,
+      "packageId": 48346
     },
     {
       "code": "oN561",
@@ -97316,7 +97375,7 @@
       "title": "Volume: Quadrilateral Edition",
       "creatorUsername": "bigbud13",
       "creatorProfileUrl": "https://www.steamgifts.com/user/bigbud13",
-      "appId": 76083,
+      "appId": 220780,
       "steamAppUrl": "https://store.steampowered.com/sub/76083?utm_source=SteamGifts",
       "entriesCount": 12,
       "endDate": "2016-09-03T13:31:04.000Z",
@@ -97330,7 +97389,8 @@
       "resultStatus": "won",
       "resultLabel": "Krlesnik",
       "steamStoreType": "sub",
-      "steamStoreId": 76083
+      "steamStoreId": 76083,
+      "packageId": 76083
     },
     {
       "code": "biIfb",
