@@ -2073,11 +2073,23 @@ function buildMemberCard(member) {
     ? `<a class="linked-title" href="${escapeHtml(member.steamProfile)}" target="_blank" rel="noreferrer">${title}</a>`
     : title;
 
-  // Tag reflects the member's cycle obligation status for the current month.
-  const memberId = findMemberByUsername(member.username)?.id;
+  // Tag + editor reflect the member's cycle obligation status for the current
+  // month. Pause is an explicit choice only (never auto-set from giveaways).
+  const stateMember = findMemberByUsername(member.username);
   const currentMonth = monthKey(state.settings.currentDate || "");
-  const paused = memberId ? getCycleMemberStatus(memberId, currentMonth) === "paused" : false;
+  const overrideKey = stateMember ? getCycleMemberOverrideKey(stateMember, currentMonth) : "";
+  const paused = overrideKey ? getCycleMemberStatus(stateMember, currentMonth) === "paused" : false;
   const statusBadge = buildBadge(paused ? "warning" : "success", paused ? "Paused" : "Active");
+  const statusEditor = overrideKey
+    ? `
+      <label class="inline-select-wrap member-status-edit">
+        <span class="meta-line">Cycle status</span>
+        <select class="inline-select" data-cycle-member-status-select="true" data-cycle-member-key="${escapeHtml(overrideKey)}">
+          <option value="active" ${paused ? "" : "selected"}>Active</option>
+          <option value="paused" ${paused ? "selected" : ""}>Paused</option>
+        </select>
+      </label>`
+    : "";
 
   return `
     <article class="member-card">
@@ -2085,6 +2097,7 @@ function buildMemberCard(member) {
       <h3>${usernameMarkup}</h3>
       <span class="meta-line">${member.winsCount || 0} tracked win(s)</span>
       <strong>${member.lastWinDate ? formatDate(member.lastWinDate) : "No wins yet"}</strong>
+      ${statusEditor}
       <span class="meta-line">${member.profileUrl ? `<a class="linked-title" href="${escapeHtml(member.profileUrl)}" target="_blank" rel="noreferrer">Open SteamGifts profile</a>` : "SteamGifts profile unavailable"}</span>
     </article>
   `;
