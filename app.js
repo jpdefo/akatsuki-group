@@ -2342,7 +2342,7 @@ function renderUserProgressPage() {
     }
   }
   const members = state.members
-    .filter((member) => winCountByMember.has(member.id))
+    .filter((member) => member.isActiveMember && winCountByMember.has(member.id))
     .sort((left, right) =>
       String(left.name || "").localeCompare(String(right.name || ""), "en", { sensitivity: "base" }),
     );
