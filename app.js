@@ -1145,19 +1145,23 @@ function renderCycleHistoryMembersTable(selectedCycle, cycleMonths, cycleWins, c
 
 function getCycleHistoryVisibleMembers(selectedCycle, cycleWins, cycleGiveaways) {
   const cycleKey = String(selectedCycle?.key || "").trim();
-  const participantIds = new Set([
-    ...cycleWins.map((win) => win.memberId).filter(Boolean),
-    ...cycleGiveaways.map((giveaway) => giveaway.creatorId).filter(Boolean),
-  ]);
+  // Inclusion is about CREATING cycle giveaways, not winning. Winning a giveaway
+  // never puts someone on this list.
+  const cycleCreatorIds = new Set(
+    cycleGiveaways
+      .filter((giveaway) => getGiveawayKind(giveaway) === "cycle")
+      .map((giveaway) => giveaway.creatorId)
+      .filter(Boolean),
+  );
 
   return state.members.filter((member) => {
     // Paused = exempt this cycle, so hide them from the obligations list.
     if (cycleKey && getCycleMemberStatus(member, cycleKey) === "paused") {
       return false;
     }
-    // Show every active member (so those who still owe a giveaway are flagged as
-    // pending), plus anyone who participated this cycle even if now inactive.
-    return member.isActiveMember || participantIds.has(member.id);
+    // Every active member (so those who still owe a cycle giveaway are flagged
+    // as pending), plus anyone who created a cycle giveaway even if now inactive.
+    return member.isActiveMember || cycleCreatorIds.has(member.id);
   });
 }
 
