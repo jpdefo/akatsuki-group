@@ -858,6 +858,33 @@ def parse_achievement_summary(html: str) -> dict:
     }
 
 
+def fetch_player_achievements(steam_id: str, app_id: int | str, api_key: str) -> dict:
+    """Achievement progress for one game via the Steam Web API (no scraping).
+
+    GetPlayerAchievements returns the full achievement list with an `achieved`
+    flag, so earned/total both come from one call. A private profile returns
+    HTTP 403, which propagates as an error so the caller keeps the cached value;
+    a game that simply has no achievements reports zeros (still "visible").
+    """
+    if not steam_id or not api_key:
+        raise RuntimeError("Missing Steam ID or API key for achievements.")
+    query = urlencode({"key": api_key, "steamid": steam_id, "appid": app_id, "l": "en"})
+    payload = fetch_json(f"{STEAM_API_BASE}/ISteamUserStats/GetPlayerAchievements/v1/?{query}")
+    stats = payload.get("playerstats", {}) if isinstance(payload, dict) else {}
+    if not stats.get("success"):
+        return {"visible": True, "earnedAchievements": 0, "totalAchievements": 0, "achievementPercent": 0}
+    achievements = stats.get("achievements") or []
+    total = len(achievements)
+    earned = sum(1 for achievement in achievements if achievement.get("achieved"))
+    percent = round(earned / total * 100) if total else 0
+    return {
+        "visible": True,
+        "earnedAchievements": earned,
+        "totalAchievements": total,
+        "achievementPercent": percent,
+    }
+
+
 def is_suspicious_steam_response(html: str) -> bool:
     text = strip_html(html).lower()
     return any(
@@ -1285,11 +1312,12 @@ def collect_library_targets(
     target_month: str | None = None,
     *,
     full_refresh: bool = False,
+    include_inactive: bool = False,
 ) -> tuple[list[dict], str | None]:
     if full_refresh:
         targets = []
         for member in sync_payload.get("members", []):
-            if member.get("isActiveMember") is not True or not member.get("steamProfile") or not member.get("username"):
+            if (not include_inactive and member.get("isActiveMember") is not True) or not member.get("steamProfile") or not member.get("username"):
                 continue
             targets.append(
                 {
@@ -1299,7 +1327,9 @@ def collect_library_targets(
             )
         return targets, None
 
-    target_wins, members, _, selected_month = collect_progress_targets(sync_payload, target_month)
+    target_wins, members, _, selected_month = collect_progress_targets(
+        sync_payload, target_month, include_inactive=include_inactive
+    )
     targets = []
     seen = set()
     for win in target_wins:
@@ -1317,12 +1347,15 @@ def refresh_steam_library(
     target_month: str | None = None,
     *,
     full_refresh: bool = False,
+    include_inactive: bool = False,
 ) -> dict:
     started_at = time.perf_counter()
     existing_payload = load_json(LIBRARY_PATH, empty_library_payload())
     playtime_cache = build_library_playtime_lookup(existing_payload)
     profile_cache = build_library_profile_lookup(existing_payload)
-    targets, selected_month = collect_library_targets(sync_payload, target_month, full_refresh=full_refresh)
+    targets, selected_month = collect_library_targets(
+        sync_payload, target_month, full_refresh=full_refresh, include_inactive=include_inactive
+    )
     steam_api_key = get_steam_api_key()
     steam_id_cache: dict[str, str] = {}
     refreshed_profiles = 0
@@ -1652,6 +1685,7 @@ def collect_progress_targets(
     target_month: str | None = None,
     *,
     full_refresh: bool = False,
+    include_inactive: bool = False,
 ) -> tuple[list[dict], dict, set[str], str | None]:
     members = {
         member.get("username"): member
@@ -1661,7 +1695,7 @@ def collect_progress_targets(
     active_usernames = {
         member.get("username")
         for member in sync_payload.get("members", [])
-        if member.get("username") and member.get("isActiveMember") is True
+        if member.get("username") and (include_inactive or member.get("isActiveMember") is True)
     }
     eligible_wins = []
     available_months = set()
@@ -1725,17 +1759,20 @@ def refresh_steam_progress(
     target_month: str | None = None,
     *,
     full_refresh: bool = False,
+    include_inactive: bool = False,
 ) -> dict:
     started_at = time.perf_counter()
     target_wins, members, active_usernames, selected_month = collect_progress_targets(
         sync_payload,
         target_month,
         full_refresh=full_refresh,
+        include_inactive=include_inactive,
     )
     library_payload = refresh_steam_library(
         sync_payload,
         target_month=target_month,
         full_refresh=full_refresh,
+        include_inactive=include_inactive,
     )
     library_playtime_lookup = build_library_playtime_lookup(library_payload)
     library_profile_lookup = build_library_profile_lookup(library_payload)
@@ -1749,6 +1786,8 @@ def refresh_steam_progress(
     )
     existing_progress_payload = load_json(PROGRESS_PATH, empty_progress_payload())
     progress_cache = build_progress_cache(existing_progress_payload)
+    steam_api_key = get_steam_api_key()
+    steam_id_cache: dict[str, str] = {}
     seen = set()
     achievement_successes = 0
     achievement_errors = 0
@@ -1797,10 +1836,10 @@ def refresh_steam_progress(
             continue
 
         try:
-            html = fetch_html(progress_url)
-            if is_suspicious_steam_response(html):
-                raise RuntimeError("Steam Community temporarily blocked the stats page.")
-            item.update(parse_achievement_summary(html))
+            steam_id = extract_steam_id_from_profile(steam_profile, steam_api_key, steam_id_cache)
+            if not steam_id:
+                raise RuntimeError("Could not resolve a Steam ID for achievements.")
+            item.update(fetch_player_achievements(steam_id, app_id, steam_api_key))
             if api_playtime is not None:
                 item["playtimeHours"] = api_playtime
             item["error"] = None
@@ -2027,6 +2066,7 @@ def main() -> None:
     parser.add_argument("--refresh-steam-progress", action="store_true", help="Refresh cached Steam progress data")
     parser.add_argument("--month", help="Refresh only the specified month (YYYY-MM) when applicable")
     parser.add_argument("--full-refresh", action="store_true", help="Refresh the full active-member history instead of a single month")
+    parser.add_argument("--include-inactive", action="store_true", help="Also refresh inactive (left-the-group) members; pair with --full-refresh for a one-time all-members run")
     args = parser.parse_args()
 
     ensure_data_dir()
@@ -2072,6 +2112,7 @@ def main() -> None:
                 sync_payload,
                 target_month=args.month,
                 full_refresh=args.full_refresh,
+                include_inactive=args.include_inactive,
             )
             print(
                 "Refreshed Steam library:"
@@ -2082,6 +2123,7 @@ def main() -> None:
                 sync_payload,
                 target_month=args.month,
                 full_refresh=args.full_refresh,
+                include_inactive=args.include_inactive,
             )
             print(
                 "Refreshed Steam progress:"

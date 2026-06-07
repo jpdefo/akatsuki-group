@@ -36,12 +36,12 @@ jobs:
           STEAM_WEB_API_KEY: ${{ secrets.STEAM_WEB_API_KEY }}
 
       - name: Refresh Steam library
-        run: python server.py --refresh-steam-library
+        run: python server.py --refresh-steam-library --full-refresh
         env:
           STEAM_WEB_API_KEY: ${{ secrets.STEAM_WEB_API_KEY }}
 
       - name: Refresh Steam progress
-        run: python server.py --refresh-steam-progress
+        run: python server.py --refresh-steam-progress --full-refresh
         env:
           STEAM_WEB_API_KEY: ${{ secrets.STEAM_WEB_API_KEY }}
 
