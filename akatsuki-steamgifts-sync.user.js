@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Akatsuki SteamGifts Sync
 // @namespace    akatsuki-monitor
-// @version      1.3.0
+// @version      1.4.0
 // @description  Collect Akatsuki members, giveaways, entries and winners from the logged-in SteamGifts session and send them to the local monitor server.
 // @match        https://www.steamgifts.com/group/*/*
 // @match        https://www.steamgifts.com/group/*/*/users*
@@ -25,6 +25,11 @@
   const GITHUB_REPO = { owner: "jpdefo", name: "akatsuki-group", branch: "main" };
   const GITHUB_SYNC_PATH = "data/steamgifts-sync.json";
   const GITHUB_TOKEN_KEY = "akatsuki-github-token";
+  // Avoid SteamGifts rate-limiting on big runs: once more than this many
+  // giveaways need checking, pace them at one per THROTTLE_DELAY_MS; small runs
+  // stay at full speed.
+  const THROTTLE_THRESHOLD = 30;
+  const THROTTLE_DELAY_MS = 505;
   const PUBLISHED_SYNC_URL = `https://raw.githubusercontent.com/${GITHUB_REPO.owner}/${GITHUB_REPO.name}/${GITHUB_REPO.branch}/${GITHUB_SYNC_PATH}`;
   const PUBLISHED_OVERRIDES_URL = `https://raw.githubusercontent.com/${GITHUB_REPO.owner}/${GITHUB_REPO.name}/${GITHUB_REPO.branch}/data/overrides.json`;
   const state = {
@@ -127,9 +132,15 @@
       let detailedGiveaways = giveaways;
       const unresolvedGiveaways = giveaways.filter(needsGiveawayDetails);
       if (unresolvedGiveaways.length) {
-        log(`Resolving ${unresolvedGiveaways.length} giveaway(s) missing app, winner, or label data...`);
+        const throttle = unresolvedGiveaways.length > THROTTLE_THRESHOLD;
+        log(
+          `Resolving ${unresolvedGiveaways.length} giveaway(s) missing app, winner, or label data...${throttle ? ` (throttled to 1 / ${THROTTLE_DELAY_MS}ms to avoid rate limits)` : ""}`,
+        );
         const resolvedGiveaways = new Map();
         for (const [index, giveaway] of unresolvedGiveaways.entries()) {
+          if (throttle && index > 0) {
+            await delay(THROTTLE_DELAY_MS);
+          }
           log(`Resolving giveaway ${index + 1}/${unresolvedGiveaways.length}: ${giveaway.title}`);
           resolvedGiveaways.set(giveaway.code, await enrichGiveaway(giveaway));
         }
@@ -157,8 +168,12 @@
           !(Array.isArray(giveaway.entryUsers) && giveaway.entryUsers.length > 0),
       );
       if (giveawaysNeedingEntries.length) {
+        const throttleEntries = giveawaysNeedingEntries.length > THROTTLE_THRESHOLD;
         log(`Fetching entrants for ${giveawaysNeedingEntries.length} promoted summer-event giveaway(s)...`);
         for (const [index, giveaway] of giveawaysNeedingEntries.entries()) {
+          if (throttleEntries && index > 0) {
+            await delay(THROTTLE_DELAY_MS);
+          }
           log(`  entrants ${index + 1}/${giveawaysNeedingEntries.length}: ${giveaway.title}`);
           const snapshot = await fetchGiveawayEntries(giveaway.url);
           if (snapshot && Array.isArray(snapshot.users)) {
@@ -221,6 +236,10 @@
       }
     }
     return Array.from(map.values());
+  }
+
+  function delay(ms) {
+    return new Promise((resolve) => window.setTimeout(resolve, ms));
   }
 
   async function collectMembers(existingSync) {
