@@ -1,5 +1,5 @@
 {
-  "savedAt": "2026-06-07T17:50:50.327Z",
+  "savedAt": "2026-06-07T18:11:47.390Z",
   "overrides": {
     "games": {},
     "wins": {},
@@ -60,15 +60,45 @@
       },
       "sg-wyAWz": {
         "giveawayKindOverride": "summer_event"
+      },
+      "sg-eGZbH": {
+        "giveawayKindOverride": "extra"
+      },
+      "sg-ss1t3": {
+        "cycleMonthOverride": "2025-11"
       }
     },
     "cycleMembers": {
       "2026-cycle-2:koalala": {
         "status": "paused"
+      },
+      "2026-cycle-2:bron99": {
+        "status": "paused"
+      },
+      "2026-cycle-2:eledhrim": {
+        "status": "paused"
+      },
+      "2026-cycle-2:krlesnik": {
+        "status": "paused"
+      },
+      "2026-cycle-2:skull18": {
+        "status": "paused"
+      },
+      "2026-cycle-2:millsshogun": {
+        "status": "paused"
+      },
+      "2026-cycle-2:oozyyy": {
+        "status": "paused"
+      },
+      "2026-cycle-2:xmisiu": {
+        "status": "paused"
       }
     },
     "members": {
       "skad42": {
+        "membershipStatus": "inactive"
+      },
+      "kasztoix": {
         "membershipStatus": "inactive"
       }
     }
