@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-07T11:10:44.348159+00:00",
+  "updatedAt": "2026-06-07T11:19:53.189388+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2209,11 +2209,12 @@
       "achievementPercent": 7,
       "playtimeHours": 1.82,
       "error": null,
-      "checkedAt": "2026-06-07T11:10:43.283413+00:00",
+      "checkedAt": "2026-06-07T11:19:53.189370+00:00",
       "playtimeCheckedAt": "2026-06-07T11:03:54.878098+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
-      "gamesVisible": true
+      "gamesVisible": true,
+      "achievementsPlaytimeHours": 1.82
     },
     {
       "username": "BojanNS987",
@@ -5269,11 +5270,12 @@
       "achievementPercent": 7,
       "playtimeHours": 28.1,
       "error": null,
-      "checkedAt": "2026-06-07T11:10:41.189121+00:00",
+      "checkedAt": "2026-06-07T11:19:53.189333+00:00",
       "playtimeCheckedAt": "2026-06-07T11:10:38.145510+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
-      "gamesVisible": true
+      "gamesVisible": true,
+      "achievementsPlaytimeHours": 28.1
     },
     {
       "username": "burntreynolds444",
@@ -6439,11 +6441,12 @@
       "achievementPercent": 58,
       "playtimeHours": 17.47,
       "error": null,
-      "checkedAt": "2026-06-07T11:10:42.740065+00:00",
+      "checkedAt": "2026-06-07T11:19:53.189360+00:00",
       "playtimeCheckedAt": "2026-06-07T11:10:38.145510+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
-      "gamesVisible": true
+      "gamesVisible": true,
+      "achievementsPlaytimeHours": 17.47
     },
     {
       "username": "burntreynolds444",
@@ -6619,11 +6622,12 @@
       "achievementPercent": 0,
       "playtimeHours": 3.58,
       "error": null,
-      "checkedAt": "2026-06-07T11:10:40.888763+00:00",
+      "checkedAt": "2026-06-07T11:19:53.189325+00:00",
       "playtimeCheckedAt": "2026-06-07T11:10:38.145510+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
-      "gamesVisible": true
+      "gamesVisible": true,
+      "achievementsPlaytimeHours": 3.58
     },
     {
       "username": "burntreynolds444",
@@ -8347,11 +8351,12 @@
       "achievementPercent": 3,
       "playtimeHours": 0.17,
       "error": null,
-      "checkedAt": "2026-06-07T11:10:43.541252+00:00",
+      "checkedAt": "2026-06-07T11:19:53.189374+00:00",
       "playtimeCheckedAt": "2026-06-07T11:10:39.168330+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
-      "gamesVisible": true
+      "gamesVisible": true,
+      "achievementsPlaytimeHours": 0.17
     },
     {
       "username": "chOOkity",
@@ -8383,11 +8388,12 @@
       "achievementPercent": 5,
       "playtimeHours": 2.65,
       "error": null,
-      "checkedAt": "2026-06-07T11:10:41.939283+00:00",
+      "checkedAt": "2026-06-07T11:19:53.189345+00:00",
       "playtimeCheckedAt": "2026-06-07T11:10:39.168330+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
-      "gamesVisible": true
+      "gamesVisible": true,
+      "achievementsPlaytimeHours": 2.65
     },
     {
       "username": "chOOkity",
@@ -10561,11 +10567,12 @@
       "achievementPercent": 36,
       "playtimeHours": 3.4,
       "error": null,
-      "checkedAt": "2026-06-07T11:10:42.201967+00:00",
+      "checkedAt": "2026-06-07T11:19:53.189351+00:00",
       "playtimeCheckedAt": "2026-06-07T11:03:54.610549+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
-      "gamesVisible": true
+      "gamesVisible": true,
+      "achievementsPlaytimeHours": 3.4
     },
     {
       "username": "Drain",
@@ -13405,11 +13412,12 @@
       "achievementPercent": 0,
       "playtimeHours": 0.0,
       "error": null,
-      "checkedAt": "2026-06-07T11:10:42.482622+00:00",
+      "checkedAt": "2026-06-07T11:19:53.189356+00:00",
       "playtimeCheckedAt": "2026-06-07T11:03:55.528785+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
-      "gamesVisible": true
+      "gamesVisible": true,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "Ernesttico",
@@ -13819,11 +13827,12 @@
       "achievementPercent": 0,
       "playtimeHours": 0.0,
       "error": null,
-      "checkedAt": "2026-06-07T11:10:43.013215+00:00",
+      "checkedAt": "2026-06-07T11:19:53.189365+00:00",
       "playtimeCheckedAt": "2026-06-07T11:03:55.528785+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
-      "gamesVisible": true
+      "gamesVisible": true,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "Ernesttico",
@@ -15781,11 +15790,12 @@
       "achievementPercent": 0,
       "playtimeHours": 0.25,
       "error": null,
-      "checkedAt": "2026-06-07T11:10:40.600666+00:00",
+      "checkedAt": "2026-06-07T11:19:53.189307+00:00",
       "playtimeCheckedAt": "2026-06-07T11:10:37.005718+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
-      "gamesVisible": true
+      "gamesVisible": true,
+      "achievementsPlaytimeHours": 0.25
     },
     {
       "username": "Horseflesh",
@@ -16591,11 +16601,12 @@
       "achievementPercent": 16,
       "playtimeHours": 3.4,
       "error": null,
-      "checkedAt": "2026-06-07T11:10:41.665183+00:00",
+      "checkedAt": "2026-06-07T11:19:53.189339+00:00",
       "playtimeCheckedAt": "2026-06-07T11:10:37.005718+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
-      "gamesVisible": true
+      "gamesVisible": true,
+      "achievementsPlaytimeHours": 3.4
     },
     {
       "username": "Horseflesh",
@@ -26113,11 +26124,12 @@
       "achievementPercent": 11,
       "playtimeHours": 3.6,
       "error": null,
-      "checkedAt": "2026-06-07T11:10:44.054389+00:00",
+      "checkedAt": "2026-06-07T11:19:53.189386+00:00",
       "playtimeCheckedAt": "2026-06-07T11:10:40.359703+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
-      "gamesVisible": true
+      "gamesVisible": true,
+      "achievementsPlaytimeHours": 3.6
     },
     {
       "username": "leniu",
@@ -34123,11 +34135,12 @@
       "achievementPercent": 25,
       "playtimeHours": 21.78,
       "error": null,
-      "checkedAt": "2026-06-07T11:10:43.802951+00:00",
+      "checkedAt": "2026-06-07T11:19:53.189380+00:00",
       "playtimeCheckedAt": "2026-06-07T11:10:39.690067+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
-      "gamesVisible": true
+      "gamesVisible": true,
+      "achievementsPlaytimeHours": 21.78
     },
     {
       "username": "Wintermute101",
@@ -68863,12 +68876,12 @@
   "activeOnly": true,
   "refreshedMonth": "2026-02",
   "refreshedScope": "month",
-  "libraryUpdatedAt": "2026-06-07T11:10:40.363231+00:00",
+  "libraryUpdatedAt": "2026-06-07T11:19:52.952278+00:00",
   "libraryStats": {
-    "durationSeconds": 4.44,
+    "durationSeconds": 0.17,
     "targetProfiles": 8,
-    "refreshedProfiles": 5,
-    "reusedProfiles": 3,
+    "refreshedProfiles": 0,
+    "reusedProfiles": 8,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
@@ -68876,12 +68889,12 @@
     "totalPlaytimeRows": 86580
   },
   "stats": {
-    "durationSeconds": 8.42,
+    "durationSeconds": 0.4,
     "targetWins": 13,
     "uniqueProgressTargets": 13,
     "libraryPlaytimeHits": 13,
-    "cachedReuses": 0,
-    "achievementSuccesses": 13,
+    "cachedReuses": 13,
+    "achievementSuccesses": 0,
     "achievementErrors": 0,
     "cachedFallbacks": 0,
     "hltbTitlesRequested": 13,

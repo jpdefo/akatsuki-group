@@ -9,7 +9,6 @@ import traceback
 from datetime import datetime, timedelta, timezone
 from difflib import SequenceMatcher
 from email.utils import parsedate_to_datetime
-from html import unescape
 from http import HTTPStatus
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -816,12 +815,6 @@ def enrich_sync_payload_with_media(sync_payload: dict) -> dict:
     return build_sync_export_payload(sync_payload, media_lookup=media_lookup)
 
 
-def fetch_html(url: str) -> str:
-    request = Request(url, headers={"User-Agent": USER_AGENT})
-    with open_url(request) as response:
-        return response.read().decode("utf-8", errors="replace")
-
-
 def fetch_json(url: str, *, headers: dict | None = None, data: bytes | None = None, method: str | None = None):
     request_headers = {"User-Agent": USER_AGENT, **(headers or {})}
     request = Request(url, headers=request_headers, data=data, method=method or ("POST" if data else "GET"))
@@ -829,33 +822,9 @@ def fetch_json(url: str, *, headers: dict | None = None, data: bytes | None = No
         return json.loads(response.read().decode("utf-8", errors="replace"))
 
 
-def strip_html(html: str) -> str:
-    cleaned = re.sub(r"<script[\s\S]*?</script>", " ", html, flags=re.I)
-    cleaned = re.sub(r"<style[\s\S]*?</style>", " ", cleaned, flags=re.I)
-    cleaned = re.sub(r"<[^>]+>", " ", cleaned)
-    return re.sub(r"\s+", " ", unescape(cleaned)).strip()
-
-
 def build_achievement_url(steam_profile: str, app_id: int | str) -> str:
     normalized = steam_profile.rstrip("/")
     return f"{normalized}/stats/{app_id}/achievements/"
-
-
-def parse_achievement_summary(html: str) -> dict:
-    text = strip_html(html)
-    match = re.search(r"(\d+)\s+of\s+(\d+)\s+\((\d+)%\)\s+achievements earned", text, re.I)
-
-    earned = int(match.group(1)) if match else 0
-    total = int(match.group(2)) if match else 0
-    percent = int(match.group(3)) if match else 0
-
-    return {
-        "visible": bool(match),
-        "earnedAchievements": earned,
-        "totalAchievements": total,
-        "achievementPercent": percent,
-        "playtimeHours": None,
-    }
 
 
 def fetch_player_achievements(steam_id: str, app_id: int | str, api_key: str) -> dict:
@@ -883,20 +852,6 @@ def fetch_player_achievements(steam_id: str, app_id: int | str, api_key: str) ->
         "totalAchievements": total,
         "achievementPercent": percent,
     }
-
-
-def is_suspicious_steam_response(html: str) -> bool:
-    text = strip_html(html).lower()
-    return any(
-        marker in text
-        for marker in (
-            "access denied",
-            "verify that you are human",
-            "captcha",
-            "too many requests",
-            "error was encountered while processing your request",
-        )
-    )
 
 
 def build_progress_cache(existing_payload: dict) -> dict[tuple[str, int], dict]:
@@ -1358,6 +1313,14 @@ def refresh_steam_library(
     )
     steam_api_key = get_steam_api_key()
     steam_id_cache: dict[str, str] = {}
+    # Only persist playtime for games the group has actually given away. A
+    # member's unrelated personal games are never stored, so a one-off
+    # --include-inactive run keeps only data tied to the games members won.
+    tracked_app_ids = {
+        parse_int(giveaway.get("appId"))
+        for giveaway in sync_payload.get("giveaways", [])
+        if parse_int(giveaway.get("appId"))
+    }
     refreshed_profiles = 0
     reused_profiles = 0
     error_profiles = 0
@@ -1401,7 +1364,7 @@ def refresh_steam_library(
 
             for item in snapshot["playtimes"]:
                 app_id = parse_int(item.get("appId"))
-                if not app_id:
+                if not app_id or app_id not in tracked_app_ids:
                     continue
                 playtime_cache[(steam_profile, app_id)] = {
                     "username": username,
@@ -1829,8 +1792,20 @@ def refresh_steam_progress(
         item["playtimeVisible"] = library_profile.get("playtimeVisible")
         item["gamesVisible"] = library_profile.get("gamesVisible")
 
-        if cached_item and is_progress_item_fresh(cached_item):
+        # Achievements can only change when a game is played more, so skip the
+        # per-game API call unless playtime increased since the last achievement
+        # check. When playtime is unavailable (private), fall back to the TTL.
+        last_achievement_playtime = cached_item.get("achievementsPlaytimeHours") if cached_item else None
+        playtime_unchanged = (
+            api_playtime is not None
+            and last_achievement_playtime is not None
+            and api_playtime <= last_achievement_playtime
+        )
+        if cached_item and cached_item.get("error") is None and (
+            playtime_unchanged or (api_playtime is None and is_progress_item_fresh(cached_item))
+        ):
             item["error"] = cached_item.get("error")
+            item["achievementsPlaytimeHours"] = last_achievement_playtime
             progress_cache[(steam_profile, int(app_id))] = item
             cached_reuses += 1
             continue
@@ -1842,6 +1817,7 @@ def refresh_steam_progress(
             item.update(fetch_player_achievements(steam_id, app_id, steam_api_key))
             if api_playtime is not None:
                 item["playtimeHours"] = api_playtime
+            item["achievementsPlaytimeHours"] = api_playtime
             item["error"] = None
             achievement_successes += 1
         except (HTTPError, URLError, TimeoutError, RuntimeError) as error:
