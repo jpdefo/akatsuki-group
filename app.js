@@ -460,7 +460,7 @@ function renderAllGiveawaysPage() {
               <td>
                 <strong>${titleMarkup}</strong>
                 <span class="meta-line">Created: ${escapeHtml(formatDateTime(getGiveawayCreatedDisplay(giveaway)))}</span>
-                ${getGiveawayEndedDisplay(giveaway) ? `<span class="meta-line">Ended: ${escapeHtml(formatDateTime(getGiveawayEndedDisplay(giveaway)))}</span>` : ""}
+                <span class="meta-line">Ended: ${escapeHtml(formatDateTime(getGiveawayEndedDisplay(giveaway)))}</span>
               </td>
               <td>${escapeHtml(creator?.name || giveaway.creatorUsername || "Unknown member")}</td>
               <td>
@@ -1378,7 +1378,7 @@ function renderSummerEventPage() {
                 <td>
                   <strong>${titleMarkup}</strong>
                   <span class="meta-line">Created: ${escapeHtml(formatDateTime(getGiveawayCreatedDisplay(giveaway)))}</span>
-                  ${getGiveawayEndedDisplay(giveaway) ? `<span class="meta-line">Ended: ${escapeHtml(formatDateTime(getGiveawayEndedDisplay(giveaway)))}</span>` : ""}
+                  <span class="meta-line">Ended: ${escapeHtml(formatDateTime(getGiveawayEndedDisplay(giveaway)))}</span>
                 </td>
                 <td>
                   <strong>${creatorMarkup}</strong>
