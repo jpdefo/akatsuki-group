@@ -454,6 +454,45 @@ def resolve_package_app_ids(sync_payload: dict) -> int:
     return resolved
 
 
+def fix_truncated_titles(sync_payload: dict, media_cache: dict) -> int:
+    """Replace giveaway titles truncated by SteamGifts (ending in ...) with the
+    canonical Steam store name, so display and HLTB matching use the full title.
+
+    Only truncated titles are touched, and the store name is cached, so this does
+    near-zero work after the first pass.
+    """
+    apps = media_cache.setdefault("apps", {})
+    fixed = 0
+    cache_dirty = False
+    for giveaway in sync_payload.get("giveaways", []):
+        title = str(giveaway.get("title") or "").strip()
+        if not (title.endswith("...") or title.endswith("…")):
+            continue
+        app_id = parse_int(giveaway.get("appId"))
+        if not app_id:
+            continue
+        entry = apps.get(str(app_id)) or {}
+        name = entry.get("name")
+        if name is None:
+            try:
+                media = fetch_store_media(app_id)
+            except (HTTPError, URLError, TimeoutError, json.JSONDecodeError):
+                continue
+            entry = {**entry, **media}
+            apps[str(app_id)] = entry
+            cache_dirty = True
+            name = entry.get("name")
+        if name and name != giveaway.get("title"):
+            giveaway["title"] = name
+            fixed += 1
+    if cache_dirty:
+        media_cache["updatedAt"] = utc_now()
+        save_json(MEDIA_CACHE_PATH, media_cache)
+    if fixed:
+        save_json(SYNC_PATH, sync_payload)
+    return fixed
+
+
 def should_lookup_store_price(giveaway: dict) -> bool:
     return is_summer_event_kind(giveaway.get("giveawayKind")) and parse_int(giveaway.get("points")) == 50
 
@@ -602,6 +641,7 @@ def fetch_store_media(app_id: int) -> dict[str, str]:
     data = (payload.get(str(app_id)) or {}).get("data") or {}
     release_date = (data.get("release_date") or {})
     return {
+        "name": str(data.get("name") or ""),
         "headerImageUrl": str(data.get("header_image") or ""),
         "capsuleImageUrl": str(data.get("capsule_image") or ""),
         "capsuleSmallUrl": str(data.get("capsule_imagev5") or data.get("capsule_image") or ""),
@@ -623,6 +663,7 @@ def fetch_store_media_batch(app_ids: list[int]) -> dict[int, dict[str, str]]:
         release_date = (data.get("release_date") or {})
         results[app_id] = {
             "appId": app_id,
+            "name": str(data.get("name") or ""),
             "headerImageUrl": str(data.get("header_image") or ""),
             "capsuleImageUrl": str(data.get("capsule_image") or ""),
             "capsuleSmallUrl": str(data.get("capsule_imagev5") or data.get("capsule_image") or ""),
@@ -2029,29 +2070,15 @@ class Handler(SimpleHTTPRequestHandler):
                         status=HTTPStatus.BAD_REQUEST,
                     )
                     return
-                payload = self.read_json()
-                target_month = payload.get("month") if isinstance(payload, dict) else None
-                full_refresh = bool(payload.get("fullRefresh")) if isinstance(payload, dict) else False
-                self.write_json(
-                    refresh_steam_progress(
-                        sync_payload,
-                        target_month=target_month,
-                        full_refresh=full_refresh,
-                    )
-                )
+                self.read_json()
+                # Always a full refresh: the playtime-delta gate keeps it cheap,
+                # so there is no per-month scope to get out of sync with the UI.
+                self.write_json(refresh_steam_progress(sync_payload, full_refresh=True))
                 return
             if parsed.path == "/api/refresh-steam-library":
                 sync_payload = load_json(SYNC_PATH, {})
-                payload = self.read_json()
-                target_month = payload.get("month") if isinstance(payload, dict) else None
-                full_refresh = bool(payload.get("fullRefresh")) if isinstance(payload, dict) else False
-                self.write_json(
-                    refresh_steam_library(
-                        sync_payload,
-                        target_month=target_month,
-                        full_refresh=full_refresh,
-                    )
-                )
+                self.read_json()
+                self.write_json(refresh_steam_library(sync_payload, full_refresh=True))
                 return
             if parsed.path == "/api/overrides":
                 payload = self.read_json()
@@ -2105,8 +2132,8 @@ def main() -> None:
     parser.add_argument("--recent-days", type=int, default=365, help="Limit sync media hydration to giveaways from the last N days")
     parser.add_argument("--refresh-steam-library", action="store_true", help="Refresh cached Steam library data")
     parser.add_argument("--refresh-steam-progress", action="store_true", help="Refresh cached Steam progress data")
-    parser.add_argument("--month", help="Refresh only the specified month (YYYY-MM) when applicable")
-    parser.add_argument("--full-refresh", action="store_true", help="Refresh the full active-member history instead of a single month")
+    parser.add_argument("--month", help="(deprecated, ignored) Steam refresh is always full now")
+    parser.add_argument("--full-refresh", action="store_true", help="(now the default) Steam refresh always covers all months")
     parser.add_argument("--include-inactive", action="store_true", help="Also refresh inactive (left-the-group) members; pair with --full-refresh for a one-time all-members run")
     args = parser.parse_args()
 
@@ -2139,6 +2166,9 @@ def main() -> None:
         media_cache = load_json(MEDIA_CACHE_PATH, empty_media_cache())
         missing_before = count_missing_media_entries(sync_payload, media_cache, recent_days=args.recent_days)
         media_cache = hydrate_media_cache_for_sync(sync_payload, media_cache, recent_days=args.recent_days)
+        fixed_titles = fix_truncated_titles(sync_payload, media_cache)
+        if fixed_titles:
+            print(f"Fixed {fixed_titles} truncated giveaway title(s) using the Steam store name.")
         missing_after = count_missing_media_entries(sync_payload, media_cache, recent_days=args.recent_days)
         print(
             "Hydrated Steam media cache:"
@@ -2151,11 +2181,12 @@ def main() -> None:
         sync_payload = sync_payload or load_json(SYNC_PATH, {})
         if not sync_payload.get("giveaways"):
             raise SystemExit("No SteamGifts sync data available yet.")
+        # Always a full refresh now (per-month scope removed); the playtime-delta
+        # gate keeps it cheap. --include-inactive still widens it to everyone.
         if args.refresh_steam_library and not args.refresh_steam_progress:
             library_payload = refresh_steam_library(
                 sync_payload,
-                target_month=args.month,
-                full_refresh=args.full_refresh,
+                full_refresh=True,
                 include_inactive=args.include_inactive,
             )
             print(
@@ -2165,8 +2196,7 @@ def main() -> None:
         if args.refresh_steam_progress:
             progress_payload = refresh_steam_progress(
                 sync_payload,
-                target_month=args.month,
-                full_refresh=args.full_refresh,
+                full_refresh=True,
                 include_inactive=args.include_inactive,
             )
             print(

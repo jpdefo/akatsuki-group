@@ -3180,31 +3180,26 @@ async function publishSharedOverrides() {
   }
 }
 
-async function refreshSteamProgress(options = {}) {
-  const fullRefresh = options.fullRefresh === true;
-  const month = fullRefresh ? null : elements.monthlyFilter?.value || getAvailableMonths()[0] || null;
-  const primaryButton = fullRefresh ? elements.steamRefreshAllButton : elements.steamRefreshButton;
-  const secondaryButton = fullRefresh ? elements.steamRefreshButton : elements.steamRefreshAllButton;
-  const primaryLabel = primaryButton?.textContent;
-  const secondaryLabel = secondaryButton?.textContent;
+async function refreshSteamProgress() {
+  // Always a full refresh (per-month scope removed); the server's playtime-delta
+  // gate means only games actually played since last time are re-fetched.
+  const button = elements.steamRefreshAllButton;
+  const label = button?.textContent;
 
   try {
     if (runtime.staticApi) {
       throw new Error("GitHub Pages is read-only. Refresh cached data through GitHub Actions or the local server.");
     }
-    if (primaryButton) {
-      primaryButton.disabled = true;
-      primaryButton.textContent = fullRefresh ? "Refreshing all..." : "Refreshing month...";
-    }
-    if (secondaryButton) {
-      secondaryButton.disabled = true;
+    if (button) {
+      button.disabled = true;
+      button.textContent = "Refreshing Steam data...";
     }
     const response = await fetch("./api/refresh-steam-progress", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ month, fullRefresh }),
+      body: JSON.stringify({ fullRefresh: true }),
     });
     const payload = await response.json().catch(() => null);
     if (!response.ok) {
@@ -3218,15 +3213,9 @@ async function refreshSteamProgress(options = {}) {
         "Could not refresh Steam progress. Check that the local server is running and that SteamGifts sync data exists.",
     );
   } finally {
-    if (primaryButton) {
-      primaryButton.disabled = false;
-      primaryButton.textContent =
-        primaryLabel || (fullRefresh ? "Full active refresh" : "Refresh selected month");
-    }
-    if (secondaryButton) {
-      secondaryButton.disabled = false;
-      secondaryButton.textContent =
-        secondaryLabel || (fullRefresh ? "Refresh selected month" : "Full active refresh");
+    if (button) {
+      button.disabled = false;
+      button.textContent = label || "Refresh Steam data";
     }
   }
 }
