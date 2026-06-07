@@ -1,11 +1,13 @@
 // ==UserScript==
 // @name         Akatsuki SteamGifts Sync
 // @namespace    akatsuki-monitor
-// @version      1.0.0
+// @version      1.1.0
 // @description  Collect Akatsuki members, giveaways, entries and winners from the logged-in SteamGifts session and send them to the local monitor server.
 // @match        https://www.steamgifts.com/group/*/*
 // @match        https://www.steamgifts.com/group/*/*/users*
 // @grant        none
+// @downloadURL  https://raw.githubusercontent.com/jpdefo/akatsuki-group/main/akatsuki-steamgifts-sync.user.js
+// @updateURL    https://raw.githubusercontent.com/jpdefo/akatsuki-group/main/akatsuki-steamgifts-sync.user.js
 // ==/UserScript==
 
 (function () {
