@@ -221,14 +221,13 @@
       const rowText = normalizeText(row.textContent || "");
       const entryLink = Array.from(row.querySelectorAll('a[href$="/entries"]')).find(Boolean);
       const timestamps = Array.from(row.querySelectorAll("[data-timestamp]"));
-      const endTimestamp = timestamps.length
-        ? Number(timestamps[timestamps.length - 1].getAttribute("data-timestamp")) * 1000
-        : null;
-      // First data-timestamp is the created/start time; only trust it when there
-      // are at least two (a single one is the end time).
-      const startTimestamp = timestamps.length >= 2
-        ? Number(timestamps[0].getAttribute("data-timestamp")) * 1000
-        : null;
+      // A group-page row shows two times: the earlier is the creation date, the
+      // later is the end date. Identify them by value, not DOM order.
+      const tsValues = timestamps
+        .map((el) => Number(el.getAttribute("data-timestamp")) * 1000)
+        .filter((value) => Number.isFinite(value) && value > 0);
+      const startTimestamp = tsValues.length ? Math.min(...tsValues) : null;
+      const endTimestamp = tsValues.length >= 2 ? Math.max(...tsValues) : null;
       const { appId, steamAppUrl } = extractAppInfo(row);
       const media = extractSteamMedia(row, appId);
       const winnerInfo = extractWinnerInfo(rowText, primaryUser, secondaryUsers, endTimestamp);

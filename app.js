@@ -321,6 +321,19 @@ function render() {
   renderMemberBuckets();
 }
 
+// Created = the earlier captured timestamp; End = the later one, shown only when
+// we actually captured a distinct end (i.e. after a fresh group-page scrape).
+// Older data only has the creation date, so End stays hidden until re-scraped.
+function getGiveawayCreatedDisplay(giveaway) {
+  return giveaway?.startDate || giveaway?.endDate || "";
+}
+
+function getGiveawayEndedDisplay(giveaway) {
+  const start = giveaway?.startDate;
+  const end = giveaway?.endDate;
+  return start && end && start !== end ? end : "";
+}
+
 function sortAllGiveaways(giveaways, sortValue) {
   const endOf = (g) => String(g.createdAt || ""); // createdAt holds the giveaway end date for synced giveaways
   const byCreator = (g) => getCycleGiveawayCreatorLabel(g);
@@ -446,8 +459,8 @@ function renderAllGiveawaysPage() {
               <td>${thumbCell}</td>
               <td>
                 <strong>${titleMarkup}</strong>
-                <span class="meta-line">Created: ${escapeHtml(formatDateTime(giveaway.startDate))}</span>
-                <span class="meta-line">Ended: ${escapeHtml(formatDateTime(giveaway.endDate || giveaway.createdAt))}</span>
+                <span class="meta-line">Created: ${escapeHtml(formatDateTime(getGiveawayCreatedDisplay(giveaway)))}</span>
+                ${getGiveawayEndedDisplay(giveaway) ? `<span class="meta-line">Ended: ${escapeHtml(formatDateTime(getGiveawayEndedDisplay(giveaway)))}</span>` : ""}
               </td>
               <td>${escapeHtml(creator?.name || giveaway.creatorUsername || "Unknown member")}</td>
               <td>
@@ -1364,8 +1377,8 @@ function renderSummerEventPage() {
                 <td>${thumbCell}</td>
                 <td>
                   <strong>${titleMarkup}</strong>
-                  <span class="meta-line">Created: ${escapeHtml(formatDateTime(giveaway.startDate))}</span>
-                  <span class="meta-line">Ended: ${escapeHtml(formatDateTime(giveaway.endDate))}</span>
+                  <span class="meta-line">Created: ${escapeHtml(formatDateTime(getGiveawayCreatedDisplay(giveaway)))}</span>
+                  ${getGiveawayEndedDisplay(giveaway) ? `<span class="meta-line">Ended: ${escapeHtml(formatDateTime(getGiveawayEndedDisplay(giveaway)))}</span>` : ""}
                 </td>
                 <td>
                   <strong>${creatorMarkup}</strong>
@@ -3588,7 +3601,7 @@ function upsertGiveawayFromSync(giveawayRecord, creatorId) {
     creatorId,
     title: giveawayRecord.title,
     type: "sync",
-    createdAt: giveawayRecord.endDate || state.settings.currentDate,
+    createdAt: giveawayRecord.startDate || giveawayRecord.endDate || state.settings.currentDate,
     valuePoints: Number(giveawayRecord.points || 0),
     entriesCount: Number(giveawayRecord.entriesCount || 0),
     regionLocked: Boolean(giveawayRecord.regionRestricted),
