@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Akatsuki SteamGifts Sync
 // @namespace    akatsuki-monitor
-// @version      1.2.0
+// @version      1.3.0
 // @description  Collect Akatsuki members, giveaways, entries and winners from the logged-in SteamGifts session and send them to the local monitor server.
 // @match        https://www.steamgifts.com/group/*/*
 // @match        https://www.steamgifts.com/group/*/*/users*
@@ -26,6 +26,7 @@
   const GITHUB_SYNC_PATH = "data/steamgifts-sync.json";
   const GITHUB_TOKEN_KEY = "akatsuki-github-token";
   const PUBLISHED_SYNC_URL = `https://raw.githubusercontent.com/${GITHUB_REPO.owner}/${GITHUB_REPO.name}/${GITHUB_REPO.branch}/${GITHUB_SYNC_PATH}`;
+  const PUBLISHED_OVERRIDES_URL = `https://raw.githubusercontent.com/${GITHUB_REPO.owner}/${GITHUB_REPO.name}/${GITHUB_REPO.branch}/data/overrides.json`;
   const state = {
     running: false,
     panel: null,
@@ -142,6 +143,30 @@
 
       if (!finalGiveaways.length) {
         throw new Error("No giveaways collected; aborting so empty data is never published.");
+      }
+
+      // Giveaways manually promoted to summer_event (kind override) may never have
+      // had their entrants collected, since the collector classifies from the
+      // description. Fetch /entries for any promoted giveaway that lacks them,
+      // even old ones, so their summer-event entry points can be computed.
+      const summerOverrideCodes = await loadSummerEventOverrideCodes();
+      const giveawaysNeedingEntries = finalGiveaways.filter(
+        (giveaway) =>
+          giveaway?.url &&
+          summerOverrideCodes.has(String(giveaway.code)) &&
+          !(Array.isArray(giveaway.entryUsers) && giveaway.entryUsers.length > 0),
+      );
+      if (giveawaysNeedingEntries.length) {
+        log(`Fetching entrants for ${giveawaysNeedingEntries.length} promoted summer-event giveaway(s)...`);
+        for (const [index, giveaway] of giveawaysNeedingEntries.entries()) {
+          log(`  entrants ${index + 1}/${giveawaysNeedingEntries.length}: ${giveaway.title}`);
+          const snapshot = await fetchGiveawayEntries(giveaway.url);
+          if (snapshot && Array.isArray(snapshot.users)) {
+            giveaway.entryUsers = snapshot.users;
+            giveaway.entriesSnapshotAt = snapshot.capturedAt;
+            giveaway.entriesFinalized = isGiveawayEnded(giveaway);
+          }
+        }
       }
 
       const payload = {
@@ -399,6 +424,43 @@
       log(`Could not load published data: ${error.message}`);
     }
     return {};
+  }
+
+  async function loadSummerEventOverrideCodes() {
+    // Read the giveaway kind overrides (local server first, else published
+    // overrides.json) and return the set of giveaway codes promoted to
+    // summer_event, so the collector can fetch their entrants.
+    const extract = (payload) => {
+      const giveaways = payload?.overrides?.giveaways || payload?.giveaways || {};
+      return new Set(
+        Object.entries(giveaways)
+          .filter(([, entry]) => String(entry?.giveawayKindOverride || "").trim() === "summer_event")
+          .map(([key]) => String(key).replace(/^sg-/, "")),
+      );
+    };
+
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(() => controller.abort(), LOCAL_SERVER_TIMEOUT_MS);
+    try {
+      const response = await fetch("http://127.0.0.1:4173/api/overrides", { signal: controller.signal });
+      if (response.ok) {
+        return extract(await response.json());
+      }
+    } catch {
+      /* fall through to the published overrides */
+    } finally {
+      window.clearTimeout(timeoutId);
+    }
+
+    try {
+      const response = await fetch(`${PUBLISHED_OVERRIDES_URL}?_=${Date.now()}`, { cache: "no-store" });
+      if (response.ok) {
+        return extract(await response.json());
+      }
+    } catch {
+      /* ignore */
+    }
+    return new Set();
   }
 
   async function publishSyncToGitHub(payload) {
