@@ -1,9 +1,9 @@
 {
   "source": "akatsuki-steamgifts-sync",
-  "syncedAt": "2026-06-07T17:26:24.774Z",
+  "syncedAt": "2026-06-07T22:22:22.291Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
-    "name": "AKATSUKI GAMES S.GIFTS"
+    "name": "AKATSUKI GAMES S.GIFTS - Page 1"
   },
   "members": [
     {
@@ -7175,7 +7175,7 @@
       "points": 20,
       "regionRestricted": false,
       "giveawayKindChecked": true,
-      "entriesFinalized": false,
+      "entriesFinalized": true,
       "steamStoreType": "app",
       "steamStoreId": 2784470,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2784470/header.jpg",
@@ -7183,7 +7183,14 @@
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2784470/52914cecbaa148fd0533aff3c5297306757cd4a0/capsule_184x69.jpg",
       "startDate": "2025-07-03T23:37:46.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "2026-06-07T22:22:20.543Z",
+      "entryUsers": [
+        "BojanNS987",
+        "Saikania",
+        "Wintermute101",
+        "xMisiu",
+        "DeliberateTaco"
+      ]
     },
     {
       "code": "C4h91",
@@ -7620,7 +7627,7 @@
       "points": 20,
       "regionRestricted": false,
       "giveawayKindChecked": true,
-      "entriesFinalized": false,
+      "entriesFinalized": true,
       "steamStoreType": "app",
       "steamStoreId": 1876590,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1876590/header.jpg",
@@ -7628,7 +7635,12 @@
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1876590/9baf542a9b11a6be6b621de35b41ab4ed744725c/capsule_184x69.jpg",
       "startDate": "2025-07-01T19:14:35.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "2026-06-07T22:22:20.905Z",
+      "entryUsers": [
+        "Oozyyy",
+        "BojanNS987",
+        "leniu"
+      ]
     },
     {
       "code": "aByGi",
@@ -9323,7 +9335,7 @@
       "appId": 1145350,
       "steamAppUrl": "https://store.steampowered.com/app/1145350?utm_source=SteamGifts",
       "entriesCount": 2,
-      "endDate": "2025-06-28T15:33:49.000Z",
+      "endDate": "2025-06-30T17:00:00.000Z",
       "winners": [
         {
           "username": "Youdontknow",
@@ -9345,7 +9357,11 @@
         "burntreynolds444"
       ],
       "steamStoreType": "app",
-      "steamStoreId": 1145350
+      "steamStoreId": 1145350,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1145350/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1145350/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145350/10c9138570a8d7ac9144f601ab0f2ccbc820337e/capsule_184x69.jpg",
+      "startDate": "2025-06-28T15:33:49.000Z"
     },
     {
       "code": "vVQZf",
@@ -9964,13 +9980,13 @@
     {
       "code": "ftcim",
       "url": "https://www.steamgifts.com/giveaway/ftcim/the-elder-scrolls-iv-oblivion-remastered",
-      "title": "The Elder Scrolls IV: Oblivion Remastered",
+      "title": "The Elder Scrolls IV: Oblivion Remast...",
       "creatorUsername": "Oozyyy",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Oozyyy",
       "appId": 2623190,
       "steamAppUrl": "https://store.steampowered.com/app/2623190?utm_source=SteamGifts",
       "entriesCount": 4,
-      "endDate": "2025-06-27T16:09:58.000Z",
+      "endDate": "2025-06-30T17:08:00.000Z",
       "winners": [
         {
           "username": "Millsshogun",
@@ -9999,7 +10015,11 @@
       "steamPriceCurrency": "USD",
       "steamListPriceCents": 4999,
       "steamFinalPriceCents": 4999,
-      "steamPricePoints": 50
+      "steamPricePoints": 50,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2623190/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2623190/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2623190/4efc3257aabd776d4624da40146fb021d1ef5b38/capsule_184x69.jpg",
+      "startDate": "2025-06-27T16:09:58.000Z"
     },
     {
       "code": "IFBQo",
@@ -10063,7 +10083,7 @@
       "points": 50,
       "regionRestricted": false,
       "giveawayKindChecked": true,
-      "entriesFinalized": false,
+      "entriesFinalized": true,
       "steamStoreType": "app",
       "steamStoreId": 1771300,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1771300/header.jpg",
@@ -10071,7 +10091,13 @@
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1771300/93e28946c46f09d761bbfab1e17e8c1c4a8323a0/capsule_184x69.jpg",
       "startDate": "2025-06-27T09:13:02.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "2026-06-07T22:22:21.237Z",
+      "entryUsers": [
+        "Krlesnik",
+        "zettaivanugen",
+        "Saikania",
+        "burntreynolds444"
+      ]
     },
     {
       "code": "Zr1zf",
@@ -10127,7 +10153,7 @@
       "appId": 1902960,
       "steamAppUrl": "https://store.steampowered.com/app/1902960?utm_source=SteamGifts",
       "entriesCount": 3,
-      "endDate": "2025-06-27T07:36:47.000Z",
+      "endDate": "2025-06-30T15:00:00.000Z",
       "winners": [
         {
           "username": "Ernesttico",
@@ -10150,7 +10176,11 @@
         "leniu"
       ],
       "steamStoreType": "app",
-      "steamStoreId": 1902960
+      "steamStoreId": 1902960,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1902960/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1902960/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1902960/capsule_184x69.jpg",
+      "startDate": "2025-06-27T07:36:47.000Z"
     },
     {
       "code": "OZw26",
@@ -10651,7 +10681,7 @@
       "appId": 2784470,
       "steamAppUrl": "https://store.steampowered.com/app/2784470?utm_source=SteamGifts",
       "entriesCount": 4,
-      "endDate": "2025-06-26T20:16:11.000Z",
+      "endDate": "2025-06-30T15:00:00.000Z",
       "winners": [
         {
           "username": "Youdontknow",
@@ -10675,7 +10705,11 @@
         "burntreynolds444"
       ],
       "steamStoreType": "app",
-      "steamStoreId": 2784470
+      "steamStoreId": 2784470,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2784470/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2784470/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2784470/52914cecbaa148fd0533aff3c5297306757cd4a0/capsule_184x69.jpg",
+      "startDate": "2025-06-26T20:16:11.000Z"
     },
     {
       "code": "VzaGi",
@@ -10686,7 +10720,7 @@
       "appId": 2450840,
       "steamAppUrl": "https://store.steampowered.com/app/2450840?utm_source=SteamGifts",
       "entriesCount": 1,
-      "endDate": "2025-06-26T20:12:46.000Z",
+      "endDate": "2025-06-30T15:00:00.000Z",
       "winners": [
         {
           "username": "chOOkity",
@@ -10707,7 +10741,11 @@
         "chOOkity"
       ],
       "steamStoreType": "app",
-      "steamStoreId": 2450840
+      "steamStoreId": 2450840,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2450840/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2450840/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2450840/2c7d0bc92312ac29140cddbe8e08acd3e5beaac6/capsule_184x69.jpg",
+      "startDate": "2025-06-26T20:12:46.000Z"
     },
     {
       "code": "BCqGd",
@@ -10718,7 +10756,7 @@
       "appId": 1244090,
       "steamAppUrl": "https://store.steampowered.com/app/1244090?utm_source=SteamGifts",
       "entriesCount": 3,
-      "endDate": "2025-06-26T20:00:03.000Z",
+      "endDate": "2025-06-29T21:00:00.000Z",
       "winners": [
         {
           "username": "xMisiu",
@@ -10741,7 +10779,11 @@
         "burntreynolds444"
       ],
       "steamStoreType": "app",
-      "steamStoreId": 1244090
+      "steamStoreId": 1244090,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1244090/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1244090/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1244090/07c31553c860220fcdae733c9a42b2c20eb23fda/capsule_184x69.jpg",
+      "startDate": "2025-06-26T20:00:03.000Z"
     },
     {
       "code": "ztikS",
@@ -10876,7 +10918,7 @@
       "points": 40,
       "regionRestricted": false,
       "giveawayKindChecked": true,
-      "entriesFinalized": false,
+      "entriesFinalized": true,
       "steamStoreType": "app",
       "steamStoreId": 1934570,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1934570/header.jpg",
@@ -10884,7 +10926,15 @@
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1934570/01f2b028cd34f164748efd277d43f55b1c7e9b31/capsule_184x69.jpg",
       "startDate": "2025-06-26T18:22:06.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "2026-06-07T22:22:21.602Z",
+      "entryUsers": [
+        "DeliberateTaco",
+        "chOOkity",
+        "xMisiu",
+        "Ernesttico",
+        "leniu",
+        "Saikania"
+      ]
     },
     {
       "code": "1iJMP",
@@ -10909,7 +10959,7 @@
       "points": 30,
       "regionRestricted": false,
       "giveawayKindChecked": true,
-      "entriesFinalized": false,
+      "entriesFinalized": true,
       "steamStoreType": "app",
       "steamStoreId": 1569580,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1569580/header.jpg",
@@ -10917,7 +10967,13 @@
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1569580/4f81a42ebaca088b16d5501914c6885e49f6c411/capsule_184x69.jpg",
       "startDate": "2025-06-26T18:17:46.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "2026-06-07T22:22:21.924Z",
+      "entryUsers": [
+        "Millsshogun",
+        "Ernesttico",
+        "BojanNS987",
+        "xMisiu"
+      ]
     },
     {
       "code": "mxsyt",
@@ -10978,7 +11034,7 @@
       "points": 50,
       "regionRestricted": false,
       "giveawayKindChecked": true,
-      "entriesFinalized": false,
+      "entriesFinalized": true,
       "steamStoreType": "app",
       "steamStoreId": 2215430,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2215430/header.jpg",
@@ -10986,7 +11042,14 @@
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215430/capsule_184x69.jpg",
       "startDate": "2025-06-26T18:15:27.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "2026-06-07T22:22:22.291Z",
+      "entryUsers": [
+        "chOOkity",
+        "xMisiu",
+        "Krlesnik",
+        "Wintermute101",
+        "Youdontknow"
+      ]
     },
     {
       "code": "K55XI",
@@ -10997,7 +11060,7 @@
       "appId": 2909400,
       "steamAppUrl": "https://store.steampowered.com/app/2909400?utm_source=SteamGifts",
       "entriesCount": 5,
-      "endDate": "2025-06-26T18:03:13.000Z",
+      "endDate": "2025-06-30T15:00:00.000Z",
       "winners": [
         {
           "username": "Wintermute101",
@@ -11028,7 +11091,11 @@
       "steamPriceCurrency": "USD",
       "steamListPriceCents": 4999,
       "steamFinalPriceCents": 4999,
-      "steamPricePoints": 50
+      "steamPricePoints": 50,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2909400/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2909400/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2909400/159fb57397e436d35ae20ba0f62ba7a7f2974cb9/capsule_184x69.jpg",
+      "startDate": "2025-06-26T18:03:13.000Z"
     },
     {
       "code": "VrQEE",
@@ -11039,7 +11106,7 @@
       "appId": 668580,
       "steamAppUrl": "https://store.steampowered.com/app/668580?utm_source=SteamGifts",
       "entriesCount": 3,
-      "endDate": "2025-06-26T18:01:53.000Z",
+      "endDate": "2025-06-30T15:00:00.000Z",
       "winners": [
         {
           "username": "DeliberateTaco",
@@ -11068,7 +11135,11 @@
       "steamPriceCurrency": "USD",
       "steamListPriceCents": 5999,
       "steamFinalPriceCents": 5999,
-      "steamPricePoints": 60
+      "steamPricePoints": 60,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/668580/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/668580/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/668580/capsule_184x69.jpg",
+      "startDate": "2025-06-26T18:01:53.000Z"
     },
     {
       "code": "NnDNP",
@@ -11079,7 +11150,7 @@
       "appId": 1620730,
       "steamAppUrl": "https://store.steampowered.com/app/1620730?utm_source=SteamGifts",
       "entriesCount": 3,
-      "endDate": "2025-06-26T18:01:27.000Z",
+      "endDate": "2025-06-29T18:00:00.000Z",
       "winners": [
         {
           "username": "leniu",
@@ -11108,7 +11179,11 @@
       "steamPriceCurrency": "USD",
       "steamListPriceCents": 4999,
       "steamFinalPriceCents": 1999,
-      "steamPricePoints": 50
+      "steamPricePoints": 50,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1620730/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1620730/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1620730/98e4f03b30ee333cd17ae612beca44dc50cccb1b/capsule_184x69.jpg",
+      "startDate": "2025-06-26T18:01:27.000Z"
     },
     {
       "code": "wv5Uq",
@@ -11119,7 +11194,7 @@
       "appId": 1446650,
       "steamAppUrl": "https://store.steampowered.com/app/1446650?utm_source=SteamGifts",
       "entriesCount": 2,
-      "endDate": "2025-06-26T17:54:41.000Z",
+      "endDate": "2025-06-30T15:00:00.000Z",
       "winners": [
         {
           "username": "BojanNS987",
@@ -11147,7 +11222,11 @@
       "steamPriceCurrency": "USD",
       "steamListPriceCents": 5999,
       "steamFinalPriceCents": 5999,
-      "steamPricePoints": 60
+      "steamPricePoints": 60,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1446650/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1446650/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1446650/capsule_184x69.jpg",
+      "startDate": "2025-06-26T17:54:41.000Z"
     },
     {
       "code": "pLrEL",
@@ -11158,7 +11237,7 @@
       "appId": 1671210,
       "steamAppUrl": "https://store.steampowered.com/app/1671210?utm_source=SteamGifts",
       "entriesCount": 4,
-      "endDate": "2025-06-26T17:53:14.000Z",
+      "endDate": "2025-06-29T19:00:00.000Z",
       "winners": [
         {
           "username": "BojanNS987",
@@ -11182,7 +11261,11 @@
         "BojanNS987"
       ],
       "steamStoreType": "app",
-      "steamStoreId": 1671210
+      "steamStoreId": 1671210,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1671210/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1671210/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1671210/capsule_184x69.jpg",
+      "startDate": "2025-06-26T17:53:14.000Z"
     },
     {
       "code": "TQCB5",
@@ -11193,7 +11276,7 @@
       "appId": 1332010,
       "steamAppUrl": "https://store.steampowered.com/app/1332010?utm_source=SteamGifts",
       "entriesCount": 1,
-      "endDate": "2025-06-26T17:49:00.000Z",
+      "endDate": "2025-06-30T15:00:00.000Z",
       "winners": [
         {
           "username": "Krlesnik",
@@ -11214,7 +11297,11 @@
         "Krlesnik"
       ],
       "steamStoreType": "app",
-      "steamStoreId": 1332010
+      "steamStoreId": 1332010,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1332010/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1332010/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1332010/01489897d641b7f2e734a436dfabdd74afd4c677/capsule_184x69.jpg",
+      "startDate": "2025-06-26T17:49:00.000Z"
     },
     {
       "code": "KXV1N",
@@ -11225,7 +11312,7 @@
       "appId": 490110,
       "steamAppUrl": "https://store.steampowered.com/app/490110?utm_source=SteamGifts",
       "entriesCount": 3,
-      "endDate": "2025-06-26T17:48:11.000Z",
+      "endDate": "2025-06-29T19:00:00.000Z",
       "winners": [
         {
           "username": "Ernesttico",
@@ -11248,7 +11335,11 @@
         "burntreynolds444"
       ],
       "steamStoreType": "app",
-      "steamStoreId": 490110
+      "steamStoreId": 490110,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/490110/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/490110/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/490110/capsule_184x69.jpg",
+      "startDate": "2025-06-26T17:48:11.000Z"
     },
     {
       "code": "T3MEG",
@@ -11259,7 +11350,7 @@
       "appId": 2756920,
       "steamAppUrl": "https://store.steampowered.com/app/2756920?utm_source=SteamGifts",
       "entriesCount": 7,
-      "endDate": "2025-06-26T17:42:29.000Z",
+      "endDate": "2025-06-29T19:00:00.000Z",
       "winners": [
         {
           "username": "BojanNS987",
@@ -11286,7 +11377,11 @@
         "DeliberateTaco"
       ],
       "steamStoreType": "app",
-      "steamStoreId": 2756920
+      "steamStoreId": 2756920,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2756920/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2756920/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2756920/66761a59e36c29839be0a2917df4a2dbac6620e8/capsule_184x69.jpg",
+      "startDate": "2025-06-26T17:42:29.000Z"
     },
     {
       "code": "bWuX5",
@@ -11297,7 +11392,7 @@
       "appId": 1285190,
       "steamAppUrl": "https://store.steampowered.com/app/1285190?utm_source=SteamGifts",
       "entriesCount": 5,
-      "endDate": "2025-06-26T17:36:09.000Z",
+      "endDate": "2025-06-29T19:00:00.000Z",
       "winners": [
         {
           "username": "zettaivanugen",
@@ -11328,7 +11423,11 @@
       "steamPriceCurrency": "USD",
       "steamListPriceCents": 6999,
       "steamFinalPriceCents": 4199,
-      "steamPricePoints": 70
+      "steamPricePoints": 70,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1285190/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1285190/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1285190/capsule_184x69.jpg",
+      "startDate": "2025-06-26T17:36:09.000Z"
     },
     {
       "code": "Gy0oM",
@@ -11339,7 +11438,7 @@
       "appId": 2417610,
       "steamAppUrl": "https://store.steampowered.com/app/2417610?utm_source=SteamGifts",
       "entriesCount": 8,
-      "endDate": "2025-06-26T17:35:33.000Z",
+      "endDate": "2025-06-29T19:00:00.000Z",
       "winners": [
         {
           "username": "chOOkity",
@@ -11373,7 +11472,11 @@
       "steamPriceCurrency": "USD",
       "steamListPriceCents": 6999,
       "steamFinalPriceCents": 6999,
-      "steamPricePoints": 70
+      "steamPricePoints": 70,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2417610/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2417610/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2417610/fcf468fafa62aa13ac11f1ad2f84cab740eac6af/capsule_184x69.jpg",
+      "startDate": "2025-06-26T17:35:33.000Z"
     },
     {
       "code": "d2f3X",
@@ -11384,7 +11487,7 @@
       "appId": 1903340,
       "steamAppUrl": "https://store.steampowered.com/app/1903340?utm_source=SteamGifts",
       "entriesCount": 7,
-      "endDate": "2025-06-26T17:34:34.000Z",
+      "endDate": "2025-06-29T19:00:00.000Z",
       "winners": [
         {
           "username": "DeliberateTaco",
@@ -11417,7 +11520,11 @@
       "steamPriceCurrency": "USD",
       "steamListPriceCents": 4999,
       "steamFinalPriceCents": 4999,
-      "steamPricePoints": 50
+      "steamPricePoints": 50,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1903340/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1903340/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1903340/001d4a5d81e4bb9055b789240e78e04ef6e6da38/capsule_184x69.jpg",
+      "startDate": "2025-06-26T17:34:34.000Z"
     },
     {
       "code": "pZvb6",
@@ -11428,7 +11535,7 @@
       "appId": 2668510,
       "steamAppUrl": "https://store.steampowered.com/app/2668510?utm_source=SteamGifts",
       "entriesCount": 6,
-      "endDate": "2025-06-26T17:33:50.000Z",
+      "endDate": "2025-06-29T19:00:00.000Z",
       "winners": [
         {
           "username": "leniu",
@@ -11460,7 +11567,11 @@
       "steamPriceCurrency": "USD",
       "steamListPriceCents": 4999,
       "steamFinalPriceCents": 4999,
-      "steamPricePoints": 50
+      "steamPricePoints": 50,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2668510/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2668510/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2668510/c9c0dd50da5b3543c74beb11b6c806fb9fd88a8c/capsule_184x69.jpg",
+      "startDate": "2025-06-26T17:33:50.000Z"
     },
     {
       "code": "WaeNS",
@@ -11556,7 +11667,7 @@
       "appId": 2627260,
       "steamAppUrl": "https://store.steampowered.com/app/2627260?utm_source=SteamGifts",
       "entriesCount": 3,
-      "endDate": "2025-06-26T17:05:39.000Z",
+      "endDate": "2025-06-29T18:00:00.000Z",
       "winners": [
         {
           "username": "BojanNS987",
@@ -11585,7 +11696,11 @@
       "steamPriceCurrency": "USD",
       "steamListPriceCents": 6999,
       "steamFinalPriceCents": 6999,
-      "steamPricePoints": 70
+      "steamPricePoints": 70,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2627260/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2627260/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2627260/1a6a9ecfb6f6d62d005a1942ad5c4b4e5bf42d5c/capsule_184x69.jpg",
+      "startDate": "2025-06-26T17:05:39.000Z"
     },
     {
       "code": "XUrRM",
@@ -11725,7 +11840,7 @@
       "appId": 1902960,
       "steamAppUrl": "https://store.steampowered.com/app/1902960?utm_source=SteamGifts",
       "entriesCount": 7,
-      "endDate": "2025-06-22T11:50:09.000Z",
+      "endDate": "2025-06-27T16:00:00.000Z",
       "winners": [
         {
           "username": "chOOkity",
@@ -11742,7 +11857,12 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 1902960
+      "steamStoreId": 1902960,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1902960/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1902960/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1902960/capsule_184x69.jpg",
+      "startDate": "2025-06-22T11:50:09.000Z",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "wI7EE",
@@ -11813,13 +11933,13 @@
     {
       "code": "x3Klc",
       "url": "https://www.steamgifts.com/giveaway/x3Klc/legacy-of-kain-soul-reaver-12-remastered",
-      "title": "Legacy of Kain™ Soul Reaver 1&2 Remastered",
+      "title": "Legacy of Kain Soul Reaver 1&2 Remast...",
       "creatorUsername": "BojanNS987",
       "creatorProfileUrl": "https://www.steamgifts.com/user/BojanNS987",
       "appId": 2521380,
       "steamAppUrl": "https://store.steampowered.com/app/2521380?utm_source=SteamGifts",
       "entriesCount": 29,
-      "endDate": "2025-06-04T08:16:10.000Z",
+      "endDate": "2025-06-15T09:15:00.000Z",
       "winners": [
         {
           "username": "steveywonder75",
@@ -11834,7 +11954,13 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 2521380
+      "steamStoreId": 2521380,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2521380/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2521380/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2521380/66108d2f93d2c57c0c7feefee875236971c84327/capsule_184x69.jpg",
+      "startDate": "2025-06-04T08:16:10.000Z",
+      "giveawayKind": "",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "IrKLd",
@@ -11878,7 +12004,7 @@
       "appId": 3489700,
       "steamAppUrl": "https://store.steampowered.com/app/3489700?utm_source=SteamGifts",
       "entriesCount": 9,
-      "endDate": "2025-06-02T10:07:25.000Z",
+      "endDate": "2025-06-30T18:00:00.000Z",
       "winners": [
         {
           "username": "Horseflesh",
@@ -11901,7 +12027,12 @@
       "steamPriceCurrency": "USD",
       "steamListPriceCents": 5999,
       "steamFinalPriceCents": 5999,
-      "steamPricePoints": 60
+      "steamPricePoints": 60,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3489700/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3489700/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3489700/75914656cad450124a18fef914c5a5f4866ffb67/capsule_184x69.jpg",
+      "startDate": "2025-06-02T10:07:25.000Z",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "NLhhA",
@@ -11912,7 +12043,7 @@
       "appId": 1486920,
       "steamAppUrl": "https://store.steampowered.com/app/1486920?utm_source=SteamGifts",
       "entriesCount": 4,
-      "endDate": "2025-06-01T17:25:44.000Z",
+      "endDate": "2025-06-30T18:00:00.000Z",
       "winners": [
         {
           "username": "Wintermute101",
@@ -11929,7 +12060,12 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 1486920
+      "steamStoreId": 1486920,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1486920/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1486920/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1486920/capsule_184x69.jpg",
+      "startDate": "2025-06-01T17:25:44.000Z",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "qL3YC",
@@ -11940,7 +12076,7 @@
       "appId": 3179730,
       "steamAppUrl": "https://store.steampowered.com/app/3179730?utm_source=SteamGifts",
       "entriesCount": 2,
-      "endDate": "2025-06-01T17:25:19.000Z",
+      "endDate": "2025-06-30T18:00:00.000Z",
       "winners": [
         {
           "username": "zettaivanugen",
@@ -11957,7 +12093,12 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 3179730
+      "steamStoreId": 3179730,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3179730/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3179730/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3179730/fac37b35e4d19cf8a754554e30b944ab8a56e338/capsule_184x69.jpg",
+      "startDate": "2025-06-01T17:25:19.000Z",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "1TdVE",
@@ -11968,7 +12109,7 @@
       "appId": 2756920,
       "steamAppUrl": "https://store.steampowered.com/app/2756920?utm_source=SteamGifts",
       "entriesCount": 7,
-      "endDate": "2025-06-01T16:12:55.000Z",
+      "endDate": "2025-06-30T17:00:00.000Z",
       "winners": [
         {
           "username": "leniu",
@@ -11985,7 +12126,12 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 2756920
+      "steamStoreId": 2756920,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2756920/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2756920/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2756920/66761a59e36c29839be0a2917df4a2dbac6620e8/capsule_184x69.jpg",
+      "startDate": "2025-06-01T16:12:55.000Z",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "orFmd",
@@ -11996,7 +12142,7 @@
       "appId": 2277560,
       "steamAppUrl": "https://store.steampowered.com/app/2277560?utm_source=SteamGifts",
       "entriesCount": 6,
-      "endDate": "2025-06-01T16:12:00.000Z",
+      "endDate": "2025-06-30T17:00:00.000Z",
       "winners": [
         {
           "username": "burntreynolds444",
@@ -12013,7 +12159,12 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 2277560
+      "steamStoreId": 2277560,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2277560/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2277560/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2277560/7ad08d174b97880d3f611a068991b98471d1eb9c/capsule_184x69.jpg",
+      "startDate": "2025-06-01T16:12:00.000Z",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "wmwSr",
@@ -12024,7 +12175,7 @@
       "appId": 1466060,
       "steamAppUrl": "https://store.steampowered.com/app/1466060?utm_source=SteamGifts",
       "entriesCount": 6,
-      "endDate": "2025-06-01T15:29:38.000Z",
+      "endDate": "2025-06-30T18:00:00.000Z",
       "winners": [
         {
           "username": "leniu",
@@ -12041,7 +12192,12 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 1466060
+      "steamStoreId": 1466060,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1466060/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1466060/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1466060/b206ec038e28366626149529b8e873d1ed9d7a7a/capsule_184x69.jpg",
+      "startDate": "2025-06-01T15:29:38.000Z",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "I1p2T",
@@ -12052,7 +12208,7 @@
       "appId": 1903340,
       "steamAppUrl": "https://store.steampowered.com/app/1903340?utm_source=SteamGifts",
       "entriesCount": 4,
-      "endDate": "2025-06-01T15:28:24.000Z",
+      "endDate": "2025-06-30T18:00:00.000Z",
       "winners": [
         {
           "username": "leniu",
@@ -12075,7 +12231,12 @@
       "steamPriceCurrency": "USD",
       "steamListPriceCents": 4999,
       "steamFinalPriceCents": 4999,
-      "steamPricePoints": 50
+      "steamPricePoints": 50,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1903340/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1903340/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1903340/001d4a5d81e4bb9055b789240e78e04ef6e6da38/capsule_184x69.jpg",
+      "startDate": "2025-06-01T15:28:24.000Z",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "TBK7w",
@@ -12086,7 +12247,7 @@
       "appId": 1934570,
       "steamAppUrl": "https://store.steampowered.com/app/1934570?utm_source=SteamGifts",
       "entriesCount": 5,
-      "endDate": "2025-06-01T07:53:20.000Z",
+      "endDate": "2025-06-30T18:00:00.000Z",
       "winners": [
         {
           "username": "eledhrim",
@@ -12103,7 +12264,12 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 1934570
+      "steamStoreId": 1934570,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1934570/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1934570/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1934570/01f2b028cd34f164748efd277d43f55b1c7e9b31/capsule_184x69.jpg",
+      "startDate": "2025-06-01T07:53:20.000Z",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "U27Lp",
@@ -12114,7 +12280,7 @@
       "appId": 2668510,
       "steamAppUrl": "https://store.steampowered.com/app/2668510?utm_source=SteamGifts",
       "entriesCount": 5,
-      "endDate": "2025-06-01T07:53:15.000Z",
+      "endDate": "2025-06-30T18:00:00.000Z",
       "winners": [
         {
           "username": "DeliberateTaco",
@@ -12137,7 +12303,12 @@
       "steamPriceCurrency": "USD",
       "steamListPriceCents": 4999,
       "steamFinalPriceCents": 4999,
-      "steamPricePoints": 50
+      "steamPricePoints": 50,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2668510/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2668510/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2668510/c9c0dd50da5b3543c74beb11b6c806fb9fd88a8c/capsule_184x69.jpg",
+      "startDate": "2025-06-01T07:53:15.000Z",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "XL7zN",
@@ -12148,7 +12319,7 @@
       "appId": 490110,
       "steamAppUrl": "https://store.steampowered.com/app/490110?utm_source=SteamGifts",
       "entriesCount": 5,
-      "endDate": "2025-05-31T06:47:30.000Z",
+      "endDate": "2025-06-28T18:00:00.000Z",
       "winners": [
         {
           "username": "eledhrim",
@@ -12165,7 +12336,12 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 490110
+      "steamStoreId": 490110,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/490110/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/490110/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/490110/capsule_184x69.jpg",
+      "startDate": "2025-05-31T06:47:30.000Z",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "zYKdC",
@@ -12176,7 +12352,7 @@
       "appId": 2277560,
       "steamAppUrl": "https://store.steampowered.com/app/2277560?utm_source=SteamGifts",
       "entriesCount": 6,
-      "endDate": "2025-05-25T21:21:00.000Z",
+      "endDate": "2025-05-30T18:00:00.000Z",
       "winners": [
         {
           "username": "Oozyyy",
@@ -12193,7 +12369,12 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 2277560
+      "steamStoreId": 2277560,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2277560/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2277560/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2277560/7ad08d174b97880d3f611a068991b98471d1eb9c/capsule_184x69.jpg",
+      "startDate": "2025-05-25T21:21:00.000Z",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "6yU4n",
@@ -12204,7 +12385,7 @@
       "appId": 1065310,
       "steamAppUrl": "https://store.steampowered.com/app/1065310?utm_source=SteamGifts",
       "entriesCount": 9,
-      "endDate": "2025-05-24T08:42:27.000Z",
+      "endDate": "2025-05-28T22:00:00.000Z",
       "winners": [
         {
           "username": "LittleB",
@@ -12220,7 +12401,13 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 1065310
+      "steamStoreId": 1065310,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1065310/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1065310/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1065310/capsule_184x69.jpg",
+      "startDate": "2025-05-24T08:42:27.000Z",
+      "giveawayKind": "",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "VJMc9",
@@ -12231,7 +12418,7 @@
       "appId": 490110,
       "steamAppUrl": "https://store.steampowered.com/app/490110?utm_source=SteamGifts",
       "entriesCount": 5,
-      "endDate": "2025-05-21T07:23:18.000Z",
+      "endDate": "2025-05-30T18:00:00.000Z",
       "winners": [
         {
           "username": "BojanNS987",
@@ -12248,7 +12435,12 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 490110
+      "steamStoreId": 490110,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/490110/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/490110/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/490110/capsule_184x69.jpg",
+      "startDate": "2025-05-21T07:23:18.000Z",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "IVfRE",
@@ -12259,7 +12451,7 @@
       "appId": 1684350,
       "steamAppUrl": "https://store.steampowered.com/app/1684350?utm_source=SteamGifts",
       "entriesCount": 17,
-      "endDate": "2025-05-16T14:05:53.000Z",
+      "endDate": "2025-05-19T15:04:00.000Z",
       "winners": [
         {
           "username": "ElMatadorYTyrannos",
@@ -12275,7 +12467,13 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 1684350
+      "steamStoreId": 1684350,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1684350/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1684350/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1684350/448960e01c761c4b9a4046ee47b44b409c813313/capsule_184x69.jpg",
+      "startDate": "2025-05-16T14:05:53.000Z",
+      "giveawayKind": "",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "djAmk",
@@ -12286,7 +12484,7 @@
       "appId": 1875830,
       "steamAppUrl": "https://store.steampowered.com/app/1875830?utm_source=SteamGifts",
       "entriesCount": 2,
-      "endDate": "2025-05-14T10:21:18.000Z",
+      "endDate": "2025-05-30T18:00:00.000Z",
       "winners": [
         {
           "username": "Wintermute101",
@@ -12303,7 +12501,12 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 1875830
+      "steamStoreId": 1875830,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1875830/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1875830/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1875830/capsule_184x69.jpg",
+      "startDate": "2025-05-14T10:21:18.000Z",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "1GlTp",
@@ -12314,7 +12517,7 @@
       "appId": 1627570,
       "steamAppUrl": "https://store.steampowered.com/app/1627570?utm_source=SteamGifts",
       "entriesCount": 1,
-      "endDate": "2025-05-14T09:53:23.000Z",
+      "endDate": "2025-05-30T18:00:00.000Z",
       "winners": [
         {
           "username": "DogOnSG",
@@ -12331,7 +12534,12 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 1627570
+      "steamStoreId": 1627570,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1627570/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1627570/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1627570/eee6343d7a26cea6e2bd2c241300f971a526ba31/capsule_184x69.jpg",
+      "startDate": "2025-05-14T09:53:23.000Z",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "8CkPj",
@@ -12342,7 +12550,7 @@
       "appId": 2679460,
       "steamAppUrl": "https://store.steampowered.com/app/2679460?utm_source=SteamGifts",
       "entriesCount": 6,
-      "endDate": "2025-05-12T22:32:43.000Z",
+      "endDate": "2025-05-30T18:00:00.000Z",
       "winners": [
         {
           "username": "DogOnSG",
@@ -12365,7 +12573,12 @@
       "steamPriceCurrency": "USD",
       "steamListPriceCents": 6999,
       "steamFinalPriceCents": 6999,
-      "steamPricePoints": 70
+      "steamPricePoints": 70,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2679460/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2679460/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2679460/capsule_184x69.jpg",
+      "startDate": "2025-05-12T22:32:43.000Z",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "8la0R",
@@ -12376,7 +12589,7 @@
       "appId": 2429190,
       "steamAppUrl": "https://store.steampowered.com/app/2429190?utm_source=SteamGifts",
       "entriesCount": 1,
-      "endDate": "2025-05-05T21:27:38.000Z",
+      "endDate": "2025-05-30T18:00:00.000Z",
       "winners": [
         {
           "username": "DeliberateTaco",
@@ -12392,7 +12605,12 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 2429190
+      "steamStoreId": 2429190,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2429190/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2429190/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2429190/capsule_184x69.jpg",
+      "startDate": "2025-05-05T21:27:38.000Z",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "srBY1",
@@ -12403,7 +12621,7 @@
       "appId": 1590760,
       "steamAppUrl": "https://store.steampowered.com/app/1590760?utm_source=SteamGifts",
       "entriesCount": 1,
-      "endDate": "2025-05-05T07:40:29.000Z",
+      "endDate": "2025-05-30T18:00:00.000Z",
       "winners": [
         {
           "username": "burntreynolds444",
@@ -12420,7 +12638,12 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 1590760
+      "steamStoreId": 1590760,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1590760/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1590760/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1590760/14503c6447e20737f8d3a263d82f5a1876581fe0/capsule_184x69.jpg",
+      "startDate": "2025-05-05T07:40:29.000Z",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "tG1li",
@@ -12431,7 +12654,7 @@
       "appId": 1903340,
       "steamAppUrl": "https://store.steampowered.com/app/1903340?utm_source=SteamGifts",
       "entriesCount": 7,
-      "endDate": "2025-05-05T07:26:57.000Z",
+      "endDate": "2025-05-30T18:00:00.000Z",
       "winners": [
         {
           "username": "Youdontknow",
@@ -12454,7 +12677,12 @@
       "steamPriceCurrency": "USD",
       "steamListPriceCents": 4999,
       "steamFinalPriceCents": 4999,
-      "steamPricePoints": 50
+      "steamPricePoints": 50,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1903340/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1903340/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1903340/001d4a5d81e4bb9055b789240e78e04ef6e6da38/capsule_184x69.jpg",
+      "startDate": "2025-05-05T07:26:57.000Z",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "zuQiZ",
@@ -12465,7 +12693,7 @@
       "appId": 1299460,
       "steamAppUrl": "https://store.steampowered.com/app/1299460?utm_source=SteamGifts",
       "entriesCount": 3,
-      "endDate": "2025-05-01T18:01:04.000Z",
+      "endDate": "2025-05-30T18:00:00.000Z",
       "winners": [
         {
           "username": "DeliberateTaco",
@@ -12482,7 +12710,12 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 1299460
+      "steamStoreId": 1299460,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1299460/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1299460/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1299460/68355c76a5d03c7156ba4d0edfaf51c9989d1cc8/capsule_184x69.jpg",
+      "startDate": "2025-05-01T18:01:04.000Z",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "wv8G4",
@@ -12493,7 +12726,7 @@
       "appId": 3017860,
       "steamAppUrl": "https://store.steampowered.com/app/3017860?utm_source=SteamGifts",
       "entriesCount": 4,
-      "endDate": "2025-05-01T15:23:33.000Z",
+      "endDate": "2025-05-30T18:00:00.000Z",
       "winners": [
         {
           "username": "leniu",
@@ -12510,7 +12743,12 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 3017860
+      "steamStoreId": 3017860,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3017860/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3017860/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3017860/4b39d554fb3b3a48ff02e2f05bba7186a58052ce/capsule_184x69.jpg",
+      "startDate": "2025-05-01T15:23:33.000Z",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "GeTI9",
@@ -12521,7 +12759,7 @@
       "appId": 2239710,
       "steamAppUrl": "https://store.steampowered.com/app/2239710?utm_source=SteamGifts",
       "entriesCount": 1,
-      "endDate": "2025-05-01T13:52:07.000Z",
+      "endDate": "2025-05-30T17:00:00.000Z",
       "winners": [
         {
           "username": "Horseflesh",
@@ -12538,7 +12776,12 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 2239710
+      "steamStoreId": 2239710,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2239710/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2239710/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2239710/capsule_184x69.jpg",
+      "startDate": "2025-05-01T13:52:07.000Z",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "pzZOS",
@@ -12549,7 +12792,7 @@
       "appId": 2622380,
       "steamAppUrl": "https://store.steampowered.com/app/2622380?utm_source=SteamGifts",
       "entriesCount": 1,
-      "endDate": "2025-05-01T13:23:37.000Z",
+      "endDate": "2025-05-30T18:00:00.000Z",
       "winners": [
         {
           "username": "Horseflesh",
@@ -12566,7 +12809,12 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 2622380
+      "steamStoreId": 2622380,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2622380/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2622380/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2622380/8ebc4260af27bc55ba8b88982fd7eb7f970d43c9/capsule_184x69.jpg",
+      "startDate": "2025-05-01T13:23:37.000Z",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "9mCfa",
@@ -12577,7 +12825,7 @@
       "appId": 2585830,
       "steamAppUrl": "https://store.steampowered.com/app/2585830?utm_source=SteamGifts",
       "entriesCount": 4,
-      "endDate": "2025-05-01T12:10:38.000Z",
+      "endDate": "2025-05-30T18:00:00.000Z",
       "winners": [
         {
           "username": "WNDRLST",
@@ -12594,7 +12842,12 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 2585830
+      "steamStoreId": 2585830,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2585830/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2585830/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2585830/4742d744a7080c9bdeba967b5ff1ab4d143c6ae2/capsule_184x69.jpg",
+      "startDate": "2025-05-01T12:10:38.000Z",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "FbxDh",
@@ -12605,7 +12858,7 @@
       "appId": 1880610,
       "steamAppUrl": "https://store.steampowered.com/app/1880610?utm_source=SteamGifts",
       "entriesCount": 3,
-      "endDate": "2025-05-01T10:56:36.000Z",
+      "endDate": "2025-05-30T18:00:00.000Z",
       "winners": [
         {
           "username": "WNDRLST",
@@ -12622,18 +12875,23 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 1880610
+      "steamStoreId": 1880610,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1880610/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1880610/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1880610/f56e56f1a8e6f8c9d49834a604636106f4d9b358/capsule_184x69.jpg",
+      "startDate": "2025-05-01T10:56:36.000Z",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "hfaC1",
       "url": "https://www.steamgifts.com/giveaway/hfaC1/suikoden-iii-hd-remaster-gate-rune-and-dunan-unification-wars",
-      "title": "Suikoden I&II HD Remaster Gate Rune and Dunan Unification Wars",
+      "title": "Suikoden I&II HD Remaster Gate Rune a...",
       "creatorUsername": "DogOnSG",
       "creatorProfileUrl": "https://www.steamgifts.com/user/DogOnSG",
       "appId": 1932640,
       "steamAppUrl": "https://store.steampowered.com/app/1932640?utm_source=SteamGifts",
       "entriesCount": 3,
-      "endDate": "2025-05-01T08:38:04.000Z",
+      "endDate": "2025-05-30T18:00:00.000Z",
       "winners": [
         {
           "username": "leniu",
@@ -12649,18 +12907,23 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 1932640
+      "steamStoreId": 1932640,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1932640/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1932640/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1932640/59838dd70e49aa7c0128921378f509f21fdf242e/capsule_184x69.jpg",
+      "startDate": "2025-05-01T08:38:04.000Z",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "thn7B",
       "url": "https://www.steamgifts.com/giveaway/thn7B/the-elder-scrolls-iv-oblivion-remastered",
-      "title": "The Elder Scrolls IV: Oblivion Remastered",
+      "title": "The Elder Scrolls IV: Oblivion Remast...",
       "creatorUsername": "eledhrim",
       "creatorProfileUrl": "https://www.steamgifts.com/user/eledhrim",
       "appId": 2623190,
       "steamAppUrl": "https://store.steampowered.com/app/2623190?utm_source=SteamGifts",
       "entriesCount": 4,
-      "endDate": "2025-04-30T20:08:33.000Z",
+      "endDate": "2025-05-30T18:00:00.000Z",
       "winners": [
         {
           "username": "leniu",
@@ -12682,7 +12945,12 @@
       "steamPriceCurrency": "USD",
       "steamListPriceCents": 4999,
       "steamFinalPriceCents": 4999,
-      "steamPricePoints": 50
+      "steamPricePoints": 50,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2623190/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2623190/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2623190/4efc3257aabd776d4624da40146fb021d1ef5b38/capsule_184x69.jpg",
+      "startDate": "2025-04-30T20:08:33.000Z",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "VtIvk",
@@ -12693,7 +12961,7 @@
       "appId": 1346360,
       "steamAppUrl": "https://store.steampowered.com/app/1346360?utm_source=SteamGifts",
       "entriesCount": 2,
-      "endDate": "2025-04-25T22:57:23.000Z",
+      "endDate": "2025-04-30T18:00:00.000Z",
       "winners": [
         {
           "username": "DeliberateTaco",
@@ -12710,7 +12978,12 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "steamStoreType": "app",
-      "steamStoreId": 1346360
+      "steamStoreId": 1346360,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1346360/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1346360/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1346360/573b6389f00af0e0b3fd2d5b678d5ba27cfc63e6/capsule_184x69.jpg",
+      "startDate": "2025-04-25T22:57:23.000Z",
+      "entriesSnapshotAt": ""
     },
     {
       "code": "mceGt",
@@ -99763,7 +100036,7 @@
       "winnerUsername": "Youdontknow",
       "creatorUsername": "Wintermute101",
       "entriesCount": 2,
-      "winDate": "2025-06-28T15:33:49.000Z"
+      "winDate": "2025-06-30T17:00:00.000Z"
     },
     {
       "giveawayCode": "vVQZf",
@@ -99902,12 +100175,12 @@
     },
     {
       "giveawayCode": "ftcim",
-      "title": "The Elder Scrolls IV: Oblivion Remastered",
+      "title": "The Elder Scrolls IV: Oblivion Remast...",
       "appId": 2623190,
       "winnerUsername": "Millsshogun",
       "creatorUsername": "Oozyyy",
       "entriesCount": 4,
-      "winDate": "2025-06-27T16:09:58.000Z"
+      "winDate": "2025-06-30T17:08:00.000Z"
     },
     {
       "giveawayCode": "IFBQo",
@@ -99943,7 +100216,7 @@
       "winnerUsername": "Ernesttico",
       "creatorUsername": "Wintermute101",
       "entriesCount": 3,
-      "winDate": "2025-06-27T07:36:47.000Z"
+      "winDate": "2025-06-30T15:00:00.000Z"
     },
     {
       "giveawayCode": "OZw26",
@@ -100051,7 +100324,7 @@
       "winnerUsername": "Youdontknow",
       "creatorUsername": "Saikania",
       "entriesCount": 4,
-      "winDate": "2025-06-26T20:16:11.000Z"
+      "winDate": "2025-06-30T15:00:00.000Z"
     },
     {
       "giveawayCode": "VzaGi",
@@ -100060,7 +100333,7 @@
       "winnerUsername": "chOOkity",
       "creatorUsername": "Saikania",
       "entriesCount": 1,
-      "winDate": "2025-06-26T20:12:46.000Z"
+      "winDate": "2025-06-30T15:00:00.000Z"
     },
     {
       "giveawayCode": "BCqGd",
@@ -100069,7 +100342,7 @@
       "winnerUsername": "xMisiu",
       "creatorUsername": "Koalala",
       "entriesCount": 3,
-      "winDate": "2025-06-26T20:00:03.000Z"
+      "winDate": "2025-06-29T21:00:00.000Z"
     },
     {
       "giveawayCode": "ztikS",
@@ -100141,7 +100414,7 @@
       "winnerUsername": "Wintermute101",
       "creatorUsername": "Saikania",
       "entriesCount": 5,
-      "winDate": "2025-06-26T18:03:13.000Z"
+      "winDate": "2025-06-30T15:00:00.000Z"
     },
     {
       "giveawayCode": "VrQEE",
@@ -100150,7 +100423,7 @@
       "winnerUsername": "DeliberateTaco",
       "creatorUsername": "Saikania",
       "entriesCount": 3,
-      "winDate": "2025-06-26T18:01:53.000Z"
+      "winDate": "2025-06-30T15:00:00.000Z"
     },
     {
       "giveawayCode": "NnDNP",
@@ -100159,7 +100432,7 @@
       "winnerUsername": "leniu",
       "creatorUsername": "burntreynolds444",
       "entriesCount": 3,
-      "winDate": "2025-06-26T18:01:27.000Z"
+      "winDate": "2025-06-29T18:00:00.000Z"
     },
     {
       "giveawayCode": "wv5Uq",
@@ -100168,7 +100441,7 @@
       "winnerUsername": "BojanNS987",
       "creatorUsername": "Saikania",
       "entriesCount": 2,
-      "winDate": "2025-06-26T17:54:41.000Z"
+      "winDate": "2025-06-30T15:00:00.000Z"
     },
     {
       "giveawayCode": "pLrEL",
@@ -100177,7 +100450,7 @@
       "winnerUsername": "BojanNS987",
       "creatorUsername": "Wintermute101",
       "entriesCount": 4,
-      "winDate": "2025-06-26T17:53:14.000Z"
+      "winDate": "2025-06-29T19:00:00.000Z"
     },
     {
       "giveawayCode": "TQCB5",
@@ -100186,7 +100459,7 @@
       "winnerUsername": "Krlesnik",
       "creatorUsername": "Saikania",
       "entriesCount": 1,
-      "winDate": "2025-06-26T17:49:00.000Z"
+      "winDate": "2025-06-30T15:00:00.000Z"
     },
     {
       "giveawayCode": "KXV1N",
@@ -100195,7 +100468,7 @@
       "winnerUsername": "Ernesttico",
       "creatorUsername": "Wintermute101",
       "entriesCount": 3,
-      "winDate": "2025-06-26T17:48:11.000Z"
+      "winDate": "2025-06-29T19:00:00.000Z"
     },
     {
       "giveawayCode": "T3MEG",
@@ -100204,7 +100477,7 @@
       "winnerUsername": "BojanNS987",
       "creatorUsername": "Wintermute101",
       "entriesCount": 7,
-      "winDate": "2025-06-26T17:42:29.000Z"
+      "winDate": "2025-06-29T19:00:00.000Z"
     },
     {
       "giveawayCode": "bWuX5",
@@ -100213,7 +100486,7 @@
       "winnerUsername": "zettaivanugen",
       "creatorUsername": "BojanNS987",
       "entriesCount": 5,
-      "winDate": "2025-06-26T17:36:09.000Z"
+      "winDate": "2025-06-29T19:00:00.000Z"
     },
     {
       "giveawayCode": "Gy0oM",
@@ -100222,7 +100495,7 @@
       "winnerUsername": "chOOkity",
       "creatorUsername": "BojanNS987",
       "entriesCount": 8,
-      "winDate": "2025-06-26T17:35:33.000Z"
+      "winDate": "2025-06-29T19:00:00.000Z"
     },
     {
       "giveawayCode": "d2f3X",
@@ -100231,7 +100504,7 @@
       "winnerUsername": "DeliberateTaco",
       "creatorUsername": "BojanNS987",
       "entriesCount": 7,
-      "winDate": "2025-06-26T17:34:34.000Z"
+      "winDate": "2025-06-29T19:00:00.000Z"
     },
     {
       "giveawayCode": "pZvb6",
@@ -100240,7 +100513,7 @@
       "winnerUsername": "leniu",
       "creatorUsername": "BojanNS987",
       "entriesCount": 6,
-      "winDate": "2025-06-26T17:33:50.000Z"
+      "winDate": "2025-06-29T19:00:00.000Z"
     },
     {
       "giveawayCode": "WaeNS",
@@ -100267,7 +100540,7 @@
       "winnerUsername": "BojanNS987",
       "creatorUsername": "burntreynolds444",
       "entriesCount": 3,
-      "winDate": "2025-06-26T17:05:39.000Z"
+      "winDate": "2025-06-29T18:00:00.000Z"
     },
     {
       "giveawayCode": "XUrRM",
@@ -100303,7 +100576,7 @@
       "winnerUsername": "chOOkity",
       "creatorUsername": "Krlesnik",
       "entriesCount": 7,
-      "winDate": "2025-06-22T11:50:09.000Z"
+      "winDate": "2025-06-27T16:00:00.000Z"
     },
     {
       "giveawayCode": "wI7EE",
@@ -100325,12 +100598,12 @@
     },
     {
       "giveawayCode": "x3Klc",
-      "title": "Legacy of Kain™ Soul Reaver 1&2 Remastered",
+      "title": "Legacy of Kain Soul Reaver 1&2 Remast...",
       "appId": 2521380,
       "winnerUsername": "steveywonder75",
       "creatorUsername": "BojanNS987",
       "entriesCount": 29,
-      "winDate": "2025-06-04T08:16:10.000Z"
+      "winDate": "2025-06-15T09:15:00.000Z"
     },
     {
       "giveawayCode": "IrKLd",
@@ -100348,7 +100621,7 @@
       "winnerUsername": "Horseflesh",
       "creatorUsername": "chOOkity",
       "entriesCount": 9,
-      "winDate": "2025-06-02T10:07:25.000Z"
+      "winDate": "2025-06-30T18:00:00.000Z"
     },
     {
       "giveawayCode": "NLhhA",
@@ -100357,7 +100630,7 @@
       "winnerUsername": "Wintermute101",
       "creatorUsername": "Horseflesh",
       "entriesCount": 4,
-      "winDate": "2025-06-01T17:25:44.000Z"
+      "winDate": "2025-06-30T18:00:00.000Z"
     },
     {
       "giveawayCode": "qL3YC",
@@ -100366,7 +100639,7 @@
       "winnerUsername": "zettaivanugen",
       "creatorUsername": "Horseflesh",
       "entriesCount": 2,
-      "winDate": "2025-06-01T17:25:19.000Z"
+      "winDate": "2025-06-30T18:00:00.000Z"
     },
     {
       "giveawayCode": "1TdVE",
@@ -100375,7 +100648,7 @@
       "winnerUsername": "leniu",
       "creatorUsername": "DeliberateTaco",
       "entriesCount": 7,
-      "winDate": "2025-06-01T16:12:55.000Z"
+      "winDate": "2025-06-30T17:00:00.000Z"
     },
     {
       "giveawayCode": "orFmd",
@@ -100384,7 +100657,7 @@
       "winnerUsername": "burntreynolds444",
       "creatorUsername": "DeliberateTaco",
       "entriesCount": 6,
-      "winDate": "2025-06-01T16:12:00.000Z"
+      "winDate": "2025-06-30T17:00:00.000Z"
     },
     {
       "giveawayCode": "wmwSr",
@@ -100393,7 +100666,7 @@
       "winnerUsername": "leniu",
       "creatorUsername": "DogOnSG",
       "entriesCount": 6,
-      "winDate": "2025-06-01T15:29:38.000Z"
+      "winDate": "2025-06-30T18:00:00.000Z"
     },
     {
       "giveawayCode": "I1p2T",
@@ -100402,7 +100675,7 @@
       "winnerUsername": "leniu",
       "creatorUsername": "DogOnSG",
       "entriesCount": 4,
-      "winDate": "2025-06-01T15:28:24.000Z"
+      "winDate": "2025-06-30T18:00:00.000Z"
     },
     {
       "giveawayCode": "TBK7w",
@@ -100411,7 +100684,7 @@
       "winnerUsername": "eledhrim",
       "creatorUsername": "leniu",
       "entriesCount": 5,
-      "winDate": "2025-06-01T07:53:20.000Z"
+      "winDate": "2025-06-30T18:00:00.000Z"
     },
     {
       "giveawayCode": "U27Lp",
@@ -100420,7 +100693,7 @@
       "winnerUsername": "DeliberateTaco",
       "creatorUsername": "leniu",
       "entriesCount": 5,
-      "winDate": "2025-06-01T07:53:15.000Z"
+      "winDate": "2025-06-30T18:00:00.000Z"
     },
     {
       "giveawayCode": "XL7zN",
@@ -100429,7 +100702,7 @@
       "winnerUsername": "eledhrim",
       "creatorUsername": "Wintermute101",
       "entriesCount": 5,
-      "winDate": "2025-05-31T06:47:30.000Z"
+      "winDate": "2025-06-28T18:00:00.000Z"
     },
     {
       "giveawayCode": "zYKdC",
@@ -100438,7 +100711,7 @@
       "winnerUsername": "Oozyyy",
       "creatorUsername": "Ernesttico",
       "entriesCount": 6,
-      "winDate": "2025-05-25T21:21:00.000Z"
+      "winDate": "2025-05-30T18:00:00.000Z"
     },
     {
       "giveawayCode": "6yU4n",
@@ -100447,7 +100720,7 @@
       "winnerUsername": "LittleB",
       "creatorUsername": "Krlesnik",
       "entriesCount": 9,
-      "winDate": "2025-05-24T08:42:27.000Z"
+      "winDate": "2025-05-28T22:00:00.000Z"
     },
     {
       "giveawayCode": "VJMc9",
@@ -100456,7 +100729,7 @@
       "winnerUsername": "BojanNS987",
       "creatorUsername": "zettaivanugen",
       "entriesCount": 5,
-      "winDate": "2025-05-21T07:23:18.000Z"
+      "winDate": "2025-05-30T18:00:00.000Z"
     },
     {
       "giveawayCode": "IVfRE",
@@ -100465,7 +100738,7 @@
       "winnerUsername": "ElMatadorYTyrannos",
       "creatorUsername": "DeliberateTaco",
       "entriesCount": 17,
-      "winDate": "2025-05-16T14:05:53.000Z"
+      "winDate": "2025-05-19T15:04:00.000Z"
     },
     {
       "giveawayCode": "djAmk",
@@ -100474,7 +100747,7 @@
       "winnerUsername": "Wintermute101",
       "creatorUsername": "Youdontknow",
       "entriesCount": 2,
-      "winDate": "2025-05-14T10:21:18.000Z"
+      "winDate": "2025-05-30T18:00:00.000Z"
     },
     {
       "giveawayCode": "1GlTp",
@@ -100483,7 +100756,7 @@
       "winnerUsername": "DogOnSG",
       "creatorUsername": "WNDRLST",
       "entriesCount": 1,
-      "winDate": "2025-05-14T09:53:23.000Z"
+      "winDate": "2025-05-30T18:00:00.000Z"
     },
     {
       "giveawayCode": "8CkPj",
@@ -100492,7 +100765,7 @@
       "winnerUsername": "DogOnSG",
       "creatorUsername": "Oozyyy",
       "entriesCount": 6,
-      "winDate": "2025-05-12T22:32:43.000Z"
+      "winDate": "2025-05-30T18:00:00.000Z"
     },
     {
       "giveawayCode": "8la0R",
@@ -100501,7 +100774,7 @@
       "winnerUsername": "DeliberateTaco",
       "creatorUsername": "leniu",
       "entriesCount": 1,
-      "winDate": "2025-05-05T21:27:38.000Z"
+      "winDate": "2025-05-30T18:00:00.000Z"
     },
     {
       "giveawayCode": "srBY1",
@@ -100510,7 +100783,7 @@
       "winnerUsername": "burntreynolds444",
       "creatorUsername": "chOOkity",
       "entriesCount": 1,
-      "winDate": "2025-05-05T07:40:29.000Z"
+      "winDate": "2025-05-30T18:00:00.000Z"
     },
     {
       "giveawayCode": "tG1li",
@@ -100519,7 +100792,7 @@
       "winnerUsername": "Youdontknow",
       "creatorUsername": "chOOkity",
       "entriesCount": 7,
-      "winDate": "2025-05-05T07:26:57.000Z"
+      "winDate": "2025-05-30T18:00:00.000Z"
     },
     {
       "giveawayCode": "zuQiZ",
@@ -100528,7 +100801,7 @@
       "winnerUsername": "DeliberateTaco",
       "creatorUsername": "Wintermute101",
       "entriesCount": 3,
-      "winDate": "2025-05-01T18:01:04.000Z"
+      "winDate": "2025-05-30T18:00:00.000Z"
     },
     {
       "giveawayCode": "wv8G4",
@@ -100537,7 +100810,7 @@
       "winnerUsername": "leniu",
       "creatorUsername": "burntreynolds444",
       "entriesCount": 4,
-      "winDate": "2025-05-01T15:23:33.000Z"
+      "winDate": "2025-05-30T18:00:00.000Z"
     },
     {
       "giveawayCode": "GeTI9",
@@ -100546,7 +100819,7 @@
       "winnerUsername": "Horseflesh",
       "creatorUsername": "DeliberateTaco",
       "entriesCount": 1,
-      "winDate": "2025-05-01T13:52:07.000Z"
+      "winDate": "2025-05-30T17:00:00.000Z"
     },
     {
       "giveawayCode": "pzZOS",
@@ -100555,7 +100828,7 @@
       "winnerUsername": "Horseflesh",
       "creatorUsername": "BojanNS987",
       "entriesCount": 1,
-      "winDate": "2025-05-01T13:23:37.000Z"
+      "winDate": "2025-05-30T18:00:00.000Z"
     },
     {
       "giveawayCode": "9mCfa",
@@ -100564,7 +100837,7 @@
       "winnerUsername": "WNDRLST",
       "creatorUsername": "Horseflesh",
       "entriesCount": 4,
-      "winDate": "2025-05-01T12:10:38.000Z"
+      "winDate": "2025-05-30T18:00:00.000Z"
     },
     {
       "giveawayCode": "FbxDh",
@@ -100573,25 +100846,25 @@
       "winnerUsername": "WNDRLST",
       "creatorUsername": "Saikania",
       "entriesCount": 3,
-      "winDate": "2025-05-01T10:56:36.000Z"
+      "winDate": "2025-05-30T18:00:00.000Z"
     },
     {
       "giveawayCode": "hfaC1",
-      "title": "Suikoden I&II HD Remaster Gate Rune and Dunan Unification Wars",
+      "title": "Suikoden I&II HD Remaster Gate Rune a...",
       "appId": 1932640,
       "winnerUsername": "leniu",
       "creatorUsername": "DogOnSG",
       "entriesCount": 3,
-      "winDate": "2025-05-01T08:38:04.000Z"
+      "winDate": "2025-05-30T18:00:00.000Z"
     },
     {
       "giveawayCode": "thn7B",
-      "title": "The Elder Scrolls IV: Oblivion Remastered",
+      "title": "The Elder Scrolls IV: Oblivion Remast...",
       "appId": 2623190,
       "winnerUsername": "leniu",
       "creatorUsername": "eledhrim",
       "entriesCount": 4,
-      "winDate": "2025-04-30T20:08:33.000Z"
+      "winDate": "2025-05-30T18:00:00.000Z"
     },
     {
       "giveawayCode": "VtIvk",
@@ -100600,7 +100873,7 @@
       "winnerUsername": "DeliberateTaco",
       "creatorUsername": "zettaivanugen",
       "entriesCount": 2,
-      "winDate": "2025-04-25T22:57:23.000Z"
+      "winDate": "2025-04-30T18:00:00.000Z"
     },
     {
       "giveawayCode": "mceGt",
