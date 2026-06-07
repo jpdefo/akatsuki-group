@@ -2164,11 +2164,11 @@ def main() -> None:
         if resolved_packages:
             print(f"Resolved {resolved_packages} package giveaway(s) to their base app id.")
         media_cache = load_json(MEDIA_CACHE_PATH, empty_media_cache())
-        missing_before = count_missing_media_entries(sync_payload, media_cache, recent_days=args.recent_days)
-        media_cache = hydrate_media_cache_for_sync(sync_payload, media_cache, recent_days=args.recent_days)
         fixed_titles = fix_truncated_titles(sync_payload, media_cache)
         if fixed_titles:
             print(f"Fixed {fixed_titles} truncated giveaway title(s) using the Steam store name.")
+        missing_before = count_missing_media_entries(sync_payload, media_cache, recent_days=args.recent_days)
+        media_cache = hydrate_media_cache_for_sync(sync_payload, media_cache, recent_days=args.recent_days)
         missing_after = count_missing_media_entries(sync_payload, media_cache, recent_days=args.recent_days)
         print(
             "Hydrated Steam media cache:"

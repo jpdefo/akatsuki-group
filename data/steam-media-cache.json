@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-07T16:57:36.485087+00:00",
+  "updatedAt": "2026-06-07T17:15:03.963520+00:00",
   "apps": {
     "3288210": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3288210/2e13226847bb546625411aed75e74471f6705b18/header.jpg?t=1777969480",
@@ -181,7 +181,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/866570/c77bb348d74fe7d28f75e1a344233f2eb286c496/capsule_231x87.jpg?t=1774275928",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/866570/c77bb348d74fe7d28f75e1a344233f2eb286c496/capsule_184x69.jpg?t=1774275928",
       "releaseDate": "2025-06-26",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "System Shock 2: 25th Anniversary Remaster"
     },
     "881020": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/881020/header.jpg?t=1777273361",
@@ -202,7 +203,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1004640/12bdfff11d35dbd64055124bcdbf690f49d6ce46/capsule_231x87.jpg?t=1766385464",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1004640/12bdfff11d35dbd64055124bcdbf690f49d6ce46/capsule_184x69.jpg?t=1766385464",
       "releaseDate": "2025-09-30",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "FINAL FANTASY TACTICS - The Ivalice Chronicles"
     },
     "1021210": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1021210/0dd5a4075eb492ad6c90dff80669a0fcdcad64b4/header.jpg?t=1777323998",
@@ -391,7 +393,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1492730/capsule_231x87.jpg?t=1750782382",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1492730/capsule_184x69.jpg?t=1750782382",
       "releaseDate": "2022-11-01",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "DORAEMON STORY OF SEASONS: Friends of the Great Kingdom"
     },
     "1493640": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1493640/header.jpg?t=1763044792",
@@ -692,7 +695,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2023360/capsule_231x87.jpg?t=1737367162",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2023360/capsule_184x69.jpg?t=1737367162",
       "releaseDate": "2023-04-27",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "The Last Case of Benedict Fox Definitive Edition"
     },
     "2057760": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2057760/3fc3e737678a0d5db6816609bec2c9c6f2c11a88/header.jpg?t=1776091835",
@@ -818,7 +822,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2288350/120562651f1b34cdf731543795a78b86b89d8d08/capsule_231x87.jpg?t=1762275663",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2288350/120562651f1b34cdf731543795a78b86b89d8d08/capsule_184x69.jpg?t=1762275663",
       "releaseDate": "2025-06-18",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "RAIDOU Remastered: The Mystery of the Soulless Army"
     },
     "2295610": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2295610/header.jpg?t=1744881008",
@@ -853,7 +858,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2375550/capsule_231x87.jpg?t=1763646695",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2375550/capsule_184x69.jpg?t=1763646695",
       "releaseDate": "2023-11-08",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "Like a Dragon Gaiden: The Man Who Erased His Name"
     },
     "2377280": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2377280/header.jpg?t=1774007855",
@@ -923,14 +929,16 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2518960/capsule_231x87.jpg?t=1773073971",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2518960/capsule_184x69.jpg?t=1773073971",
       "releaseDate": "2024-05-23",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "Wizardry: Proving Grounds of the Mad Overlord"
     },
     "2521380": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2521380/header.jpg?t=1769814502",
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2521380/66108d2f93d2c57c0c7feefee875236971c84327/capsule_231x87.jpg?t=1769814502",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2521380/66108d2f93d2c57c0c7feefee875236971c84327/capsule_184x69.jpg?t=1769814502",
       "releaseDate": "2024-12-10",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "Legacy of Kain™ Soul Reaver 1&2 Remastered"
     },
     "2523720": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2523720/2ba5d8203b18c38fb2d10b14e92a285a850f08ab/header.jpg?t=1757024702",
@@ -961,11 +969,12 @@
       "comingSoon": false
     },
     "2544110": {
-      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2544110/header.jpg?t=1776279681",
-      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2544110/cec2a27e276422068993277e4e40cf742b069a80/capsule_231x87.jpg?t=1776279681",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2544110/cec2a27e276422068993277e4e40cf742b069a80/capsule_184x69.jpg?t=1776279681",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2544110/header.jpg?t=1778777514",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2544110/cec2a27e276422068993277e4e40cf742b069a80/capsule_231x87.jpg?t=1778777514",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2544110/cec2a27e276422068993277e4e40cf742b069a80/capsule_184x69.jpg?t=1778777514",
       "releaseDate": "2024-09-19",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "Broken Sword - Shadow of the Templars: Reforged"
     },
     "2545710": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2545710/header.jpg?t=1771354447",
@@ -1000,7 +1009,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2623190/4efc3257aabd776d4624da40146fb021d1ef5b38/capsule_231x87.jpg?t=1761681073",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2623190/4efc3257aabd776d4624da40146fb021d1ef5b38/capsule_184x69.jpg?t=1761681073",
       "releaseDate": "2025-04-22",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "The Elder Scrolls IV: Oblivion Remastered"
     },
     "2624870": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2624870/09c486f1ebf7c30ebf3abf5df054833b03c3367d/header.jpg?t=1777999087",
@@ -1308,7 +1318,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527760/48709bff73af97051fc8c912a2aea6f38920d4ac/capsule_231x87.jpg?t=1778174296",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527760/48709bff73af97051fc8c912a2aea6f38920d4ac/capsule_184x69.jpg?t=1778174296",
       "releaseDate": "2025-07-17",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "RoboCop: Rogue City - Unfinished Business"
     },
     "3655390": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3655390/0e501987ea970bd9aab9c2959b37f2e442d2079d/header.jpg?t=1765587611",
@@ -1371,7 +1382,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1932640/59838dd70e49aa7c0128921378f509f21fdf242e/capsule_231x87.jpg?t=1750817961",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1932640/59838dd70e49aa7c0128921378f509f21fdf242e/capsule_184x69.jpg?t=1750817961",
       "releaseDate": "2025-03-06",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "Suikoden I&II HD Remaster Gate Rune and Dunan Unification Wars"
     },
     "2429190": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2429190/header.jpg?t=1750422545",
@@ -1434,7 +1446,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2478970/f927574d6540b84ccb18922e46d85865bb8d6799/capsule_231x87.jpg?t=1773331351",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2478970/f927574d6540b84ccb18922e46d85865bb8d6799/capsule_184x69.jpg?t=1773331351",
       "releaseDate": "2024-02-13",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "Tomb Raider I-III Remastered Starring Lara Croft"
     },
     "3159330": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3159330/header.jpg?t=1775589420",
@@ -2008,7 +2021,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/435150/84ba1ad390af489cc07db121e2ed231cbabc9f57/capsule_231x87.jpg?t=1765811123",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/435150/84ba1ad390af489cc07db121e2ed231cbabc9f57/capsule_184x69.jpg?t=1765811123",
       "releaseDate": "2017-09-14",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "Divinity: Original Sin 2 - Definitive Edition"
     },
     "440247": {
       "headerImageUrl": "",
@@ -2050,7 +2064,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/534380/e67370be55f518fbfb3dd41a6718e06ddcded4d2/capsule_231x87.jpg?t=1772550031",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/534380/e67370be55f518fbfb3dd41a6718e06ddcded4d2/capsule_184x69.jpg?t=1772550031",
       "releaseDate": "2022-02-03",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "Dying Light 2 Stay Human: Reloaded Edition"
     },
     "546560": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/546560/header.jpg?t=1762986588",
@@ -2071,7 +2086,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/812140/capsule_231x87.jpg?t=1777476997",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/812140/capsule_184x69.jpg?t=1777476997",
       "releaseDate": "2018-10-05",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "Assassin's Creed® Odyssey"
     },
     "851850": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/851850/header.jpg?t=1769139697",
@@ -2127,7 +2143,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/920210/capsule_231x87.jpg?t=1747346983",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/920210/capsule_184x69.jpg?t=1747346983",
       "releaseDate": "2022-04-05",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "LEGO® Star Wars™: The Skywalker Saga"
     },
     "936790": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/936790/header.jpg?t=1771867255",
@@ -2249,11 +2266,12 @@
       "comingSoon": false
     },
     "1184370": {
-      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1184370/header.jpg?t=1764938127",
-      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1184370/capsule_231x87.jpg?t=1764938127",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1184370/capsule_184x69.jpg?t=1764938127",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1184370/header.jpg?t=1779177424",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1184370/capsule_231x87.jpg?t=1779177424",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1184370/capsule_184x69.jpg?t=1779177424",
       "releaseDate": "2021-09-02",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "Pathfinder: Wrath of the Righteous - Enhanced Edition"
     },
     "1196590": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1196590/header.jpg?t=1776927117",
@@ -2421,7 +2439,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1621310/capsule_231x87.jpg?t=1776672724",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1621310/capsule_184x69.jpg?t=1776672724",
       "releaseDate": "2022-02-24",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "Atelier Sophie 2: The Alchemist of the Mysterious Dream"
     },
     "1658290": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1658290/header.jpg?t=1725035783",
@@ -2456,7 +2475,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1732190/capsule_231x87.jpg?t=1776994734",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1732190/capsule_184x69.jpg?t=1776994734",
       "releaseDate": "2021-10-27",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "FATAL FRAME / PROJECT ZERO: Maiden of Black Water"
     },
     "1777620": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1777620/header.jpg?t=1763537332",
@@ -2582,7 +2602,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172380/capsule_231x87.jpg?t=1777393604",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172380/capsule_184x69.jpg?t=1777393604",
       "releaseDate": "2019-11-14",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "STAR WARS Jedi: Fallen Order™"
     },
     "320240": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/320240/header.jpg?t=1776349170",
@@ -2631,7 +2652,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/645730/capsule_231x87.jpg?t=1542081188",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/645730/capsule_184x69.jpg?t=1542081188",
       "releaseDate": "2018-10-17",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "RESONANCE OF FATE™/END OF ETERNITY™ 4K/HD EDITION"
     },
     "678960": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/678960/header.jpg?t=1766015412",
@@ -2694,7 +2716,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/798460/capsule_231x87.jpg?t=1771958172",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/798460/capsule_184x69.jpg?t=1771958172",
       "releaseDate": "2019-09-19",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "Ni no Kuni Wrath of the White Witch™ Remastered"
     },
     "815370": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/815370/header.jpg?t=1777904122",
@@ -2736,7 +2759,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/939850/capsule_231x87.jpg?t=1728913265",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/939850/capsule_184x69.jpg?t=1728913265",
       "releaseDate": "2019-08-29",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "The Dark Pictures Anthology: Man of Medan"
     },
     "960980": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/960980/header.jpg?t=1669708142",
@@ -2806,7 +2830,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/538680/capsule_231x87.jpg?t=1751395887",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/538680/capsule_184x69.jpg?t=1751395887",
       "releaseDate": "2017-08-02",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "The Legend of Heroes: Trails of Cold Steel"
     },
     "546430": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/546430/8e89285c4f252259230614a8bfb091a3d1f03d26/header.jpg?t=1768820094",
@@ -2904,7 +2929,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/488790/capsule_231x87.jpg?t=1777994114",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/488790/capsule_184x69.jpg?t=1777994114",
       "releaseDate": "2017-10-16",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "South Park™: The Fractured But Whole™"
     },
     "493720": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/493720/header.jpg?t=1667202967",
@@ -2995,7 +3021,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/665140/capsule_231x87.jpg?t=1657329468",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/665140/capsule_184x69.jpg?t=1657329468",
       "releaseDate": "2017-12-15",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "Midnight at the Red Light : An Investigation"
     },
     "683320": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/683320/header.jpg?t=1759429603",
@@ -3023,7 +3050,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/750920/capsule_231x87.jpg?t=1765239925",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/750920/capsule_184x69.jpg?t=1765239925",
       "releaseDate": "2018-09-14",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "Shadow of the Tomb Raider: Definitive Edition"
     },
     "758330": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/758330/header.jpg?t=1763674637",
@@ -3331,7 +3359,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/415480/capsule_231x87.jpg?t=1776729563",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/415480/capsule_184x69.jpg?t=1776729563",
       "releaseDate": "2016-04-26",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "Hyperdevotion Noire: Goddess Black Heart (Neptunia)"
     },
     "418370": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/418370/header.jpg?t=1778464947",
@@ -3345,7 +3374,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/418460/capsule_231x87.jpg?t=1770920980",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/418460/capsule_184x69.jpg?t=1770920980",
       "releaseDate": "2017-05-30",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "Rising Storm 2: Vietnam"
     },
     "424840": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/424840/facf9a7a675c6d7f210d96d6b111caffe0386cd5/header.jpg?t=1773135169",
@@ -3457,7 +3487,8 @@
       "capsuleImageUrl": "",
       "capsuleSmallUrl": "",
       "releaseDate": "",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": ""
     },
     "208650": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/208650/header.jpg?t=1745534372",
@@ -3548,7 +3579,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/330840/capsule_231x87.jpg?t=1555446231",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/330840/capsule_184x69.jpg?t=1555446231",
       "releaseDate": "2014-12-02",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "Game of Thrones - A Telltale Games Series"
     },
     "335300": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/335300/header.jpg?t=1760721873",
@@ -3660,7 +3692,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/282530/capsule_231x87.jpg?t=1737487279",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/282530/capsule_184x69.jpg?t=1737487279",
       "releaseDate": "2014-03-27",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "Castlevania: Lords of Shadow – Mirror of Fate HD"
     },
     "284870": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/284870/header.jpg?t=1584465865",
@@ -3779,7 +3812,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/373860/capsule_231x87.jpg?t=1764232450",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/373860/capsule_184x69.jpg?t=1764232450",
       "releaseDate": "2015-05-28",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "Apothecarium: The Renaissance of Evil - Premium Edition"
     },
     "377160": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/377160/header.jpg?t=1764687456",
@@ -3856,7 +3890,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/437350/capsule_231x87.jpg?t=1554428651",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/437350/capsule_184x69.jpg?t=1554428651",
       "releaseDate": "",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "Call of Duty: Black Ops III - Multiplayer Starter Pack"
     },
     "448400": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/448400/header.jpg?t=1705471904",
@@ -3968,6 +4003,735 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1546970/capsule_231x87.jpg?t=1741117830",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1546970/capsule_184x69.jpg?t=1741117830",
       "releaseDate": "2023-01-19",
+      "comingSoon": false,
+      "name": "Grand Theft Auto III – The Definitive Edition"
+    },
+    "1372110": {
+      "name": "JoJo's Bizarre Adventure: All-Star Battle R",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1372110/header.jpg?t=1720409046",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1372110/capsule_231x87.jpg?t=1720409046",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1372110/capsule_184x69.jpg?t=1720409046",
+      "releaseDate": "2022-09-01",
+      "comingSoon": false
+    },
+    "2556990": {
+      "name": "Beyond Good & Evil - 20th Anniversary Edition",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2556990/header.jpg?t=1778598759",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2556990/capsule_231x87.jpg?t=1778598759",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2556990/capsule_184x69.jpg?t=1778598759",
+      "releaseDate": "2024-06-24",
+      "comingSoon": false
+    },
+    "1502990": {
+      "name": "Atelier Lydie & Suelle: The Alchemists and the Mysterious Paintings DX",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1502990/header.jpg?t=1776672788",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1502990/capsule_231x87.jpg?t=1776672788",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1502990/capsule_184x69.jpg?t=1776672788",
+      "releaseDate": "2021-04-21",
+      "comingSoon": false
+    },
+    "1502980": {
+      "name": "Atelier Firis: The Alchemist and the Mysterious Journey DX",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1502980/header.jpg?t=1776672895",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1502980/capsule_231x87.jpg?t=1776672895",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1502980/capsule_184x69.jpg?t=1776672895",
+      "releaseDate": "2021-04-21",
+      "comingSoon": false
+    },
+    "1434330": {
+      "name": "Blaze and the Monster Machines: Axle City Racers",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1434330/header.jpg?t=1767192045",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1434330/capsule_231x87.jpg?t=1767192045",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1434330/capsule_184x69.jpg?t=1767192045",
+      "releaseDate": "2021-10-01",
+      "comingSoon": false
+    },
+    "1358700": {
+      "name": "STRANGER OF PARADISE FINAL FANTASY ORIGIN",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1358700/header.jpg?t=1775030600",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1358700/capsule_231x87.jpg?t=1775030600",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1358700/capsule_184x69.jpg?t=1775030600",
+      "releaseDate": "2023-04-06",
+      "comingSoon": false
+    },
+    "2208920": {
+      "name": "Assassin's Creed Valhalla",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2208920/header.jpg?t=1754572990",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2208920/capsule_231x87.jpg?t=1754572990",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2208920/capsule_184x69.jpg?t=1754572990",
+      "releaseDate": "2022-12-06",
+      "comingSoon": false
+    },
+    "1502970": {
+      "name": "Atelier Sophie: The Alchemist of the Mysterious Book DX",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1502970/header.jpg?t=1776672937",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1502970/capsule_231x87.jpg?t=1776672937",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1502970/capsule_184x69.jpg?t=1776672937",
+      "releaseDate": "2021-04-21",
+      "comingSoon": false
+    },
+    "2424110": {
+      "name": "Demon Slayer -Kimetsu no Yaiba- Sweep the Board!",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2424110/header.jpg?t=1762753626",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2424110/capsule_231x87.jpg?t=1762753626",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2424110/capsule_184x69.jpg?t=1762753626",
+      "releaseDate": "2024-07-16",
+      "comingSoon": false
+    },
+    "1113560": {
+      "name": "NieR Replicant™ ver.1.22474487139...",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1113560/header.jpg?t=1773365156",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1113560/capsule_231x87.jpg?t=1773365156",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1113560/capsule_184x69.jpg?t=1773365156",
+      "releaseDate": "2021-04-23",
+      "comingSoon": false
+    },
+    "1567020": {
+      "name": "The Dark Pictures Anthology: The Devil in Me",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1567020/header.jpg?t=1676560649",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1567020/capsule_231x87.jpg?t=1676560649",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1567020/capsule_184x69.jpg?t=1676560649",
+      "releaseDate": "2022-11-17",
+      "comingSoon": false
+    },
+    "575970": {
+      "name": "Golem Gates",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/575970/header.jpg?t=1667163249",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/575970/capsule_231x87.jpg?t=1667163249",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/575970/capsule_184x69.jpg?t=1667163249",
+      "releaseDate": "2018-03-28",
+      "comingSoon": false
+    },
+    "198297": {
+      "name": "",
+      "headerImageUrl": "",
+      "capsuleImageUrl": "",
+      "capsuleSmallUrl": "",
+      "releaseDate": "",
+      "comingSoon": false
+    },
+    "1271100": {
+      "name": "Deadly Premonition 2: A Blessing in Disguise",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1271100/header.jpg?t=1688546947",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1271100/capsule_231x87.jpg?t=1688546947",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1271100/capsule_184x69.jpg?t=1688546947",
+      "releaseDate": "2022-06-11",
+      "comingSoon": false
+    },
+    "1999770": {
+      "name": "Atelier Ryza 3: Alchemist of the End & the Secret Key",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1999770/header.jpg?t=1775540599",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1999770/capsule_231x87.jpg?t=1775540599",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1999770/capsule_184x69.jpg?t=1775540599",
+      "releaseDate": "2023-03-23",
+      "comingSoon": false
+    },
+    "978780": {
+      "name": "STORY OF SEASONS: Friends of Mineral Town",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/978780/header.jpg?t=1743091853",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/978780/capsule_231x87.jpg?t=1743091853",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/978780/capsule_184x69.jpg?t=1743091853",
+      "releaseDate": "2020-07-14",
+      "comingSoon": false
+    },
+    "886310": {
+      "name": "The Island Combat",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/886310/header.jpg?t=1727008484",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/886310/capsule_231x87.jpg?t=1727008484",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/886310/capsule_184x69.jpg?t=1727008484",
+      "releaseDate": "2021-05-08",
+      "comingSoon": false
+    },
+    "1295510": {
+      "name": "DRAGON QUEST® XI S: Echoes of an Elusive Age™ - Definitive Edition",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1295510/header.jpg?t=1774588986",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1295510/capsule_231x87.jpg?t=1774588986",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1295510/capsule_184x69.jpg?t=1774588986",
+      "releaseDate": "2020-12-04",
+      "comingSoon": false
+    },
+    "1042550": {
+      "name": "Digimon Story Cyber Sleuth: Complete Edition",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1042550/header.jpg?t=1718968953",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1042550/capsule_231x87.jpg?t=1718968953",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1042550/capsule_184x69.jpg?t=1718968953",
+      "releaseDate": "2019-10-17",
+      "comingSoon": false
+    },
+    "2130460": {
+      "name": "FATAL FRAME / PROJECT ZERO: Mask of the Lunar Eclipse",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2130460/header.jpg?t=1776994726",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2130460/capsule_231x87.jpg?t=1776994726",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2130460/capsule_184x69.jpg?t=1776994726",
+      "releaseDate": "2023-03-08",
+      "comingSoon": false
+    },
+    "1361510": {
+      "name": "Teenage Mutant Ninja Turtles: Shredder's Revenge",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1361510/header.jpg?t=1744957985",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1361510/capsule_231x87.jpg?t=1744957985",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1361510/capsule_184x69.jpg?t=1744957985",
+      "releaseDate": "2022-06-16",
+      "comingSoon": false
+    },
+    "748490": {
+      "name": "The Legend of Heroes: Trails of Cold Steel II",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/748490/header.jpg?t=1751395962",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/748490/capsule_231x87.jpg?t=1751395962",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/748490/capsule_184x69.jpg?t=1751395962",
+      "releaseDate": "2018-02-14",
+      "comingSoon": false
+    },
+    "1611910": {
+      "name": "Warhammer 40,000: Chaos Gate - Daemonhunters",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1611910/header.jpg?t=1764856974",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1611910/capsule_231x87.jpg?t=1764856974",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1611910/capsule_184x69.jpg?t=1764856974",
+      "releaseDate": "2022-05-05",
+      "comingSoon": false
+    },
+    "238819": {
+      "name": "",
+      "headerImageUrl": "",
+      "capsuleImageUrl": "",
+      "capsuleSmallUrl": "",
+      "releaseDate": "",
+      "comingSoon": false
+    },
+    "1257290": {
+      "name": "Atelier Ryza 2: Lost Legends & the Secret Fairy",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1257290/header.jpg?t=1775540549",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1257290/capsule_231x87.jpg?t=1775540549",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1257290/capsule_184x69.jpg?t=1775540549",
+      "releaseDate": "2021-01-25",
+      "comingSoon": false
+    },
+    "1413480": {
+      "name": "Shin Megami Tensei III Nocturne HD Remaster",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1413480/header.jpg?t=1763531118",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1413480/capsule_231x87.jpg?t=1763531118",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1413480/capsule_184x69.jpg?t=1763531118",
+      "releaseDate": "2021-05-20",
+      "comingSoon": false
+    },
+    "560130": {
+      "name": "Pillars of Eternity II: Deadfire",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/560130/header.jpg?t=1776350012",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/560130/capsule_231x87.jpg?t=1776350012",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/560130/capsule_184x69.jpg?t=1776350012",
+      "releaseDate": "2018-05-08",
+      "comingSoon": false
+    },
+    "1133760": {
+      "name": "CHRONO CROSS: THE RADICAL DREAMERS EDITION",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1133760/header.jpg?t=1777342541",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1133760/capsule_231x87.jpg?t=1777342541",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1133760/capsule_184x69.jpg?t=1777342541",
+      "releaseDate": "2022-04-07",
+      "comingSoon": false
+    },
+    "1281590": {
+      "name": "The Dark Pictures Anthology: House of Ashes",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1281590/header.jpg?t=1728912876",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1281590/capsule_231x87.jpg?t=1728912876",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1281590/capsule_184x69.jpg?t=1728912876",
+      "releaseDate": "2021-10-21",
+      "comingSoon": false
+    },
+    "969990": {
+      "name": "SpongeBob SquarePants: Battle for Bikini Bottom - Rehydrated",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/969990/header.jpg?t=1754079607",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/969990/capsule_231x87.jpg?t=1754079607",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/969990/capsule_184x69.jpg?t=1754079607",
+      "releaseDate": "2020-06-23",
+      "comingSoon": false
+    },
+    "22330": {
+      "name": "The Elder Scrolls IV: Oblivion® Game of the Year Edition (2009)",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/22330/header.jpg?t=1745343031",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/22330/capsule_231x87.jpg?t=1745343031",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/22330/capsule_184x69.jpg?t=1745343031",
+      "releaseDate": "2009-06-16",
+      "comingSoon": false
+    },
+    "411862": {
+      "name": "",
+      "headerImageUrl": "",
+      "capsuleImageUrl": "",
+      "capsuleSmallUrl": "",
+      "releaseDate": "",
+      "comingSoon": false
+    },
+    "970830": {
+      "name": "The Dungeon Of Naheulbeuk: The Amulet Of Chaos",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/970830/header.jpg?t=1721835298",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/970830/capsule_231x87.jpg?t=1721835298",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/970830/capsule_184x69.jpg?t=1721835298",
+      "releaseDate": "2020-09-17",
+      "comingSoon": false
+    },
+    "795420": {
+      "name": "The Darkside Detective: A Fumble in the Dark",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/795420/3baf01c4fca026d6037d5c6e2749f6246a7b355c/header.jpg?t=1769536320",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/795420/98e049806b8ad315ab6a9d18bd5edf7b24e513df/capsule_231x87.jpg?t=1769536320",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/795420/98e049806b8ad315ab6a9d18bd5edf7b24e513df/capsule_184x69.jpg?t=1769536320",
+      "releaseDate": "2021-04-15",
+      "comingSoon": false
+    },
+    "538757": {
+      "name": "",
+      "headerImageUrl": "",
+      "capsuleImageUrl": "",
+      "capsuleSmallUrl": "",
+      "releaseDate": "",
+      "comingSoon": false
+    },
+    "1047220": {
+      "name": "Frog Detective 2: The Case of the Invisible Wizard",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1047220/header.jpg?t=1746201438",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1047220/capsule_231x87.jpg?t=1746201438",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1047220/capsule_184x69.jpg?t=1746201438",
+      "releaseDate": "2019-12-09",
+      "comingSoon": false
+    },
+    "997070": {
+      "name": "Marvel's Avengers - The Definitive Edition",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/997070/header.jpg?t=1696093345",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/997070/capsule_231x87.jpg?t=1696093345",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/997070/capsule_184x69.jpg?t=1696093345",
+      "releaseDate": "2020-09-04",
+      "comingSoon": false
+    },
+    "1096410": {
+      "name": "Vampire: The Masquerade - Coteries of New York",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1096410/header.jpg?t=1748869309",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1096410/capsule_231x87.jpg?t=1748869309",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1096410/capsule_184x69.jpg?t=1748869309",
+      "releaseDate": "2019-12-11",
+      "comingSoon": false
+    },
+    "954650": {
+      "name": "Druidstone: The Secret of the Menhir Forest",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/954650/header.jpg?t=1566377738",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/954650/capsule_231x87.jpg?t=1566377738",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/954650/capsule_184x69.jpg?t=1566377738",
+      "releaseDate": "2019-05-15",
+      "comingSoon": false
+    },
+    "438270": {
+      "name": "Learn Japanese To Survive! Hiragana Battle",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/438270/header.jpg?t=1696493771",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/438270/capsule_231x87.jpg?t=1696493771",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/438270/capsule_184x69.jpg?t=1696493771",
+      "releaseDate": "2016-02-16",
+      "comingSoon": false
+    },
+    "1121560": {
+      "name": "Atelier Ryza: Ever Darkness & the Secret Hideout",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1121560/header.jpg?t=1775540502",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1121560/capsule_231x87.jpg?t=1775540502",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1121560/capsule_184x69.jpg?t=1775540502",
+      "releaseDate": "2019-10-28",
+      "comingSoon": false
+    },
+    "842910": {
+      "name": "The MISSING: J.J. Macfield and the Island of Memories",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/842910/header.jpg?t=1671433223",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/842910/capsule_231x87.jpg?t=1671433223",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/842910/capsule_184x69.jpg?t=1671433223",
+      "releaseDate": "2018-10-11",
+      "comingSoon": false
+    },
+    "673500": {
+      "name": "Syberia 3 - An Automaton with a plan",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/673500/header.jpg?t=1510233330",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/673500/capsule_231x87.jpg?t=1510233330",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/673500/capsule_184x69.jpg?t=1510233330",
+      "releaseDate": "2017-11-09",
+      "comingSoon": false
+    },
+    "336440": {
+      "name": "Super Cane Magic ZERO - Legend of the Cane Cane",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/336440/header.jpg?t=1719822910",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/336440/capsule_231x87.jpg?t=1719822910",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/336440/capsule_184x69.jpg?t=1719822910",
+      "releaseDate": "2019-05-30",
+      "comingSoon": false
+    },
+    "434050": {
+      "name": "Duke Nukem 3D: 20th Anniversary World Tour",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/434050/header.jpg?t=1752189646",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/434050/capsule_231x87.jpg?t=1752189646",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/434050/capsule_184x69.jpg?t=1752189646",
+      "releaseDate": "2016-10-11",
+      "comingSoon": false
+    },
+    "527270": {
+      "name": "Atelier Sophie: The Alchemist of the Mysterious Book",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/527270/header.jpg?t=1695969954",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/527270/capsule_231x87.jpg?t=1695969954",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/527270/capsule_184x69.jpg?t=1695969954",
+      "releaseDate": "2017-02-07",
+      "comingSoon": false
+    },
+    "286500": {
+      "name": "",
+      "headerImageUrl": "",
+      "capsuleImageUrl": "",
+      "capsuleSmallUrl": "",
+      "releaseDate": "",
+      "comingSoon": false
+    },
+    "323280": {
+      "name": "Sea Legends: Phantasmal Light Collector's Edition",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/323280/header.jpg?t=1676381887",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/323280/capsule_231x87.jpg?t=1676381887",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/323280/capsule_184x69.jpg?t=1676381887",
+      "releaseDate": "2014-09-17",
+      "comingSoon": false
+    },
+    "289260": {
+      "name": "Dreamscapes: The Sandman - Premium Edition",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/289260/header.jpg?t=1676456390",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/289260/capsule_231x87.jpg?t=1676456390",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/289260/capsule_184x69.jpg?t=1676456390",
+      "releaseDate": "2014-04-16",
+      "comingSoon": false
+    },
+    "410320": {
+      "name": "EARTH DEFENSE FORCE 4.1 The Shadow of New Despair",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/410320/header.jpg?t=1698821352",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/410320/capsule_231x87.jpg?t=1698821352",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/410320/capsule_184x69.jpg?t=1698821352",
+      "releaseDate": "2016-07-18",
+      "comingSoon": false
+    },
+    "394450": {
+      "name": "Warhammer 40,000: Deathwatch - Enhanced Edition",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/394450/header.jpg?t=1627323672",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/394450/capsule_231x87.jpg?t=1627323672",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/394450/capsule_184x69.jpg?t=1627323672",
+      "releaseDate": "2015-10-16",
+      "comingSoon": false
+    },
+    "360940": {
+      "name": "The Mean Greens - Plastic Warfare",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/360940/header.jpg?t=1648922803",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/360940/capsule_231x87.jpg?t=1648922803",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/360940/capsule_184x69.jpg?t=1648922803",
+      "releaseDate": "2015-12-08",
+      "comingSoon": false
+    },
+    "449800": {
+      "name": "Attack on Titan / A.O.T. Wings of Freedom",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/449800/header.jpg?t=1760594850",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/449800/capsule_231x87.jpg?t=1760594850",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/449800/capsule_184x69.jpg?t=1760594850",
+      "releaseDate": "2016-08-26",
+      "comingSoon": false
+    },
+    "675260": {
+      "name": "Batman: The Enemy Within - The Telltale Series",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/675260/header.jpg?t=1734105400",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/675260/capsule_231x87.jpg?t=1734105400",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/675260/capsule_184x69.jpg?t=1734105400",
+      "releaseDate": "2017-08-08",
+      "comingSoon": false
+    },
+    "387290": {
+      "name": "Ori and the Blind Forest: Definitive Edition",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/387290/header.jpg?t=1701967651",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/387290/capsule_231x87.jpg?t=1701967651",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/387290/capsule_184x69.jpg?t=1701967651",
+      "releaseDate": "2016-04-27",
+      "comingSoon": false
+    },
+    "436040": {
+      "name": "METAL GEAR ONLINE \"BASIC APPEAL PACK\"",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/436040/header.jpg?t=1690417700",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/436040/capsule_231x87.jpg?t=1690417700",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/436040/capsule_184x69.jpg?t=1690417700",
+      "releaseDate": "2016-03-15",
+      "comingSoon": false
+    },
+    "579950": {
+      "name": "Marvel's Guardians of the Galaxy: The Telltale Series",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/579950/header.jpg?t=1560522214",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/579950/capsule_231x87.jpg?t=1560522214",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/579950/capsule_184x69.jpg?t=1560522214",
+      "releaseDate": "2017-04-18",
+      "comingSoon": false
+    },
+    "403640": {
+      "name": "Dishonored 2",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/403640/header.jpg?t=1750785918",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/403640/capsule_231x87.jpg?t=1750785918",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/403640/capsule_184x69.jpg?t=1750785918",
+      "releaseDate": "2016-11-11",
+      "comingSoon": false
+    },
+    "609150": {
+      "name": "STAR OCEAN™ - THE LAST HOPE -™ 4K & Full HD Remaster",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/609150/header.jpg?t=1775121864",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/609150/capsule_231x87.jpg?t=1775121864",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/609150/capsule_184x69.jpg?t=1775121864",
+      "releaseDate": "2017-11-28",
+      "comingSoon": false
+    },
+    "436670": {
+      "name": "The Legend of Heroes: Trails in the Sky the 3rd",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/436670/header.jpg?t=1732302247",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/436670/capsule_231x87.jpg?t=1732302247",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/436670/capsule_184x69.jpg?t=1732302247",
+      "releaseDate": "2017-05-03",
+      "comingSoon": false
+    },
+    "272510": {
+      "name": "NARUTO SHIPPUDEN: Ultimate Ninja STORM Revolution",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/272510/header.jpg?t=1701322146",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/272510/capsule_231x87.jpg?t=1701322146",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/272510/capsule_184x69.jpg?t=1701322146",
+      "releaseDate": "2014-09-15",
+      "comingSoon": false
+    },
+    "564050": {
+      "name": "Bud Spencer & Terence Hill - Slaps And Beans",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/564050/header.jpg?t=1754044878",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/564050/capsule_231x87.jpg?t=1754044878",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/564050/capsule_184x69.jpg?t=1754044878",
+      "releaseDate": "2018-04-20",
+      "comingSoon": false
+    },
+    "650410": {
+      "name": "Wolfenstein II: The Freedom Chronicles - Season Pass",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/650410/header.jpg?t=1532651773",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/650410/capsule_231x87.jpg?t=1532651773",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/650410/capsule_184x69.jpg?t=1532651773",
+      "releaseDate": "2017-11-07",
+      "comingSoon": false
+    },
+    "319630": {
+      "name": "Life is Strange - Episode 1",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/319630/header.jpg?t=1772725755",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/319630/capsule_231x87.jpg?t=1772725755",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/319630/capsule_184x69.jpg?t=1772725755",
+      "releaseDate": "2015-01-29",
+      "comingSoon": false
+    },
+    "568220": {
+      "name": "Lobotomy Corporation | Monster Management Simulation",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/568220/header.jpg?t=1636694188",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/568220/capsule_231x87.jpg?t=1636694188",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/568220/capsule_184x69.jpg?t=1636694188",
+      "releaseDate": "2018-04-09",
+      "comingSoon": false
+    },
+    "452540": {
+      "name": "Skylar & Plux: Adventure On Clover Island",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/452540/header.jpg?t=1627997532",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/452540/capsule_231x87.jpg?t=1627997532",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/452540/capsule_184x69.jpg?t=1627997532",
+      "releaseDate": "2017-05-19",
+      "comingSoon": false
+    },
+    "400170": {
+      "name": "The Incredible Adventures of Van Helsing: Final Cut",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/400170/header.jpg?t=1618303802",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/400170/capsule_231x87.jpg?t=1618303802",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/400170/capsule_184x69.jpg?t=1618303802",
+      "releaseDate": "2015-11-06",
+      "comingSoon": false
+    },
+    "589730": {
+      "name": "Tyd wag vir Niemand (Time waits for Nobody)",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/589730/header.jpg?t=1765214366",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/589730/capsule_231x87.jpg?t=1765214366",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/589730/capsule_184x69.jpg?t=1765214366",
+      "releaseDate": "2017-07-07",
+      "comingSoon": false
+    },
+    "318550": {
+      "name": "Middle-earth: Shadow of Mordor - GOTY Edition Upgrade",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/318550/header.jpg?t=1609426327",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/318550/capsule_231x87.jpg?t=1609426327",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/318550/capsule_184x69.jpg?t=1609426327",
+      "releaseDate": "2014-09-30",
+      "comingSoon": false
+    },
+    "429570": {
+      "name": "The Walking Dead: Michonne - A Telltale Miniseries",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/429570/header.jpg?t=1729702885",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/429570/capsule_231x87.jpg?t=1729702885",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/429570/capsule_184x69.jpg?t=1729702885",
+      "releaseDate": "2016-02-23",
+      "comingSoon": false
+    },
+    "229480": {
+      "name": "Dungeons & Dragons: Chronicles of Mystara",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/229480/header.jpg?t=1644219327",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/229480/capsule_231x87.jpg?t=1644219327",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/229480/capsule_184x69.jpg?t=1644219327",
+      "releaseDate": "2013-06-18",
+      "comingSoon": false
+    },
+    "351710": {
+      "name": "Hyperdimension Neptunia Re;Birth2: Sisters Generation",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/351710/header.jpg?t=1776730126",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/351710/capsule_231x87.jpg?t=1776730126",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/351710/capsule_184x69.jpg?t=1776730126",
+      "releaseDate": "2015-05-29",
+      "comingSoon": false
+    },
+    "230330": {
+      "name": "",
+      "headerImageUrl": "",
+      "capsuleImageUrl": "",
+      "capsuleSmallUrl": "",
+      "releaseDate": "",
+      "comingSoon": false
+    },
+    "278080": {
+      "name": "DYNASTY WARRIORS 8: Xtreme Legends Complete Edition",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/278080/header.jpg?t=1775536751",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/278080/capsule_231x87.jpg?t=1775536751",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/278080/capsule_184x69.jpg?t=1775536751",
+      "releaseDate": "2014-05-13",
+      "comingSoon": false
+    },
+    "111429": {
+      "name": "",
+      "headerImageUrl": "",
+      "capsuleImageUrl": "",
+      "capsuleSmallUrl": "",
+      "releaseDate": "",
+      "comingSoon": false
+    },
+    "71223": {
+      "name": "",
+      "headerImageUrl": "",
+      "capsuleImageUrl": "",
+      "capsuleSmallUrl": "",
+      "releaseDate": "",
+      "comingSoon": false
+    },
+    "369640": {
+      "name": "Treeker: The Lost Glasses - Classic + Remake Edition",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/369640/header.jpg?t=1730482759",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/369640/f411210d5c2e57e80b91a14b5e92b1c46285aaa5/capsule_231x87.jpg?t=1730482759",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/369640/f411210d5c2e57e80b91a14b5e92b1c46285aaa5/capsule_184x69.jpg?t=1730482759",
+      "releaseDate": "2015-05-13",
+      "comingSoon": false
+    },
+    "53423": {
+      "name": "",
+      "headerImageUrl": "",
+      "capsuleImageUrl": "",
+      "capsuleSmallUrl": "",
+      "releaseDate": "",
+      "comingSoon": false
+    },
+    "325120": {
+      "name": "Notch - The Innocent LunA: Eclipsed SinnerS",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/325120/header.jpg?t=1630746350",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/325120/capsule_231x87.jpg?t=1630746350",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/325120/capsule_184x69.jpg?t=1630746350",
+      "releaseDate": "2015-06-04",
+      "comingSoon": false
+    },
+    "234080": {
+      "name": "Castlevania: Lords of Shadow – Ultimate Edition",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/234080/header.jpg?t=1737486989",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/234080/capsule_231x87.jpg?t=1737486989",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/234080/capsule_184x69.jpg?t=1737486989",
+      "releaseDate": "2013-08-27",
+      "comingSoon": false
+    },
+    "50854": {
+      "name": "",
+      "headerImageUrl": "",
+      "capsuleImageUrl": "",
+      "capsuleSmallUrl": "",
+      "releaseDate": "",
+      "comingSoon": false
+    },
+    "332380": {
+      "name": "Asguaard",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/332380/header.jpg?t=1730487357",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/332380/3644b8c12f7936c45d032e0286c94d38a3d36fc1/capsule_231x87.jpg?t=1730487357",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/332380/3644b8c12f7936c45d032e0286c94d38a3d36fc1/capsule_184x69.jpg?t=1730487357",
+      "releaseDate": "2015-04-10",
+      "comingSoon": false
+    },
+    "359900": {
+      "name": "The Incredible Adventures of Van Helsing III",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359900/header.jpg?t=1572445840",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359900/capsule_231x87.jpg?t=1572445840",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359900/capsule_184x69.jpg?t=1572445840",
+      "releaseDate": "2015-05-22",
+      "comingSoon": false
+    },
+    "387340": {
+      "name": "Hyperdimension Neptunia U: Action Unleashed",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/387340/header.jpg?t=1730844630",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/387340/capsule_231x87.jpg?t=1730844630",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/387340/capsule_184x69.jpg?t=1730844630",
+      "releaseDate": "2016-03-21",
+      "comingSoon": false
+    },
+    "333800": {
+      "name": "Lords of the Fallen -  Ancient Labyrinth",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/333800/header.jpg?t=1601950405",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/333800/capsule_231x87.jpg?t=1601950405",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/333800/capsule_184x69.jpg?t=1601950405",
+      "releaseDate": "2015-03-03",
+      "comingSoon": false
+    },
+    "285330": {
+      "name": "RollerCoaster Tycoon® 2: Triple Thrill Pack",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/285330/header.jpg?t=1733160988",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/285330/capsule_231x87.jpg?t=1733160988",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/285330/capsule_184x69.jpg?t=1733160988",
+      "releaseDate": "2014-05-21",
+      "comingSoon": false
+    },
+    "311770": {
+      "name": "LEGO® Pirates of the Caribbean: The Video Game",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/311770/header.jpg?t=1699057154",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/311770/capsule_231x87.jpg?t=1699057154",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/311770/capsule_184x69.jpg?t=1699057154",
+      "releaseDate": "2014-10-06",
+      "comingSoon": false
+    },
+    "244450": {
+      "name": "Men of War: Assault Squad 2",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/244450/04f4d7d098911ac8a0831b2c10ba09fe14711833/header.jpg?t=1773656231",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/244450/b670fa1d54fe1ecf496f32375ea5bfce35c921c3/capsule_231x87.jpg?t=1773656231",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/244450/b670fa1d54fe1ecf496f32375ea5bfce35c921c3/capsule_184x69.jpg?t=1773656231",
+      "releaseDate": "2014-05-15",
+      "comingSoon": false
+    },
+    "438640": {
+      "name": "LEGO® STAR WARS™: The Force Awakens",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/438640/header.jpg?t=1780600084",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/438640/capsule_231x87.jpg?t=1780600084",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/438640/capsule_184x69.jpg?t=1780600084",
+      "releaseDate": "2016-06-27",
+      "comingSoon": false
+    },
+    "4780": {
+      "name": "Medieval II: Total War™ Kingdoms",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4780/header.jpg?t=1764167398",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4780/capsule_231x87.jpg?t=1764167398",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4780/capsule_184x69.jpg?t=1764167398",
+      "releaseDate": "2007-08-28",
+      "comingSoon": false
+    },
+    "20920": {
+      "name": "The Witcher 2: Assassins of Kings Enhanced Edition",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/20920/header.jpg?t=1761657279",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/20920/capsule_231x87.jpg?t=1761657279",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/20920/capsule_184x69.jpg?t=1761657279",
+      "releaseDate": "2012-04-16",
       "comingSoon": false
     }
   }
