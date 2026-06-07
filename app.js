@@ -688,7 +688,7 @@ function renderProgressViews() {
   const months = getAvailableMonths();
   const currentSelection = elements.monthlyFilter.value;
   const selectedMonth = months.includes(currentSelection) ? currentSelection : months[0] || "";
-  const monthlyWins = selectedMonth ? state.wins.filter((win) => getEffectiveWinMonth(win) === selectedMonth) : [];
+  const monthlyWins = selectedMonth ? state.wins.filter((win) => getWinPlayMonth(win) === selectedMonth) : [];
   const monthlyGiveaways = selectedMonth ? getGiveawaysForMonth(selectedMonth) : [];
   const period = selectedMonth ? getPeriodInfo(`${selectedMonth}-01`) : null;
 
@@ -2277,7 +2277,7 @@ function renderMonthlyDetailsTable(target, winsSubset) {
       const prereleaseNote = buildPrereleaseMonthNote(win, game);
       const hltbHours = getGameHltbHours(game);
       const totalAchievements = getGameAchievementsTotal(game);
-      const effectiveMonth = getEffectiveWinMonth(win);
+      const effectiveMonth = getWinPlayMonth(win);
 
       return `
         <tr class="progress-row ${progress.badge}">
@@ -3342,7 +3342,7 @@ function getVisibleMediaAppIds() {
   const months = getAvailableMonths();
   const selectedMonth =
     months.includes(elements.monthlyFilter?.value || "") ? elements.monthlyFilter.value : months[0] || "";
-  const monthlyWins = selectedMonth ? state.wins.filter((win) => getEffectiveWinMonth(win) === selectedMonth) : [];
+  const monthlyWins = selectedMonth ? state.wins.filter((win) => getWinPlayMonth(win) === selectedMonth) : [];
   for (const win of monthlyWins) {
     const game = findById("games", win.gameId);
     const appId = Number(game?.appId || 0);
@@ -5077,6 +5077,19 @@ function getEffectiveWinMonth(win) {
   return getBaseEffectiveWinMonth(win);
 }
 
+// Play-or-Pay month: the month a won game can actually be played in. It is the
+// win's cycle month, but pushed forward to the game's release month when the
+// game releases later (e.g. a May giveaway for a game that releases in June is
+// tracked under June on the PoP page). Only games with a known later release
+// date are affected; everything else stays in its cycle month. The cycle
+// (lucky/unlucky) math keeps using getEffectiveWinMonth and is unaffected.
+function getWinPlayMonth(win) {
+  const baseMonth = getEffectiveWinMonth(win);
+  const game = findById("games", win.gameId);
+  const releaseMonth = getReleaseMonthKey(getWinReleaseDate(win, game));
+  return releaseMonth && releaseMonth > baseMonth ? releaseMonth : baseMonth;
+}
+
 function getGiveawayMonth(giveaway) {
   // Admin-set cycle month wins over everything (used when a giveaway can't be
   // auto-placed, e.g. two same-game giveaways ending the same day).
@@ -5703,6 +5716,7 @@ function getAvailableMonths() {
   return Array.from(
     new Set([
       ...state.wins.map((win) => getEffectiveWinMonth(win)).filter(Boolean),
+      ...state.wins.map((win) => getWinPlayMonth(win)).filter(Boolean),
       ...state.giveaways.map((giveaway) => getGiveawayMonth(giveaway)).filter(Boolean),
     ]),
   )
