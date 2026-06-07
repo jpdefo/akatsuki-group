@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Akatsuki SteamGifts Sync
 // @namespace    akatsuki-monitor
-// @version      1.4.0
+// @version      1.4.1
 // @description  Collect Akatsuki members, giveaways, entries and winners from the logged-in SteamGifts session and send them to the local monitor server.
 // @match        https://www.steamgifts.com/group/*/*
 // @match        https://www.steamgifts.com/group/*/*/users*
@@ -29,7 +29,7 @@
   // giveaways need checking, pace them at one per THROTTLE_DELAY_MS; small runs
   // stay at full speed.
   const THROTTLE_THRESHOLD = 30;
-  const THROTTLE_DELAY_MS = 505;
+  const THROTTLE_DELAY_MS = 750;
   const PUBLISHED_SYNC_URL = `https://raw.githubusercontent.com/${GITHUB_REPO.owner}/${GITHUB_REPO.name}/${GITHUB_REPO.branch}/${GITHUB_SYNC_PATH}`;
   const PUBLISHED_OVERRIDES_URL = `https://raw.githubusercontent.com/${GITHUB_REPO.owner}/${GITHUB_REPO.name}/${GITHUB_REPO.branch}/data/overrides.json`;
   const state = {
