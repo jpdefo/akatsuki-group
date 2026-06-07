@@ -1539,9 +1539,36 @@ def choose_hltb_match(title: str, results: list[dict]) -> dict | None:
     return best_match
 
 
-def lookup_hltb_hours(title: str, cache: dict) -> dict:
+HLTB_MISS_RETRY = timedelta(days=7)
+
+
+def hltb_entry_needs_retry(entry) -> bool:
+    """A cached HLTB result should be re-fetched when it has no usable hours.
+
+    Misses are stored (None hours = no match, 0 hours = HLTB has the game but no
+    completion time yet, e.g. an unreleased title) so we don't hammer HLTB, but
+    they must be retried periodically so released games and titles that failed a
+    transient lookup eventually populate. Real (truthy) hours are kept as-is.
+    """
+    if not isinstance(entry, dict):
+        return True
+    if entry.get("hltbHours"):
+        return False
+    checked = entry.get("checkedAt")
+    if not checked:
+        return True
+    try:
+        checked_dt = datetime.fromisoformat(str(checked).replace("Z", "+00:00"))
+    except ValueError:
+        return True
+    if checked_dt.tzinfo is None:
+        checked_dt = checked_dt.replace(tzinfo=timezone.utc)
+    return datetime.now(timezone.utc) - checked_dt >= HLTB_MISS_RETRY
+
+
+def lookup_hltb_hours(title: str, cache: dict, *, force: bool = False) -> dict:
     cache_key = normalize_title(title)
-    if cache_key in cache:
+    if not force and cache_key in cache:
         return cache[cache_key]
 
     try:
@@ -1556,6 +1583,7 @@ def lookup_hltb_hours(title: str, cache: dict) -> dict:
         "matchedTitle": best_match.get("game_name") if best_match else "",
         "gameId": best_match.get("game_id") if best_match else None,
         "url": f"{HLTB_BASE}/game/{best_match.get('game_id')}" if best_match and best_match.get("game_id") else "",
+        "checkedAt": utc_now(),
     }
     cache[cache_key] = result
     return result
@@ -1583,8 +1611,8 @@ def enrich_sync_with_hltb(sync_payload: dict, *, remote_titles: set[str] | None 
         if not cache_key:
             continue
         cached = cache.get(cache_key)
-        if cached is None and (remote_titles is None or cache_key in remote_title_keys):
-            cached = lookup_hltb_hours(title, cache)
+        if (remote_titles is None or cache_key in remote_title_keys) and hltb_entry_needs_retry(cached):
+            cached = lookup_hltb_hours(title, cache, force=True)
         if cached is not None:
             title_results[title] = cached
 
@@ -1711,7 +1739,10 @@ def refresh_steam_progress(
     )
     library_playtime_lookup = build_library_playtime_lookup(library_payload)
     library_profile_lookup = build_library_profile_lookup(library_payload)
-    remote_titles = set() if full_refresh else {win.get("title") for win in target_wins if win.get("title")}
+    # Look up HLTB for the wins in scope (the selected month, or all active wins
+    # on a full refresh). Cached hits are reused; only misses/stale entries are
+    # re-fetched, so released games and recovered lookups self-heal over time.
+    remote_titles = {win.get("title") for win in target_wins if win.get("title")}
     sync_payload, hltb_items = enrich_sync_with_hltb(
         sync_payload,
         remote_titles=remote_titles,
