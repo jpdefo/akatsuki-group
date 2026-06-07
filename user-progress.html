@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Akatsuki Summer Event Entry Ledger</title>
+    <title>Akatsuki User Progress</title>
     <link rel="icon" type="image/png" href="akatsuki.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -11,10 +11,10 @@
     <div class="app-shell">
       <header class="hero">
         <div>
-          <p class="eyebrow">Summer event ledger</p>
-          <h1>Akatsuki Summer Event Entry Ledger</h1>
+          <p class="eyebrow">Per-user PoP</p>
+          <h1>Akatsuki User Progress</h1>
           <p class="hero-copy">
-            Inspect every counted summer-event entry, who entered, who created it, and exactly how many points were deducted.
+            Every game a member won and how far they got — same thresholds as the PoP page, scoped to one person.
           </p>
         </div>
         <div class="hero-actions page-nav">
@@ -22,29 +22,29 @@
           <a class="button secondary" href="cycles.html">Cycles</a>
           <a class="button secondary" href="monthly-progress.html">PoP</a>
           <a class="button secondary" href="summer-event.html">Summer event</a>
-          <a class="button secondary" href="summer-event-entries.html" aria-current="page">Entry ledger</a>
+          <a class="button secondary" href="summer-event-entries.html">Entry ledger</a>
           <a class="button secondary" href="active-users.html">Active users</a>
           <a class="button secondary" href="inactive-users.html">Inactive users</a>
-          <a class="button secondary" href="user-progress.html">User progress</a>
+          <a class="button secondary" href="user-progress.html" aria-current="page">User progress</a>
           <a class="button secondary" href="giveaways.html">Giveaways</a>
           <a class="button secondary" href="admin.html">Admin</a>
           <button id="quick-publish" class="button primary" hidden>Publish to GitHub Pages</button>
         </div>
       </header>
 
-      <main class="grid">
+      <main>
         <section class="card">
           <div class="section-heading">
             <div>
               <h2>Automatic sync</h2>
               <p class="section-copy">
-                Load the server sync here to refresh the current entry ledger and the underlying entrant snapshots.
+                Load the server sync here too if you want to refresh this page directly.
               </p>
             </div>
           </div>
           <div class="sync-actions">
             <button id="sync-refresh" class="button primary">Load server sync</button>
-            <button id="steam-refresh" class="button secondary">Refresh latest month</button>
+            <button id="steam-refresh" class="button secondary">Refresh selected month</button>
             <button id="steam-refresh-all" class="button secondary">Full active refresh</button>
           </div>
           <div id="sync-status" class="sync-status"></div>
@@ -53,67 +53,50 @@
         <section class="card">
           <div class="section-heading">
             <div>
-              <h2>Entry deductions</h2>
-              <p id="summer-entry-description" class="section-copy">
-                Every row here matches the same counted entry cost used by the summer-event balance calculation.
+              <h2>Member PoP progress</h2>
+              <p class="section-copy">
+                Green = threshold met, yellow = all achievements completed, red = under the threshold.
+                Threshold = 25% of HLTB time + 10% of achievements.
+              </p>
+              <p class="section-copy">
+                Pick a member to see all their wins across every month and how far they got in each.
               </p>
             </div>
             <div class="section-summary">
               <div id="storage-status" class="pill"></div>
+              <p id="user-progress-summary" class="section-copy"></p>
             </div>
             <div class="section-filters">
               <label class="inline-filter">
-                Event
-                <select id="summer-entry-event-filter"></select>
-              </label>
-              <label class="inline-filter">
-                Entrant
-                <select id="summer-entry-member-filter"></select>
-              </label>
-              <label class="inline-filter">
-                Creator
-                <select id="summer-entry-creator-filter"></select>
+                Member
+                <select id="user-progress-filter"></select>
               </label>
               <label class="inline-filter">
                 Sort
-                <select id="summer-entry-sort">
-                  <option value="ended-desc">Latest first</option>
-                  <option value="ended-asc">Oldest first</option>
-                  <option value="points-desc">Highest base value</option>
-                  <option value="points-asc">Lowest base value</option>
-                  <option value="entrant-asc">Entrant A-Z</option>
-                  <option value="creator-asc">Creator A-Z</option>
-                  <option value="title-asc">Title A-Z</option>
+                <select id="user-progress-sort">
+                  <option value="threshold">Threshold</option>
+                  <option value="hours">Total hours</option>
+                  <option value="creator">Creator</option>
                 </select>
               </label>
             </div>
           </div>
-          <div id="summer-entry-summary-cards" class="summary-grid"></div>
-        </section>
-
-        <section class="card">
-          <div class="section-heading">
-            <div>
-              <h2>Ledger rows</h2>
-              <p class="section-copy">
-                Self-entries are excluded here, just like they are excluded from the summer-event balance math.
-              </p>
-            </div>
-          </div>
           <div class="table-wrap">
-            <table class="dense-table">
+            <table>
               <thead>
                 <tr>
-                  <th>Giveaway</th>
-                  <th>Entrant</th>
                   <th>Creator</th>
-                  <th>Deducted</th>
-                  <th>Base value</th>
-                  <th>Result</th>
-                  <th>Snapshot</th>
+                  <th>Game won</th>
+                  <th>Winner</th>
+                  <th>HLTB</th>
+                  <th>Req. 25%</th>
+                  <th>Player time</th>
+                  <th>Achs</th>
+                  <th>Req. 10%</th>
+                  <th>Status / notes</th>
                 </tr>
               </thead>
-              <tbody id="summer-entry-table"></tbody>
+              <tbody id="user-progress-table"></tbody>
             </table>
           </div>
         </section>

@@ -99,6 +99,10 @@ const elements = {
   monthlyFilter: document.querySelector("#monthly-filter"),
   monthlySort: document.querySelector("#monthly-sort"),
   monthlyProgressTable: document.querySelector("#monthly-progress-table"),
+  userProgressFilter: document.querySelector("#user-progress-filter"),
+  userProgressSort: document.querySelector("#user-progress-sort"),
+  userProgressTable: document.querySelector("#user-progress-table"),
+  userProgressSummary: document.querySelector("#user-progress-summary"),
   cycleFilter: document.querySelector("#cycle-filter"),
   cycleSummary: document.querySelector("#cycle-summary"),
   cycleBestGifterWarning: document.querySelector("#cycle-best-gifter-warning"),
@@ -201,6 +205,8 @@ function bindEvents() {
   elements.summerEntryCreatorFilter?.addEventListener("change", () => renderSummerEventEntriesPage());
   elements.summerEntrySort?.addEventListener("change", () => renderSummerEventEntriesPage());
   elements.activeUsersSort?.addEventListener("change", () => renderMemberBuckets());
+  elements.userProgressFilter?.addEventListener("change", () => renderUserProgressPage());
+  elements.userProgressSort?.addEventListener("change", () => renderUserProgressPage());
 
   document.addEventListener("click", (event) => {
     const editButton = event.target.closest("[data-edit-action]");
@@ -327,6 +333,7 @@ function render() {
   renderSummerEventEntriesPage();
   renderAllGiveawaysPage();
   renderMemberBuckets();
+  renderUserProgressPage();
 }
 
 // Created = the earlier captured timestamp; End = the later one, shown only when
@@ -2322,13 +2329,59 @@ function computeMemberBucketRows(isActiveMember) {
     .sort((left, right) => compareMemberBucketRows(left, right, sortMode));
 }
 
-function renderMonthlyDetailsTable(target, winsSubset) {
+function renderUserProgressPage() {
+  if (!elements.userProgressTable) {
+    return;
+  }
+
+  // Only members who actually won something, with their win count for the picker.
+  const winCountByMember = new Map();
+  for (const win of state.wins) {
+    if (win.memberId) {
+      winCountByMember.set(win.memberId, (winCountByMember.get(win.memberId) || 0) + 1);
+    }
+  }
+  const members = state.members
+    .filter((member) => winCountByMember.has(member.id))
+    .sort((left, right) =>
+      String(left.name || "").localeCompare(String(right.name || ""), "en", { sensitivity: "base" }),
+    );
+
+  if (elements.userProgressFilter) {
+    const current = elements.userProgressFilter.value;
+    const selectedId = members.some((member) => member.id === current) ? current : members[0]?.id || "";
+    elements.userProgressFilter.innerHTML = members.length
+      ? members
+          .map(
+            (member) =>
+              `<option value="${escapeHtml(member.id)}" ${member.id === selectedId ? "selected" : ""}>${escapeHtml(member.name || "Unknown")} (${winCountByMember.get(member.id)})</option>`,
+          )
+          .join("")
+      : `<option value="">No members with wins</option>`;
+  }
+
+  const selectedId = elements.userProgressFilter?.value || members[0]?.id || "";
+  const userWins = state.wins.filter((win) => win.memberId === selectedId);
+  const sortMode = elements.userProgressSort?.value || "threshold";
+
+  if (elements.userProgressSummary) {
+    const below = userWins.filter((win) => evaluateMonthlyProgress(win).badge === "danger").length;
+    const met = userWins.length - below;
+    const member = findById("members", selectedId);
+    elements.userProgressSummary.textContent = userWins.length
+      ? `${member?.name || "Member"} • ${userWins.length} win(s) • ${met} meeting threshold • ${below} below threshold`
+      : "No tracked wins for this member yet.";
+  }
+
+  renderMonthlyDetailsTable(elements.userProgressTable, userWins, sortMode);
+}
+
+function renderMonthlyDetailsTable(target, winsSubset, sortMode = elements.monthlySort?.value || "winner") {
   if (!winsSubset.length) {
     target.innerHTML = buildEmptyRow(9);
     return;
   }
 
-  const sortMode = elements.monthlySort?.value || "winner";
   const sortedWins = [...winsSubset].sort((left, right) => compareMonthlyWins(left, right, sortMode));
 
   target.innerHTML = sortedWins
