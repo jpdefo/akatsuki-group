@@ -1,6 +1,6 @@
 {
   "source": "akatsuki-steamgifts-sync",
-  "syncedAt": "2026-06-07T07:02:28.700Z",
+  "syncedAt": "2026-06-07T17:26:24.774Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -2447,9 +2447,15 @@
       "points": 50,
       "entriesCount": 2,
       "endDate": "2026-05-30T17:00:00.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "Saikania",
+          "profileUrl": "https://www.steamgifts.com/user/Saikania",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "Saikania",
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayMonthOverride": "2026-05",
@@ -2571,7 +2577,7 @@
       "title": "Borderlands 3: Super Deluxe Edition",
       "creatorUsername": "Koalala",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Koalala",
-      "appId": 397540,
+      "appId": 427289,
       "steamAppUrl": "https://store.steampowered.com/sub/427289?utm_source=SteamGifts",
       "points": 50,
       "entriesCount": 0,
@@ -4328,7 +4334,7 @@
     {
       "code": "LgQJ6",
       "url": "https://www.steamgifts.com/giveaway/LgQJ6/final-fantasy-tactics-the-ivalice-chronicles",
-      "title": "FINAL FANTASY TACTICS - The Ivalice Chronicles",
+      "title": "FINAL FANTASY TACTICS - The Ivalice C...",
       "creatorUsername": "Youdontknow",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Youdontknow",
       "appId": 1004640,
@@ -4570,7 +4576,7 @@
     {
       "code": "3Klb9",
       "url": "https://www.steamgifts.com/giveaway/3Klb9/the-elder-scrolls-iv-oblivion-remastered",
-      "title": "The Elder Scrolls IV: Oblivion Remastered",
+      "title": "The Elder Scrolls IV: Oblivion Remast...",
       "creatorUsername": "leniu",
       "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
       "appId": 2623190,
@@ -5169,7 +5175,7 @@
     {
       "code": "aQMBR",
       "url": "https://www.steamgifts.com/giveaway/aQMBR/robocop-rogue-city-unfinished-business",
-      "title": "RoboCop: Rogue City - Unfinished Business",
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
       "creatorUsername": "Koalala",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Koalala",
       "appId": 3527760,
@@ -5557,7 +5563,7 @@
     {
       "code": "44g1j",
       "url": "https://www.steamgifts.com/giveaway/44g1j/raidou-remastered-the-mystery-of-the-soulless-army",
-      "title": "RAIDOU Remastered: The Mystery of the Soulless Army",
+      "title": "RAIDOU Remastered: The Mystery of the...",
       "creatorUsername": "Youdontknow",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Youdontknow",
       "appId": 2288350,
@@ -6608,7 +6614,7 @@
     {
       "code": "UtTqc",
       "url": "https://www.steamgifts.com/giveaway/UtTqc/robocop-rogue-city-unfinished-business",
-      "title": "RoboCop: Rogue City - Unfinished Business",
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
       "creatorUsername": "Wintermute101",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Wintermute101",
       "appId": 3527760,
@@ -7215,7 +7221,7 @@
     {
       "code": "6lDgn",
       "url": "https://www.steamgifts.com/giveaway/6lDgn/robocop-rogue-city-unfinished-business",
-      "title": "RoboCop: Rogue City - Unfinished Business",
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
       "creatorUsername": "leniu",
       "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
       "appId": 3527760,
@@ -7363,7 +7369,7 @@
     {
       "code": "ZT672",
       "url": "https://www.steamgifts.com/giveaway/ZT672/doraemon-story-of-seasons-friends-of-the-great-kingdom",
-      "title": "DORAEMON STORY OF SEASONS: Friends of the Great Kingdom",
+      "title": "DORAEMON STORY OF SEASONS: Friends of...",
       "creatorUsername": "Saikania",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Saikania",
       "appId": 1492730,
@@ -7776,7 +7782,7 @@
       "title": "FINAL FANTASY XVI COMPLETE EDITION",
       "creatorUsername": "BojanNS987",
       "creatorProfileUrl": "https://www.steamgifts.com/user/BojanNS987",
-      "appId": 2515020,
+      "appId": 1111230,
       "steamAppUrl": "https://store.steampowered.com/sub/1111230?utm_source=SteamGifts",
       "entriesCount": 7,
       "endDate": "2025-07-09T12:00:00.000Z",
@@ -8464,7 +8470,7 @@
     {
       "code": "gaH1H",
       "url": "https://www.steamgifts.com/giveaway/gaH1H/the-last-case-of-benedict-fox-definitive-edition",
-      "title": "The Last Case of Benedict Fox Definitive Edition",
+      "title": "The Last Case of Benedict Fox Definit...",
       "creatorUsername": "Ernesttico",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Ernesttico",
       "appId": 2023360,
@@ -8573,7 +8579,7 @@
     {
       "code": "13YP4",
       "url": "https://www.steamgifts.com/giveaway/13YP4/broken-sword-shadow-of-the-templars-reforged",
-      "title": "Broken Sword - Shadow of the Templars: Reforged",
+      "title": "Broken Sword - Shadow of the Templars...",
       "creatorUsername": "Ernesttico",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Ernesttico",
       "appId": 2544110,
@@ -8747,7 +8753,7 @@
     {
       "code": "TqjP1",
       "url": "https://www.steamgifts.com/giveaway/TqjP1/robocop-rogue-city-unfinished-business",
-      "title": "RoboCop: Rogue City - Unfinished Business",
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
       "creatorUsername": "Ernesttico",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Ernesttico",
       "appId": 3527760,
@@ -9344,10 +9350,10 @@
     {
       "code": "vVQZf",
       "url": "https://www.steamgifts.com/giveaway/vVQZf/grand-theft-auto-the-trilogy-the-definitive-edition",
-      "title": "Grand Theft Auto III – The Definitive Edition",
+      "title": "Grand Theft Auto: The Trilogy – The D...",
       "creatorUsername": "DeliberateTaco",
       "creatorProfileUrl": "https://www.steamgifts.com/user/DeliberateTaco",
-      "appId": 1546970,
+      "appId": 817628,
       "steamAppUrl": "https://store.steampowered.com/sub/817628?utm_source=SteamGifts",
       "entriesCount": 1,
       "endDate": "2025-07-04T15:56:00.000Z",
@@ -9667,7 +9673,7 @@
     {
       "code": "5fFa6",
       "url": "https://www.steamgifts.com/giveaway/5fFa6/like-a-dragon-gaiden-the-man-who-erased-his-name",
-      "title": "Like a Dragon Gaiden: The Man Who Erased His Name",
+      "title": "Like a Dragon Gaiden: The Man Who Era...",
       "creatorUsername": "Krlesnik",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Krlesnik",
       "appId": 2375550,
@@ -9801,7 +9807,7 @@
     {
       "code": "XkGCI",
       "url": "https://www.steamgifts.com/giveaway/XkGCI/final-fantasy-tactics-the-ivalice-chronicles",
-      "title": "FINAL FANTASY TACTICS - The Ivalice Chronicles",
+      "title": "FINAL FANTASY TACTICS - The Ivalice C...",
       "creatorUsername": "burntreynolds444",
       "creatorProfileUrl": "https://www.steamgifts.com/user/burntreynolds444",
       "appId": 1004640,
@@ -10518,7 +10524,7 @@
     {
       "code": "FYPl5",
       "url": "https://www.steamgifts.com/giveaway/FYPl5/system-shock-2-25th-anniversary-remaster",
-      "title": "System Shock 2: 25th Anniversary Remaster",
+      "title": "System Shock 2: 25th Anniversary Rema...",
       "creatorUsername": "Millsshogun",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Millsshogun",
       "appId": 866570,
@@ -11507,7 +11513,7 @@
     {
       "code": "sqbNM",
       "url": "https://www.steamgifts.com/giveaway/sqbNM/wizardry-proving-grounds-of-the-mad-overlord",
-      "title": "Wizardry: Proving Grounds of the Mad Overlord",
+      "title": "Wizardry: Proving Grounds of the Mad ...",
       "creatorUsername": "leniu",
       "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
       "appId": 2518960,
@@ -98084,7 +98090,7 @@
       "points": 50,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1997660/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1997660/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1997660/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1997660/e28bc1010ebbf2a2c000b9a7d894d1060269c826/capsule_184x69.jpg",
       "entriesCount": 0,
       "startDate": "2026-06-06T11:04:37.000Z",
       "endDate": "2026-06-30T18:00:00.000Z",
@@ -98111,7 +98117,7 @@
       "points": 25,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2057760/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2057760/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2057760/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2057760/0c8f3c4b30a022b6ce816096db0dfd385199226b/capsule_184x69.jpg",
       "entriesCount": 0,
       "startDate": "2026-06-06T10:53:33.000Z",
       "endDate": "2026-06-30T18:00:00.000Z",
@@ -98147,6 +98153,15 @@
       "creatorUsername": "WNDRLST",
       "entriesCount": 6,
       "winDate": "2026-05-30T18:00:00.000Z"
+    },
+    {
+      "giveawayCode": "pijaT",
+      "title": "Gothic 1 Remake",
+      "appId": 1297900,
+      "winnerUsername": "Saikania",
+      "creatorUsername": "Drain",
+      "entriesCount": 2,
+      "winDate": "2026-05-30T17:00:00.000Z"
     },
     {
       "giveawayCode": "Ll6uo",
@@ -99887,7 +99902,7 @@
     },
     {
       "giveawayCode": "ftcim",
-      "title": "The Elder Scrolls IV: Oblivion Remast...",
+      "title": "The Elder Scrolls IV: Oblivion Remastered",
       "appId": 2623190,
       "winnerUsername": "Millsshogun",
       "creatorUsername": "Oozyyy",
@@ -100310,7 +100325,7 @@
     },
     {
       "giveawayCode": "x3Klc",
-      "title": "Legacy of Kain Soul Reaver 1&2 Remast...",
+      "title": "Legacy of Kain™ Soul Reaver 1&2 Remastered",
       "appId": 2521380,
       "winnerUsername": "steveywonder75",
       "creatorUsername": "BojanNS987",
@@ -100562,7 +100577,7 @@
     },
     {
       "giveawayCode": "hfaC1",
-      "title": "Suikoden I&II HD Remaster Gate Rune a...",
+      "title": "Suikoden I&II HD Remaster Gate Rune and Dunan Unification Wars",
       "appId": 1932640,
       "winnerUsername": "leniu",
       "creatorUsername": "DogOnSG",
@@ -100571,7 +100586,7 @@
     },
     {
       "giveawayCode": "thn7B",
-      "title": "The Elder Scrolls IV: Oblivion Remast...",
+      "title": "The Elder Scrolls IV: Oblivion Remastered",
       "appId": 2623190,
       "winnerUsername": "leniu",
       "creatorUsername": "eledhrim",
@@ -100625,7 +100640,7 @@
     },
     {
       "giveawayCode": "QbQrc",
-      "title": "Tomb Raider I-III Remastered Starring...",
+      "title": "Tomb Raider I-III Remastered Starring Lara Croft",
       "appId": 2478970,
       "winnerUsername": "en7erpr1se",
       "creatorUsername": "BojanNS987",
@@ -101103,7 +101118,7 @@
     {
       "giveawayCode": "c0LPY",
       "title": "Dead Island 2 Ultimate Edition",
-      "appId": 1004410,
+      "appId": 934700,
       "winnerUsername": "WNDRLST",
       "creatorUsername": "Horseflesh",
       "entriesCount": 4,
@@ -101408,7 +101423,7 @@
     },
     {
       "giveawayCode": "kkCee",
-      "title": "Legacy of Kain Soul Reaver 1&2 Remast...",
+      "title": "Legacy of Kain™ Soul Reaver 1&2 Remastered",
       "appId": 2521380,
       "winnerUsername": "Oozyyy",
       "creatorUsername": "zettaivanugen",
@@ -101877,7 +101892,7 @@
     {
       "giveawayCode": "RujEg",
       "title": "SCARLET NEXUS Ultimate Edition",
-      "appId": 634166,
+      "appId": 775500,
       "winnerUsername": "Koalala",
       "creatorUsername": "Ernesttico",
       "entriesCount": 2,
@@ -102092,7 +102107,7 @@
     },
     {
       "giveawayCode": "zRKhI",
-      "title": "JoJo's Bizarre Adventure: All-Star Ba...",
+      "title": "JoJo's Bizarre Adventure: All-Star Battle R",
       "appId": 1372110,
       "winnerUsername": "Youdontknow",
       "creatorUsername": "BarbaricGenie",
@@ -102101,7 +102116,7 @@
     },
     {
       "giveawayCode": "psjzv",
-      "title": "Beyond Good & Evil - 20th Anniversary...",
+      "title": "Beyond Good & Evil - 20th Anniversary Edition",
       "appId": 2556990,
       "winnerUsername": "Ernesttico",
       "creatorUsername": "eledhrim",
@@ -102119,7 +102134,7 @@
     },
     {
       "giveawayCode": "N4qE0",
-      "title": "Atelier Lydie & Suelle: The Alchemist...",
+      "title": "Atelier Lydie & Suelle: The Alchemists and the Mysterious Paintings DX",
       "appId": 1502990,
       "winnerUsername": "BojanNS987",
       "creatorUsername": "Youdontknow",
@@ -102128,7 +102143,7 @@
     },
     {
       "giveawayCode": "4OJka",
-      "title": "Atelier Firis: The Alchemist and the ...",
+      "title": "Atelier Firis: The Alchemist and the Mysterious Journey DX",
       "appId": 1502980,
       "winnerUsername": "BojanNS987",
       "creatorUsername": "Youdontknow",
@@ -102146,7 +102161,7 @@
     },
     {
       "giveawayCode": "vLwXT",
-      "title": "Blaze and the Monster Machines: Axle ...",
+      "title": "Blaze and the Monster Machines: Axle City Racers",
       "appId": 1434330,
       "winnerUsername": "Bazilius",
       "creatorUsername": "BarbaricGenie",
@@ -102183,7 +102198,7 @@
     {
       "giveawayCode": "9gHah",
       "title": "KINGDOM HEARTS INTEGRUM MASTERPIECE",
-      "appId": 1000794,
+      "appId": 2552430,
       "winnerUsername": "Koalala",
       "creatorUsername": "BojanNS987",
       "entriesCount": 4,
@@ -102263,7 +102278,7 @@
     },
     {
       "giveawayCode": "ghhLu",
-      "title": "STRANGER OF PARADISE FINAL FANTASY OR...",
+      "title": "STRANGER OF PARADISE FINAL FANTASY ORIGIN",
       "appId": 1358700,
       "winnerUsername": "Skull18",
       "creatorUsername": "BarbaricGenie",
@@ -102452,8 +102467,8 @@
     },
     {
       "giveawayCode": "9bu9o",
-      "title": "LEGO Star Wars: The Skywalker Saga Ga...",
-      "appId": 785847,
+      "title": "LEGO® Star Wars™: The Skywalker Saga",
+      "appId": 920210,
       "winnerUsername": "leniu",
       "creatorUsername": "Ernesttico",
       "entriesCount": 2,
@@ -102498,7 +102513,7 @@
     {
       "giveawayCode": "KYQCH",
       "title": "KINGDOM HEARTS INTEGRUM MASTERPIECE",
-      "appId": 1000794,
+      "appId": 2552430,
       "winnerUsername": "BojanNS987",
       "creatorUsername": "Kodeta",
       "entriesCount": 7,
@@ -102696,7 +102711,7 @@
     {
       "giveawayCode": "2rF2I",
       "title": "Hogwarts Legacy: Digital Deluxe Edition",
-      "appId": 822364,
+      "appId": 990080,
       "winnerUsername": "WNDRLST",
       "creatorUsername": "chOOkity",
       "entriesCount": 5,
@@ -102957,7 +102972,7 @@
     {
       "giveawayCode": "GABTQ",
       "title": "Assassin's Creed Origins - Gold Edition",
-      "appId": 215277,
+      "appId": 582160,
       "winnerUsername": "Wintermute101",
       "creatorUsername": "leniu",
       "entriesCount": 1,
@@ -102965,8 +102980,8 @@
     },
     {
       "giveawayCode": "YdXS9",
-      "title": "Assassin's Creed Odyssey - Ultimate E...",
-      "appId": 290658,
+      "title": "Assassin's Creed® Odyssey",
+      "appId": 812140,
       "winnerUsername": "Youdontknow",
       "creatorUsername": "leniu",
       "entriesCount": 2,
@@ -102974,8 +102989,8 @@
     },
     {
       "giveawayCode": "HwUea",
-      "title": "Assassin's Creed Valhalla - Complete ...",
-      "appId": 791761,
+      "title": "Assassin's Creed Valhalla",
+      "appId": 2208920,
       "winnerUsername": "BojanNS987",
       "creatorUsername": "leniu",
       "entriesCount": 3,
@@ -103037,7 +103052,7 @@
     },
     {
       "giveawayCode": "p8Ge3",
-      "title": "Atelier Sophie: The Alchemist of the ...",
+      "title": "Atelier Sophie: The Alchemist of the Mysterious Book DX",
       "appId": 1502970,
       "winnerUsername": "Millsshogun",
       "creatorUsername": "Youdontknow",
@@ -103263,7 +103278,7 @@
     {
       "giveawayCode": "7BB7h",
       "title": "LISA: Complete Edition",
-      "appId": 77828,
+      "appId": 379310,
       "winnerUsername": "kudomonster",
       "creatorUsername": "BojanNS987",
       "entriesCount": 18,
@@ -103280,7 +103295,7 @@
     },
     {
       "giveawayCode": "b9Y0P",
-      "title": "Demon Slayer -Kimetsu no Yaiba- Sweep...",
+      "title": "Demon Slayer -Kimetsu no Yaiba- Sweep the Board!",
       "appId": 2424110,
       "winnerUsername": "Drain",
       "creatorUsername": "bron99",
@@ -103442,7 +103457,7 @@
     },
     {
       "giveawayCode": "YPurU",
-      "title": "NieR Replicant ver.1.22474487139...",
+      "title": "NieR Replicant™ ver.1.22474487139...",
       "appId": 1113560,
       "winnerUsername": "Wintermute101",
       "creatorUsername": "WNDRLST",
@@ -103919,7 +103934,7 @@
     },
     {
       "giveawayCode": "PTZnt",
-      "title": "Tomb Raider I-III Remastered Starring...",
+      "title": "Tomb Raider I-III Remastered Starring Lara Croft",
       "appId": 2478970,
       "winnerUsername": "eledhrim",
       "creatorUsername": "Oozyyy",
@@ -104351,8 +104366,8 @@
     },
     {
       "giveawayCode": "zwS0j",
-      "title": "LEGO Star Wars: The Skywalker Saga Ga...",
-      "appId": 785847,
+      "title": "LEGO® Star Wars™: The Skywalker Saga",
+      "appId": 920210,
       "winnerUsername": "chOOkity",
       "creatorUsername": "BarbaricGenie",
       "entriesCount": 7,
@@ -104594,7 +104609,7 @@
     },
     {
       "giveawayCode": "lN4Ax",
-      "title": "Like a Dragon Gaiden: The Man Who Era...",
+      "title": "Like a Dragon Gaiden: The Man Who Erased His Name",
       "appId": 2375550,
       "winnerUsername": "Krlesnik",
       "creatorUsername": "trentonlf",
@@ -105009,7 +105024,7 @@
     {
       "giveawayCode": "gIqk5",
       "title": "Life is Strange Remastered Collection",
-      "appId": 440247,
+      "appId": 1265920,
       "winnerUsername": "burntreynolds444",
       "creatorUsername": "leniu",
       "entriesCount": 4,
@@ -105044,7 +105059,7 @@
     },
     {
       "giveawayCode": "EcmWA",
-      "title": "The Dark Pictures Anthology: The Devi...",
+      "title": "The Dark Pictures Anthology: The Devil in Me",
       "appId": 1567020,
       "winnerUsername": "burntreynolds444",
       "creatorUsername": "Horseflesh",
@@ -105161,8 +105176,8 @@
     },
     {
       "giveawayCode": "LkRTS",
-      "title": "LEGO Star Wars: The Skywalker Saga Ga...",
-      "appId": 785847,
+      "title": "LEGO® Star Wars™: The Skywalker Saga",
+      "appId": 920210,
       "winnerUsername": "Millsshogun",
       "creatorUsername": "kasztoix",
       "entriesCount": 5,
@@ -105215,7 +105230,7 @@
     },
     {
       "giveawayCode": "ZFf9l",
-      "title": "Tiny Tina's Wonderlands: Chaotic Grea...",
+      "title": "Golem Gates",
       "appId": 575970,
       "winnerUsername": "Kodeta",
       "creatorUsername": "leniu",
@@ -105350,7 +105365,7 @@
     },
     {
       "giveawayCode": "lA5Wo",
-      "title": "Ni no Kuni Wrath of the White Witch R...",
+      "title": "Ni no Kuni Wrath of the White Witch™ Remastered",
       "appId": 798460,
       "winnerUsername": "Youdontknow",
       "creatorUsername": "Skull18",
@@ -105476,8 +105491,8 @@
     },
     {
       "giveawayCode": "s8VL3",
-      "title": "Assassin's Creed Odyssey - Ultimate E...",
-      "appId": 290658,
+      "title": "Assassin's Creed® Odyssey",
+      "appId": 812140,
       "winnerUsername": "Millsshogun",
       "creatorUsername": "Ernesttico",
       "entriesCount": 6,
@@ -105486,7 +105501,7 @@
     {
       "giveawayCode": "20LhL",
       "title": "Assassin's Creed Origins - Gold Edition",
-      "appId": 215277,
+      "appId": 582160,
       "winnerUsername": "BarbaricGenie",
       "creatorUsername": "Ernesttico",
       "entriesCount": 4,
@@ -105611,8 +105626,8 @@
     },
     {
       "giveawayCode": "DJLWg",
-      "title": "Assassin's Creed Valhalla - Complete ...",
-      "appId": 791761,
+      "title": "Assassin's Creed Valhalla",
+      "appId": 2208920,
       "winnerUsername": "Milione",
       "creatorUsername": "leniu",
       "entriesCount": 2,
@@ -105746,7 +105761,7 @@
     },
     {
       "giveawayCode": "USZ4k",
-      "title": "Dying Light 2 Stay Human: Reloaded Ed...",
+      "title": "Dying Light 2 Stay Human: Reloaded Edition",
       "appId": 534380,
       "winnerUsername": "Kodeta",
       "creatorUsername": "chOOkity",
@@ -105791,7 +105806,7 @@
     },
     {
       "giveawayCode": "8c3i2",
-      "title": "Atelier Ryza 3: Alchemist of the End ...",
+      "title": "Atelier Ryza 3: Alchemist of the End & the Secret Key",
       "appId": 1999770,
       "winnerUsername": "Koalala",
       "creatorUsername": "Millsshogun",
@@ -105845,7 +105860,7 @@
     },
     {
       "giveawayCode": "Qw1tX",
-      "title": "STORY OF SEASONS: Friends of Mineral ...",
+      "title": "STORY OF SEASONS: Friends of Mineral Town",
       "appId": 978780,
       "winnerUsername": "Youdontknow",
       "creatorUsername": "leniu",
@@ -105872,7 +105887,7 @@
     },
     {
       "giveawayCode": "OFEVz",
-      "title": "FATAL FRAME / PROJECT ZERO: Maiden of...",
+      "title": "FATAL FRAME / PROJECT ZERO: Maiden of Black Water",
       "appId": 1732190,
       "winnerUsername": "burntreynolds444",
       "creatorUsername": "Koalala",
@@ -106259,7 +106274,7 @@
     },
     {
       "giveawayCode": "QADyx",
-      "title": "Dying Light 2 Stay Human: Reloaded Ed...",
+      "title": "Dying Light 2 Stay Human: Reloaded Edition",
       "appId": 534380,
       "winnerUsername": "Youdontknow",
       "creatorUsername": "kasztoix",
@@ -106313,7 +106328,7 @@
     },
     {
       "giveawayCode": "kDJA2",
-      "title": "METAL GEAR SOLID: MASTER COLLECTION V...",
+      "title": "The Island Combat",
       "appId": 886310,
       "winnerUsername": "zettaivanugen",
       "creatorUsername": "BojanNS987",
@@ -106340,7 +106355,7 @@
     },
     {
       "giveawayCode": "aRZkq",
-      "title": "DRAGON QUEST XI S: Echoes of an Elusi...",
+      "title": "DRAGON QUEST® XI S: Echoes of an Elusive Age™ - Definitive Edition",
       "appId": 1295510,
       "winnerUsername": "Wintermute101",
       "creatorUsername": "Kodeta",
@@ -106367,7 +106382,7 @@
     },
     {
       "giveawayCode": "7861o",
-      "title": "Tiny Tina's Wonderlands: Chaotic Grea...",
+      "title": "Golem Gates",
       "appId": 575970,
       "winnerUsername": "Ernesttico",
       "creatorUsername": "Kodeta",
@@ -106439,7 +106454,7 @@
     },
     {
       "giveawayCode": "qmTME",
-      "title": "Digimon Story Cyber Sleuth: Complete ...",
+      "title": "Digimon Story Cyber Sleuth: Complete Edition",
       "appId": 1042550,
       "winnerUsername": "Krlesnik",
       "creatorUsername": "Milione",
@@ -106475,7 +106490,7 @@
     },
     {
       "giveawayCode": "Lw7Vb",
-      "title": "Like a Dragon Gaiden: The Man Who Era...",
+      "title": "Like a Dragon Gaiden: The Man Who Erased His Name",
       "appId": 2375550,
       "winnerUsername": "Youdontknow",
       "creatorUsername": "Millsshogun",
@@ -106754,7 +106769,7 @@
     },
     {
       "giveawayCode": "ZuX2I",
-      "title": "Dying Light 2 Stay Human: Reloaded Ed...",
+      "title": "Dying Light 2 Stay Human: Reloaded Edition",
       "appId": 534380,
       "winnerUsername": "Milione",
       "creatorUsername": "chOOkity",
@@ -106799,7 +106814,7 @@
     },
     {
       "giveawayCode": "sFjZm",
-      "title": "FATAL FRAME / PROJECT ZERO: Maiden of...",
+      "title": "FATAL FRAME / PROJECT ZERO: Maiden of Black Water",
       "appId": 1732190,
       "winnerUsername": "Drain",
       "creatorUsername": "Koalala",
@@ -107015,7 +107030,7 @@
     },
     {
       "giveawayCode": "56HKF",
-      "title": "STRANGER OF PARADISE FINAL FANTASY OR...",
+      "title": "STRANGER OF PARADISE FINAL FANTASY ORIGIN",
       "appId": 1358700,
       "winnerUsername": "Koalala",
       "creatorUsername": "Krlesnik",
@@ -107303,7 +107318,7 @@
     },
     {
       "giveawayCode": "pv6Ma",
-      "title": "FATAL FRAME / PROJECT ZERO: Mask of t...",
+      "title": "FATAL FRAME / PROJECT ZERO: Mask of the Lunar Eclipse",
       "appId": 2130460,
       "winnerUsername": "leniu",
       "creatorUsername": "Youdontknow",
@@ -108086,7 +108101,7 @@
     },
     {
       "giveawayCode": "nnQq8",
-      "title": "Dying Light 2 Stay Human: Reloaded Ed...",
+      "title": "Dying Light 2 Stay Human: Reloaded Edition",
       "appId": 534380,
       "winnerUsername": "ChessPie",
       "creatorUsername": "Youdontknow",
@@ -108275,7 +108290,7 @@
     },
     {
       "giveawayCode": "CSZbJ",
-      "title": "Teenage Mutant Ninja Turtles: Shredde...",
+      "title": "Teenage Mutant Ninja Turtles: Shredder's Revenge",
       "appId": 1361510,
       "winnerUsername": "Krlesnik",
       "creatorUsername": "leniu",
@@ -108545,7 +108560,7 @@
     },
     {
       "giveawayCode": "GjJdb",
-      "title": "Warhammer 40,000: Chaos Gate - Daemon...",
+      "title": "Warhammer 40,000: Chaos Gate - Daemonhunters",
       "appId": 1611910,
       "winnerUsername": "Horseflesh",
       "creatorUsername": "chOOkity",
@@ -108725,7 +108740,7 @@
     },
     {
       "giveawayCode": "ubXGX",
-      "title": "The Legend of Heroes: Trails of Cold ...",
+      "title": "The Legend of Heroes: Trails of Cold Steel",
       "appId": 538680,
       "winnerUsername": "burntreynolds444",
       "creatorUsername": "Koalala",
@@ -108744,7 +108759,7 @@
     {
       "giveawayCode": "4EDVh",
       "title": "Borderlands 3: Super Deluxe Edition",
-      "appId": 427289,
+      "appId": 397540,
       "winnerUsername": "Horseflesh",
       "creatorUsername": "Koalala",
       "entriesCount": 3,
@@ -108779,7 +108794,7 @@
     },
     {
       "giveawayCode": "tJdrl",
-      "title": "Divinity: Original Sin 2 - Definitive...",
+      "title": "Divinity: Original Sin 2 - Definitive Edition",
       "appId": 435150,
       "winnerUsername": "Ernesttico",
       "creatorUsername": "leniu",
@@ -108842,7 +108857,7 @@
     },
     {
       "giveawayCode": "AJijj",
-      "title": "Teenage Mutant Ninja Turtles: Shredde...",
+      "title": "Teenage Mutant Ninja Turtles: Shredder's Revenge",
       "appId": 1361510,
       "winnerUsername": "chOOkity",
       "creatorUsername": "Oozyyy",
@@ -108968,7 +108983,7 @@
     },
     {
       "giveawayCode": "Dg31Z",
-      "title": "Atelier Sophie 2: The Alchemist of th...",
+      "title": "Atelier Sophie 2: The Alchemist of the Mysterious Dream",
       "appId": 1621310,
       "winnerUsername": "BojanNS987",
       "creatorUsername": "Youdontknow",
@@ -109140,7 +109155,7 @@
     {
       "giveawayCode": "cdz7K",
       "title": "Life is Strange Remastered Collection",
-      "appId": 440247,
+      "appId": 1265920,
       "winnerUsername": "eledhrim",
       "creatorUsername": "Wintermute101",
       "entriesCount": 6,
@@ -109337,7 +109352,7 @@
     },
     {
       "giveawayCode": "VGy6o",
-      "title": "NieR Replicant ver.1.22474487139...",
+      "title": "NieR Replicant™ ver.1.22474487139...",
       "appId": 1113560,
       "winnerUsername": "Krlesnik",
       "creatorUsername": "chOOkity",
@@ -109382,7 +109397,7 @@
     },
     {
       "giveawayCode": "fPnQi",
-      "title": "FATAL FRAME / PROJECT ZERO: Maiden of...",
+      "title": "FATAL FRAME / PROJECT ZERO: Maiden of Black Water",
       "appId": 1732190,
       "winnerUsername": "Krlesnik",
       "creatorUsername": "Youdontknow",
@@ -109391,7 +109406,7 @@
     },
     {
       "giveawayCode": "ulWXg",
-      "title": "Atelier Ryza 2: Lost Legends & the Se...",
+      "title": "Atelier Ryza 2: Lost Legends & the Secret Fairy",
       "appId": 1257290,
       "winnerUsername": "Millsshogun",
       "creatorUsername": "Youdontknow",
@@ -109796,7 +109811,7 @@
     },
     {
       "giveawayCode": "fkZRg",
-      "title": "Shin Megami Tensei III Nocturne HD Re...",
+      "title": "Shin Megami Tensei III Nocturne HD Remaster",
       "appId": 1413480,
       "winnerUsername": "Krlesnik",
       "creatorUsername": "BarbaricGenie",
@@ -109805,7 +109820,7 @@
     },
     {
       "giveawayCode": "MnJJo",
-      "title": "Pathfinder: Wrath of the Righteous - ...",
+      "title": "Pathfinder: Wrath of the Righteous - Enhanced Edition",
       "appId": 1184370,
       "winnerUsername": "Krlesnik",
       "creatorUsername": "BarbaricGenie",
@@ -110003,7 +110018,7 @@
     },
     {
       "giveawayCode": "Qk7VB",
-      "title": "Ni no Kuni Wrath of the White Witch R...",
+      "title": "Ni no Kuni Wrath of the White Witch™ Remastered",
       "appId": 798460,
       "winnerUsername": "Millsshogun",
       "creatorUsername": "Ernesttico",
@@ -110021,8 +110036,8 @@
     },
     {
       "giveawayCode": "ceNJu",
-      "title": "STAR WARS Jedi: Fallen Order Deluxe E...",
-      "appId": 401587,
+      "title": "STAR WARS Jedi: Fallen Order™",
+      "appId": 1172380,
       "winnerUsername": "Koalala",
       "creatorUsername": "Ernesttico",
       "entriesCount": 3,
@@ -110057,7 +110072,7 @@
     },
     {
       "giveawayCode": "tLGgw",
-      "title": "Divinity: Original Sin 2 - Definitive...",
+      "title": "Divinity: Original Sin 2 - Definitive Edition",
       "appId": 435150,
       "winnerUsername": "Krlesnik",
       "creatorUsername": "xMisiu",
@@ -110291,7 +110306,7 @@
     },
     {
       "giveawayCode": "h8I4j",
-      "title": "Dying Light 2 Stay Human: Reloaded Ed...",
+      "title": "Dying Light 2 Stay Human: Reloaded Edition",
       "appId": 534380,
       "winnerUsername": "Krlesnik",
       "creatorUsername": "Wintermute75",
@@ -110345,7 +110360,7 @@
     },
     {
       "giveawayCode": "PuCT9",
-      "title": "NieR Replicant ver.1.22474487139...",
+      "title": "NieR Replicant™ ver.1.22474487139...",
       "appId": 1113560,
       "winnerUsername": "Millsshogun",
       "creatorUsername": "BojanNS987",
@@ -110354,7 +110369,7 @@
     },
     {
       "giveawayCode": "NiJIT",
-      "title": "Teenage Mutant Ninja Turtles: Shredde...",
+      "title": "Teenage Mutant Ninja Turtles: Shredder's Revenge",
       "appId": 1361510,
       "winnerUsername": "bron99",
       "creatorUsername": "BojanNS987",
@@ -110480,7 +110495,7 @@
     },
     {
       "giveawayCode": "v91Fb",
-      "title": "Dying Light 2 Stay Human: Reloaded Ed...",
+      "title": "Dying Light 2 Stay Human: Reloaded Edition",
       "appId": 534380,
       "winnerUsername": "Drain",
       "creatorUsername": "BojanNS987",
@@ -110660,7 +110675,7 @@
     },
     {
       "giveawayCode": "LE1Ja",
-      "title": "Warhammer 40,000: Chaos Gate - Daemon...",
+      "title": "Warhammer 40,000: Chaos Gate - Daemonhunters",
       "appId": 1611910,
       "winnerUsername": "Skull18",
       "creatorUsername": "chOOkity",
@@ -110669,7 +110684,7 @@
     },
     {
       "giveawayCode": "FT9ti",
-      "title": "NieR Replicant ver.1.22474487139...",
+      "title": "NieR Replicant™ ver.1.22474487139...",
       "appId": 1113560,
       "winnerUsername": "BojanNS987",
       "creatorUsername": "Koalala",
@@ -110957,7 +110972,7 @@
     },
     {
       "giveawayCode": "asS78",
-      "title": "Warhammer 40,000: Chaos Gate - Daemon...",
+      "title": "Warhammer 40,000: Chaos Gate - Daemonhunters",
       "appId": 1611910,
       "winnerUsername": "kasztoix",
       "creatorUsername": "Horseflesh",
@@ -111119,7 +111134,7 @@
     },
     {
       "giveawayCode": "Yh9o2",
-      "title": "CHRONO CROSS: THE RADICAL DREAMERS ED...",
+      "title": "CHRONO CROSS: THE RADICAL DREAMERS EDITION",
       "appId": 1133760,
       "winnerUsername": "leniu",
       "creatorUsername": "Millsshogun",
@@ -111137,7 +111152,7 @@
     },
     {
       "giveawayCode": "lfmMh",
-      "title": "The Dark Pictures Anthology: House of...",
+      "title": "The Dark Pictures Anthology: House of Ashes",
       "appId": 1281590,
       "winnerUsername": "Horseflesh",
       "creatorUsername": "chOOkity",
@@ -111218,7 +111233,7 @@
     },
     {
       "giveawayCode": "VCeYw",
-      "title": "Dying Light 2 Stay Human: Reloaded Ed...",
+      "title": "Dying Light 2 Stay Human: Reloaded Edition",
       "appId": 534380,
       "winnerUsername": "Dreamson",
       "creatorUsername": "Deleted-5176114",
@@ -111308,7 +111323,7 @@
     },
     {
       "giveawayCode": "eokJh",
-      "title": "Atelier Ryza 2: Lost Legends & the Se...",
+      "title": "Atelier Ryza 2: Lost Legends & the Secret Fairy",
       "appId": 1257290,
       "winnerUsername": "leniu",
       "creatorUsername": "Youdontknow",
@@ -111479,7 +111494,7 @@
     },
     {
       "giveawayCode": "CwHax",
-      "title": "The Dark Pictures Anthology: House of...",
+      "title": "The Dark Pictures Anthology: House of Ashes",
       "appId": 1281590,
       "winnerUsername": "BojanNS987",
       "creatorUsername": "Wintermute101",
@@ -111542,7 +111557,7 @@
     },
     {
       "giveawayCode": "lViaX",
-      "title": "The Dark Pictures Anthology: House of...",
+      "title": "The Dark Pictures Anthology: House of Ashes",
       "appId": 1281590,
       "winnerUsername": "Dreamson",
       "creatorUsername": "ltachi",
@@ -111560,7 +111575,7 @@
     },
     {
       "giveawayCode": "5k2Qj",
-      "title": "Dying Light 2 Stay Human: Reloaded Ed...",
+      "title": "Dying Light 2 Stay Human: Reloaded Edition",
       "appId": 534380,
       "winnerUsername": "eledhrim",
       "creatorUsername": "bron99",
@@ -111569,7 +111584,7 @@
     },
     {
       "giveawayCode": "afFpv",
-      "title": "NieR Replicant ver.1.22474487139...",
+      "title": "NieR Replicant™ ver.1.22474487139...",
       "appId": 1113560,
       "winnerUsername": "Dreamson",
       "creatorUsername": "Deleted-3336818",
@@ -111686,7 +111701,7 @@
     },
     {
       "giveawayCode": "pIsIj",
-      "title": "SpongeBob SquarePants: Battle for Bik...",
+      "title": "SpongeBob SquarePants: Battle for Bikini Bottom - Rehydrated",
       "appId": 969990,
       "winnerUsername": "Deleted-3336818",
       "creatorUsername": "chOOkity",
@@ -112100,7 +112115,7 @@
     },
     {
       "giveawayCode": "86Y94",
-      "title": "The Elder Scrolls IV: Oblivion Game o...",
+      "title": "The Elder Scrolls IV: Oblivion® Game of the Year Edition (2009)",
       "appId": 22330,
       "winnerUsername": "ltachi",
       "creatorUsername": "Wintermute75",
@@ -112154,7 +112169,7 @@
     },
     {
       "giveawayCode": "jagLY",
-      "title": "Dying Light 2 Stay Human: Reloaded Ed...",
+      "title": "Dying Light 2 Stay Human: Reloaded Edition",
       "appId": 534380,
       "winnerUsername": "skAd42",
       "creatorUsername": "bron99",
@@ -112172,7 +112187,7 @@
     },
     {
       "giveawayCode": "yNAQI",
-      "title": "Ni no Kuni Wrath of the White Witch R...",
+      "title": "Ni no Kuni Wrath of the White Witch™ Remastered",
       "appId": 798460,
       "winnerUsername": "Krlesnik",
       "creatorUsername": "bron99",
@@ -112262,7 +112277,7 @@
     },
     {
       "giveawayCode": "CPbT0",
-      "title": "FATAL FRAME / PROJECT ZERO: Maiden of...",
+      "title": "FATAL FRAME / PROJECT ZERO: Maiden of Black Water",
       "appId": 1732190,
       "winnerUsername": "leniu",
       "creatorUsername": "Youdontknow",
@@ -112658,7 +112673,7 @@
     },
     {
       "giveawayCode": "RTUgk",
-      "title": "The Dark Pictures Anthology: House of...",
+      "title": "The Dark Pictures Anthology: House of Ashes",
       "appId": 1281590,
       "winnerUsername": "bron99",
       "creatorUsername": "Skull18",
@@ -113009,7 +113024,7 @@
     },
     {
       "giveawayCode": "5exh7",
-      "title": "The Legend of Heroes: Trails of Cold ...",
+      "title": "The Legend of Heroes: Trails of Cold Steel II",
       "appId": 748490,
       "winnerUsername": "Youdontknow",
       "creatorUsername": "Ernesttico",
@@ -113027,7 +113042,7 @@
     },
     {
       "giveawayCode": "cIsSk",
-      "title": "The Dungeon Of Naheulbeuk: The Amulet...",
+      "title": "The Dungeon Of Naheulbeuk: The Amulet Of Chaos",
       "appId": 970830,
       "winnerUsername": "kasztoix",
       "creatorUsername": "Ernesttico",
@@ -113108,7 +113123,7 @@
     },
     {
       "giveawayCode": "Tz4uo",
-      "title": "Shin Megami Tensei III Nocturne HD Re...",
+      "title": "Shin Megami Tensei III Nocturne HD Remaster",
       "appId": 1413480,
       "winnerUsername": "Youdontknow",
       "creatorUsername": "Deleted-3336818",
@@ -113595,7 +113610,7 @@
     {
       "giveawayCode": "aw4kH",
       "title": "Borderlands 3: Super Deluxe Edition",
-      "appId": 427289,
+      "appId": 397540,
       "winnerUsername": "Youdontknow",
       "creatorUsername": "trentonlf",
       "entriesCount": 6,
@@ -113873,7 +113888,7 @@
     },
     {
       "giveawayCode": "6McoP",
-      "title": "DRAGON QUEST XI S: Echoes of an Elusi...",
+      "title": "DRAGON QUEST® XI S: Echoes of an Elusive Age™ - Definitive Edition",
       "appId": 1295510,
       "winnerUsername": "leniu",
       "creatorUsername": "Deleted-3336818",
@@ -113909,7 +113924,7 @@
     },
     {
       "giveawayCode": "qytZ8",
-      "title": "Dying Light 2 Stay Human: Reloaded Ed...",
+      "title": "Dying Light 2 Stay Human: Reloaded Edition",
       "appId": 534380,
       "winnerUsername": "zettaivanugen",
       "creatorUsername": "bron99",
@@ -114134,7 +114149,7 @@
     },
     {
       "giveawayCode": "3HpPT",
-      "title": "NieR Replicant ver.1.22474487139...",
+      "title": "NieR Replicant™ ver.1.22474487139...",
       "appId": 1113560,
       "winnerUsername": "eledhrim",
       "creatorUsername": "burntreynolds444",
@@ -114143,7 +114158,7 @@
     },
     {
       "giveawayCode": "17xwA",
-      "title": "Divinity: Original Sin 2 - Definitive...",
+      "title": "Divinity: Original Sin 2 - Definitive Edition",
       "appId": 435150,
       "winnerUsername": "Youdontknow",
       "creatorUsername": "Wintermute75",
@@ -114179,7 +114194,7 @@
     },
     {
       "giveawayCode": "6oAbJ",
-      "title": "Divinity: Original Sin 2 - Definitive...",
+      "title": "Divinity: Original Sin 2 - Definitive Edition",
       "appId": 435150,
       "winnerUsername": "Milione",
       "creatorUsername": "Skull18",
@@ -114242,7 +114257,7 @@
     },
     {
       "giveawayCode": "ZvcOq",
-      "title": "Ni no Kuni Wrath of the White Witch R...",
+      "title": "Ni no Kuni Wrath of the White Witch™ Remastered",
       "appId": 798460,
       "winnerUsername": "BojanNS987",
       "creatorUsername": "Ernesttico",
@@ -114260,7 +114275,7 @@
     },
     {
       "giveawayCode": "fevbp",
-      "title": "Dying Light 2 Stay Human: Reloaded Ed...",
+      "title": "Dying Light 2 Stay Human: Reloaded Edition",
       "appId": 534380,
       "winnerUsername": "leniu",
       "creatorUsername": "Ernesttico",
@@ -114306,7 +114321,7 @@
     {
       "giveawayCode": "8tZik",
       "title": "NINJA GAIDEN: Master Collection",
-      "appId": 575623,
+      "appId": 1369760,
       "winnerUsername": "Skull18",
       "creatorUsername": "Youdontknow",
       "entriesCount": 6,
@@ -114350,7 +114365,7 @@
     },
     {
       "giveawayCode": "Eiox1",
-      "title": "The Darkside Detective: A Fumble in t...",
+      "title": "The Darkside Detective: A Fumble in the Dark",
       "appId": 795420,
       "winnerUsername": "GoldenStar",
       "creatorUsername": "Wintermute101",
@@ -114557,7 +114572,7 @@
     },
     {
       "giveawayCode": "l0WsK",
-      "title": "The Darkside Detective: A Fumble in t...",
+      "title": "The Darkside Detective: A Fumble in the Dark",
       "appId": 795420,
       "winnerUsername": "kasztoix",
       "creatorUsername": "Skull18",
@@ -114620,7 +114635,7 @@
     },
     {
       "giveawayCode": "fv5ix",
-      "title": "NieR Replicant ver.1.22474487139...",
+      "title": "NieR Replicant™ ver.1.22474487139...",
       "appId": 1113560,
       "winnerUsername": "Wintermute75",
       "creatorUsername": "trentonlf",
@@ -114818,7 +114833,7 @@
     },
     {
       "giveawayCode": "2hM0D",
-      "title": "NieR Replicant ver.1.22474487139...",
+      "title": "NieR Replicant™ ver.1.22474487139...",
       "appId": 1113560,
       "winnerUsername": "Youdontknow",
       "creatorUsername": "burntreynolds444",
@@ -115043,7 +115058,7 @@
     },
     {
       "giveawayCode": "AFuQz",
-      "title": "Ni no Kuni Wrath of the White Witch R...",
+      "title": "Ni no Kuni Wrath of the White Witch™ Remastered",
       "appId": 798460,
       "winnerUsername": "Deleted-3336818",
       "creatorUsername": "Skull18",
@@ -115205,7 +115220,7 @@
     },
     {
       "giveawayCode": "kDuZX",
-      "title": "Frog Detective 2: The Case of the Inv...",
+      "title": "Frog Detective 2: The Case of the Invisible Wizard",
       "appId": 1047220,
       "winnerUsername": "shadowshiv",
       "creatorUsername": "Skull18",
@@ -115304,7 +115319,7 @@
     },
     {
       "giveawayCode": "JbkfV",
-      "title": "NieR Replicant ver.1.22474487139...",
+      "title": "NieR Replicant™ ver.1.22474487139...",
       "appId": 1113560,
       "winnerUsername": "Oozyyy",
       "creatorUsername": "bron99",
@@ -115340,7 +115355,7 @@
     },
     {
       "giveawayCode": "jbc5i",
-      "title": "NieR Replicant ver.1.22474487139...",
+      "title": "NieR Replicant™ ver.1.22474487139...",
       "appId": 1113560,
       "winnerUsername": "xMisiu",
       "creatorUsername": "trentonlf",
@@ -116070,7 +116085,7 @@
     {
       "giveawayCode": "wvFJV",
       "title": "Metro Exodus - Gold Edition",
-      "appId": 298833,
+      "appId": 412020,
       "winnerUsername": "skAd42",
       "creatorUsername": "BarbaricGenie",
       "entriesCount": 6,
@@ -116285,7 +116300,7 @@
     },
     {
       "giveawayCode": "65397",
-      "title": "SpongeBob SquarePants: Battle for Bik...",
+      "title": "SpongeBob SquarePants: Battle for Bikini Bottom - Rehydrated",
       "appId": 969990,
       "winnerUsername": "MachinesAreHuman",
       "creatorUsername": "Oozyyy",
@@ -116339,7 +116354,7 @@
     },
     {
       "giveawayCode": "fvPNG",
-      "title": "The Dungeon Of Naheulbeuk: The Amulet...",
+      "title": "The Dungeon Of Naheulbeuk: The Amulet Of Chaos",
       "appId": 970830,
       "winnerUsername": "bron99",
       "creatorUsername": "burntreynolds444",
@@ -116438,7 +116453,7 @@
     },
     {
       "giveawayCode": "zs2D8",
-      "title": "Marvel's Avengers - The Definitive Ed...",
+      "title": "Marvel's Avengers - The Definitive Edition",
       "appId": 997070,
       "winnerUsername": "Horseflesh",
       "creatorUsername": "en7erpr1se",
@@ -116519,7 +116534,7 @@
     },
     {
       "giveawayCode": "vI3TQ",
-      "title": "Vampire: The Masquerade - Coteries of...",
+      "title": "Vampire: The Masquerade - Coteries of New York",
       "appId": 1096410,
       "winnerUsername": "ltachi",
       "creatorUsername": "Wintermute101",
@@ -116690,7 +116705,7 @@
     },
     {
       "giveawayCode": "0Hf5G",
-      "title": "Marvel's Avengers - The Definitive Ed...",
+      "title": "Marvel's Avengers - The Definitive Edition",
       "appId": 997070,
       "winnerUsername": "leniu",
       "creatorUsername": "en7erpr1se",
@@ -116942,7 +116957,7 @@
     },
     {
       "giveawayCode": "lpgyN",
-      "title": "SpongeBob SquarePants: Battle for Bik...",
+      "title": "SpongeBob SquarePants: Battle for Bikini Bottom - Rehydrated",
       "appId": 969990,
       "winnerUsername": "ltachi",
       "creatorUsername": "en7erpr1se",
@@ -117059,7 +117074,7 @@
     },
     {
       "giveawayCode": "1fJHH",
-      "title": "SpongeBob SquarePants: Battle for Bik...",
+      "title": "SpongeBob SquarePants: Battle for Bikini Bottom - Rehydrated",
       "appId": 969990,
       "winnerUsername": "bron99",
       "creatorUsername": "ChessPie",
@@ -117599,7 +117614,7 @@
     },
     {
       "giveawayCode": "mU0jq",
-      "title": "SpongeBob SquarePants: Battle for Bik...",
+      "title": "SpongeBob SquarePants: Battle for Bikini Bottom - Rehydrated",
       "appId": 969990,
       "winnerUsername": "kasztoix",
       "creatorUsername": "Drain",
@@ -117797,7 +117812,7 @@
     },
     {
       "giveawayCode": "F47Bj",
-      "title": "Druidstone: The Secret of the Menhir ...",
+      "title": "Druidstone: The Secret of the Menhir Forest",
       "appId": 954650,
       "winnerUsername": "DrTenma",
       "creatorUsername": "Wintermute75",
@@ -117924,7 +117939,7 @@
     {
       "giveawayCode": "I54ba",
       "title": "Inquisitor Deluxe Edition",
-      "appId": 29582,
+      "appId": 241620,
       "winnerUsername": "Nightmaze",
       "creatorUsername": "Deleted-6983004",
       "entriesCount": 5,
@@ -117959,7 +117974,7 @@
     },
     {
       "giveawayCode": "W1K7q",
-      "title": "Learn Japanese To Survive! Hiragana B...",
+      "title": "Learn Japanese To Survive! Hiragana Battle",
       "appId": 438270,
       "winnerUsername": "scorpiusus",
       "creatorUsername": "Deleted-6983004",
@@ -118248,7 +118263,7 @@
     {
       "giveawayCode": "hVw7S",
       "title": "The Council - Complete Season",
-      "appId": 40061,
+      "appId": 287630,
       "winnerUsername": "zettaivanugen",
       "creatorUsername": "mrGreen82",
       "entriesCount": 2,
@@ -118337,7 +118352,7 @@
     },
     {
       "giveawayCode": "JdJW6",
-      "title": "Atelier Ryza: Ever Darkness & the Sec...",
+      "title": "Atelier Ryza: Ever Darkness & the Secret Hideout",
       "appId": 1121560,
       "winnerUsername": "leniu",
       "creatorUsername": "Oozyyy",
@@ -118760,7 +118775,7 @@
     },
     {
       "giveawayCode": "KJb1W",
-      "title": "Vampire: The Masquerade - Coteries of...",
+      "title": "Vampire: The Masquerade - Coteries of New York",
       "appId": 1096410,
       "winnerUsername": "Krlesnik",
       "creatorUsername": "Youdontknow",
@@ -118913,7 +118928,7 @@
     },
     {
       "giveawayCode": "axC3A",
-      "title": "The MISSING: J.J. Macfield and the Is...",
+      "title": "The MISSING: J.J. Macfield and the Island of Memories",
       "appId": 842910,
       "winnerUsername": "Deleted-3336818",
       "creatorUsername": "leniu",
@@ -119129,7 +119144,7 @@
     },
     {
       "giveawayCode": "7RpNY",
-      "title": "The Dark Pictures Anthology: Man of M...",
+      "title": "The Dark Pictures Anthology: Man of Medan",
       "appId": 939850,
       "winnerUsername": "Milione",
       "creatorUsername": "Wintermute75",
@@ -119147,7 +119162,7 @@
     },
     {
       "giveawayCode": "qiRY3",
-      "title": "RESONANCE OF FATE/END OF ETERNITY 4K/...",
+      "title": "RESONANCE OF FATE™/END OF ETERNITY™ 4K/HD EDITION",
       "appId": 645730,
       "winnerUsername": "Jarlaxe",
       "creatorUsername": "Deleted-3336818",
@@ -119264,7 +119279,7 @@
     },
     {
       "giveawayCode": "z7lmT",
-      "title": "Divinity: Original Sin 2 - Definitive...",
+      "title": "Divinity: Original Sin 2 - Definitive Edition",
       "appId": 435150,
       "winnerUsername": "skAd42",
       "creatorUsername": "mrGreen82",
@@ -119291,7 +119306,7 @@
     },
     {
       "giveawayCode": "DfGRZ",
-      "title": "The Dark Pictures Anthology: Man of M...",
+      "title": "The Dark Pictures Anthology: Man of Medan",
       "appId": 939850,
       "winnerUsername": "Horseflesh",
       "creatorUsername": "Skull18",
@@ -119336,7 +119351,7 @@
     },
     {
       "giveawayCode": "3F4Fc",
-      "title": "Ni no Kuni Wrath of the White Witch R...",
+      "title": "Ni no Kuni Wrath of the White Witch™ Remastered",
       "appId": 798460,
       "winnerUsername": "MachinesAreHuman",
       "creatorUsername": "Deleted-3336818",
@@ -119390,7 +119405,7 @@
     },
     {
       "giveawayCode": "c5r7g",
-      "title": "Syberia 3 - An Automaton wi...",
+      "title": "Syberia 3 - An Automaton with a plan",
       "appId": 673500,
       "winnerUsername": "Milione",
       "creatorUsername": "Wintermute75",
@@ -119570,7 +119585,7 @@
     },
     {
       "giveawayCode": "0kjVo",
-      "title": "The MISSING: J.J. Macfield and the Is...",
+      "title": "The MISSING: J.J. Macfield and the Island of Memories",
       "appId": 842910,
       "winnerUsername": "Oozyyy",
       "creatorUsername": "Horseflesh",
@@ -119696,7 +119711,7 @@
     },
     {
       "giveawayCode": "XexnS",
-      "title": "The Dark Pictures Anthology: Man of M...",
+      "title": "The Dark Pictures Anthology: Man of Medan",
       "appId": 939850,
       "winnerUsername": "bron99",
       "creatorUsername": "Deleted-6983004",
@@ -119957,7 +119972,7 @@
     },
     {
       "giveawayCode": "XMY23",
-      "title": "The Dark Pictures Anthology: Man of M...",
+      "title": "The Dark Pictures Anthology: Man of Medan",
       "appId": 939850,
       "winnerUsername": "gameggorder",
       "creatorUsername": "burntreynolds444",
@@ -120218,7 +120233,7 @@
     },
     {
       "giveawayCode": "8Ux2R",
-      "title": "Super Cane Magic ZERO - Legend of the...",
+      "title": "Super Cane Magic ZERO - Legend of the Cane Cane",
       "appId": 336440,
       "winnerUsername": "ChessPie",
       "creatorUsername": "ltachi",
@@ -120254,7 +120269,7 @@
     },
     {
       "giveawayCode": "8NJV5",
-      "title": "South Park: The Fractured B...",
+      "title": "South Park™: The Fractured But Whole™",
       "appId": 488790,
       "winnerUsername": "alfredwallace",
       "creatorUsername": "cowmoobaby",
@@ -120281,7 +120296,7 @@
     },
     {
       "giveawayCode": "msPEX",
-      "title": "Duke Nukem 3D: 20th Anniversary World...",
+      "title": "Duke Nukem 3D: 20th Anniversary World Tour",
       "appId": 434050,
       "winnerUsername": "ChessPie",
       "creatorUsername": "Ernesttico",
@@ -120354,7 +120369,7 @@
     {
       "giveawayCode": "BTwYH",
       "title": "Kyn Deluxe Edition",
-      "appId": 74024,
+      "appId": 314560,
       "winnerUsername": "ChessPie",
       "creatorUsername": "Jarlaxe",
       "entriesCount": 1,
@@ -120560,7 +120575,7 @@
     },
     {
       "giveawayCode": "2qDRi",
-      "title": "Druidstone: The Secret of the Menhir ...",
+      "title": "Druidstone: The Secret of the Menhir Forest",
       "appId": 954650,
       "winnerUsername": "burntreynolds444",
       "creatorUsername": "Ernesttico",
@@ -120677,7 +120692,7 @@
     },
     {
       "giveawayCode": "jqhH8",
-      "title": "Atelier Sophie: The Alchemist of the ...",
+      "title": "Atelier Sophie: The Alchemist of the Mysterious Book",
       "appId": 527270,
       "winnerUsername": "Jarlaxe",
       "creatorUsername": "LastM",
@@ -120839,7 +120854,7 @@
     },
     {
       "giveawayCode": "fgbYe",
-      "title": "Shadow of the Tomb Raider: Definitive...",
+      "title": "Shadow of the Tomb Raider: Definitive Edition",
       "appId": 750920,
       "winnerUsername": "Drain",
       "creatorUsername": "Horseflesh",
@@ -121208,7 +121223,7 @@
     },
     {
       "giveawayCode": "8Y0oH",
-      "title": "The Legend of Heroes: Trails of Cold ...",
+      "title": "The Legend of Heroes: Trails of Cold Steel",
       "appId": 538680,
       "winnerUsername": "Youdontknow",
       "creatorUsername": "LastM",
@@ -121397,7 +121412,7 @@
     },
     {
       "giveawayCode": "r6wKy",
-      "title": "Sea Legends: Phantasmal Light Collect...",
+      "title": "Sea Legends: Phantasmal Light Collector's Edition",
       "appId": 323280,
       "winnerUsername": "blackcalin",
       "creatorUsername": "Deleted-6983004",
@@ -121406,7 +121421,7 @@
     },
     {
       "giveawayCode": "9Vdf6",
-      "title": "Dreamscapes: The Sandman - Premium Ed...",
+      "title": "Dreamscapes: The Sandman - Premium Edition",
       "appId": 289260,
       "winnerUsername": "SaturnArc",
       "creatorUsername": "Deleted-6983004",
@@ -121523,7 +121538,7 @@
     },
     {
       "giveawayCode": "N70tM",
-      "title": "The MISSING: J.J. Macfield and the Is...",
+      "title": "The MISSING: J.J. Macfield and the Island of Memories",
       "appId": 842910,
       "winnerUsername": "gameggorder",
       "creatorUsername": "MachinesAreHuman",
@@ -121640,7 +121655,7 @@
     },
     {
       "giveawayCode": "bi7oi",
-      "title": "Atelier Sophie: The Alchemist of the ...",
+      "title": "Atelier Sophie: The Alchemist of the Mysterious Book",
       "appId": 527270,
       "winnerUsername": "Krlesnik",
       "creatorUsername": "LastM",
@@ -121793,7 +121808,7 @@
     },
     {
       "giveawayCode": "N0s34",
-      "title": "EARTH DEFENSE FORCE 4.1 The Shadow of...",
+      "title": "EARTH DEFENSE FORCE 4.1 The Shadow of New Despair",
       "appId": 410320,
       "winnerUsername": "bugzee567",
       "creatorUsername": "zettaivanugen",
@@ -122180,7 +122195,7 @@
     },
     {
       "giveawayCode": "eYlFW",
-      "title": "The Mean Greens - Plastic W...",
+      "title": "The Mean Greens - Plastic Warfare",
       "appId": 360940,
       "winnerUsername": "frank188718",
       "creatorUsername": "helevorn23",
@@ -122415,7 +122430,7 @@
     {
       "giveawayCode": "1hC4P",
       "title": "Resident Evil 5 Gold Edition",
-      "appId": 62118,
+      "appId": 21690,
       "winnerUsername": "Zerielle",
       "creatorUsername": "zettaivanugen",
       "entriesCount": 10,
@@ -122630,7 +122645,7 @@
     },
     {
       "giveawayCode": "TJQRn",
-      "title": "RESONANCE OF FATE/END OF ETERNITY 4K/...",
+      "title": "RESONANCE OF FATE™/END OF ETERNITY™ 4K/HD EDITION",
       "appId": 645730,
       "winnerUsername": "guille36",
       "creatorUsername": "Deleted-6983004",
@@ -122720,7 +122735,7 @@
     },
     {
       "giveawayCode": "iOfrZ",
-      "title": "Midnight at the Red Light : An Invest...",
+      "title": "Midnight at the Red Light : An Investigation",
       "appId": 665140,
       "winnerUsername": "Tzaar",
       "creatorUsername": "Deleted-6983004",
@@ -122909,7 +122924,7 @@
     },
     {
       "giveawayCode": "4wBM0",
-      "title": "Shadow of the Tomb Raider: Definitive...",
+      "title": "Shadow of the Tomb Raider: Definitive Edition",
       "appId": 750920,
       "winnerUsername": "Arukardo",
       "creatorUsername": "leniu",
@@ -122972,7 +122987,7 @@
     },
     {
       "giveawayCode": "OXAjM",
-      "title": "Shadow of the Tomb Raider: Definitive...",
+      "title": "Shadow of the Tomb Raider: Definitive Edition",
       "appId": 750920,
       "winnerUsername": "Saikania",
       "creatorUsername": "zettaivanugen",
@@ -123341,7 +123356,7 @@
     },
     {
       "giveawayCode": "ah4VJ",
-      "title": "The Legend of Heroes: Trails of Cold ...",
+      "title": "The Legend of Heroes: Trails of Cold Steel",
       "appId": 538680,
       "winnerUsername": "ltachi",
       "creatorUsername": "LastM",
@@ -123386,7 +123401,7 @@
     },
     {
       "giveawayCode": "ewxHN",
-      "title": "Hyperdevotion Noire: Goddess Black He...",
+      "title": "Hyperdevotion Noire: Goddess Black Heart (Neptunia)",
       "appId": 415480,
       "winnerUsername": "LastM",
       "creatorUsername": "Wintermute75",
@@ -123584,7 +123599,7 @@
     },
     {
       "giveawayCode": "MKFYl",
-      "title": "Shadow of the Tomb Raider: Definitive...",
+      "title": "Shadow of the Tomb Raider: Definitive Edition",
       "appId": 750920,
       "winnerUsername": "skAd42",
       "creatorUsername": "trentonlf",
@@ -123692,7 +123707,7 @@
     },
     {
       "giveawayCode": "gz9wp",
-      "title": "Attack on Titan / A.O.T. Wings of Fre...",
+      "title": "Attack on Titan / A.O.T. Wings of Freedom",
       "appId": 449800,
       "winnerUsername": "Wintermute75",
       "creatorUsername": "Horseflesh",
@@ -124025,7 +124040,7 @@
     },
     {
       "giveawayCode": "sXdmt",
-      "title": "Batman: The Enemy Within - The Tellta...",
+      "title": "Batman: The Enemy Within - The Telltale Series",
       "appId": 675260,
       "winnerUsername": "Wintermute75",
       "creatorUsername": "Deleted-1721061",
@@ -124061,7 +124076,7 @@
     },
     {
       "giveawayCode": "8p0lY",
-      "title": "Ori and the Blind Forest: Definitive ...",
+      "title": "Ori and the Blind Forest: Definitive Edition",
       "appId": 387290,
       "winnerUsername": "Wintermute75",
       "creatorUsername": "LastM",
@@ -124089,7 +124104,7 @@
     {
       "giveawayCode": "RydN4",
       "title": "Tyranny - Deluxe Edition",
-      "appId": 133812,
+      "appId": 362960,
       "winnerUsername": "gizzy831",
       "creatorUsername": "ercalote",
       "entriesCount": 1,
@@ -124115,8 +124130,8 @@
     },
     {
       "giveawayCode": "efdnu",
-      "title": "METAL GEAR SOLID V: The Definitive Ex...",
-      "appId": 132479,
+      "title": "METAL GEAR ONLINE \"BASIC APPEAL PACK\"",
+      "appId": 436040,
       "winnerUsername": "Horseflesh",
       "creatorUsername": "Youdontknow",
       "entriesCount": 3,
@@ -124169,7 +124184,7 @@
     },
     {
       "giveawayCode": "6DWhw",
-      "title": "Marvel's Guardians of the Galaxy: The...",
+      "title": "Marvel's Guardians of the Galaxy: The Telltale Series",
       "appId": 579950,
       "winnerUsername": "Saikania",
       "creatorUsername": "Krlesnik",
@@ -124349,8 +124364,8 @@
     },
     {
       "giveawayCode": "3eJY7",
-      "title": "Dishonored: Death of the Outsider - D...",
-      "appId": 183038,
+      "title": "Dishonored 2",
+      "appId": 403640,
       "winnerUsername": "ercalote",
       "creatorUsername": "spacepower",
       "entriesCount": 4,
@@ -124421,7 +124436,7 @@
     },
     {
       "giveawayCode": "8XhKE",
-      "title": "STAR OCEAN - THE LAST HOPE - 4K & Ful...",
+      "title": "STAR OCEAN™ - THE LAST HOPE -™ 4K & Full HD Remaster",
       "appId": 609150,
       "winnerUsername": "Krlesnik",
       "creatorUsername": "Saikania",
@@ -124844,7 +124859,7 @@
     },
     {
       "giveawayCode": "KnnDv",
-      "title": "Shadow of the Tomb Raider: Definitive...",
+      "title": "Shadow of the Tomb Raider: Definitive Edition",
       "appId": 750920,
       "winnerUsername": "leniu",
       "creatorUsername": "bron99",
@@ -124979,7 +124994,7 @@
     },
     {
       "giveawayCode": "t7Oxe",
-      "title": "Marvel's Guardians of the Galaxy: The...",
+      "title": "Marvel's Guardians of the Galaxy: The Telltale Series",
       "appId": 579950,
       "winnerUsername": "MachinesAreHuman",
       "creatorUsername": "Deleted-1721061",
@@ -125042,7 +125057,7 @@
     },
     {
       "giveawayCode": "zIaLn",
-      "title": "The Legend of Heroes: Trails in the S...",
+      "title": "The Legend of Heroes: Trails in the Sky the 3rd",
       "appId": 436670,
       "winnerUsername": "zettaivanugen",
       "creatorUsername": "LastM",
@@ -125303,7 +125318,7 @@
     },
     {
       "giveawayCode": "szs2U",
-      "title": "STAR OCEAN - THE LAST HOPE - 4K & Ful...",
+      "title": "STAR OCEAN™ - THE LAST HOPE -™ 4K & Full HD Remaster",
       "appId": 609150,
       "winnerUsername": "Saikania",
       "creatorUsername": "guille36",
@@ -125420,7 +125435,7 @@
     },
     {
       "giveawayCode": "EFvxt",
-      "title": "NARUTO SHIPPUDEN: Ultimate Ninja STOR...",
+      "title": "NARUTO SHIPPUDEN: Ultimate Ninja STORM Revolution",
       "appId": 272510,
       "winnerUsername": "nopzor",
       "creatorUsername": "Wintermute75",
@@ -125465,7 +125480,7 @@
     },
     {
       "giveawayCode": "nRXB7",
-      "title": "Bud Spencer & Terence Hill - Slaps An...",
+      "title": "Bud Spencer & Terence Hill - Slaps And Beans",
       "appId": 564050,
       "winnerUsername": "HBRugeO",
       "creatorUsername": "Krlesnik",
@@ -125924,8 +125939,8 @@
     },
     {
       "giveawayCode": "Tp8Rk",
-      "title": "Wolfenstein II: The New Colossus Digi...",
-      "appId": 183036,
+      "title": "Wolfenstein II: The Freedom Chronicles - Season Pass",
+      "appId": 650410,
       "winnerUsername": "fantis6",
       "creatorUsername": "gizzy831",
       "entriesCount": 42,
@@ -126311,7 +126326,7 @@
     },
     {
       "giveawayCode": "SYi7A",
-      "title": "Batman: The Enemy Within - The Tellta...",
+      "title": "Batman: The Enemy Within - The Telltale Series",
       "appId": 675260,
       "winnerUsername": "Zaugr",
       "creatorUsername": "ReptilianWorldOrder",
@@ -126464,8 +126479,8 @@
     },
     {
       "giveawayCode": "sxMAw",
-      "title": "Life is Strange Complete Season (Epis...",
-      "appId": 56692,
+      "title": "Life is Strange - Episode 1",
+      "appId": 319630,
       "winnerUsername": "dubnio",
       "creatorUsername": "Skull18",
       "entriesCount": 23,
@@ -126563,7 +126578,7 @@
     },
     {
       "giveawayCode": "DPw5X",
-      "title": "Lobotomy Corporation | Monster Manage...",
+      "title": "Lobotomy Corporation | Monster Management Simulation",
       "appId": 568220,
       "winnerUsername": "Zaugr",
       "creatorUsername": "burntreynolds444",
@@ -126995,7 +127010,7 @@
     },
     {
       "giveawayCode": "pWDU0",
-      "title": "Skylar & Plux: Adventure On Clover Is...",
+      "title": "Skylar & Plux: Adventure On Clover Island",
       "appId": 452540,
       "winnerUsername": "Deleted-6613515",
       "creatorUsername": "leniu",
@@ -127031,7 +127046,7 @@
     },
     {
       "giveawayCode": "Y95HD",
-      "title": "Marvel's Guardians of the Galaxy: The...",
+      "title": "Marvel's Guardians of the Galaxy: The Telltale Series",
       "appId": 579950,
       "winnerUsername": "ercalote",
       "creatorUsername": "Krlesnik",
@@ -127391,7 +127406,7 @@
     },
     {
       "giveawayCode": "IBhoN",
-      "title": "STAR OCEAN - THE LAST HOPE - 4K & Ful...",
+      "title": "STAR OCEAN™ - THE LAST HOPE -™ 4K & Full HD Remaster",
       "appId": 609150,
       "winnerUsername": "zettaivanugen",
       "creatorUsername": "HBRugeO",
@@ -127544,8 +127559,8 @@
     },
     {
       "giveawayCode": "ePVg7",
-      "title": "Divinity: Original Sin 2 - Divine Edi...",
-      "appId": 207167,
+      "title": "Divinity: Original Sin 2 - Definitive Edition",
+      "appId": 435150,
       "winnerUsername": "Deleted-1924302",
       "creatorUsername": "zettaivanugen",
       "entriesCount": 14,
@@ -127769,7 +127784,7 @@
     },
     {
       "giveawayCode": "RkM9m",
-      "title": "Batman: The Enemy Within - The Tellta...",
+      "title": "Batman: The Enemy Within - The Telltale Series",
       "appId": 675260,
       "winnerUsername": "Rimberse",
       "creatorUsername": "Skull18",
@@ -127814,7 +127829,7 @@
     },
     {
       "giveawayCode": "vS0AY",
-      "title": "Divinity: Original Sin 2 - Definitive...",
+      "title": "Divinity: Original Sin 2 - Definitive Edition",
       "appId": 435150,
       "winnerUsername": "LastM",
       "creatorUsername": "TempeteJoachim",
@@ -127868,7 +127883,7 @@
     },
     {
       "giveawayCode": "Pmm1T",
-      "title": "The Incredible Adventures of Van Hels...",
+      "title": "The Incredible Adventures of Van Helsing: Final Cut",
       "appId": 400170,
       "winnerUsername": "Hunk302",
       "creatorUsername": "bigbud13",
@@ -127967,8 +127982,8 @@
     },
     {
       "giveawayCode": "0dTNo",
-      "title": "METAL GEAR SOLID V: The Definitive Ex...",
-      "appId": 132479,
+      "title": "METAL GEAR ONLINE \"BASIC APPEAL PACK\"",
+      "appId": 436040,
       "winnerUsername": "ercalote",
       "creatorUsername": "OmniNerdZ",
       "entriesCount": 9,
@@ -128093,7 +128108,7 @@
     },
     {
       "giveawayCode": "Ysm4d",
-      "title": "Tyd wag vir Niemand (Time w...",
+      "title": "Tyd wag vir Niemand (Time waits for Nobody)",
       "appId": 589730,
       "winnerUsername": "ercalote",
       "creatorUsername": "mastema01",
@@ -128255,7 +128270,7 @@
     },
     {
       "giveawayCode": "CHOG0",
-      "title": "The Walking Dead: Michonne - A Tellta...",
+      "title": "The Walking Dead: Michonne - A Telltale Miniseries",
       "appId": 429570,
       "winnerUsername": "LastM",
       "creatorUsername": "Wintermute75",
@@ -128373,7 +128388,7 @@
     {
       "giveawayCode": "n3ChZ",
       "title": "MotoGP15: Special Edition",
-      "appId": 69069,
+      "appId": 355130,
       "winnerUsername": "madsession",
       "creatorUsername": "Carnium",
       "entriesCount": 49,
@@ -128489,7 +128504,7 @@
     },
     {
       "giveawayCode": "q0MfX",
-      "title": "Dungeons & Dragons: Chronicles of Mys...",
+      "title": "Dungeons & Dragons: Chronicles of Mystara",
       "appId": 229480,
       "winnerUsername": "Tamudo",
       "creatorUsername": "Retroboy",
@@ -128534,7 +128549,7 @@
     },
     {
       "giveawayCode": "yb79m",
-      "title": "Hyperdimension Neptunia Re;Birth2: Si...",
+      "title": "Hyperdimension Neptunia Re;Birth2: Sisters Generation",
       "appId": 351710,
       "winnerUsername": "ercalote",
       "creatorUsername": "Rimberse",
@@ -129065,7 +129080,7 @@
     },
     {
       "giveawayCode": "meZY4",
-      "title": "Hyperdevotion Noire: Goddess Black He...",
+      "title": "Hyperdevotion Noire: Goddess Black Heart (Neptunia)",
       "appId": 415480,
       "winnerUsername": "Retroboy",
       "creatorUsername": "Youdontknow",
@@ -129236,8 +129251,8 @@
     },
     {
       "giveawayCode": "FshiV",
-      "title": "Rising Storm 2: Vietnam - Digital Del...",
-      "appId": 171306,
+      "title": "Rising Storm 2: Vietnam",
+      "appId": 418460,
       "winnerUsername": "Retroboy",
       "creatorUsername": "ReptilianWorldOrder",
       "entriesCount": 11,
@@ -129435,7 +129450,7 @@
     {
       "giveawayCode": "Sa98N",
       "title": "MotoGP15: Special Edition",
-      "appId": 69069,
+      "appId": 355130,
       "winnerUsername": "StankoBubalo",
       "creatorUsername": "Carnium",
       "entriesCount": 10,
@@ -129488,7 +129503,7 @@
     },
     {
       "giveawayCode": "iqL9z",
-      "title": "Castlevania: Lords of Shadow – Mirror...",
+      "title": "Castlevania: Lords of Shadow – Mirror of Fate HD",
       "appId": 282530,
       "winnerUsername": "Retroboy",
       "creatorUsername": "lhan",
@@ -129596,7 +129611,7 @@
     },
     {
       "giveawayCode": "4FY8F",
-      "title": "Marvel's Guardians of the Galaxy: The...",
+      "title": "Marvel's Guardians of the Galaxy: The Telltale Series",
       "appId": 579950,
       "winnerUsername": "Mikros7",
       "creatorUsername": "Koalix",
@@ -129732,7 +129747,7 @@
     {
       "giveawayCode": "3BpTL",
       "title": "The Evil Within Bundle",
-      "appId": 65812,
+      "appId": 268050,
       "winnerUsername": "Skull18",
       "creatorUsername": "Rimberse",
       "entriesCount": 15,
@@ -129777,7 +129792,7 @@
     {
       "giveawayCode": "1srXB",
       "title": "STASIS - Deluxe Edition",
-      "appId": 76077,
+      "appId": 380150,
       "winnerUsername": "lhan",
       "creatorUsername": "StankoBubalo",
       "entriesCount": 11,
@@ -129795,7 +129810,7 @@
     {
       "giveawayCode": "Z7WTV",
       "title": "Mortal Kombat XL",
-      "appId": 128345,
+      "appId": 347880,
       "winnerUsername": "StankoBubalo",
       "creatorUsername": "lhan",
       "entriesCount": 8,
@@ -129921,7 +129936,7 @@
     {
       "giveawayCode": "vtJ4E",
       "title": "Layers of Fear: Masterpiece Edition",
-      "appId": 116814,
+      "appId": 391720,
       "winnerUsername": "JabbaFatt",
       "creatorUsername": "Skull18",
       "entriesCount": 27,
@@ -129992,7 +130007,7 @@
     },
     {
       "giveawayCode": "z171k",
-      "title": "EARTH DEFENSE FORCE 4.1 The Shadow of...",
+      "title": "EARTH DEFENSE FORCE 4.1 The Shadow of New Despair",
       "appId": 410320,
       "winnerUsername": "ReptilianWorldOrder",
       "creatorUsername": "Horseflesh",
@@ -130298,7 +130313,7 @@
     },
     {
       "giveawayCode": "OMXB1",
-      "title": "DYNASTY WARRIORS 8: Xtreme Legends Co...",
+      "title": "DYNASTY WARRIORS 8: Xtreme Legends Complete Edition",
       "appId": 278080,
       "winnerUsername": "Krlesnik",
       "creatorUsername": "Rimberse",
@@ -130505,7 +130520,7 @@
     },
     {
       "giveawayCode": "ZkNl3",
-      "title": "Ori and the Blind Forest: Definitive ...",
+      "title": "Ori and the Blind Forest: Definitive Edition",
       "appId": 387290,
       "winnerUsername": "gizzy831",
       "creatorUsername": "Krente",
@@ -130614,7 +130629,7 @@
     {
       "giveawayCode": "1kZkp",
       "title": "Mortal Kombat XL",
-      "appId": 128345,
+      "appId": 347880,
       "winnerUsername": "varmas",
       "creatorUsername": "ReptilianWorldOrder",
       "entriesCount": 16,
@@ -130632,7 +130647,7 @@
     {
       "giveawayCode": "Njxw6",
       "title": "Sniper Elite 4 Deluxe Edition",
-      "appId": 123425,
+      "appId": 312660,
       "winnerUsername": "ReptilianWorldOrder",
       "creatorUsername": "AJIam",
       "entriesCount": 22,
@@ -130649,7 +130664,7 @@
     },
     {
       "giveawayCode": "CNCZV",
-      "title": "The Walking Dead: Michonne - A Tellta...",
+      "title": "The Walking Dead: Michonne - A Telltale Miniseries",
       "appId": 429570,
       "winnerUsername": "gizzy831",
       "creatorUsername": "bigbud13",
@@ -130794,7 +130809,7 @@
     {
       "giveawayCode": "VFh4q",
       "title": "STASIS - Deluxe Edition",
-      "appId": 76077,
+      "appId": 380150,
       "winnerUsername": "djnemonic",
       "creatorUsername": "Saotoshi",
       "entriesCount": 16,
@@ -130838,7 +130853,7 @@
     },
     {
       "giveawayCode": "g0YN6",
-      "title": "Ori and the Blind Forest: Definitive ...",
+      "title": "Ori and the Blind Forest: Definitive Edition",
       "appId": 387290,
       "winnerUsername": "AJIam",
       "creatorUsername": "Skull18",
@@ -131001,7 +131016,7 @@
     {
       "giveawayCode": "U6tKv",
       "title": "MotoGP15: Special Edition",
-      "appId": 69069,
+      "appId": 355130,
       "winnerUsername": "ReptilianWorldOrder",
       "creatorUsername": "Carnium",
       "entriesCount": 13,
@@ -131045,7 +131060,7 @@
     },
     {
       "giveawayCode": "ODcYc",
-      "title": "Game of Thrones - A Telltale Games Se...",
+      "title": "Game of Thrones - A Telltale Games Series",
       "appId": 330840,
       "winnerUsername": "Mikros7",
       "creatorUsername": "spacepower",
@@ -131369,7 +131384,7 @@
     },
     {
       "giveawayCode": "dIRHD",
-      "title": "Treeker: The Lost Glasses - Classic +...",
+      "title": "Treeker: The Lost Glasses - Classic + Remake Edition",
       "appId": 369640,
       "winnerUsername": "Patans",
       "creatorUsername": "LastM",
@@ -131441,7 +131456,7 @@
     },
     {
       "giveawayCode": "p43JY",
-      "title": "Game of Thrones - A Telltale Games Se...",
+      "title": "Game of Thrones - A Telltale Games Series",
       "appId": 330840,
       "winnerUsername": "Wintermute75",
       "creatorUsername": "Krlesnik",
@@ -131451,7 +131466,7 @@
     {
       "giveawayCode": "m44Ie",
       "title": "Batman: Arkham Knight Premium Edition",
-      "appId": 85500,
+      "appId": 208650,
       "winnerUsername": "Starlynk",
       "creatorUsername": "Wintermute75",
       "entriesCount": 21,
@@ -131495,7 +131510,7 @@
     },
     {
       "giveawayCode": "tWMrK",
-      "title": "Notch - The Innocent LunA: Eclipsed S...",
+      "title": "Notch - The Innocent LunA: Eclipsed SinnerS",
       "appId": 325120,
       "winnerUsername": "AJIam",
       "creatorUsername": "varmas",
@@ -131738,7 +131753,7 @@
     },
     {
       "giveawayCode": "Q0QvM",
-      "title": "The Walking Dead: Michonne - A Tellta...",
+      "title": "The Walking Dead: Michonne - A Telltale Miniseries",
       "appId": 429570,
       "winnerUsername": "Krlesnik",
       "creatorUsername": "Serpine",
@@ -131846,7 +131861,7 @@
     },
     {
       "giveawayCode": "ZYbO1",
-      "title": "Castlevania: Lords of Shadow – Ultima...",
+      "title": "Castlevania: Lords of Shadow – Ultimate Edition",
       "appId": 234080,
       "winnerUsername": "Mikros7",
       "creatorUsername": "LastM",
@@ -131981,8 +131996,8 @@
     },
     {
       "giveawayCode": "cJliX",
-      "title": "Asguaard - Deluxe Edition (contains G...",
-      "appId": 68765,
+      "title": "Asguaard",
+      "appId": 332380,
       "winnerUsername": "ercalote",
       "creatorUsername": "Krlesnik",
       "entriesCount": 7,
@@ -131999,7 +132014,7 @@
     },
     {
       "giveawayCode": "Ok9dM",
-      "title": "The Incredible Adventures of Van Hels...",
+      "title": "The Incredible Adventures of Van Helsing III",
       "appId": 359900,
       "winnerUsername": "Krente",
       "creatorUsername": "lhan",
@@ -132017,7 +132032,7 @@
     },
     {
       "giveawayCode": "LzjT0",
-      "title": "Hyperdimension Neptunia U: Action Unl...",
+      "title": "Hyperdimension Neptunia U: Action Unleashed",
       "appId": 387340,
       "winnerUsername": "stevencojo",
       "creatorUsername": "varmas",
@@ -132126,7 +132141,7 @@
     {
       "giveawayCode": "RN1W8",
       "title": "Resident Evil 6 Complete",
-      "appId": 50980,
+      "appId": 221040,
       "winnerUsername": "Wintermute75",
       "creatorUsername": "Rimberse",
       "entriesCount": 14,
@@ -132152,8 +132167,8 @@
     },
     {
       "giveawayCode": "8yI7S",
-      "title": "Lords of the Fallen Game of the Year ...",
-      "appId": 48346,
+      "title": "Lords of the Fallen -  Ancient Labyrinth",
+      "appId": 333800,
       "winnerUsername": "Carnium",
       "creatorUsername": "Skull18",
       "entriesCount": 14,
@@ -132197,7 +132212,7 @@
     },
     {
       "giveawayCode": "E1ERw",
-      "title": "RollerCoaster Tycoon 2: Triple Thrill...",
+      "title": "RollerCoaster Tycoon® 2: Triple Thrill Pack",
       "appId": 285330,
       "winnerUsername": "spacepower",
       "creatorUsername": "Krente",
@@ -132557,7 +132572,7 @@
     },
     {
       "giveawayCode": "ihCjI",
-      "title": "LEGO Pirates of the Caribbean: The Vi...",
+      "title": "LEGO® Pirates of the Caribbean: The Video Game",
       "appId": 311770,
       "winnerUsername": "FLUMONO",
       "creatorUsername": "varmas",
@@ -132620,8 +132635,8 @@
     },
     {
       "giveawayCode": "dxcWN",
-      "title": "Men of War: Assault Squad 2 - Gold Ed...",
-      "appId": 76328,
+      "title": "Men of War: Assault Squad 2",
+      "appId": 244450,
       "winnerUsername": "Krlesnik",
       "creatorUsername": "HBRugeO",
       "entriesCount": 13,
@@ -132665,8 +132680,8 @@
     },
     {
       "giveawayCode": "sEp83",
-      "title": "LEGO STAR WARS: The Force Awakens - D...",
-      "appId": 92660,
+      "title": "LEGO® STAR WARS™: The Force Awakens",
+      "appId": 438640,
       "winnerUsername": "Krlesnik",
       "creatorUsername": "Saotoshi",
       "entriesCount": 17,
@@ -132674,8 +132689,8 @@
     },
     {
       "giveawayCode": "h6MiA",
-      "title": "Total War: Medieval II - Definitive E...",
-      "appId": 460,
+      "title": "Medieval II: Total War™ Kingdoms",
+      "appId": 4780,
       "winnerUsername": "HBRugeO",
       "creatorUsername": "Revenge187",
       "entriesCount": 5,
@@ -132683,7 +132698,7 @@
     },
     {
       "giveawayCode": "8xYB4",
-      "title": "The Witcher 2: Assassins of Kings Enh...",
+      "title": "The Witcher 2: Assassins of Kings Enhanced Edition",
       "appId": 20920,
       "winnerUsername": "Kasia",
       "creatorUsername": "Revenge187",
@@ -132890,7 +132905,7 @@
     },
     {
       "giveawayCode": "4ghdi",
-      "title": "Apothecarium: The Renaissance of Evil...",
+      "title": "Apothecarium: The Renaissance of Evil - Premium Edition",
       "appId": 373860,
       "winnerUsername": "Deleted-8137923",
       "creatorUsername": "Wintermute75",
@@ -132944,8 +132959,8 @@
     },
     {
       "giveawayCode": "ipMF4",
-      "title": "Lords of the Fallen Game of the Year ...",
-      "appId": 48346,
+      "title": "Lords of the Fallen -  Ancient Labyrinth",
+      "appId": 333800,
       "winnerUsername": "djnemonic",
       "creatorUsername": "Sazz",
       "entriesCount": 20,
@@ -133061,7 +133076,7 @@
     },
     {
       "giveawayCode": "v6Fdm",
-      "title": "Castlevania: Lords of Shadow – Mirror...",
+      "title": "Castlevania: Lords of Shadow – Mirror of Fate HD",
       "appId": 282530,
       "winnerUsername": "Krlesnik",
       "creatorUsername": "lhan",
@@ -133116,7 +133131,7 @@
     {
       "giveawayCode": "JMrVQ",
       "title": "Volume: Quadrilateral Edition",
-      "appId": 76083,
+      "appId": 220780,
       "winnerUsername": "Krlesnik",
       "creatorUsername": "bigbud13",
       "entriesCount": 12,
@@ -133304,7 +133319,7 @@
     },
     {
       "giveawayCode": "rBSqk",
-      "title": "Call of Duty: Black Ops III - Multipl...",
+      "title": "Call of Duty: Black Ops III - Multiplayer Starter Pack",
       "appId": 437350,
       "winnerUsername": "Youdontknow",
       "creatorUsername": "spacepower",
@@ -133349,7 +133364,7 @@
     },
     {
       "giveawayCode": "PbF4n",
-      "title": "NARUTO SHIPPUDEN: Ultimate Ninja STOR...",
+      "title": "NARUTO SHIPPUDEN: Ultimate Ninja STORM Revolution",
       "appId": 272510,
       "winnerUsername": "zettaivanugen",
       "creatorUsername": "SINNEDUE",
