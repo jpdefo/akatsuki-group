@@ -98031,7 +98031,9 @@
       "giveawayMonthOverride": "2026-06",
       "giveawayKindChecked": true,
       "entriesFinalized": false,
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "steamStoreType": "app",
+      "steamStoreId": 1997660
     },
     {
       "code": "jUHLr",
@@ -98057,7 +98059,9 @@
       "giveawayKindChecked": true,
       "entriesFinalized": false,
       "entriesSnapshotAt": "",
-      "hltbHours": 22.05
+      "hltbHours": 22.05,
+      "steamStoreType": "app",
+      "steamStoreId": 2057760
     }
   ],
   "wins": [

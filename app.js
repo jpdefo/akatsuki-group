@@ -2301,8 +2301,11 @@ function computeMemberBucketRows(isActiveMember) {
       const achievementPercents = memberWins
         .map((win) => getAchievementPercent(win, findById("games", win.gameId)))
         .filter((value) => value !== null);
+      const sgUsername = String(member.steamgiftsUsername || member.name || "").trim();
       return {
         name: member.name,
+        steamgiftsUrl:
+          member.profileUrl || (sgUsername ? `https://www.steamgifts.com/user/${encodeURIComponent(sgUsername)}` : ""),
         totalWins: memberWins.length,
         totalPlaytime: memberWins.reduce((sum, win) => sum + Number(win.currentHours || 0), 0),
         averageAchievements: achievementPercents.length
