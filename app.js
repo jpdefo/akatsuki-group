@@ -654,7 +654,7 @@ function renderMemberOverview() {
     return;
   }
 
-  const cards = activeMembers.slice(0, 12).map(buildMemberCard);
+  const cards = activeMembers.map(buildMemberCard);
   const cycleReminderCard = buildCurrentCycleMissingGiveawaysCard();
   if (cycleReminderCard) {
     cards.unshift(cycleReminderCard);
@@ -2073,9 +2073,15 @@ function buildMemberCard(member) {
     ? `<a class="linked-title" href="${escapeHtml(member.steamProfile)}" target="_blank" rel="noreferrer">${title}</a>`
     : title;
 
+  // Tag reflects the member's cycle obligation status for the current month.
+  const memberId = findMemberByUsername(member.username)?.id;
+  const currentMonth = monthKey(state.settings.currentDate || "");
+  const paused = memberId ? getCycleMemberStatus(memberId, currentMonth) === "paused" : false;
+  const statusBadge = buildBadge(paused ? "warning" : "success", paused ? "Paused" : "Active");
+
   return `
     <article class="member-card">
-      ${buildBadge(member.isActiveMember ? "success" : "info", member.isActiveMember ? "Active" : "Inactive")}
+      ${statusBadge}
       <h3>${usernameMarkup}</h3>
       <span class="meta-line">${member.winsCount || 0} tracked win(s)</span>
       <strong>${member.lastWinDate ? formatDate(member.lastWinDate) : "No wins yet"}</strong>

@@ -171,6 +171,22 @@ h2 {
   gap: 14px;
 }
 
+/* Overview directory: compact cards so every current member fits at a glance. */
+#member-overview {
+  grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+  gap: 10px;
+}
+
+#member-overview .member-card {
+  padding: 11px 13px;
+  border-radius: 13px;
+}
+
+#member-overview .member-card h3 {
+  margin: 6px 0 2px;
+  font-size: 0.98rem;
+}
+
 .member-card {
   background: var(--panel-strong);
   border: 1px solid var(--line);
