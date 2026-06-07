@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-06T06:58:07.042718+00:00",
+  "updatedAt": "2026-06-07T07:16:55.252024+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -33083,7 +33083,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-06-06T06:58:07.042681+00:00"
+      "checkedAt": "2026-06-07T07:16:55.251996+00:00"
     },
     {
       "username": "Wintermute101",
@@ -68850,15 +68850,22 @@
       "hltbHours": 5.8,
       "matchedTitle": "Poi",
       "url": "https://howlongtobeat.com/game/34230"
+    },
+    {
+      "title": "Esoteric Ebb",
+      "appId": 2057760,
+      "hltbHours": 22.05,
+      "matchedTitle": "Esoteric Ebb",
+      "url": "https://howlongtobeat.com/game/143794"
     }
   ],
   "steamApiEnabled": true,
   "activeOnly": true,
   "refreshedMonth": "2026-06",
   "refreshedScope": "month",
-  "libraryUpdatedAt": "2026-06-06T06:58:06.785240+00:00",
+  "libraryUpdatedAt": "2026-06-07T07:16:54.971008+00:00",
   "libraryStats": {
-    "durationSeconds": 0.22,
+    "durationSeconds": 0.21,
     "targetProfiles": 1,
     "refreshedProfiles": 0,
     "reusedProfiles": 1,
@@ -68869,7 +68876,7 @@
     "totalPlaytimeRows": 86510
   },
   "stats": {
-    "durationSeconds": 0.46,
+    "durationSeconds": 0.48,
     "targetWins": 1,
     "uniqueProgressTargets": 1,
     "libraryPlaytimeHits": 0,
@@ -68878,6 +68885,6 @@
     "achievementErrors": 0,
     "cachedFallbacks": 0,
     "hltbTitlesRequested": 1,
-    "hltbResultsAvailable": 3970
+    "hltbResultsAvailable": 3971
   }
 }

@@ -98056,7 +98056,8 @@
       "giveawayMonthOverride": "2026-06",
       "giveawayKindChecked": true,
       "entriesFinalized": false,
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "hltbHours": 22.05
     }
   ],
   "wins": [
