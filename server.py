@@ -54,7 +54,6 @@ STATIC_FILE_NAMES = [
     "styles.css",
     "active-users.html",
     "inactive-users.html",
-    "user-progress.html",
     "bookmarklet-helper.html",
     "bookmarklet-helper.png",
     "akatsuki.png",
@@ -69,7 +68,6 @@ PUBLIC_PAGE_FILES = [
     "giveaways.html",
     "active-users.html",
     "inactive-users.html",
-    "user-progress.html",
     "admin.html",
     "404.html",
 ]

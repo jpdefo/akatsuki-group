@@ -97,12 +97,9 @@ const elements = {
   memberOverview: document.querySelector("#member-overview"),
   recentGiveaways: document.querySelector("#recent-giveaways"),
   monthlyFilter: document.querySelector("#monthly-filter"),
+  monthlyMemberFilter: document.querySelector("#monthly-member-filter"),
   monthlySort: document.querySelector("#monthly-sort"),
   monthlyProgressTable: document.querySelector("#monthly-progress-table"),
-  userProgressFilter: document.querySelector("#user-progress-filter"),
-  userProgressSort: document.querySelector("#user-progress-sort"),
-  userProgressTable: document.querySelector("#user-progress-table"),
-  userProgressSummary: document.querySelector("#user-progress-summary"),
   cycleFilter: document.querySelector("#cycle-filter"),
   cycleSummary: document.querySelector("#cycle-summary"),
   cycleBestGifterWarning: document.querySelector("#cycle-best-gifter-warning"),
@@ -205,8 +202,7 @@ function bindEvents() {
   elements.summerEntryCreatorFilter?.addEventListener("change", () => renderSummerEventEntriesPage());
   elements.summerEntrySort?.addEventListener("change", () => renderSummerEventEntriesPage());
   elements.activeUsersSort?.addEventListener("change", () => renderMemberBuckets());
-  elements.userProgressFilter?.addEventListener("change", () => renderUserProgressPage());
-  elements.userProgressSort?.addEventListener("change", () => renderUserProgressPage());
+  elements.monthlyMemberFilter?.addEventListener("change", () => renderProgressViews());
 
   document.addEventListener("click", (event) => {
     const editButton = event.target.closest("[data-edit-action]");
@@ -333,7 +329,6 @@ function render() {
   renderSummerEventEntriesPage();
   renderAllGiveawaysPage();
   renderMemberBuckets();
-  renderUserProgressPage();
 }
 
 // Created = the earlier captured timestamp; End = the later one, shown only when
@@ -715,29 +710,90 @@ function renderProgressViews() {
   }
 
   const months = getAvailableMonths();
-  const currentSelection = elements.monthlyFilter.value;
-  const selectedMonth = months.includes(currentSelection) ? currentSelection : months[0] || "";
-  const monthlyWins = selectedMonth ? state.wins.filter((win) => getWinPlayMonth(win) === selectedMonth) : [];
-  const monthlyGiveaways = selectedMonth ? getGiveawaysForMonth(selectedMonth) : [];
-  const period = selectedMonth ? getPeriodInfo(`${selectedMonth}-01`) : null;
+
+  // Optional per-member filter (merges the old User progress page in here):
+  // pick a member to scope the table to their wins, across one month or all.
+  const memberWinCounts = new Map();
+  for (const win of state.wins) {
+    if (win.memberId) {
+      memberWinCounts.set(win.memberId, (memberWinCounts.get(win.memberId) || 0) + 1);
+    }
+  }
+  const filterMembers = state.members
+    .filter((member) => member.isActiveMember && memberWinCounts.has(member.id))
+    .sort((left, right) =>
+      String(left.name || "").localeCompare(String(right.name || ""), "en", { sensitivity: "base" }),
+    );
+
+  const monthSelection = elements.monthlyFilter.value;
+  const selectedMonth =
+    monthSelection === "all" || months.includes(monthSelection) ? monthSelection : months[0] || "";
+  const memberSelection = elements.monthlyMemberFilter?.value || "all";
+  const selectedMember =
+    memberSelection !== "all" && filterMembers.some((member) => member.id === memberSelection)
+      ? memberSelection
+      : "all";
+
+  const monthlyWins = state.wins.filter((win) => {
+    if (selectedMonth && selectedMonth !== "all" && getWinPlayMonth(win) !== selectedMonth) {
+      return false;
+    }
+    if (selectedMember !== "all" && win.memberId !== selectedMember) {
+      return false;
+    }
+    return selectedMonth || selectedMember !== "all";
+  });
+  const monthlyGiveaways = selectedMonth && selectedMonth !== "all" ? getGiveawaysForMonth(selectedMonth) : [];
+  const period = selectedMonth && selectedMonth !== "all" ? getPeriodInfo(`${selectedMonth}-01`) : null;
 
   elements.monthlyFilter.innerHTML = months.length
-    ? months
-        .map(
-          (month) =>
-            `<option value="${month}" ${month === selectedMonth ? "selected" : ""}>${formatMonthKey(month)}</option>`,
+    ? [`<option value="all" ${selectedMonth === "all" ? "selected" : ""}>All months</option>`]
+        .concat(
+          months.map(
+            (month) =>
+              `<option value="${month}" ${month === selectedMonth ? "selected" : ""}>${formatMonthKey(month)}</option>`,
+          ),
         )
         .join("")
     : `<option value="">No wins</option>`;
 
+  if (elements.monthlyMemberFilter) {
+    elements.monthlyMemberFilter.innerHTML = [
+      `<option value="all" ${selectedMember === "all" ? "selected" : ""}>All members</option>`,
+    ]
+      .concat(
+        filterMembers.map(
+          (member) =>
+            `<option value="${escapeHtml(member.id)}" ${member.id === selectedMember ? "selected" : ""}>${escapeHtml(member.name || "Unknown")} (${memberWinCounts.get(member.id)})</option>`,
+        ),
+      )
+      .join("");
+  }
+
   if (elements.periodSummary) {
-    elements.periodSummary.textContent = selectedMonth
-      ? `${formatMonthKey(selectedMonth)} • ${monthlyWins.length} tracked win(s) • ${monthlyGiveaways.length} giveaway(s) • ${period.kind === "cycle" ? `${period.label}, month ${period.monthPosition} of 3` : period.label}`
-      : "Waiting for synced wins.";
+    const scope = selectedMonth === "all" ? "All months" : selectedMonth ? formatMonthKey(selectedMonth) : "";
+    if (!scope && selectedMember === "all") {
+      elements.periodSummary.textContent = "Waiting for synced wins.";
+    } else {
+      const below = monthlyWins.filter((win) => evaluateMonthlyProgress(win).badge === "danger").length;
+      const parts = [];
+      if (selectedMember !== "all") {
+        parts.push(findById("members", selectedMember)?.name || "Member");
+      }
+      if (scope) {
+        parts.push(scope);
+      }
+      parts.push(`${monthlyWins.length} win(s)`, `${monthlyWins.length - below} meeting threshold`, `${below} below`);
+      if (selectedMember === "all" && period) {
+        parts.push(`${monthlyGiveaways.length} giveaway(s)`);
+        parts.push(period.kind === "cycle" ? `${period.label}, month ${period.monthPosition} of 3` : period.label);
+      }
+      elements.periodSummary.textContent = parts.join(" • ");
+    }
   }
 
   renderMonthlyDetailsTable(elements.monthlyProgressTable, monthlyWins);
-  renderCycleViews(selectedMonth);
+  renderCycleViews(selectedMonth === "all" ? "" : selectedMonth);
 }
 
 function renderCycleViews(selectedMonth) {
@@ -2337,53 +2393,6 @@ function computeMemberBucketRows(isActiveMember) {
     })
     .filter((row) => row.totalWins > 0 || isActiveMember)
     .sort((left, right) => compareMemberBucketRows(left, right, sortMode));
-}
-
-function renderUserProgressPage() {
-  if (!elements.userProgressTable) {
-    return;
-  }
-
-  // Only members who actually won something, with their win count for the picker.
-  const winCountByMember = new Map();
-  for (const win of state.wins) {
-    if (win.memberId) {
-      winCountByMember.set(win.memberId, (winCountByMember.get(win.memberId) || 0) + 1);
-    }
-  }
-  const members = state.members
-    .filter((member) => member.isActiveMember && winCountByMember.has(member.id))
-    .sort((left, right) =>
-      String(left.name || "").localeCompare(String(right.name || ""), "en", { sensitivity: "base" }),
-    );
-
-  if (elements.userProgressFilter) {
-    const current = elements.userProgressFilter.value;
-    const selectedId = members.some((member) => member.id === current) ? current : members[0]?.id || "";
-    elements.userProgressFilter.innerHTML = members.length
-      ? members
-          .map(
-            (member) =>
-              `<option value="${escapeHtml(member.id)}" ${member.id === selectedId ? "selected" : ""}>${escapeHtml(member.name || "Unknown")} (${winCountByMember.get(member.id)})</option>`,
-          )
-          .join("")
-      : `<option value="">No members with wins</option>`;
-  }
-
-  const selectedId = elements.userProgressFilter?.value || members[0]?.id || "";
-  const userWins = state.wins.filter((win) => win.memberId === selectedId);
-  const sortMode = elements.userProgressSort?.value || "threshold";
-
-  if (elements.userProgressSummary) {
-    const below = userWins.filter((win) => evaluateMonthlyProgress(win).badge === "danger").length;
-    const met = userWins.length - below;
-    const member = findById("members", selectedId);
-    elements.userProgressSummary.textContent = userWins.length
-      ? `${member?.name || "Member"} • ${userWins.length} win(s) • ${met} meeting threshold • ${below} below threshold`
-      : "No tracked wins for this member yet.";
-  }
-
-  renderMonthlyDetailsTable(elements.userProgressTable, userWins, sortMode);
 }
 
 function renderMonthlyDetailsTable(target, winsSubset, sortMode = elements.monthlySort?.value || "winner") {
