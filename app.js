@@ -2396,9 +2396,9 @@ function renderMonthlyDetailsTable(target, winsSubset, sortMode = elements.month
 
       return `
         <tr class="progress-row ${progress.badge}">
-          <td>${buildGiveawayCreatorMarkup(win)}</td>
-          <td>${buildGameCell(game, win)}</td>
           <td>${buildWinnerMarkup(member)}</td>
+          <td>${buildGameCell(game, win)}</td>
+          <td>${buildGiveawayCreatorMarkup(win)}</td>
           <td>
             <div class="value-stack">
               <span>${hltbHours ? formatHours(hltbHours) : "-"}</span>
