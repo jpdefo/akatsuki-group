@@ -2430,7 +2430,7 @@ function computeMemberBucketRows(isActiveMember) {
     .sort((left, right) => compareMemberBucketRows(left, right, sortMode));
 }
 
-function renderMonthlyDetailsTable(target, winsSubset, sortMode = elements.monthlySort?.value || "winner") {
+function renderMonthlyDetailsTable(target, winsSubset, sortMode = elements.monthlySort?.value || "hours-asc") {
   if (!winsSubset.length) {
     target.innerHTML = buildEmptyRow(9);
     return;
@@ -2513,8 +2513,15 @@ function compareMonthlyWins(left, right, sortMode) {
     }
   }
 
-  if (sortMode === "hours") {
+  if (sortMode === "hours" || sortMode === "hours-desc") {
     const hoursCompare = Number(right.currentHours || 0) - Number(left.currentHours || 0);
+    if (hoursCompare !== 0) {
+      return hoursCompare;
+    }
+  }
+
+  if (sortMode === "hours-asc") {
+    const hoursCompare = Number(left.currentHours || 0) - Number(right.currentHours || 0);
     if (hoursCompare !== 0) {
       return hoursCompare;
     }
