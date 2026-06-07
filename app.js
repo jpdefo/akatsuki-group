@@ -513,9 +513,13 @@ function renderSettings() {
   }
   const sync = state.sync?.steamgifts;
   const dashboardSummary = state.sync?.dashboard?.summary;
+  const effectiveActiveMembers = state.members.filter((member) => member.isActiveMember).length;
   const cards = [
     ["Group", state.settings.groupName],
-    ["Active members", dashboardSummary?.activeMembers ?? state.settings.activeMembers],
+    [
+      "Active members",
+      state.members.length ? effectiveActiveMembers : dashboardSummary?.activeMembers ?? state.settings.activeMembers,
+    ],
     ["Tracked giveaways", dashboardSummary?.giveaways ?? state.giveaways.length],
     [
       "Latest sync",
@@ -1146,9 +1150,15 @@ function getCycleHistoryVisibleMembers(selectedCycle, cycleWins, cycleGiveaways)
     ...cycleGiveaways.map((giveaway) => giveaway.creatorId).filter(Boolean),
   ]);
 
-  return state.members.filter(
-    (member) => participantIds.has(member.id) || (cycleKey && getCycleMemberStatus(member, cycleKey) === "paused"),
-  );
+  return state.members.filter((member) => {
+    // Paused = exempt this cycle, so hide them from the obligations list.
+    if (cycleKey && getCycleMemberStatus(member, cycleKey) === "paused") {
+      return false;
+    }
+    // Show every active member (so those who still owe a giveaway are flagged as
+    // pending), plus anyone who participated this cycle even if now inactive.
+    return member.isActiveMember || participantIds.has(member.id);
+  });
 }
 
 function getCycleGiveawayCreatorLabel(giveaway) {
