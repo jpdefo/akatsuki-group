@@ -73,7 +73,7 @@ const runtime = {
 };
 const GAME_OVERRIDE_FIELDS = ["hltbHoursOverride"];
 const WIN_OVERRIDE_FIELDS = ["requiredAchievementsOverride", "monthOverride"];
-const GIVEAWAY_OVERRIDE_FIELDS = ["giveawayKindOverride", "manualWinners", "cycleMonthOverride"];
+const GIVEAWAY_OVERRIDE_FIELDS = ["giveawayKindOverride", "manualWinners", "cycleMonthOverride", "summerBasePointsOverride"];
 const MEMBER_OVERRIDE_FIELDS = ["membershipStatus"];
 
 applyManualOverrides();
@@ -1471,6 +1471,8 @@ function renderSummerEventPage() {
                 <td>
                   <strong>${rewardPoints.toLocaleString("en-US")} P</strong>
                   <span class="meta-line">${getSummerEventValueMeta(giveaway)}</span>
+                  ${getSummerEventBasePointsOverride(giveaway) !== null ? `<span class="meta-line override-note">Manual base</span>` : ""}
+                  <button class="inline-action" data-edit-action="summer-base-points" data-giveaway-key="${escapeHtml(winnerKey)}" data-giveaway-title="${escapeHtml(giveaway.title || "")}" data-current-base="${escapeHtml(String(getSummerEventBasePointsOverride(giveaway) ?? ""))}">Edit base</button>
                 </td>
                 <td>
                   <strong>${entryPoints.toLocaleString("en-US")} P</strong>
@@ -2014,9 +2016,28 @@ function doesSummerEventGiveawayCountForStandings(giveaway) {
   return !isSummerEventNoWinners(giveaway);
 }
 
+function getSummerEventBasePointsOverride(giveaway) {
+  const key = getGiveawayCodeKey(giveaway);
+  if (!key) {
+    return null;
+  }
+  const raw = getEffectiveOverrideState().giveaways[key]?.summerBasePointsOverride;
+  if (raw === undefined || raw === null || raw === "") {
+    return null;
+  }
+  const value = Number(raw);
+  return Number.isFinite(value) && value >= 0 ? value : null;
+}
+
 function getSummerEventBasePoints(giveaway) {
+  // No winner => 0 overall, so a manual base does nothing here; it only matters
+  // for giveaways that ended with a winner (and applies if one is set later).
   if (isSummerEventNoWinners(giveaway)) {
     return 0;
+  }
+  const override = getSummerEventBasePointsOverride(giveaway);
+  if (override !== null) {
+    return override;
   }
   if (hasSummerEventSteamPrice(giveaway)) {
     return Number(giveaway?.steamPricePoints || 0);
@@ -5456,6 +5477,27 @@ function handleEditAction(button) {
 
   if (action === "winner") {
     openWinnerEditModal(button.dataset.giveawayKey || "", button.dataset.currentWinners || "");
+    return;
+  }
+
+  if (action === "summer-base-points") {
+    const key = button.dataset.giveawayKey || "";
+    if (!key) {
+      return;
+    }
+    openEditModal({
+      title: `Edit base points for ${button.dataset.giveawayTitle || "this giveaway"}`,
+      description:
+        "Manual base (creation) points for this summer-event giveaway. Entry points still come from tracked entrants. Leave empty to clear and fall back to the Steam price or point cost.",
+      label: "Base points",
+      initialValue: button.dataset.currentBase || "",
+      inputType: "number",
+      inputAttributes: { min: "0", step: "1" },
+      parse: (raw) => parseNumericOverrideInput(raw, { integer: true }),
+      onSave: (nextValue) => {
+        updateOverrideField("giveaways", key, "summerBasePointsOverride", nextValue);
+      },
+    });
     return;
   }
 
