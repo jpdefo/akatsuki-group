@@ -1,5 +1,5 @@
 {
-  "savedAt": "2026-06-08T17:38:31.280Z",
+  "savedAt": "2026-06-08T18:14:24.617Z",
   "overrides": {
     "games": {},
     "wins": {
@@ -38,7 +38,9 @@
           }
         ]
       },
-      "sg-R91uQ": {},
+      "sg-R91uQ": {
+        "cycleMonthOverride": "2026-04"
+      },
       "sg-LqrvT": {
         "giveawayKindOverride": "extra"
       },
@@ -80,6 +82,15 @@
       },
       "sg-1ioqU": {
         "cycleMonthOverride": "2026-02"
+      },
+      "sg-3FjZo": {
+        "cycleMonthOverride": "2026-02"
+      },
+      "sg-egRov": {
+        "cycleMonthOverride": "2026-02"
+      },
+      "sg-16bPT": {
+        "giveawayKindOverride": "extra"
       }
     },
     "cycleMembers": {
