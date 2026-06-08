@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Akatsuki SteamGifts Sync
 // @namespace    akatsuki-monitor
-// @version      1.5.0
+// @version      1.6.0
 // @description  Collect Akatsuki members, giveaways, entries and winners from the logged-in SteamGifts session and send them to the local monitor server.
 // @match        https://www.steamgifts.com/group/*/*
 // @match        https://www.steamgifts.com/group/*/*/users*
@@ -25,11 +25,16 @@
   const GITHUB_REPO = { owner: "jpdefo", name: "akatsuki-group", branch: "main" };
   const GITHUB_SYNC_PATH = "data/steamgifts-sync.json";
   const GITHUB_TOKEN_KEY = "akatsuki-github-token";
-  // Avoid SteamGifts rate-limiting on big runs: once more than this many
-  // giveaways need checking, pace them at one per THROTTLE_DELAY_MS; small runs
-  // stay at full speed.
-  const THROTTLE_THRESHOLD = 30;
-  const THROTTLE_DELAY_MS = 750;
+  // Rate limiting (SteamGifts allows ~120 requests/min). We run at FULL SPEED by
+  // default so small/typical syncs stay fast; only when we actually hit a 429 do
+  // we start pacing every request and backing off. Very large scrapes are
+  // pre-paced so they skip the one-time backoff penalty.
+  const PREPACE_GIVEAWAY_THRESHOLD = 150;
+  const PACED_REQUEST_GAP_MS = 550; // ~109 req/min once pacing is on
+  const RATE_LIMIT_BACKOFF_MS = 30000;
+  const RATE_LIMIT_MAX_RETRIES = 5;
+  let requestGapMs = 0; // 0 = full speed; set to PACED_REQUEST_GAP_MS when throttling
+  let lastRequestAt = 0;
   const PUBLISHED_SYNC_URL = `https://raw.githubusercontent.com/${GITHUB_REPO.owner}/${GITHUB_REPO.name}/${GITHUB_REPO.branch}/${GITHUB_SYNC_PATH}`;
   const PUBLISHED_OVERRIDES_URL = `https://raw.githubusercontent.com/${GITHUB_REPO.owner}/${GITHUB_REPO.name}/${GITHUB_REPO.branch}/data/overrides.json`;
   const state = {
@@ -107,6 +112,7 @@
     }
 
     state.running = true;
+    requestGapMs = 0; // start fast; the 429 handler turns pacing on if needed
     log("Reading existing data...");
 
     try {
@@ -132,15 +138,14 @@
       let detailedGiveaways = giveaways;
       const unresolvedGiveaways = giveaways.filter(needsGiveawayDetails);
       if (unresolvedGiveaways.length) {
-        const throttle = unresolvedGiveaways.length > THROTTLE_THRESHOLD;
+        if (unresolvedGiveaways.length > PREPACE_GIVEAWAY_THRESHOLD) {
+          requestGapMs = PACED_REQUEST_GAP_MS;
+        }
         log(
-          `Resolving ${unresolvedGiveaways.length} giveaway(s) missing app, winner, or label data...${throttle ? ` (throttled to 1 / ${THROTTLE_DELAY_MS}ms to avoid rate limits)` : ""}`,
+          `Resolving ${unresolvedGiveaways.length} giveaway(s) missing app, winner, or label data...${requestGapMs ? " (paced to avoid rate limits)" : ""}`,
         );
         const resolvedGiveaways = new Map();
         for (const [index, giveaway] of unresolvedGiveaways.entries()) {
-          if (throttle && index > 0) {
-            await delay(THROTTLE_DELAY_MS);
-          }
           log(`Resolving giveaway ${index + 1}/${unresolvedGiveaways.length}: ${giveaway.title}`);
           resolvedGiveaways.set(giveaway.code, await enrichGiveaway(giveaway));
         }
@@ -168,12 +173,8 @@
           !(Array.isArray(giveaway.entryUsers) && giveaway.entryUsers.length > 0),
       );
       if (giveawaysNeedingEntries.length) {
-        const throttleEntries = giveawaysNeedingEntries.length > THROTTLE_THRESHOLD;
         log(`Fetching entrants for ${giveawaysNeedingEntries.length} promoted summer-event giveaway(s)...`);
         for (const [index, giveaway] of giveawaysNeedingEntries.entries()) {
-          if (throttleEntries && index > 0) {
-            await delay(THROTTLE_DELAY_MS);
-          }
           log(`  entrants ${index + 1}/${giveawaysNeedingEntries.length}: ${giveaway.title}`);
           const snapshot = await fetchGiveawayEntries(giveaway.url);
           if (snapshot && Array.isArray(snapshot.users)) {
@@ -1159,15 +1160,38 @@
   }
 
   async function fetchDocumentResponse(url) {
-    const response = await fetch(url, { credentials: "include" });
-    if (!response.ok) {
-      throw new Error(`Could not load ${url} (${response.status})`);
+    for (let attempt = 0; ; attempt += 1) {
+      // Global pacer: hold a minimum gap between every request once throttling
+      // is on (covers detail pages, winners, and each entries/winners page).
+      if (requestGapMs > 0) {
+        const wait = requestGapMs - (Date.now() - lastRequestAt);
+        if (wait > 0) {
+          await delay(wait);
+        }
+      }
+      lastRequestAt = Date.now();
+
+      const response = await fetch(url, { credentials: "include" });
+      if (response.status === 429) {
+        // Hit the limit: pace every request from now on, wait, then retry.
+        requestGapMs = Math.max(requestGapMs, PACED_REQUEST_GAP_MS);
+        if (attempt < RATE_LIMIT_MAX_RETRIES) {
+          log(
+            `Rate limited (429). Pacing requests and waiting ${Math.round(RATE_LIMIT_BACKOFF_MS / 1000)}s before retry...`,
+          );
+          await delay(RATE_LIMIT_BACKOFF_MS);
+          continue;
+        }
+      }
+      if (!response.ok) {
+        throw new Error(`Could not load ${url} (${response.status})`);
+      }
+      const html = await response.text();
+      return {
+        doc: new DOMParser().parseFromString(html, "text/html"),
+        finalUrl: response.url || url,
+      };
     }
-    const html = await response.text();
-    return {
-      doc: new DOMParser().parseFromString(html, "text/html"),
-      finalUrl: response.url || url,
-    };
   }
 
   async function fetchDocument(url) {
