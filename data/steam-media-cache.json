@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-07T17:15:03.963520+00:00",
+  "updatedAt": "2026-06-08T07:30:52.527060+00:00",
   "apps": {
     "3288210": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3288210/2e13226847bb546625411aed75e74471f6705b18/header.jpg?t=1777969480",
@@ -1411,7 +1411,8 @@
       "capsuleImageUrl": "",
       "capsuleSmallUrl": "",
       "releaseDate": "",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": ""
     },
     "801800": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/801800/header.jpg?t=1776701587",
