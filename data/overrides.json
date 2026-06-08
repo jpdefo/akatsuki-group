@@ -1,5 +1,5 @@
 {
-  "savedAt": "2026-06-08T16:39:34.792Z",
+  "savedAt": "2026-06-08T17:38:31.280Z",
   "overrides": {
     "games": {},
     "wins": {
@@ -77,6 +77,9 @@
       },
       "sg-8jrA5": {
         "cycleMonthOverride": "2026-04"
+      },
+      "sg-1ioqU": {
+        "cycleMonthOverride": "2026-02"
       }
     },
     "cycleMembers": {
