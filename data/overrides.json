@@ -1,8 +1,12 @@
 {
-  "savedAt": "2026-06-07T18:51:31.702Z",
+  "savedAt": "2026-06-08T16:26:42.495Z",
   "overrides": {
     "games": {},
-    "wins": {},
+    "wins": {
+      "sg-win-COnkv-Ernesttico": {
+        "requiredAchievementsOverride": 2
+      }
+    },
     "giveaways": {
       "sg-Gm5Hr": {
         "manualWinners": [
