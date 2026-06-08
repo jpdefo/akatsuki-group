@@ -1,10 +1,16 @@
 {
-  "savedAt": "2026-06-08T16:26:42.495Z",
+  "savedAt": "2026-06-08T16:35:34.520Z",
   "overrides": {
     "games": {},
     "wins": {
       "sg-win-COnkv-Ernesttico": {
         "requiredAchievementsOverride": 2
+      },
+      "sg-win-1ioqU-Ernesttico": {
+        "monthOverride": "2026-02"
+      },
+      "sg-win-LqrvT-Youdontknow": {
+        "requiredAchievementsOverride": 5
       }
     },
     "giveaways": {
@@ -68,6 +74,9 @@
       },
       "sg-ss1t3": {
         "cycleMonthOverride": "2025-11"
+      },
+      "sg-8jrA5": {
+        "cycleMonthOverride": "2026-04"
       }
     },
     "cycleMembers": {
