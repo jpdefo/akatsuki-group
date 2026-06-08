@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Akatsuki SteamGifts Sync
 // @namespace    akatsuki-monitor
-// @version      1.4.1
+// @version      1.5.0
 // @description  Collect Akatsuki members, giveaways, entries and winners from the logged-in SteamGifts session and send them to the local monitor server.
 // @match        https://www.steamgifts.com/group/*/*
 // @match        https://www.steamgifts.com/group/*/*/users*
@@ -997,7 +997,13 @@
     const resolvedEndDate = giveaway.endDate || (endTimestamp ? new Date(endTimestamp).toISOString() : null);
     const resolvedGiveawayKind = detectedGiveawayKind || giveaway.giveawayKind || "";
     const giveawayMonthOverride = doc ? detectGiveawayMonthOverride(descriptionText, resolvedEndDate, resolvedGiveawayKind) : "";
-    const winners = await fetchWinners(giveaway.url);
+    // The group list row already shows the winner, so reuse it and skip the extra
+    // /winners request when it's a confident win; only fetch when the row was
+    // ambiguous (no winner detected on the list).
+    const rowWinners = Array.isArray(giveaway.winners) ? giveaway.winners : [];
+    const rowConfidentWin =
+      String(giveaway.resultStatus || "").trim().toLowerCase() === "won" && rowWinners.length > 0;
+    const winners = rowConfidentWin ? rowWinners : await fetchWinners(giveaway.url);
     const resolvedResultStatus = winners.length
       ? "won"
       : String(giveaway.resultStatus || "").trim().toLowerCase();
