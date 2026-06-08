@@ -40,6 +40,9 @@ const defaultState = {
     activeMembers: 30,
     minimumValuePoints: 15,
     currentDate: todayISO(),
+    // Summer-event entry-swing ruleset: "auto" (legacy <=2025, 2026 rules from
+    // 2026), or force "legacy" / "2026".
+    summerRuleset: "auto",
   },
   sync: {
     steamgifts: null,
@@ -109,6 +112,7 @@ const elements = {
   cycleGiveawaySort: document.querySelector("#cycle-giveaway-sort"),
   cycleWinsTable: document.querySelector("#cycle-wins-table"),
   summerEventFilter: document.querySelector("#summer-event-filter"),
+  summerRuleset: document.querySelector("#summer-ruleset"),
   summerEventSort: document.querySelector("#summer-event-sort"),
   summerEventCreatorFilter: document.querySelector("#summer-event-creator-filter"),
   summerEventWinnerFilter: document.querySelector("#summer-event-winner-filter"),
@@ -190,6 +194,10 @@ function bindEvents() {
   elements.cycleGiveawayMonthFilter?.addEventListener("change", () => renderCycleHistoryPage());
   elements.cycleGiveawaySort?.addEventListener("change", () => renderCycleHistoryPage());
   elements.summerEventFilter?.addEventListener("change", () => renderSummerEventPage());
+  elements.summerRuleset?.addEventListener("change", () => {
+    state.settings.summerRuleset = elements.summerRuleset.value || "auto";
+    persistAndRender();
+  });
   elements.summerEventSort?.addEventListener("change", () => renderSummerEventPage());
   elements.summerEventCreatorFilter?.addEventListener("input", () => renderSummerEventPage());
   elements.summerEventWinnerFilter?.addEventListener("input", () => renderSummerEventPage());
@@ -501,6 +509,9 @@ function renderAllGiveawaysPage() {
 }
 
 function renderSettings() {
+  if (elements.summerRuleset) {
+    elements.summerRuleset.value = state.settings.summerRuleset || "auto";
+  }
   if (elements.storageStatus) {
     elements.storageStatus.textContent = runtime.staticApi
       ? "GitHub Pages snapshot"
@@ -1337,6 +1348,10 @@ function renderSummerEventPage() {
   const summerEventMemberIndex = getSummerEventMemberIndex();
   const standings = computeSummerEventStandings(giveaways, summerEventMemberIndex);
   const trackedEntries = giveaways.reduce((sum, giveaway) => sum + getSummerEventEntryUsers(giveaway).length, 0);
+  const giveawaysWithEntries = giveaways.filter((giveaway) => getSummerEventEntryUsers(giveaway).length > 0).length;
+  const giveawaysWithWinner = giveaways.filter(
+    (giveaway) => Array.isArray(giveaway.winners) && giveaway.winners.length > 0,
+  ).length;
   const pendingSnapshots = giveaways.filter(isSummerEventSnapshotPending).length;
   const blockedParticipants = standings.filter((participant) => participant.balance < 0).length;
 
@@ -1344,12 +1359,13 @@ function renderSummerEventPage() {
     const blockedLabel = blockedParticipants
       ? ` ${blockedParticipants} participant${blockedParticipants === 1 ? " is" : "s are"} below zero and should stop entering new giveaways.`
       : "";
-    elements.summerEventDescription.textContent = `${selectedPeriod.label} has ${giveaways.length} tracked giveaway${giveaways.length === 1 ? "" : "s"}, ${trackedEntries.toLocaleString("en-US")} tracked entr${trackedEntries === 1 ? "y" : "ies"}, and ${pendingSnapshots} snapshot${pendingSnapshots === 1 ? "" : "s"} still waiting for a final post-close capture.${blockedLabel}`;
+    elements.summerEventDescription.textContent = `${selectedPeriod.label} has ${giveawaysWithEntries} tracked giveaway${giveawaysWithEntries === 1 ? "" : "s"} with entries, ${giveawaysWithWinner} with a winner, ${trackedEntries.toLocaleString("en-US")} tracked entr${trackedEntries === 1 ? "y" : "ies"}, and ${pendingSnapshots} snapshot${pendingSnapshots === 1 ? "" : "s"} still waiting for a final post-close capture.${blockedLabel}`;
   }
 
   if (elements.summerEventSummaryCards) {
     const cards = [
-      ["Tracked giveaways", giveaways.length],
+      ["Tracked giveaways", giveawaysWithEntries],
+      ["With a winner", giveawaysWithWinner],
       ["Participants", standings.length],
       ["Tracked entries", trackedEntries.toLocaleString("en-US")],
       ["Pending final snapshots", pendingSnapshots],
@@ -1743,7 +1759,7 @@ function buildSummerEventEntryLedger(giveaways, memberIndex = getSummerEventMemb
     const creatorProfileUrl = creator?.profileUrl || (creatorUsername ? `https://www.steamgifts.com/user/${encodeURIComponent(creatorUsername)}` : "");
     const basePoints = getSummerEventBasePoints(giveaway);
     const entryDelta = getSummerEventEntryDelta(giveaway);
-    const reasonLabel = basePoints >= 30 ? "30P+ giveaway swing" : "Under 30P giveaway swing";
+    const reasonLabel = `${basePoints}P giveaway • ${entryDelta}P swing`;
 
     for (const entrantUsername of getSummerEventEntryUsers(giveaway)) {
       if (!entrantUsername || entrantUsername === creatorUsername) {
@@ -2059,11 +2075,32 @@ function getSummerEventBasePoints(giveaway) {
   return Number(giveaway?.points || 0);
 }
 
+function getActiveSummerRuleset(giveaway) {
+  const selected = String(state.settings.summerRuleset || "auto");
+  if (selected === "legacy" || selected === "2026") {
+    return selected;
+  }
+  // Auto: 2026 rules apply from the 2026 event onward, legacy before.
+  return getSummerEventPeriodDescriptor(giveaway).year >= 2026 ? "2026" : "legacy";
+}
+
 function getSummerEventEntryDelta(giveaway) {
   if (isSummerEventNoWinners(giveaway)) {
     return 0;
   }
-  return getSummerEventBasePoints(giveaway) >= 30 ? 10 : 5;
+  const basePoints = getSummerEventBasePoints(giveaway);
+  if (getActiveSummerRuleset(giveaway) === "2026") {
+    // 2026: 15-29P -> 5, 30-59P -> 10, 60P+ -> 15.
+    if (basePoints >= 60) {
+      return 15;
+    }
+    if (basePoints >= 30) {
+      return 10;
+    }
+    return basePoints >= 15 ? 5 : 0;
+  }
+  // Legacy: under 30P -> 5, 30P+ -> 10.
+  return basePoints >= 30 ? 10 : 5;
 }
 
 function isSummerEventNoWinners(giveaway) {
