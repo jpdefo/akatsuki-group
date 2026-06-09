@@ -727,7 +727,7 @@ function buildPenaltiesOwedCard() {
       const linkMarkup = url
         ? ` — <a class="linked-title" href="${escapeHtml(url)}" target="_blank" rel="noreferrer">won giveaway</a>`
         : "";
-      return `<li><strong>${escapeHtml(name)}</strong>: ${escapeHtml(gameTitle)} (due ${escapeHtml(formatDate(debt.deadline.toISOString()))})${linkMarkup}</li>`;
+      return `<li><strong>${escapeHtml(name)}</strong>: ${escapeHtml(gameTitle)} (due ${escapeHtml(formatPenaltyDeadline(debt.deadline))})${linkMarkup}</li>`;
     })
     .join("");
   const more = debts.length > 15 ? `<li>+${debts.length - 15} more…</li>` : "";
@@ -2776,10 +2776,34 @@ function evaluateMonthlyProgress(win) {
 }
 
 // Penalty system: a winner who doesn't finish a won game (stays below the PoP
-// threshold) for 4 months must create a "Penalty GA - <link>" giveaway pointing
-// at that win. Wins before Jan 2026 are grandfathered as paid.
+// threshold) must create a "Penalty GA - <link>" giveaway for it. The deadline is
+// 4 months after the month the win appears in PoP (getWinPlayMonth, which is
+// release-aware), landing on the 1st of the following month: a January PoP win is
+// due June 1, February due July 1, and Gothic (shown in June) due November 1.
+// PoP months before Jan 2026 are grandfathered as paid.
 const PENALTY_GRACE_MONTHS = 4;
-const PENALTY_TRACKING_START = Date.UTC(2026, 0, 1);
+const PENALTY_TRACKING_START_MONTH = "2026-01";
+
+// Deadline date for a "YYYY-MM" PoP month: first day of (month + 4 + 1).
+function getPenaltyDeadlineForMonth(popMonth) {
+  const match = /^(\d{4})-(\d{2})$/.exec(String(popMonth || ""));
+  if (!match) {
+    return null;
+  }
+  const year = Number(match[1]);
+  const month = Number(match[2]); // 1-12
+  // Date.UTC handles the year roll-over (e.g. Oct + 5 -> next March).
+  return new Date(Date.UTC(year, month + PENALTY_GRACE_MONTHS, 1));
+}
+
+// The deadline is a UTC calendar date (1st of the month); format it in UTC so it
+// reads "Jun 1" everywhere instead of slipping a day in negative timezones.
+function formatPenaltyDeadline(date) {
+  if (!(date instanceof Date) || !Number.isFinite(date.getTime())) {
+    return "-";
+  }
+  return date.toLocaleDateString("en-US", { timeZone: "UTC", year: "numeric", month: "short", day: "numeric" });
+}
 
 function getWinGiveawayCodeKey(win) {
   const giveaway = findGiveawayForWin(win);
@@ -2806,38 +2830,40 @@ function isWinPenaltyPaid(win) {
 
 // Classifies a win against the penalty rules. Returns null when the win is not
 // subject to penalties at all; otherwise a status:
-//   grandfathered  - won before Jan 2026 (always paid)
+//   grandfathered  - PoP month before Jan 2026 (always paid)
 //   complete       - met the PoP threshold (no debt; finishing late clears it)
 //   paid           - incomplete but a penalty giveaway is attached
-//   overdue        - incomplete, past the 4-month deadline, unpaid -> owes now
-//   coming-due     - incomplete, within the 4-month grace period, unpaid
+//   overdue        - incomplete, past the deadline, unpaid -> owes now
+//   coming-due     - incomplete, before the deadline, unpaid
 function getWinPenaltyInfo(win) {
   const trackKind = getWinTrackKind(win);
   if (trackKind === "pop_free" || trackKind === "penalty") {
     return null; // exempt kinds are never subject to penalties
   }
-  const winDate = parseDate(win?.winDate || "");
-  if (!Number.isFinite(winDate.getTime())) {
+  const popMonth = getWinPlayMonth(win); // release-aware PoP month, "YYYY-MM"
+  if (!popMonth) {
     return null;
   }
-  if (winDate.getTime() < PENALTY_TRACKING_START) {
-    return { status: "grandfathered", winDate, deadline: null };
+  if (popMonth < PENALTY_TRACKING_START_MONTH) {
+    return { status: "grandfathered", popMonth, deadline: null };
   }
   if (evaluateMonthlyProgress(win).badge !== "danger") {
-    return { status: "complete", winDate, deadline: null };
+    return { status: "complete", popMonth, deadline: null };
   }
-  const deadline = new Date(winDate);
-  deadline.setUTCMonth(deadline.getUTCMonth() + PENALTY_GRACE_MONTHS);
+  const deadline = getPenaltyDeadlineForMonth(popMonth);
+  if (!deadline) {
+    return null;
+  }
   if (isWinPenaltyPaid(win)) {
-    return { status: "paid", winDate, deadline };
+    return { status: "paid", popMonth, deadline };
   }
   const now = parseDate(state.settings.currentDate || "");
   const reference = Number.isFinite(now.getTime()) ? now : new Date();
   const days = Math.round((deadline.getTime() - reference.getTime()) / 86400000);
   if (reference.getTime() >= deadline.getTime()) {
-    return { status: "overdue", winDate, deadline, daysOverdue: Math.abs(days) };
+    return { status: "overdue", popMonth, deadline, daysOverdue: Math.abs(days) };
   }
-  return { status: "coming-due", winDate, deadline, daysLeft: days };
+  return { status: "coming-due", popMonth, deadline, daysLeft: days };
 }
 
 function getWinPenaltyDebt(win) {
@@ -2935,7 +2961,7 @@ function renderPenaltiesPage() {
             <td>${escapeHtml(member?.name || win.winnerUsername || "Unknown member")}</td>
             <td>${escapeHtml(game?.title || win.title || "")}</td>
             <td>${statusBadge}</td>
-            <td>${escapeHtml(formatDate(info.deadline.toISOString()))}</td>
+            <td>${escapeHtml(formatPenaltyDeadline(info.deadline))}</td>
             <td>${url ? `<a class="linked-title" href="${escapeHtml(url)}" target="_blank" rel="noreferrer">Won giveaway</a>` : "-"}</td>
           </tr>
         `);
