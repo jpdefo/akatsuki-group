@@ -73,6 +73,7 @@ const runtime = {
   editModal: null,
   editModalState: null,
   sharedOverrides: normalizeOverrideState(),
+  sharedOverridesLoaded: false,
 };
 const GAME_OVERRIDE_FIELDS = ["hltbHoursOverride"];
 const WIN_OVERRIDE_FIELDS = ["requiredAchievementsOverride", "monthOverride"];
@@ -2832,6 +2833,13 @@ function isWinPenaltyPaid(win) {
 //   overdue        - incomplete, past the deadline, unpaid -> owes now
 //   coming-due     - incomplete, before the deadline, unpaid
 function getWinPenaltyInfo(win) {
+  // Wait until Steam progress AND overrides are applied. Before progress every
+  // win has 0 playtime/achievements (looks incomplete), and before overrides the
+  // pop_free/penalty/month/manual-winner edits haven't resolved -> the list would
+  // flash full of false penalties during page load.
+  if (!state.sync?.steamProgressUpdatedAt || !runtime.sharedOverridesLoaded) {
+    return null;
+  }
   const trackKind = getWinTrackKind(win);
   if (trackKind === "pop_free" || trackKind === "penalty") {
     return null; // exempt kinds are never subject to penalties
@@ -3384,12 +3392,16 @@ async function loadSharedOverrides(options = {}) {
     const { payload } = await fetchApiJson("./api/overrides");
     runtime.sharedOverrides = normalizeSharedOverridePayload(payload);
     applyManualOverrides();
-    render();
   } catch (error) {
     runtime.sharedOverrides = normalizeOverrideState();
     if (!options.silent) {
       window.alert("Could not load published overrides.");
     }
+  } finally {
+    // Penalties can only be judged once overrides (kind/manual-winner/month) are
+    // applied, so flag completion and re-render either way.
+    runtime.sharedOverridesLoaded = true;
+    render();
   }
 }
 
