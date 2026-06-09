@@ -2642,6 +2642,18 @@ function compareMonthlyWins(left, right, sortMode) {
     }
   }
 
+  if (sortMode === "date-asc" || sortMode === "date-desc") {
+    const leftTime = parseDate(left.winDate || "").getTime();
+    const rightTime = parseDate(right.winDate || "").getTime();
+    // Undated wins sort to the bottom in both directions.
+    const leftValue = Number.isFinite(leftTime) ? leftTime : sortMode === "date-asc" ? Infinity : -Infinity;
+    const rightValue = Number.isFinite(rightTime) ? rightTime : sortMode === "date-asc" ? Infinity : -Infinity;
+    const dateCompare = sortMode === "date-asc" ? leftValue - rightValue : rightValue - leftValue;
+    if (dateCompare !== 0) {
+      return dateCompare;
+    }
+  }
+
   const memberCompare = String(leftMember?.name || "").localeCompare(String(rightMember?.name || ""), "en-US", {
     sensitivity: "base",
   });
