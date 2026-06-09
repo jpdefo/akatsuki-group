@@ -2837,7 +2837,7 @@ function getWinPenaltyInfo(win) {
   // win has 0 playtime/achievements (looks incomplete), and before overrides the
   // pop_free/penalty/month/manual-winner edits haven't resolved -> the list would
   // flash full of false penalties during page load.
-  if (!state.sync?.steamProgressUpdatedAt || !runtime.sharedOverridesLoaded) {
+  if (!isPenaltyDataReady()) {
     return null;
   }
   const trackKind = getWinTrackKind(win);
@@ -2935,8 +2935,19 @@ function buildPenaltyProgressCells(win) {
   return [hours, achievements];
 }
 
+function isPenaltyDataReady() {
+  return Boolean(state.sync?.steamProgressUpdatedAt) && runtime.sharedOverridesLoaded;
+}
+
 function renderPenaltiesPage() {
   if (!elements.penaltiesTable) {
+    return;
+  }
+  if (!isPenaltyDataReady()) {
+    elements.penaltiesTable.innerHTML = `<tr><td colspan="6" class="meta-line">Loading penalty data — waiting for Steam playtime/achievements and overrides…</td></tr>`;
+    if (elements.penaltiesSummary) {
+      elements.penaltiesSummary.textContent = "Loading…";
+    }
     return;
   }
   const filter = elements.penaltiesFilter?.value || "all";
