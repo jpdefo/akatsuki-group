@@ -1,5 +1,5 @@
 {
-  "savedAt": "2026-06-08T18:14:24.617Z",
+  "savedAt": "2026-06-09T17:56:43.074Z",
   "overrides": {
     "games": {},
     "wins": {
@@ -91,6 +91,12 @@
       },
       "sg-16bPT": {
         "giveawayKindOverride": "extra"
+      },
+      "sg-OTg97": {
+        "giveawayKindOverride": "pop_free"
+      },
+      "sg-emD17": {
+        "giveawayKindOverride": "pop_free"
       }
     },
     "cycleMembers": {
