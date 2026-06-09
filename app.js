@@ -165,15 +165,14 @@ function bootstrap() {
 }
 
 async function loadInitialData() {
-  // Overlap the big downloads instead of fetching them one-after-another: the
-  // sync (~4MB), Steam progress (~2MB) and overrides are independent over the
-  // wire, so start them together and apply in dependency order once they arrive.
-  const progressPromise = fetchApiJson("./api/steam-progress").catch(() => ({ payload: null }));
-  const overridesPromise = fetchApiJson("./api/overrides").catch(() => ({ payload: null }));
-
-  await refreshRemoteSync({ silent: true }); // sync + dashboard; others apply on top
-  await loadStoredSteamProgress({ silent: true, prefetched: await progressPromise });
-  await loadSharedOverrides({ silent: true, prefetched: await overridesPromise });
+  // Load the sync first so it gets the full pipe and the member/snapshot views
+  // paint as soon as possible; then fan the rest out in parallel (they only feed
+  // PoP/penalties, which are gated until they arrive anyway).
+  await refreshRemoteSync({ silent: true }); // sync + dashboard
+  await Promise.all([
+    loadStoredSteamProgress({ silent: true }),
+    loadSharedOverrides({ silent: true }),
+  ]);
   void loadVisibleGameMedia({ silent: true });
 }
 
