@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Akatsuki SteamGifts Sync
 // @namespace    akatsuki-monitor
-// @version      1.6.0
+// @version      1.7.0
 // @description  Collect Akatsuki members, giveaways, entries and winners from the logged-in SteamGifts session and send them to the local monitor server.
 // @match        https://www.steamgifts.com/group/*/*
 // @match        https://www.steamgifts.com/group/*/*/users*
@@ -714,8 +714,9 @@
       return "summer_event";
     }
     const matches = [
+      { kind: "pop_free", index: text.search(/\bpop free\b/i) },
+      { kind: "penalty", index: text.search(/\bpenalty\b/i) },
       { kind: "extra", index: text.search(/\bextra\b/i) },
-      { kind: "extra", index: text.search(/\bpenalty\b/i) },
       { kind: "cycle", index: text.search(/\bmonthly\b/i) },
     ].filter((match) => match.index >= 0);
 
@@ -725,6 +726,13 @@
 
     matches.sort((left, right) => left.index - right.index);
     return matches[0].kind;
+  }
+
+  function detectPenaltyForCode(descriptionText) {
+    // Penalty giveaways read "Penalty GA - <link>" where the link is the won
+    // giveaway being paid for; capture its 5-char code.
+    const match = String(descriptionText || "").match(/\/giveaway\/([A-Za-z0-9]{5})(?:[/?#]|\b)/);
+    return match ? match[1] : "";
   }
 
   const MONTH_NAME_TO_NUMBER = {
@@ -1039,6 +1047,10 @@
       regionRestricted: /region/i.test(String(featureMap.Type || "")),
       giveawayKind: resolvedGiveawayKind,
       giveawayMonthOverride,
+      penaltyForCode:
+        resolvedGiveawayKind === "penalty"
+          ? detectPenaltyForCode(descriptionText) || giveaway.penaltyForCode || ""
+          : giveaway.penaltyForCode || "",
       giveawayKindChecked: true,
       resultStatus: resolvedResultStatus,
       resultLabel: resolvedResultLabel,

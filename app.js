@@ -490,6 +490,8 @@ function renderAllGiveawaysPage() {
                   <select class="inline-select" data-giveaway-kind-select="true" data-giveaway-id="${giveaway.id}">
                     <option value="cycle" ${kind === "cycle" ? "selected" : ""}>Cycle</option>
                     <option value="extra" ${kind === "extra" ? "selected" : ""}>Extra</option>
+                    <option value="pop_free" ${kind === "pop_free" ? "selected" : ""}>PoP Free</option>
+                    <option value="penalty" ${kind === "penalty" ? "selected" : ""}>Penalty</option>
                     <option value="summer_event" ${kind === "summer_event" ? "selected" : ""}>Summer event</option>
                   </select>
                 </label>
@@ -698,8 +700,41 @@ function renderMemberOverview() {
   if (cycleReminderCard) {
     cards.unshift(cycleReminderCard);
   }
+  const penaltiesCard = buildPenaltiesOwedCard();
+  if (penaltiesCard) {
+    cards.unshift(penaltiesCard);
+  }
 
   elements.memberOverview.innerHTML = cards.join("");
+}
+
+function buildPenaltiesOwedCard() {
+  const debts = getOutstandingPenalties();
+  if (!debts.length) {
+    return "";
+  }
+  const items = debts
+    .slice(0, 15)
+    .map((debt) => {
+      const name = String(debt.member?.name || "Unknown member");
+      const gameTitle = String(debt.game?.title || debt.win.title || "a won game");
+      const url = getGiveawayUrl(debt.win);
+      const linkMarkup = url
+        ? ` — <a class="linked-title" href="${escapeHtml(url)}" target="_blank" rel="noreferrer">won giveaway</a>`
+        : "";
+      return `<li><strong>${escapeHtml(name)}</strong>: ${escapeHtml(gameTitle)} (due ${escapeHtml(formatDate(debt.deadline.toISOString()))})${linkMarkup}</li>`;
+    })
+    .join("");
+  const more = debts.length > 15 ? `<li>+${debts.length - 15} more…</li>` : "";
+
+  return `
+    <article class="member-card negative penalty-owed-card">
+      ${buildBadge("danger", "Penalties owed")}
+      <h3>${debts.length} penalt${debts.length === 1 ? "y" : "ies"} to pay</h3>
+      <span class="meta-line">Incomplete wins past their ${PENALTY_GRACE_MONTHS}-month deadline with no penalty giveaway attached. Create a "Penalty GA - &lt;won giveaway link&gt;" to settle.</span>
+      <ul class="penalty-list">${items}${more}</ul>
+    </article>
+  `;
 }
 
 function renderRecentGiveaways() {
@@ -916,6 +951,8 @@ function renderCycleViews(selectedMonth) {
                   <select class="inline-select" data-giveaway-kind-select="true" data-giveaway-id="${giveaway.id}">
                     <option value="cycle" ${kind === "cycle" ? "selected" : ""}>Cycle</option>
                     <option value="extra" ${kind === "extra" ? "selected" : ""}>Extra</option>
+                    <option value="pop_free" ${kind === "pop_free" ? "selected" : ""}>PoP Free</option>
+                    <option value="penalty" ${kind === "penalty" ? "selected" : ""}>Penalty</option>
                     <option value="summer_event" ${kind === "summer_event" ? "selected" : ""}>Summer event</option>
                   </select>
                 </label>
@@ -1280,6 +1317,8 @@ function renderCycleHistoryResultsTable(cycleGiveaways) {
                   <select class="inline-select" data-giveaway-kind-select="true" data-giveaway-id="${giveaway.id}">
                     <option value="cycle" ${kind === "cycle" ? "selected" : ""}>Cycle</option>
                     <option value="extra" ${kind === "extra" ? "selected" : ""}>Extra</option>
+                    <option value="pop_free" ${kind === "pop_free" ? "selected" : ""}>PoP Free</option>
+                    <option value="penalty" ${kind === "penalty" ? "selected" : ""}>Penalty</option>
                     <option value="summer_event" ${kind === "summer_event" ? "selected" : ""}>Summer event</option>
                   </select>
                 </label>
@@ -2717,6 +2756,87 @@ function getGiveawayUrl(win) {
 }
 
 function evaluateMonthlyProgress(win) {
+  const base = evaluateBaseMonthlyProgress(win);
+  // PoP Free: always counts as complete and never red. If the winner didn't
+  // actually reach the threshold, show it blue instead.
+  if (getWinTrackKind(win) === "pop_free" && base.badge === "danger") {
+    return {
+      ...base,
+      badge: "info",
+      label: "PoP free",
+      note: "PoP Free — counts as complete; no minimum play required.",
+    };
+  }
+  return base;
+}
+
+// Penalty system: a winner who doesn't finish a won game (stays below the PoP
+// threshold) for 4 months must create a "Penalty GA - <link>" giveaway pointing
+// at that win. Wins before Jan 2026 are grandfathered as paid.
+const PENALTY_GRACE_MONTHS = 4;
+const PENALTY_TRACKING_START = Date.UTC(2026, 0, 1);
+
+function getWinGiveawayCodeKey(win) {
+  const giveaway = findGiveawayForWin(win);
+  return giveaway ? getGiveawayCodeKey(giveaway) : "";
+}
+
+function getPenaltyForCodeKey(giveaway) {
+  const raw = String(giveaway?.penaltyForCode || "").trim();
+  if (!raw) {
+    return "";
+  }
+  return raw.startsWith("sg-") ? raw : `sg-${raw}`;
+}
+
+function isWinPenaltyPaid(win) {
+  const codeKey = getWinGiveawayCodeKey(win);
+  if (!codeKey) {
+    return false;
+  }
+  return state.giveaways.some(
+    (giveaway) => getGiveawayKind(giveaway) === "penalty" && getPenaltyForCodeKey(giveaway) === codeKey,
+  );
+}
+
+function getWinPenaltyDebt(win) {
+  const trackKind = getWinTrackKind(win);
+  if (trackKind === "pop_free" || trackKind === "penalty") {
+    return null; // exempt kinds never owe a penalty
+  }
+  const winDate = parseDate(win?.winDate || "");
+  if (!Number.isFinite(winDate.getTime()) || winDate.getTime() < PENALTY_TRACKING_START) {
+    return null; // undated, or grandfathered (won before Jan 2026)
+  }
+  if (evaluateMonthlyProgress(win).badge !== "danger") {
+    return null; // complete now -> no debt, even if finished late
+  }
+  const deadline = new Date(winDate);
+  deadline.setUTCMonth(deadline.getUTCMonth() + PENALTY_GRACE_MONTHS);
+  const now = parseDate(state.settings.currentDate || "");
+  const reference = Number.isFinite(now.getTime()) ? now : new Date();
+  if (reference.getTime() < deadline.getTime()) {
+    return null; // still within the 4-month grace period
+  }
+  if (isWinPenaltyPaid(win)) {
+    return null; // a penalty giveaway is already attached
+  }
+  return { win, deadline, winDate };
+}
+
+function getOutstandingPenalties() {
+  return state.wins
+    .map((win) => getWinPenaltyDebt(win))
+    .filter(Boolean)
+    .map((debt) => ({
+      ...debt,
+      member: findById("members", debt.win.memberId),
+      game: findById("games", debt.win.gameId),
+    }))
+    .sort((left, right) => left.deadline.getTime() - right.deadline.getTime());
+}
+
+function evaluateBaseMonthlyProgress(win) {
   const game =
     findById("games", win.gameId) || {
       id: "",
@@ -3824,6 +3944,7 @@ function upsertGiveawayFromSync(giveawayRecord, creatorId) {
     notes: giveawayRecord.url || "",
     giveawayKind: normalizedKind,
     giveawayMonthOverride: normalizedKind === "cycle" ? normalizeGiveawayMonthOverrideValue(giveawayRecord.giveawayMonthOverride) : "",
+    penaltyForCode: String(giveawayRecord.penaltyForCode || existing?.penaltyForCode || "").trim(),
     giveawayKindChecked: Boolean(giveawayRecord.giveawayKindChecked),
     creatorUsername: giveawayRecord.creatorUsername || existing?.creatorUsername || "",
     entryUsers: Array.isArray(giveawayRecord.entryUsers) ? giveawayRecord.entryUsers.slice() : existing?.entryUsers || [],
@@ -5377,6 +5498,12 @@ function normalizeGiveawayKindValue(kind, giveaway = null) {
   if (value === "extra") {
     return "extra";
   }
+  if (value === "penalty") {
+    return "penalty";
+  }
+  if (value === "pop_free" || value === "pop-free" || value === "pop free") {
+    return "pop_free";
+  }
   if (value === "summer_event" || value === "summer-event" || value === "summer event") {
     return "summer_event";
   }
@@ -5390,6 +5517,10 @@ function getGiveawayKindLabel(kind) {
   switch (kind) {
     case "extra":
       return "Extra";
+    case "penalty":
+      return "Penalty";
+    case "pop_free":
+      return "PoP Free";
     case "summer_event":
       return "Summer event";
     default:
@@ -5400,6 +5531,10 @@ function getGiveawayKindLabel(kind) {
 function getGiveawayKindBadgeLevel(kind) {
   switch (kind) {
     case "extra":
+      return "info";
+    case "penalty":
+      return "danger";
+    case "pop_free":
       return "info";
     case "summer_event":
       return "warning";

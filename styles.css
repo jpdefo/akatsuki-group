@@ -197,6 +197,20 @@ h2 {
   font-size: 0.85rem;
 }
 
+#member-overview .penalty-owed-card {
+  grid-column: 1 / -1;
+}
+
+.penalty-list {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--muted, #c7d2e2);
+  max-height: 240px;
+  overflow: auto;
+}
+
 .member-card {
   background: var(--panel-strong);
   border: 1px solid var(--line);
@@ -696,6 +710,10 @@ td small,
 
 .progress-row.danger td {
   background: rgba(239, 68, 68, 0.05);
+}
+
+.progress-row.info td {
+  background: rgba(96, 165, 250, 0.07);
 }
 
 .empty-state {
