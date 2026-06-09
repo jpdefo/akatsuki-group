@@ -500,7 +500,10 @@ function renderAllGiveawaysPage() {
                 <span class="meta-line">Created: ${escapeHtml(formatDateTime(getGiveawayCreatedDisplay(giveaway)))}</span>
                 <span class="meta-line">Ended: ${escapeHtml(formatDateTime(getGiveawayEndedDisplay(giveaway)))}</span>
               </td>
-              <td>${escapeHtml(creator?.name || giveaway.creatorUsername || "Unknown member")}</td>
+              <td>
+                <div>${winnerMarkup}${manualWinners.length ? ` ${buildBadge("info", "Manual")}` : ""}</div>
+                ${canEditGiveawayWinner(giveaway) ? `<button class="inline-action" data-edit-action="winner" data-giveaway-key="${escapeHtml(winnerKey)}" data-current-winners="${escapeHtml(currentWinnerNames)}">Edit winner</button>` : ""}
+              </td>
               <td>
                 <div>${month ? formatMonthKey(month) : "-"}</div>
                 <button class="inline-action" data-edit-action="giveaway-month" data-giveaway-id="${giveaway.id}">Edit month</button>
@@ -516,10 +519,7 @@ function renderAllGiveawaysPage() {
                   </select>
                 </label>
               </td>
-              <td>
-                <div>${winnerMarkup}${manualWinners.length ? ` ${buildBadge("info", "Manual")}` : ""}</div>
-                ${canEditGiveawayWinner(giveaway) ? `<button class="inline-action" data-edit-action="winner" data-giveaway-key="${escapeHtml(winnerKey)}" data-current-winners="${escapeHtml(currentWinnerNames)}">Edit winner</button>` : ""}
-              </td>
+              <td>${escapeHtml(creator?.name || giveaway.creatorUsername || "Unknown member")}</td>
               <td>${Number(giveaway.entriesCount || 0).toLocaleString("en-US")}</td>
             </tr>
           `;
