@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Akatsuki PoP Progress</title>
+    <title>Akatsuki Penalties</title>
     <link rel="icon" type="image/png" href="akatsuki.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -11,17 +11,17 @@
     <div class="app-shell">
       <header class="hero">
         <div>
-          <p class="eyebrow">PoP review</p>
-          <h1>Akatsuki PoP Progress</h1>
+          <p class="eyebrow">Play or pay</p>
+          <h1>Akatsuki Penalties</h1>
           <p class="hero-copy">
-            Focused winner threshold review without cycle administration mixed into the page.
+            Who owes a penalty giveaway, who is approaching a deadline, and which penalties have already been paid.
           </p>
         </div>
         <div class="hero-actions page-nav">
           <a class="button secondary" href="index.html">Overview</a>
           <a class="button secondary" href="cycles.html">Cycles</a>
-          <a class="button secondary" href="monthly-progress.html" aria-current="page">PoP</a>
-          <a class="button secondary" href="penalties.html">Penalties</a>
+          <a class="button secondary" href="monthly-progress.html">PoP</a>
+          <a class="button secondary" href="penalties.html" aria-current="page">Penalties</a>
           <a class="button secondary" href="summer-event.html">Summer event</a>
           <a class="button secondary" href="summer-event-entries.html">Entry ledger</a>
           <a class="button secondary" href="active-users.html">Active users</a>
@@ -52,37 +52,25 @@
         <section class="card">
           <div class="section-heading">
             <div>
-              <h2>PoP progress</h2>
+              <h2>Penalties</h2>
               <p class="section-copy">
-                Green = threshold met, yellow = all achievements completed, red = under the threshold.
-                Threshold = 25% of HLTB time + 10% of achievements.
-              </p>
-              <p class="section-copy">
-                Pick a <strong>Member</strong> to see all their wins (use Month = All months for their full history),
-                or leave it on All members for the monthly view. Row actions correct HLTB, the required 10%, or the
-                counted month without the next sync overwriting your edit.
+                A winner who hasn't met the PoP threshold within 4 months of winning owes a penalty giveaway
+                (<strong>Penalty GA - &lt;won giveaway link&gt;</strong>) for that game. Wins before January 2026 are
+                grandfathered as paid, and finishing the game later clears the debt.
               </p>
             </div>
             <div class="section-summary">
               <div id="storage-status" class="pill"></div>
-              <p id="period-summary" class="section-copy"></p>
+              <p id="penalties-summary" class="section-copy"></p>
             </div>
             <div class="section-filters">
               <label class="inline-filter">
-                Member
-                <select id="monthly-member-filter"></select>
-              </label>
-              <label class="inline-filter">
-                Month
-                <select id="monthly-filter"></select>
-              </label>
-              <label class="inline-filter">
-                Sort
-                <select id="monthly-sort">
-                  <option value="hours-asc" selected>Total hours (least first)</option>
-                  <option value="hours-desc">Total hours (most first)</option>
-                  <option value="achievements-asc">Achievements % (least first)</option>
-                  <option value="achievements-desc">Achievements % (most first)</option>
+                Show
+                <select id="penalties-filter">
+                  <option value="all">All</option>
+                  <option value="overdue">Owed now</option>
+                  <option value="coming-due">Coming due</option>
+                  <option value="settled">Settled</option>
                 </select>
               </label>
             </div>
@@ -91,22 +79,17 @@
             <table>
               <thead>
                 <tr>
-                  <th>Winner</th>
-                  <th>Game won</th>
-                  <th>Creator</th>
-                  <th>HLTB</th>
-                  <th>Req. 25%</th>
-                  <th>Player time</th>
-                  <th>Achs</th>
-                  <th>Req. 10%</th>
-                  <th>Status / notes</th>
+                  <th>Member</th>
+                  <th>Game</th>
+                  <th>Status</th>
+                  <th>Deadline</th>
+                  <th>Links</th>
                 </tr>
               </thead>
-              <tbody id="monthly-progress-table"></tbody>
+              <tbody id="penalties-table"></tbody>
             </table>
           </div>
         </section>
-
       </main>
     </div>
 

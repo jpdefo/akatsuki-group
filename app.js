@@ -103,6 +103,9 @@ const elements = {
   monthlyMemberFilter: document.querySelector("#monthly-member-filter"),
   monthlySort: document.querySelector("#monthly-sort"),
   monthlyProgressTable: document.querySelector("#monthly-progress-table"),
+  penaltiesFilter: document.querySelector("#penalties-filter"),
+  penaltiesTable: document.querySelector("#penalties-table"),
+  penaltiesSummary: document.querySelector("#penalties-summary"),
   cycleFilter: document.querySelector("#cycle-filter"),
   cycleSummary: document.querySelector("#cycle-summary"),
   cycleBestGifterWarning: document.querySelector("#cycle-best-gifter-warning"),
@@ -211,6 +214,7 @@ function bindEvents() {
   elements.summerEntrySort?.addEventListener("change", () => renderSummerEventEntriesPage());
   elements.activeUsersSort?.addEventListener("change", () => renderMemberBuckets());
   elements.monthlyMemberFilter?.addEventListener("change", () => renderProgressViews());
+  elements.penaltiesFilter?.addEventListener("change", () => renderPenaltiesPage());
 
   document.addEventListener("click", (event) => {
     const editButton = event.target.closest("[data-edit-action]");
@@ -337,6 +341,7 @@ function render() {
   renderSummerEventEntriesPage();
   renderAllGiveawaysPage();
   renderMemberBuckets();
+  renderPenaltiesPage();
 }
 
 // Created = the earlier captured timestamp; End = the later one, shown only when
@@ -2799,29 +2804,45 @@ function isWinPenaltyPaid(win) {
   );
 }
 
-function getWinPenaltyDebt(win) {
+// Classifies a win against the penalty rules. Returns null when the win is not
+// subject to penalties at all; otherwise a status:
+//   grandfathered  - won before Jan 2026 (always paid)
+//   complete       - met the PoP threshold (no debt; finishing late clears it)
+//   paid           - incomplete but a penalty giveaway is attached
+//   overdue        - incomplete, past the 4-month deadline, unpaid -> owes now
+//   coming-due     - incomplete, within the 4-month grace period, unpaid
+function getWinPenaltyInfo(win) {
   const trackKind = getWinTrackKind(win);
   if (trackKind === "pop_free" || trackKind === "penalty") {
-    return null; // exempt kinds never owe a penalty
+    return null; // exempt kinds are never subject to penalties
   }
   const winDate = parseDate(win?.winDate || "");
-  if (!Number.isFinite(winDate.getTime()) || winDate.getTime() < PENALTY_TRACKING_START) {
-    return null; // undated, or grandfathered (won before Jan 2026)
+  if (!Number.isFinite(winDate.getTime())) {
+    return null;
+  }
+  if (winDate.getTime() < PENALTY_TRACKING_START) {
+    return { status: "grandfathered", winDate, deadline: null };
   }
   if (evaluateMonthlyProgress(win).badge !== "danger") {
-    return null; // complete now -> no debt, even if finished late
+    return { status: "complete", winDate, deadline: null };
   }
   const deadline = new Date(winDate);
   deadline.setUTCMonth(deadline.getUTCMonth() + PENALTY_GRACE_MONTHS);
+  if (isWinPenaltyPaid(win)) {
+    return { status: "paid", winDate, deadline };
+  }
   const now = parseDate(state.settings.currentDate || "");
   const reference = Number.isFinite(now.getTime()) ? now : new Date();
-  if (reference.getTime() < deadline.getTime()) {
-    return null; // still within the 4-month grace period
+  const days = Math.round((deadline.getTime() - reference.getTime()) / 86400000);
+  if (reference.getTime() >= deadline.getTime()) {
+    return { status: "overdue", winDate, deadline, daysOverdue: Math.abs(days) };
   }
-  if (isWinPenaltyPaid(win)) {
-    return null; // a penalty giveaway is already attached
-  }
-  return { win, deadline, winDate };
+  return { status: "coming-due", winDate, deadline, daysLeft: days };
+}
+
+function getWinPenaltyDebt(win) {
+  const info = getWinPenaltyInfo(win);
+  return info && info.status === "overdue" ? { win, deadline: info.deadline } : null;
 }
 
 function getOutstandingPenalties() {
@@ -2834,6 +2855,119 @@ function getOutstandingPenalties() {
       game: findById("games", debt.win.gameId),
     }))
     .sort((left, right) => left.deadline.getTime() - right.deadline.getTime());
+}
+
+// Penalty giveaways that have been created, resolved to the won giveaway they
+// pay off (the audit/settled list).
+function getPenaltyGiveawayRecords() {
+  return state.giveaways
+    .filter((giveaway) => getGiveawayKind(giveaway) === "penalty")
+    .map((giveaway) => {
+      const targetKey = getPenaltyForCodeKey(giveaway);
+      const target = targetKey
+        ? state.giveaways.find((item) => getGiveawayCodeKey(item) === targetKey) || null
+        : null;
+      const targetWin = target
+        ? state.wins.find((win) => getWinGiveawayCodeKey(win) === targetKey) || null
+        : null;
+      return {
+        giveaway,
+        target,
+        targetWin,
+        creator: findById("members", giveaway.creatorId),
+        targetGame: targetWin ? findById("games", targetWin.gameId) : null,
+      };
+    })
+    .sort((left, right) => String(right.giveaway.createdAt || "").localeCompare(String(left.giveaway.createdAt || "")));
+}
+
+function getGiveawayPageUrl(giveaway) {
+  if (!giveaway) {
+    return "";
+  }
+  const note = String(giveaway.notes || giveaway.url || "").trim();
+  if (/^https?:\/\//.test(note)) {
+    return note;
+  }
+  const code = String(giveaway.code || "").trim() || String(giveaway.sourceId || "").replace(/^sg-/, "");
+  return code ? `https://www.steamgifts.com/giveaway/${code}/` : "";
+}
+
+function renderPenaltiesPage() {
+  if (!elements.penaltiesTable) {
+    return;
+  }
+  const filter = elements.penaltiesFilter?.value || "all";
+
+  const winRows = [];
+  for (const win of state.wins) {
+    const info = getWinPenaltyInfo(win);
+    if (!info || (info.status !== "overdue" && info.status !== "coming-due")) {
+      continue;
+    }
+    winRows.push({ win, info });
+  }
+  const settled = getPenaltyGiveawayRecords();
+  const overdueCount = winRows.filter((row) => row.info.status === "overdue").length;
+  const comingCount = winRows.filter((row) => row.info.status === "coming-due").length;
+
+  if (elements.penaltiesSummary) {
+    elements.penaltiesSummary.textContent = `${overdueCount} owed now • ${comingCount} coming due • ${settled.length} settled`;
+  }
+
+  const rows = [];
+
+  if (filter === "all" || filter === "overdue" || filter === "coming-due") {
+    winRows
+      .filter((row) => filter === "all" || row.info.status === filter)
+      .sort((left, right) => left.info.deadline.getTime() - right.info.deadline.getTime())
+      .forEach(({ win, info }) => {
+        const member = findById("members", win.memberId);
+        const game = findById("games", win.gameId);
+        const url = getGiveawayUrl(win);
+        const overdue = info.status === "overdue";
+        const statusBadge = buildBadge(
+          overdue ? "danger" : "warning",
+          overdue ? `Overdue ${info.daysOverdue}d` : `Due in ${info.daysLeft}d`,
+        );
+        rows.push(`
+          <tr>
+            <td>${escapeHtml(member?.name || win.winnerUsername || "Unknown member")}</td>
+            <td>${escapeHtml(game?.title || win.title || "")}</td>
+            <td>${statusBadge}</td>
+            <td>${escapeHtml(formatDate(info.deadline.toISOString()))}</td>
+            <td>${url ? `<a class="linked-title" href="${escapeHtml(url)}" target="_blank" rel="noreferrer">Won giveaway</a>` : "-"}</td>
+          </tr>
+        `);
+      });
+  }
+
+  if (filter === "all" || filter === "settled") {
+    for (const record of settled) {
+      const payer = record.creator?.name || record.giveaway.creatorUsername || "Unknown member";
+      const gameTitle = record.targetGame?.title || record.target?.title || record.giveaway.title || "";
+      const wonUrl = getGiveawayPageUrl(record.target);
+      const penaltyUrl = getGiveawayPageUrl(record.giveaway);
+      const links = [];
+      if (wonUrl) {
+        links.push(`<a class="linked-title" href="${escapeHtml(wonUrl)}" target="_blank" rel="noreferrer">Won GA</a>`);
+      }
+      if (penaltyUrl) {
+        links.push(`<a class="linked-title" href="${escapeHtml(penaltyUrl)}" target="_blank" rel="noreferrer">Penalty GA</a>`);
+      }
+      rows.push(`
+        <tr>
+          <td>${escapeHtml(payer)}</td>
+          <td>${escapeHtml(gameTitle)}</td>
+          <td>${buildBadge("success", "Settled")}</td>
+          <td>${escapeHtml(record.giveaway.createdAt ? formatDate(record.giveaway.createdAt) : "-")}</td>
+          <td>${links.join(" · ") || "-"}</td>
+        </tr>
+      `);
+    }
+  }
+
+  elements.penaltiesTable.innerHTML = rows.length ? rows.join("") : buildEmptyRow(5);
 }
 
 function evaluateBaseMonthlyProgress(win) {
