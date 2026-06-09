@@ -724,10 +724,10 @@ function buildPenaltiesOwedCard() {
       const name = String(debt.member?.name || "Unknown member");
       const gameTitle = String(debt.game?.title || debt.win.title || "a won game");
       const url = getGiveawayUrl(debt.win);
-      const linkMarkup = url
-        ? ` — <a class="linked-title" href="${escapeHtml(url)}" target="_blank" rel="noreferrer">won giveaway</a>`
-        : "";
-      return `<li><strong>${escapeHtml(name)}</strong>: ${escapeHtml(gameTitle)} (due ${escapeHtml(formatPenaltyDeadline(debt.deadline))})${linkMarkup}</li>`;
+      const gameMarkup = url
+        ? `<a class="linked-title" href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(gameTitle)}</a>`
+        : escapeHtml(gameTitle);
+      return `<li><strong>${escapeHtml(name)}</strong>: ${gameMarkup} (due ${escapeHtml(formatPenaltyDeadline(debt.deadline))})</li>`;
     })
     .join("");
   const more = debts.length > 15 ? `<li>+${debts.length - 15} more…</li>` : "";
@@ -2919,6 +2919,18 @@ function getGiveawayPageUrl(giveaway) {
   return code ? `https://www.steamgifts.com/giveaway/${code}/` : "";
 }
 
+// "have / need" cells for a win: current playtime vs required 25%, and earned
+// achievements vs the required 10%.
+function buildPenaltyProgressCells(win) {
+  if (!win) {
+    return ["-", "-"];
+  }
+  const progress = evaluateMonthlyProgress(win);
+  const hours = `${formatHours(Number(win.currentHours || 0))} / ${formatHours(progress.requiredHours || 0)}`;
+  const achievements = `${Number(win.earnedAchievements || 0)} / ${progress.requiredAchievements || 0}`;
+  return [hours, achievements];
+}
+
 function renderPenaltiesPage() {
   if (!elements.penaltiesTable) {
     return;
@@ -2941,6 +2953,11 @@ function renderPenaltiesPage() {
     elements.penaltiesSummary.textContent = `${overdueCount} owed now • ${comingCount} coming due • ${settled.length} settled`;
   }
 
+  const linkedGame = (title, url) =>
+    url
+      ? `<a class="linked-title" href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(title)}</a>`
+      : escapeHtml(title);
+
   const rows = [];
 
   if (filter === "all" || filter === "overdue" || filter === "coming-due") {
@@ -2950,19 +2967,21 @@ function renderPenaltiesPage() {
       .forEach(({ win, info }) => {
         const member = findById("members", win.memberId);
         const game = findById("games", win.gameId);
-        const url = getGiveawayUrl(win);
         const overdue = info.status === "overdue";
         const statusBadge = buildBadge(
           overdue ? "danger" : "warning",
           overdue ? `Overdue ${info.daysOverdue}d` : `Due in ${info.daysLeft}d`,
         );
+        const [hoursCell, achievementsCell] = buildPenaltyProgressCells(win);
+        // Not yet paid -> the game links to the won giveaway (the one to play).
         rows.push(`
           <tr>
             <td>${escapeHtml(member?.name || win.winnerUsername || "Unknown member")}</td>
-            <td>${escapeHtml(game?.title || win.title || "")}</td>
+            <td>${linkedGame(game?.title || win.title || "", getGiveawayUrl(win))}</td>
+            <td>${escapeHtml(hoursCell)}</td>
+            <td>${escapeHtml(achievementsCell)}</td>
             <td>${statusBadge}</td>
             <td>${escapeHtml(formatPenaltyDeadline(info.deadline))}</td>
-            <td>${url ? `<a class="linked-title" href="${escapeHtml(url)}" target="_blank" rel="noreferrer">Won giveaway</a>` : "-"}</td>
           </tr>
         `);
       });
@@ -2972,28 +2991,22 @@ function renderPenaltiesPage() {
     for (const record of settled) {
       const payer = record.creator?.name || record.giveaway.creatorUsername || "Unknown member";
       const gameTitle = record.targetGame?.title || record.target?.title || record.giveaway.title || "";
-      const wonUrl = getGiveawayPageUrl(record.target);
-      const penaltyUrl = getGiveawayPageUrl(record.giveaway);
-      const links = [];
-      if (wonUrl) {
-        links.push(`<a class="linked-title" href="${escapeHtml(wonUrl)}" target="_blank" rel="noreferrer">Won GA</a>`);
-      }
-      if (penaltyUrl) {
-        links.push(`<a class="linked-title" href="${escapeHtml(penaltyUrl)}" target="_blank" rel="noreferrer">Penalty GA</a>`);
-      }
+      const [hoursCell, achievementsCell] = buildPenaltyProgressCells(record.targetWin);
+      // Paid -> the game links to the penalty giveaway that settled the debt.
       rows.push(`
         <tr>
           <td>${escapeHtml(payer)}</td>
-          <td>${escapeHtml(gameTitle)}</td>
+          <td>${linkedGame(gameTitle, getGiveawayPageUrl(record.giveaway))}</td>
+          <td>${escapeHtml(hoursCell)}</td>
+          <td>${escapeHtml(achievementsCell)}</td>
           <td>${buildBadge("success", "Settled")}</td>
           <td>${escapeHtml(record.giveaway.createdAt ? formatDate(record.giveaway.createdAt) : "-")}</td>
-          <td>${links.join(" · ") || "-"}</td>
         </tr>
       `);
     }
   }
 
-  elements.penaltiesTable.innerHTML = rows.length ? rows.join("") : buildEmptyRow(5);
+  elements.penaltiesTable.innerHTML = rows.length ? rows.join("") : buildEmptyRow(6);
 }
 
 function evaluateBaseMonthlyProgress(win) {
