@@ -161,11 +161,20 @@ function bootstrap() {
   ensureEditModal();
   bindEvents();
   render();
-  refreshRemoteSync({ silent: true })
-    .then(() => loadStoredSteamProgress({ silent: true }))
-    .then(() => loadSharedOverrides({ silent: true }))
-    .then(() => loadDashboardData({ silent: true }))
-    .then(() => loadVisibleGameMedia({ silent: true }));
+  loadInitialData();
+}
+
+async function loadInitialData() {
+  // Overlap the big downloads instead of fetching them one-after-another: the
+  // sync (~4MB), Steam progress (~2MB) and overrides are independent over the
+  // wire, so start them together and apply in dependency order once they arrive.
+  const progressPromise = fetchApiJson("./api/steam-progress").catch(() => ({ payload: null }));
+  const overridesPromise = fetchApiJson("./api/overrides").catch(() => ({ payload: null }));
+
+  await refreshRemoteSync({ silent: true }); // sync + dashboard; others apply on top
+  await loadStoredSteamProgress({ silent: true, prefetched: await progressPromise });
+  await loadSharedOverrides({ silent: true, prefetched: await overridesPromise });
+  void loadVisibleGameMedia({ silent: true });
 }
 
 function bindEvents() {
@@ -3400,8 +3409,9 @@ async function loadDashboardData(options = {}) {
 
 async function loadSharedOverrides(options = {}) {
   try {
-    const { payload } = await fetchApiJson("./api/overrides");
-    runtime.sharedOverrides = normalizeSharedOverridePayload(payload);
+    const result =
+      options.prefetched?.payload != null ? options.prefetched : await fetchApiJson("./api/overrides");
+    runtime.sharedOverrides = normalizeSharedOverridePayload(result.payload);
     applyManualOverrides();
   } catch (error) {
     runtime.sharedOverrides = normalizeOverrideState();
@@ -3645,7 +3655,9 @@ async function refreshSteamProgress() {
 
 async function loadStoredSteamProgress(options = {}) {
   try {
-    const { payload } = await fetchApiJson("./api/steam-progress");
+    const result =
+      options.prefetched?.payload != null ? options.prefetched : await fetchApiJson("./api/steam-progress");
+    const payload = result.payload;
     if (payload?.progress?.length) {
       applySteamProgress(payload);
     } else if (!options.silent) {
