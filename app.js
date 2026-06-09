@@ -723,11 +723,7 @@ function buildPenaltiesOwedCard() {
     .map((debt) => {
       const name = String(debt.member?.name || "Unknown member");
       const gameTitle = String(debt.game?.title || debt.win.title || "a won game");
-      const url = getGiveawayUrl(debt.win);
-      const gameMarkup = url
-        ? `<a class="linked-title" href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(gameTitle)}</a>`
-        : escapeHtml(gameTitle);
-      return `<li><strong>${escapeHtml(name)}</strong>: ${gameMarkup} (due ${escapeHtml(formatPenaltyDeadline(debt.deadline))})</li>`;
+      return `<li><strong>${escapeHtml(name)}</strong>: ${escapeHtml(gameTitle)} (due ${escapeHtml(formatPenaltyDeadline(debt.deadline))})</li>`;
     })
     .join("");
   const more = debts.length > 15 ? `<li>+${debts.length - 15} more…</li>` : "";
