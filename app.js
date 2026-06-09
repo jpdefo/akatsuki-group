@@ -2564,6 +2564,19 @@ function compareMonthlyWins(left, right, sortMode) {
     }
   }
 
+  if (sortMode === "achievements-asc" || sortMode === "achievements-desc") {
+    const leftPercent = getAchievementPercent(left, leftGame);
+    const rightPercent = getAchievementPercent(right, rightGame);
+    // Games without an achievement total sort to the bottom of "least first".
+    const leftValue = leftPercent === null ? -1 : leftPercent;
+    const rightValue = rightPercent === null ? -1 : rightPercent;
+    const achievementCompare =
+      sortMode === "achievements-asc" ? leftValue - rightValue : rightValue - leftValue;
+    if (achievementCompare !== 0) {
+      return achievementCompare;
+    }
+  }
+
   const memberCompare = String(leftMember?.name || "").localeCompare(String(rightMember?.name || ""), "en-US", {
     sensitivity: "base",
   });
