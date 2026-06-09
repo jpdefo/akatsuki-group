@@ -25368,10 +25368,10 @@
     {
       "code": "ZFf9l",
       "url": "https://www.steamgifts.com/giveaway/ZFf9l/tiny-tinas-wonderlands-chaotic-great-edition",
-      "title": "Golem Gates",
+      "title": "Tiny Tina's Wonderlands",
       "creatorUsername": "leniu",
       "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
-      "appId": 575970,
+      "appId": 1286680,
       "steamAppUrl": "https://store.steampowered.com/sub/575970?utm_source=SteamGifts",
       "entriesCount": 5,
       "endDate": "2023-07-04T19:44:55.000Z",
@@ -25385,7 +25385,8 @@
       "resultStatus": "won",
       "resultLabel": "Kodeta",
       "steamStoreType": "sub",
-      "steamStoreId": 575970
+      "steamStoreId": 575970,
+      "packageId": 575970
     },
     {
       "code": "s1VLj",
@@ -28558,10 +28559,10 @@
     {
       "code": "7861o",
       "url": "https://www.steamgifts.com/giveaway/7861o/tiny-tinas-wonderlands-chaotic-great-edition",
-      "title": "Golem Gates",
+      "title": "Tiny Tina's Wonderlands",
       "creatorUsername": "Kodeta",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Kodeta",
-      "appId": 575970,
+      "appId": 1286680,
       "steamAppUrl": "https://store.steampowered.com/sub/575970?utm_source=SteamGifts",
       "entriesCount": 4,
       "endDate": "2023-06-30T03:54:15.000Z",
@@ -28575,7 +28576,8 @@
       "resultStatus": "won",
       "resultLabel": "Ernesttico",
       "steamStoreType": "sub",
-      "steamStoreId": 575970
+      "steamStoreId": 575970,
+      "packageId": 575970
     },
     {
       "code": "vDLkc",
@@ -105592,8 +105594,8 @@
     },
     {
       "giveawayCode": "ZFf9l",
-      "title": "Golem Gates",
-      "appId": 575970,
+      "title": "Tiny Tina's Wonderlands",
+      "appId": 1286680,
       "winnerUsername": "Kodeta",
       "creatorUsername": "leniu",
       "entriesCount": 5,
@@ -106744,8 +106746,8 @@
     },
     {
       "giveawayCode": "7861o",
-      "title": "Golem Gates",
-      "appId": 575970,
+      "title": "Tiny Tina's Wonderlands",
+      "appId": 1286680,
       "winnerUsername": "Ernesttico",
       "creatorUsername": "Kodeta",
       "entriesCount": 4,

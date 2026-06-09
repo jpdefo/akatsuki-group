@@ -471,6 +471,11 @@ def fix_truncated_titles(sync_payload: dict, media_cache: dict) -> int:
         app_id = parse_int(giveaway.get("appId"))
         if not app_id:
             continue
+        # An unresolved /sub/ giveaway carries the package id as its appId, which can
+        # collide with an unrelated app (a delisted package whose sub id matches
+        # another game's app id). Don't rename from an untrusted appId.
+        if str(giveaway.get("steamStoreType") or "").lower() == "sub" and not giveaway.get("packageId"):
+            continue
         entry = apps.get(str(app_id)) or {}
         name = entry.get("name")
         if name is None:
