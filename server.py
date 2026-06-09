@@ -2000,7 +2000,7 @@ class Handler(SimpleHTTPRequestHandler):
                 self.write_json(load_sync_payload_with_store_prices(persist=True) if SYNC_PATH.exists() else {})
                 return
             if parsed.path == "/api/steam-progress":
-                self.write_json(load_json(PROGRESS_PATH, empty_progress_payload()))
+                self.write_json(build_progress_export_payload(load_json(PROGRESS_PATH, empty_progress_payload())))
                 return
             if parsed.path == "/api/steam-library":
                 self.write_json(load_json(LIBRARY_PATH, empty_library_payload()))
@@ -2221,6 +2221,43 @@ def main() -> None:
     server.serve_forever()
 
 
+PROGRESS_EXPORT_FIELDS = (
+    "steamProfile",
+    "appId",
+    "playtimeHours",
+    "earnedAchievements",
+    "totalAchievements",
+    "visible",
+    "progressUrl",
+)
+HLTB_EXPORT_FIELDS = ("appId", "title", "hltbHours")
+
+
+def build_progress_export_payload(payload):
+    """Slim the progress payload for publishing: keep only the per-entry fields the
+    frontend reads, dropping retry bookkeeping (checkedAt, playtimeCheckedAt,
+    playtimeSource, duplicated title, username, error, ...). The canonical
+    data/steam-progress.json on disk stays full for the server's refresh logic."""
+    if not isinstance(payload, dict):
+        return payload
+    slim = dict(payload)
+    progress = payload.get("progress")
+    if isinstance(progress, list):
+        slim["progress"] = [
+            {key: entry[key] for key in PROGRESS_EXPORT_FIELDS if key in entry}
+            for entry in progress
+            if isinstance(entry, dict)
+        ]
+    hltb = payload.get("hltb")
+    if isinstance(hltb, list):
+        slim["hltb"] = [
+            {key: entry[key] for key in HLTB_EXPORT_FIELDS if key in entry}
+            for entry in hltb
+            if isinstance(entry, dict)
+        ]
+    return slim
+
+
 def export_static_site(output_dir: Path) -> None:
     sync_payload = enrich_sync_payload_with_store_prices(load_json(SYNC_PATH, {}))
     progress_payload = load_json(PROGRESS_PATH, empty_progress_payload())
@@ -2260,7 +2297,7 @@ def export_static_site(output_dir: Path) -> None:
     copy2(output_dir / "index.html", output_dir / "404.html")
 
     save_json(api_dir / "steamgifts-sync.json", sync_export)
-    save_json(api_dir / "steam-progress.json", progress_payload)
+    save_json(api_dir / "steam-progress.json", build_progress_export_payload(progress_payload))
     save_json(api_dir / "steam-library.json", library_payload)
     save_json(api_dir / "dashboard.json", dashboard_payload)
     save_json(api_dir / "members.json", members_payload)
