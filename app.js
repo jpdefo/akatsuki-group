@@ -232,6 +232,12 @@ function bindEvents() {
       return;
     }
 
+    const reactivateButton = event.target.closest("[data-reactivate-member]");
+    if (reactivateButton) {
+      handleReactivateMember(reactivateButton);
+      return;
+    }
+
     const deleteButton = event.target.closest("[data-delete-type]");
     if (!deleteButton) {
       return;
@@ -2264,7 +2270,7 @@ function renderMemberBucketTable(target, isActiveMember) {
   }
   const rows = computeMemberBucketRows(isActiveMember);
   if (!rows.length) {
-    target.innerHTML = buildEmptyRow(5);
+    target.innerHTML = buildEmptyRow(isActiveMember ? 5 : 6);
     return;
   }
 
@@ -2281,6 +2287,15 @@ function renderMemberBucketTable(target, isActiveMember) {
           <td>${formatHours(row.totalPlaytime)}</td>
           <td>${row.averageAchievements === null ? "-" : `${row.averageAchievements}%`}</td>
           <td>${row.thresholdMet}/${row.totalWins}</td>
+          ${
+            isActiveMember
+              ? ""
+              : `<td>${
+                  row.overrideKey
+                    ? `<button type="button" class="table-action-button" data-reactivate-member="${escapeHtml(row.overrideKey)}">Set active</button>`
+                    : "-"
+                }</td>`
+          }
         </tr>
       `,
     )
@@ -2502,6 +2517,7 @@ function computeMemberBucketRows(isActiveMember) {
       const sgUsername = String(member.steamgiftsUsername || member.name || "").trim();
       return {
         name: member.name,
+        overrideKey: getMemberOverrideKey(member),
         steamgiftsUrl:
           member.profileUrl || (sgUsername ? `https://www.steamgifts.com/user/${encodeURIComponent(sgUsername)}` : ""),
         totalWins: memberWins.length,
@@ -5612,7 +5628,8 @@ function getGameAchievementsTotal(game) {
 
 function getBaseRequiredAchievementsTarget(win, game) {
   const totalAchievements = getGameAchievementsTotal(game);
-  return totalAchievements > 0 ? Math.max(1, Math.ceil(totalAchievements * 0.1)) : 0;
+  // Round 10% down (33 achievements -> 3, not 4), but still require at least 1.
+  return totalAchievements > 0 ? Math.max(1, Math.floor(totalAchievements * 0.1)) : 0;
 }
 
 function getRequiredAchievementsTarget(win, game) {
@@ -6048,6 +6065,16 @@ function handleMemberStatusChange(select) {
   // member out and keeps them out across future syncs.
   const inactive = String(select.value || "active").toLowerCase() === "inactive";
   updateOverrideField("members", overrideKey, "membershipStatus", inactive ? "inactive" : null);
+}
+
+function handleReactivateMember(button) {
+  const overrideKey = String(button.dataset.reactivateMember || "");
+  if (!overrideKey) {
+    return;
+  }
+  // Force the member active (survives future syncs) so they reappear in the
+  // directory even if the synced data still lists them as inactive.
+  updateOverrideField("members", overrideKey, "membershipStatus", "active");
 }
 
 function ensureEditModal() {

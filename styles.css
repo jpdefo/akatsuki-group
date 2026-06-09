@@ -211,6 +211,20 @@ h2 {
   overflow: auto;
 }
 
+.table-action-button {
+  padding: 4px 12px;
+  font-size: 0.82rem;
+  border-radius: 8px;
+  border: 1px solid rgba(110, 168, 254, 0.35);
+  background: #1a2233;
+  color: #f4f7fb;
+  cursor: pointer;
+}
+
+.table-action-button:hover {
+  border-color: rgba(110, 168, 254, 0.6);
+}
+
 .member-card {
   background: var(--panel-strong);
   border: 1px solid var(--line);
