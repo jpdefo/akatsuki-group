@@ -645,33 +645,61 @@ function renderSyncStatus() {
     elements.steamRefreshAllButton.hidden = runtime.staticApi;
   }
 
+  const playtimeUpdatedAt = librarySummary?.libraryUpdatedAt;
+
   elements.syncStatus.innerHTML = `
-      <article class="alert-card success">
+    <article class="alert-card success sync-stat">
       <h3>SteamGifts synced</h3>
-      <p>
-        <strong>${formatDateTime(sync.syncedAt)}</strong>
-        ${runtime.staticApi ? `<br /><span class="meta-line">GitHub Pages snapshot mode: data changes only after a new publish.</span>` : ""}
-      </p>
+      <p class="sync-time">${formatDateTime(sync.syncedAt)}</p>
+      <p class="sync-ago">${escapeHtml(formatTimeAgo(sync.syncedAt))}</p>
+      ${runtime.staticApi ? `<p class="meta-line">GitHub Pages snapshot — data changes only after a new publish.</p>` : ""}
     </article>
-    <article class="alert-card info">
+    <article class="alert-card info sync-stat">
       <h3>Steam progress synced</h3>
-      <p>${
+      ${
         progressUpdatedAt
-          ? `<strong>${formatDateTime(progressUpdatedAt)}</strong>`
-          : "Not refreshed yet."
-      }</p>
+          ? `<p class="sync-time">${formatDateTime(progressUpdatedAt)}</p>
+             <p class="sync-ago">${escapeHtml(formatTimeAgo(progressUpdatedAt))}</p>`
+          : `<p class="sync-empty">Not refreshed yet.</p>`
+      }
     </article>
-    <article class="alert-card ${librarySummary?.libraryApiEnabled ? "success" : "warning"}">
+    <article class="alert-card ${librarySummary?.libraryApiEnabled ? "success" : "warning"} sync-stat">
       <h3>Playtime synced</h3>
-      <p>${
-        librarySummary?.libraryUpdatedAt
-          ? `<strong>${formatDateTime(librarySummary.libraryUpdatedAt)}</strong>`
+      ${
+        playtimeUpdatedAt
+          ? `<p class="sync-time">${formatDateTime(playtimeUpdatedAt)}</p>
+             <p class="sync-ago">${escapeHtml(formatTimeAgo(playtimeUpdatedAt))}</p>`
           : librarySummary?.libraryApiEnabled
-            ? "No snapshot stored yet."
-            : "Set STEAM_WEB_API_KEY to enable playtime snapshots."
-      }</p>
+            ? `<p class="sync-empty">No snapshot stored yet.</p>`
+            : `<p class="sync-empty">Set STEAM_WEB_API_KEY to enable playtime snapshots.</p>`
+      }
     </article>
   `;
+}
+
+// Human-friendly "x ago" label so it's obvious at a glance how stale each sync is.
+function formatTimeAgo(dateInput) {
+  if (!dateInput) {
+    return "";
+  }
+  const then = new Date(dateInput).getTime();
+  if (!Number.isFinite(then)) {
+    return "";
+  }
+  const diffMs = Date.now() - then;
+  if (diffMs < 60000) {
+    return "Updated just now";
+  }
+  const minutes = Math.floor(diffMs / 60000);
+  if (minutes < 60) {
+    return `Updated ${minutes} minute${minutes === 1 ? "" : "s"} ago`;
+  }
+  const hours = Math.floor(minutes / 60);
+  if (hours < 24) {
+    return `Updated ${hours} hour${hours === 1 ? "" : "s"} ago`;
+  }
+  const days = Math.floor(hours / 24);
+  return `Updated ${days} day${days === 1 ? "" : "s"} ago`;
 }
 
 function renderServerViews() {

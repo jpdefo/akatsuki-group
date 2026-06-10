@@ -404,7 +404,34 @@ h2 {
 
 .sync-status {
   display: grid;
-  gap: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.sync-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sync-stat .sync-time {
+  margin: 4px 0 0;
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.sync-stat .sync-ago {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.sync-stat .sync-empty {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
 }
 
 .inline-filter {
