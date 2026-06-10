@@ -660,7 +660,7 @@ function renderSyncStatus() {
       ${runtime.staticApi ? `<p class="meta-line">GitHub Pages snapshot — data changes only after a new publish.</p>` : ""}
     </article>
     <article class="alert-card info sync-stat">
-      <h3>Steam progress synced</h3>
+      <h3>Achievements synced</h3>
       ${
         progressUpdatedAt
           ? `<p class="sync-time">${formatDateTime(progressUpdatedAt)}</p>
