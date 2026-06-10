@@ -5,7 +5,6 @@ import {
   escapeHtml,
   formatDate,
   formatDateTime,
-  formatDurationSeconds,
   formatHours,
   formatISODateLocal,
   formatMonthKey,
@@ -498,7 +497,7 @@ function renderAllGiveawaysPage() {
               <td>
                 <strong>${titleMarkup}</strong>
                 <span class="meta-line">Created: ${escapeHtml(formatDateTime(getGiveawayCreatedDisplay(giveaway)))}</span>
-                <span class="meta-line">Ended: ${escapeHtml(formatDateTime(getGiveawayEndedDisplay(giveaway)))}</span>
+                <span class="meta-line">End date: ${escapeHtml(formatDateTime(getGiveawayEndedDisplay(giveaway)))}</span>
               </td>
               <td>${escapeHtml(creator?.name || giveaway.creatorUsername || "Unknown member")}</td>
               <td>
@@ -625,8 +624,6 @@ function renderSyncStatus() {
   const progressUpdatedAt = state.sync?.steamProgressUpdatedAt;
   const dashboardSummary = state.sync?.dashboard?.summary;
   const librarySummary = dashboardSummary;
-  const progressStats = dashboardSummary?.progressStats || state.sync?.lastProgressStats || {};
-  const libraryStats = dashboardSummary?.libraryStats || state.sync?.lastLibraryStats || {};
 
   if (!sync) {
     elements.syncStatus.innerHTML = `
@@ -637,10 +634,6 @@ function renderSyncStatus() {
     `;
     return;
   }
-
-  const memberCount = sync.members?.length || 0;
-  const giveawayCount = sync.giveaways?.length || 0;
-  const winCount = sync.wins?.length || 0;
 
   if (elements.syncRefreshButton) {
     elements.syncRefreshButton.hidden = runtime.staticApi;
@@ -656,27 +649,26 @@ function renderSyncStatus() {
       <article class="alert-card success">
       <h3>SteamGifts synced</h3>
       <p>
-        Last sync: <strong>${formatDateTime(sync.syncedAt)}</strong><br />
-        ${escapeHtml(sync.group?.name || "Group")} • ${memberCount} member(s) • ${giveawayCount} giveaway(s) • ${winCount} win(s)
+        <strong>${formatDateTime(sync.syncedAt)}</strong>
         ${runtime.staticApi ? `<br /><span class="meta-line">GitHub Pages snapshot mode: data changes only after a new publish.</span>` : ""}
       </p>
     </article>
     <article class="alert-card info">
-      <h3>Steam progress</h3>
+      <h3>Steam progress synced</h3>
       <p>${
         progressUpdatedAt
-          ? `Last refresh: <strong>${formatDateTime(progressUpdatedAt)}</strong>${buildProgressStatsMarkup(progressStats)}`
-          : "Steam progress has not been refreshed yet."
+          ? `<strong>${formatDateTime(progressUpdatedAt)}</strong>`
+          : "Not refreshed yet."
       }</p>
     </article>
     <article class="alert-card ${librarySummary?.libraryApiEnabled ? "success" : "warning"}">
-      <h3>Playtime library snapshot</h3>
+      <h3>Playtime synced</h3>
       <p>${
         librarySummary?.libraryUpdatedAt
-          ? `Last library sync: <strong>${formatDateTime(librarySummary.libraryUpdatedAt)}</strong><br />${librarySummary.libraryProfiles || 0} tracked profile(s) cached for total playtime, with ${librarySummary.libraryFreshProfiles || 0} still fresh for incremental month refreshes (${librarySummary.librarySnapshotTtlHours || 48}h cache window).${buildLibraryStatsMarkup(libraryStats)}`
+          ? `<strong>${formatDateTime(librarySummary.libraryUpdatedAt)}</strong>`
           : librarySummary?.libraryApiEnabled
-            ? "Library playtime is enabled, but no snapshot has been stored yet."
-            : "Configure STEAM_WEB_API_KEY to source total playtime from Steam per-user library snapshots."
+            ? "No snapshot stored yet."
+            : "Set STEAM_WEB_API_KEY to enable playtime snapshots."
       }</p>
     </article>
   `;
@@ -6402,48 +6394,6 @@ function compareMemberBucketRows(left, right, sortMode) {
     default:
       return right.totalWins - left.totalWins || right.totalPlaytime - left.totalPlaytime || compareMemberBucketRows(left, right, "name");
   }
-}
-
-function buildProgressStatsMarkup(stats = {}) {
-  if (!stats || !stats.uniqueProgressTargets) {
-    return "";
-  }
-
-  const bits = [];
-  if (stats.durationSeconds || stats.durationSeconds === 0) {
-    bits.push(`Completed in <strong>${formatDurationSeconds(stats.durationSeconds)}</strong>`);
-  }
-  bits.push(
-    `${stats.uniqueProgressTargets || 0} game profile(s) checked across ${stats.targetWins || 0} tracked win(s)`,
-  );
-  if (stats.libraryPlaytimeHits || stats.libraryPlaytimeHits === 0) {
-    bits.push(`${stats.libraryPlaytimeHits || 0} used cached library playtime`);
-  }
-  if (stats.achievementErrors) {
-    bits.push(`${stats.achievementErrors} achievement request error(s)`);
-  }
-  return `<br />${bits.join(" • ")}`;
-}
-
-function buildLibraryStatsMarkup(stats = {}) {
-  if (!stats || !stats.targetProfiles) {
-    return "";
-  }
-
-  const bits = [];
-  if (stats.durationSeconds || stats.durationSeconds === 0) {
-    bits.push(`Last run: <strong>${formatDurationSeconds(stats.durationSeconds)}</strong>`);
-  }
-  bits.push(`${stats.targetProfiles || 0} targeted profile(s)`);
-  bits.push(`${stats.reusedProfiles || 0} reused`);
-  bits.push(`${stats.refreshedProfiles || 0} fetched from Steam`);
-  if (stats.errorProfiles) {
-    bits.push(`${stats.errorProfiles} error(s)`);
-  }
-  if (stats.totalPlaytimeRows || stats.totalPlaytimeRows === 0) {
-    bits.push(`${Number(stats.totalPlaytimeRows || 0).toLocaleString("en-US")} cached app rows`);
-  }
-  return `<br />${bits.join(" • ")}`;
 }
 
 function buildPlaytimeSourceLabel(progress) {
