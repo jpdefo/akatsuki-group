@@ -646,6 +646,11 @@ function renderSyncStatus() {
   }
 
   const playtimeUpdatedAt = librarySummary?.libraryUpdatedAt;
+  const effectiveActiveMembers = state.members.filter((member) => member.isActiveMember).length;
+  const memberCount = state.members.length
+    ? effectiveActiveMembers
+    : dashboardSummary?.activeMembers ?? state.settings.activeMembers ?? 0;
+  const giveawayCount = dashboardSummary?.giveaways ?? state.giveaways.length;
 
   elements.syncStatus.innerHTML = `
     <article class="alert-card success sync-stat">
@@ -673,6 +678,11 @@ function renderSyncStatus() {
             ? `<p class="sync-empty">No snapshot stored yet.</p>`
             : `<p class="sync-empty">Set STEAM_WEB_API_KEY to enable playtime snapshots.</p>`
       }
+    </article>
+    <article class="alert-card sync-stat">
+      <h3>Group</h3>
+      <p class="sync-time">${memberCount} members</p>
+      <p class="sync-ago">${giveawayCount} tracked giveaways</p>
     </article>
   `;
 }
