@@ -33,7 +33,7 @@
   const PREPACE_GIVEAWAY_THRESHOLD = 150;
   const PACED_REQUEST_GAP_MS = 550; // ~109 req/min once pacing is on
   const RATE_LIMIT_BACKOFF_MS = 30000;
-  const RATE_LIMIT_MAX_RETRIES = 5;
+  const RATE_LIMIT_MAX_RETRIES = 15;
   let requestGapMs = 0; // 0 = full speed; set to PACED_REQUEST_GAP_MS when throttling
   let lastRequestAt = 0;
   const PUBLISHED_SYNC_URL = `https://raw.githubusercontent.com/${GITHUB_REPO.owner}/${GITHUB_REPO.name}/${GITHUB_REPO.branch}/${GITHUB_SYNC_PATH}`;
