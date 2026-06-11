@@ -74,7 +74,7 @@ const runtime = {
   sharedOverrides: normalizeOverrideState(),
   sharedOverridesLoaded: false,
 };
-const GAME_OVERRIDE_FIELDS = ["hltbHoursOverride"];
+const GAME_OVERRIDE_FIELDS = ["hltbHoursOverride", "achievementTargetOverride"];
 const WIN_OVERRIDE_FIELDS = ["requiredAchievementsOverride", "monthOverride"];
 const GIVEAWAY_OVERRIDE_FIELDS = ["giveawayKindOverride", "manualWinners", "cycleMonthOverride", "summerBasePointsOverride"];
 const MEMBER_OVERRIDE_FIELDS = ["membershipStatus"];
@@ -2598,7 +2598,7 @@ function renderMonthlyDetailsTable(target, winsSubset, sortMode = elements.month
           <td>
             <div class="value-stack">
               <span>${progress.requiredAchievements || 0}</span>
-              ${win?.requiredAchievementsOverride !== undefined && win?.requiredAchievementsOverride !== null ? `<span class="meta-line override-note">Manual override</span>` : ""}
+              ${hasGameAchievementTargetOverride(game) || hasWinAchievementTargetOverride(win) ? `<span class="meta-line override-note">Manual override</span>` : ""}
               <button class="inline-action" data-edit-action="achievement-target" data-win-id="${win.id}">Edit 10%</button>
             </div>
           </td>
@@ -5674,12 +5674,29 @@ function getBaseRequiredAchievementsTarget(win, game) {
   return totalAchievements > 0 ? Math.max(1, Math.floor(totalAchievements * 0.1)) : 0;
 }
 
-function getRequiredAchievementsTarget(win, game) {
-  if (
+function hasGameAchievementTargetOverride(game) {
+  return (
+    game?.achievementTargetOverride !== undefined &&
+    game?.achievementTargetOverride !== null &&
+    game.achievementTargetOverride !== ""
+  );
+}
+
+function hasWinAchievementTargetOverride(win) {
+  return (
     win?.requiredAchievementsOverride !== undefined &&
     win?.requiredAchievementsOverride !== null &&
     win.requiredAchievementsOverride !== ""
-  ) {
+  );
+}
+
+function getRequiredAchievementsTarget(win, game) {
+  // A game-level override applies to every win/giveaway of that game; a legacy
+  // per-win override is still honored as a fallback where no game override exists.
+  if (hasGameAchievementTargetOverride(game)) {
+    return Number(game.achievementTargetOverride || 0);
+  }
+  if (hasWinAchievementTargetOverride(win)) {
     return Number(win.requiredAchievementsOverride || 0);
   }
   return getBaseRequiredAchievementsTarget(win, game);
@@ -6023,18 +6040,18 @@ function handleEditAction(button) {
     }
     openEditModal({
       title: `Edit 10% target for ${game.title}`,
-      description: "Leave the field empty to clear the manual override and return to the synced 10% requirement.",
+      description: "Applies to every giveaway of this game. Leave empty to clear the override and return to the synced 10% requirement.",
       label: "Required achievements",
-      initialValue: win.requiredAchievementsOverride ?? getRequiredAchievementsTarget(win, game),
+      initialValue: game.achievementTargetOverride ?? getRequiredAchievementsTarget(win, game),
       inputType: "number",
       inputAttributes: { min: "0", step: "1" },
       parse: (raw) => parseNumericOverrideInput(raw, { integer: true }),
       onSave: (nextValue) => {
         const baseValue = getBaseRequiredAchievementsTarget(win, game);
         updateOverrideField(
-          "wins",
-          getWinOverrideKey(win),
-          "requiredAchievementsOverride",
+          "games",
+          getGameOverrideKey(game),
+          "achievementTargetOverride",
           nextValue === null || nextValue === baseValue ? null : nextValue,
         );
       },
