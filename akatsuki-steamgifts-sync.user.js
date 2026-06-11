@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Akatsuki SteamGifts Sync
 // @namespace    akatsuki-monitor
-// @version      1.7.0
+// @version      1.8.0
 // @author       Koalala
-// @description  Collect Akatsuki members, giveaways, entries and winners from the logged-in SteamGifts session and send them to the local monitor server.
+// @description  Collect Akatsuki members, giveaways, entries and winners from the logged-in SteamGifts session and publish them straight to GitHub.
 // @match        https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts
 // @match        https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts/*
 // @grant        none
@@ -20,10 +20,8 @@
   }
 
   const groupBase = `${window.location.origin}${groupMatch[1]}`;
-  const LOCAL_SERVER_URL = "http://127.0.0.1:4173/api/steamgifts-sync";
-  const LOCAL_SERVER_TIMEOUT_MS = 4000;
-  const LOCAL_SERVER_POST_TIMEOUT_MS = 15000;
   const GITHUB_REPO = { owner: "jpdefo", name: "akatsuki-group", branch: "main" };
+  const GITHUB_TOKEN_HELP_URL = "https://github.com/settings/personal-access-tokens/new";
   const GITHUB_SYNC_PATH = "data/steamgifts-sync.json";
   const GITHUB_TOKEN_KEY = "akatsuki-github-token";
   // Rate limiting (SteamGifts allows ~120 requests/min). We run at FULL SPEED by
@@ -83,11 +81,11 @@
       <div style="display:grid;gap:8px;">
         <strong>Akatsuki Sync</strong>
         <input id="akatsuki-token" type="password" placeholder="GitHub token (for direct publish)" style="border:1px solid rgba(110,168,254,.35);border-radius:8px;padding:8px;background:#0f1115;color:#f4f7fb;font:inherit;font-size:12px;" />
+        <a id="akatsuki-token-help" href="${GITHUB_TOKEN_HELP_URL}" target="_blank" rel="noopener" style="font-size:11px;color:#6ea8fe;text-decoration:underline;">Get a token (needs Contents: Read and write)</a>
         <label style="font-size:12px;color:#c7d2e2;display:flex;align-items:center;gap:6px;">Recent pages to scrape
           <input id="akatsuki-pages" type="number" min="1" value="10" style="width:64px;border:1px solid rgba(110,168,254,.35);border-radius:8px;padding:6px;background:#0f1115;color:#f4f7fb;font:inherit;font-size:12px;" />
         </label>
         <button id="akatsuki-publish-button" style="border:0;border-radius:10px;padding:10px 12px;background:#2ec36b;color:#06210f;font:inherit;font-weight:700;cursor:pointer;">Sync &amp; Publish to GitHub</button>
-        <button id="akatsuki-sync-button" style="border:0;border-radius:10px;padding:8px 12px;background:#3d7bff;color:#fff;font:inherit;font-weight:600;cursor:pointer;">Sync to local server</button>
         <div id="akatsuki-sync-log" style="font-size:12px;line-height:1.5;color:#c7d2e2;max-height:180px;overflow:auto;"></div>
       </div>
     `;
@@ -97,18 +95,17 @@
     const tokenInput = panel.querySelector("#akatsuki-token");
     tokenInput.value = getStoredToken();
     tokenInput.addEventListener("change", () => setStoredToken(tokenInput.value.trim()));
-    panel.querySelector("#akatsuki-sync-button").addEventListener("click", () => runSync("local"));
-    panel.querySelector("#akatsuki-publish-button").addEventListener("click", () => runSync("github"));
-    log("Ready. Paste a token and use 'Sync & Publish' to commit straight to GitHub (no local server).");
+    panel.querySelector("#akatsuki-publish-button").addEventListener("click", () => runSync());
+    log("Ready. Paste a token and use 'Sync & Publish' to commit straight to GitHub.");
   }
 
-  async function runSync(destination = "local") {
+  async function runSync() {
     if (state.running) {
       log("A sync is already running.");
       return;
     }
-    if (destination === "github" && !getStoredToken()) {
-      log("Paste a GitHub token first (Contents: Read and write) to publish directly.");
+    if (!getStoredToken()) {
+      log("Paste a GitHub token first (Contents: Read and write) to publish.");
       return;
     }
 
@@ -123,7 +120,7 @@
       log(`Existing data: ${existingGiveaways.length} giveaway(s).`);
 
       const maxPages = Math.max(1, Number(state.panel?.querySelector("#akatsuki-pages")?.value) || 10);
-      if (destination === "github" && maxPages < 500 && existingGiveaways.length === 0) {
+      if (maxPages < 500 && existingGiveaways.length === 0) {
         throw new Error(
           "Could not load existing data to merge a partial scrape, so publishing would wipe history. Aborted. Check the repo/token, or set pages to 999 for a full scrape.",
         );
@@ -208,14 +205,9 @@
         })),
       );
 
-      if (destination === "github") {
-        log(`Publishing ${finalGiveaways.length} giveaway(s) to GitHub...`);
-        await publishSyncToGitHub(payload);
-        log("Published to GitHub. Pages will rebuild in ~1-2 min.");
-      } else {
-        await postToLocalServer(payload);
-        log("Sync finished and sent to the local server.");
-      }
+      log(`Publishing ${finalGiveaways.length} giveaway(s) to GitHub...`);
+      await publishSyncToGitHub(payload);
+      log("Published to GitHub. Pages will rebuild in ~1-2 min.");
     } catch (error) {
       log(`Failed: ${error.message}`);
     } finally {
@@ -419,21 +411,8 @@
   }
 
   async function loadExistingSync() {
-    // Prefer the local server (fast when running); otherwise read the published
-    // data from GitHub so a partial scrape still merges with full history.
-    const controller = new AbortController();
-    const timeoutId = window.setTimeout(() => controller.abort(), LOCAL_SERVER_TIMEOUT_MS);
-    try {
-      const response = await fetch(LOCAL_SERVER_URL, { signal: controller.signal });
-      if (response.ok) {
-        return await response.json();
-      }
-    } catch {
-      /* fall through to the published data */
-    } finally {
-      window.clearTimeout(timeoutId);
-    }
-
+    // Read the published data from GitHub so a partial scrape still merges with
+    // full history.
     try {
       log("Loading existing data from GitHub...");
       const response = await fetch(`${PUBLISHED_SYNC_URL}?_=${Date.now()}`, { cache: "no-store" });
@@ -448,9 +427,9 @@
   }
 
   async function loadSummerEventOverrideCodes() {
-    // Read the giveaway kind overrides (local server first, else published
-    // overrides.json) and return the set of giveaway codes promoted to
-    // summer_event, so the collector can fetch their entrants.
+    // Read the giveaway kind overrides from the published overrides.json and
+    // return the set of giveaway codes promoted to summer_event, so the
+    // collector can fetch their entrants.
     const extract = (payload) => {
       const giveaways = payload?.overrides?.giveaways || payload?.giveaways || {};
       return new Set(
@@ -459,19 +438,6 @@
           .map(([key]) => String(key).replace(/^sg-/, "")),
       );
     };
-
-    const controller = new AbortController();
-    const timeoutId = window.setTimeout(() => controller.abort(), LOCAL_SERVER_TIMEOUT_MS);
-    try {
-      const response = await fetch("http://127.0.0.1:4173/api/overrides", { signal: controller.signal });
-      if (response.ok) {
-        return extract(await response.json());
-      }
-    } catch {
-      /* fall through to the published overrides */
-    } finally {
-      window.clearTimeout(timeoutId);
-    }
 
     try {
       const response = await fetch(`${PUBLISHED_OVERRIDES_URL}?_=${Date.now()}`, { cache: "no-store" });
@@ -1210,42 +1176,6 @@
   async function fetchDocument(url) {
     const response = await fetchDocumentResponse(url);
     return response.doc;
-  }
-
-  async function postToLocalServer(payload) {
-    const controller = new AbortController();
-    const timeoutId = window.setTimeout(() => controller.abort(), LOCAL_SERVER_POST_TIMEOUT_MS);
-    try {
-      const response = await fetch(LOCAL_SERVER_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-        signal: controller.signal,
-      });
-      if (!response.ok) {
-        throw new Error(`Servidor local respondeu ${response.status}`);
-      }
-    } catch (error) {
-      downloadFallback(payload);
-      if (error?.name === "AbortError") {
-        throw new Error("Local server save timed out. The JSON file was downloaded for manual import.");
-      }
-      throw new Error(
-        "Could not send data to the local server. The JSON file was downloaded for manual import.",
-      );
-    } finally {
-      window.clearTimeout(timeoutId);
-    }
-  }
-
-  function downloadFallback(payload) {
-    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "akatsuki-steamgifts-sync.json";
-    link.click();
-    URL.revokeObjectURL(url);
   }
 
   function log(message) {
