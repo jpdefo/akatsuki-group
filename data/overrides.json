@@ -1,5 +1,5 @@
 {
-  "savedAt": "2026-06-10T23:18:22.648Z",
+  "savedAt": "2026-06-12T00:02:25.580Z",
   "overrides": {
     "games": {},
     "wins": {
@@ -166,6 +166,63 @@
       },
       "sg-PDMPH": {
         "giveawayKindOverride": "pop_free"
+      },
+      "sg-yclbo": {
+        "giveawayKindOverride": "penalty"
+      },
+      "sg-6EaXM": {
+        "giveawayKindOverride": "penalty"
+      },
+      "sg-E1pc4": {
+        "giveawayKindOverride": "penalty"
+      },
+      "sg-i5y29": {
+        "giveawayKindOverride": "pop_free"
+      },
+      "sg-q8lK1": {
+        "giveawayKindOverride": "pop_free"
+      },
+      "sg-RZRL8": {
+        "giveawayKindOverride": "summer_event"
+      },
+      "sg-XuVUf": {
+        "giveawayKindOverride": "summer_event"
+      },
+      "sg-NTcEK": {
+        "giveawayKindOverride": "summer_event"
+      },
+      "sg-Rd1wF": {
+        "giveawayKindOverride": "extra"
+      },
+      "sg-niVVg": {
+        "giveawayKindOverride": "summer_event"
+      },
+      "sg-PZWsQ": {
+        "giveawayKindOverride": "pop_free"
+      },
+      "sg-svbuH": {
+        "giveawayKindOverride": "summer_event"
+      },
+      "sg-GUMHC": {
+        "giveawayKindOverride": "pop_free"
+      },
+      "sg-7f2mT": {
+        "giveawayKindOverride": "penalty"
+      },
+      "sg-8SXdG": {
+        "giveawayKindOverride": "summer_event"
+      },
+      "sg-H1Fjr": {
+        "giveawayKindOverride": "extra"
+      },
+      "sg-0FcBN": {
+        "giveawayKindOverride": "summer_event"
+      },
+      "sg-Z6BhA": {
+        "giveawayKindOverride": "cycle"
+      },
+      "sg-BKIdd": {
+        "giveawayKindOverride": "extra"
       }
     },
     "cycleMembers": {
