@@ -1,5 +1,5 @@
 {
-  "savedAt": "2026-06-12T00:02:25.580Z",
+  "savedAt": "2026-06-13T00:30:00.226Z",
   "overrides": {
     "games": {},
     "wins": {
@@ -223,6 +223,84 @@
       },
       "sg-BKIdd": {
         "giveawayKindOverride": "extra"
+      },
+      "sg-v91Fb": {
+        "giveawayKindOverride": "pop_free"
+      },
+      "sg-cw3Q0": {
+        "giveawayKindOverride": "summer_event"
+      },
+      "sg-GIljP": {
+        "giveawayKindOverride": "summer_event"
+      },
+      "sg-WRVwW": {
+        "giveawayKindOverride": "summer_event"
+      },
+      "sg-Tz4uo": {
+        "giveawayKindOverride": "summer_event"
+      },
+      "sg-ckP3t": {
+        "cycleMonthOverride": "2021-09"
+      },
+      "sg-ODKA5": {
+        "giveawayKindOverride": "pop_free"
+      },
+      "sg-qytZ8": {
+        "giveawayKindOverride": "summer_event"
+      },
+      "sg-cJ3q2": {
+        "giveawayKindOverride": "summer_event"
+      },
+      "sg-34YeG": {
+        "giveawayKindOverride": "summer_event"
+      },
+      "sg-B8C0c": {
+        "giveawayKindOverride": "summer_event"
+      },
+      "sg-seZ4i": {
+        "giveawayKindOverride": "summer_event"
+      },
+      "sg-MVPsu": {
+        "giveawayKindOverride": "summer_event"
+      },
+      "sg-F20xd": {
+        "giveawayKindOverride": "summer_event"
+      },
+      "sg-6McoP": {
+        "giveawayKindOverride": "summer_event"
+      },
+      "sg-d33Il": {
+        "giveawayKindOverride": "summer_event"
+      },
+      "sg-VLjV5": {
+        "giveawayKindOverride": "summer_event"
+      },
+      "sg-7PUkC": {
+        "giveawayKindOverride": "summer_event"
+      },
+      "sg-kkkHZ": {
+        "cycleMonthOverride": "2021-05"
+      },
+      "sg-JlzUC": {
+        "giveawayKindOverride": "summer_event"
+      },
+      "sg-aw4kH": {
+        "giveawayKindOverride": "summer_event"
+      },
+      "sg-a4A0o": {
+        "giveawayKindOverride": "summer_event"
+      },
+      "sg-sZVBh": {
+        "giveawayKindOverride": "summer_event"
+      },
+      "sg-Lh3A1": {
+        "giveawayKindOverride": "summer_event"
+      },
+      "sg-uGtFs": {
+        "giveawayKindOverride": "summer_event"
+      },
+      "sg-vTUjO": {
+        "cycleMonthOverride": "2021-06"
       }
     },
     "cycleMembers": {
