@@ -5,7 +5,7 @@ Developer/agent-facing architecture of the Akatsuki Group Monitor. For commands 
 ## 1. Shape of the system
 
 ```
-Collectors (browser / Playwright)  ──►  data/steamgifts-sync.json
+Collectors (browser userscript)  ──►  data/steamgifts-sync.json
                                               │
 server.py  ──► merge / refresh / hydrate ─────┤
                                               ▼
@@ -74,7 +74,7 @@ The same underlying SteamGifts giveaway appears in two shapes:
 `getGiveawayCodeKey(g)` unifies them → always `sg-<code>` (falls back to `sourceId`, then `id`). Use it for any cross-surface keying.
 
 ### Classification (set by collectors from description text)
-`detectGiveawayKindFromDescription` (in `scripts/steamgifts-public-sync.mjs` and `akatsuki-steamgifts-sync.user.js`, mirrored):
+`detectGiveawayKindFromDescription` (in `akatsuki-steamgifts-sync.user.js` and `steamgifts-live-bookmarklet.js`, mirrored):
 1. `\bsummer event\b` → `summer_event` (wins outright).
 2. else earliest of `\bextra\b` / `\bpenalty\b` (→ `extra`) or `\bmonthly\b` (→ `cycle`).
 3. For `cycle`, `detectGiveawayMonthOverride` reads a **single** month name from the description → that month; 0 or ≥2 names ⇒ no override (use end date).
@@ -102,7 +102,6 @@ Members can override the kind in the UI (`giveawayKindOverride`).
 ## 8. Collectors
 - `akatsuki-steamgifts-sync.user.js` — logged-in userscript (primary).
 - `steamgifts-live-bookmarklet.js` + `bookmarklet-helper.html` — bookmarklet flow.
-- `scripts/steamgifts-public-sync.mjs` — Playwright public fallback (`npm run public-sync`).
 All enrich giveaways with creator/winner/points/entries/kind before the server merges.
 
 ## 9. Deployment & automation
@@ -113,7 +112,6 @@ All enrich giveaways with creator/winner/points/entries/kind before the server m
 
 ## 10. Gotchas index
 - `node --check` validates syntax only — verify UI in a browser.
-- Playwright bundled Chromium absent → `channel:'chrome'`.
 - `site/` gitignored despite `git add data site`.
 - `GITHUB_TOKEN` pushes don't chain workflows.
 - Only whitelisted override fields survive a sync.

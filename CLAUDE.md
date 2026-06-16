@@ -10,7 +10,6 @@ A SteamGifts giveaway-group operations dashboard: a Python server (`server.py`) 
 - JS syntax check (CI gate): `npm run check:node24`
 - Static export + validate: `python server.py --export-static --output-dir dist` then `python server.py --validate-static --output-dir dist`
 - Refresh data (needs `STEAM_WEB_API_KEY` in env or `.env`): `--refresh-steam-progress`, `--refresh-steam-library`, `--hydrate-sync-media --recent-days 365`
-- Public Playwright sync: `npm run public-sync`
 
 ## Map (where things live)
 - `app.js` — entire frontend runtime (~5k lines): load JSON, normalize sync, apply overrides, render every page. Single file, no bundler.
@@ -29,11 +28,10 @@ A SteamGifts giveaway-group operations dashboard: a Python server (`server.py`) 
 - **Summer-event points**: base = `steamPricePoints` (if checked) else `points`; swing/`entryDelta` = 10 if base≥30 else 5; a creator's entry points = `entrants × swing`; total = base + entry. `no_winners` ⇒ counts as 0 / excluded from standings.
 - **`site/` and `dist/` are gitignored.** `publish-snapshot.ps1` does `git add data site` but only `data/` is actually tracked.
 - **GitHub Actions**: a push by `GITHUB_TOKEN` does **not** trigger other workflows, so `daily-refresh.yml` deploys Pages itself instead of relying on `pages.yml`.
-- **Playwright**: bundled Chromium isn't installed; launch with `chromium.launch({ channel: 'chrome' })`.
 - Windows/PowerShell host. Prefer `npm run check:node24` + the browser smoke test (below) over assuming runtime correctness — `node --check` only catches syntax.
 
 ## Verifying frontend changes
-`node --check app.js` catches syntax only. For real verification, run `python server.py` then load pages with Playwright (`channel:'chrome'`), listen for `console`/`pageerror`, and assert on `#id` elements. A manual override is verified by setting it, reloading, and confirming it re-renders from `localStorage`.
+`node --check app.js` catches syntax only. For real verification, run `python server.py`, open the pages in a browser, watch the devtools console for `console`/`pageerror` output, and confirm the `#id` tables/panels render. A manual override is verified by setting it, reloading, and confirming it re-renders from `localStorage`.
 
 ## Editing rules
 - Match the surrounding vanilla style (template-literal HTML strings, `escapeHtml` all interpolated text, `data-*` attributes dispatched in the global `click`/`change` listeners in `setupEvents`).

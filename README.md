@@ -35,7 +35,6 @@ The current system covers these areas:
 4. SteamGifts synchronization
    - Authenticated sync via userscript
    - Authenticated sync via bookmarklet helper flow
-   - Public sync via Playwright when needed
    - Merge logic on the server to combine collected batches safely
 
 5. Steam and HLTB enrichment
@@ -82,9 +81,6 @@ There are three collection paths:
 
 - `steamgifts-live-bookmarklet.js`
   - authenticated bookmarklet collector used together with `bookmarklet-helper.html`
-
-- `scripts/steamgifts-public-sync.mjs`
-  - Playwright-based public collector for fallback or automation scenarios
 
 These collectors enrich SteamGifts giveaway data with creator, winner, description-derived metadata, point cost, entries, and result state before the server merges the result.
 
@@ -153,7 +149,6 @@ That means the public site is rebuilt in CI from the committed source files. The
 
 - `akatsuki-steamgifts-sync.user.js`
 - `steamgifts-live-bookmarklet.js`
-- `scripts/steamgifts-public-sync.mjs`
 - `scripts/publish-snapshot.ps1`
 - `scripts/setup-publish.ps1`
 - `publish-snapshot.cmd`
@@ -179,7 +174,7 @@ That means the public site is rebuilt in CI from the committed source files. The
   - required for Steam library/progress refreshes
 
 - Google Chrome or Microsoft Edge
-  - useful for the authenticated collection workflow and Playwright public sync
+  - useful for the authenticated collection workflow
 
 ## Recommended Local Setup
 
@@ -256,12 +251,6 @@ python server.py --hydrate-sync-media --recent-days 365
 ```powershell
 python server.py --export-static
 python server.py --validate-static
-```
-
-### Run the public Playwright sync
-
-```powershell
-npm run public-sync
 ```
 
 ### Run the end-to-end publish helper

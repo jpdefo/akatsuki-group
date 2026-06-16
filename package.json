@@ -6,11 +6,7 @@
     "node": ">=24 <25"
   },
   "scripts": {
-    "check:node24": "node --check app.js && node --check client/cycle-rules.js && node --check akatsuki-steamgifts-sync.user.js && node --check steamgifts-live-bookmarklet.js && node --check scripts/steamgifts-public-sync.mjs",
-    "public-sync": "node scripts/steamgifts-public-sync.mjs",
+    "check:node24": "node --check app.js && node --check client/cycle-rules.js && node --check akatsuki-steamgifts-sync.user.js && node --check steamgifts-live-bookmarklet.js",
     "publish-snapshot": "powershell -ExecutionPolicy Bypass -File scripts/publish-snapshot.ps1"
-  },
-  "dependencies": {
-    "playwright": "1.59.1"
   }
 }
