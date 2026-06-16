@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-12T07:29:00.382533+00:00",
+  "updatedAt": "2026-06-16T07:47:56.436534+00:00",
   "apps": {
     "3288210": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3288210/2e13226847bb546625411aed75e74471f6705b18/header.jpg?t=1777969480",
@@ -4782,6 +4782,62 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2350790/3524524545ff53b6b749e240bd4743345d797a4e/capsule_231x87.jpg?t=1779787535",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2350790/3524524545ff53b6b749e240bd4743345d797a4e/capsule_184x69.jpg?t=1779787535",
       "releaseDate": "2025-11-19",
+      "comingSoon": false
+    },
+    "132479": {
+      "name": "",
+      "headerImageUrl": "",
+      "capsuleImageUrl": "",
+      "capsuleSmallUrl": "",
+      "releaseDate": "",
+      "comingSoon": false
+    },
+    "183038": {
+      "name": "",
+      "headerImageUrl": "",
+      "capsuleImageUrl": "",
+      "capsuleSmallUrl": "",
+      "releaseDate": "",
+      "comingSoon": false
+    },
+    "183036": {
+      "name": "",
+      "headerImageUrl": "",
+      "capsuleImageUrl": "",
+      "capsuleSmallUrl": "",
+      "releaseDate": "",
+      "comingSoon": false
+    },
+    "56692": {
+      "name": "",
+      "headerImageUrl": "",
+      "capsuleImageUrl": "",
+      "capsuleSmallUrl": "",
+      "releaseDate": "",
+      "comingSoon": false
+    },
+    "207167": {
+      "name": "Stellar Impact - Carrier Ship DLC",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/207167/header.jpg?t=1664577328",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/207167/capsule_231x87.jpg?t=1664577328",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/207167/capsule_184x69.jpg?t=1664577328",
+      "releaseDate": "2012-04-12",
+      "comingSoon": false
+    },
+    "51209": {
+      "name": "",
+      "headerImageUrl": "",
+      "capsuleImageUrl": "",
+      "capsuleSmallUrl": "",
+      "releaseDate": "",
+      "comingSoon": false
+    },
+    "171306": {
+      "name": "",
+      "headerImageUrl": "",
+      "capsuleImageUrl": "",
+      "capsuleSmallUrl": "",
+      "releaseDate": "",
       "comingSoon": false
     }
   }

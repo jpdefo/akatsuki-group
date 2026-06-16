@@ -6991,7 +6991,7 @@
     "matchedTitle": "",
     "gameId": null,
     "url": "",
-    "checkedAt": "2026-06-07T11:24:34.335639+00:00"
+    "checkedAt": "2026-06-16T07:47:58.771292+00:00"
   },
   "metal gear solid master collection v": {
     "title": "METAL GEAR SOLID: MASTER COLLECTION V...",
@@ -14168,5 +14168,13 @@
     "gameId": 76454,
     "url": "https://howlongtobeat.com/game/76454",
     "checkedAt": "2026-06-11T07:30:38.819141+00:00"
+  },
+  "hellblade ii senua s saga": {
+    "title": "Hellblade II: Senua’s Saga",
+    "hltbHours": null,
+    "matchedTitle": "",
+    "gameId": null,
+    "url": "",
+    "checkedAt": "2026-06-16T07:47:57.880128+00:00"
   }
 }
