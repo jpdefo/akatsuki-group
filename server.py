@@ -51,12 +51,9 @@ STATIC_FILE_NAMES = [
     "summer-event-entries.html",
     "giveaways.html",
     "app.js",
-    "steamgifts-live-bookmarklet.js",
     "styles.css",
     "active-users.html",
     "inactive-users.html",
-    "bookmarklet-helper.html",
-    "bookmarklet-helper.png",
     "akatsuki.png",
 ]
 STATIC_DIRECTORIES = ["client"]

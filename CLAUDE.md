@@ -26,7 +26,7 @@ A SteamGifts giveaway-group operations dashboard: a Python server (`server.py`) 
 - **Giveaway identity**: cycle giveaways (`state.giveaways`) have `sourceId = "sg-<code>"` but **no** `code`; summer-event giveaways (`state.sync.steamgifts.giveaways`) have `code` but **no** `sourceId`. Use `getGiveawayCodeKey(g)` to get the shared `sg-<code>` key across both.
 - **Giveaway classification** comes from the giveaway **description text** (collectors, not server): contains `summer event` → summer_event (highest priority); `extra`/`penalty` → extra; `monthly` → cycle (earliest keyword wins). A `cycle` giveaway's month = the single month name in the description, else falls back to end date.
 - **Summer-event points**: base = `steamPricePoints` (if checked) else `points`; swing/`entryDelta` = 10 if base≥30 else 5; a creator's entry points = `entrants × swing`; total = base + entry. `no_winners` ⇒ counts as 0 / excluded from standings.
-- **`site/` and `dist/` are gitignored.** `publish-snapshot.ps1` does `git add data site` but only `data/` is actually tracked.
+- **`site/` and `dist/` are gitignored.** Only `data/` is tracked; the static site is rebuilt from source by CI (`pages.yml`), never committed.
 - **GitHub Actions**: a push by `GITHUB_TOKEN` does **not** trigger other workflows, so `daily-refresh.yml` deploys Pages itself instead of relying on `pages.yml`.
 - Windows/PowerShell host. Prefer `npm run check:node24` + the browser smoke test (below) over assuming runtime correctness — `node --check` only catches syntax.
 

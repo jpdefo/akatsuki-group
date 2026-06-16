@@ -34,7 +34,6 @@ The current system covers these areas:
 
 4. SteamGifts synchronization
    - Authenticated sync via userscript
-   - Authenticated sync via bookmarklet helper flow
    - Merge logic on the server to combine collected batches safely
 
 5. Steam and HLTB enrichment
@@ -77,12 +76,9 @@ It is responsible for:
 There are three collection paths:
 
 - `akatsuki-steamgifts-sync.user.js`
-  - authenticated userscript collector intended for normal logged-in usage
+  - authenticated userscript collector intended for normal logged-in usage (install/update via its raw GitHub `.user.js` URL in Tampermonkey)
 
-- `steamgifts-live-bookmarklet.js`
-  - authenticated bookmarklet collector used together with `bookmarklet-helper.html`
-
-These collectors enrich SteamGifts giveaway data with creator, winner, description-derived metadata, point cost, entries, and result state before the server merges the result.
+This collector enriches SteamGifts giveaway data with creator, winner, description-derived metadata, point cost, entries, and result state before the server merges the result.
 
 ### 4. Persistent Data
 
@@ -138,21 +134,15 @@ That means the public site is rebuilt in CI from the committed source files. The
 - `active-users.html` - active user summaries
 - `inactive-users.html` - inactive user summaries
 - `admin.html` - admin and override workflows
-- `bookmarklet-helper.html` - helper page for the bookmarklet collector
 
 ### Client modules
 
 - `client/utils.js`
 - `client/cycle-rules.js`
 
-### Collector and automation scripts
+### Collector scripts
 
 - `akatsuki-steamgifts-sync.user.js`
-- `steamgifts-live-bookmarklet.js`
-- `scripts/publish-snapshot.ps1`
-- `scripts/setup-publish.ps1`
-- `publish-snapshot.cmd`
-- `setup-publish.cmd`
 
 ### Data and export folders
 
@@ -179,14 +169,6 @@ That means the public site is rebuilt in CI from the committed source files. The
 ## Recommended Local Setup
 
 ### 1. Install dependencies
-
-Use the helper if you want the project to configure the machine for you:
-
-```powershell
-setup-publish.cmd
-```
-
-Manual setup is also fine:
 
 ```powershell
 npm install
@@ -253,21 +235,13 @@ python server.py --export-static
 python server.py --validate-static
 ```
 
-### Run the end-to-end publish helper
+### Publish overrides to the live site
 
-```powershell
-publish-snapshot.cmd
-```
-
-That helper:
-
-- starts the local server if needed
-- opens the helper page and SteamGifts group for collector mode
-- waits for a fresh sync when using the authenticated flow
-- hydrates media
-- refreshes Steam progress
-- exports and validates the static snapshot
-- optionally commits and pushes snapshot changes in that workflow
+Edit overrides in the dashboard, then click **Publish to GitHub Pages**. That
+commits `data/overrides.json` straight to the repo through the GitHub API (using
+a fine-grained token you paste once), and the public site rebuilds automatically
+via the `pages.yml` workflow. Steam data refreshes on its own through the daily
+`daily-refresh.yml` cron.
 
 ## Further Planning
 

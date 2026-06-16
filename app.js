@@ -629,7 +629,7 @@ function renderSyncStatus() {
     elements.syncStatus.innerHTML = `
       <article class="alert-card info">
         <h3>No SteamGifts sync loaded</h3>
-        <p>Open the Admin tools page to import a SteamGifts JSON file, or start the local server and run the collector/bookmarklet from the group page.</p>
+        <p>Open the Admin tools page to import a SteamGifts JSON file, or install the SteamGifts userscript and run it from the group page.</p>
       </article>
     `;
     return;
@@ -3639,7 +3639,7 @@ async function publishSharedOverrides() {
 
   try {
     if (runtime.staticApi) {
-      throw new Error("GitHub Pages is read-only. Save shared overrides through the local server, then run publish-snapshot.cmd.");
+      throw new Error("GitHub Pages is read-only. Use \"Publish to GitHub Pages\" to save overrides directly to the repo.");
     }
 
     if (button) {
@@ -3663,7 +3663,7 @@ async function publishSharedOverrides() {
     state.overrides = normalizeOverrideState();
     applyManualOverrides();
     persistAndRender();
-    window.alert("Overrides saved to data/overrides.json. Run publish-snapshot.cmd to publish them to GitHub Pages.");
+    window.alert("Overrides saved to data/overrides.json. Use \"Publish to GitHub Pages\" to publish them to the live site.");
   } catch (error) {
     window.alert(error?.message || "Could not save published overrides.");
   } finally {

@@ -74,7 +74,7 @@ The same underlying SteamGifts giveaway appears in two shapes:
 `getGiveawayCodeKey(g)` unifies them → always `sg-<code>` (falls back to `sourceId`, then `id`). Use it for any cross-surface keying.
 
 ### Classification (set by collectors from description text)
-`detectGiveawayKindFromDescription` (in `akatsuki-steamgifts-sync.user.js` and `steamgifts-live-bookmarklet.js`, mirrored):
+`detectGiveawayKindFromDescription` (in `akatsuki-steamgifts-sync.user.js`):
 1. `\bsummer event\b` → `summer_event` (wins outright).
 2. else earliest of `\bextra\b` / `\bpenalty\b` (→ `extra`) or `\bmonthly\b` (→ `cycle`).
 3. For `cycle`, `detectGiveawayMonthOverride` reads a **single** month name from the description → that month; 0 or ≥2 names ⇒ no override (use end date).
@@ -100,14 +100,13 @@ Members can override the kind in the UI (`giveawayKindOverride`).
 - Steam key from `STEAM_WEB_API_KEY` (env or `.env` via `load_dotenv_values`).
 
 ## 8. Collectors
-- `akatsuki-steamgifts-sync.user.js` — logged-in userscript (primary).
-- `steamgifts-live-bookmarklet.js` + `bookmarklet-helper.html` — bookmarklet flow.
-All enrich giveaways with creator/winner/points/entries/kind before the server merges.
+- `akatsuki-steamgifts-sync.user.js` — logged-in userscript (the sole collector; installs/updates via its raw GitHub `.user.js` URL through Tampermonkey).
+It enriches giveaways with creator/winner/points/entries/kind before the server merges.
 
 ## 9. Deployment & automation
 - `pages.yml` — on push to `main`: `npm ci` + `check:node24`, `--export-static`/`--validate-static` to `dist/`, deploy Pages. Rebuilds the public site from committed source.
 - `daily-refresh.yml` — cron 06:00 UTC + manual: refresh Steam data, commit `data/`, then **deploy Pages in the same job** (a `GITHUB_TOKEN` push won't trigger `pages.yml`). Needs the `STEAM_WEB_API_KEY` repo secret.
-- `update-giveaways.bat` — manual end-to-end: `git pull` → `setup-publish.cmd` → `publish-snapshot.cmd` (interactive, needs a logged-in browser for the giveaway sync).
+- Overrides go live via the dashboard's **Publish to GitHub Pages** button (`publishOverridesToGitHub`), which commits `data/overrides.json` straight to the repo through the GitHub API; the public site then rebuilds via `pages.yml`.
 - `site/`, `dist/`, `node_modules/`, `.env` are gitignored.
 
 ## 10. Gotchas index

@@ -10,7 +10,7 @@ The project is already functional and covers the group's real workflows well. Th
 
 - local Python server with JSON-backed APIs and utilities
 - vanilla multi-page frontend centered on `app.js`
-- two SteamGifts collection paths: userscript and bookmarklet
+- one SteamGifts collection path: the Tampermonkey userscript
 - static export and validation flow for GitHub Pages
 - CI workflow that rebuilds the public site from source on push to `main`
 - summer-event accounting, cycle tracking, overrides, and Steam progress refreshes already in use

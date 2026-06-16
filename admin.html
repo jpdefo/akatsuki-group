@@ -40,16 +40,15 @@
             <div>
               <h2>Manual SteamGifts sync</h2>
               <p class="section-copy">
-                Fast path: run <code>python server.py</code>, open SteamGifts while logged in,
-                run the collector JavaScript, then click <strong>Load server sync</strong>. The bookmarklet now defaults
-                to page 1 with a fixed 505ms delay and the helper copies the bookmarklet body for Chrome-friendly paste.
+                Install the <strong>Akatsuki SteamGifts Sync</strong> userscript (needs Tampermonkey),
+                open the SteamGifts group page while logged in, and run it to collect and publish a sync.
+                Or import a previously exported SteamGifts JSON below.
               </p>
             </div>
           </div>
           <div class="sync-actions">
             <button id="sync-refresh" class="button primary">Load server sync</button>
-            <a class="button secondary" href="akatsuki-steamgifts-sync.user.js" download>Download SteamGifts collector</a>
-            <a class="button secondary" href="bookmarklet-helper.html">Open bookmarklet helper</a>
+            <a class="button secondary" href="https://raw.githubusercontent.com/jpdefo/akatsuki-group/main/akatsuki-steamgifts-sync.user.js">Install / update userscript</a>
             <label class="button secondary">
               Import SteamGifts JSON
               <input id="import-data" type="file" accept=".json,application/json" hidden />
