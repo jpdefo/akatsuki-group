@@ -124,6 +124,7 @@ const elements = {
   cycleWinsTable: document.querySelector("#cycle-wins-table"),
   summerEventFilter: document.querySelector("#summer-event-filter"),
   summerRuleset: document.querySelector("#summer-ruleset"),
+  summerEventStatusFilter: document.querySelector("#summer-event-status-filter"),
   summerEventSort: document.querySelector("#summer-event-sort"),
   summerEventCreatorFilter: document.querySelector("#summer-event-creator-filter"),
   summerEventWinnerFilter: document.querySelector("#summer-event-winner-filter"),
@@ -252,6 +253,7 @@ function bindEvents() {
     state.settings.summerRuleset = elements.summerRuleset.value || "auto";
     persistAndRender();
   });
+  elements.summerEventStatusFilter?.addEventListener("change", () => renderSummerEventPage());
   elements.summerEventSort?.addEventListener("change", () => renderSummerEventPage());
   elements.summerEventCreatorFilter?.addEventListener("input", () => renderSummerEventPage());
   elements.summerEventWinnerFilter?.addEventListener("input", () => renderSummerEventPage());
@@ -1557,6 +1559,7 @@ function renderSummerEventPage() {
   if (elements.summerEventGiveawaysTable) {
     const creatorFilter = String(elements.summerEventCreatorFilter?.value || "").trim().toLowerCase();
     const winnerFilter = String(elements.summerEventWinnerFilter?.value || "").trim().toLowerCase();
+    const statusFilter = String(elements.summerEventStatusFilter?.value || "all").toLowerCase();
     const sortValue = String(elements.summerEventSort?.value || "ended-desc");
     const filteredGiveaways = sortSummerEventGiveaways(
       giveaways.filter((giveaway) => {
@@ -1564,7 +1567,11 @@ function renderSummerEventPage() {
         const winnerLabels = getSummerEventWinnerUsers(giveaway).map((winner) => winner.toLowerCase());
         const matchesCreator = !creatorFilter || creatorLabel.includes(creatorFilter);
         const matchesWinner = !winnerFilter || winnerLabels.some((winner) => winner.includes(winnerFilter));
-        return matchesCreator && matchesWinner;
+        const active = isSummerEventGiveawayActive(giveaway);
+        const matchesStatus = statusFilter === "all"
+          || (statusFilter === "active" && active)
+          || (statusFilter === "finished" && !active);
+        return matchesCreator && matchesWinner && matchesStatus;
       }),
       sortValue,
       summerEventMemberIndex,
@@ -2272,6 +2279,14 @@ function getSummerEventValueMeta(giveaway) {
     return `Steam list: ${formatSummerEventUsd(giveaway.steamListPriceCents)} • Swing: ${entryDelta} P`;
   }
   return `SteamGifts base • Swing: ${entryDelta} P`;
+}
+
+// "Active" = still running: has an end date that is in the future. Anything
+// with an end date at/before now is "finished". Giveaways without an end date
+// can't be classified as running, so they count as finished.
+function isSummerEventGiveawayActive(giveaway) {
+  const end = giveaway?.endDate ? new Date(giveaway.endDate).getTime() : NaN;
+  return Number.isFinite(end) && end > Date.now();
 }
 
 // A giveaway is waiting on a final post-close snapshot only if it has ended,
