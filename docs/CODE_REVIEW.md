@@ -155,3 +155,38 @@ external invokes them, to shrink the surface a new reader has to understand.
    stdlib test) in CI. *(Larger; roadmap Phases 2–3)*
 7. **Guard `parseDate`** and prune the deprecated CLI args / `publishSharedOverrides`
    once confirmed unused. *(Low)*
+
+## Status — applied 2026-06-16
+
+Context correction: the interactive local server (`python server.py` as a
+long-running host) is effectively retired — the workflow is now the Tampermonkey
+collector (which publishes straight to GitHub), the live GitHub Pages site, and
+the `server.py` **CLI** jobs run by `daily-refresh.yml`. That **lowers** the
+priority of the concurrency findings (#2/#3 only bite when the threaded HTTP
+server is actually serving) but **not** the atomic-write one: the CI refresh jobs
+still call `save_json` to write committed `data/*.json`, so a killed job can still
+corrupt state.
+
+Applied in this pass:
+
+1. **Atomic `save_json`** — write to a same-dir temp file then `os.replace`,
+   guarded by a process-level lock. Removes the torn-write corruption class for
+   both the CLI jobs and any server use. *(done)*
+2. **Stopped persisting on GET reads** (`persist=False` on the dashboard/members/
+   giveaways/sync endpoints) and added the write lock. Prices still freeze and
+   persist on the sync `POST`. *(done)*
+3. **Dropped the wildcard CORS** headers and the now-unneeded `OPTIONS` handler.
+   *(done)*
+4. **Added a "Clear GitHub token" admin button** wired to `setStoredGithubToken("")`
+   with a confirm. *(done)*
+5. **ESLint in CI** (`npm run lint`, chained into `check:node24`): high-signal
+   correctness rules as errors (currently clean), and `no-unsanitized` surfacing
+   the ~60 `innerHTML` sinks as **warnings**. An auto-escaping `html` tagged
+   template was added to `client/utils.js` as the safe primitive for new markup.
+   *Follow-up:* migrate the existing sinks to `html` (with browser verification),
+   then flip `no-unsanitized` to `error` for a true blocking gate.
+6. *(skipped — pure-domain module extraction + unit tests; roadmap Phases 2–3.)*
+7. **Guarded `parseDate`/`formatDate`** against empty input and removed the unused
+   `--month` CLI arg. `--full-refresh` was **kept** (still passed by
+   `daily-refresh.yml`); `publishSharedOverrides` was **kept** (still wired to a
+   live admin button). *(done)*

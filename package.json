@@ -6,6 +6,12 @@
     "node": ">=24 <25"
   },
   "scripts": {
-    "check:node24": "node --check app.js && node --check client/cycle-rules.js && node --check akatsuki-steamgifts-sync.user.js"
+    "check:node24": "node --check app.js && node --check client/cycle-rules.js && node --check akatsuki-steamgifts-sync.user.js && npm run lint",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "eslint": "^9.39.4",
+    "eslint-plugin-no-unsanitized": "^4.1.5",
+    "globals": "^17.6.0"
   }
 }

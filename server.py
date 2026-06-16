@@ -4,6 +4,8 @@ import argparse
 import json
 import os
 import re
+import tempfile
+import threading
 import time
 import traceback
 from datetime import datetime, timedelta, timezone
@@ -122,9 +124,29 @@ def load_json(path: Path, default):
         return default
 
 
+# data/ is the database, ThreadingHTTPServer serves writes from multiple threads,
+# and the CLI jobs write the same files. Serialize writes in-process and swap the
+# file in atomically so a crash or an overlapping write can never leave a
+# truncated/half-written JSON behind (which load_json would silently treat as
+# "missing" and fall back to an empty default).
+_SAVE_LOCK = threading.Lock()
+
+
 def save_json(path: Path, payload) -> None:
-    ensure_data_dir()
-    path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    data = json.dumps(payload, indent=2, ensure_ascii=False)
+    with _SAVE_LOCK:
+        fd, tmp_name = tempfile.mkstemp(dir=str(path.parent), prefix=f".{path.name}.", suffix=".tmp")
+        try:
+            with os.fdopen(fd, "w", encoding="utf-8") as handle:
+                handle.write(data)
+            os.replace(tmp_name, path)
+        finally:
+            if os.path.exists(tmp_name):
+                try:
+                    os.unlink(tmp_name)
+                except OSError:
+                    pass
 
 
 def empty_progress_payload() -> dict:
@@ -2006,22 +2028,18 @@ class Handler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=str(BASE_DIR), **kwargs)
 
-    def end_headers(self) -> None:
-        self.send_header("Access-Control-Allow-Origin", "*")
-        self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
-        self.send_header("Access-Control-Allow-Headers", "Content-Type")
-        super().end_headers()
-
-    def do_OPTIONS(self) -> None:
-        self.send_response(HTTPStatus.NO_CONTENT)
-        self.end_headers()
+    # No CORS headers: the only client of /api is the same-origin frontend served
+    # from this host, and the userscript publishes straight to GitHub. A wildcard
+    # Access-Control-Allow-Origin would let any page the operator visits POST to
+    # this local server (e.g. overwrite overrides.json), so it is intentionally
+    # omitted.
 
     def do_GET(self) -> None:
         try:
             parsed = urlparse(self.path)
             query = parse_qs(parsed.query)
             if parsed.path == "/api/steamgifts-sync":
-                self.write_json(load_sync_payload_with_store_prices(persist=True) if SYNC_PATH.exists() else {})
+                self.write_json(load_sync_payload_with_store_prices(persist=False) if SYNC_PATH.exists() else {})
                 return
             if parsed.path == "/api/steam-progress":
                 self.write_json(build_progress_export_payload(load_json(PROGRESS_PATH, empty_progress_payload())))
@@ -2035,17 +2053,17 @@ class Handler(SimpleHTTPRequestHandler):
                 self.write_json(get_media_payload(app_ids))
                 return
             if parsed.path == "/api/dashboard":
-                sync_payload = load_sync_payload_with_store_prices(persist=True)
+                sync_payload = load_sync_payload_with_store_prices(persist=False)
                 progress_payload = load_json(PROGRESS_PATH, empty_progress_payload())
                 library_payload = load_json(LIBRARY_PATH, empty_library_payload())
                 self.write_json(build_dashboard_payload(sync_payload, progress_payload, library_payload))
                 return
             if parsed.path == "/api/members":
-                sync_payload = load_sync_payload_with_store_prices(persist=True)
+                sync_payload = load_sync_payload_with_store_prices(persist=False)
                 self.write_json(build_members_payload(sync_payload))
                 return
             if parsed.path == "/api/giveaways":
-                sync_payload = load_sync_payload_with_store_prices(persist=True)
+                sync_payload = load_sync_payload_with_store_prices(persist=False)
                 progress_payload = load_json(PROGRESS_PATH, empty_progress_payload())
                 library_payload = load_json(LIBRARY_PATH, empty_library_payload())
                 self.write_json(
@@ -2156,8 +2174,7 @@ def main() -> None:
     parser.add_argument("--recent-days", type=int, default=365, help="Limit sync media hydration to giveaways from the last N days")
     parser.add_argument("--refresh-steam-library", action="store_true", help="Refresh cached Steam library data")
     parser.add_argument("--refresh-steam-progress", action="store_true", help="Refresh cached Steam progress data")
-    parser.add_argument("--month", help="(deprecated, ignored) Steam refresh is always full now")
-    parser.add_argument("--full-refresh", action="store_true", help="(now the default) Steam refresh always covers all months")
+    parser.add_argument("--full-refresh", action="store_true", help="(now the default; accepted for compatibility) Steam refresh always covers all months")
     parser.add_argument("--include-inactive", action="store_true", help="Also refresh inactive (left-the-group) members; pair with --full-refresh for a one-time all-members run")
     args = parser.parse_args()
 

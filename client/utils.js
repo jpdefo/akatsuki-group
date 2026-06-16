@@ -56,7 +56,11 @@ export function differenceInDays(futureDate, baseDate) {
 }
 
 export function formatDate(dateInput) {
-  return parseDate(dateInput).toLocaleDateString("en-US", {
+  const date = parseDate(dateInput);
+  if (Number.isNaN(date.getTime())) {
+    return "-";
+  }
+  return date.toLocaleDateString("en-US", {
     day: "2-digit",
     month: "short",
     year: "numeric",
@@ -95,6 +99,12 @@ export function formatMonthKey(key) {
 export function parseDate(dateInput) {
   if (dateInput instanceof Date) {
     return new Date(dateInput.getFullYear(), dateInput.getMonth(), dateInput.getDate(), 12);
+  }
+
+  // Guard empty/missing input so callers get a detectable Invalid Date instead of
+  // a NaN-filled date silently flowing into formatting/math.
+  if (dateInput === null || dateInput === undefined || dateInput === "") {
+    return new Date(NaN);
   }
 
   const raw = String(dateInput);
@@ -136,4 +146,43 @@ export function escapeHtml(value) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
+}
+
+// Marks a string as already-safe HTML so the `html` tagged template won't
+// re-escape it. Use for markup produced by other `html`/builders that you are
+// intentionally nesting.
+class SafeHtml {
+  constructor(value) {
+    this.value = String(value);
+  }
+
+  toString() {
+    return this.value;
+  }
+}
+
+export function trustedHtml(value) {
+  return value instanceof SafeHtml ? value : new SafeHtml(value);
+}
+
+// Auto-escaping tagged template: `html`<b>${name}</b>`` escapes every
+// interpolation by default. Pass nested markup through `trustedHtml(...)` (or an
+// array of those) to opt out for values you've already escaped. This is the
+// sanctioned primitive for new markup so escaping can't be forgotten the way it
+// can with bare `escapeHtml` + template strings.
+export function html(strings, ...values) {
+  return new SafeHtml(
+    strings.reduce((acc, chunk, index) => {
+      if (index === 0) {
+        return chunk;
+      }
+      const value = values[index - 1];
+      const rendered = Array.isArray(value)
+        ? value.map((item) => (item instanceof SafeHtml ? item.toString() : escapeHtml(item))).join("")
+        : value instanceof SafeHtml
+          ? value.toString()
+          : escapeHtml(value);
+      return acc + rendered + chunk;
+    }, ""),
+  );
 }

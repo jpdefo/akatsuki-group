@@ -209,7 +209,8 @@ If the goal is to make the project more professional without slowing current fea
 4. Add initial tests for cycle rules and sync normalization.
 5. Start splitting `app.js` by feature area.
 6. Use the full giveaway-page title instead of the truncated list-row title in the userscript's `enrichGiveaway` (the detail page is already fetched for the point cost). The truncated title pollutes display and weakens HLTB matching.
-7. Add a "clear GitHub token" action in admin next to the existing token button, and document using a fine-grained, short-expiry, repo-scoped token.
+7. ~~Add a "clear GitHub token" action in admin next to the existing token button~~ (done — "Clear GitHub token" button in admin.html), and document using a fine-grained, short-expiry, repo-scoped token.
+8. Finish the escaping gate: ESLint now runs in CI (`npm run lint`) with `no-unsanitized` surfacing the existing `innerHTML` sinks as warnings, and `client/utils.js` exposes an auto-escaping `html` tagged template. Migrate the ~60 sinks to `html` (verify in a browser), then flip `no-unsanitized` to `error` for a blocking gate.
 
 For ad-hoc code review of a change, run `/code-review` (or `/code-review ultra` for a deep multi-agent pass) on the branch rather than maintaining a static review document.
 

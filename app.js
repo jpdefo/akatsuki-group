@@ -145,6 +145,7 @@ const elements = {
   publishOverridesButton: document.querySelector("#publish-overrides"),
   publishToPagesButton: document.querySelector("#publish-to-pages"),
   githubTokenButton: document.querySelector("#github-token-button"),
+  clearGithubTokenButton: document.querySelector("#github-token-clear"),
   quickPublishButton: document.querySelector("#quick-publish"),
   importInput: document.querySelector("#import-data"),
   resetButton: document.querySelector("#reset-data"),
@@ -188,6 +189,18 @@ function bindEvents() {
   elements.githubTokenButton?.addEventListener("click", () => {
     promptForGithubToken({ announce: true });
     updateQuickPublishVisibility();
+  });
+  elements.clearGithubTokenButton?.addEventListener("click", () => {
+    if (!getStoredGithubToken()) {
+      window.alert("No GitHub token is set.");
+      return;
+    }
+    if (!window.confirm("Remove the saved GitHub token from this browser?")) {
+      return;
+    }
+    setStoredGithubToken("");
+    updateQuickPublishVisibility();
+    window.alert("GitHub token removed from this browser.");
   });
   elements.quickPublishButton?.addEventListener("click", () => publishOverridesToGitHub());
   updateQuickPublishVisibility();
