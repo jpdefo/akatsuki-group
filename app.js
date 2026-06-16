@@ -1433,9 +1433,13 @@ function renderSummerEventPage() {
   const summerEventMemberIndex = getSummerEventMemberIndex();
   const standings = computeSummerEventStandings(giveaways, summerEventMemberIndex);
   const trackedEntries = giveaways.reduce((sum, giveaway) => sum + getSummerEventEntryUsers(giveaway).length, 0);
+  const trackedGiveaways = giveaways.length;
   const giveawaysWithEntries = giveaways.filter((giveaway) => getSummerEventEntryUsers(giveaway).length > 0).length;
   const giveawaysWithWinner = giveaways.filter(
-    (giveaway) => Array.isArray(giveaway.winners) && giveaway.winners.length > 0,
+    (giveaway) =>
+      getSummerEventEntryUsers(giveaway).length > 0
+      && Array.isArray(giveaway.winners)
+      && giveaway.winners.length > 0,
   ).length;
   const pendingSnapshots = giveaways.filter(isSummerEventSnapshotPending).length;
   const blockedParticipants = standings.filter((participant) => participant.balance < 0).length;
@@ -1449,7 +1453,7 @@ function renderSummerEventPage() {
 
   if (elements.summerEventSummaryCards) {
     const cards = [
-      ["Tracked giveaways", giveawaysWithEntries],
+      ["Tracked giveaways", trackedGiveaways],
       ["With a winner", giveawaysWithWinner],
       ["Participants", standings.length],
       ["Tracked entries", trackedEntries.toLocaleString("en-US")],
