@@ -67,8 +67,16 @@ let state = loadState();
 const loadedMediaAppIds = new Set();
 const attemptedMediaAppIds = new Set();
 const pendingMediaRequests = new Map();
+// On GitHub Pages (or a file:// open) the API is prebuilt static JSON, so
+// requests must go straight to the `.json` files. Detecting this up front lets
+// the parallel initial load skip the extensionless probe that always 404s there.
+const IS_STATIC_HOST =
+  window.location.protocol === "file:" || /\.github\.io$/i.test(window.location.hostname);
 const runtime = {
-  staticApi: false,
+  staticApi: IS_STATIC_HOST,
+  // While true, render() is a no-op. Used to coalesce the initial parallel load
+  // into a single paint instead of re-rendering as each payload arrives.
+  renderSuspended: false,
   editModal: null,
   editModalState: null,
   sharedOverrides: normalizeOverrideState(),
@@ -160,20 +168,42 @@ bootstrap();
 function bootstrap() {
   ensureEditModal();
   bindEvents();
-  render();
+  // No eager render: painting from stale localStorage is what shows the
+  // "22 members / 11 penalties" values that then correct themselves. The first
+  // paint happens once, after the initial load below has applied real data.
   loadInitialData();
 }
 
 async function loadInitialData() {
-  // Load the sync first so it gets the full pipe and the member/snapshot views
-  // paint as soon as possible; then fan the rest out in parallel (they only feed
-  // PoP/penalties, which are gated until they arrive anyway).
-  await refreshRemoteSync({ silent: true }); // sync + dashboard
-  await Promise.all([
-    loadStoredSteamProgress({ silent: true }),
-    loadSharedOverrides({ silent: true }),
-  ]);
+  // Fetch every payload in parallel, apply them all with rendering suspended,
+  // then paint once. Previously this was a sequential chain (sync -> dashboard ->
+  // progress/overrides) that re-rendered after each step, so derived numbers
+  // (members, penalties) appeared before overrides/progress were applied and then
+  // visibly corrected themselves. One round-trip, one render, correct the first
+  // time.
+  runtime.renderSuspended = true;
+  try {
+    const [syncResult, dashboardResult, overridesResult, progressResult] = await Promise.allSettled([
+      fetchApiJson("./api/steamgifts-sync"),
+      fetchApiJson("./api/dashboard"),
+      fetchApiJson("./api/overrides"),
+      fetchApiJson("./api/steam-progress"),
+    ]);
+    // Apply in dependency order: sync builds the records, overrides layer on top,
+    // progress feeds PoP/penalties.
+    await refreshRemoteSync({ silent: true, skipDashboard: true, prefetched: settledValue(syncResult) });
+    await loadDashboardData({ silent: true, prefetched: settledValue(dashboardResult) });
+    await loadSharedOverrides({ silent: true, prefetched: settledValue(overridesResult) });
+    await loadStoredSteamProgress({ silent: true, prefetched: settledValue(progressResult) });
+  } finally {
+    runtime.renderSuspended = false;
+    render();
+  }
   void loadVisibleGameMedia({ silent: true });
+}
+
+function settledValue(result) {
+  return result && result.status === "fulfilled" ? result.value : undefined;
 }
 
 function bindEvents() {
@@ -359,6 +389,9 @@ function handleGiveawaySubmit(event) {
 }
 
 function render() {
+  if (runtime.renderSuspended) {
+    return;
+  }
   renderSettings();
   renderSyncStatus();
   renderServerViews();
@@ -3400,7 +3433,13 @@ function getApiCandidates(path, method = "GET") {
     return [path];
   }
   const normalized = path.startsWith("./") ? path.slice(2) : path;
-  return [path, `./${normalized}.json`];
+  const jsonPath = `./${normalized}.json`;
+  // On the static API (Pages) the extensionless path always 404s, so once we
+  // know we're static, request the .json directly instead of probing both.
+  if (runtime.staticApi) {
+    return [jsonPath];
+  }
+  return [path, jsonPath];
 }
 
 function buildFreshApiRequestUrl(path) {
@@ -3446,7 +3485,9 @@ async function fetchApiJson(path, options = {}) {
 
 async function refreshRemoteSync(options = {}) {
   try {
-    const { payload } = await fetchApiJson("./api/steamgifts-sync");
+    const result =
+      options.prefetched?.payload != null ? options.prefetched : await fetchApiJson("./api/steamgifts-sync");
+    const payload = result.payload;
     if (payload?.source === "akatsuki-steamgifts-sync") {
       importSteamGiftsSync(payload, { persist: true });
     } else if (isEmptySyncPayload(payload)) {
@@ -3454,7 +3495,11 @@ async function refreshRemoteSync(options = {}) {
     } else if (!options.silent) {
       window.alert("The server responded, but there is no SteamGifts sync stored yet.");
     }
-    await loadDashboardData({ silent: true });
+    // During the initial parallel load the dashboard is fetched/applied
+    // separately, so skip the nested fetch here.
+    if (!options.skipDashboard) {
+      await loadDashboardData({ silent: true });
+    }
   } catch (error) {
     if (!options.silent) {
       window.alert("Could not load automatic sync. Start the local server with python server.py.");
@@ -3464,10 +3509,11 @@ async function refreshRemoteSync(options = {}) {
 
 async function loadDashboardData(options = {}) {
   try {
-    const { payload } = await fetchApiJson("./api/dashboard");
+    const result =
+      options.prefetched?.payload != null ? options.prefetched : await fetchApiJson("./api/dashboard");
     state.sync = {
       ...state.sync,
-      dashboard: payload,
+      dashboard: result.payload,
     };
     render();
     void loadVisibleGameMedia({ silent: true });
