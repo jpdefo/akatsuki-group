@@ -4,11 +4,11 @@ Run with stdlib only (no pytest dependency):
 
     python test_store_price_freeze.py
 
-The rule under test: once a summer-event giveaway has its final snapshot
-captured (``entriesFinalized``), its base points are frozen to the price
-recorded at that snapshot, so a later Steam price change never retroactively
-alters the points it awarded. Before the snapshot, the current price applies
-and is captured at the moment the snapshot is taken.
+The rule under test: the first enrichment after a giveaway is finalized
+(``entriesFinalized``) captures the current price and locks it
+(``steamPriceFrozen``). Every later enrichment reuses that frozen price, so a
+later Steam price change never retroactively alters the points it awarded.
+Before finalization the current price applies on every enrichment.
 """
 
 import unittest
@@ -41,15 +41,17 @@ def _giveaway(**overrides):
 
 
 class StorePriceFreezeTests(unittest.TestCase):
-    def test_finalized_with_captured_price_is_frozen(self):
+    def test_locked_price_is_frozen(self):
         giveaway = _giveaway(
             entriesFinalized=True,
+            steamPriceFrozen=True,
             steamPriceChecked=True,
             steamPricePoints=30,
         )
-        # Cache now says the game is cheaper (10), but the snapshot was 30.
+        # Cache now says the game is cheaper (10), but the price is locked at 30.
         result = server.with_giveaway_store_price(giveaway, _price_cache(10))
         self.assertEqual(result["steamPricePoints"], 30)
+        self.assertTrue(result["steamPriceFrozen"])
 
     def test_not_finalized_reapplies_current_price(self):
         giveaway = _giveaway(
@@ -59,14 +61,33 @@ class StorePriceFreezeTests(unittest.TestCase):
         )
         result = server.with_giveaway_store_price(giveaway, _price_cache(10))
         self.assertEqual(result["steamPricePoints"], 10)
+        self.assertNotIn("steamPriceFrozen", result)
 
-    def test_finalized_without_captured_price_captures_at_snapshot(self):
-        # Finalized but no price captured yet: fall through and record the
-        # current price so it can then be frozen.
-        giveaway = _giveaway(entriesFinalized=True)
+    def test_finalizing_captures_current_price_and_locks(self):
+        # First enrichment after finalization: record the current price (15) and
+        # lock it, even if an older price (30) was captured while live.
+        giveaway = _giveaway(
+            entriesFinalized=True,
+            steamPriceChecked=True,
+            steamPricePoints=30,
+        )
         result = server.with_giveaway_store_price(giveaway, _price_cache(15))
-        self.assertTrue(result["steamPriceChecked"])
         self.assertEqual(result["steamPricePoints"], 15)
+        self.assertTrue(result["steamPriceFrozen"])
+
+    def test_finalized_without_price_locks_last_captured(self):
+        # Finalized, a price was captured while live, but no fresh price is
+        # available now (no resolvable store id, so no lookup): lock the last
+        # captured price.
+        giveaway = _giveaway(
+            steamAppUrl="",
+            entriesFinalized=True,
+            steamPriceChecked=True,
+            steamPricePoints=22,
+        )
+        result = server.with_giveaway_store_price(giveaway, {"items": {}})
+        self.assertEqual(result["steamPricePoints"], 22)
+        self.assertTrue(result["steamPriceFrozen"])
 
 
 if __name__ == "__main__":

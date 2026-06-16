@@ -92,6 +92,7 @@ Members can override the kind in the UI (`giveawayKindOverride`).
 - `getSummerEventEntryDelta(g)` ("swing") = 10 if base ≥ 30 else 5.
 - Creator earns `base + entrants × swing`; each non-creator entrant pays `swing`. See `computeSummerEventStandings`.
 - Giveaways table columns: Giveaway · Creator · Base points · Entry points · Total points · Entries tracked · Winner · Result · Snapshot.
+- **Base-point freeze (server, `with_giveaway_store_price`):** while a giveaway is live, each enrichment re-applies the current Steam price to `steamPricePoints`. The first enrichment after it is finalized (`entriesFinalized`) captures the then-current price and sets `steamPriceFrozen: true`; every later enrichment short-circuits and reuses that locked value, so a post-finalization price change never alters awarded points. Persisted through the live server's sync-POST and dashboard `persist=True` reads. Regression test: `test_store_price_freeze.py`.
 
 ## 7. Backend (`server.py`)
 - Serves the site + JSON APIs at `127.0.0.1:4173`; also a CLI (argparse) for batch jobs.

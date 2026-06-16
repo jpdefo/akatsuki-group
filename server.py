@@ -750,14 +750,13 @@ def with_giveaway_store_price(giveaway: dict, price_cache: dict) -> dict:
         enriched["steamStoreType"] = store_type
         enriched["steamStoreId"] = store_id
 
-    # Once a summer-event giveaway has its final snapshot captured, its base points
-    # are frozen: keep the price recorded at that snapshot instead of re-applying the
-    # current Steam price, so a later price change never retroactively alters the
-    # points it awarded. Until then (including the "snapshot pending" window) the
-    # current price is still applied, and the fall-through below captures it at the
-    # moment the snapshot is taken. (A manual summerBasePointsOverride still wins on
-    # the frontend.)
-    if giveaway.get("entriesFinalized") and has_captured_store_price(giveaway):
+    finalized = bool(giveaway.get("entriesFinalized"))
+
+    # Once a summer-event giveaway's price has been frozen (locked at its final
+    # snapshot), keep that recorded price instead of re-applying the current Steam
+    # price, so a later price change never retroactively alters the points it
+    # awarded. (A manual summerBasePointsOverride still wins on the frontend.)
+    if finalized and giveaway.get("steamPriceFrozen") and has_captured_store_price(giveaway):
         return enriched
 
     price_entry = get_price_cache_entry(
@@ -767,9 +766,13 @@ def with_giveaway_store_price(giveaway: dict, price_cache: dict) -> dict:
         fetch_missing=should_lookup_store_price(giveaway),
     )
     if not price_entry:
+        # Finalized but no fresh price available: lock whatever price was last
+        # captured so it can't drift, rather than leaving it unfrozen forever.
+        if finalized and has_captured_store_price(giveaway):
+            return {**enriched, "steamPriceFrozen": True}
         return enriched
 
-    return {
+    enriched = {
         **enriched,
         "steamPriceChecked": True,
         "steamPriceCheckedAt": price_entry.get("checkedAt") or enriched.get("steamPriceCheckedAt") or "",
@@ -778,6 +781,11 @@ def with_giveaway_store_price(giveaway: dict, price_cache: dict) -> dict:
         "steamFinalPriceCents": price_entry.get("finalPriceCents"),
         "steamPricePoints": price_entry.get("pricePoints"),
     }
+    # First enrichment after the giveaway is finalized captures the current price
+    # and locks it; every later enrichment short-circuits above and reuses it.
+    if finalized:
+        enriched["steamPriceFrozen"] = True
+    return enriched
 
 
 def collect_sync_media_app_ids(sync_payload: dict, *, recent_days: int | None = None) -> list[int]:
