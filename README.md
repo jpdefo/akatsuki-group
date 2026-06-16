@@ -245,4 +245,4 @@ via the `pages.yml` workflow. Steam data refreshes on its own through the daily
 
 ## Further Planning
 
-For the current roadmap, modernization work, and longer-term improvement plan, see `POSSIBLE_IMPROVEMENTS.md`.
+For the current roadmap, modernization work, and longer-term improvement plan, see [docs/POSSIBLE_IMPROVEMENTS.md](docs/POSSIBLE_IMPROVEMENTS.md). For the developer/architecture tour, see [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).

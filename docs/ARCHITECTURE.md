@@ -1,6 +1,6 @@
 # Architecture
 
-Developer/agent-facing architecture of the Akatsuki Group Monitor. For commands and the short rule-set, see [CLAUDE.md](CLAUDE.md). For the user-facing tour, see [README.md](README.md).
+Developer/agent-facing architecture of the Akatsuki Group Monitor. For commands and the short rule-set, see [CLAUDE.md](../CLAUDE.md). For the user-facing tour, see [README.md](../README.md).
 
 ## 1. Shape of the system
 

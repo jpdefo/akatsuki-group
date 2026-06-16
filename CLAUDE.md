@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Agent-facing quick reference for the Akatsuki Group Monitor. Keep this concise; deep detail lives in [ARCHITECTURE.md](ARCHITECTURE.md). User-facing overview is in [README.md](README.md).
+Agent-facing quick reference for the Akatsuki Group Monitor. Keep this concise; deep detail lives in [ARCHITECTURE.md](docs/ARCHITECTURE.md). User-facing overview is in [README.md](README.md).
 
 ## What this is
 A SteamGifts giveaway-group operations dashboard: a Python server (`server.py`) for local APIs + refresh jobs + static export, and a vanilla HTML/CSS/JS frontend (`app.js` + `client/`). State is JSON under `data/`. Deployed to GitHub Pages from source.

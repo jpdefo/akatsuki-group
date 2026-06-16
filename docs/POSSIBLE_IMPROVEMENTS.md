@@ -32,7 +32,7 @@ What to improve:
 
 - add `.env.example` with every supported variable
 - add `requirements.txt` or `pyproject.toml`
-- document the authenticated collector workflow, public sync workflow, and publish flow in one place
+- document the userscript collector workflow and the "Publish to GitHub Pages" flow in one place
 - document the important JSON files and what owns them
 
 ### 2. Code Organization
@@ -40,13 +40,11 @@ What to improve:
 What is missing or weak now:
 
 - `app.js` is large and mixes state loading, normalization, rendering, admin actions, and business rules
-- collectors still duplicate parsing logic across three implementations
 - the project has strong domain rules, but their boundaries are not always explicit
 
 What to improve:
 
 - split `app.js` into smaller feature modules
-- extract shared collector parsing helpers where practical
 - keep cycle logic, summer-event logic, and sync normalization in narrower units
 
 ### 3. Test Coverage And Regression Safety
@@ -157,13 +155,12 @@ Tasks:
 
 - split `app.js` into focused modules
 - separate rendering from normalization and state mutation where possible
-- reduce duplication between collector implementations
+- decouple the global `state`/`elements` singletons so logic becomes unit-testable
 
 Expected result:
 
 - future changes become smaller and easier to review
 - bugs become easier to isolate
-- collector fixes can be applied more consistently
 
 ### Phase 4: Data Contracts And Admin Reliability
 
@@ -211,6 +208,10 @@ If the goal is to make the project more professional without slowing current fea
 3. Add Python checks to GitHub Actions.
 4. Add initial tests for cycle rules and sync normalization.
 5. Start splitting `app.js` by feature area.
+6. Use the full giveaway-page title instead of the truncated list-row title in the userscript's `enrichGiveaway` (the detail page is already fetched for the point cost). The truncated title pollutes display and weakens HLTB matching.
+7. Add a "clear GitHub token" action in admin next to the existing token button, and document using a fine-grained, short-expiry, repo-scoped token.
+
+For ad-hoc code review of a change, run `/code-review` (or `/code-review ultra` for a deep multi-agent pass) on the branch rather than maintaining a static review document.
 
 ## Notes For Future Updates
 
