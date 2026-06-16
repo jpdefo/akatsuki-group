@@ -387,13 +387,6 @@ def is_summer_event_kind(kind: str | None) -> bool:
     return value in {"summer_event", "summer-event", "summer event"}
 
 
-def is_giveaway_ended(giveaway: dict) -> bool:
-    if giveaway.get("entriesFinalized"):
-        return True
-    end = parse_datetime(giveaway.get("endDate"))
-    return bool(end and end <= datetime.now(timezone.utc))
-
-
 def has_captured_store_price(giveaway: dict) -> bool:
     return bool(giveaway.get("steamPriceChecked")) and giveaway.get("steamPricePoints") not in (None, "")
 
@@ -757,11 +750,14 @@ def with_giveaway_store_price(giveaway: dict, price_cache: dict) -> dict:
         enriched["steamStoreType"] = store_type
         enriched["steamStoreId"] = store_id
 
-    # Once a summer-event giveaway has ended, its base points are final. Keep the
-    # price that was captured while it was live instead of re-applying the current
-    # Steam price, so a later price change never retroactively alters the points it
-    # awarded. (A manual summerBasePointsOverride still wins on the frontend.)
-    if is_giveaway_ended(giveaway) and has_captured_store_price(giveaway):
+    # Once a summer-event giveaway has its final snapshot captured, its base points
+    # are frozen: keep the price recorded at that snapshot instead of re-applying the
+    # current Steam price, so a later price change never retroactively alters the
+    # points it awarded. Until then (including the "snapshot pending" window) the
+    # current price is still applied, and the fall-through below captures it at the
+    # moment the snapshot is taken. (A manual summerBasePointsOverride still wins on
+    # the frontend.)
+    if giveaway.get("entriesFinalized") and has_captured_store_price(giveaway):
         return enriched
 
     price_entry = get_price_cache_entry(
