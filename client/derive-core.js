@@ -630,7 +630,10 @@ export function findGiveawayForWin(win, ctx) {
   const giveaways = ctx?.giveaways || [];
   const sourceId = String(win.giveawaySourceId || "").trim();
   if (sourceId) {
-    const bySourceId = giveaways.find((giveaway) => giveaway.sourceId === sourceId);
+    // Use the sourceId index when the ctx provides one (avoids an O(giveaways)
+    // scan per win); fall back to a linear scan otherwise.
+    const bySourceId = ctx?.giveawayBySourceId?.get(sourceId)
+      || giveaways.find((giveaway) => giveaway.sourceId === sourceId);
     if (bySourceId) {
       return bySourceId;
     }
@@ -1228,6 +1231,7 @@ export function buildPenaltyAndMemberDerived({ sync = {}, progress = {}, overrid
   const graph = buildEntityGraph({ sync, progress, overrides, settings });
   const ctx = {
     giveaways: graph.giveaways,
+    giveawayBySourceId: new Map(graph.giveaways.map((giveaway) => [giveaway.sourceId, giveaway])),
     gamesById: graph.gamesById,
     membersById: graph.membersById,
     syncGiveaways: graph.syncGiveaways,

@@ -5834,7 +5834,8 @@ function findGiveawayForWin(win) {
 
   const sourceId = String(win.giveawaySourceId || "").trim();
   if (sourceId) {
-    const bySourceId = state.giveaways.find((giveaway) => giveaway.sourceId === sourceId);
+    const bySourceId = getLookupCache().giveawayBySourceId.get(sourceId)
+      || state.giveaways.find((giveaway) => giveaway.sourceId === sourceId);
     if (bySourceId) {
       return bySourceId;
     }
@@ -6334,8 +6335,44 @@ function isEmptySyncPayload(payload) {
   return !payload || (typeof payload === "object" && !Array.isArray(payload) && Object.keys(payload).length === 0);
 }
 
+// Memoized id / sourceId indexes for the hot lookups (findById,
+// findGiveawayForWin) that the penalty/progress/member evaluations run inside
+// tight loops. Previously each was a linear scan, making a render O(wins ×
+// giveaways) — ~8M scans on the real dataset. The cache rebuilds whenever any
+// underlying state array is replaced (the common case: sync import +
+// applyManualOverrides swap in fresh arrays). A Map miss falls back to a linear
+// scan, so results stay correct even if an array was mutated in place.
+let lookupCache = null;
+function getLookupCache() {
+  const { games = [], members = [], giveaways = [], wins = [] } = state;
+  if (
+    lookupCache
+    && lookupCache.games === games
+    && lookupCache.members === members
+    && lookupCache.giveaways === giveaways
+    && lookupCache.wins === wins
+  ) {
+    return lookupCache;
+  }
+  lookupCache = {
+    games,
+    members,
+    giveaways,
+    wins,
+    byId: {
+      games: new Map(games.map((item) => [item.id, item])),
+      members: new Map(members.map((item) => [item.id, item])),
+      giveaways: new Map(giveaways.map((item) => [item.id, item])),
+      wins: new Map(wins.map((item) => [item.id, item])),
+    },
+    giveawayBySourceId: new Map(giveaways.map((item) => [item.sourceId, item])),
+  };
+  return lookupCache;
+}
+
 function findById(collection, id) {
-  return state[collection].find((item) => item.id === id);
+  const byId = getLookupCache().byId[collection];
+  return (byId && byId.get(id)) || state[collection].find((item) => item.id === id);
 }
 
 function buildOptions(items, placeholder, labelGetter) {
