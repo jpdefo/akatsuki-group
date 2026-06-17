@@ -8,8 +8,38 @@
 // take the merged override map and a small settings object explicitly, so the
 // caller decides whether to feed shared-only overrides (the public, precomputed
 // view) or shared + local overrides (the admin's live recompute).
-import { parseDate } from "./utils.js";
+import { parseDate, normalizeGameTitle } from "./utils.js";
 import { getPeriodInfo } from "./cycle-rules.js";
+
+// --- Membership ----------------------------------------------------------
+// Stable per-member key used by member overrides. Matches app.js's
+// getStableCycleMemberKey for member objects (steamgifts username / name).
+export function getStableMemberKey(member) {
+  const rawKey = String(
+    member?.steamgiftsUsername || member?.name || member?.username || member?.id || "",
+  ).trim();
+  return rawKey ? normalizeGameTitle(rawKey).replace(/\s+/g, "-") : "";
+}
+
+// Effective active flag: a membership override (active/inactive) wins over the
+// synced flag. This is the "membership is only known after applying overrides"
+// step that everything downstream (active count, thresholds) depends on.
+export function getEffectiveMemberActive(member, overrides) {
+  const key = getStableMemberKey(member);
+  const status = key ? String(overrides?.members?.[key]?.membershipStatus || "").toLowerCase() : "";
+  if (status === "active") {
+    return true;
+  }
+  if (status === "inactive") {
+    return false;
+  }
+  return Boolean(member?.isActiveMember);
+}
+
+// Rule-9 minimum monthly entries: 10% of the active-member count (min 1).
+export function computeMinimumEntriesRequired(activeMembers) {
+  return Math.max(1, Math.floor(Number(activeMembers || 0) * 0.1));
+}
 
 // --- Override merge -------------------------------------------------------
 

@@ -16,7 +16,13 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import { buildSummerEventDerived } from "../client/derive-core.js";
+import {
+  buildSummerEventDerived,
+  normalizeOverrideState,
+  getStableMemberKey,
+  getEffectiveMemberActive,
+  computeMinimumEntriesRequired,
+} from "../client/derive-core.js";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -49,19 +55,51 @@ function main() {
   const overrides = extractOverrides(readJson(join(inputDir, "overrides.json"), {}));
 
   const giveaways = Array.isArray(sync.giveaways) ? sync.giveaways : [];
-  const syncMembers = Array.isArray(sync.members) ? sync.members : [];
+  const syncMembers = (Array.isArray(sync.members) ? sync.members : []).filter(
+    (member) => String(member?.username || "").trim(),
+  );
   const now = Date.now();
 
   // Shared overrides only — the public, precomputed view. Browsers with local
   // (unpublished) overrides recompute live instead of trusting this file.
+  const mergedOverrides = normalizeOverrideState(overrides);
+
   const summerEvent = buildSummerEventDerived({
     giveaways,
     members: [],
     syncMembers,
-    overrides,
+    overrides: mergedOverrides,
     settings: { summerRuleset: "auto", currentDate: todayISO() },
     now,
   });
+
+  // Membership: the synced active count drives the Rule-9 threshold (matches
+  // app.js, which counts raw synced actives), while the per-member effective
+  // flag (membership override applied) drives active/inactive bucket placement.
+  const memberRows = syncMembers.map((member) => {
+    const username = String(member.username).trim();
+    const memberLike = {
+      username,
+      steamgiftsUsername: username,
+      name: username,
+      isActiveMember: Boolean(member.isActiveMember),
+    };
+    return {
+      username,
+      key: getStableMemberKey(memberLike),
+      syncActive: Boolean(member.isActiveMember),
+      active: getEffectiveMemberActive(memberLike, mergedOverrides),
+    };
+  });
+  const syncActiveMembers = memberRows.filter((member) => member.syncActive).length;
+  const effectiveActiveMembers = memberRows.filter((member) => member.active).length;
+  const membership = {
+    syncActiveMembers,
+    effectiveActiveMembers,
+    effectiveInactiveMembers: memberRows.length - effectiveActiveMembers,
+    minimumEntriesRequired: computeMinimumEntriesRequired(syncActiveMembers),
+    members: memberRows,
+  };
 
   const derived = {
     schemaVersion: 1,
@@ -71,10 +109,15 @@ function main() {
       giveaways: giveaways.length,
       members: syncMembers.length,
     },
+    membership,
     summerEvent,
   };
 
   writeFileSync(outFile, `${JSON.stringify(derived, null, 2)}\n`, "utf8");
+  process.stdout.write(
+    `  membership: ${membership.syncActiveMembers} synced-active (min entries ${membership.minimumEntriesRequired}), `
+    + `${membership.effectiveActiveMembers} effective-active / ${membership.effectiveInactiveMembers} inactive\n`,
+  );
   const periods = summerEvent.periods
     .map((p) => `${p.label}: ${p.counts.trackedGiveaways} GAs (${p.counts.activeGiveaways} active / ${p.counts.finishedGiveaways} finished), ${p.counts.participants} participants`)
     .join("\n  ");

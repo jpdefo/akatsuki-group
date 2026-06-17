@@ -4925,7 +4925,7 @@ function buildEvidenceNoteMarkup(note) {
 }
 
 function computeMinimumEntriesRequired() {
-  return Math.max(1, Math.floor(Number(state.settings.activeMembers) * 0.1));
+  return derive.computeMinimumEntriesRequired(state.settings.activeMembers);
 }
 
 function exportData() {
