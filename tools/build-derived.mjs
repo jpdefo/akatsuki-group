@@ -127,7 +127,8 @@ function main() {
     summerEvent,
   };
 
-  writeFileSync(outFile, `${JSON.stringify(derived, null, 2)}\n`, "utf8");
+  // Compact JSON (no indentation) to minimize what visitors download and parse.
+  writeFileSync(outFile, `${JSON.stringify(derived)}\n`, "utf8");
   process.stdout.write(
     `  membership: ${membership.syncActiveMembers} synced-active (min entries ${membership.minimumEntriesRequired}), `
     + `${membership.effectiveActiveMembers} effective-active / ${membership.effectiveInactiveMembers} inactive\n`,

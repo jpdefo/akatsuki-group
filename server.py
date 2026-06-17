@@ -133,9 +133,16 @@ def load_json(path: Path, default):
 _SAVE_LOCK = threading.Lock()
 
 
-def save_json(path: Path, payload) -> None:
+def save_json(path: Path, payload, *, compact: bool = False) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    data = json.dumps(payload, indent=2, ensure_ascii=False)
+    # Canonical data/ files stay pretty-printed for readable git diffs; published
+    # API payloads use compact JSON to cut whitespace the browser must download
+    # and parse.
+    data = (
+        json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
+        if compact
+        else json.dumps(payload, indent=2, ensure_ascii=False)
+    )
     with _SAVE_LOCK:
         fd, tmp_name = tempfile.mkstemp(dir=str(path.parent), prefix=f".{path.name}.", suffix=".tmp")
         try:
@@ -935,10 +942,24 @@ def get_media_payload(app_ids: list[int]) -> dict:
     return {"updatedAt": media_cache.get("updatedAt"), "results": results}
 
 
+# Image URLs derivable from appId on the client (normalizeGiveawayMedia rebuilds
+# header/capsule images from getSteamMediaUrls). Stripping them from the published
+# giveaways removes ~1.2MB of redundant text without losing anything — the
+# frontend reconstructs them. steamAppUrl is kept (used to parse appId + as the
+# store link). The full URLs remain in data/ and in the media cache.
+_DERIVABLE_GIVEAWAY_MEDIA_FIELDS = ("headerImageUrl", "capsuleImageUrl", "capsuleSmallUrl")
+
+
 def build_sync_export_payload(sync_payload: dict, *, media_lookup: dict[int, dict] | None = None) -> dict:
+    def slim(giveaway: dict) -> dict:
+        trimmed = dict(giveaway)
+        for field in _DERIVABLE_GIVEAWAY_MEDIA_FIELDS:
+            trimmed.pop(field, None)
+        return trimmed
+
     return {
         **sync_payload,
-        "giveaways": [with_giveaway_media(giveaway, media_lookup) for giveaway in sync_payload.get("giveaways", [])],
+        "giveaways": [slim(giveaway) for giveaway in sync_payload.get("giveaways", [])],
     }
 
 
@@ -2338,14 +2359,16 @@ def export_static_site(output_dir: Path) -> None:
     (output_dir / ".nojekyll").write_text("", encoding="utf-8")
     copy2(output_dir / "index.html", output_dir / "404.html")
 
-    save_json(api_dir / "steamgifts-sync.json", sync_export)
-    save_json(api_dir / "steam-progress.json", build_progress_export_payload(progress_payload))
-    save_json(api_dir / "steam-library.json", library_payload)
-    save_json(api_dir / "dashboard.json", dashboard_payload)
-    save_json(api_dir / "members.json", members_payload)
-    save_json(api_dir / "giveaways.json", giveaways_payload)
-    save_json(api_dir / "overrides.json", overrides_payload)
-    save_json(api_dir / "snapshot.json", manifest_payload)
+    # Published API payloads use compact JSON (no indentation) to minimize what
+    # visitors download and parse; data/ stays pretty-printed for git diffs.
+    save_json(api_dir / "steamgifts-sync.json", sync_export, compact=True)
+    save_json(api_dir / "steam-progress.json", build_progress_export_payload(progress_payload), compact=True)
+    save_json(api_dir / "steam-library.json", library_payload, compact=True)
+    save_json(api_dir / "dashboard.json", dashboard_payload, compact=True)
+    save_json(api_dir / "members.json", members_payload, compact=True)
+    save_json(api_dir / "giveaways.json", giveaways_payload, compact=True)
+    save_json(api_dir / "overrides.json", overrides_payload, compact=True)
+    save_json(api_dir / "snapshot.json", manifest_payload, compact=True)
     build_derived_json(api_dir)
     validate_static_site(output_dir)
     print(f"Static site exported to {output_dir}")
