@@ -123,11 +123,7 @@ function main() {
     },
     membership,
     penalties: penaltiesAndMembers.penalties,
-    members: {
-      counts: penaltiesAndMembers.counts,
-      active: penaltiesAndMembers.activeMembers,
-      inactive: penaltiesAndMembers.inactiveMembers,
-    },
+    members: penaltiesAndMembers.members,
     summerEvent,
   };
 
@@ -136,9 +132,10 @@ function main() {
     `  membership: ${membership.syncActiveMembers} synced-active (min entries ${membership.minimumEntriesRequired}), `
     + `${membership.effectiveActiveMembers} effective-active / ${membership.effectiveInactiveMembers} inactive\n`,
   );
+  const pen = penaltiesAndMembers.penalties;
   process.stdout.write(
-    `  penalties owed: ${penaltiesAndMembers.counts.penalties}`
-    + `${penaltiesAndMembers.penalties.length ? ` — ${penaltiesAndMembers.penalties.slice(0, 8).map((p) => `${p.member} (${p.game})`).join("; ")}${penaltiesAndMembers.penalties.length > 8 ? " …" : ""}` : ""}\n`,
+    `  penalties: ${pen.counts.overdue} owed now, ${pen.counts.comingDue} coming due, ${pen.counts.settled} settled`
+    + `${pen.owedNow.length ? ` — ${pen.owedNow.slice(0, 8).map((p) => `${p.member} (${p.game})`).join("; ")}${pen.owedNow.length > 8 ? " …" : ""}` : ""}\n`,
   );
   const periods = summerEvent.periods
     .map((p) => `${p.label}: ${p.counts.trackedGiveaways} GAs (${p.counts.activeGiveaways} active / ${p.counts.finishedGiveaways} finished), ${p.counts.participants} participants`)

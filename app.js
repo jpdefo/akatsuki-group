@@ -186,12 +186,27 @@ function bootstrap() {
 }
 
 async function loadInitialData() {
+  // Fast path: pages whose data is fully precomputed in api/derived.json
+  // (penalties, active/inactive members) can render straight from it and skip
+  // downloading the multi-megabyte raw sync + Steam progress. Only safe when the
+  // browser has no local (unpublished) overrides, since derived.json is built
+  // from shared overrides only. Falls back to the full load on any miss.
+  if (detectDerivedFastPage() && !hasLocalOverrides()) {
+    if (await tryDerivedFastPath()) {
+      return;
+    }
+  }
+  await loadFullData();
+}
+
+async function loadFullData() {
   // Fetch every payload in parallel, apply them all with rendering suspended,
   // then paint once. Previously this was a sequential chain (sync -> dashboard ->
   // progress/overrides) that re-rendered after each step, so derived numbers
   // (members, penalties) appeared before overrides/progress were applied and then
   // visibly corrected themselves. One round-trip, one render, correct the first
   // time.
+  runtime.derivedFastPath = false;
   runtime.renderSuspended = true;
   try {
     const [syncResult, dashboardResult, overridesResult, progressResult] = await Promise.allSettled([
@@ -211,6 +226,45 @@ async function loadInitialData() {
     render();
   }
   void loadVisibleGameMedia({ silent: true });
+}
+
+// Pages fully served by derived.json: penalties + active/inactive member lists.
+// Their table ids appear only on those pages, so presence is a reliable signal.
+function detectDerivedFastPage() {
+  return Boolean(elements.penaltiesTable || elements.activeUsersTable || elements.inactiveUsersTable);
+}
+
+function hasLocalOverrides() {
+  const overrides = state.overrides || {};
+  return ["games", "wins", "giveaways", "cycleMembers", "members"].some(
+    (bucket) => overrides[bucket] && Object.keys(overrides[bucket]).length > 0,
+  );
+}
+
+async function tryDerivedFastPath() {
+  try {
+    // derived.json carries the precomputed page data; the small dashboard.json
+    // still feeds the group snapshot / status labels. The big sync + progress
+    // payloads are skipped entirely.
+    const [derivedResult, dashboardResult] = await Promise.allSettled([
+      fetchApiJson("./api/derived.json"),
+      fetchApiJson("./api/dashboard"),
+    ]);
+    const payload = settledValue(derivedResult)?.payload;
+    if (!payload || !payload.schemaVersion) {
+      return false;
+    }
+    runtime.derived = payload;
+    runtime.derivedFastPath = true;
+    const dashboard = settledValue(dashboardResult)?.payload;
+    if (dashboard) {
+      state.sync = { ...state.sync, dashboard };
+    }
+    render();
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 function settledValue(result) {
@@ -676,6 +730,18 @@ function renderSummary() {
 
 function renderSyncStatus() {
   if (!elements.syncStatus) {
+    return;
+  }
+  // On the derived fast path the raw sync isn't fetched, so show a neutral
+  // snapshot note instead of the misleading "no sync loaded" alert.
+  if (runtime.derivedFastPath) {
+    const syncedAt = state.sync?.dashboard?.summary?.syncedAt;
+    elements.syncStatus.innerHTML = `
+      <article class="alert-card info">
+        <h3>Published snapshot</h3>
+        <p>Showing precomputed data${syncedAt ? ` from the ${escapeHtml(formatDateTime(syncedAt))} sync` : ""}.</p>
+      </article>
+    `;
     return;
   }
   const sync = state.sync?.steamgifts;
@@ -2172,11 +2238,22 @@ function renderMemberBuckets() {
   renderMemberBucketTable(elements.inactiveUsersTable, false);
 }
 
+function getMemberBucketRows(isActiveMember) {
+  const sortMode = isActiveMember ? elements.activeUsersSort?.value || "wins" : "wins";
+  // Fast path: render the precomputed bucket rows from derived.json (same shape
+  // as computeMemberBucketRows), re-sorted for the active page's sort control.
+  if (runtime.derivedFastPath && runtime.derived?.members) {
+    const source = isActiveMember ? runtime.derived.members.active : runtime.derived.members.inactive;
+    return [...(source || [])].sort((left, right) => derive.compareMemberBucketRows(left, right, sortMode));
+  }
+  return computeMemberBucketRows(isActiveMember);
+}
+
 function renderMemberBucketTable(target, isActiveMember) {
   if (!target) {
     return;
   }
-  const rows = computeMemberBucketRows(isActiveMember);
+  const rows = getMemberBucketRows(isActiveMember);
   if (!rows.length) {
     target.innerHTML = buildEmptyRow(isActiveMember ? 5 : 6);
     return;
@@ -2887,6 +2964,10 @@ function renderPenaltiesPage() {
   if (!elements.penaltiesTable) {
     return;
   }
+  if (runtime.derivedFastPath && runtime.derived?.penalties) {
+    renderPenaltiesPageFromDerived(runtime.derived.penalties);
+    return;
+  }
   if (!isPenaltyDataReady()) {
     elements.penaltiesTable.innerHTML = `<tr><td colspan="6" class="meta-line">Loading penalty data — waiting for Steam playtime/achievements and overrides…</td></tr>`;
     if (elements.penaltiesSummary) {
@@ -2960,6 +3041,71 @@ function renderPenaltiesPage() {
           <td>${escapeHtml(achievementsCell)}</td>
           <td>${buildBadge("success", "Settled")}</td>
           <td>${escapeHtml(record.giveaway.createdAt ? formatDate(record.giveaway.createdAt) : "-")}</td>
+        </tr>
+      `);
+    }
+  }
+
+  elements.penaltiesTable.innerHTML = rows.length ? rows.join("") : buildEmptyRow(6);
+}
+
+// Renders the penalties table straight from precomputed derived.json rows (the
+// fast path), formatting raw figures with the same helpers the live path uses.
+function renderPenaltiesPageFromDerived(penalties) {
+  const filter = elements.penaltiesFilter?.value || "all";
+  const owedNow = penalties.owedNow || [];
+  const comingDue = penalties.comingDue || [];
+  const settled = penalties.settled || [];
+
+  if (elements.penaltiesSummary) {
+    elements.penaltiesSummary.textContent = `${owedNow.length} owed now • ${comingDue.length} coming due • ${settled.length} settled`;
+  }
+
+  const linkedGame = (title, url) =>
+    url
+      ? `<a class="linked-title" href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(title)}</a>`
+      : escapeHtml(title);
+  const hoursCell = (row) => `${formatHours(Number(row.currentHours || 0))} / ${formatHours(Number(row.requiredHours || 0))}`;
+  const achievementsCell = (row) => `${Number(row.earnedAchievements || 0)} / ${Number(row.requiredAchievements || 0)}`;
+
+  const rows = [];
+
+  if (filter === "all" || filter === "overdue" || filter === "coming-due") {
+    [
+      ...owedNow.map((row) => ({ ...row, status: "overdue" })),
+      ...comingDue.map((row) => ({ ...row, status: "coming-due" })),
+    ]
+      .filter((row) => filter === "all" || row.status === filter)
+      .sort((left, right) => new Date(left.deadline || 0).getTime() - new Date(right.deadline || 0).getTime())
+      .forEach((row) => {
+        const overdue = row.status === "overdue";
+        const statusBadge = buildBadge(
+          overdue ? "danger" : "warning",
+          overdue ? `Overdue ${row.daysOverdue}d` : `Due in ${row.daysLeft}d`,
+        );
+        rows.push(`
+          <tr>
+            <td>${escapeHtml(row.member)}</td>
+            <td>${linkedGame(row.game, row.giveawayUrl)}</td>
+            <td>${escapeHtml(hoursCell(row))}</td>
+            <td>${escapeHtml(achievementsCell(row))}</td>
+            <td>${statusBadge}</td>
+            <td>${escapeHtml(formatPenaltyDeadline(row.deadline ? new Date(row.deadline) : null))}</td>
+          </tr>
+        `);
+      });
+  }
+
+  if (filter === "all" || filter === "settled") {
+    for (const row of settled) {
+      rows.push(`
+        <tr>
+          <td>${escapeHtml(row.payer)}</td>
+          <td>${linkedGame(row.game, row.giveawayPageUrl)}</td>
+          <td>${escapeHtml(hoursCell(row))}</td>
+          <td>${escapeHtml(achievementsCell(row))}</td>
+          <td>${buildBadge("success", "Settled")}</td>
+          <td>${escapeHtml(row.createdAt ? formatDate(row.createdAt) : "-")}</td>
         </tr>
       `);
     }
@@ -6156,6 +6302,14 @@ function updateOverrideField(bucketName, key, fieldName, value) {
   state.overrides = overrides;
   applyManualOverrides();
   persistAndRender();
+
+  // A local override now exists, so derived.json (shared-overrides only) no
+  // longer matches. Leave the precomputed fast path and load the full dataset so
+  // the edit takes effect and recomputes live.
+  if (runtime.derivedFastPath) {
+    runtime.derivedFastPath = false;
+    void loadFullData();
+  }
 }
 
 function clearStoredSyncState(options = {}) {

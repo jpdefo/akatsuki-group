@@ -1173,8 +1173,57 @@ export function buildEntityGraph({ sync = {}, progress = {}, overrides = {}, set
   };
 }
 
+export function getGiveawayPageUrl(giveaway) {
+  if (!giveaway) {
+    return "";
+  }
+  const note = String(giveaway.notes || giveaway.url || "").trim();
+  if (/^https?:\/\//.test(note)) {
+    return note;
+  }
+  const code = String(giveaway.code || "").trim() || String(giveaway.sourceId || "").replace(/^sg-/, "");
+  return code ? `https://www.steamgifts.com/giveaway/${code}/` : "";
+}
+
+// Penalty giveaways that have been created, resolved to the won giveaway they
+// settle (the audit/settled list). Mirrors app.js getPenaltyGiveawayRecords.
+export function getPenaltyGiveawayRecords(wins, ctx) {
+  const giveaways = ctx?.giveaways || [];
+  return giveaways
+    .filter((giveaway) => getGiveawayKind(giveaway) === "penalty")
+    .map((giveaway) => {
+      const targetKey = getPenaltyForCodeKey(giveaway);
+      const target = targetKey ? giveaways.find((item) => getGiveawayCodeKey(item) === targetKey) || null : null;
+      const targetWin = target ? wins.find((win) => getWinGiveawayCodeKey(win, ctx) === targetKey) || null : null;
+      return {
+        giveaway,
+        target,
+        targetWin,
+        creator: ctx?.membersById?.get(giveaway.creatorId) || null,
+        targetGame: targetWin ? ctx?.gamesById?.get(targetWin.gameId) || null : null,
+      };
+    })
+    .sort((left, right) => String(right.giveaway.createdAt || "").localeCompare(String(left.giveaway.createdAt || "")));
+}
+
+// Per-win "have / need" raw figures for the penalties table cells. The frontend
+// formats them (formatHours etc.) so number formatting stays single-source there.
+function penaltyProgressFigures(win, ctx) {
+  if (!win) {
+    return { currentHours: null, requiredHours: null, earnedAchievements: null, requiredAchievements: null };
+  }
+  const progress = evaluateMonthlyProgress(win, ctx);
+  return {
+    currentHours: Number(win.currentHours || 0),
+    requiredHours: progress.requiredHours || 0,
+    earnedAchievements: Number(win.earnedAchievements || 0),
+    requiredAchievements: progress.requiredAchievements || 0,
+  };
+}
+
 // One-call pipeline for the Node precompute: build the graph, then emit the
-// penalty list and active/inactive member rows.
+// penalty rows (owed/coming-due/settled) and active/inactive member rows — all
+// shaped so the frontend can render them directly without recomputing.
 export function buildPenaltyAndMemberDerived({ sync = {}, progress = {}, overrides = {}, settings = {} } = {}) {
   const graph = buildEntityGraph({ sync, progress, overrides, settings });
   const ctx = {
@@ -1186,26 +1235,58 @@ export function buildPenaltyAndMemberDerived({ sync = {}, progress = {}, overrid
     penaltyReady: true,
   };
 
-  const penalties = getOutstandingPenalties(graph.wins, ctx).map((debt) => ({
-    member: debt.member?.name || debt.win.creatorUsername || "Unknown member",
-    memberKey: debt.member ? getStableMemberKey(debt.member) : "",
-    game: debt.game?.title || "a won game",
-    popMonth: debt.popMonth,
-    deadline: debt.deadline instanceof Date ? debt.deadline.toISOString() : null,
-    giveawayUrl: getWinGiveawayUrl(debt.win),
+  const owedNow = [];
+  const comingDue = [];
+  for (const win of graph.wins) {
+    const info = getWinPenaltyInfo(win, ctx);
+    if (!info || (info.status !== "overdue" && info.status !== "coming-due")) {
+      continue;
+    }
+    const member = ctx.membersById.get(win.memberId);
+    const game = ctx.gamesById.get(win.gameId);
+    const row = {
+      member: member?.name || win.creatorUsername || "Unknown member",
+      memberKey: member ? getStableMemberKey(member) : "",
+      game: game?.title || win.title || "",
+      giveawayUrl: getWinGiveawayUrl(win),
+      deadline: info.deadline instanceof Date ? info.deadline.toISOString() : null,
+      popMonth: info.popMonth,
+      ...penaltyProgressFigures(win, ctx),
+    };
+    if (info.status === "overdue") {
+      row.daysOverdue = info.daysOverdue;
+      owedNow.push(row);
+    } else {
+      row.daysLeft = info.daysLeft;
+      comingDue.push(row);
+    }
+  }
+  const byDeadline = (left, right) => new Date(left.deadline || 0).getTime() - new Date(right.deadline || 0).getTime();
+  owedNow.sort(byDeadline);
+  comingDue.sort(byDeadline);
+
+  const settled = getPenaltyGiveawayRecords(graph.wins, ctx).map((record) => ({
+    payer: record.creator?.name || record.giveaway.creatorUsername || "Unknown member",
+    game: record.targetGame?.title || record.target?.title || record.giveaway.title || "",
+    giveawayPageUrl: getGiveawayPageUrl(record.giveaway),
+    createdAt: record.giveaway.createdAt || null,
+    ...penaltyProgressFigures(record.targetWin, ctx),
   }));
 
   const activeMembers = computeMemberBucketRows(graph.members, graph.wins, ctx, true, "wins");
   const inactiveMembers = computeMemberBucketRows(graph.members, graph.wins, ctx, false, "wins");
 
   return {
-    penalties,
-    counts: {
-      penalties: penalties.length,
-      activeMembers: activeMembers.length,
-      inactiveMembers: inactiveMembers.length,
+    penalties: {
+      counts: { overdue: owedNow.length, comingDue: comingDue.length, settled: settled.length },
+      owedNow,
+      comingDue,
+      settled,
     },
-    activeMembers,
-    inactiveMembers,
+    members: {
+      counts: { active: activeMembers.length, inactive: inactiveMembers.length },
+      active: activeMembers,
+      inactive: inactiveMembers,
+    },
   };
 }
