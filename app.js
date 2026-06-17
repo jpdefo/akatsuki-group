@@ -27,6 +27,16 @@ import {
   getPreviousCyclePeriod,
   getRequiredHours,
 } from "./client/cycle-rules.js";
+import * as derive from "./client/derive-core.js";
+
+// Settings bundle the shared summer-event calc needs (ruleset + reference date).
+// Kept as a helper so every delegating wrapper feeds the core identically.
+function summerSettings() {
+  return {
+    summerRuleset: state.settings.summerRuleset,
+    currentDate: state.settings.currentDate,
+  };
+}
 
 const STORAGE_KEY = "akatsuki-monitor-state-v1";
 const GITHUB_PUBLISH_REPO = { owner: "jpdefo", name: "akatsuki-group", branch: "main" };
@@ -176,12 +186,27 @@ function bootstrap() {
 }
 
 async function loadInitialData() {
+  // Fast path: pages whose data is fully precomputed in api/derived.json
+  // (penalties, active/inactive members) can render straight from it and skip
+  // downloading the multi-megabyte raw sync + Steam progress. Only safe when the
+  // browser has no local (unpublished) overrides, since derived.json is built
+  // from shared overrides only. Falls back to the full load on any miss.
+  if (detectDerivedFastPage() && !hasLocalOverrides()) {
+    if (await tryDerivedFastPath()) {
+      return;
+    }
+  }
+  await loadFullData();
+}
+
+async function loadFullData() {
   // Fetch every payload in parallel, apply them all with rendering suspended,
   // then paint once. Previously this was a sequential chain (sync -> dashboard ->
   // progress/overrides) that re-rendered after each step, so derived numbers
   // (members, penalties) appeared before overrides/progress were applied and then
   // visibly corrected themselves. One round-trip, one render, correct the first
   // time.
+  runtime.derivedFastPath = false;
   runtime.renderSuspended = true;
   try {
     const [syncResult, dashboardResult, overridesResult, progressResult] = await Promise.allSettled([
@@ -201,6 +226,45 @@ async function loadInitialData() {
     render();
   }
   void loadVisibleGameMedia({ silent: true });
+}
+
+// Pages fully served by derived.json: penalties + active/inactive member lists.
+// Their table ids appear only on those pages, so presence is a reliable signal.
+function detectDerivedFastPage() {
+  return Boolean(elements.penaltiesTable || elements.activeUsersTable || elements.inactiveUsersTable);
+}
+
+function hasLocalOverrides() {
+  const overrides = state.overrides || {};
+  return ["games", "wins", "giveaways", "cycleMembers", "members"].some(
+    (bucket) => overrides[bucket] && Object.keys(overrides[bucket]).length > 0,
+  );
+}
+
+async function tryDerivedFastPath() {
+  try {
+    // derived.json carries the precomputed page data; the small dashboard.json
+    // still feeds the group snapshot / status labels. The big sync + progress
+    // payloads are skipped entirely.
+    const [derivedResult, dashboardResult] = await Promise.allSettled([
+      fetchApiJson("./api/derived.json"),
+      fetchApiJson("./api/dashboard"),
+    ]);
+    const payload = settledValue(derivedResult)?.payload;
+    if (!payload || !payload.schemaVersion) {
+      return false;
+    }
+    runtime.derived = payload;
+    runtime.derivedFastPath = true;
+    const dashboard = settledValue(dashboardResult)?.payload;
+    if (dashboard) {
+      state.sync = { ...state.sync, dashboard };
+    }
+    render();
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 function settledValue(result) {
@@ -666,6 +730,18 @@ function renderSummary() {
 
 function renderSyncStatus() {
   if (!elements.syncStatus) {
+    return;
+  }
+  // On the derived fast path the raw sync isn't fetched, so show a neutral
+  // snapshot note instead of the misleading "no sync loaded" alert.
+  if (runtime.derivedFastPath) {
+    const syncedAt = state.sync?.dashboard?.summary?.syncedAt;
+    elements.syncStatus.innerHTML = `
+      <article class="alert-card info">
+        <h3>Published snapshot</h3>
+        <p>Showing precomputed data${syncedAt ? ` from the ${escapeHtml(formatDateTime(syncedAt))} sync` : ""}.</p>
+      </article>
+    `;
     return;
   }
   const sync = state.sync?.steamgifts;
@@ -2008,255 +2084,62 @@ function sortSummerEventGiveaways(giveaways, sortValue, memberIndex = getSummerE
 }
 
 function getTrackedSummerEventGiveaways() {
-  // Honor the manual kind override: the raw sync giveaways don't carry the
-  // override field (it's applied to state.giveaways), so look it up by code key.
-  // This way re-typing a giveaway (summer_event -> extra) removes it here too,
-  // and an override TO summer_event adds it.
-  const overrides = getEffectiveOverrideState().giveaways;
-  return (state.sync?.steamgifts?.giveaways || []).filter((giveaway) => {
-    const key = getGiveawayCodeKey(giveaway);
-    const overrideKind = key ? String(overrides[key]?.giveawayKindOverride || "").trim() : "";
-    const kind = overrideKind
-      ? normalizeGiveawayKindValue(overrideKind, giveaway)
-      : normalizeGiveawayKindValue(giveaway?.giveawayKind, giveaway);
-    return kind === "summer_event";
-  });
+  return derive.getTrackedSummerEventGiveaways(
+    state.sync?.steamgifts?.giveaways || [],
+    getEffectiveOverrideState(),
+  );
 }
 
 function getSummerEventPeriods(giveaways) {
-  const periods = new Map();
-  for (const giveaway of giveaways) {
-    const descriptor = getSummerEventPeriodDescriptor(giveaway);
-    if (!periods.has(descriptor.key)) {
-      periods.set(descriptor.key, descriptor);
-    }
-  }
-  return Array.from(periods.values()).sort((left, right) => right.year - left.year || right.key.localeCompare(left.key));
+  return derive.getSummerEventPeriods(giveaways, summerSettings());
 }
 
 function getSummerEventPeriodDescriptor(giveaway) {
-  const referenceDate = giveaway?.endDate || giveaway?.createdAt || state.settings.currentDate;
-  const parsed = parseDate(referenceDate);
-  const year = Number.isFinite(parsed.getTime()) ? parsed.getFullYear() : new Date().getFullYear();
-  const period = getPeriodInfo(referenceDate);
-  const label = /^Summer event/i.test(String(period?.label || "")) ? period.label : `Summer event (${year})`;
-  return {
-    key: `summer-event-${year}`,
-    label,
-    year,
-  };
+  return derive.getSummerEventPeriodDescriptor(giveaway, summerSettings());
 }
 
 function getSummerEventMemberIndex() {
-  const members = new Map();
-
-  for (const member of state.members) {
-    const username = String(member?.steamgiftsUsername || member?.name || "").trim();
-    if (!username || members.has(username)) {
-      continue;
-    }
-    members.set(username, {
-      username,
-      displayName: member.name || username,
-      profileUrl: `https://www.steamgifts.com/user/${encodeURIComponent(username)}`,
-      isActiveMember: Boolean(member.isActiveMember),
-    });
-  }
-
-  for (const member of state.sync?.steamgifts?.members || []) {
-    const username = String(member?.username || "").trim();
-    if (!username) {
-      continue;
-    }
-    const existing = members.get(username) || {};
-    members.set(username, {
-      username,
-      displayName: existing.displayName || username,
-      profileUrl: member.profileUrl || existing.profileUrl || `https://www.steamgifts.com/user/${encodeURIComponent(username)}`,
-      isActiveMember: typeof member.isActiveMember === "boolean" ? member.isActiveMember : Boolean(existing.isActiveMember),
-    });
-  }
-
-  return members;
+  return derive.getSummerEventMemberIndex(state.members, state.sync?.steamgifts?.members || []);
 }
 
 function computeSummerEventStandings(giveaways, memberIndex = getSummerEventMemberIndex()) {
-  const standings = new Map();
-
-  const ensureParticipant = (username) => {
-    const normalizedUsername = String(username || "").trim();
-    if (!normalizedUsername) {
-      return null;
-    }
-
-    if (!standings.has(normalizedUsername)) {
-      const member = memberIndex.get(normalizedUsername) || null;
-      standings.set(normalizedUsername, {
-        username: normalizedUsername,
-        displayName: member?.displayName || normalizedUsername,
-        profileUrl: member?.profileUrl || `https://www.steamgifts.com/user/${encodeURIComponent(normalizedUsername)}`,
-        isActiveMember: Boolean(member?.isActiveMember),
-        createdGiveaways: 0,
-        createdPoints: 0,
-        wonGiveaways: 0,
-        wonPoints: 0,
-        entryBonusPoints: 0,
-        receivedEntries: 0,
-        joinedGiveaways: 0,
-        entryCostPoints: 0,
-        balance: 0,
-      });
-    }
-
-    return standings.get(normalizedUsername);
-  };
-
-  for (const giveaway of giveaways) {
-    if (!doesSummerEventGiveawayCountForStandings(giveaway)) {
-      continue;
-    }
-    const entryUsers = getSummerEventEntryUsers(giveaway);
-    const winnerUsers = getSummerEventWinnerUsers(giveaway);
-    const basePoints = getSummerEventBasePoints(giveaway);
-    const entryDelta = getSummerEventEntryDelta(giveaway);
-    const creator = ensureParticipant(giveaway.creatorUsername);
-
-    if (creator) {
-      creator.createdGiveaways += 1;
-      creator.createdPoints += basePoints;
-      creator.entryBonusPoints += entryUsers.length * entryDelta;
-      creator.receivedEntries += entryUsers.length;
-      creator.balance += basePoints + entryUsers.length * entryDelta;
-    }
-
-    for (const username of winnerUsers) {
-      const winner = ensureParticipant(username);
-      if (!winner) {
-        continue;
-      }
-      winner.wonGiveaways += 1;
-      winner.wonPoints += basePoints;
-    }
-
-    for (const username of entryUsers) {
-      if (!username || username === giveaway.creatorUsername) {
-        continue;
-      }
-      const participant = ensureParticipant(username);
-      if (!participant) {
-        continue;
-      }
-      participant.joinedGiveaways += 1;
-      participant.entryCostPoints += entryDelta;
-      participant.balance -= entryDelta;
-    }
-  }
-
-  return Array.from(standings.values()).sort(
-    (left, right) =>
-      right.balance - left.balance ||
-      right.createdPoints - left.createdPoints ||
-      left.displayName.localeCompare(right.displayName, "en-US", { sensitivity: "base" }),
-  );
+  return derive.computeSummerEventStandings(giveaways, memberIndex, getEffectiveOverrideState(), summerSettings());
 }
 
 function getSummerEventEntryUsers(giveaway) {
-  return Array.from(
-    new Set(
-      (Array.isArray(giveaway?.entryUsers) ? giveaway.entryUsers : [])
-        .map((username) => String(username || "").trim())
-        .filter(Boolean),
-    ),
-  );
+  return derive.getSummerEventEntryUsers(giveaway);
 }
 
 function getSummerEventWinnerUsers(giveaway) {
-  const manualWinners = getGiveawayManualWinners(giveaway);
-  if (manualWinners.length) {
-    return Array.from(new Set(manualWinners.map((winner) => winner.username)));
-  }
-  return Array.from(
-    new Set(
-      (Array.isArray(giveaway?.winners) ? giveaway.winners : [])
-        .map((winner) => String(winner?.username || "").trim())
-        .filter(Boolean),
-    ),
-  );
+  return derive.getSummerEventWinnerUsers(giveaway, getEffectiveOverrideState());
 }
 
 function doesSummerEventGiveawayCountForStandings(giveaway) {
-  return !isSummerEventNoWinners(giveaway);
+  return derive.doesSummerEventGiveawayCountForStandings(giveaway, getEffectiveOverrideState());
 }
 
 function getSummerEventBasePointsOverride(giveaway) {
-  const key = getGiveawayCodeKey(giveaway);
-  if (!key) {
-    return null;
-  }
-  const raw = getEffectiveOverrideState().giveaways[key]?.summerBasePointsOverride;
-  if (raw === undefined || raw === null || raw === "") {
-    return null;
-  }
-  const value = Number(raw);
-  return Number.isFinite(value) && value >= 0 ? value : null;
+  return derive.getSummerEventBasePointsOverride(giveaway, getEffectiveOverrideState());
 }
 
 function getSummerEventBasePoints(giveaway) {
-  // No winner => 0 overall, so a manual base does nothing here; it only matters
-  // for giveaways that ended with a winner (and applies if one is set later).
-  if (isSummerEventNoWinners(giveaway)) {
-    return 0;
-  }
-  const override = getSummerEventBasePointsOverride(giveaway);
-  if (override !== null) {
-    return override;
-  }
-  if (hasSummerEventSteamPrice(giveaway)) {
-    return Number(giveaway?.steamPricePoints || 0);
-  }
-  return Number(giveaway?.points || 0);
+  return derive.getSummerEventBasePoints(giveaway, getEffectiveOverrideState());
 }
 
 function getActiveSummerRuleset(giveaway) {
-  const selected = String(state.settings.summerRuleset || "auto");
-  if (selected === "legacy" || selected === "2026") {
-    return selected;
-  }
-  // Auto: 2026 rules apply from the 2026 event onward, legacy before.
-  return getSummerEventPeriodDescriptor(giveaway).year >= 2026 ? "2026" : "legacy";
+  return derive.getActiveSummerRuleset(giveaway, summerSettings());
 }
 
 function getSummerEventEntryDelta(giveaway) {
-  if (isSummerEventNoWinners(giveaway)) {
-    return 0;
-  }
-  const basePoints = getSummerEventBasePoints(giveaway);
-  if (getActiveSummerRuleset(giveaway) === "2026") {
-    // 2026: 15-29P -> 5, 30-59P -> 10, 60P+ -> 15.
-    if (basePoints >= 60) {
-      return 15;
-    }
-    if (basePoints >= 30) {
-      return 10;
-    }
-    return basePoints >= 15 ? 5 : 0;
-  }
-  // Legacy: under 30P -> 5, 30P+ -> 10.
-  return basePoints >= 30 ? 10 : 5;
+  return derive.getSummerEventEntryDelta(giveaway, getEffectiveOverrideState(), summerSettings());
 }
 
 function isSummerEventNoWinners(giveaway) {
-  if (hasManualWinners(giveaway)) {
-    return false;
-  }
-  return String(giveaway?.resultStatus || "").trim().toLowerCase() === "no_winners";
+  return derive.isSummerEventNoWinners(giveaway, getEffectiveOverrideState());
 }
 
 function hasSummerEventSteamPrice(giveaway) {
-  return Boolean(giveaway?.steamPriceChecked)
-    && giveaway?.steamPricePoints !== null
-    && giveaway?.steamPricePoints !== undefined
-    && giveaway?.steamPricePoints !== "";
+  return derive.hasSummerEventSteamPrice(giveaway);
 }
 
 function formatSummerEventUsd(cents) {
@@ -2281,12 +2164,8 @@ function getSummerEventValueMeta(giveaway) {
   return `SteamGifts base • Swing: ${entryDelta} P`;
 }
 
-// "Active" = still running: has an end date that is in the future. Anything
-// with an end date at/before now is "finished". Giveaways without an end date
-// can't be classified as running, so they count as finished.
 function isSummerEventGiveawayActive(giveaway) {
-  const end = giveaway?.endDate ? new Date(giveaway.endDate).getTime() : NaN;
-  return Number.isFinite(end) && end > Date.now();
+  return derive.isSummerEventGiveawayActive(giveaway);
 }
 
 // A giveaway is waiting on a final post-close snapshot only if it has ended,
@@ -2359,11 +2238,22 @@ function renderMemberBuckets() {
   renderMemberBucketTable(elements.inactiveUsersTable, false);
 }
 
+function getMemberBucketRows(isActiveMember) {
+  const sortMode = isActiveMember ? elements.activeUsersSort?.value || "wins" : "wins";
+  // Fast path: render the precomputed bucket rows from derived.json (same shape
+  // as computeMemberBucketRows), re-sorted for the active page's sort control.
+  if (runtime.derivedFastPath && runtime.derived?.members) {
+    const source = isActiveMember ? runtime.derived.members.active : runtime.derived.members.inactive;
+    return [...(source || [])].sort((left, right) => derive.compareMemberBucketRows(left, right, sortMode));
+  }
+  return computeMemberBucketRows(isActiveMember);
+}
+
 function renderMemberBucketTable(target, isActiveMember) {
   if (!target) {
     return;
   }
-  const rows = computeMemberBucketRows(isActiveMember);
+  const rows = getMemberBucketRows(isActiveMember);
   if (!rows.length) {
     target.innerHTML = buildEmptyRow(isActiveMember ? 5 : 6);
     return;
@@ -3074,6 +2964,10 @@ function renderPenaltiesPage() {
   if (!elements.penaltiesTable) {
     return;
   }
+  if (runtime.derivedFastPath && runtime.derived?.penalties) {
+    renderPenaltiesPageFromDerived(runtime.derived.penalties);
+    return;
+  }
   if (!isPenaltyDataReady()) {
     elements.penaltiesTable.innerHTML = `<tr><td colspan="6" class="meta-line">Loading penalty data — waiting for Steam playtime/achievements and overrides…</td></tr>`;
     if (elements.penaltiesSummary) {
@@ -3147,6 +3041,71 @@ function renderPenaltiesPage() {
           <td>${escapeHtml(achievementsCell)}</td>
           <td>${buildBadge("success", "Settled")}</td>
           <td>${escapeHtml(record.giveaway.createdAt ? formatDate(record.giveaway.createdAt) : "-")}</td>
+        </tr>
+      `);
+    }
+  }
+
+  elements.penaltiesTable.innerHTML = rows.length ? rows.join("") : buildEmptyRow(6);
+}
+
+// Renders the penalties table straight from precomputed derived.json rows (the
+// fast path), formatting raw figures with the same helpers the live path uses.
+function renderPenaltiesPageFromDerived(penalties) {
+  const filter = elements.penaltiesFilter?.value || "all";
+  const owedNow = penalties.owedNow || [];
+  const comingDue = penalties.comingDue || [];
+  const settled = penalties.settled || [];
+
+  if (elements.penaltiesSummary) {
+    elements.penaltiesSummary.textContent = `${owedNow.length} owed now • ${comingDue.length} coming due • ${settled.length} settled`;
+  }
+
+  const linkedGame = (title, url) =>
+    url
+      ? `<a class="linked-title" href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(title)}</a>`
+      : escapeHtml(title);
+  const hoursCell = (row) => `${formatHours(Number(row.currentHours || 0))} / ${formatHours(Number(row.requiredHours || 0))}`;
+  const achievementsCell = (row) => `${Number(row.earnedAchievements || 0)} / ${Number(row.requiredAchievements || 0)}`;
+
+  const rows = [];
+
+  if (filter === "all" || filter === "overdue" || filter === "coming-due") {
+    [
+      ...owedNow.map((row) => ({ ...row, status: "overdue" })),
+      ...comingDue.map((row) => ({ ...row, status: "coming-due" })),
+    ]
+      .filter((row) => filter === "all" || row.status === filter)
+      .sort((left, right) => new Date(left.deadline || 0).getTime() - new Date(right.deadline || 0).getTime())
+      .forEach((row) => {
+        const overdue = row.status === "overdue";
+        const statusBadge = buildBadge(
+          overdue ? "danger" : "warning",
+          overdue ? `Overdue ${row.daysOverdue}d` : `Due in ${row.daysLeft}d`,
+        );
+        rows.push(`
+          <tr>
+            <td>${escapeHtml(row.member)}</td>
+            <td>${linkedGame(row.game, row.giveawayUrl)}</td>
+            <td>${escapeHtml(hoursCell(row))}</td>
+            <td>${escapeHtml(achievementsCell(row))}</td>
+            <td>${statusBadge}</td>
+            <td>${escapeHtml(formatPenaltyDeadline(row.deadline ? new Date(row.deadline) : null))}</td>
+          </tr>
+        `);
+      });
+  }
+
+  if (filter === "all" || filter === "settled") {
+    for (const row of settled) {
+      rows.push(`
+        <tr>
+          <td>${escapeHtml(row.payer)}</td>
+          <td>${linkedGame(row.game, row.giveawayPageUrl)}</td>
+          <td>${escapeHtml(hoursCell(row))}</td>
+          <td>${escapeHtml(achievementsCell(row))}</td>
+          <td>${buildBadge("success", "Settled")}</td>
+          <td>${escapeHtml(row.createdAt ? formatDate(row.createdAt) : "-")}</td>
         </tr>
       `);
     }
@@ -4154,28 +4113,11 @@ function normalizeGiveawaySyncRecord(giveaway) {
 }
 
 function normalizeGiveawaySyncWinners(giveaway) {
-  const winners = Array.isArray(giveaway?.winners) ? giveaway.winners.filter((winner) => winner?.username) : [];
-  if (winners.length || String(giveaway?.resultStatus || "").toLowerCase() !== "won") {
-    return winners;
-  }
-
-  return parseWinnerUsernamesFromResultLabel(giveaway.resultLabel).map((username) => ({
-    username,
-    profileUrl: "",
-    status: "Won",
-  }));
+  return derive.normalizeGiveawaySyncWinners(giveaway);
 }
 
 function parseWinnerUsernamesFromResultLabel(resultLabel) {
-  const text = String(resultLabel || "").trim();
-  if (!text || /^(open|awaiting feedback|no winners?)$/i.test(text)) {
-    return [];
-  }
-
-  return text
-    .split(",")
-    .map((part) => part.trim())
-    .filter(Boolean);
+  return derive.parseWinnerUsernamesFromResultLabel(resultLabel);
 }
 
 function upsertMemberFromSync(memberRecord) {
@@ -5129,7 +5071,7 @@ function buildEvidenceNoteMarkup(note) {
 }
 
 function computeMinimumEntriesRequired() {
-  return Math.max(1, Math.floor(Number(state.settings.activeMembers) * 0.1));
+  return derive.computeMinimumEntriesRequired(state.settings.activeMembers);
 }
 
 function exportData() {
@@ -5374,14 +5316,7 @@ function normalizeLoadedState(rawState = {}) {
 }
 
 function normalizeOverrideState(overrides = {}) {
-  const source = overrides && typeof overrides === "object" ? overrides : {};
-  return {
-    games: { ...(source.games || {}) },
-    wins: { ...(source.wins || {}) },
-    giveaways: { ...(source.giveaways || {}) },
-    cycleMembers: { ...(source.cycleMembers || {}) },
-    members: { ...(source.members || {}) },
-  };
+  return derive.normalizeOverrideState(overrides);
 }
 
 function normalizeSharedOverridePayload(payload = {}) {
@@ -5394,15 +5329,7 @@ function normalizeSharedOverridePayload(payload = {}) {
 }
 
 function mergeOverrideStates(baseOverrides = {}, overridingOverrides = {}) {
-  const base = normalizeOverrideState(baseOverrides);
-  const overriding = normalizeOverrideState(overridingOverrides);
-  return {
-    games: { ...base.games, ...overriding.games },
-    wins: { ...base.wins, ...overriding.wins },
-    giveaways: { ...base.giveaways, ...overriding.giveaways },
-    cycleMembers: { ...base.cycleMembers, ...overriding.cycleMembers },
-    members: { ...base.members, ...overriding.members },
-  };
+  return derive.mergeOverrideStates(baseOverrides, overridingOverrides);
 }
 
 function getEffectiveOverrideState() {
@@ -5600,37 +5527,15 @@ function getGiveawayOverrideKey(giveaway) {
 // Stable key shared by both data models: cycle giveaways expose `sourceId`
 // (`sg-<code>`) while summer-event sync records expose the raw `code`.
 function getGiveawayCodeKey(giveaway) {
-  const code = String(giveaway?.code || "").trim();
-  if (code) {
-    return `sg-${code}`;
-  }
-  const sourceId = String(giveaway?.sourceId || "").trim();
-  if (sourceId) {
-    return sourceId;
-  }
-  return String(giveaway?.id || "").trim();
+  return derive.getGiveawayCodeKey(giveaway);
 }
 
 function getGiveawayManualWinners(giveaway) {
-  const key = getGiveawayCodeKey(giveaway);
-  if (!key) {
-    return [];
-  }
-  const overrides = getEffectiveOverrideState();
-  const list = overrides.giveaways?.[key]?.manualWinners;
-  if (!Array.isArray(list)) {
-    return [];
-  }
-  return list
-    .map((entry) => ({
-      username: String(entry?.username || "").trim(),
-      displayName: String(entry?.displayName || "").trim(),
-    }))
-    .filter((entry) => entry.username);
+  return derive.getGiveawayManualWinners(giveaway, getEffectiveOverrideState());
 }
 
 function hasManualWinners(giveaway) {
-  return getGiveawayManualWinners(giveaway).length > 0;
+  return derive.hasManualWinners(giveaway, getEffectiveOverrideState());
 }
 
 // A giveaway with no entries (neither tracked nor counted) can never have a
@@ -5851,23 +5756,7 @@ function getGiveawayKind(giveaway) {
 }
 
 function normalizeGiveawayKindValue(kind, giveaway = null) {
-  const value = String(kind || "").trim().toLowerCase();
-  if (value === "extra") {
-    return "extra";
-  }
-  if (value === "penalty") {
-    return "penalty";
-  }
-  if (value === "pop_free" || value === "pop-free" || value === "pop free") {
-    return "pop_free";
-  }
-  if (value === "summer_event" || value === "summer-event" || value === "summer event") {
-    return "summer_event";
-  }
-  if (giveaway && /\bsummer event\b/i.test(`${String(giveaway.title || "")} ${String(giveaway.notes || "")}`)) {
-    return "summer_event";
-  }
-  return "cycle";
+  return derive.normalizeGiveawayKindValue(kind, giveaway);
 }
 
 function getGiveawayKindLabel(kind) {
@@ -6413,6 +6302,14 @@ function updateOverrideField(bucketName, key, fieldName, value) {
   state.overrides = overrides;
   applyManualOverrides();
   persistAndRender();
+
+  // A local override now exists, so derived.json (shared-overrides only) no
+  // longer matches. Leave the precomputed fast path and load the full dataset so
+  // the edit takes effect and recomputes live.
+  if (runtime.derivedFastPath) {
+    runtime.derivedFastPath = false;
+    void loadFullData();
+  }
 }
 
 function clearStoredSyncState(options = {}) {

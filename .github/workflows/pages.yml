@@ -33,6 +33,9 @@ jobs:
           npm ci --ignore-scripts
           npm run check:node24
 
+      - name: Unit tests (shared calc core)
+        run: npm test
+
       - name: Set up Python
         uses: actions/setup-python@v6
         with:

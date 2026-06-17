@@ -30,6 +30,14 @@ jobs:
         with:
           python-version: "3.13"
 
+      # Node is needed by the static export to precompute api/derived.json via
+      # the shared calc code (tools/build-derived.mjs). Without it the export
+      # still succeeds but skips the precompute and the site computes live.
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+
       - name: Hydrate Steam media cache
         run: python server.py --hydrate-sync-media --recent-days 365
         env:
