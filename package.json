@@ -7,7 +7,8 @@
   },
   "scripts": {
     "check:node24": "node --check app.js && node --check client/cycle-rules.js && node --check client/derive-core.js && node --check tools/build-derived.mjs && node --check akatsuki-steamgifts-sync.user.js && npm run lint",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "node --test test/derive-core.test.mjs"
   },
   "devDependencies": {
     "eslint": "^9.39.4",
