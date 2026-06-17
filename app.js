@@ -2779,18 +2779,25 @@ function getGiveawayUrl(win) {
 }
 
 function evaluateMonthlyProgress(win) {
+  // Memoize per win for the duration of a render: this is called several times
+  // per win (owed card, metrics, monthly table, member rows). The memo lives on
+  // the identity-keyed lookup cache, so it clears whenever state.wins/games are
+  // replaced (sync import, Steam merge, override edits).
+  const cache = getLookupCache();
+  const memo = cache.progressByWin || (cache.progressByWin = new Map());
+  const cached = memo.get(win);
+  if (cached) {
+    return cached;
+  }
   const base = evaluateBaseMonthlyProgress(win);
   // PoP Free: always counts as complete and never red. If the winner didn't
   // actually reach the threshold, show it blue instead.
-  if (getWinTrackKind(win) === "pop_free" && base.badge === "danger") {
-    return {
-      ...base,
-      badge: "info",
-      label: "PoP free",
-      note: "PoP Free — counts as complete; no minimum play required.",
-    };
-  }
-  return base;
+  const result =
+    getWinTrackKind(win) === "pop_free" && base.badge === "danger"
+      ? { ...base, badge: "info", label: "PoP free", note: "PoP Free — counts as complete; no minimum play required." }
+      : base;
+  memo.set(win, result);
+  return result;
 }
 
 // Penalty system: a winner who doesn't finish a won game (stays below the PoP
@@ -3764,6 +3771,11 @@ async function loadStoredSteamProgress(options = {}) {
   }
 }
 
+// Build-time dedup indexes used only while importSteamGiftsSync runs. Without
+// them the upserts scan the growing state arrays (O(n^2) over thousands of
+// giveaways/wins); with them each dedup is O(1). Null outside an import.
+let syncBuildIndex = null;
+
 function importSteamGiftsSync(payload, options = {}) {
   const sync = normalizeSteamGiftsSync(payload);
   state.settings.groupName = sync.group?.name || state.settings.groupName;
@@ -3775,27 +3787,51 @@ function importSteamGiftsSync(payload, options = {}) {
     steamgifts: sync,
   };
 
-  for (const memberRecord of sync.members) {
-    upsertMemberFromSync(memberRecord);
+  // Seed from existing state (handles a manual re-sync; empty on first load).
+  syncBuildIndex = {
+    membersByKey: new Map(),
+    gamesByAppId: new Map(),
+    gamesByTitle: new Map(),
+    giveawaysBySourceId: new Map(),
+    winsBySourceId: new Map(),
+  };
+  for (const member of state.members) {
+    if (member.steamgiftsUsername) syncBuildIndex.membersByKey.set(member.steamgiftsUsername, member);
+    if (member.name) syncBuildIndex.membersByKey.set(member.name, member);
   }
+  for (const game of state.games) {
+    const appId = Number(game.appId || 0);
+    if (appId) syncBuildIndex.gamesByAppId.set(appId, game);
+    if (game.title) syncBuildIndex.gamesByTitle.set(game.title, game);
+  }
+  for (const giveaway of state.giveaways) syncBuildIndex.giveawaysBySourceId.set(giveaway.sourceId, giveaway);
+  for (const win of state.wins) syncBuildIndex.winsBySourceId.set(win.sourceId, win);
 
-  for (const giveawayRecord of sync.giveaways) {
-    const creatorId = upsertMemberFromSync({
-      username: giveawayRecord.creatorUsername,
-      steamProfile: sync.memberSteamProfiles[giveawayRecord.creatorUsername] || "",
-      isActiveMember: sync.memberActivity[giveawayRecord.creatorUsername],
-    });
-    upsertGiveawayFromSync(giveawayRecord, creatorId);
-
-    for (const winner of giveawayRecord.winners) {
-      const memberId = upsertMemberFromSync({
-        username: winner.username,
-        steamProfile: sync.memberSteamProfiles[winner.username] || "",
-        isActiveMember: sync.memberActivity[winner.username],
-      });
-      const gameId = upsertGameFromSync(giveawayRecord);
-      upsertWinFromSync(giveawayRecord, winner, memberId, gameId);
+  try {
+    for (const memberRecord of sync.members) {
+      upsertMemberFromSync(memberRecord);
     }
+
+    for (const giveawayRecord of sync.giveaways) {
+      const creatorId = upsertMemberFromSync({
+        username: giveawayRecord.creatorUsername,
+        steamProfile: sync.memberSteamProfiles[giveawayRecord.creatorUsername] || "",
+        isActiveMember: sync.memberActivity[giveawayRecord.creatorUsername],
+      });
+      upsertGiveawayFromSync(giveawayRecord, creatorId);
+
+      for (const winner of giveawayRecord.winners) {
+        const memberId = upsertMemberFromSync({
+          username: winner.username,
+          steamProfile: sync.memberSteamProfiles[winner.username] || "",
+          isActiveMember: sync.memberActivity[winner.username],
+        });
+        const gameId = upsertGameFromSync(giveawayRecord);
+        upsertWinFromSync(giveawayRecord, winner, memberId, gameId);
+      }
+    }
+  } finally {
+    syncBuildIndex = null;
   }
 
   applyManualOverrides();
@@ -4125,9 +4161,11 @@ function upsertMemberFromSync(memberRecord) {
     return "";
   }
 
-  let member = state.members.find(
-    (item) => item.steamgiftsUsername === memberRecord.username || item.name === memberRecord.username,
-  );
+  let member = syncBuildIndex
+    ? syncBuildIndex.membersByKey.get(memberRecord.username)
+    : state.members.find(
+        (item) => item.steamgiftsUsername === memberRecord.username || item.name === memberRecord.username,
+      );
 
   if (!member) {
     member = {
@@ -4139,6 +4177,10 @@ function upsertMemberFromSync(memberRecord) {
       joinDate: state.settings.currentDate,
     };
     state.members.unshift(member);
+    if (syncBuildIndex) {
+      syncBuildIndex.membersByKey.set(member.steamgiftsUsername, member);
+      syncBuildIndex.membersByKey.set(member.name, member);
+    }
     return member.id;
   }
 
@@ -4154,9 +4196,11 @@ function upsertMemberFromSync(memberRecord) {
 
 function upsertGameFromSync(giveawayRecord) {
   const appId = Number(giveawayRecord.appId || 0);
-  let game = state.games.find((item) =>
-    appId ? Number(item.appId) === appId : item.title === giveawayRecord.title,
-  );
+  let game = syncBuildIndex
+    ? (appId ? syncBuildIndex.gamesByAppId.get(appId) : syncBuildIndex.gamesByTitle.get(giveawayRecord.title))
+    : state.games.find((item) =>
+        appId ? Number(item.appId) === appId : item.title === giveawayRecord.title,
+      );
   const media = normalizeGiveawayMedia(giveawayRecord);
 
   if (!game) {
@@ -4174,11 +4218,18 @@ function upsertGameFromSync(giveawayRecord) {
       capsuleSmallUrl: media.capsuleSmallUrl,
     };
     state.games.unshift(game);
+    if (syncBuildIndex) {
+      if (appId) syncBuildIndex.gamesByAppId.set(appId, game);
+      if (game.title) syncBuildIndex.gamesByTitle.set(game.title, game);
+    }
     return game.id;
   }
 
   if (!game.appId && appId) {
     game.appId = appId;
+    // The game was first indexed by title only; index its new appId too so a
+    // later record with the same appId dedups to it.
+    if (syncBuildIndex) syncBuildIndex.gamesByAppId.set(appId, game);
   }
   if (!game.hltbHours && giveawayRecord.hltbHours) {
     game.hltbHours = Number(giveawayRecord.hltbHours);
@@ -4209,7 +4260,9 @@ function upsertGameFromSync(giveawayRecord) {
 
 function upsertGiveawayFromSync(giveawayRecord, creatorId) {
   const sourceId = `sg-${giveawayRecord.code}`;
-  const existing = state.giveaways.find((item) => item.sourceId === sourceId);
+  const existing = syncBuildIndex
+    ? syncBuildIndex.giveawaysBySourceId.get(sourceId)
+    : state.giveaways.find((item) => item.sourceId === sourceId);
   const normalizedKind = normalizeGiveawayKindValue(giveawayRecord.giveawayKind, giveawayRecord);
   const payload = {
     id: existing?.id || uid("giveaway"),
@@ -4244,6 +4297,7 @@ function upsertGiveawayFromSync(giveawayRecord, creatorId) {
 
   if (!existing) {
     state.giveaways.unshift(payload);
+    if (syncBuildIndex) syncBuildIndex.giveawaysBySourceId.set(sourceId, payload);
   } else {
     Object.assign(existing, payload);
   }
@@ -4251,7 +4305,9 @@ function upsertGiveawayFromSync(giveawayRecord, creatorId) {
 
 function upsertWinFromSync(giveawayRecord, winnerRecord, memberId, gameId) {
   const sourceId = `sg-win-${giveawayRecord.code}-${winnerRecord.username}`;
-  const existing = state.wins.find((item) => item.sourceId === sourceId);
+  const existing = syncBuildIndex
+    ? syncBuildIndex.winsBySourceId.get(sourceId)
+    : state.wins.find((item) => item.sourceId === sourceId);
   const payload = {
     id: existing?.id || uid("win"),
     sourceId,
@@ -4274,6 +4330,7 @@ function upsertWinFromSync(giveawayRecord, winnerRecord, memberId, gameId) {
 
   if (!existing) {
     state.wins.unshift(payload);
+    if (syncBuildIndex) syncBuildIndex.winsBySourceId.set(sourceId, payload);
   } else {
       Object.assign(existing, {
         ...payload,
