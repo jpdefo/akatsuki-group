@@ -942,24 +942,13 @@ def get_media_payload(app_ids: list[int]) -> dict:
     return {"updatedAt": media_cache.get("updatedAt"), "results": results}
 
 
-# Image URLs derivable from appId on the client (normalizeGiveawayMedia rebuilds
-# header/capsule images from getSteamMediaUrls). Stripping them from the published
-# giveaways removes ~1.2MB of redundant text without losing anything — the
-# frontend reconstructs them. steamAppUrl is kept (used to parse appId + as the
-# store link). The full URLs remain in data/ and in the media cache.
-_DERIVABLE_GIVEAWAY_MEDIA_FIELDS = ("headerImageUrl", "capsuleImageUrl", "capsuleSmallUrl")
-
-
 def build_sync_export_payload(sync_payload: dict, *, media_lookup: dict[int, dict] | None = None) -> dict:
-    def slim(giveaway: dict) -> dict:
-        trimmed = dict(giveaway)
-        for field in _DERIVABLE_GIVEAWAY_MEDIA_FIELDS:
-            trimmed.pop(field, None)
-        return trimmed
-
+    # Keep the resolved image URLs in the published giveaways: most reconstruct
+    # from appId client-side, but some games use non-standard CDN URLs the
+    # appId pattern can't reproduce, so we ship them.
     return {
         **sync_payload,
-        "giveaways": [slim(giveaway) for giveaway in sync_payload.get("giveaways", [])],
+        "giveaways": [with_giveaway_media(giveaway, media_lookup) for giveaway in sync_payload.get("giveaways", [])],
     }
 
 
