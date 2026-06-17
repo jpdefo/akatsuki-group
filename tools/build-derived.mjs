@@ -18,6 +18,7 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import {
   buildSummerEventDerived,
+  buildPenaltyAndMemberDerived,
   normalizeOverrideState,
   getStableMemberKey,
   getEffectiveMemberActive,
@@ -53,12 +54,16 @@ function main() {
 
   const sync = readJson(join(inputDir, "steamgifts-sync.json"), {});
   const overrides = extractOverrides(readJson(join(inputDir, "overrides.json"), {}));
+  const progress = readJson(join(inputDir, "steam-progress.json"), {});
 
   const giveaways = Array.isArray(sync.giveaways) ? sync.giveaways : [];
   const syncMembers = (Array.isArray(sync.members) ? sync.members : []).filter(
     (member) => String(member?.username || "").trim(),
   );
   const now = Date.now();
+  // app.js uses the sync date as the "current date" reference for penalty timing
+  // and period fallbacks; match it so the precompute agrees with the live app.
+  const currentDate = sync.syncedAt ? String(sync.syncedAt).slice(0, 10) : todayISO();
 
   // Shared overrides only — the public, precomputed view. Browsers with local
   // (unpublished) overrides recompute live instead of trusting this file.
@@ -69,8 +74,15 @@ function main() {
     members: [],
     syncMembers,
     overrides: mergedOverrides,
-    settings: { summerRuleset: "auto", currentDate: todayISO() },
+    settings: { summerRuleset: "auto", currentDate },
     now,
+  });
+
+  const penaltiesAndMembers = buildPenaltyAndMemberDerived({
+    sync,
+    progress,
+    overrides: mergedOverrides,
+    settings: { currentDate },
   });
 
   // Membership: the synced active count drives the Rule-9 threshold (matches
@@ -110,6 +122,12 @@ function main() {
       members: syncMembers.length,
     },
     membership,
+    penalties: penaltiesAndMembers.penalties,
+    members: {
+      counts: penaltiesAndMembers.counts,
+      active: penaltiesAndMembers.activeMembers,
+      inactive: penaltiesAndMembers.inactiveMembers,
+    },
     summerEvent,
   };
 
@@ -117,6 +135,10 @@ function main() {
   process.stdout.write(
     `  membership: ${membership.syncActiveMembers} synced-active (min entries ${membership.minimumEntriesRequired}), `
     + `${membership.effectiveActiveMembers} effective-active / ${membership.effectiveInactiveMembers} inactive\n`,
+  );
+  process.stdout.write(
+    `  penalties owed: ${penaltiesAndMembers.counts.penalties}`
+    + `${penaltiesAndMembers.penalties.length ? ` — ${penaltiesAndMembers.penalties.slice(0, 8).map((p) => `${p.member} (${p.game})`).join("; ")}${penaltiesAndMembers.penalties.length > 8 ? " …" : ""}` : ""}\n`,
   );
   const periods = summerEvent.periods
     .map((p) => `${p.label}: ${p.counts.trackedGiveaways} GAs (${p.counts.activeGiveaways} active / ${p.counts.finishedGiveaways} finished), ${p.counts.participants} participants`)
