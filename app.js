@@ -27,6 +27,16 @@ import {
   getPreviousCyclePeriod,
   getRequiredHours,
 } from "./client/cycle-rules.js";
+import * as derive from "./client/derive-core.js";
+
+// Settings bundle the shared summer-event calc needs (ruleset + reference date).
+// Kept as a helper so every delegating wrapper feeds the core identically.
+function summerSettings() {
+  return {
+    summerRuleset: state.settings.summerRuleset,
+    currentDate: state.settings.currentDate,
+  };
+}
 
 const STORAGE_KEY = "akatsuki-monitor-state-v1";
 const GITHUB_PUBLISH_REPO = { owner: "jpdefo", name: "akatsuki-group", branch: "main" };
@@ -2008,255 +2018,62 @@ function sortSummerEventGiveaways(giveaways, sortValue, memberIndex = getSummerE
 }
 
 function getTrackedSummerEventGiveaways() {
-  // Honor the manual kind override: the raw sync giveaways don't carry the
-  // override field (it's applied to state.giveaways), so look it up by code key.
-  // This way re-typing a giveaway (summer_event -> extra) removes it here too,
-  // and an override TO summer_event adds it.
-  const overrides = getEffectiveOverrideState().giveaways;
-  return (state.sync?.steamgifts?.giveaways || []).filter((giveaway) => {
-    const key = getGiveawayCodeKey(giveaway);
-    const overrideKind = key ? String(overrides[key]?.giveawayKindOverride || "").trim() : "";
-    const kind = overrideKind
-      ? normalizeGiveawayKindValue(overrideKind, giveaway)
-      : normalizeGiveawayKindValue(giveaway?.giveawayKind, giveaway);
-    return kind === "summer_event";
-  });
+  return derive.getTrackedSummerEventGiveaways(
+    state.sync?.steamgifts?.giveaways || [],
+    getEffectiveOverrideState(),
+  );
 }
 
 function getSummerEventPeriods(giveaways) {
-  const periods = new Map();
-  for (const giveaway of giveaways) {
-    const descriptor = getSummerEventPeriodDescriptor(giveaway);
-    if (!periods.has(descriptor.key)) {
-      periods.set(descriptor.key, descriptor);
-    }
-  }
-  return Array.from(periods.values()).sort((left, right) => right.year - left.year || right.key.localeCompare(left.key));
+  return derive.getSummerEventPeriods(giveaways, summerSettings());
 }
 
 function getSummerEventPeriodDescriptor(giveaway) {
-  const referenceDate = giveaway?.endDate || giveaway?.createdAt || state.settings.currentDate;
-  const parsed = parseDate(referenceDate);
-  const year = Number.isFinite(parsed.getTime()) ? parsed.getFullYear() : new Date().getFullYear();
-  const period = getPeriodInfo(referenceDate);
-  const label = /^Summer event/i.test(String(period?.label || "")) ? period.label : `Summer event (${year})`;
-  return {
-    key: `summer-event-${year}`,
-    label,
-    year,
-  };
+  return derive.getSummerEventPeriodDescriptor(giveaway, summerSettings());
 }
 
 function getSummerEventMemberIndex() {
-  const members = new Map();
-
-  for (const member of state.members) {
-    const username = String(member?.steamgiftsUsername || member?.name || "").trim();
-    if (!username || members.has(username)) {
-      continue;
-    }
-    members.set(username, {
-      username,
-      displayName: member.name || username,
-      profileUrl: `https://www.steamgifts.com/user/${encodeURIComponent(username)}`,
-      isActiveMember: Boolean(member.isActiveMember),
-    });
-  }
-
-  for (const member of state.sync?.steamgifts?.members || []) {
-    const username = String(member?.username || "").trim();
-    if (!username) {
-      continue;
-    }
-    const existing = members.get(username) || {};
-    members.set(username, {
-      username,
-      displayName: existing.displayName || username,
-      profileUrl: member.profileUrl || existing.profileUrl || `https://www.steamgifts.com/user/${encodeURIComponent(username)}`,
-      isActiveMember: typeof member.isActiveMember === "boolean" ? member.isActiveMember : Boolean(existing.isActiveMember),
-    });
-  }
-
-  return members;
+  return derive.getSummerEventMemberIndex(state.members, state.sync?.steamgifts?.members || []);
 }
 
 function computeSummerEventStandings(giveaways, memberIndex = getSummerEventMemberIndex()) {
-  const standings = new Map();
-
-  const ensureParticipant = (username) => {
-    const normalizedUsername = String(username || "").trim();
-    if (!normalizedUsername) {
-      return null;
-    }
-
-    if (!standings.has(normalizedUsername)) {
-      const member = memberIndex.get(normalizedUsername) || null;
-      standings.set(normalizedUsername, {
-        username: normalizedUsername,
-        displayName: member?.displayName || normalizedUsername,
-        profileUrl: member?.profileUrl || `https://www.steamgifts.com/user/${encodeURIComponent(normalizedUsername)}`,
-        isActiveMember: Boolean(member?.isActiveMember),
-        createdGiveaways: 0,
-        createdPoints: 0,
-        wonGiveaways: 0,
-        wonPoints: 0,
-        entryBonusPoints: 0,
-        receivedEntries: 0,
-        joinedGiveaways: 0,
-        entryCostPoints: 0,
-        balance: 0,
-      });
-    }
-
-    return standings.get(normalizedUsername);
-  };
-
-  for (const giveaway of giveaways) {
-    if (!doesSummerEventGiveawayCountForStandings(giveaway)) {
-      continue;
-    }
-    const entryUsers = getSummerEventEntryUsers(giveaway);
-    const winnerUsers = getSummerEventWinnerUsers(giveaway);
-    const basePoints = getSummerEventBasePoints(giveaway);
-    const entryDelta = getSummerEventEntryDelta(giveaway);
-    const creator = ensureParticipant(giveaway.creatorUsername);
-
-    if (creator) {
-      creator.createdGiveaways += 1;
-      creator.createdPoints += basePoints;
-      creator.entryBonusPoints += entryUsers.length * entryDelta;
-      creator.receivedEntries += entryUsers.length;
-      creator.balance += basePoints + entryUsers.length * entryDelta;
-    }
-
-    for (const username of winnerUsers) {
-      const winner = ensureParticipant(username);
-      if (!winner) {
-        continue;
-      }
-      winner.wonGiveaways += 1;
-      winner.wonPoints += basePoints;
-    }
-
-    for (const username of entryUsers) {
-      if (!username || username === giveaway.creatorUsername) {
-        continue;
-      }
-      const participant = ensureParticipant(username);
-      if (!participant) {
-        continue;
-      }
-      participant.joinedGiveaways += 1;
-      participant.entryCostPoints += entryDelta;
-      participant.balance -= entryDelta;
-    }
-  }
-
-  return Array.from(standings.values()).sort(
-    (left, right) =>
-      right.balance - left.balance ||
-      right.createdPoints - left.createdPoints ||
-      left.displayName.localeCompare(right.displayName, "en-US", { sensitivity: "base" }),
-  );
+  return derive.computeSummerEventStandings(giveaways, memberIndex, getEffectiveOverrideState(), summerSettings());
 }
 
 function getSummerEventEntryUsers(giveaway) {
-  return Array.from(
-    new Set(
-      (Array.isArray(giveaway?.entryUsers) ? giveaway.entryUsers : [])
-        .map((username) => String(username || "").trim())
-        .filter(Boolean),
-    ),
-  );
+  return derive.getSummerEventEntryUsers(giveaway);
 }
 
 function getSummerEventWinnerUsers(giveaway) {
-  const manualWinners = getGiveawayManualWinners(giveaway);
-  if (manualWinners.length) {
-    return Array.from(new Set(manualWinners.map((winner) => winner.username)));
-  }
-  return Array.from(
-    new Set(
-      (Array.isArray(giveaway?.winners) ? giveaway.winners : [])
-        .map((winner) => String(winner?.username || "").trim())
-        .filter(Boolean),
-    ),
-  );
+  return derive.getSummerEventWinnerUsers(giveaway, getEffectiveOverrideState());
 }
 
 function doesSummerEventGiveawayCountForStandings(giveaway) {
-  return !isSummerEventNoWinners(giveaway);
+  return derive.doesSummerEventGiveawayCountForStandings(giveaway, getEffectiveOverrideState());
 }
 
 function getSummerEventBasePointsOverride(giveaway) {
-  const key = getGiveawayCodeKey(giveaway);
-  if (!key) {
-    return null;
-  }
-  const raw = getEffectiveOverrideState().giveaways[key]?.summerBasePointsOverride;
-  if (raw === undefined || raw === null || raw === "") {
-    return null;
-  }
-  const value = Number(raw);
-  return Number.isFinite(value) && value >= 0 ? value : null;
+  return derive.getSummerEventBasePointsOverride(giveaway, getEffectiveOverrideState());
 }
 
 function getSummerEventBasePoints(giveaway) {
-  // No winner => 0 overall, so a manual base does nothing here; it only matters
-  // for giveaways that ended with a winner (and applies if one is set later).
-  if (isSummerEventNoWinners(giveaway)) {
-    return 0;
-  }
-  const override = getSummerEventBasePointsOverride(giveaway);
-  if (override !== null) {
-    return override;
-  }
-  if (hasSummerEventSteamPrice(giveaway)) {
-    return Number(giveaway?.steamPricePoints || 0);
-  }
-  return Number(giveaway?.points || 0);
+  return derive.getSummerEventBasePoints(giveaway, getEffectiveOverrideState());
 }
 
 function getActiveSummerRuleset(giveaway) {
-  const selected = String(state.settings.summerRuleset || "auto");
-  if (selected === "legacy" || selected === "2026") {
-    return selected;
-  }
-  // Auto: 2026 rules apply from the 2026 event onward, legacy before.
-  return getSummerEventPeriodDescriptor(giveaway).year >= 2026 ? "2026" : "legacy";
+  return derive.getActiveSummerRuleset(giveaway, summerSettings());
 }
 
 function getSummerEventEntryDelta(giveaway) {
-  if (isSummerEventNoWinners(giveaway)) {
-    return 0;
-  }
-  const basePoints = getSummerEventBasePoints(giveaway);
-  if (getActiveSummerRuleset(giveaway) === "2026") {
-    // 2026: 15-29P -> 5, 30-59P -> 10, 60P+ -> 15.
-    if (basePoints >= 60) {
-      return 15;
-    }
-    if (basePoints >= 30) {
-      return 10;
-    }
-    return basePoints >= 15 ? 5 : 0;
-  }
-  // Legacy: under 30P -> 5, 30P+ -> 10.
-  return basePoints >= 30 ? 10 : 5;
+  return derive.getSummerEventEntryDelta(giveaway, getEffectiveOverrideState(), summerSettings());
 }
 
 function isSummerEventNoWinners(giveaway) {
-  if (hasManualWinners(giveaway)) {
-    return false;
-  }
-  return String(giveaway?.resultStatus || "").trim().toLowerCase() === "no_winners";
+  return derive.isSummerEventNoWinners(giveaway, getEffectiveOverrideState());
 }
 
 function hasSummerEventSteamPrice(giveaway) {
-  return Boolean(giveaway?.steamPriceChecked)
-    && giveaway?.steamPricePoints !== null
-    && giveaway?.steamPricePoints !== undefined
-    && giveaway?.steamPricePoints !== "";
+  return derive.hasSummerEventSteamPrice(giveaway);
 }
 
 function formatSummerEventUsd(cents) {
@@ -2281,12 +2098,8 @@ function getSummerEventValueMeta(giveaway) {
   return `SteamGifts base • Swing: ${entryDelta} P`;
 }
 
-// "Active" = still running: has an end date that is in the future. Anything
-// with an end date at/before now is "finished". Giveaways without an end date
-// can't be classified as running, so they count as finished.
 function isSummerEventGiveawayActive(giveaway) {
-  const end = giveaway?.endDate ? new Date(giveaway.endDate).getTime() : NaN;
-  return Number.isFinite(end) && end > Date.now();
+  return derive.isSummerEventGiveawayActive(giveaway);
 }
 
 // A giveaway is waiting on a final post-close snapshot only if it has ended,
@@ -4154,28 +3967,11 @@ function normalizeGiveawaySyncRecord(giveaway) {
 }
 
 function normalizeGiveawaySyncWinners(giveaway) {
-  const winners = Array.isArray(giveaway?.winners) ? giveaway.winners.filter((winner) => winner?.username) : [];
-  if (winners.length || String(giveaway?.resultStatus || "").toLowerCase() !== "won") {
-    return winners;
-  }
-
-  return parseWinnerUsernamesFromResultLabel(giveaway.resultLabel).map((username) => ({
-    username,
-    profileUrl: "",
-    status: "Won",
-  }));
+  return derive.normalizeGiveawaySyncWinners(giveaway);
 }
 
 function parseWinnerUsernamesFromResultLabel(resultLabel) {
-  const text = String(resultLabel || "").trim();
-  if (!text || /^(open|awaiting feedback|no winners?)$/i.test(text)) {
-    return [];
-  }
-
-  return text
-    .split(",")
-    .map((part) => part.trim())
-    .filter(Boolean);
+  return derive.parseWinnerUsernamesFromResultLabel(resultLabel);
 }
 
 function upsertMemberFromSync(memberRecord) {
@@ -5374,14 +5170,7 @@ function normalizeLoadedState(rawState = {}) {
 }
 
 function normalizeOverrideState(overrides = {}) {
-  const source = overrides && typeof overrides === "object" ? overrides : {};
-  return {
-    games: { ...(source.games || {}) },
-    wins: { ...(source.wins || {}) },
-    giveaways: { ...(source.giveaways || {}) },
-    cycleMembers: { ...(source.cycleMembers || {}) },
-    members: { ...(source.members || {}) },
-  };
+  return derive.normalizeOverrideState(overrides);
 }
 
 function normalizeSharedOverridePayload(payload = {}) {
@@ -5394,15 +5183,7 @@ function normalizeSharedOverridePayload(payload = {}) {
 }
 
 function mergeOverrideStates(baseOverrides = {}, overridingOverrides = {}) {
-  const base = normalizeOverrideState(baseOverrides);
-  const overriding = normalizeOverrideState(overridingOverrides);
-  return {
-    games: { ...base.games, ...overriding.games },
-    wins: { ...base.wins, ...overriding.wins },
-    giveaways: { ...base.giveaways, ...overriding.giveaways },
-    cycleMembers: { ...base.cycleMembers, ...overriding.cycleMembers },
-    members: { ...base.members, ...overriding.members },
-  };
+  return derive.mergeOverrideStates(baseOverrides, overridingOverrides);
 }
 
 function getEffectiveOverrideState() {
@@ -5600,37 +5381,15 @@ function getGiveawayOverrideKey(giveaway) {
 // Stable key shared by both data models: cycle giveaways expose `sourceId`
 // (`sg-<code>`) while summer-event sync records expose the raw `code`.
 function getGiveawayCodeKey(giveaway) {
-  const code = String(giveaway?.code || "").trim();
-  if (code) {
-    return `sg-${code}`;
-  }
-  const sourceId = String(giveaway?.sourceId || "").trim();
-  if (sourceId) {
-    return sourceId;
-  }
-  return String(giveaway?.id || "").trim();
+  return derive.getGiveawayCodeKey(giveaway);
 }
 
 function getGiveawayManualWinners(giveaway) {
-  const key = getGiveawayCodeKey(giveaway);
-  if (!key) {
-    return [];
-  }
-  const overrides = getEffectiveOverrideState();
-  const list = overrides.giveaways?.[key]?.manualWinners;
-  if (!Array.isArray(list)) {
-    return [];
-  }
-  return list
-    .map((entry) => ({
-      username: String(entry?.username || "").trim(),
-      displayName: String(entry?.displayName || "").trim(),
-    }))
-    .filter((entry) => entry.username);
+  return derive.getGiveawayManualWinners(giveaway, getEffectiveOverrideState());
 }
 
 function hasManualWinners(giveaway) {
-  return getGiveawayManualWinners(giveaway).length > 0;
+  return derive.hasManualWinners(giveaway, getEffectiveOverrideState());
 }
 
 // A giveaway with no entries (neither tracked nor counted) can never have a
@@ -5851,23 +5610,7 @@ function getGiveawayKind(giveaway) {
 }
 
 function normalizeGiveawayKindValue(kind, giveaway = null) {
-  const value = String(kind || "").trim().toLowerCase();
-  if (value === "extra") {
-    return "extra";
-  }
-  if (value === "penalty") {
-    return "penalty";
-  }
-  if (value === "pop_free" || value === "pop-free" || value === "pop free") {
-    return "pop_free";
-  }
-  if (value === "summer_event" || value === "summer-event" || value === "summer event") {
-    return "summer_event";
-  }
-  if (giveaway && /\bsummer event\b/i.test(`${String(giveaway.title || "")} ${String(giveaway.notes || "")}`)) {
-    return "summer_event";
-  }
-  return "cycle";
+  return derive.normalizeGiveawayKindValue(kind, giveaway);
 }
 
 function getGiveawayKindLabel(kind) {
