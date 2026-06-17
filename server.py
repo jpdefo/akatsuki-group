@@ -4,6 +4,7 @@ import argparse
 import json
 import os
 import re
+import subprocess
 import tempfile
 import threading
 import time
@@ -2345,8 +2346,37 @@ def export_static_site(output_dir: Path) -> None:
     save_json(api_dir / "giveaways.json", giveaways_payload)
     save_json(api_dir / "overrides.json", overrides_payload)
     save_json(api_dir / "snapshot.json", manifest_payload)
+    build_derived_json(api_dir)
     validate_static_site(output_dir)
     print(f"Static site exported to {output_dir}")
+
+
+def build_derived_json(api_dir: Path) -> None:
+    """Precompute derived dashboard data (data/derived.json -> api/derived.json).
+
+    Runs the shared browser calculation code (client/derive-core.js) via Node so
+    the published site doesn't recompute it from megabytes of raw JSON in every
+    visitor's browser. Reads the just-written export payloads (sync + overrides)
+    so it matches exactly what the frontend would fetch. This is an optimization:
+    if Node is unavailable or the build fails, we warn and continue (the frontend
+    falls back to computing live), so the optimization never breaks a deploy.
+    """
+    script = BASE_DIR / "tools" / "build-derived.mjs"
+    out_file = api_dir / "derived.json"
+    try:
+        result = subprocess.run(
+            ["node", str(script), str(api_dir), str(out_file)],
+            cwd=str(BASE_DIR),
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        if result.stdout.strip():
+            print(result.stdout.strip())
+    except FileNotFoundError:
+        print("WARNING: node not found; skipping derived.json precompute (frontend will compute live).")
+    except subprocess.CalledProcessError as error:
+        print(f"WARNING: derived.json precompute failed; frontend will compute live.\n{error.stderr or error}")
 
 
 if __name__ == "__main__":
