@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-18T07:31:49.564944+00:00",
+  "updatedAt": "2026-06-19T07:42:40.533882+00:00",
   "apiEnabled": true,
   "refreshedScope": "all",
   "refreshedMonth": null,
@@ -124871,10 +124871,10 @@
   ],
   "source": "steam-web-api",
   "stats": {
-    "durationSeconds": 8.76,
+    "durationSeconds": 0.03,
     "targetProfiles": 23,
-    "refreshedProfiles": 23,
-    "reusedProfiles": 0,
+    "refreshedProfiles": 0,
+    "reusedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
