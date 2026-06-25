@@ -1681,7 +1681,8 @@ function renderSummerEventPage() {
             const rewardPoints = getSummerEventBasePoints(giveaway);
             const entryDelta = getSummerEventEntryDelta(giveaway);
             const entryPoints = entryUsers.length * entryDelta;
-            const totalPoints = rewardPoints + entryPoints;
+            // No entries => the giveaway scores nothing (matches standings).
+            const totalPoints = entryUsers.length ? rewardPoints + entryPoints : 0;
             const winners = getSummerEventWinnerUsers(giveaway);
             const manualWinnerSet = hasManualWinners(giveaway);
             const winnerKey = getGiveawayCodeKey(giveaway);

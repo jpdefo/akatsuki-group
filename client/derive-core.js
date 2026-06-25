@@ -381,22 +381,30 @@ export function computeSummerEventStandings(giveaways, memberIndex, overrides, s
     const basePoints = getSummerEventBasePoints(giveaway, overrides);
     const entryDelta = getSummerEventEntryDelta(giveaway, overrides, settings);
     const creator = ensureParticipant(giveaway.creatorUsername);
+    // A giveaway nobody entered awards no points to anyone — not the creator's
+    // base + entry bonus, nor the winner's base. It still counts as "created";
+    // entrant costs are unaffected because there are no entrants.
+    const hasEntries = entryUsers.length > 0;
 
     if (creator) {
       creator.createdGiveaways += 1;
-      creator.createdPoints += basePoints;
-      creator.entryBonusPoints += entryUsers.length * entryDelta;
-      creator.receivedEntries += entryUsers.length;
-      creator.balance += basePoints + entryUsers.length * entryDelta;
+      if (hasEntries) {
+        creator.createdPoints += basePoints;
+        creator.entryBonusPoints += entryUsers.length * entryDelta;
+        creator.receivedEntries += entryUsers.length;
+        creator.balance += basePoints + entryUsers.length * entryDelta;
+      }
     }
 
-    for (const username of winnerUsers) {
-      const winner = ensureParticipant(username);
-      if (!winner) {
-        continue;
+    if (hasEntries) {
+      for (const username of winnerUsers) {
+        const winner = ensureParticipant(username);
+        if (!winner) {
+          continue;
+        }
+        winner.wonGiveaways += 1;
+        winner.wonPoints += basePoints;
       }
-      winner.wonGiveaways += 1;
-      winner.wonPoints += basePoints;
     }
 
     for (const username of entryUsers) {
@@ -461,7 +469,8 @@ export function buildSummerEventDerived({
           entryDelta,
           entryUsers: entryUsers.length,
           entryPoints,
-          totalPoints: basePoints + entryPoints,
+          // No entries => the giveaway scores nothing (matches standings).
+          totalPoints: entryUsers.length ? basePoints + entryPoints : 0,
           winners: getSummerEventWinnerUsers(giveaway, mergedOverrides),
           resultStatus: String(giveaway.resultStatus || "").toLowerCase(),
           noWinners: isSummerEventNoWinners(giveaway, mergedOverrides),

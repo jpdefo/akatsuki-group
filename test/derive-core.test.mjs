@@ -100,6 +100,44 @@ test("summer-event standings: base points, swing, entry costs", () => {
   assert.equal(standings.carol.balance, -10);
 });
 
+test("summer-event: a giveaway with no entries awards no points (both rulesets)", () => {
+  // alice runs a 50P giveaway that nobody entered. She must earn 0 points from it
+  // (no base, no entry bonus) and the per-giveaway total must be 0 — under either
+  // ruleset, since the no-entry rule is ruleset-agnostic. The giveaway still
+  // counts as created.
+  const sync = {
+    members: [member("alice", true)],
+    giveaways: [
+      giveaway({
+        code: "EMPTY",
+        creatorUsername: "alice",
+        points: 50,
+        winners: [],
+        entryUsers: [],
+        resultStatus: "",
+        giveawayKind: "summer_event",
+        endDate: "2026-05-10T00:00:00.000Z",
+      }),
+    ],
+  };
+  for (const summerRuleset of ["legacy", "2026", "auto"]) {
+    const { periods } = buildSummerEventDerived({
+      giveaways: sync.giveaways,
+      members: [],
+      syncMembers: sync.members,
+      overrides: {},
+      settings: { summerRuleset, currentDate: "2026-06-15" },
+      now: Date.parse("2026-06-15T00:00:00.000Z"),
+    });
+    const alice = periods[0].standings.find((s) => s.username === "alice");
+    assert.equal(alice.balance, 0, `[${summerRuleset}] no-entry giveaway: zero balance`);
+    assert.equal(alice.createdPoints, 0, `[${summerRuleset}] no-entry giveaway: zero created points`);
+    assert.equal(alice.entryBonusPoints, 0, `[${summerRuleset}] no-entry giveaway: zero entry bonus`);
+    assert.equal(alice.createdGiveaways, 1, `[${summerRuleset}] still counts as created`);
+    assert.equal(periods[0].giveaways[0].totalPoints, 0, `[${summerRuleset}] per-giveaway total is 0`);
+  }
+});
+
 test("summer-event active/finished classification", () => {
   const now = Date.parse("2026-06-15T00:00:00.000Z");
   const sync = {
