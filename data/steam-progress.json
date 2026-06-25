@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-25T20:15:08.465537+00:00",
+  "updatedAt": "2026-06-25T20:25:18.758408+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -66731,9 +66731,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-06-25T20:14:12.743407+00:00",
+  "libraryUpdatedAt": "2026-06-25T20:24:19.484985+00:00",
   "libraryStats": {
-    "durationSeconds": 5.45,
+    "durationSeconds": 6.69,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -66742,14 +66742,14 @@
     "totalPlaytimeRows": 13852
   },
   "stats": {
-    "durationSeconds": 61.18,
+    "durationSeconds": 65.98,
     "targetWins": 2288,
     "uniqueProgressTargets": 2284,
     "libraryPlaytimeHits": 2232,
-    "cachedReuses": 2192,
-    "achievementSuccesses": 5,
+    "cachedReuses": 2193,
+    "achievementSuccesses": 4,
     "achievementErrors": 87,
-    "cachedFallbacks": 86,
+    "cachedFallbacks": 87,
     "hltbTitlesRequested": 1254,
     "hltbResultsAvailable": 3927
   }
