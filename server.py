@@ -1890,6 +1890,47 @@ def collect_progress_targets(
     return eligible_wins, members, active_usernames, selected_month
 
 
+def latch_pop_threshold(progress_items, hltb_items) -> int:
+    """Stamp a permanent popThresholdMetAt on each progress entry that has reached
+    the PoP threshold, so the "threshold met" status is never lost later if a
+    game's HLTB grows (expansions) and pushes the required hours up. Playtime and
+    achievements keep refreshing as usual — only the *status* latches.
+
+    Safety: only latch on trustworthy data. A real HLTB value must be present
+    (a game without HLTB is never auto-completed), and both the 25%-playtime and
+    10%-achievement targets must actually be reached. Mirrors the threshold rules
+    in client/derive-core.js (getRequiredHours standard-25 + 10% achievements)."""
+    hltb_by_app_id: dict[int, float] = {}
+    hltb_by_title: dict[str, float] = {}
+    for entry in hltb_items or []:
+        hours = entry.get("hltbHours")
+        if not hours:
+            continue
+        app_id = parse_int(entry.get("appId"))
+        if app_id:
+            hltb_by_app_id.setdefault(app_id, hours)
+        title = str(entry.get("title") or "").strip()
+        if title:
+            hltb_by_title.setdefault(title, hours)
+
+    latched = 0
+    for item in progress_items:
+        if item.get("popThresholdMetAt"):
+            continue
+        hltb_hours = hltb_by_app_id.get(parse_int(item.get("appId"))) or hltb_by_title.get(str(item.get("title") or "").strip())
+        if not hltb_hours or hltb_hours <= 0:
+            continue
+        current_hours = item.get("playtimeHours")
+        if current_hours is None:
+            continue
+        total_achievements = parse_int(item.get("totalAchievements"))
+        required_achievements = max(1, int(total_achievements * 0.1)) if total_achievements > 0 else 0
+        if current_hours >= hltb_hours * 0.25 and parse_int(item.get("earnedAchievements")) >= required_achievements:
+            item["popThresholdMetAt"] = utc_now()
+            latched += 1
+    return latched
+
+
 def refresh_steam_progress(
     sync_payload: dict,
     target_month: str | None = None,
@@ -2007,6 +2048,9 @@ def refresh_steam_progress(
             item["error"] = str(error)
 
         progress_cache[(steam_profile, int(app_id))] = item
+
+    # Permanently lock the "threshold met" status for entries that have reached it.
+    latch_pop_threshold(progress_cache.values(), hltb_items)
 
     payload = {
         "updatedAt": utc_now(),
@@ -2284,6 +2328,7 @@ PROGRESS_EXPORT_FIELDS = (
     "totalAchievements",
     "visible",
     "progressUrl",
+    "popThresholdMetAt",
 )
 HLTB_EXPORT_FIELDS = ("appId", "title", "hltbHours")
 

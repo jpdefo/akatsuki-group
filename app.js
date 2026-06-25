@@ -3164,6 +3164,18 @@ function evaluateBaseMonthlyProgress(win) {
   const meetsAchievements = requiredAchievements === 0 || currentAchievements >= requiredAchievements;
   const allAchievementsDone = totalAchievements > 0 && currentAchievements >= totalAchievements;
 
+  // Once a win has genuinely reached the threshold it stays met forever, even if
+  // the game's HLTB later grows (expansions) and pushes the required hours up.
+  if (win.popThresholdMetAt) {
+    return {
+      badge: "success",
+      label: "Threshold met",
+      note: "Threshold reached previously — locked as complete.",
+      requiredHours,
+      requiredAchievements,
+    };
+  }
+
   if (!hasThresholdData) {
     return {
       badge: "danger",
@@ -3971,6 +3983,8 @@ function applySteamProgress(payload) {
         : nextWin.currentHours;
     nextWin.earnedAchievements = progress.earnedAchievements ?? nextWin.earnedAchievements;
     nextWin.proofProvided = progress.visible;
+    // Permanent "threshold met" latch (stamped server-side once genuinely reached).
+    nextWin.popThresholdMetAt = progress.popThresholdMetAt || nextWin.popThresholdMetAt || null;
     nextWin.evidenceNotes = progress.progressUrl
       ? `Steam sync: ${progress.progressUrl}`
       : nextWin.evidenceNotes;
@@ -5659,6 +5673,7 @@ function applyStoredProgressToWin(win, member) {
   }
   win.earnedAchievements = progress.earnedAchievements ?? win.earnedAchievements;
   win.proofProvided = progress.visible;
+  win.popThresholdMetAt = progress.popThresholdMetAt || win.popThresholdMetAt || null;
 }
 
 // Merge HLTB hours + achievement totals onto a game, in place. Used both in the

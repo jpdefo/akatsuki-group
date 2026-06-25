@@ -741,6 +741,12 @@ export function evaluateBaseMonthlyProgress(win, ctx) {
   const meetsAchievements = requiredAchievements === 0 || currentAchievements >= requiredAchievements;
   const allAchievementsDone = totalAchievements > 0 && currentAchievements >= totalAchievements;
 
+  // Once a win has genuinely reached the threshold it stays met forever, even if
+  // the game's HLTB later grows (expansions) and pushes the required hours up.
+  if (win.popThresholdMetAt) {
+    return { badge: "success", label: "Threshold met", note: "Threshold reached previously — locked as complete.", requiredHours, requiredAchievements };
+  }
+
   if (!hasThresholdData) {
     return { badge: "danger", label: "Missing data", note: "No HLTB or achievement totals were found yet.", requiredHours, requiredAchievements };
   }
@@ -1085,6 +1091,8 @@ export function buildEntityGraph({ sync = {}, progress = {}, overrides = {}, set
       }
       win.earnedAchievements = entry.earnedAchievements ?? win.earnedAchievements;
       win.proofProvided = entry.visible;
+      // Permanent "threshold met" latch (stamped server-side once genuinely reached).
+      win.popThresholdMetAt = entry.popThresholdMetAt || win.popThresholdMetAt || null;
     }
   };
   // Merge HLTB hours + achievement totals onto games. Also re-run after the

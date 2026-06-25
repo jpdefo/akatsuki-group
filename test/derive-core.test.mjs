@@ -304,3 +304,35 @@ test("manual winner wins inherit Steam playtime/achievements (pre-release winner
   const flagged = [...penalties.owedNow, ...penalties.comingDue].map((r) => r.member);
   assert.equal(flagged.includes("frank"), false, "compliant manual winner is not penalised");
 });
+
+test("threshold met is permanent: a latched win stays met even when now below required", () => {
+  // HLTB 100 => required 25h, but dave only has 5h logged. A popThresholdMetAt
+  // latch (stamped when he genuinely met it earlier) keeps the win "met" even
+  // though the required hours later grew past his playtime.
+  const currentDate = "2026-06-15";
+  const sync = {
+    members: [member("dave", true, "p-dave")],
+    giveaways: [
+      giveaway({ code: "A", creatorUsername: "x", appId: 100, winners: [{ username: "dave" }], startDate: "2026-01-05T00:00:00.000Z", endDate: "2026-01-10T00:00:00.000Z" }),
+    ],
+  };
+  const hltb = [{ appId: 100, hltbHours: 100 }];
+
+  const latched = buildPenaltyAndMemberDerived({
+    sync,
+    progress: { progress: [progressEntry("p-dave", 100, 5, { popThresholdMetAt: "2026-02-01T00:00:00.000Z" })], hltb },
+    overrides: {},
+    settings: { currentDate },
+  });
+  assert.equal(latched.members.active.find((m) => m.name === "dave").thresholdMet, 1, "latched win counts as met despite 5h < 25h required");
+  assert.equal(latched.penalties.owedNow.concat(latched.penalties.comingDue).some((r) => r.member === "dave"), false, "latched win is not penalised");
+
+  // Control: identical data without the latch is below threshold.
+  const control = buildPenaltyAndMemberDerived({
+    sync,
+    progress: { progress: [progressEntry("p-dave", 100, 5)], hltb },
+    overrides: {},
+    settings: { currentDate },
+  });
+  assert.equal(control.members.active.find((m) => m.name === "dave").thresholdMet, 0, "without the latch, 5h < 25h is below threshold");
+});
