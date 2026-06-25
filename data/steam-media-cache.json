@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-18T07:31:40.244593+00:00",
+  "updatedAt": "2026-06-25T19:44:16.894064+00:00",
   "apps": {
     "3288210": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3288210/2e13226847bb546625411aed75e74471f6705b18/header.jpg?t=1777969480",
@@ -4887,6 +4887,94 @@
       "capsuleSmallUrl": "",
       "releaseDate": "",
       "comingSoon": false
+    },
+    "1371980": {
+      "name": "No Rest for the Wicked",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1371980/331de7e745f43867f0a220339153ac6019822ea4/header.jpg?t=1780442295",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1371980/9d2efe7754b0843dddbf7c495fe55ccc69e99b6c/capsule_231x87.jpg?t=1780442295",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1371980/9d2efe7754b0843dddbf7c495fe55ccc69e99b6c/capsule_184x69.jpg?t=1780442295",
+      "releaseDate": "2024-04-18",
+      "comingSoon": false
+    },
+    "2001760": {
+      "name": "Beast of Reincarnation",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2001760/d068139fe039e26a6a9d9f57ac5d89785b984d33/header.jpg?t=1781782336",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2001760/8051f36f9874f82c4d998354409343346b5f6b3f/capsule_231x87.jpg?t=1781782336",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2001760/8051f36f9874f82c4d998354409343346b5f6b3f/capsule_184x69.jpg?t=1781782336",
+      "releaseDate": "2026-08-03",
+      "comingSoon": true
+    },
+    "2713000": {
+      "name": "Resonance: A Plague Tale Legacy",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2713000/fd497979801c646561040243e1aa64a73d11f13a/header.jpg?t=1781505706",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2713000/0d06636f2a2c3dcf0b473c91212f36a0b3e2e1a8/capsule_231x87.jpg?t=1781505706",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2713000/0d06636f2a2c3dcf0b473c91212f36a0b3e2e1a8/capsule_184x69.jpg?t=1781505706",
+      "releaseDate": "2026-08-27",
+      "comingSoon": true
+    },
+    "2769570": {
+      "name": "Fable",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2769570/d2ffd7e15a91f3e5485601d3d876988ba3a859d7/header.jpg?t=1782345305",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2769570/24f6ec304555c95bf5c1ee328ffa9caaea50a4f6/capsule_231x87.jpg?t=1782345305",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2769570/24f6ec304555c95bf5c1ee328ffa9caaea50a4f6/capsule_184x69.jpg?t=1782345305",
+      "releaseDate": "2027-02-23",
+      "comingSoon": true
+    },
+    "2806050": {
+      "name": "Halo: Campaign Evolved",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2806050/30d8542d35d7919b34e5f5dbe955d04c3f99e6da/header.jpg?t=1781134451",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2806050/c4569404286b4e8bc5810fbc11282d7b842d4e4a/capsule_231x87.jpg?t=1781134451",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2806050/c4569404286b4e8bc5810fbc11282d7b842d4e4a/capsule_184x69.jpg?t=1781134451",
+      "releaseDate": "2026-07-28",
+      "comingSoon": true
+    },
+    "2863680": {
+      "name": "ZERO PARADES: For Dead Spies",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2863680/55688bad6bad01f23f02e25f1b8cca90f9ea7ae9/header_alt_assets_1.jpg?t=1782118741",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2863680/d9bfd8b8a8e2e4c5e52b9d7a67c081ac3da9fb82/capsule_231x87_alt_assets_1.jpg?t=1782118741",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2863680/d9bfd8b8a8e2e4c5e52b9d7a67c081ac3da9fb82/capsule_184x69_alt_assets_1.jpg?t=1782118741",
+      "releaseDate": "2026-05-21",
+      "comingSoon": false
+    },
+    "3259780": {
+      "name": "FINAL FANTASY RESONANCE",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3259780/710da43babb2043f9f6ad0e50023e31167d94708/header.jpg?t=1781660410",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3259780/6861c59eb09396b7370536d494c1c1f33f684f14/capsule_231x87.jpg?t=1781660410",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3259780/6861c59eb09396b7370536d494c1c1f33f684f14/capsule_184x69.jpg?t=1781660410",
+      "releaseDate": "2026-10-22",
+      "comingSoon": true
+    },
+    "3558670": {
+      "name": "Tomb Raider: Legacy of Atlantis",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3558670/d0d4229807e9bd939c2374cb94a1264aa1386398/header.jpg?t=1780440913",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3558670/560eb591bb96d39b4d9c2349854ce728e3208ea4/capsule_231x87.jpg?t=1780440913",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3558670/560eb591bb96d39b4d9c2349854ce728e3208ea4/capsule_184x69.jpg?t=1780440913",
+      "releaseDate": "2027-02-12",
+      "comingSoon": true
+    },
+    "3669870": {
+      "name": "CONTROL Resonant",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3669870/1e0c76e4253d347bb1304c3f213570251d924edf/header.jpg?t=1782129122",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3669870/867a73afa5f21c28aaa14e9b0a4d895c540d4a0c/capsule_231x87.jpg?t=1782129122",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3669870/867a73afa5f21c28aaa14e9b0a4d895c540d4a0c/capsule_184x69.jpg?t=1782129122",
+      "releaseDate": "2026-09-24",
+      "comingSoon": true
+    },
+    "3751260": {
+      "name": "The Blood of Dawnwalker",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3751260/a7062f3b59d491c2678e3fd7ce2672858e480641/header.jpg?t=1782380799",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3751260/512cea7b8d6470681fc081ab933290bf14a8f956/capsule_231x87.jpg?t=1782380799",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3751260/512cea7b8d6470681fc081ab933290bf14a8f956/capsule_184x69.jpg?t=1782380799",
+      "releaseDate": "2026-09-02",
+      "comingSoon": true
+    },
+    "3751950": {
+      "name": "Assassin's Creed Black Flag Resynced",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3751950/9b046115b1663a4be2b252712328e4f6c162da68/header.jpg?t=1781197729",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3751950/e38674a3067b5ac028974bbfb42c835d0cf27122/capsule_231x87.jpg?t=1781197729",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3751950/e38674a3067b5ac028974bbfb42c835d0cf27122/capsule_184x69.jpg?t=1781197729",
+      "releaseDate": "2026-07-09",
+      "comingSoon": true
     }
   }
 }
