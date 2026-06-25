@@ -342,7 +342,16 @@ function bindEvents() {
   elements.summerEntryCreatorFilter?.addEventListener("change", () => renderSummerEventEntriesPage());
   elements.summerEntrySort?.addEventListener("change", () => renderSummerEventEntriesPage());
   elements.activeUsersSort?.addEventListener("change", () => renderMemberBuckets());
-  elements.monthlyMemberFilter?.addEventListener("change", () => renderProgressViews());
+  elements.monthlyMemberFilter?.addEventListener("change", () => {
+    // Looking at a single member's wins reads best newest-first; the all-members
+    // view defaults back to "least hours first" for PoP triage. The user can pick
+    // any sort afterwards (this only sets the default on member switch).
+    if (elements.monthlySort) {
+      const viewingMember = (elements.monthlyMemberFilter.value || "all") !== "all";
+      elements.monthlySort.value = viewingMember ? "date-desc" : "hours-asc";
+    }
+    renderProgressViews();
+  });
   elements.penaltiesFilter?.addEventListener("change", () => renderPenaltiesPage());
 
   document.addEventListener("click", (event) => {
