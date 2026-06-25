@@ -234,3 +234,35 @@ test("penalties: member bucket rows (wins, playtime, threshold-met)", () => {
   assert.equal(dave.totalPlaytime, 95); // 5 + 90
   assert.equal(dave.thresholdMet, 1); // only the 90h win meets 25% of 100h
 });
+
+test("manual winner wins inherit Steam playtime/achievements (pre-release winner snapshot)", () => {
+  // Pre-release game: the giveaway has no synced winner yet, so an admin sets the
+  // winner manually. That manual win is rebuilt after the progress merge, so it
+  // must still pick up the member's real playtime/achievements — otherwise it
+  // shows 0h / 0 achievements and gets wrongly flagged for a penalty.
+  const currentDate = "2026-06-15";
+  const sync = {
+    members: [member("frank", true, "p-frank")],
+    giveaways: [
+      // Jan 2026 win, no synced winner; if treated as 0h it would be OVERDUE.
+      giveaway({ code: "MAN", creatorUsername: "x", appId: 800, winners: [], startDate: "2026-01-05T00:00:00.000Z", endDate: "2026-01-10T00:00:00.000Z" }),
+    ],
+  };
+  const progress = {
+    progress: [progressEntry("p-frank", 800, 90, { earnedAchievements: 6, totalAchievements: 42 })],
+    hltb: [{ appId: 800, hltbHours: 100 }],
+  };
+  const overrides = { giveaways: { "sg-MAN": { manualWinners: [{ username: "frank" }] } } };
+
+  const { penalties, members } = buildPenaltyAndMemberDerived({ sync, progress, overrides, settings: { currentDate } });
+
+  // The manual win counts like any other win and reflects real progress.
+  const frank = members.active.find((m) => m.name === "frank");
+  assert.equal(frank.totalWins, 1, "manual winner produces a win");
+  assert.equal(frank.totalPlaytime, 90, "real Steam playtime merged onto the manual win");
+  assert.equal(frank.thresholdMet, 1, "90h of a 100h game + 6/42 achievements meets threshold");
+
+  // Threshold met => not flagged for a penalty (would be overdue if it read 0h).
+  const flagged = [...penalties.owedNow, ...penalties.comingDue].map((r) => r.member);
+  assert.equal(flagged.includes("frank"), false, "compliant manual winner is not penalised");
+});

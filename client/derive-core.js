@@ -1056,30 +1056,43 @@ export function buildEntityGraph({ sync = {}, progress = {}, overrides = {}, set
   const hltbByAppId = new Map(hltbItems.filter((item) => item?.appId && item?.hltbHours).map((item) => [Number(item.appId), Number(item.hltbHours)]));
   const hltbByTitle = new Map(hltbItems.filter((item) => item?.title && item?.hltbHours).map((item) => [item.title, Number(item.hltbHours)]));
 
-  for (const win of wins) {
-    const member = membersById.get(win.memberId);
-    const game = gamesById.get(win.gameId);
-    if (!member?.steamProfile || !game?.appId) {
-      continue;
+  // Apply Steam playtime/achievements onto wins. Defined here, but invoked AFTER
+  // the manual-winner reconcile below: manual winners get their win objects
+  // rebuilt there (reset to 0h / 0 achievements), so merging only here would
+  // leave them stuck at zero and wrongly flag them below threshold.
+  const applyProgressToWins = (winList, membersByIdMap, gamesByIdMap) => {
+    for (const win of winList) {
+      const member = membersByIdMap.get(win.memberId);
+      const game = gamesByIdMap.get(win.gameId);
+      if (!member?.steamProfile || !game?.appId) {
+        continue;
+      }
+      const entry = progressByKey.get(`${member.steamProfile}|${game.appId}`);
+      if (!entry) {
+        continue;
+      }
+      if (entry.playtimeHours !== null && entry.playtimeHours !== undefined) {
+        win.currentHours = entry.playtimeHours;
+      }
+      win.earnedAchievements = entry.earnedAchievements ?? win.earnedAchievements;
+      win.proofProvided = entry.visible;
     }
-    const entry = progressByKey.get(`${member.steamProfile}|${game.appId}`);
-    if (!entry) {
-      continue;
+  };
+  // Merge HLTB hours + achievement totals onto games. Also re-run after the
+  // manual-winner reconcile: a pre-release giveaway with no synced winner has no
+  // game until reconcile's upsertGame creates it, so without a second pass that
+  // game would keep 0 HLTB / 0 achievements and read as "Missing data".
+  const applyProgressToGames = (gameList) => {
+    for (const game of gameList) {
+      const entry = progressItems.find((item) => Number(item.appId) === Number(game.appId));
+      if (!entry) {
+        continue;
+      }
+      game.hltbHours = hltbByAppId.get(Number(game.appId)) || hltbByTitle.get(game.title) || Number(game.hltbHours || 0);
+      game.achievementsTotal = entry.totalAchievements > 0 ? entry.totalAchievements : game.achievementsTotal;
     }
-    if (entry.playtimeHours !== null && entry.playtimeHours !== undefined) {
-      win.currentHours = entry.playtimeHours;
-    }
-    win.earnedAchievements = entry.earnedAchievements ?? win.earnedAchievements;
-    win.proofProvided = entry.visible;
-  }
-  for (const game of games) {
-    const entry = progressItems.find((item) => Number(item.appId) === Number(game.appId));
-    if (!entry) {
-      continue;
-    }
-    game.hltbHours = hltbByAppId.get(Number(game.appId)) || hltbByTitle.get(game.title) || Number(game.hltbHours || 0);
-    game.achievementsTotal = entry.totalAchievements > 0 ? entry.totalAchievements : game.achievementsTotal;
-  }
+  };
+  applyProgressToGames(games);
 
   // Apply manual overrides on top (games/wins/giveaways/members), then
   // reconcile manual-winner wins. Mirrors applyManualOverrides.
@@ -1160,10 +1173,16 @@ export function buildEntityGraph({ sync = {}, progress = {}, overrides = {}, set
       });
     }
   }
-  // upsertGame may have appended during reconcile; re-apply game overrides to any
-  // freshly added games and refresh lookups.
+  // upsertGame may have appended during reconcile; merge progress onto those new
+  // games, then re-apply game overrides to them and refresh lookups.
+  applyProgressToGames(games);
   nextGames = applyEntityOverrides(games, "games", GAME_OVERRIDE_FIELDS, getGameOverrideKey);
   gamesById = new Map(nextGames.map((game) => [game.id, game]));
+
+  // Now that wins are final (override-applied + manual winners reconciled), merge
+  // Steam playtime/achievements so every win — including rebuilt manual winners —
+  // reflects real progress.
+  applyProgressToWins(nextWins, membersById, gamesById);
 
   return {
     members: nextMembers,

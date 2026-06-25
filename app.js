@@ -44,6 +44,15 @@ const GITHUB_OVERRIDES_PATH = "data/overrides.json";
 const GITHUB_REFRESH_WORKFLOW = "daily-refresh.yml";
 const GITHUB_TOKEN_STORAGE_KEY = "akatsuki-github-token";
 
+// Last applied Steam progress. Kept at module scope so reconcileManualWinnerWins
+// (which rebuilds manual-winner wins/games on every override edit, not just on a
+// data load) can re-merge real playtime/achievements/HLTB onto them instead of
+// leaving a pre-release manual winner stuck at 0h / "Missing data".
+let steamProgressByKey = new Map(); // `${steamProfile}|${appId}` -> progress entry
+let steamProgressItems = []; // raw progress rows (game merge looks up by appId)
+let steamHltbByAppId = new Map();
+let steamHltbByTitle = new Map();
+
 const defaultState = {
   settings: {
     groupName: "Akatsuki",
@@ -3916,6 +3925,8 @@ function applySteamProgress(payload) {
   const progressByKey = new Map(
     progressItems.map((item) => [`${item.steamProfile}|${item.appId}`, item]),
   );
+  steamProgressByKey = progressByKey;
+  steamProgressItems = progressItems;
   const hltbByAppId = new Map(
     hltbItems
       .filter((item) => item?.appId && item?.hltbHours)
@@ -3926,6 +3937,8 @@ function applySteamProgress(payload) {
       .filter((item) => item?.title && item?.hltbHours)
       .map((item) => [item.title, Number(item.hltbHours)]),
   );
+  steamHltbByAppId = hltbByAppId;
+  steamHltbByTitle = hltbByTitle;
 
   state.wins = state.wins.map((win) => {
     const member = findById("members", win.memberId);
@@ -3952,19 +3965,9 @@ function applySteamProgress(payload) {
     return nextWin;
   });
 
-  state.games = state.games.map((game) => {
-    const progress = progressItems.find((item) => Number(item.appId) === Number(game.appId));
-    if (!progress) {
-      return game;
-    }
-    return {
-      ...game,
-      hltbHours:
-        hltbByAppId.get(Number(game.appId)) || hltbByTitle.get(game.title) || Number(game.hltbHours || 0),
-      achievementsTotal:
-        progress.totalAchievements > 0 ? progress.totalAchievements : game.achievementsTotal,
-    };
-  });
+  for (const game of state.games) {
+    applyStoredProgressToGame(game);
+  }
 
   applyManualOverrides();
 
@@ -5592,6 +5595,10 @@ function reconcileManualWinnerWins(overrides) {
     const gameId = syncGiveaway
       ? upsertGameFromSync(syncGiveaway)
       : state.games.find((game) => game.title === giveaway.title)?.id || null;
+    // A pre-release giveaway has no game until upsertGameFromSync just created it,
+    // which is after applySteamProgress merged HLTB/achievements — so merge them
+    // onto this game now, otherwise it reads as "Missing data".
+    applyStoredProgressToGame(findById("games", gameId));
 
     for (const winnerInfo of manualWinners) {
       const member = findMemberByUsername(winnerInfo.username);
@@ -5599,7 +5606,7 @@ function reconcileManualWinnerWins(overrides) {
         continue;
       }
       // Same shape as upsertWinFromSync, plus the manualWinner tag.
-      state.wins.unshift({
+      const manualWin = {
         id: uid("win"),
         sourceId: `sg-win-${code}-${winnerInfo.username}`,
         giveawaySourceId: giveaway.sourceId,
@@ -5615,9 +5622,48 @@ function reconcileManualWinnerWins(overrides) {
         proofProvided: false,
         evidenceNotes: "Manual winner set in the dashboard.",
         createdAt: new Date().toISOString(),
-      });
+      };
+      // This win was just rebuilt from scratch (after the progress merge already
+      // ran), so re-apply the member's real Steam playtime/achievements for it.
+      applyStoredProgressToWin(manualWin, member);
+      state.wins.unshift(manualWin);
     }
   }
+}
+
+// Merge the last-loaded Steam progress for a single win (used for rebuilt
+// manual-winner wins). Mirrors the per-win merge in applySteamProgress.
+function applyStoredProgressToWin(win, member) {
+  const game = findById("games", win.gameId);
+  if (!member?.steamProfile || !game?.appId) {
+    return;
+  }
+  const progress = steamProgressByKey.get(`${member.steamProfile}|${game.appId}`);
+  if (!progress) {
+    return;
+  }
+  if (progress.playtimeHours !== null && progress.playtimeHours !== undefined) {
+    win.currentHours = progress.playtimeHours;
+  }
+  win.earnedAchievements = progress.earnedAchievements ?? win.earnedAchievements;
+  win.proofProvided = progress.visible;
+}
+
+// Merge HLTB hours + achievement totals onto a game, in place. Used both in the
+// bulk pass and for games first created during manual-winner reconcile (a
+// pre-release giveaway has no game until then, so it would otherwise stay at
+// 0 HLTB / 0 achievements and read as "Missing data").
+function applyStoredProgressToGame(game) {
+  if (!game?.appId) {
+    return;
+  }
+  const progress = steamProgressItems.find((item) => Number(item.appId) === Number(game.appId));
+  if (!progress) {
+    return;
+  }
+  game.hltbHours =
+    steamHltbByAppId.get(Number(game.appId)) || steamHltbByTitle.get(game.title) || Number(game.hltbHours || 0);
+  game.achievementsTotal = progress.totalAchievements > 0 ? progress.totalAchievements : game.achievementsTotal;
 }
 
 function stripOverrideFields(item, fields) {
