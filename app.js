@@ -2701,7 +2701,7 @@ function buildGameCell(game, win) {
     <div class="game-cell">
       ${image}
       <div>
-        <strong>${titleMarkup}</strong>
+        <strong>${titleMarkup}</strong>${win?.manualWinner ? ` ${buildBadge("info", "Manual")}` : ""}
         ${game?.appId ? `<span class="meta-line">App ${game.appId}</span>` : ""}
       </div>
     </div>
@@ -3036,7 +3036,7 @@ function renderPenaltiesPage() {
         rows.push(`
           <tr>
             <td>${escapeHtml(member?.name || win.winnerUsername || "Unknown member")}</td>
-            <td>${linkedGame(game?.title || win.title || "", getGiveawayUrl(win))}</td>
+            <td>${linkedGame(game?.title || win.title || "", getGiveawayUrl(win))}${win.manualWinner ? ` ${buildBadge("info", "Manual")}` : ""}</td>
             <td>${escapeHtml(hoursCell)}</td>
             <td>${escapeHtml(achievementsCell)}</td>
             <td>${statusBadge}</td>
@@ -3055,7 +3055,7 @@ function renderPenaltiesPage() {
       rows.push(`
         <tr>
           <td>${escapeHtml(payer)}</td>
-          <td>${linkedGame(gameTitle, getGiveawayPageUrl(record.giveaway))}</td>
+          <td>${linkedGame(gameTitle, getGiveawayPageUrl(record.giveaway))}${record.targetWin?.manualWinner ? ` ${buildBadge("info", "Manual")}` : ""}</td>
           <td>${escapeHtml(hoursCell)}</td>
           <td>${escapeHtml(achievementsCell)}</td>
           <td>${buildBadge("success", "Settled")}</td>
@@ -3084,6 +3084,8 @@ function renderPenaltiesPageFromDerived(penalties) {
     url
       ? `<a class="linked-title" href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(title)}</a>`
       : escapeHtml(title);
+  const gameCellWithTag = (row) =>
+    `${linkedGame(row.game, row.giveawayUrl || row.giveawayPageUrl)}${row.manualWinner ? ` ${buildBadge("info", "Manual")}` : ""}`;
   const hoursCell = (row) => `${formatHours(Number(row.currentHours || 0))} / ${formatHours(Number(row.requiredHours || 0))}`;
   const achievementsCell = (row) => `${Number(row.earnedAchievements || 0)} / ${Number(row.requiredAchievements || 0)}`;
 
@@ -3105,7 +3107,7 @@ function renderPenaltiesPageFromDerived(penalties) {
         rows.push(`
           <tr>
             <td>${escapeHtml(row.member)}</td>
-            <td>${linkedGame(row.game, row.giveawayUrl)}</td>
+            <td>${gameCellWithTag(row)}</td>
             <td>${escapeHtml(hoursCell(row))}</td>
             <td>${escapeHtml(achievementsCell(row))}</td>
             <td>${statusBadge}</td>
@@ -3120,7 +3122,7 @@ function renderPenaltiesPageFromDerived(penalties) {
       rows.push(`
         <tr>
           <td>${escapeHtml(row.payer)}</td>
-          <td>${linkedGame(row.game, row.giveawayPageUrl)}</td>
+          <td>${gameCellWithTag(row)}</td>
           <td>${escapeHtml(hoursCell(row))}</td>
           <td>${escapeHtml(achievementsCell(row))}</td>
           <td>${buildBadge("success", "Settled")}</td>

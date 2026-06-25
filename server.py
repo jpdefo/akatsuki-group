@@ -1771,6 +1771,44 @@ def enrich_sync_with_hltb(sync_payload: dict, *, remote_titles: set[str] | None 
     return sync_payload, hltb_items
 
 
+def derive_manual_winner_wins(sync_payload: dict, overrides_payload: dict) -> list[dict]:
+    """Manual winners live in overrides (not the sync), so the refresh would
+    otherwise never fetch Steam data for a pre-release giveaway whose only winner
+    was assigned by hand. Synthesize win records for them so they are fetched and
+    treated like any other win (PoP still applies; pop_free is handled downstream)."""
+    giveaways_by_code = {
+        str(giveaway.get("code")): giveaway
+        for giveaway in sync_payload.get("giveaways", [])
+        if giveaway.get("code")
+    }
+    # Accept either the wrapped shape ({overrides: {giveaways}}) or a bare
+    # {giveaways} map.
+    inner = overrides_payload.get("overrides") if isinstance(overrides_payload.get("overrides"), dict) else overrides_payload
+    manual_wins: list[dict] = []
+    for key, entry in (inner.get("giveaways") or {}).items():
+        manual_winners = entry.get("manualWinners") if isinstance(entry, dict) else None
+        if not manual_winners:
+            continue
+        code = key[3:] if str(key).startswith("sg-") else str(key)
+        giveaway = giveaways_by_code.get(code)
+        if not giveaway:
+            continue
+        for winner in manual_winners:
+            username = winner.get("username") if isinstance(winner, dict) else None
+            if not username:
+                continue
+            manual_wins.append(
+                {
+                    "winnerUsername": username,
+                    "appId": giveaway.get("appId"),
+                    "title": giveaway.get("title"),
+                    "giveawayCode": code,
+                    "winDate": giveaway.get("endDate"),
+                }
+            )
+    return manual_wins
+
+
 def collect_progress_targets(
     sync_payload: dict,
     target_month: str | None = None,
@@ -1809,7 +1847,9 @@ def collect_progress_targets(
         if title and release_date:
             release_by_title[title] = release_date
 
-    for win in derive_wins(sync_payload):
+    overrides_payload = normalize_overrides_payload(load_json(OVERRIDES_PATH, empty_overrides_payload()))
+    manual_wins = derive_manual_winner_wins(sync_payload, overrides_payload)
+    for win in [*derive_wins(sync_payload), *manual_wins]:
         username = win.get("winnerUsername") or win.get("username")
         app_id = parse_int(win.get("appId"))
         steam_profile = members.get(username, {}).get("steamProfile", "")

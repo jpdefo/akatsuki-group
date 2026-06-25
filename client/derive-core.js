@@ -1274,6 +1274,7 @@ export function buildPenaltyAndMemberDerived({ sync = {}, progress = {}, overrid
       giveawayUrl: getWinGiveawayUrl(win),
       deadline: info.deadline instanceof Date ? info.deadline.toISOString() : null,
       popMonth: info.popMonth,
+      manualWinner: Boolean(win.manualWinner),
       ...penaltyProgressFigures(win, ctx),
     };
     if (info.status === "overdue") {
@@ -1293,6 +1294,7 @@ export function buildPenaltyAndMemberDerived({ sync = {}, progress = {}, overrid
     game: record.targetGame?.title || record.target?.title || record.giveaway.title || "",
     giveawayPageUrl: getGiveawayPageUrl(record.giveaway),
     createdAt: record.giveaway.createdAt || null,
+    manualWinner: Boolean(record.targetWin?.manualWinner),
     ...penaltyProgressFigures(record.targetWin, ctx),
   }));
 
