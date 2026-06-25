@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-25T19:45:34.312852+00:00",
+  "updatedAt": "2026-06-25T20:15:08.465537+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -32322,12 +32322,12 @@
       "earnedAchievements": 39,
       "totalAchievements": 43,
       "achievementPercent": 91,
-      "playtimeHours": 70.88,
+      "playtimeHours": 71.05,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 70.88
+      "achievementsPlaytimeHours": 71.05
     },
     {
       "username": "Wintermute101",
@@ -39201,6 +39201,22 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "achievementsPlaytimeHours": 6.33
+    },
+    {
+      "username": "zettaivanugen",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197975039366",
+      "appId": 3105440,
+      "title": "Heroes of Might and Magic: Olden Era",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/3105440/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "playtimeSource": "",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": "HTTP Error 403: Forbidden"
     },
     {
       "username": "zettaivanugen",
@@ -66695,15 +66711,29 @@
       "hltbHours": 17.19,
       "matchedTitle": "No Rest for the Wicked",
       "url": "https://howlongtobeat.com/game/141835"
+    },
+    {
+      "title": "Dying Light: The Beast",
+      "appId": 3008130,
+      "hltbHours": 18.46,
+      "matchedTitle": "Dying Light: The Beast",
+      "url": "https://howlongtobeat.com/game/155650"
+    },
+    {
+      "title": "SILENT HILL f",
+      "appId": 2947440,
+      "hltbHours": 10.71,
+      "matchedTitle": "Silent Hill f",
+      "url": "https://howlongtobeat.com/game/114901"
     }
   ],
   "steamApiEnabled": true,
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-06-25T19:44:23.506542+00:00",
+  "libraryUpdatedAt": "2026-06-25T20:14:12.743407+00:00",
   "libraryStats": {
-    "durationSeconds": 6.42,
+    "durationSeconds": 5.45,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -66712,15 +66742,15 @@
     "totalPlaytimeRows": 13852
   },
   "stats": {
-    "durationSeconds": 77.24,
-    "targetWins": 2285,
-    "uniqueProgressTargets": 2283,
+    "durationSeconds": 61.18,
+    "targetWins": 2288,
+    "uniqueProgressTargets": 2284,
     "libraryPlaytimeHits": 2232,
-    "cachedReuses": 2184,
-    "achievementSuccesses": 13,
-    "achievementErrors": 86,
+    "cachedReuses": 2192,
+    "achievementSuccesses": 5,
+    "achievementErrors": 87,
     "cachedFallbacks": 86,
     "hltbTitlesRequested": 1254,
-    "hltbResultsAvailable": 3925
+    "hltbResultsAvailable": 3927
   }
 }
