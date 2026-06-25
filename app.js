@@ -41,6 +41,7 @@ function summerSettings() {
 const STORAGE_KEY = "akatsuki-monitor-state-v1";
 const GITHUB_PUBLISH_REPO = { owner: "jpdefo", name: "akatsuki-group", branch: "main" };
 const GITHUB_OVERRIDES_PATH = "data/overrides.json";
+const GITHUB_REFRESH_WORKFLOW = "daily-refresh.yml";
 const GITHUB_TOKEN_STORAGE_KEY = "akatsuki-github-token";
 
 const defaultState = {
@@ -163,6 +164,7 @@ const elements = {
   exportButton: document.querySelector("#export-data"),
   publishOverridesButton: document.querySelector("#publish-overrides"),
   publishToPagesButton: document.querySelector("#publish-to-pages"),
+  forceRefreshButton: document.querySelector("#force-refresh"),
   githubTokenButton: document.querySelector("#github-token-button"),
   clearGithubTokenButton: document.querySelector("#github-token-clear"),
   quickPublishButton: document.querySelector("#quick-publish"),
@@ -281,6 +283,7 @@ function bindEvents() {
   elements.exportButton?.addEventListener("click", exportData);
   elements.publishOverridesButton?.addEventListener("click", () => publishSharedOverrides());
   elements.publishToPagesButton?.addEventListener("click", () => publishOverridesToGitHub());
+  elements.forceRefreshButton?.addEventListener("click", () => triggerDataRefresh());
   elements.githubTokenButton?.addEventListener("click", () => {
     promptForGithubToken({ announce: true });
     updateQuickPublishVisibility();
@@ -3669,6 +3672,70 @@ async function publishOverridesToGitHub() {
     if (button) {
       button.disabled = false;
       button.textContent = originalLabel || "Publish to GitHub Pages";
+    }
+  }
+}
+
+// Kick off the daily refresh workflow on demand (workflow_dispatch). Uses the
+// same browser-stored token as publishing; a classic token with the `repo`
+// scope (or a fine-grained token with `Actions: write`) is sufficient.
+async function triggerDataRefresh() {
+  const button = elements.forceRefreshButton;
+  const originalLabel = button?.textContent;
+
+  let token = getStoredGithubToken();
+  if (!token) {
+    token = promptForGithubToken();
+    if (!token) {
+      window.alert("Refresh cancelled: no GitHub token provided.");
+      return;
+    }
+  }
+
+  if (!window.confirm("Trigger a full Steam data refresh (playtime + achievements) now? It runs on GitHub and takes a few minutes, then redeploys the site.")) {
+    return;
+  }
+
+  try {
+    if (button) {
+      button.disabled = true;
+      button.textContent = "Starting refresh...";
+    }
+
+    const url = `https://api.github.com/repos/${GITHUB_PUBLISH_REPO.owner}/${GITHUB_PUBLISH_REPO.name}/actions/workflows/${GITHUB_REFRESH_WORKFLOW}/dispatches`;
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        Accept: "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ ref: GITHUB_PUBLISH_REPO.branch }),
+    });
+
+    if (response.status === 401) {
+      throw new Error("GitHub rejected the token (401). Set a valid token and try again.");
+    }
+    if (response.status === 403) {
+      throw new Error("GitHub denied the request (403). The token needs workflow access: classic token with the 'repo' scope, or fine-grained with 'Actions: Read and write'.");
+    }
+    if (response.status === 404) {
+      throw new Error("Workflow not found (404). Confirm the token can see jpdefo/akatsuki-group and that daily-refresh.yml exists on main.");
+    }
+    // A successful dispatch returns 204 No Content.
+    if (!response.ok && response.status !== 204) {
+      const errorPayload = await response.json().catch(() => null);
+      throw new Error(errorPayload?.message || `Could not start the refresh (${response.status}).`);
+    }
+
+    window.alert("Steam data refresh started. Watch progress under the repo's Actions tab; the site redeploys when it finishes (a few minutes).");
+  } catch (error) {
+    window.alert(error?.message || "Could not start the data refresh.");
+  } finally {
+    if (button) {
+      button.disabled = false;
+      button.textContent = originalLabel || "Force Steam data refresh";
     }
   }
 }

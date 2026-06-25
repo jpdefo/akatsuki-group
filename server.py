@@ -35,8 +35,6 @@ OVERRIDES_PATH = DATA_DIR / "overrides.json"
 STATIC_EXPORT_DIR = BASE_DIR / "site"
 HOST = "127.0.0.1"
 PORT = 4173
-LIBRARY_SNAPSHOT_TTL_HOURS = 48
-PROGRESS_SNAPSHOT_TTL_HOURS = 48
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
@@ -1033,6 +1031,10 @@ def build_progress_cache(existing_payload: dict) -> dict[tuple[str, int], dict]:
 
 def merge_progress_item(base: dict | None, *, username: str, steam_profile: str, app_id: int, title: str, progress_url: str, api_playtime):
     item = dict(base or {})
+    # Shed obsolete per-item timestamps carried by older cache entries; freshness
+    # is no longer time-gated (members must keep playtime public).
+    item.pop("checkedAt", None)
+    item.pop("playtimeCheckedAt", None)
     item.update(
         {
             "username": username,
@@ -1049,7 +1051,6 @@ def merge_progress_item(base: dict | None, *, username: str, steam_profile: str,
     item.setdefault("totalAchievements", 0)
     item.setdefault("achievementPercent", 0)
     item.setdefault("playtimeHours", None)
-    item.setdefault("playtimeCheckedAt", None)
     item.setdefault("playtimeSource", "")
     item.setdefault("playtimeVisible", None)
     item.setdefault("gamesVisible", None)
@@ -1108,22 +1109,6 @@ def build_library_profile_lookup(library_payload: dict) -> dict[str, dict]:
         for item in library_payload.get("profiles", [])
         if item.get("steamProfile")
     }
-
-
-def is_library_profile_fresh(item: dict, *, ttl_hours: int = LIBRARY_SNAPSHOT_TTL_HOURS) -> bool:
-    checked_at = parse_datetime(item.get("checkedAt"))
-    if not checked_at:
-        return False
-    age_seconds = (datetime.now(timezone.utc) - checked_at).total_seconds()
-    return age_seconds < ttl_hours * 3600
-
-
-def is_progress_item_fresh(item: dict, *, ttl_hours: int = PROGRESS_SNAPSHOT_TTL_HOURS) -> bool:
-    checked_at = parse_datetime(item.get("checkedAt"))
-    if not checked_at:
-        return False
-    age_seconds = (datetime.now(timezone.utc) - checked_at).total_seconds()
-    return age_seconds < ttl_hours * 3600
 
 
 def build_members_payload(sync_payload: dict) -> dict:
@@ -1188,7 +1173,6 @@ def build_winner_progress_items(
                     "username": username or "",
                     "steamProfile": steam_profile,
                     "playtimeHours": None,
-                    "playtimeCheckedAt": library_profile.get("checkedAt"),
                     "playtimeSource": "",
                     "playtimeVisible": library_profile.get("playtimeVisible"),
                     "gamesVisible": library_profile.get("gamesVisible"),
@@ -1196,7 +1180,6 @@ def build_winner_progress_items(
                     "totalAchievements": 0,
                     "visible": False,
                     "progressUrl": "",
-                    "achievementCheckedAt": None,
                     "error": None,
                 }
             )
@@ -1208,7 +1191,6 @@ def build_winner_progress_items(
                 "username": username,
                 "steamProfile": steam_profile,
                 "playtimeHours": playtime.get("playtimeHours", progress.get("playtimeHours")),
-                "playtimeCheckedAt": playtime.get("checkedAt"),
                 "playtimeSource": playtime.get("source", ""),
                 "playtimeVisible": library_profile.get("playtimeVisible"),
                 "gamesVisible": library_profile.get("gamesVisible"),
@@ -1216,7 +1198,6 @@ def build_winner_progress_items(
                 "totalAchievements": parse_int(progress.get("totalAchievements")),
                 "visible": bool(progress.get("visible")),
                 "progressUrl": progress.get("progressUrl", ""),
-                "achievementCheckedAt": progress.get("checkedAt"),
                 "error": progress.get("error"),
             }
         )
@@ -1307,8 +1288,6 @@ def build_dashboard_payload(sync_payload: dict, progress_payload: dict, library_
             "libraryUpdatedAt": library_payload.get("updatedAt"),
             "libraryApiEnabled": bool(library_payload.get("apiEnabled")),
             "libraryProfiles": len(library_profiles),
-            "libraryFreshProfiles": sum(1 for item in library_profiles if is_library_profile_fresh(item)),
-            "librarySnapshotTtlHours": LIBRARY_SNAPSHOT_TTL_HOURS,
             "libraryRefreshedScope": library_payload.get("refreshedScope"),
             "libraryRefreshedMonth": library_payload.get("refreshedMonth"),
             "progressStats": progress_payload.get("stats") or {},
@@ -1485,7 +1464,6 @@ def refresh_steam_library(
         if parse_int(giveaway.get("appId"))
     }
     refreshed_profiles = 0
-    reused_profiles = 0
     error_profiles = 0
     missing_api_profiles = 0
 
@@ -1506,20 +1484,12 @@ def refresh_steam_library(
             }
             continue
 
-        if existing_profile and is_library_profile_fresh(existing_profile):
-            reused_profiles += 1
-            profile_cache[steam_profile] = {
-                **existing_profile,
-                "username": username or existing_profile.get("username", ""),
-                "steamProfile": steam_profile,
-                "error": existing_profile.get("error"),
-            }
-            continue
-
+        # Playtime is one account-wide GetOwnedGames call per member, so there is
+        # no TTL: every run re-scrapes and we persist only changed values, keeping
+        # data/steam-library.json diffs limited to real playtime changes.
         try:
             steam_id = extract_steam_id_from_profile(steam_profile, steam_api_key, steam_id_cache)
             snapshot = fetch_owned_games_snapshot(steam_id or "", steam_api_key)
-            checked_at = utc_now()
 
             stale_keys = [key for key in playtime_cache if key[0] == steam_profile]
             for key in stale_keys:
@@ -1535,7 +1505,6 @@ def refresh_steam_library(
                     "appId": app_id,
                     "playtimeMinutes": parse_int(item.get("playtimeMinutes")),
                     "playtimeHours": item.get("playtimeHours"),
-                    "checkedAt": checked_at,
                     "source": "steam-web-api",
                 }
 
@@ -1543,7 +1512,6 @@ def refresh_steam_library(
                 "username": username,
                 "steamProfile": steam_profile,
                 "steamId": steam_id or "",
-                "checkedAt": checked_at,
                 "gamesVisible": snapshot.get("gamesVisible"),
                 "playtimeVisible": snapshot.get("playtimeVisible"),
                 "gameCount": snapshot.get("gameCount", 0),
@@ -1556,7 +1524,6 @@ def refresh_steam_library(
                 **existing_profile,
                 "username": username or existing_profile.get("username", ""),
                 "steamProfile": steam_profile,
-                "checkedAt": utc_now(),
                 "error": str(error),
             }
 
@@ -1575,11 +1542,9 @@ def refresh_steam_library(
             "durationSeconds": round(time.perf_counter() - started_at, 2),
             "targetProfiles": len(targets),
             "refreshedProfiles": refreshed_profiles,
-            "reusedProfiles": reused_profiles,
             "errorProfiles": error_profiles,
             "missingApiProfiles": missing_api_profiles,
             "totalProfiles": len(profile_cache),
-            "freshProfiles": sum(1 for item in profile_cache.values() if is_library_profile_fresh(item)),
             "totalPlaytimeRows": len(playtime_cache),
         },
     }
@@ -1938,35 +1903,30 @@ def refresh_steam_progress(
             library_playtime_hits += 1
 
         progress_url = build_achievement_url(steam_profile, app_id)
-        item = {
-            **merge_progress_item(
-                cached_item,
-                username=username,
-                steam_profile=steam_profile,
-                app_id=int(app_id),
-                title=win.get("title", ""),
-                progress_url=progress_url,
-                api_playtime=api_playtime,
-            ),
-            "checkedAt": utc_now(),
-        }
-        item["playtimeCheckedAt"] = library_item.get("checkedAt")
+        item = merge_progress_item(
+            cached_item,
+            username=username,
+            steam_profile=steam_profile,
+            app_id=int(app_id),
+            title=win.get("title", ""),
+            progress_url=progress_url,
+            api_playtime=api_playtime,
+        )
         item["playtimeSource"] = library_item.get("source", "")
         item["playtimeVisible"] = library_profile.get("playtimeVisible")
         item["gamesVisible"] = library_profile.get("gamesVisible")
 
         # Achievements can only change when a game is played more, so skip the
         # per-game API call unless playtime increased since the last achievement
-        # check. When playtime is unavailable (private), fall back to the TTL.
+        # check. Group members must keep playtime public, so api_playtime is
+        # always available; if it is momentarily missing we re-fetch (no timer).
         last_achievement_playtime = cached_item.get("achievementsPlaytimeHours") if cached_item else None
         playtime_unchanged = (
             api_playtime is not None
             and last_achievement_playtime is not None
             and api_playtime <= last_achievement_playtime
         )
-        if cached_item and cached_item.get("error") is None and (
-            playtime_unchanged or (api_playtime is None and is_progress_item_fresh(cached_item))
-        ):
+        if cached_item and cached_item.get("error") is None and playtime_unchanged:
             item["error"] = cached_item.get("error")
             item["achievementsPlaytimeHours"] = last_achievement_playtime
             progress_cache[(steam_profile, int(app_id))] = item
@@ -1995,13 +1955,11 @@ def refresh_steam_progress(
                     progress_url=progress_url,
                     api_playtime=api_playtime,
                 )
-                item["playtimeCheckedAt"] = library_item.get("checkedAt")
                 item["playtimeSource"] = library_item.get("source", "")
                 item["playtimeVisible"] = library_profile.get("playtimeVisible")
                 item["gamesVisible"] = library_profile.get("gamesVisible")
                 cached_fallbacks += 1
             item["error"] = str(error)
-            item["checkedAt"] = utc_now()
 
         progress_cache[(steam_profile, int(app_id))] = item
 
@@ -2287,9 +2245,9 @@ HLTB_EXPORT_FIELDS = ("appId", "title", "hltbHours")
 
 def build_progress_export_payload(payload):
     """Slim the progress payload for publishing: keep only the per-entry fields the
-    frontend reads, dropping retry bookkeeping (checkedAt, playtimeCheckedAt,
-    playtimeSource, duplicated title, username, error, ...). The canonical
-    data/steam-progress.json on disk stays full for the server's refresh logic."""
+    frontend reads, dropping retry bookkeeping (playtimeSource, duplicated title,
+    username, error, ...). The canonical data/steam-progress.json on disk stays
+    full for the server's refresh logic."""
     if not isinstance(payload, dict):
         return payload
     slim = dict(payload)
