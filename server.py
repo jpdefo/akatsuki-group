@@ -909,9 +909,14 @@ def with_giveaway_media(giveaway: dict, media_lookup: dict[int, dict] | None = N
     return {
         **giveaway,
         "appId": app_id,
-        "headerImageUrl": giveaway.get("headerImageUrl") or cached_media.get("headerImageUrl") or media["headerImageUrl"],
-        "capsuleImageUrl": giveaway.get("capsuleImageUrl") or cached_media.get("capsuleImageUrl") or media["capsuleImageUrl"],
-        "capsuleSmallUrl": giveaway.get("capsuleSmallUrl") or cached_media.get("capsuleSmallUrl") or media["capsuleSmallUrl"],
+        # Prefer the cached Steam store-API media (authoritative) over the URL the
+        # collector captured: newer/unreleased titles serve art only at hashed
+        # store_item_assets paths, so the collector's classic
+        # cdn.../apps/<id>/header.jpg URL 404s. Fall back to the giveaway's URL
+        # (for games not yet hydrated) and finally the derived classic URL.
+        "headerImageUrl": cached_media.get("headerImageUrl") or giveaway.get("headerImageUrl") or media["headerImageUrl"],
+        "capsuleImageUrl": cached_media.get("capsuleImageUrl") or giveaway.get("capsuleImageUrl") or media["capsuleImageUrl"],
+        "capsuleSmallUrl": cached_media.get("capsuleSmallUrl") or giveaway.get("capsuleSmallUrl") or media["capsuleSmallUrl"],
         "releaseDate": normalize_store_release_date(giveaway.get("releaseDate") or cached_media.get("releaseDate")),
         "comingSoon": bool(giveaway.get("comingSoon") or cached_media.get("comingSoon")),
     }
