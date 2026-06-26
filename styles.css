@@ -148,6 +148,11 @@ h2 {
   gap: 16px;
 }
 
+/* Summer-event summary has 5 metrics; keep them on a single row. */
+#summer-event-summary-cards {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
 .summary-card {
   background: var(--panel-strong);
   border: 1px solid var(--line);
@@ -866,6 +871,7 @@ td small,
 @media (max-width: 1080px) {
   .two-columns,
   .summary-grid,
+  #summer-event-summary-cards,
   .member-grid,
   .form-grid.wide {
     grid-template-columns: 1fr;
