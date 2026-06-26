@@ -168,7 +168,11 @@
         (giveaway) =>
           giveaway?.url &&
           summerOverrideCodes.has(String(giveaway.code)) &&
-          !(Array.isArray(giveaway.entryUsers) && giveaway.entryUsers.length > 0),
+          !(Array.isArray(giveaway.entryUsers) && giveaway.entryUsers.length > 0) &&
+          // A giveaway can legitimately have zero entrants; treat it as captured
+          // once its entrants have actually been snapshotted from an ended
+          // giveaway, otherwise an empty entryUsers list would refetch forever.
+          !(giveaway.entriesFinalized && giveaway.entriesSnapshotAt),
       );
       if (giveawaysNeedingEntries.length) {
         log(`Fetching entrants for ${giveawaysNeedingEntries.length} promoted summer-event giveaway(s)...`);
