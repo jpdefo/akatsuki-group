@@ -2703,13 +2703,19 @@ function buildGameCell(game, win) {
     placeholder: "No art",
   });
   const steamAppUrl = game?.steamAppUrl || syncedGiveaway?.steamAppUrl || "";
-  const titleMarkup = steamAppUrl
-    ? `<a class="linked-title" href="${escapeHtml(steamAppUrl)}" target="_blank" rel="noreferrer">${title}</a>`
+  // Image -> the game's Steam store page; name -> the giveaway (matches the
+  // giveaways and summer-event tables).
+  const imageMarkup = steamAppUrl
+    ? `<a href="${escapeHtml(steamAppUrl)}" target="_blank" rel="noreferrer">${image}</a>`
+    : image;
+  const giveawayUrl = getGiveawayUrl(win);
+  const titleMarkup = giveawayUrl
+    ? `<a class="linked-title" href="${escapeHtml(giveawayUrl)}" target="_blank" rel="noreferrer">${title}</a>`
     : title;
 
   return `
     <div class="game-cell">
-      ${image}
+      ${imageMarkup}
       <div>
         <strong>${titleMarkup}</strong>${win?.manualWinner ? ` ${buildBadge("info", "Manual")}` : ""}
         ${game?.appId ? `<span class="meta-line">App ${game.appId}</span>` : ""}
@@ -2767,11 +2773,14 @@ function getResolvedGameAppId(game, syncedGiveaway) {
 
 function buildGiveawayCreatorMarkup(win) {
   const creatorName = escapeHtml(win?.creatorUsername || "-");
-  const giveawayUrl = getGiveawayUrl(win);
-  if (!giveawayUrl) {
+  const username = String(win?.creatorUsername || "").trim();
+  if (!username) {
     return creatorName;
   }
-  return `<a class="linked-title" href="${escapeHtml(giveawayUrl)}" target="_blank" rel="noreferrer">${creatorName}</a>`;
+  // The creator links to the creator's SteamGifts profile (the giveaway is
+  // reachable from the game name now).
+  const profileUrl = `https://www.steamgifts.com/user/${encodeURIComponent(username)}`;
+  return `<a class="linked-title" href="${escapeHtml(profileUrl)}" target="_blank" rel="noreferrer">${creatorName}</a>`;
 }
 
 function buildWinnerMarkup(member) {
