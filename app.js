@@ -802,7 +802,6 @@ function renderSyncStatus() {
       <h3>SteamGifts synced</h3>
       <p class="sync-time">${formatDateTime(sync.syncedAt)}</p>
       <p class="sync-ago">${escapeHtml(formatTimeAgo(sync.syncedAt))}</p>
-      ${runtime.staticApi ? `<p class="meta-line">GitHub Pages snapshot — data changes only after a new publish.</p>` : ""}
     </article>
     <article class="alert-card info sync-stat">
       <h3>Achievements synced</h3>
