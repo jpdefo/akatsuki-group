@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-25T20:14:07.107184+00:00",
+  "updatedAt": "2026-06-26T07:10:07.465679+00:00",
   "apps": {
     "3288210": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3288210/2e13226847bb546625411aed75e74471f6705b18/header.jpg?t=1777969480",
@@ -4983,6 +4983,22 @@
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2272360/58655009cee15d3af27c68a064a7a351853fea0b/capsule_184x69.jpg?t=1779973757",
       "releaseDate": "2026-09-17",
       "comingSoon": true
+    },
+    "1213210": {
+      "name": "Command & Conquer™ Remastered Collection",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1213210/header.jpg?t=1779987581",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1213210/capsule_231x87.jpg?t=1779987581",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1213210/capsule_184x69.jpg?t=1779987581",
+      "releaseDate": "2020-06-05",
+      "comingSoon": false
+    },
+    "2842040": {
+      "name": "Star Wars Outlaws",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2842040/header.jpg?t=1773407100",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2842040/9e887b6e39c690a305e509e598a125cbc6b2bd1c/capsule_231x87.jpg?t=1773407100",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2842040/9e887b6e39c690a305e509e598a125cbc6b2bd1c/capsule_184x69.jpg?t=1773407100",
+      "releaseDate": "2024-11-21",
+      "comingSoon": false
     }
   }
 }
