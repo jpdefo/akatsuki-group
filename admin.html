@@ -14,7 +14,7 @@
           <p class="eyebrow">Admin tools</p>
           <h1>Akatsuki Sync Tools</h1>
           <p class="hero-copy">
-            Collector, import, override publishing, and snapshot release all live here.
+            Collector, override publishing, and snapshot release all live here.
           </p>
           <p class="hero-copy">
             Run the collector flow here, then validate and publish a cleaner public snapshot.
@@ -42,17 +42,12 @@
               <p class="section-copy">
                 Install the <strong>Akatsuki SteamGifts Sync</strong> userscript (needs Tampermonkey),
                 open the SteamGifts group page while logged in, and run it to collect and publish a sync.
-                Or import a previously exported SteamGifts JSON below.
               </p>
             </div>
           </div>
           <div class="sync-actions">
             <button id="sync-refresh" class="button primary">Load server sync</button>
             <a class="button secondary" href="https://raw.githubusercontent.com/jpdefo/akatsuki-group/main/akatsuki-steamgifts-sync.user.js">Install / update userscript</a>
-            <label class="button secondary">
-              Import SteamGifts JSON
-              <input id="import-data" type="file" accept=".json,application/json" hidden />
-            </label>
           </div>
           <div id="sync-status" class="sync-status"></div>
         </section>
@@ -62,19 +57,16 @@
             <div>
               <h2>Publish snapshot</h2>
               <p class="section-copy">
-                GitHub Pages is read-only. Importing JSON here updates your browser locally;
-                publishing is what makes the public site change.
+                GitHub Pages is read-only. Publishing is what makes the public site change.
               </p>
             </div>
           </div>
           <div class="sync-actions">
-            <button id="export-data" class="button secondary">Export current browser state</button>
             <button id="publish-to-pages" class="button primary">Publish to GitHub Pages</button>
             <button id="force-refresh" class="button secondary">Force Steam data refresh</button>
             <button id="github-token-button" class="button secondary">Set / change GitHub token</button>
             <button id="github-token-clear" class="button secondary">Clear GitHub token</button>
             <a id="github-token-create" class="button secondary" href="https://github.com/settings/tokens/new?scopes=repo,workflow&description=Akatsuki%20Monitor" target="_blank" rel="noreferrer">Create a GitHub token ↗</a>
-            <button id="publish-overrides" class="button secondary">Save overrides to local server</button>
             <span class="meta-line sync-hint">
               <strong>Publish to GitHub Pages</strong> commits your current overrides (manual winners, kind/HLTB/month edits, pauses)
               straight to the repo using a GitHub token stored only in this browser. The public site rebuilds automatically (~1–2 min).
@@ -92,9 +84,6 @@
               Collaborators must use a <strong>classic</strong> token: fine-grained tokens only list repos you own, so
               <code>jpdefo/akatsuki-group</code> won't appear for anyone but the owner. (The owner may instead use a
               fine-grained token scoped to this repo with <code>Contents: Read and write</code>.)
-            </span>
-            <span class="meta-line sync-hint">
-              Save current overrides first if you want HLTB, 10%, month, extra giveaway, or pause edits to become part of the next public snapshot.
             </span>
           </div>
         </section>

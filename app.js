@@ -170,14 +170,11 @@ const elements = {
   inactiveUsersTable: document.querySelector("#inactive-users-table"),
   totalProgressTable: document.querySelector("#total-progress-table"),
   seedDemoButton: document.querySelector("#seed-demo"),
-  exportButton: document.querySelector("#export-data"),
-  publishOverridesButton: document.querySelector("#publish-overrides"),
   publishToPagesButton: document.querySelector("#publish-to-pages"),
   forceRefreshButton: document.querySelector("#force-refresh"),
   githubTokenButton: document.querySelector("#github-token-button"),
   clearGithubTokenButton: document.querySelector("#github-token-clear"),
   quickPublishButton: document.querySelector("#quick-publish"),
-  importInput: document.querySelector("#import-data"),
   resetButton: document.querySelector("#reset-data"),
   syncRefreshButton: document.querySelector("#sync-refresh"),
   steamRefreshButton: document.querySelector("#steam-refresh"),
@@ -289,8 +286,6 @@ function bindEvents() {
   elements.winForm?.addEventListener("submit", handleWinSubmit);
   elements.giveawayForm?.addEventListener("submit", handleGiveawaySubmit);
   elements.seedDemoButton?.addEventListener("click", seedDemoData);
-  elements.exportButton?.addEventListener("click", exportData);
-  elements.publishOverridesButton?.addEventListener("click", () => publishSharedOverrides());
   elements.publishToPagesButton?.addEventListener("click", () => publishOverridesToGitHub());
   elements.forceRefreshButton?.addEventListener("click", () => triggerDataRefresh());
   elements.githubTokenButton?.addEventListener("click", () => {
@@ -311,7 +306,6 @@ function bindEvents() {
   });
   elements.quickPublishButton?.addEventListener("click", () => publishOverridesToGitHub());
   updateQuickPublishVisibility();
-  elements.importInput?.addEventListener("change", importData);
   elements.resetButton?.addEventListener("click", resetData);
   elements.syncRefreshButton?.addEventListener("click", () => refreshRemoteSync());
   elements.steamRefreshButton?.addEventListener("click", () => refreshSteamProgress());
@@ -3781,47 +3775,6 @@ async function triggerDataRefresh() {
   }
 }
 
-async function publishSharedOverrides() {
-  const button = elements.publishOverridesButton;
-  const originalLabel = button?.textContent;
-
-  try {
-    if (runtime.staticApi) {
-      throw new Error("GitHub Pages is read-only. Use \"Publish to GitHub Pages\" to save overrides directly to the repo.");
-    }
-
-    if (button) {
-      button.disabled = true;
-      button.textContent = "Saving overrides...";
-    }
-
-    const response = await fetch("./api/overrides", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ overrides: getPublishableOverrideState() }),
-    });
-    const payload = await response.json().catch(() => null);
-    if (!response.ok) {
-      throw new Error(payload?.error || "Could not save published overrides.");
-    }
-
-    runtime.sharedOverrides = normalizeSharedOverridePayload(payload);
-    state.overrides = normalizeOverrideState();
-    applyManualOverrides();
-    persistAndRender();
-    window.alert("Overrides saved to data/overrides.json. Use \"Publish to GitHub Pages\" to publish them to the live site.");
-  } catch (error) {
-    window.alert(error?.message || "Could not save published overrides.");
-  } finally {
-    if (button) {
-      button.disabled = false;
-      button.textContent = originalLabel || "Save current overrides for publish";
-    }
-  }
-}
-
 async function refreshSteamProgress() {
   // Always a full refresh (per-month scope removed); the server's playtime-delta
   // gate means only games actually played since last time are re-fetched.
@@ -5233,45 +5186,6 @@ function buildEvidenceNoteMarkup(note) {
 
 function computeMinimumEntriesRequired() {
   return derive.computeMinimumEntriesRequired(state.settings.activeMembers);
-}
-
-function exportData() {
-  const payload = JSON.stringify(state, null, 2);
-  const blob = new Blob([payload], { type: "application/json" });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement("a");
-  link.href = url;
-  link.download = "akatsuki-monitor-data.json";
-  link.click();
-  URL.revokeObjectURL(url);
-}
-
-function importData(event) {
-  const [file] = event.target.files;
-  if (!file) {
-    return;
-  }
-
-  const reader = new FileReader();
-  reader.onload = () => {
-    try {
-      const imported = JSON.parse(reader.result);
-      if (imported?.source === "akatsuki-steamgifts-sync") {
-        importSteamGiftsSync(imported);
-      } else {
-        state = {
-          ...cloneState(defaultState),
-          ...imported,
-        };
-        persistAndRender();
-      }
-    } catch (error) {
-      window.alert("Could not import the JSON file.");
-    } finally {
-      event.target.value = "";
-    }
-  };
-  reader.readAsText(file);
 }
 
 function seedDemoData() {
