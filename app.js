@@ -1649,8 +1649,8 @@ function renderSummerEventPage() {
   if (elements.summerEventGiveawaysTable) {
     const creatorFilter = String(elements.summerEventCreatorFilter?.value || "").trim().toLowerCase();
     const winnerFilter = String(elements.summerEventWinnerFilter?.value || "").trim().toLowerCase();
-    const statusFilter = String(elements.summerEventStatusFilter?.value || "all").toLowerCase();
-    const sortValue = String(elements.summerEventSort?.value || "ended-desc");
+    const statusFilter = String(elements.summerEventStatusFilter?.value || "active").toLowerCase();
+    const sortValue = String(elements.summerEventSort?.value || "ended-asc");
     const filteredGiveaways = sortSummerEventGiveaways(
       giveaways.filter((giveaway) => {
         const creatorLabel = getSummerEventCreatorLabel(giveaway, summerEventMemberIndex).toLowerCase();
