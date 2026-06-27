@@ -68,6 +68,7 @@ export default [
       sourceType: "script",
       globals: {
         ...globals.browser,
+        GM_info: "readonly",
         GM_getValue: "readonly",
         GM_setValue: "readonly",
         GM_deleteValue: "readonly",
