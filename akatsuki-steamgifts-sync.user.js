@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Akatsuki SteamGifts Sync
 // @namespace    akatsuki-monitor
-// @version      1.9.1
+// @version      1.10.0
 // @author       Koalala
 // @description  Collect Akatsuki members, giveaways, entries and winners from the logged-in SteamGifts session and publish them straight to GitHub.
 // @match        https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts
@@ -280,6 +280,37 @@
             giveaway.entryUsers = snapshot.users;
             giveaway.entriesSnapshotAt = snapshot.capturedAt;
             giveaway.entriesFinalized = isGiveawayEnded(giveaway);
+          }
+        }
+      }
+
+      // Detect giveaways deleted on SteamGifts before they ended. A still-open
+      // giveaway the group listing no longer shows is the signal; we confirm with
+      // a detail-page probe and only tombstone on a clean 404, so a transient miss
+      // or a 429 never drops a live giveaway. Ended giveaways legitimately scroll
+      // off the listing, so they are never probed; a probe that comes back live
+      // clears a stale flag. Once a deleted giveaway's end date passes it stops
+      // being re-probed (it is gone for good), so this never grows unbounded.
+      const scrapedCodes = new Set(detailedGiveaways.map((giveaway) => String(giveaway.code)));
+      const deletionCandidates = finalGiveaways.filter(
+        (giveaway) =>
+          giveaway?.code &&
+          giveaway?.url &&
+          !scrapedCodes.has(String(giveaway.code)) &&
+          !isGiveawayEnded(giveaway),
+      );
+      if (deletionCandidates.length) {
+        log(`Checking ${deletionCandidates.length} missing open giveaway(s) for deletion...`);
+        for (const [index, giveaway] of deletionCandidates.entries()) {
+          const status = await probeGiveawayDeleted(giveaway.url);
+          if (status === "deleted" && !giveaway.deleted) {
+            giveaway.deleted = true;
+            giveaway.deletedAt = new Date().toISOString();
+            log(`  deleted (${index + 1}/${deletionCandidates.length}): ${giveaway.title}`);
+          } else if (status === "exists" && giveaway.deleted) {
+            giveaway.deleted = false;
+            giveaway.deletedAt = "";
+            log(`  restored (${index + 1}/${deletionCandidates.length}): ${giveaway.title}`);
           }
         }
       }
@@ -1278,6 +1309,30 @@
   async function fetchDocument(url) {
     const response = await fetchDocumentResponse(url);
     return response.doc;
+  }
+
+  // Lightweight existence check for a giveaway detail page. Returns "deleted"
+  // only on a clean 404 (the authoritative signal SteamGifts gives a removed
+  // giveaway), "exists" when the page loads, and "unknown" for anything else
+  // (429, network error, server hiccup) so an ambiguous result never tombstones
+  // a live giveaway. Honors the same request pacer as every other fetch.
+  async function probeGiveawayDeleted(url) {
+    if (requestGapMs > 0) {
+      const wait = requestGapMs - (Date.now() - lastRequestAt);
+      if (wait > 0) {
+        await delay(wait);
+      }
+    }
+    lastRequestAt = Date.now();
+    try {
+      const response = await fetch(url, { credentials: "include" });
+      if (response.status === 404) {
+        return "deleted";
+      }
+      return response.ok ? "exists" : "unknown";
+    } catch (error) {
+      return "unknown";
+    }
   }
 
   function log(message) {

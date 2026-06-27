@@ -80,6 +80,13 @@ export function getGiveawayCodeKey(giveaway) {
   return String(giveaway?.id || "").trim();
 }
 
+// A giveaway the collector confirmed was deleted on SteamGifts (a clean 404 on
+// its detail page). Tombstoned records stay in the synced data for history but
+// are excluded from every calculation and listing.
+export function isGiveawayDeleted(giveaway) {
+  return Boolean(giveaway?.deleted);
+}
+
 export function normalizeGiveawayKindValue(kind, giveaway = null) {
   const value = String(kind || "").trim().toLowerCase();
   if (value === "extra") {
@@ -442,7 +449,9 @@ export function buildSummerEventDerived({
   now = Date.now(),
 } = {}) {
   const mergedOverrides = normalizeOverrideState(overrides);
-  const normalized = giveaways.map((giveaway) => normalizeGiveawaySyncRecord(giveaway));
+  const normalized = giveaways
+    .filter((giveaway) => !isGiveawayDeleted(giveaway))
+    .map((giveaway) => normalizeGiveawaySyncRecord(giveaway));
   const tracked = getTrackedSummerEventGiveaways(normalized, mergedOverrides);
   const memberIndex = getSummerEventMemberIndex(members, syncMembers);
   const periods = getSummerEventPeriods(tracked, settings);
@@ -918,7 +927,9 @@ export function buildEntityGraph({ sync = {}, progress = {}, overrides = {}, set
     memberActivity[username] = Boolean(member.isActiveMember);
   }
   const profileByUsername = new Map(syncMembers.map((member) => [String(member.username).trim(), member.profileUrl || ""]));
-  const syncGiveaways = (Array.isArray(sync.giveaways) ? sync.giveaways : []).map((giveaway) => normalizeGiveawaySyncRecord(giveaway));
+  const syncGiveaways = (Array.isArray(sync.giveaways) ? sync.giveaways : [])
+    .filter((giveaway) => !isGiveawayDeleted(giveaway))
+    .map((giveaway) => normalizeGiveawaySyncRecord(giveaway));
 
   const members = [];
   const upsertMember = (record) => {

@@ -4194,9 +4194,12 @@ async function fetchSteamMediaForApp(appId) {
 
 function normalizeSteamGiftsSync(payload) {
   const members = payload.members || [];
-  const giveaways = (payload.giveaways || []).map((giveaway) =>
-    normalizeGiveawaySyncRecord(normalizeGiveawayMedia(giveaway)),
-  );
+  // Drop giveaways the collector tombstoned as deleted-on-SteamGifts: every
+  // downstream consumer reads state.sync.steamgifts.giveaways, so excluding them
+  // here keeps them out of standings, cycle math, and tables in one place.
+  const giveaways = (payload.giveaways || [])
+    .filter((giveaway) => !derive.isGiveawayDeleted(giveaway))
+    .map((giveaway) => normalizeGiveawaySyncRecord(normalizeGiveawayMedia(giveaway)));
   const memberSteamProfiles = Object.fromEntries(
     members
       .filter((member) => member.username)
