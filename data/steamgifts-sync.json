@@ -1,6 +1,7 @@
 {
   "source": "akatsuki-steamgifts-sync",
-  "syncedAt": "2026-06-27T09:08:32.394Z",
+  "collectorVersion": "1.9.1",
+  "syncedAt": "2026-06-27T09:15:19.793Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -11631,7 +11632,7 @@
     {
       "code": "sqbNM",
       "url": "https://www.steamgifts.com/giveaway/sqbNM/wizardry-proving-grounds-of-the-mad-overlord",
-      "title": "Wizardry: Proving Grounds of the Mad Overlord",
+      "title": "Wizardry: Proving Grounds of the Mad ...",
       "creatorUsername": "leniu",
       "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
       "appId": 2518960,
@@ -147825,7 +147826,7 @@
         "burntreynolds444"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:08:20.901Z",
+      "entriesSnapshotAt": "2026-06-27T09:15:08.352Z",
       "hltbHours": 22.05
     },
     {
@@ -147855,7 +147856,7 @@
         "leniu"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:08:21.391Z",
+      "entriesSnapshotAt": "2026-06-27T09:15:09.139Z",
       "hltbHours": 22.74
     },
     {
@@ -147887,7 +147888,7 @@
         "Koalala"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:08:21.877Z",
+      "entriesSnapshotAt": "2026-06-27T09:15:09.638Z",
       "hltbHours": 11.51
     },
     {
@@ -147917,7 +147918,7 @@
         "leniu"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:08:22.369Z",
+      "entriesSnapshotAt": "2026-06-27T09:15:10.127Z",
       "hltbHours": 17.19
     },
     {
@@ -147949,7 +147950,7 @@
         "BojanNS987"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:08:22.857Z"
+      "entriesSnapshotAt": "2026-06-27T09:15:10.616Z"
     },
     {
       "code": "eRDwq",
@@ -147980,7 +147981,7 @@
         "Horseflesh"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:08:23.353Z"
+      "entriesSnapshotAt": "2026-06-27T09:15:11.104Z"
     },
     {
       "code": "p4J7S",
@@ -148010,7 +148011,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:08:23.852Z"
+      "entriesSnapshotAt": "2026-06-27T09:15:11.590Z"
     },
     {
       "code": "wUtQR",
@@ -148041,7 +148042,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:08:24.356Z"
+      "entriesSnapshotAt": "2026-06-27T09:15:12.083Z"
     },
     {
       "code": "zizOw",
@@ -148070,7 +148071,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:08:25.659Z"
+      "entriesSnapshotAt": "2026-06-27T09:15:13.382Z"
     },
     {
       "code": "0MbHx",
@@ -148100,7 +148101,7 @@
         "Koalala"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:08:26.146Z"
+      "entriesSnapshotAt": "2026-06-27T09:15:13.869Z"
     },
     {
       "code": "nFbnH",
@@ -148129,7 +148130,7 @@
         "Koalala"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:08:26.637Z"
+      "entriesSnapshotAt": "2026-06-27T09:15:14.355Z"
     },
     {
       "code": "xurrL",
@@ -148161,7 +148162,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:08:31.070Z"
+      "entriesSnapshotAt": "2026-06-27T09:15:18.452Z"
     },
     {
       "code": "YDlyc",
@@ -148191,7 +148192,7 @@
         "Horseflesh"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:08:31.560Z"
+      "entriesSnapshotAt": "2026-06-27T09:15:18.944Z"
     },
     {
       "code": "3W6mY",
@@ -148222,7 +148223,7 @@
         "leniu"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:08:32.053Z"
+      "entriesSnapshotAt": "2026-06-27T09:15:19.441Z"
     },
     {
       "code": "TvYrR",
@@ -148251,7 +148252,7 @@
         "BojanNS987"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:08:27.786Z",
+      "entriesSnapshotAt": "2026-06-27T09:15:15.494Z",
       "hltbHours": 18.46
     },
     {
@@ -148282,7 +148283,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:08:28.274Z"
+      "entriesSnapshotAt": "2026-06-27T09:15:15.990Z"
     },
     {
       "code": "Ok4eA",
@@ -148337,7 +148338,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:08:25.167Z",
+      "entriesSnapshotAt": "2026-06-27T09:15:12.894Z",
       "hltbHours": 12.12
     },
     {
@@ -148365,7 +148366,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:08:29.412Z",
+      "entriesSnapshotAt": "2026-06-27T09:15:16.800Z",
       "hltbHours": 20.44
     },
     {
@@ -148395,7 +148396,7 @@
         "BojanNS987"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:08:29.904Z",
+      "entriesSnapshotAt": "2026-06-27T09:15:17.292Z",
       "hltbHours": 14.2
     },
     {
@@ -148423,7 +148424,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:08:30.255Z",
+      "entriesSnapshotAt": "2026-06-27T09:15:17.636Z",
       "hltbHours": 31.61
     },
     {
@@ -148453,7 +148454,7 @@
         "leniu"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:08:24.842Z",
+      "entriesSnapshotAt": "2026-06-27T09:15:12.566Z",
       "hltbHours": 27.96
     },
     {
@@ -148481,7 +148482,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:08:26.963Z",
+      "entriesSnapshotAt": "2026-06-27T09:15:14.677Z",
       "hltbHours": 48.33
     },
     {
@@ -148509,7 +148510,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:08:27.289Z",
+      "entriesSnapshotAt": "2026-06-27T09:15:15.005Z",
       "hltbHours": 54.76
     },
     {
@@ -148539,7 +148540,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:08:29.087Z"
+      "entriesSnapshotAt": "2026-06-27T09:15:16.475Z"
     },
     {
       "code": "WZAbo",
@@ -148592,7 +148593,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:08:30.583Z"
+      "entriesSnapshotAt": "2026-06-27T09:15:17.964Z"
     }
   ],
   "wins": [
@@ -150713,7 +150714,7 @@
     },
     {
       "giveawayCode": "sqbNM",
-      "title": "Wizardry: Proving Grounds of the Mad Overlord",
+      "title": "Wizardry: Proving Grounds of the Mad ...",
       "appId": 2518960,
       "winnerUsername": "Krlesnik",
       "creatorUsername": "leniu",
