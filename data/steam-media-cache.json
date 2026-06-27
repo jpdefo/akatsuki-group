@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-26T07:10:07.465679+00:00",
+  "updatedAt": "2026-06-27T18:17:06.500244+00:00",
   "apps": {
     "3288210": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3288210/2e13226847bb546625411aed75e74471f6705b18/header.jpg?t=1777969480",
@@ -4998,6 +4998,94 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2842040/9e887b6e39c690a305e509e598a125cbc6b2bd1c/capsule_231x87.jpg?t=1773407100",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2842040/9e887b6e39c690a305e509e598a125cbc6b2bd1c/capsule_184x69.jpg?t=1773407100",
       "releaseDate": "2024-11-21",
+      "comingSoon": false
+    },
+    "954740": {
+      "name": "Terminator: Resistance",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/954740/header.jpg?t=1701952741",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/954740/capsule_231x87.jpg?t=1701952741",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/954740/capsule_184x69.jpg?t=1701952741",
+      "releaseDate": "2019-11-14",
+      "comingSoon": false
+    },
+    "1234180": {
+      "name": "Moons Of Darsalon",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1234180/header.jpg?t=1745229826",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1234180/capsule_231x87.jpg?t=1745229826",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1234180/capsule_184x69.jpg?t=1745229826",
+      "releaseDate": "2023-04-19",
+      "comingSoon": false
+    },
+    "1590230": {
+      "name": "Tyrion Cuthbert: Attorney of the Arcane",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1590230/3fac834cda5f3263c84b3cbeab29b598a810eb23/header.jpg?t=1774154655",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1590230/1626e0642541e63897e3895e3bcef10576a35959/capsule_231x87.jpg?t=1774154655",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1590230/1626e0642541e63897e3895e3bcef10576a35959/capsule_184x69.jpg?t=1774154655",
+      "releaseDate": "2023-06-23",
+      "comingSoon": false
+    },
+    "1598780": {
+      "name": "Silly Polly Beast",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1598780/5dbb437b832bd259c79833a57c99814efaf801e2/header.jpg?t=1764856166",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1598780/667020fed9d083b8f573224d282d5361886cefd0/capsule_231x87.jpg?t=1764856166",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1598780/667020fed9d083b8f573224d282d5361886cefd0/capsule_184x69.jpg?t=1764856166",
+      "releaseDate": "2025-10-28",
+      "comingSoon": false
+    },
+    "2147380": {
+      "name": "Heroes of Science and Fiction",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2147380/b2fbb50092997a3320d1161a77dc936b5546792c/header_alt_assets_1.jpg?t=1782316253",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2147380/73d4f56e3d44a4dbfc8c824815a2dc716d2b3fd3/capsule_231x87_alt_assets_1.jpg?t=1782316253",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2147380/73d4f56e3d44a4dbfc8c824815a2dc716d2b3fd3/capsule_184x69_alt_assets_1.jpg?t=1782316253",
+      "releaseDate": "2026-03-17",
+      "comingSoon": false
+    },
+    "2246340": {
+      "name": "Monster Hunter Wilds",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2246340/header.jpg?t=1781071959",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2246340/970508d58e4f11f6f9ff3e2921b7eec558a50af8/capsule_231x87.jpg?t=1781071959",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2246340/970508d58e4f11f6f9ff3e2921b7eec558a50af8/capsule_184x69.jpg?t=1781071959",
+      "releaseDate": "2025-02-27",
+      "comingSoon": false
+    },
+    "2698420": {
+      "name": "Restore Your Island",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2698420/1313f2a5b7daee1532f281252c962310ce29ebd6/header.jpg?t=1782223533",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2698420/789e8082c3dc1f5cbb0dc5abe8d46fd3deb1b8c0/capsule_231x87.jpg?t=1782223533",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2698420/789e8082c3dc1f5cbb0dc5abe8d46fd3deb1b8c0/capsule_184x69.jpg?t=1782223533",
+      "releaseDate": "2026-04-09",
+      "comingSoon": false
+    },
+    "2821610": {
+      "name": "Echoes of the End: Enhanced Edition",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2821610/229f5bb97d16bdf1af96ac5436f70aa4215ed69d/header.jpg?t=1771578630",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2821610/e0906141c579cee0ec28d8769838a860377787a4/capsule_231x87.jpg?t=1771578630",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2821610/e0906141c579cee0ec28d8769838a860377787a4/capsule_184x69.jpg?t=1771578630",
+      "releaseDate": "2025-08-12",
+      "comingSoon": false
+    },
+    "3010850": {
+      "name": "Gears of War: E-Day",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3010850/1abb0c5ef76c14f463dd6e3964adb64f984237d2/header.jpg?t=1781901582",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3010850/d0917fcdbf27faffb3380f6f67e71e90f84b7ed5/capsule_231x87.jpg?t=1781901582",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3010850/d0917fcdbf27faffb3380f6f67e71e90f84b7ed5/capsule_184x69.jpg?t=1781901582",
+      "releaseDate": "2026-10-06",
+      "comingSoon": true
+    },
+    "3280350": {
+      "name": "DEATH STRANDING 2: ON THE BEACH",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3280350/6270c77b0729e2df0a17d660286eeddfd9169386/header.jpg?t=1774022345",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3280350/6e07f61e2585bae97d2406d45666a7ee70543792/capsule_231x87.jpg?t=1774022345",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3280350/6e07f61e2585bae97d2406d45666a7ee70543792/capsule_184x69.jpg?t=1774022345",
+      "releaseDate": "2026-03-19",
+      "comingSoon": false
+    },
+    "3920610": {
+      "name": "FATAL FRAME II: Crimson Butterfly REMAKE",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3920610/f0ca97688410ecb4effbde0b77431443a5172cf8/header.jpg?t=1782174544",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3920610/95aebd7bc790bbc0150b7a366c002a73611a8901/capsule_231x87.jpg?t=1782174544",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3920610/95aebd7bc790bbc0150b7a366c002a73611a8901/capsule_184x69.jpg?t=1782174544",
+      "releaseDate": "2026-03-11",
       "comingSoon": false
     }
   }

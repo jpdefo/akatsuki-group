@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T06:59:16.678547+00:00",
+  "updatedAt": "2026-06-27T18:18:09.080622+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -1145,12 +1145,12 @@
       "earnedAchievements": 29,
       "totalAchievements": 67,
       "achievementPercent": 43,
-      "playtimeHours": 56.22,
+      "playtimeHours": 56.92,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 56.22,
+      "achievementsPlaytimeHours": 56.92,
       "popThresholdMetAt": "2026-06-26T07:11:08.797257+00:00"
     },
     {
@@ -5204,12 +5204,12 @@
       "earnedAchievements": 42,
       "totalAchievements": 281,
       "achievementPercent": 15,
-      "playtimeHours": 66.8,
+      "playtimeHours": 67.42,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 66.8,
+      "achievementsPlaytimeHours": 67.42,
       "popThresholdMetAt": "2026-06-26T07:11:08.797696+00:00"
     },
     {
@@ -15661,15 +15661,15 @@
       "title": "Little Nightmares III",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/1392860/achievements/",
       "visible": true,
-      "earnedAchievements": 1,
+      "earnedAchievements": 2,
       "totalAchievements": 38,
-      "achievementPercent": 3,
-      "playtimeHours": 1.4,
+      "achievementPercent": 5,
+      "playtimeHours": 2.75,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 1.4
+      "achievementsPlaytimeHours": 2.75
     },
     {
       "username": "Horseflesh",
@@ -23285,15 +23285,15 @@
       "title": "The Last of Us Part II Remastered",
       "progressUrl": "https://steamcommunity.com/profiles/76561198010348380/stats/2531310/achievements/",
       "visible": true,
-      "earnedAchievements": 14,
+      "earnedAchievements": 15,
       "totalAchievements": 45,
-      "achievementPercent": 31,
-      "playtimeHours": 18.0,
+      "achievementPercent": 33,
+      "playtimeHours": 23.23,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 18.0,
+      "achievementsPlaytimeHours": 23.23,
       "popThresholdMetAt": "2026-06-26T07:11:08.799879+00:00"
     },
     {
@@ -32967,15 +32967,15 @@
       "title": "Gothic 1 Remake",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/1297900/achievements/",
       "visible": true,
-      "earnedAchievements": 8,
+      "earnedAchievements": 9,
       "totalAchievements": 42,
-      "achievementPercent": 19,
-      "playtimeHours": 29.42,
+      "achievementPercent": 21,
+      "playtimeHours": 33.07,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 29.42,
+      "achievementsPlaytimeHours": 33.07,
       "popThresholdMetAt": "2026-06-26T07:11:08.801053+00:00"
     },
     {
@@ -68488,32 +68488,130 @@
       "hltbHours": 54.76,
       "matchedTitle": "Kingdom Come: Deliverance II",
       "url": "https://howlongtobeat.com/game/148973"
+    },
+    {
+      "title": "The Midnight Walk",
+      "appId": 2863640,
+      "hltbHours": 4.96,
+      "matchedTitle": "The Midnight Walk",
+      "url": "https://howlongtobeat.com/game/157305"
+    },
+    {
+      "title": "Red Dead Redemption",
+      "appId": 2668510,
+      "hltbHours": 17.6,
+      "matchedTitle": "Red Dead Redemption",
+      "url": "https://howlongtobeat.com/game/7676"
+    },
+    {
+      "title": "Indiana Jones and the Great Circle",
+      "appId": 2677660,
+      "hltbHours": 16.03,
+      "matchedTitle": "Indiana Jones and the Great Circle",
+      "url": "https://howlongtobeat.com/game/144234"
+    },
+    {
+      "title": "Mixtape",
+      "appId": 2582320,
+      "hltbHours": 3.18,
+      "matchedTitle": "Mixtape",
+      "url": "https://howlongtobeat.com/game/152041"
+    },
+    {
+      "title": "LEGO Harry Potter Collection",
+      "appId": 2950340,
+      "hltbHours": 27.41,
+      "matchedTitle": "LEGO Harry Potter Collection",
+      "url": "https://howlongtobeat.com/game/47803"
+    },
+    {
+      "title": "LEGO® Star Wars™: The Skywalker Saga",
+      "appId": 920210,
+      "hltbHours": 18.59,
+      "matchedTitle": "LEGO Star Wars: The Skywalker Saga",
+      "url": "https://howlongtobeat.com/game/68261"
+    },
+    {
+      "title": "Hell is Us",
+      "appId": 1620730,
+      "hltbHours": 21.23,
+      "matchedTitle": "Hell is Us",
+      "url": "https://howlongtobeat.com/game/106639"
+    },
+    {
+      "title": "Eternal Strands",
+      "appId": 1491410,
+      "hltbHours": 18.83,
+      "matchedTitle": "Eternal Strands",
+      "url": "https://howlongtobeat.com/game/148004"
+    },
+    {
+      "title": "Terminator: Resistance",
+      "appId": 954740,
+      "hltbHours": 9.43,
+      "matchedTitle": "Terminator: Resistance",
+      "url": "https://howlongtobeat.com/game/71948"
+    },
+    {
+      "title": "Ace Attorney Investigations Collection",
+      "appId": 2401970,
+      "hltbHours": 46.95,
+      "matchedTitle": "Ace Attorney Investigations Collection",
+      "url": "https://howlongtobeat.com/game/152373"
+    },
+    {
+      "title": "FINAL FANTASY VII REBIRTH",
+      "appId": 2909400,
+      "hltbHours": 48.33,
+      "matchedTitle": "Final Fantasy VII Rebirth",
+      "url": "https://howlongtobeat.com/game/109434"
+    },
+    {
+      "title": "Returnal",
+      "appId": 1649240,
+      "hltbHours": 19.05,
+      "matchedTitle": "Returnal",
+      "url": "https://howlongtobeat.com/game/80102"
+    },
+    {
+      "title": "Dragon Age: The Veilguard",
+      "appId": 1845910,
+      "hltbHours": 28.17,
+      "matchedTitle": "Dragon Age: The Veilguard",
+      "url": "https://howlongtobeat.com/game/82090"
+    },
+    {
+      "title": "Monster Hunter Wilds",
+      "appId": 2246340,
+      "hltbHours": 18.06,
+      "matchedTitle": "Monster Hunter Wilds",
+      "url": "https://howlongtobeat.com/game/141854"
     }
   ],
   "steamApiEnabled": true,
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-06-27T06:58:21.642820+00:00",
+  "libraryUpdatedAt": "2026-06-27T18:17:12.201638+00:00",
   "libraryStats": {
-    "durationSeconds": 4.91,
+    "durationSeconds": 5.51,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 13857
+    "totalPlaytimeRows": 13861
   },
   "stats": {
-    "durationSeconds": 59.96,
+    "durationSeconds": 62.4,
     "targetWins": 2288,
     "uniqueProgressTargets": 2284,
     "libraryPlaytimeHits": 2232,
-    "cachedReuses": 2189,
-    "achievementSuccesses": 8,
+    "cachedReuses": 2188,
+    "achievementSuccesses": 9,
     "achievementErrors": 87,
     "cachedFallbacks": 87,
     "hltbTitlesRequested": 1254,
-    "hltbResultsAvailable": 3935
+    "hltbResultsAvailable": 3949
   }
 }
