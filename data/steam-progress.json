@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-26T07:11:08.802008+00:00",
+  "updatedAt": "2026-06-27T06:59:16.678547+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -1145,12 +1145,12 @@
       "earnedAchievements": 29,
       "totalAchievements": 67,
       "achievementPercent": 43,
-      "playtimeHours": 55.62,
+      "playtimeHours": 56.22,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 55.62,
+      "achievementsPlaytimeHours": 56.22,
       "popThresholdMetAt": "2026-06-26T07:11:08.797257+00:00"
     },
     {
@@ -23285,15 +23285,15 @@
       "title": "The Last of Us Part II Remastered",
       "progressUrl": "https://steamcommunity.com/profiles/76561198010348380/stats/2531310/achievements/",
       "visible": true,
-      "earnedAchievements": 11,
+      "earnedAchievements": 14,
       "totalAchievements": 45,
-      "achievementPercent": 24,
-      "playtimeHours": 16.72,
+      "achievementPercent": 31,
+      "playtimeHours": 18.0,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 16.72,
+      "achievementsPlaytimeHours": 18.0,
       "popThresholdMetAt": "2026-06-26T07:11:08.799879+00:00"
     },
     {
@@ -28526,7 +28526,7 @@
       "appId": 1297900,
       "title": "Gothic 1 Remake",
       "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/1297900/achievements/",
-      "playtimeHours": 3.67,
+      "playtimeHours": 4.68,
       "visible": true,
       "earnedAchievements": 1,
       "totalAchievements": 42,
@@ -28535,7 +28535,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 3.67
+      "achievementsPlaytimeHours": 4.68
     },
     {
       "username": "Saikania",
@@ -32287,7 +32287,7 @@
       "username": "Wintermute101",
       "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
       "appId": 866570,
-      "title": "System Shock 2: 25th Anniversary Rema...",
+      "title": "System Shock 2: 25th Anniversary Remaster",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/866570/achievements/",
       "visible": true,
       "earnedAchievements": 6,
@@ -32298,7 +32298,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 4.65
+      "achievementsPlaytimeHours": 4.65,
+      "popThresholdMetAt": "2026-06-27T06:59:16.678335+00:00"
     },
     {
       "username": "Wintermute101",
@@ -32966,15 +32967,15 @@
       "title": "Gothic 1 Remake",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/1297900/achievements/",
       "visible": true,
-      "earnedAchievements": 6,
+      "earnedAchievements": 8,
       "totalAchievements": 42,
-      "achievementPercent": 14,
-      "playtimeHours": 21.93,
+      "achievementPercent": 19,
+      "playtimeHours": 29.42,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 21.93,
+      "achievementsPlaytimeHours": 29.42,
       "popThresholdMetAt": "2026-06-26T07:11:08.801053+00:00"
     },
     {
@@ -42482,6 +42483,13 @@
       "hltbHours": 33.95,
       "matchedTitle": "Fantasy Life i: The Girl Who Steals Time",
       "url": "https://howlongtobeat.com/game/124025"
+    },
+    {
+      "title": "System Shock 2: 25th Anniversary Remaster",
+      "appId": 866570,
+      "hltbHours": 13.31,
+      "matchedTitle": "System Shock 2",
+      "url": "https://howlongtobeat.com/game/9548"
     },
     {
       "title": "SILENT HILL f",
@@ -68486,26 +68494,26 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-06-26T07:10:13.670852+00:00",
+  "libraryUpdatedAt": "2026-06-27T06:58:21.642820+00:00",
   "libraryStats": {
-    "durationSeconds": 6.01,
+    "durationSeconds": 4.91,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 13854
+    "totalPlaytimeRows": 13857
   },
   "stats": {
-    "durationSeconds": 61.15,
+    "durationSeconds": 59.96,
     "targetWins": 2288,
     "uniqueProgressTargets": 2284,
     "libraryPlaytimeHits": 2232,
-    "cachedReuses": 2190,
-    "achievementSuccesses": 7,
+    "cachedReuses": 2189,
+    "achievementSuccesses": 8,
     "achievementErrors": 87,
     "cachedFallbacks": 87,
     "hltbTitlesRequested": 1254,
-    "hltbResultsAvailable": 3934
+    "hltbResultsAvailable": 3935
   }
 }
