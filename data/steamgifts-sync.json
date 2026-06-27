@@ -1,7 +1,7 @@
 {
   "source": "akatsuki-steamgifts-sync",
   "collectorVersion": "1.9.1",
-  "syncedAt": "2026-06-27T11:26:27.395Z",
+  "syncedAt": "2026-06-27T13:14:17.714Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -2160,7 +2160,7 @@
       "appId": 3043580,
       "steamAppUrl": "https://store.steampowered.com/app/3043580?utm_source=SteamGifts",
       "points": 30,
-      "entriesCount": 4,
+      "entriesCount": 5,
       "endDate": "2026-06-30T18:00:00.000Z",
       "winners": [],
       "resultStatus": "open",
@@ -147826,7 +147826,7 @@
         "burntreynolds444"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:11.611Z",
+      "entriesSnapshotAt": "2026-06-27T13:14:00.603Z",
       "hltbHours": 22.05
     },
     {
@@ -147856,7 +147856,7 @@
         "leniu"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:12.076Z",
+      "entriesSnapshotAt": "2026-06-27T13:14:01.085Z",
       "hltbHours": 22.74
     },
     {
@@ -147888,7 +147888,7 @@
         "Koalala"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:12.565Z",
+      "entriesSnapshotAt": "2026-06-27T13:14:01.603Z",
       "hltbHours": 11.51
     },
     {
@@ -147918,7 +147918,7 @@
         "leniu"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:13.157Z",
+      "entriesSnapshotAt": "2026-06-27T13:14:02.084Z",
       "hltbHours": 17.19
     },
     {
@@ -147950,7 +147950,7 @@
         "BojanNS987"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:13.631Z"
+      "entriesSnapshotAt": "2026-06-27T13:14:02.582Z"
     },
     {
       "code": "eRDwq",
@@ -147964,7 +147964,7 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3558670/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3558670/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3558670/560eb591bb96d39b4d9c2349854ce728e3208ea4/capsule_184x69.jpg",
-      "entriesCount": 3,
+      "entriesCount": 4,
       "startDate": "2026-06-25T18:15:17.000Z",
       "endDate": "2026-06-28T19:14:00.000Z",
       "winners": [],
@@ -147976,12 +147976,13 @@
       "penaltyForCode": "",
       "giveawayKindChecked": true,
       "entryUsers": [
+        "zettaivanugen",
         "BojanNS987",
         "Koalala",
         "Horseflesh"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:14.081Z"
+      "entriesSnapshotAt": "2026-06-27T13:14:03.097Z"
     },
     {
       "code": "p4J7S",
@@ -148011,7 +148012,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:14.520Z"
+      "entriesSnapshotAt": "2026-06-27T13:14:03.812Z"
     },
     {
       "code": "wUtQR",
@@ -148042,7 +148043,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:14.998Z"
+      "entriesSnapshotAt": "2026-06-27T13:14:04.288Z"
     },
     {
       "code": "zizOw",
@@ -148056,7 +148057,7 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2001760/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2001760/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2001760/8051f36f9874f82c4d998354409343346b5f6b3f/capsule_184x69.jpg",
-      "entriesCount": 1,
+      "entriesCount": 2,
       "startDate": "2026-06-25T18:48:46.000Z",
       "endDate": "2026-06-29T07:00:00.000Z",
       "winners": [],
@@ -148068,10 +148069,11 @@
       "penaltyForCode": "",
       "giveawayKindChecked": true,
       "entryUsers": [
+        "zettaivanugen",
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:16.270Z"
+      "entriesSnapshotAt": "2026-06-27T13:14:05.663Z"
     },
     {
       "code": "0MbHx",
@@ -148085,7 +148087,7 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3751950/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3751950/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3751950/e38674a3067b5ac028974bbfb42c835d0cf27122/capsule_184x69.jpg",
-      "entriesCount": 2,
+      "entriesCount": 3,
       "startDate": "2026-06-25T18:48:18.000Z",
       "endDate": "2026-06-29T07:00:00.000Z",
       "winners": [],
@@ -148097,11 +148099,12 @@
       "penaltyForCode": "",
       "giveawayKindChecked": true,
       "entryUsers": [
+        "zettaivanugen",
         "Wintermute101",
         "Koalala"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:16.832Z"
+      "entriesSnapshotAt": "2026-06-27T13:14:06.170Z"
     },
     {
       "code": "nFbnH",
@@ -148130,7 +148133,7 @@
         "Koalala"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:17.279Z"
+      "entriesSnapshotAt": "2026-06-27T13:14:06.646Z"
     },
     {
       "code": "xurrL",
@@ -148162,7 +148165,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:24.261Z"
+      "entriesSnapshotAt": "2026-06-27T13:14:13.745Z"
     },
     {
       "code": "YDlyc",
@@ -148192,7 +148195,7 @@
         "Horseflesh"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:24.712Z"
+      "entriesSnapshotAt": "2026-06-27T13:14:14.236Z"
     },
     {
       "code": "3W6mY",
@@ -148224,7 +148227,7 @@
         "leniu"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:25.248Z"
+      "entriesSnapshotAt": "2026-06-27T13:14:15.059Z"
     },
     {
       "code": "TvYrR",
@@ -148253,7 +148256,7 @@
         "BojanNS987"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:18.597Z",
+      "entriesSnapshotAt": "2026-06-27T13:14:08.003Z",
       "hltbHours": 18.46
     },
     {
@@ -148284,7 +148287,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:19.035Z"
+      "entriesSnapshotAt": "2026-06-27T13:14:08.471Z"
     },
     {
       "code": "Ok4eA",
@@ -148339,7 +148342,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:15.795Z",
+      "entriesSnapshotAt": "2026-06-27T13:14:05.151Z",
       "hltbHours": 12.12
     },
     {
@@ -148367,7 +148370,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:19.842Z",
+      "entriesSnapshotAt": "2026-06-27T13:14:09.307Z",
       "hltbHours": 20.44
     },
     {
@@ -148397,7 +148400,7 @@
         "BojanNS987"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:20.279Z",
+      "entriesSnapshotAt": "2026-06-27T13:14:09.981Z",
       "hltbHours": 14.2
     },
     {
@@ -148425,7 +148428,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:20.594Z",
+      "entriesSnapshotAt": "2026-06-27T13:14:10.436Z",
       "hltbHours": 31.61
     },
     {
@@ -148455,7 +148458,7 @@
         "leniu"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:15.445Z",
+      "entriesSnapshotAt": "2026-06-27T13:14:04.791Z",
       "hltbHours": 27.96
     },
     {
@@ -148483,7 +148486,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:17.606Z",
+      "entriesSnapshotAt": "2026-06-27T13:14:07.044Z",
       "hltbHours": 48.33
     },
     {
@@ -148513,7 +148516,7 @@
         "burntreynolds444"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:18.051Z",
+      "entriesSnapshotAt": "2026-06-27T13:14:07.500Z",
       "hltbHours": 54.76
     },
     {
@@ -148543,7 +148546,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:19.494Z"
+      "entriesSnapshotAt": "2026-06-27T13:14:08.973Z"
     },
     {
       "code": "WZAbo",
@@ -148596,7 +148599,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:21.805Z"
+      "entriesSnapshotAt": "2026-06-27T13:14:11.611Z"
     },
     {
       "code": "nftZ0",
@@ -148610,7 +148613,7 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3010850/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3010850/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3010850/d0917fcdbf27faffb3380f6f67e71e90f84b7ed5/capsule_184x69.jpg",
-      "entriesCount": 1,
+      "entriesCount": 2,
       "startDate": "2026-06-27T10:02:01.000Z",
       "endDate": "2026-06-30T18:00:00.000Z",
       "winners": [],
@@ -148622,10 +148625,11 @@
       "penaltyForCode": "",
       "giveawayKindChecked": true,
       "entryUsers": [
+        "zettaivanugen",
         "Koalala"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:21.068Z"
+      "entriesSnapshotAt": "2026-06-27T13:14:10.858Z"
     },
     {
       "code": "Uc0hR",
@@ -148654,7 +148658,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:21.496Z"
+      "entriesSnapshotAt": "2026-06-27T13:14:11.304Z"
     },
     {
       "code": "ocGj1",
@@ -148683,7 +148687,7 @@
         "Koalala"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:22.695Z"
+      "entriesSnapshotAt": "2026-06-27T13:14:12.554Z"
     },
     {
       "code": "NjN8m",
@@ -148710,7 +148714,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:23.043Z"
+      "entriesSnapshotAt": "2026-06-27T13:14:12.862Z"
     },
     {
       "code": "BgEwE",
@@ -148739,7 +148743,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:23.734Z"
+      "entriesSnapshotAt": "2026-06-27T13:14:13.300Z"
     },
     {
       "code": "ya4i1",
@@ -148766,7 +148770,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:25.597Z"
+      "entriesSnapshotAt": "2026-06-27T13:14:15.358Z"
     },
     {
       "code": "utQfp",
@@ -148793,7 +148797,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:25.914Z"
+      "entriesSnapshotAt": "2026-06-27T13:14:15.651Z"
     },
     {
       "code": "yTbCZ",
@@ -148820,7 +148824,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:26.238Z"
+      "entriesSnapshotAt": "2026-06-27T13:14:15.954Z"
     },
     {
       "code": "RpM4e",
@@ -148847,7 +148851,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:26.542Z"
+      "entriesSnapshotAt": "2026-06-27T13:14:16.249Z"
     },
     {
       "code": "gThkw",
@@ -148874,7 +148878,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:26.875Z"
+      "entriesSnapshotAt": "2026-06-27T13:14:16.591Z"
     },
     {
       "code": "n674s",
@@ -148887,8 +148891,8 @@
       "points": 40,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2401970/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2401970/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2401970/capsule_184x69.jpg",
-      "entriesCount": 0,
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2401970/capsule_184x69.jpg",
+      "entriesCount": 1,
       "startDate": "2026-06-27T11:05:29.000Z",
       "endDate": "2026-07-01T12:03:00.000Z",
       "winners": [],
@@ -148899,9 +148903,38 @@
       "giveawayMonthOverride": "",
       "penaltyForCode": "",
       "giveawayKindChecked": true,
+      "entryUsers": [
+        "Wintermute101"
+      ],
+      "entriesFinalized": false,
+      "entriesSnapshotAt": "2026-06-27T13:14:12.065Z"
+    },
+    {
+      "code": "15CRG",
+      "url": "https://www.steamgifts.com/giveaway/15CRG/control-resonant",
+      "title": "CONTROL Resonant",
+      "creatorUsername": "zettaivanugen",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/zettaivanugen",
+      "appId": 3669870,
+      "steamAppUrl": "https://store.steampowered.com/app/3669870?utm_source=SteamGifts",
+      "points": 50,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3669870/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3669870/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3669870/capsule_184x69.jpg",
+      "entriesCount": 0,
+      "startDate": "2026-06-27T12:45:49.000Z",
+      "endDate": "2026-07-04T12:44:00.000Z",
+      "winners": [],
+      "resultStatus": "open",
+      "resultLabel": "Open",
+      "regionRestricted": false,
+      "giveawayKind": "summer_event",
+      "giveawayMonthOverride": "",
+      "penaltyForCode": "",
+      "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T11:26:22.295Z"
+      "entriesSnapshotAt": "2026-06-27T13:14:17.101Z"
     }
   ],
   "wins": [
