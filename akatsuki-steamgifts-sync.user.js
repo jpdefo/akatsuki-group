@@ -286,6 +286,7 @@
 
       const payload = {
         source: "akatsuki-steamgifts-sync",
+        collectorVersion: RUNNING_VERSION || "",
         syncedAt: new Date().toISOString(),
         group: {
           url: groupBase,

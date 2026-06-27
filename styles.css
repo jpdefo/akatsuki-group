@@ -445,6 +445,31 @@ h2 {
   font-size: 0.92rem;
 }
 
+.sync-collector {
+  margin: 8px 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.sync-collector-status {
+  margin: 2px 0 0;
+  font-size: 0.82rem;
+}
+
+.sync-collector-status .sync-collector-ok {
+  color: var(--muted);
+}
+
+.sync-collector-status .sync-collector-warn {
+  color: #f5b955;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.sync-collector-status a.sync-collector-warn:hover {
+  text-decoration: underline;
+}
+
 .inline-filter {
   display: grid;
   gap: 6px;

@@ -1282,6 +1282,7 @@ def build_dashboard_payload(sync_payload: dict, progress_payload: dict, library_
         "group": sync_payload.get("group") or {},
         "summary": {
             "syncedAt": sync_payload.get("syncedAt") or sync_payload.get("savedAt"),
+            "collectorVersion": sync_payload.get("collectorVersion") or "",
             "members": len(sync_payload.get("members", [])),
             "activeMembers": members_payload["counts"]["active"],
             "giveaways": len(sync_payload.get("giveaways", [])),

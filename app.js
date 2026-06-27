@@ -743,6 +743,60 @@ function renderSummary() {
     .join("");
 }
 
+const COLLECTOR_SCRIPT_RAW_URL =
+  "https://raw.githubusercontent.com/jpdefo/akatsuki-group/main/akatsuki-steamgifts-sync.user.js";
+
+// Fetch + cache the latest published collector version once per page load, so the
+// Admin sync card can flag a sync that was produced by an outdated userscript.
+let latestCollectorVersionPromise = null;
+function getLatestCollectorVersion() {
+  if (!latestCollectorVersionPromise) {
+    latestCollectorVersionPromise = fetch(`${COLLECTOR_SCRIPT_RAW_URL}?_=${Date.now()}`, { cache: "no-store" })
+      .then((response) => (response.ok ? response.text() : ""))
+      .then((text) => {
+        const match = String(text || "").match(/@version\s+([0-9][^\s]*)/);
+        return match ? match[1] : "";
+      })
+      .catch(() => "");
+  }
+  return latestCollectorVersionPromise;
+}
+
+function compareCollectorVersions(left, right) {
+  const partsLeft = String(left || "").split(".").map((part) => parseInt(part, 10) || 0);
+  const partsRight = String(right || "").split(".").map((part) => parseInt(part, 10) || 0);
+  const length = Math.max(partsLeft.length, partsRight.length);
+  for (let index = 0; index < length; index += 1) {
+    const diff = (partsLeft[index] || 0) - (partsRight[index] || 0);
+    if (diff !== 0) {
+      return diff < 0 ? -1 : 1;
+    }
+  }
+  return 0;
+}
+
+// Fill the "#collector-version-status" placeholder (rendered synchronously by
+// renderSyncStatus) once the latest published version resolves.
+async function updateCollectorVersionStatus(installedVersion) {
+  const node = elements.syncStatus?.querySelector("#collector-version-status");
+  if (!node) {
+    return;
+  }
+  const latest = await getLatestCollectorVersion();
+  if (!latest) {
+    return;
+  }
+  if (!installedVersion) {
+    node.innerHTML = `<span class="sync-collector-warn">Latest userscript: v${escapeHtml(latest)} — run a sync with the updated userscript to record its version here.</span>`;
+    return;
+  }
+  if (compareCollectorVersions(installedVersion, latest) < 0) {
+    node.innerHTML = `<a class="sync-collector-warn" href="${escapeHtml(COLLECTOR_SCRIPT_RAW_URL)}" target="_blank" rel="noreferrer">⚠ Userscript outdated — v${escapeHtml(latest)} available (this sync used v${escapeHtml(installedVersion)}). Click to update.</a>`;
+  } else {
+    node.innerHTML = `<span class="sync-collector-ok">Userscript up to date (v${escapeHtml(latest)}).</span>`;
+  }
+}
+
 function renderSyncStatus() {
   if (!elements.syncStatus) {
     return;
@@ -751,18 +805,23 @@ function renderSyncStatus() {
   // snapshot note instead of the misleading "no sync loaded" alert.
   if (runtime.derivedFastPath) {
     const syncedAt = state.sync?.dashboard?.summary?.syncedAt;
+    const collectorVersion = String(state.sync?.dashboard?.summary?.collectorVersion || "").trim();
     elements.syncStatus.innerHTML = `
       <article class="alert-card info">
         <h3>Published snapshot</h3>
         <p>Showing precomputed data${syncedAt ? ` from the ${escapeHtml(formatDateTime(syncedAt))} sync` : ""}.</p>
+        <p class="sync-collector">${collectorVersion ? `Userscript v${escapeHtml(collectorVersion)}` : "Userscript version unknown"}</p>
+        <p id="collector-version-status" class="sync-collector-status"></p>
       </article>
     `;
+    updateCollectorVersionStatus(collectorVersion);
     return;
   }
   const sync = state.sync?.steamgifts;
   const progressUpdatedAt = state.sync?.steamProgressUpdatedAt;
   const dashboardSummary = state.sync?.dashboard?.summary;
   const librarySummary = dashboardSummary;
+  const collectorVersion = String(sync?.collectorVersion || dashboardSummary?.collectorVersion || "").trim();
 
   if (!sync) {
     elements.syncStatus.innerHTML = `
@@ -796,6 +855,8 @@ function renderSyncStatus() {
       <h3>SteamGifts synced</h3>
       <p class="sync-time">${formatDateTime(sync.syncedAt)}</p>
       <p class="sync-ago">${escapeHtml(formatTimeAgo(sync.syncedAt))}</p>
+      <p class="sync-collector">${collectorVersion ? `Userscript v${escapeHtml(collectorVersion)}` : "Userscript version unknown"}</p>
+      <p id="collector-version-status" class="sync-collector-status"></p>
     </article>
     <article class="alert-card info sync-stat">
       <h3>Achievements synced</h3>
@@ -823,6 +884,7 @@ function renderSyncStatus() {
       <p class="sync-ago">${giveawayCount} tracked giveaways</p>
     </article>
   `;
+  updateCollectorVersionStatus(collectorVersion);
 }
 
 // Human-friendly "x ago" label so it's obvious at a glance how stale each sync is.
