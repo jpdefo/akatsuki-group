@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Akatsuki SteamGifts Sync
 // @namespace    akatsuki-monitor
-// @version      1.10.0
+// @version      1.10.1
 // @author       Koalala
 // @description  Collect Akatsuki members, giveaways, entries and winners from the logged-in SteamGifts session and publish them straight to GitHub.
 // @match        https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts
@@ -285,12 +285,14 @@
       }
 
       // Detect giveaways deleted on SteamGifts before they ended. A still-open
-      // giveaway the group listing no longer shows is the signal; we confirm with
-      // a detail-page probe and only tombstone on a clean 404, so a transient miss
-      // or a 429 never drops a live giveaway. Ended giveaways legitimately scroll
-      // off the listing, so they are never probed; a probe that comes back live
-      // clears a stale flag. Once a deleted giveaway's end date passes it stops
-      // being re-probed (it is gone for good), so this never grows unbounded.
+      // giveaway the group listing no longer shows is the signal; we confirm by
+      // loading its detail page and only tombstone when it shows SteamGifts'
+      // "Deleted <when> by <whom>" notice (the page stays HTTP 200, it does not
+      // 404), so a transient miss or a 429 never drops a live giveaway. Ended
+      // giveaways legitimately scroll off the listing, so they are never probed;
+      // a probe that comes back live clears a stale flag. Once a deleted
+      // giveaway's end date passes it stops being re-probed (it is gone for
+      // good), so this never grows unbounded.
       const scrapedCodes = new Set(detailedGiveaways.map((giveaway) => String(giveaway.code)));
       const deletionCandidates = finalGiveaways.filter(
         (giveaway) =>
@@ -1311,28 +1313,27 @@
     return response.doc;
   }
 
-  // Lightweight existence check for a giveaway detail page. Returns "deleted"
-  // only on a clean 404 (the authoritative signal SteamGifts gives a removed
-  // giveaway), "exists" when the page loads, and "unknown" for anything else
-  // (429, network error, server hiccup) so an ambiguous result never tombstones
-  // a live giveaway. Honors the same request pacer as every other fetch.
+  // Existence check for a giveaway detail page. A deleted SteamGifts giveaway
+  // does NOT 404 — the page still loads (HTTP 200) but drops the live
+  // ".featured__heading" block and renders a "Deleted <when> by <whom>" notice
+  // instead. Confirm deletion only when BOTH hold: no live heading AND the
+  // notice text. That way a transient/error page (heading missing but no notice)
+  // or a live page that merely mentions the phrase in a comment is never
+  // misread, and a failed fetch returns "unknown" so a live giveaway is never
+  // tombstoned. Reuses fetchDocumentResponse for the shared pacer + 429 retry.
   async function probeGiveawayDeleted(url) {
-    if (requestGapMs > 0) {
-      const wait = requestGapMs - (Date.now() - lastRequestAt);
-      if (wait > 0) {
-        await delay(wait);
-      }
-    }
-    lastRequestAt = Date.now();
+    let doc;
     try {
-      const response = await fetch(url, { credentials: "include" });
-      if (response.status === 404) {
-        return "deleted";
-      }
-      return response.ok ? "exists" : "unknown";
+      doc = (await fetchDocumentResponse(url)).doc;
     } catch (error) {
       return "unknown";
     }
+    const hasLiveHeading = Boolean(doc.querySelector(".featured__heading"));
+    const hasDeletionNotice = /\bDeleted\b[\s\S]{0,60}\bby\b/i.test(doc.body ? doc.body.textContent || "" : "");
+    if (!hasLiveHeading && hasDeletionNotice) {
+      return "deleted";
+    }
+    return hasLiveHeading ? "exists" : "unknown";
   }
 
   function log(message) {
