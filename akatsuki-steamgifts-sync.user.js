@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         Akatsuki SteamGifts Sync
 // @namespace    akatsuki-monitor
-// @version      1.8.0
+// @version      1.9.0
 // @author       Koalala
 // @description  Collect Akatsuki members, giveaways, entries and winners from the logged-in SteamGifts session and publish them straight to GitHub.
 // @match        https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts
 // @match        https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts/*
-// @grant        none
+// @grant        GM_info
 // @downloadURL  https://raw.githubusercontent.com/jpdefo/akatsuki-group/main/akatsuki-steamgifts-sync.user.js
 // @updateURL    https://raw.githubusercontent.com/jpdefo/akatsuki-group/main/akatsuki-steamgifts-sync.user.js
 // ==/UserScript==
@@ -36,6 +36,13 @@
   let lastRequestAt = 0;
   const PUBLISHED_SYNC_URL = `https://raw.githubusercontent.com/${GITHUB_REPO.owner}/${GITHUB_REPO.name}/${GITHUB_REPO.branch}/${GITHUB_SYNC_PATH}`;
   const PUBLISHED_OVERRIDES_URL = `https://raw.githubusercontent.com/${GITHUB_REPO.owner}/${GITHUB_REPO.name}/${GITHUB_REPO.branch}/data/overrides.json`;
+  const SCRIPT_SOURCE_PATH = "akatsuki-steamgifts-sync.user.js";
+  const SCRIPT_RAW_URL = `https://raw.githubusercontent.com/${GITHUB_REPO.owner}/${GITHUB_REPO.name}/${GITHUB_REPO.branch}/${SCRIPT_SOURCE_PATH}`;
+  const SCRIPT_INSTALL_URL = SCRIPT_RAW_URL;
+  // Version of the running script, read straight from this file's @version header
+  // via GM_info (no duplicate constant to keep in sync).
+  const RUNNING_VERSION =
+    (typeof GM_info !== "undefined" && GM_info && GM_info.script && GM_info.script.version) || "";
   const state = {
     running: false,
     panel: null,
@@ -80,6 +87,7 @@
     panel.innerHTML = `
       <div style="display:grid;gap:8px;">
         <strong>Akatsuki Sync</strong>
+        <div id="akatsuki-version" style="font-size:11px;line-height:1.4;color:#8b97a8;"></div>
         <input id="akatsuki-token" type="password" placeholder="GitHub token (for direct publish)" style="border:1px solid rgba(110,168,254,.35);border-radius:8px;padding:8px;background:#0f1115;color:#f4f7fb;font:inherit;font-size:12px;" />
         <a id="akatsuki-token-help" href="${GITHUB_TOKEN_HELP_URL}" target="_blank" rel="noopener" style="font-size:11px;color:#6ea8fe;text-decoration:underline;">Get a token (needs Contents: Read and write)</a>
         <label style="font-size:12px;color:#c7d2e2;display:flex;align-items:center;gap:6px;">Recent pages to scrape
@@ -97,6 +105,95 @@
     tokenInput.addEventListener("change", () => setStoredToken(tokenInput.value.trim()));
     panel.querySelector("#akatsuki-publish-button").addEventListener("click", () => runSync());
     log("Ready. Paste a token and use 'Sync & Publish' to commit straight to GitHub.");
+    renderVersionInfo();
+  }
+
+  function parseScriptVersion(text) {
+    const match = String(text || "").match(/@version\s+([0-9][^\s]*)/);
+    return match ? match[1] : "";
+  }
+
+  function compareVersions(left, right) {
+    const partsLeft = String(left || "").split(".").map((part) => parseInt(part, 10) || 0);
+    const partsRight = String(right || "").split(".").map((part) => parseInt(part, 10) || 0);
+    const length = Math.max(partsLeft.length, partsRight.length);
+    for (let index = 0; index < length; index += 1) {
+      const diff = (partsLeft[index] || 0) - (partsRight[index] || 0);
+      if (diff !== 0) {
+        return diff < 0 ? -1 : 1;
+      }
+    }
+    return 0;
+  }
+
+  function formatVersionDate(isoString) {
+    if (!isoString) {
+      return "";
+    }
+    const date = new Date(isoString);
+    if (Number.isNaN(date.getTime())) {
+      return "";
+    }
+    return date.toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
+  }
+
+  async function fetchLatestScriptMeta() {
+    const meta = { version: "", updatedAt: "" };
+    try {
+      const response = await fetch(`${SCRIPT_RAW_URL}?_=${Date.now()}`, { cache: "no-store" });
+      if (response.ok) {
+        meta.version = parseScriptVersion(await response.text());
+      }
+    } catch {
+      /* ignore */
+    }
+    try {
+      const api = `https://api.github.com/repos/${GITHUB_REPO.owner}/${GITHUB_REPO.name}/commits?path=${encodeURIComponent(SCRIPT_SOURCE_PATH)}&sha=${GITHUB_REPO.branch}&per_page=1`;
+      const response = await fetch(api, { headers: { Accept: "application/vnd.github+json" } });
+      if (response.ok) {
+        const commits = await response.json();
+        const commit = Array.isArray(commits) ? commits[0]?.commit : null;
+        meta.updatedAt = commit?.committer?.date || commit?.author?.date || "";
+      }
+    } catch {
+      /* ignore */
+    }
+    return meta;
+  }
+
+  async function renderVersionInfo() {
+    const node = state.panel?.querySelector("#akatsuki-version");
+    if (!node) {
+      return;
+    }
+    const running = RUNNING_VERSION || "?";
+    node.textContent = `v${running} • checking for updates…`;
+
+    const { version: latest, updatedAt } = await fetchLatestScriptMeta();
+    const updated = formatVersionDate(updatedAt);
+    const isOutdated = Boolean(latest && RUNNING_VERSION && compareVersions(RUNNING_VERSION, latest) < 0);
+
+    node.textContent = "";
+    const status = document.createElement("div");
+    if (isOutdated) {
+      status.textContent = `v${running} installed`;
+      node.appendChild(status);
+      const warn = document.createElement("a");
+      warn.href = SCRIPT_INSTALL_URL;
+      warn.target = "_blank";
+      warn.rel = "noopener";
+      warn.textContent = `⚠ Update available: v${latest}${updated ? ` (${updated})` : ""} — click to install`;
+      warn.style.color = "#f5b955";
+      warn.style.fontWeight = "700";
+      warn.style.textDecoration = "underline";
+      warn.style.display = "block";
+      node.appendChild(warn);
+    } else {
+      const suffix = updated ? ` • updated ${updated}` : "";
+      const trailer = latest ? " • up to date" : "";
+      status.textContent = `v${running}${suffix}${trailer}`;
+      node.appendChild(status);
+    }
   }
 
   async function runSync() {
