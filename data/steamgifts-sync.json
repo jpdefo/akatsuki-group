@@ -1,6 +1,7 @@
 {
   "source": "akatsuki-steamgifts-sync",
-  "syncedAt": "2026-06-27T09:03:39.489Z",
+  "collectorVersion": "1.9.0",
+  "syncedAt": "2026-06-27T09:05:31.209Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -147825,7 +147826,7 @@
         "burntreynolds444"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:03:27.748Z",
+      "entriesSnapshotAt": "2026-06-27T09:05:18.015Z",
       "hltbHours": 22.05
     },
     {
@@ -147855,7 +147856,7 @@
         "leniu"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:03:28.239Z",
+      "entriesSnapshotAt": "2026-06-27T09:05:18.537Z",
       "hltbHours": 22.74
     },
     {
@@ -147887,7 +147888,7 @@
         "Koalala"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:03:28.728Z",
+      "entriesSnapshotAt": "2026-06-27T09:05:19.058Z",
       "hltbHours": 11.51
     },
     {
@@ -147917,7 +147918,7 @@
         "leniu"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:03:29.229Z",
+      "entriesSnapshotAt": "2026-06-27T09:05:19.582Z",
       "hltbHours": 17.19
     },
     {
@@ -147949,7 +147950,7 @@
         "BojanNS987"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:03:29.717Z"
+      "entriesSnapshotAt": "2026-06-27T09:05:20.227Z"
     },
     {
       "code": "eRDwq",
@@ -147980,7 +147981,7 @@
         "Horseflesh"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:03:30.217Z"
+      "entriesSnapshotAt": "2026-06-27T09:05:20.978Z"
     },
     {
       "code": "p4J7S",
@@ -148010,7 +148011,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:03:30.705Z"
+      "entriesSnapshotAt": "2026-06-27T09:05:21.506Z"
     },
     {
       "code": "wUtQR",
@@ -148041,7 +148042,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:03:31.199Z"
+      "entriesSnapshotAt": "2026-06-27T09:05:22.037Z"
     },
     {
       "code": "zizOw",
@@ -148070,7 +148071,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:03:32.501Z"
+      "entriesSnapshotAt": "2026-06-27T09:05:23.488Z"
     },
     {
       "code": "0MbHx",
@@ -148100,7 +148101,7 @@
         "Koalala"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:03:32.990Z"
+      "entriesSnapshotAt": "2026-06-27T09:05:24.018Z"
     },
     {
       "code": "nFbnH",
@@ -148129,7 +148130,7 @@
         "Koalala"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:03:33.479Z"
+      "entriesSnapshotAt": "2026-06-27T09:05:24.544Z"
     },
     {
       "code": "xurrL",
@@ -148161,7 +148162,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:03:37.870Z"
+      "entriesSnapshotAt": "2026-06-27T09:05:29.584Z"
     },
     {
       "code": "YDlyc",
@@ -148191,7 +148192,7 @@
         "Horseflesh"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:03:38.361Z"
+      "entriesSnapshotAt": "2026-06-27T09:05:30.137Z"
     },
     {
       "code": "3W6mY",
@@ -148222,7 +148223,7 @@
         "leniu"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:03:38.851Z"
+      "entriesSnapshotAt": "2026-06-27T09:05:30.616Z"
     },
     {
       "code": "TvYrR",
@@ -148251,7 +148252,7 @@
         "BojanNS987"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:03:34.619Z",
+      "entriesSnapshotAt": "2026-06-27T09:05:25.838Z",
       "hltbHours": 18.46
     },
     {
@@ -148282,7 +148283,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:03:35.105Z"
+      "entriesSnapshotAt": "2026-06-27T09:05:26.372Z"
     },
     {
       "code": "Ok4eA",
@@ -148309,7 +148310,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:03:35.430Z",
+      "entriesSnapshotAt": "2026-06-27T09:05:26.753Z",
       "hltbHours": 10.71
     },
     {
@@ -148337,7 +148338,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:03:32.014Z",
+      "entriesSnapshotAt": "2026-06-27T09:05:22.952Z",
       "hltbHours": 12.12
     },
     {
@@ -148365,7 +148366,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:03:36.245Z",
+      "entriesSnapshotAt": "2026-06-27T09:05:27.652Z",
       "hltbHours": 20.44
     },
     {
@@ -148395,7 +148396,7 @@
         "BojanNS987"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:03:36.730Z",
+      "entriesSnapshotAt": "2026-06-27T09:05:28.166Z",
       "hltbHours": 14.2
     },
     {
@@ -148423,7 +148424,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:03:37.056Z",
+      "entriesSnapshotAt": "2026-06-27T09:05:28.544Z",
       "hltbHours": 31.61
     },
     {
@@ -148453,7 +148454,7 @@
         "leniu"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:03:31.687Z",
+      "entriesSnapshotAt": "2026-06-27T09:05:22.569Z",
       "hltbHours": 27.96
     },
     {
@@ -148481,7 +148482,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:03:33.804Z",
+      "entriesSnapshotAt": "2026-06-27T09:05:24.930Z",
       "hltbHours": 48.33
     },
     {
@@ -148509,7 +148510,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:03:34.131Z",
+      "entriesSnapshotAt": "2026-06-27T09:05:25.313Z",
       "hltbHours": 54.76
     },
     {
@@ -148539,7 +148540,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:03:35.914Z"
+      "entriesSnapshotAt": "2026-06-27T09:05:27.265Z"
     },
     {
       "code": "WZAbo",
@@ -148592,7 +148593,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-27T09:03:37.381Z"
+      "entriesSnapshotAt": "2026-06-27T09:05:29.055Z"
     }
   ],
   "wins": [
