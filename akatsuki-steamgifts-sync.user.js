@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Akatsuki SteamGifts Sync
 // @namespace    akatsuki-monitor
-// @version      1.10.1
+// @version      1.11.0
 // @author       Koalala
 // @description  Collect Akatsuki members, giveaways, entries and winners from the logged-in SteamGifts session and publish them straight to GitHub.
 // @match        https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts
@@ -284,20 +284,28 @@
         }
       }
 
-      // Detect giveaways deleted on SteamGifts before they ended. A still-open
-      // giveaway the group listing no longer shows is the signal; we confirm by
-      // loading its detail page and only tombstone when it shows SteamGifts'
+      // Detect giveaways deleted on SteamGifts before they ended and drop them
+      // for good. A still-open giveaway the group listing no longer shows is the
+      // signal; we confirm by loading its detail page and only act on SteamGifts'
       // "Deleted <when> by <whom>" notice (the page stays HTTP 200, it does not
       // 404), so a transient miss or a 429 never drops a live giveaway. Ended
-      // giveaways legitimately scroll off the listing, so they are never probed;
-      // a probe that comes back live clears a stale flag. Once a deleted
-      // giveaway's end date passes it stops being re-probed (it is gone for
-      // good), so this never grows unbounded.
+      // giveaways legitimately scroll off the listing, so they are never probed.
+      // SteamGifts deletions are permanent (there is no un-delete), so a confirmed
+      // deletion is excluded from the published payload outright rather than
+      // tombstoned: it is absent from both the scrape and the next run's existing
+      // data, so it never reappears or gets re-probed. Any tombstones left in
+      // prior data are purged here too, without re-probing.
       const scrapedCodes = new Set(detailedGiveaways.map((giveaway) => String(giveaway.code)));
+      const deletedCodes = new Set(
+        finalGiveaways
+          .filter((giveaway) => giveaway?.deleted && giveaway?.code)
+          .map((giveaway) => String(giveaway.code)),
+      );
       const deletionCandidates = finalGiveaways.filter(
         (giveaway) =>
           giveaway?.code &&
           giveaway?.url &&
+          !giveaway.deleted &&
           !scrapedCodes.has(String(giveaway.code)) &&
           !isGiveawayEnded(giveaway),
       );
@@ -305,17 +313,15 @@
         log(`Checking ${deletionCandidates.length} missing open giveaway(s) for deletion...`);
         for (const [index, giveaway] of deletionCandidates.entries()) {
           const status = await probeGiveawayDeleted(giveaway.url);
-          if (status === "deleted" && !giveaway.deleted) {
-            giveaway.deleted = true;
-            giveaway.deletedAt = new Date().toISOString();
+          if (status === "deleted") {
+            deletedCodes.add(String(giveaway.code));
             log(`  deleted (${index + 1}/${deletionCandidates.length}): ${giveaway.title}`);
-          } else if (status === "exists" && giveaway.deleted) {
-            giveaway.deleted = false;
-            giveaway.deletedAt = "";
-            log(`  restored (${index + 1}/${deletionCandidates.length}): ${giveaway.title}`);
           }
         }
       }
+      const publishableGiveaways = deletedCodes.size
+        ? finalGiveaways.filter((giveaway) => !deletedCodes.has(String(giveaway.code)))
+        : finalGiveaways;
 
       const payload = {
         source: "akatsuki-steamgifts-sync",
@@ -326,9 +332,9 @@
           name: document.title.replace(/\s*\|\s*SteamGifts.*/, "").trim(),
         },
         members: finalMembers,
-        giveaways: finalGiveaways,
+        giveaways: publishableGiveaways,
       };
-      payload.wins = finalGiveaways.flatMap((giveaway) =>
+      payload.wins = publishableGiveaways.flatMap((giveaway) =>
         (giveaway.winners || []).map((winner) => ({
           giveawayCode: giveaway.code,
           title: giveaway.title,
@@ -340,7 +346,7 @@
         })),
       );
 
-      log(`Publishing ${finalGiveaways.length} giveaway(s) to GitHub...`);
+      log(`Publishing ${publishableGiveaways.length} giveaway(s) to GitHub...`);
       await publishSyncToGitHub(payload);
       log("Published to GitHub. Pages will rebuild in ~1-2 min.");
     } catch (error) {
