@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T18:18:09.080622+00:00",
+  "updatedAt": "2026-06-28T07:15:19.536659+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -1145,12 +1145,12 @@
       "earnedAchievements": 29,
       "totalAchievements": 67,
       "achievementPercent": 43,
-      "playtimeHours": 56.92,
+      "playtimeHours": 56.93,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 56.92,
+      "achievementsPlaytimeHours": 56.93,
       "popThresholdMetAt": "2026-06-26T07:11:08.797257+00:00"
     },
     {
@@ -5201,15 +5201,15 @@
       "title": "Mewgenics",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/686060/achievements/",
       "visible": true,
-      "earnedAchievements": 42,
+      "earnedAchievements": 43,
       "totalAchievements": 281,
       "achievementPercent": 15,
-      "playtimeHours": 67.42,
+      "playtimeHours": 69.3,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 67.42,
+      "achievementsPlaytimeHours": 69.3,
       "popThresholdMetAt": "2026-06-26T07:11:08.797696+00:00"
     },
     {
@@ -6532,7 +6532,7 @@
       "username": "burntreynolds444",
       "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
       "appId": 2375550,
-      "title": "Like a Dragon Gaiden: The Man Who Era...",
+      "title": "Like a Dragon Gaiden: The Man Who Erased His Name",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/2375550/achievements/",
       "visible": true,
       "earnedAchievements": 6,
@@ -23247,7 +23247,7 @@
       "username": "Krlesnik",
       "steamProfile": "https://steamcommunity.com/profiles/76561198010348380",
       "appId": 2518960,
-      "title": "Wizardry: Proving Grounds of the Mad ...",
+      "title": "Wizardry: Proving Grounds of the Mad Overlord",
       "progressUrl": "https://steamcommunity.com/profiles/76561198010348380/stats/2518960/achievements/",
       "visible": true,
       "earnedAchievements": 18,
@@ -23258,7 +23258,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 19.42
+      "achievementsPlaytimeHours": 19.42,
+      "popThresholdMetAt": "2026-06-28T07:15:19.536336+00:00"
     },
     {
       "username": "Krlesnik",
@@ -23285,15 +23286,15 @@
       "title": "The Last of Us Part II Remastered",
       "progressUrl": "https://steamcommunity.com/profiles/76561198010348380/stats/2531310/achievements/",
       "visible": true,
-      "earnedAchievements": 15,
+      "earnedAchievements": 17,
       "totalAchievements": 45,
-      "achievementPercent": 33,
-      "playtimeHours": 23.23,
+      "achievementPercent": 38,
+      "playtimeHours": 25.08,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 23.23,
+      "achievementsPlaytimeHours": 25.08,
       "popThresholdMetAt": "2026-06-26T07:11:08.799879+00:00"
     },
     {
@@ -32970,12 +32971,12 @@
       "earnedAchievements": 9,
       "totalAchievements": 42,
       "achievementPercent": 21,
-      "playtimeHours": 33.07,
+      "playtimeHours": 37.62,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 33.07,
+      "achievementsPlaytimeHours": 37.62,
       "popThresholdMetAt": "2026-06-26T07:11:08.801053+00:00"
     },
     {
@@ -42665,6 +42666,13 @@
       "hltbHours": 16.03,
       "matchedTitle": "Indiana Jones and the Great Circle",
       "url": "https://howlongtobeat.com/game/144234"
+    },
+    {
+      "title": "Wizardry: Proving Grounds of the Mad Overlord",
+      "appId": 2518960,
+      "hltbHours": 17.93,
+      "matchedTitle": "Wizardry: Proving Grounds of the Mad Overlord",
+      "url": "https://howlongtobeat.com/game/137938"
     },
     {
       "title": "NINJA GAIDEN 4",
@@ -68525,11 +68533,11 @@
       "url": "https://howlongtobeat.com/game/47803"
     },
     {
-      "title": "LEGO® Star Wars™: The Skywalker Saga",
-      "appId": 920210,
-      "hltbHours": 18.59,
-      "matchedTitle": "LEGO Star Wars: The Skywalker Saga",
-      "url": "https://howlongtobeat.com/game/68261"
+      "title": "LEGO Star Wars: The Skywalker Saga Ga...",
+      "appId": 785847,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "Hell is Us",
@@ -68592,26 +68600,26 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-06-27T18:17:12.201638+00:00",
+  "libraryUpdatedAt": "2026-06-28T07:14:25.235919+00:00",
   "libraryStats": {
-    "durationSeconds": 5.51,
+    "durationSeconds": 6.26,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 13861
+    "totalPlaytimeRows": 13863
   },
   "stats": {
-    "durationSeconds": 62.4,
+    "durationSeconds": 60.57,
     "targetWins": 2288,
     "uniqueProgressTargets": 2284,
     "libraryPlaytimeHits": 2232,
-    "cachedReuses": 2188,
-    "achievementSuccesses": 9,
+    "cachedReuses": 2189,
+    "achievementSuccesses": 8,
     "achievementErrors": 87,
     "cachedFallbacks": 87,
-    "hltbTitlesRequested": 1254,
-    "hltbResultsAvailable": 3949
+    "hltbTitlesRequested": 1253,
+    "hltbResultsAvailable": 3950
   }
 }
