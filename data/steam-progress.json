@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T07:15:19.536659+00:00",
+  "updatedAt": "2026-06-29T07:31:33.476423+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -1145,12 +1145,12 @@
       "earnedAchievements": 29,
       "totalAchievements": 67,
       "achievementPercent": 43,
-      "playtimeHours": 56.93,
+      "playtimeHours": 57.88,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 56.93,
+      "achievementsPlaytimeHours": 57.88,
       "popThresholdMetAt": "2026-06-26T07:11:08.797257+00:00"
     },
     {
@@ -5204,12 +5204,12 @@
       "earnedAchievements": 43,
       "totalAchievements": 281,
       "achievementPercent": 15,
-      "playtimeHours": 69.3,
+      "playtimeHours": 70.78,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 69.3,
+      "achievementsPlaytimeHours": 70.78,
       "popThresholdMetAt": "2026-06-26T07:11:08.797696+00:00"
     },
     {
@@ -13309,15 +13309,16 @@
       "title": "Cairn",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/1588550/achievements/",
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 7,
       "totalAchievements": 52,
-      "achievementPercent": 0,
-      "playtimeHours": 0.0,
+      "achievementPercent": 13,
+      "playtimeHours": 3.07,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 3.07,
+      "popThresholdMetAt": "2026-06-29T07:31:33.475611+00:00"
     },
     {
       "username": "Ernesttico",
@@ -15661,15 +15662,16 @@
       "title": "Little Nightmares III",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/1392860/achievements/",
       "visible": true,
-      "earnedAchievements": 2,
+      "earnedAchievements": 3,
       "totalAchievements": 38,
-      "achievementPercent": 5,
-      "playtimeHours": 2.75,
+      "achievementPercent": 8,
+      "playtimeHours": 3.28,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 2.75
+      "achievementsPlaytimeHours": 3.28,
+      "popThresholdMetAt": "2026-06-29T07:31:33.475719+00:00"
     },
     {
       "username": "Horseflesh",
@@ -23056,15 +23058,15 @@
       "title": "Persona 3 Reload",
       "progressUrl": "https://steamcommunity.com/profiles/76561198010348380/stats/2161700/achievements/",
       "visible": true,
-      "earnedAchievements": 34,
+      "earnedAchievements": 36,
       "totalAchievements": 56,
-      "achievementPercent": 61,
-      "playtimeHours": 49.95,
+      "achievementPercent": 64,
+      "playtimeHours": 51.75,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 49.95,
+      "achievementsPlaytimeHours": 51.75,
       "popThresholdMetAt": "2026-06-26T07:11:08.799856+00:00"
     },
     {
@@ -24811,6 +24813,22 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 20.72,
       "popThresholdMetAt": "2026-06-26T07:11:08.800085+00:00"
+    },
+    {
+      "username": "leniu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
+      "appId": 1371980,
+      "title": "No Rest for the Wicked",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/1371980/achievements/",
+      "playtimeHours": 0.0,
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": "HTTP Error 400: Bad Request"
     },
     {
       "username": "leniu",
@@ -26846,6 +26864,40 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 59.17,
       "popThresholdMetAt": "2026-06-26T07:11:08.800338+00:00"
+    },
+    {
+      "username": "Millsshogun",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198075996214",
+      "appId": 3357650,
+      "title": "PRAGMATA",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/3357650/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 35,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "Millsshogun",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198075996214",
+      "appId": 3489700,
+      "title": "Stellar Blade",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/3489700/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 45,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "Oozyyy",
@@ -32968,15 +33020,15 @@
       "title": "Gothic 1 Remake",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/1297900/achievements/",
       "visible": true,
-      "earnedAchievements": 9,
+      "earnedAchievements": 12,
       "totalAchievements": 42,
-      "achievementPercent": 21,
-      "playtimeHours": 37.62,
+      "achievementPercent": 29,
+      "playtimeHours": 42.6,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 37.62,
+      "achievementsPlaytimeHours": 42.6,
       "popThresholdMetAt": "2026-06-26T07:11:08.801053+00:00"
     },
     {
@@ -34451,6 +34503,23 @@
     {
       "username": "WNDRLST",
       "steamProfile": "https://steamcommunity.com/profiles/76561198125763485",
+      "appId": 2057760,
+      "title": "Esoteric Ebb",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198125763485/stats/2057760/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 56,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "WNDRLST",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198125763485",
       "appId": 2585830,
       "title": "Promise Mascot Agency",
       "progressUrl": "https://steamcommunity.com/profiles/76561198125763485/stats/2585830/achievements/",
@@ -35804,15 +35873,15 @@
       "title": "Planet of Lana II",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/2997230/achievements/",
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 4,
       "totalAchievements": 25,
-      "achievementPercent": 0,
-      "playtimeHours": 0.0,
+      "achievementPercent": 16,
+      "playtimeHours": 1.42,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 1.42
     },
     {
       "username": "xMisiu",
@@ -39589,16 +39658,16 @@
       "appId": 686060,
       "title": "Mewgenics",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/686060/achievements/",
-      "playtimeHours": 9.22,
+      "playtimeHours": 9.67,
       "visible": true,
-      "earnedAchievements": 34,
+      "earnedAchievements": 37,
       "totalAchievements": 281,
-      "achievementPercent": 12,
+      "achievementPercent": 13,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 9.22
+      "achievementsPlaytimeHours": 9.67
     },
     {
       "username": "zettaivanugen",
@@ -40862,16 +40931,16 @@
       "appId": 2678080,
       "title": "Tides of Tomorrow 🌊",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/2678080/achievements/",
-      "playtimeHours": 0.02,
+      "playtimeHours": 0.47,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 1,
       "totalAchievements": 39,
-      "achievementPercent": 0,
+      "achievementPercent": 3,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.02
+      "achievementsPlaytimeHours": 0.47
     },
     {
       "username": "zettaivanugen",
@@ -40942,6 +41011,22 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 3.27,
       "popThresholdMetAt": "2026-06-26T07:11:08.801982+00:00"
+    },
+    {
+      "username": "zettaivanugen",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197975039366",
+      "appId": 3751260,
+      "title": "The Blood of Dawnwalker",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/3751260/achievements/",
+      "playtimeHours": 0.0,
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": "HTTP Error 403: Forbidden"
     }
   ],
   "hltb": [
@@ -68435,18 +68520,18 @@
       "url": "https://howlongtobeat.com/game/141835"
     },
     {
+      "title": "The Blood of Dawnwalker",
+      "appId": 3751260,
+      "hltbHours": 0.0,
+      "matchedTitle": "The Blood of Dawnwalker",
+      "url": "https://howlongtobeat.com/game/144338"
+    },
+    {
       "title": "Dying Light: The Beast",
       "appId": 3008130,
       "hltbHours": 18.46,
       "matchedTitle": "Dying Light: The Beast",
       "url": "https://howlongtobeat.com/game/155650"
-    },
-    {
-      "title": "SILENT HILL f",
-      "appId": 2947440,
-      "hltbHours": 10.71,
-      "matchedTitle": "Silent Hill f",
-      "url": "https://howlongtobeat.com/game/114901"
     },
     {
       "title": "Dead Space",
@@ -68594,32 +68679,144 @@
       "hltbHours": 18.06,
       "matchedTitle": "Monster Hunter Wilds",
       "url": "https://howlongtobeat.com/game/141854"
+    },
+    {
+      "title": "METAL GEAR SOLID Δ: SNAKE EATER",
+      "appId": 2417610,
+      "hltbHours": 12.18,
+      "matchedTitle": "Metal Gear Solid Δ: Snake Eater",
+      "url": "https://howlongtobeat.com/game/129234"
+    },
+    {
+      "title": "Hollow Knight: Silksong",
+      "appId": 1030300,
+      "hltbHours": 28.2,
+      "matchedTitle": "Hollow Knight: Silksong",
+      "url": "https://howlongtobeat.com/game/65945"
+    },
+    {
+      "title": "Assassin’s Creed Shadows",
+      "appId": 3159330,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "The First Berserker: Khazan",
+      "appId": 2680010,
+      "hltbHours": 34.72,
+      "matchedTitle": "The First Berserker: Khazan",
+      "url": "https://howlongtobeat.com/game/141849"
+    },
+    {
+      "title": "Marvel's Spider-Man 2",
+      "appId": 2651280,
+      "hltbHours": 17.19,
+      "matchedTitle": "Marvel's Spider-Man 2",
+      "url": "https://howlongtobeat.com/game/79769"
+    },
+    {
+      "title": "Avowed",
+      "appId": 2457220,
+      "hltbHours": 20.15,
+      "matchedTitle": "Avowed",
+      "url": "https://howlongtobeat.com/game/81115"
+    },
+    {
+      "title": "Mafia: The Old Country",
+      "appId": 1941540,
+      "hltbHours": 12.27,
+      "matchedTitle": "Mafia: The Old Country",
+      "url": "https://howlongtobeat.com/game/155658"
+    },
+    {
+      "title": "Indiana Jones and the Great Circle",
+      "appId": 2677660,
+      "hltbHours": 16.03,
+      "matchedTitle": "Indiana Jones and the Great Circle",
+      "url": "https://howlongtobeat.com/game/144234"
+    },
+    {
+      "title": "Cronos: The New Dawn",
+      "appId": 2101960,
+      "hltbHours": 14.61,
+      "matchedTitle": "Cronos: The New Dawn",
+      "url": "https://howlongtobeat.com/game/158246"
+    },
+    {
+      "title": "Kingdom Come: Deliverance II",
+      "appId": 1771300,
+      "hltbHours": 54.76,
+      "matchedTitle": "Kingdom Come: Deliverance II",
+      "url": "https://howlongtobeat.com/game/148973"
+    },
+    {
+      "title": "REANIMAL",
+      "appId": 2129530,
+      "hltbHours": 4.55,
+      "matchedTitle": "Reanimal",
+      "url": "https://howlongtobeat.com/game/155644"
+    },
+    {
+      "title": "FINAL FANTASY XVI COMPLETE EDITION",
+      "appId": 2515020,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "DOOM: The Dark Ages",
+      "appId": 3017860,
+      "hltbHours": 14.2,
+      "matchedTitle": "Doom: The Dark Ages",
+      "url": "https://howlongtobeat.com/game/151986"
+    },
+    {
+      "title": "PRAGMATA",
+      "appId": 3357650,
+      "hltbHours": 11.51,
+      "matchedTitle": "Pragmata",
+      "url": "https://howlongtobeat.com/game/80101"
+    },
+    {
+      "title": "Esoteric Ebb",
+      "appId": 2057760,
+      "hltbHours": 22.05,
+      "matchedTitle": "Esoteric Ebb",
+      "url": "https://howlongtobeat.com/game/143794"
+    },
+    {
+      "title": "Crimson Desert",
+      "appId": 3321460,
+      "hltbHours": 62.73,
+      "matchedTitle": "Crimson Desert",
+      "url": "https://howlongtobeat.com/game/94122"
     }
   ],
   "steamApiEnabled": true,
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-06-28T07:14:25.235919+00:00",
+  "libraryUpdatedAt": "2026-06-29T07:30:30.232867+00:00",
   "libraryStats": {
-    "durationSeconds": 6.26,
+    "durationSeconds": 9.39,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 13863
+    "totalPlaytimeRows": 13868
   },
   "stats": {
-    "durationSeconds": 60.57,
-    "targetWins": 2288,
-    "uniqueProgressTargets": 2284,
-    "libraryPlaytimeHits": 2232,
-    "cachedReuses": 2189,
-    "achievementSuccesses": 8,
-    "achievementErrors": 87,
+    "durationSeconds": 72.65,
+    "targetWins": 2293,
+    "uniqueProgressTargets": 2289,
+    "libraryPlaytimeHits": 2237,
+    "cachedReuses": 2184,
+    "achievementSuccesses": 16,
+    "achievementErrors": 89,
     "cachedFallbacks": 87,
-    "hltbTitlesRequested": 1253,
-    "hltbResultsAvailable": 3950
+    "hltbTitlesRequested": 1254,
+    "hltbResultsAvailable": 3966
   }
 }
