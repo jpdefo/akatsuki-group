@@ -5207,7 +5207,8 @@
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3527760/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527760/48709bff73af97051fc8c912a2aea6f38920d4ac/capsule_184x69.jpg",
       "startDate": "2025-11-15T20:59:56.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "hltbHours": 7.81
     },
     {
       "code": "bpRih",
@@ -5595,7 +5596,8 @@
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2288350/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2288350/120562651f1b34cdf731543795a78b86b89d8d08/capsule_184x69.jpg",
       "startDate": "2025-10-23T13:47:44.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "hltbHours": 18.96
     },
     {
       "code": "AAyJb",
@@ -6646,7 +6648,8 @@
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3527760/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527760/48709bff73af97051fc8c912a2aea6f38920d4ac/capsule_184x69.jpg",
       "startDate": "2025-09-01T16:37:10.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "hltbHours": 7.81
     },
     {
       "code": "La736",
@@ -7260,7 +7263,8 @@
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3527760/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527760/48709bff73af97051fc8c912a2aea6f38920d4ac/capsule_184x69.jpg",
       "startDate": "2025-07-03T15:56:06.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "hltbHours": 7.81
     },
     {
       "code": "DLgRo",
@@ -8517,7 +8521,8 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2023360/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2023360/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2023360/capsule_184x69.jpg",
-      "startDate": "2025-06-29T13:07:27.000Z"
+      "startDate": "2025-06-29T13:07:27.000Z",
+      "hltbHours": 11.46
     },
     {
       "code": "95mXd",
@@ -8807,7 +8812,8 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3527760/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3527760/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527760/48709bff73af97051fc8c912a2aea6f38920d4ac/capsule_184x69.jpg",
-      "startDate": "2025-06-29T12:57:24.000Z"
+      "startDate": "2025-06-29T12:57:24.000Z",
+      "hltbHours": 7.81
     },
     {
       "code": "W4FMr",
@@ -148050,7 +148056,8 @@
         "Wintermute101"
       ],
       "entriesFinalized": true,
-      "entriesSnapshotAt": "2026-06-29T20:03:03.430Z"
+      "entriesSnapshotAt": "2026-06-29T20:03:03.430Z",
+      "hltbHours": 21.07
     },
     {
       "code": "wUtQR",
@@ -148090,7 +148097,8 @@
         "Wintermute101"
       ],
       "entriesFinalized": true,
-      "entriesSnapshotAt": "2026-06-29T20:03:01.408Z"
+      "entriesSnapshotAt": "2026-06-29T20:03:01.408Z",
+      "hltbHours": 12.43
     },
     {
       "code": "zizOw",
@@ -148654,7 +148662,8 @@
       "penaltyForCode": "",
       "giveawayKindChecked": true,
       "entriesFinalized": false,
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "hltbHours": 21.07
     },
     {
       "code": "V2VER",
@@ -149809,7 +149818,8 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:22:51.435Z"
+      "entriesSnapshotAt": "2026-06-29T21:22:51.435Z",
+      "hltbHours": 21.07
     },
     {
       "code": "yMkWL",
@@ -149985,7 +149995,8 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:22:58.511Z"
+      "entriesSnapshotAt": "2026-06-29T21:22:58.511Z",
+      "hltbHours": 6.19
     },
     {
       "code": "08lPp",
@@ -150012,7 +150023,8 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:23:01.549Z"
+      "entriesSnapshotAt": "2026-06-29T21:23:01.549Z",
+      "hltbHours": 4.61
     }
   ],
   "wins": [
