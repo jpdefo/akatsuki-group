@@ -1,7 +1,7 @@
 {
   "source": "akatsuki-steamgifts-sync",
   "collectorVersion": "1.11.0",
-  "syncedAt": "2026-06-29T21:23:10.597Z",
+  "syncedAt": "2026-06-30T16:47:30.113Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -2160,7 +2160,7 @@
       "appId": 3043580,
       "steamAppUrl": "https://store.steampowered.com/app/3043580?utm_source=SteamGifts",
       "points": 30,
-      "entriesCount": 5,
+      "entriesCount": 6,
       "endDate": "2026-06-30T18:00:00.000Z",
       "winners": [],
       "resultStatus": "open",
@@ -147655,7 +147655,7 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2057760/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2057760/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2057760/0c8f3c4b30a022b6ce816096db0dfd385199226b/capsule_184x69.jpg",
-      "entriesCount": 5,
+      "entriesCount": 7,
       "startDate": "2026-06-06T10:53:33.000Z",
       "endDate": "2026-06-30T18:00:00.000Z",
       "winners": [],
@@ -147709,7 +147709,7 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3404260/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3404260/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3404260/c047bcb51618b08b5764cc3a5c15f1b50511e4ee/capsule_184x69.jpg",
-      "entriesCount": 2,
+      "entriesCount": 3,
       "startDate": "2026-06-11T14:27:10.000Z",
       "endDate": "2026-06-30T18:00:00.000Z",
       "winners": [],
@@ -148253,7 +148253,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:20.804Z"
+      "entriesSnapshotAt": "2026-06-30T16:45:25.833Z"
     },
     {
       "code": "YDlyc",
@@ -148286,7 +148286,7 @@
         "Horseflesh"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:21.209Z"
+      "entriesSnapshotAt": "2026-06-30T16:45:26.385Z"
     },
     {
       "code": "3W6mY",
@@ -148300,7 +148300,7 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3259780/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3259780/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3259780/6861c59eb09396b7370536d494c1c1f33f684f14/capsule_184x69.jpg",
-      "entriesCount": 7,
+      "entriesCount": 8,
       "startDate": "2026-06-25T17:04:13.000Z",
       "endDate": "2026-07-02T10:00:00.000Z",
       "winners": [],
@@ -148312,6 +148312,7 @@
       "penaltyForCode": "",
       "giveawayKindChecked": true,
       "entryUsers": [
+        "zettaivanugen",
         "Ernesttico",
         "Wintermute101",
         "Youdontknow",
@@ -148321,7 +148322,7 @@
         "leniu"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:21.606Z"
+      "entriesSnapshotAt": "2026-06-30T16:45:26.905Z"
     },
     {
       "code": "TvYrR",
@@ -148353,7 +148354,7 @@
         "BojanNS987"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:23:07.624Z",
+      "entriesSnapshotAt": "2026-06-30T16:47:27.135Z",
       "hltbHours": 18.46
     },
     {
@@ -148384,7 +148385,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:23:04.612Z"
+      "entriesSnapshotAt": "2026-06-30T16:47:25.477Z"
     },
     {
       "code": "xnpCw",
@@ -148426,22 +148427,29 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1774580/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1774580/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1774580/capsule_184x69.jpg",
-      "entriesCount": 1,
+      "entriesCount": 2,
       "startDate": "2026-06-25T21:44:07.000Z",
       "endDate": "2026-06-30T05:42:00.000Z",
-      "winners": [],
-      "resultStatus": "open",
-      "resultLabel": "Open",
+      "winners": [
+        {
+          "username": "Thedogma",
+          "profileUrl": "https://www.steamgifts.com/user/Thedogma",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "Thedogma",
       "regionRestricted": false,
       "giveawayKind": "summer_event",
       "giveawayMonthOverride": "",
       "penaltyForCode": "",
       "giveawayKindChecked": true,
       "entryUsers": [
+        "Thedogma",
         "Millsshogun"
       ],
-      "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:12.342Z",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-06-30T16:47:22.179Z",
       "hltbHours": 20.44
     },
     {
@@ -148456,23 +148464,28 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3017860/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3017860/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3017860/4b39d554fb3b3a48ff02e2f05bba7186a58052ce/capsule_184x69.jpg",
-      "entriesCount": 2,
+      "entriesCount": 1,
       "startDate": "2026-06-25T21:45:54.000Z",
       "endDate": "2026-06-30T05:45:00.000Z",
-      "winners": [],
-      "resultStatus": "open",
-      "resultLabel": "Open",
+      "winners": [
+        {
+          "username": "BojanNS987",
+          "profileUrl": "https://www.steamgifts.com/user/BojanNS987",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "BojanNS987",
       "regionRestricted": false,
       "giveawayKind": "summer_event",
       "giveawayMonthOverride": "",
       "penaltyForCode": "",
       "giveawayKindChecked": true,
       "entryUsers": [
-        "Oozyyy",
         "BojanNS987"
       ],
-      "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:12.737Z",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-06-30T16:47:21.080Z",
       "hltbHours": 14.2
     },
     {
@@ -148491,8 +148504,8 @@
       "startDate": "2026-06-25T21:45:00.000Z",
       "endDate": "2026-06-30T06:44:00.000Z",
       "winners": [],
-      "resultStatus": "open",
-      "resultLabel": "Open",
+      "resultStatus": "no_winners",
+      "resultLabel": "No winners",
       "regionRestricted": false,
       "giveawayKind": "summer_event",
       "giveawayMonthOverride": "",
@@ -148530,7 +148543,7 @@
         "leniu"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:23:09.267Z",
+      "entriesSnapshotAt": "2026-06-30T16:47:28.783Z",
       "hltbHours": 27.96
     },
     {
@@ -148624,8 +148637,8 @@
       "startDate": "2026-06-26T06:54:03.000Z",
       "endDate": "2026-06-30T02:00:00.000Z",
       "winners": [],
-      "resultStatus": "open",
-      "resultLabel": "Open",
+      "resultStatus": "awaiting_feedback",
+      "resultLabel": "Awaiting feedback",
       "regionRestricted": false,
       "giveawayKind": "summer_event",
       "giveawayMonthOverride": "",
@@ -148636,7 +148649,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:11.950Z"
+      "entriesSnapshotAt": "2026-06-30T16:47:23.831Z"
     },
     {
       "code": "WZAbo",
@@ -148650,7 +148663,7 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2863680/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2863680/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2863680/capsule_184x69.jpg",
-      "entriesCount": 5,
+      "entriesCount": 6,
       "startDate": "2026-06-26T16:13:19.000Z",
       "endDate": "2026-06-30T18:00:00.000Z",
       "winners": [],
@@ -148693,7 +148706,7 @@
         "Horseflesh"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:15.005Z",
+      "entriesSnapshotAt": "2026-06-30T16:45:17.814Z",
       "hltbHours": 4.96
     },
     {
@@ -148708,7 +148721,7 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3010850/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3010850/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3010850/d0917fcdbf27faffb3380f6f67e71e90f84b7ed5/capsule_184x69.jpg",
-      "entriesCount": 6,
+      "entriesCount": 7,
       "startDate": "2026-06-27T10:02:01.000Z",
       "endDate": "2026-06-30T18:00:00.000Z",
       "winners": [],
@@ -148720,6 +148733,7 @@
       "penaltyForCode": "",
       "giveawayKindChecked": true,
       "entryUsers": [
+        "burntreynolds444",
         "Wintermute101",
         "chOOkity",
         "Horseflesh",
@@ -148728,7 +148742,7 @@
         "Koalala"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:14.203Z"
+      "entriesSnapshotAt": "2026-06-30T16:45:16.727Z"
     },
     {
       "code": "Uc0hR",
@@ -148742,7 +148756,7 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3280350/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3280350/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3280350/6e07f61e2585bae97d2406d45666a7ee70543792/capsule_184x69.jpg",
-      "entriesCount": 5,
+      "entriesCount": 8,
       "startDate": "2026-06-27T10:00:51.000Z",
       "endDate": "2026-06-30T18:00:00.000Z",
       "winners": [],
@@ -148754,14 +148768,17 @@
       "penaltyForCode": "",
       "giveawayKindChecked": true,
       "entryUsers": [
+        "leniu",
+        "Horseflesh",
+        "burntreynolds444",
+        "zettaivanugen",
         "chOOkity",
-        "Oozyyy",
         "Millsshogun",
         "BojanNS987",
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:14.606Z"
+      "entriesSnapshotAt": "2026-06-30T16:45:17.280Z"
     },
     {
       "code": "ocGj1",
@@ -148775,7 +148792,7 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2668510/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2668510/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2668510/c9c0dd50da5b3543c74beb11b6c806fb9fd88a8c/capsule_184x69.jpg",
-      "entriesCount": 1,
+      "entriesCount": 2,
       "startDate": "2026-06-27T10:05:10.000Z",
       "endDate": "2026-07-01T17:00:00.000Z",
       "winners": [],
@@ -148787,10 +148804,11 @@
       "penaltyForCode": "",
       "giveawayKindChecked": true,
       "entryUsers": [
+        "BojanNS987",
         "Koalala"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:17.807Z",
+      "entriesSnapshotAt": "2026-06-30T16:45:21.637Z",
       "hltbHours": 17.6
     },
     {
@@ -148822,7 +148840,7 @@
         "leniu"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:18.204Z",
+      "entriesSnapshotAt": "2026-06-30T16:45:22.173Z",
       "hltbHours": 16.03
     },
     {
@@ -148852,7 +148870,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:20.400Z",
+      "entriesSnapshotAt": "2026-06-30T16:45:25.282Z",
       "hltbHours": 3.18
     },
     {
@@ -148880,7 +148898,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:21.870Z",
+      "entriesSnapshotAt": "2026-06-30T16:45:27.199Z",
       "hltbHours": 27.41
     },
     {
@@ -148908,7 +148926,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:22.542Z",
+      "entriesSnapshotAt": "2026-06-30T16:45:28.011Z",
       "packageId": 785847,
       "hltbHours": 18.59
     },
@@ -148940,7 +148958,7 @@
         "Horseflesh"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:23.763Z",
+      "entriesSnapshotAt": "2026-06-30T16:45:30.036Z",
       "hltbHours": 21.23
     },
     {
@@ -148970,7 +148988,7 @@
         "chOOkity"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:24.159Z",
+      "entriesSnapshotAt": "2026-06-30T16:45:30.510Z",
       "hltbHours": 18.83
     },
     {
@@ -148998,7 +149016,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:24.422Z",
+      "entriesSnapshotAt": "2026-06-30T16:45:31.196Z",
       "hltbHours": 9.43
     },
     {
@@ -149031,7 +149049,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:16.609Z",
+      "entriesSnapshotAt": "2026-06-30T16:45:19.995Z",
       "hltbHours": 46.95
     },
     {
@@ -149065,7 +149083,7 @@
         "BojanNS987"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:22:29.165Z"
+      "entriesSnapshotAt": "2026-06-30T16:45:34.399Z"
     },
     {
       "code": "n51cY",
@@ -149083,8 +149101,8 @@
       "startDate": "2026-06-27T14:32:17.000Z",
       "endDate": "2026-06-30T15:31:00.000Z",
       "winners": [],
-      "resultStatus": "open",
-      "resultLabel": "Open",
+      "resultStatus": "awaiting_feedback",
+      "resultLabel": "Awaiting feedback",
       "regionRestricted": false,
       "giveawayKind": "summer_event",
       "giveawayMonthOverride": "",
@@ -149094,7 +149112,7 @@
         "burntreynolds444"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:13.394Z"
+      "entriesSnapshotAt": "2026-06-30T16:47:19.977Z"
     },
     {
       "code": "0KwDb",
@@ -149108,25 +149126,26 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1598780/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1598780/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1598780/667020fed9d083b8f573224d282d5361886cefd0/capsule_184x69.jpg",
-      "entriesCount": 4,
+      "entriesCount": 5,
       "startDate": "2026-06-27T14:32:53.000Z",
       "endDate": "2026-06-30T15:32:00.000Z",
       "winners": [],
-      "resultStatus": "open",
-      "resultLabel": "Open",
+      "resultStatus": "awaiting_feedback",
+      "resultLabel": "Awaiting feedback",
       "regionRestricted": false,
       "giveawayKind": "summer_event",
       "giveawayMonthOverride": "",
       "penaltyForCode": "",
       "giveawayKindChecked": true,
       "entryUsers": [
+        "BojanNS987",
         "Oozyyy",
         "Youdontknow",
         "burntreynolds444",
         "leniu"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:13.801Z"
+      "entriesSnapshotAt": "2026-06-30T16:47:18.592Z"
     },
     {
       "code": "4CiBN",
@@ -149158,7 +149177,7 @@
         "leniu"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:15.406Z"
+      "entriesSnapshotAt": "2026-06-30T16:45:18.337Z"
     },
     {
       "code": "KbMux",
@@ -149188,7 +149207,7 @@
         "Koalala"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:15.815Z",
+      "entriesSnapshotAt": "2026-06-30T16:45:18.994Z",
       "hltbHours": 48.33
     },
     {
@@ -149221,7 +149240,7 @@
         "Horseflesh"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:16.209Z",
+      "entriesSnapshotAt": "2026-06-30T16:45:19.540Z",
       "hltbHours": 19.05
     },
     {
@@ -149249,7 +149268,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:18.493Z",
+      "entriesSnapshotAt": "2026-06-30T16:45:22.575Z",
       "hltbHours": 28.17
     },
     {
@@ -149264,7 +149283,7 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1590230/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1590230/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1590230/1626e0642541e63897e3895e3bcef10576a35959/capsule_184x69.jpg",
-      "entriesCount": 0,
+      "entriesCount": 1,
       "startDate": "2026-06-27T18:01:06.000Z",
       "endDate": "2026-07-01T18:00:00.000Z",
       "winners": [],
@@ -149275,9 +149294,11 @@
       "giveawayMonthOverride": "",
       "penaltyForCode": "",
       "giveawayKindChecked": true,
-      "entryUsers": [],
+      "entryUsers": [
+        "BojanNS987"
+      ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:18.759Z"
+      "entriesSnapshotAt": "2026-06-30T16:45:23.119Z"
     },
     {
       "code": "1IpQq",
@@ -149306,7 +149327,7 @@
         "BojanNS987"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:19.157Z",
+      "entriesSnapshotAt": "2026-06-30T16:45:23.662Z",
       "hltbHours": 18.06
     },
     {
@@ -149336,7 +149357,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:19.559Z"
+      "entriesSnapshotAt": "2026-06-30T16:45:24.211Z"
     },
     {
       "code": "JabmJ",
@@ -149367,7 +149388,7 @@
         "burntreynolds444"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:19.966Z"
+      "entriesSnapshotAt": "2026-06-30T16:45:24.756Z"
     },
     {
       "code": "u18zr",
@@ -149399,7 +149420,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:22.948Z",
+      "entriesSnapshotAt": "2026-06-30T16:45:28.879Z",
       "hltbHours": 12.18
     },
     {
@@ -149430,7 +149451,7 @@
         "Youdontknow"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:23.364Z"
+      "entriesSnapshotAt": "2026-06-30T16:45:29.419Z"
     },
     {
       "code": "EVEEB",
@@ -149459,7 +149480,7 @@
         "Millsshogun"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:24.822Z",
+      "entriesSnapshotAt": "2026-06-30T16:45:31.839Z",
       "hltbHours": 28.2
     },
     {
@@ -149489,7 +149510,7 @@
         "chOOkity"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:25.220Z"
+      "entriesSnapshotAt": "2026-06-30T16:45:32.342Z"
     },
     {
       "code": "KFN0C",
@@ -149518,7 +149539,7 @@
         "Koalala"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:25.626Z",
+      "entriesSnapshotAt": "2026-06-30T16:45:32.840Z",
       "hltbHours": 34.72
     },
     {
@@ -149551,7 +149572,7 @@
         "Koalala"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:26.046Z",
+      "entriesSnapshotAt": "2026-06-30T16:45:33.397Z",
       "hltbHours": 17.19
     },
     {
@@ -149581,7 +149602,7 @@
         "Koalala"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:26.463Z",
+      "entriesSnapshotAt": "2026-06-30T16:45:33.919Z",
       "hltbHours": 20.15
     },
     {
@@ -149611,7 +149632,7 @@
         "BojanNS987"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:22:32.193Z",
+      "entriesSnapshotAt": "2026-06-30T16:45:34.880Z",
       "hltbHours": 12.27
     },
     {
@@ -149641,7 +149662,7 @@
         "Millsshogun"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:22:35.233Z",
+      "entriesSnapshotAt": "2026-06-30T16:45:35.410Z",
       "hltbHours": 16.03
     },
     {
@@ -149671,7 +149692,7 @@
         "burntreynolds444"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:22:38.271Z",
+      "entriesSnapshotAt": "2026-06-30T16:45:35.936Z",
       "hltbHours": 14.61
     },
     {
@@ -149685,7 +149706,7 @@
       "points": 50,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2069250/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2069250/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2069250/fcc9b0ffa146fef489268d9178fb5249d4fe0a4f/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2069250/capsule_184x69.jpg",
       "entriesCount": 3,
       "startDate": "2026-06-28T14:27:59.000Z",
       "endDate": "2026-07-05T18:00:00.000Z",
@@ -149703,7 +149724,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:22:41.297Z"
+      "entriesSnapshotAt": "2026-06-30T16:47:06.979Z"
     },
     {
       "code": "qLDJR",
@@ -149730,7 +149751,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:22:43.335Z",
+      "entriesSnapshotAt": "2026-06-30T16:47:07.872Z",
       "hltbHours": 54.76
     },
     {
@@ -149758,7 +149779,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:22:45.361Z",
+      "entriesSnapshotAt": "2026-06-30T16:47:08.966Z",
       "hltbHours": 4.55
     },
     {
@@ -149788,7 +149809,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:22:48.390Z",
+      "entriesSnapshotAt": "2026-06-30T16:47:10.623Z",
       "packageId": 1111230
     },
     {
@@ -149818,7 +149839,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:22:51.435Z",
+      "entriesSnapshotAt": "2026-06-30T16:47:12.275Z",
       "hltbHours": 21.07
     },
     {
@@ -149846,7 +149867,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:22:53.458Z"
+      "entriesSnapshotAt": "2026-06-30T16:47:13.365Z"
     },
     {
       "code": "qiVA9",
@@ -149873,7 +149894,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:22:55.499Z",
+      "entriesSnapshotAt": "2026-06-30T16:47:14.467Z",
       "hltbHours": 14.2
     },
     {
@@ -149905,7 +149926,7 @@
         "BojanNS987"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:17.412Z",
+      "entriesSnapshotAt": "2026-06-30T16:45:21.075Z",
       "hltbHours": 11.51
     },
     {
@@ -149920,7 +149941,7 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2057760/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2057760/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2057760/0c8f3c4b30a022b6ce816096db0dfd385199226b/capsule_184x69.jpg",
-      "entriesCount": 2,
+      "entriesCount": 3,
       "startDate": "2026-06-28T18:47:40.000Z",
       "endDate": "2026-07-01T17:00:00.000Z",
       "winners": [],
@@ -149932,11 +149953,12 @@
       "penaltyForCode": "",
       "giveawayKindChecked": true,
       "entryUsers": [
+        "BojanNS987",
         "Millsshogun",
         "zettaivanugen"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:17.007Z",
+      "entriesSnapshotAt": "2026-06-30T16:45:20.512Z",
       "hltbHours": 22.05
     },
     {
@@ -149951,7 +149973,7 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3321460/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3321460/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3321460/f4b3cbf1c0759e0f18cbc0bf13cdefa02451c95b/capsule_184x69.jpg",
-      "entriesCount": 2,
+      "entriesCount": 3,
       "startDate": "2026-06-28T19:07:57.000Z",
       "endDate": "2026-07-02T17:00:00.000Z",
       "winners": [],
@@ -149963,11 +149985,12 @@
       "penaltyForCode": "",
       "giveawayKindChecked": true,
       "entryUsers": [
+        "Millsshogun",
         "chOOkity",
         "BojanNS987"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:21:22.278Z",
+      "entriesSnapshotAt": "2026-06-30T16:45:27.650Z",
       "hltbHours": 62.73
     },
     {
@@ -149981,7 +150004,7 @@
       "points": 20,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2997230/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2997230/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2997230/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2997230/5980b81c301edbca8163ca0df484af8b18f25da6/capsule_184x69.jpg",
       "entriesCount": 0,
       "startDate": "2026-06-29T20:54:24.000Z",
       "endDate": "2026-07-07T20:51:00.000Z",
@@ -149995,7 +150018,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:22:58.511Z",
+      "entriesSnapshotAt": "2026-06-30T16:47:15.576Z",
       "hltbHours": 6.19
     },
     {
@@ -150009,7 +150032,7 @@
       "points": 20,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/953490/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/953490/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/953490/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/953490/capsule_184x69.jpg",
       "entriesCount": 0,
       "startDate": "2026-06-29T20:55:49.000Z",
       "endDate": "2026-07-07T20:54:00.000Z",
@@ -150023,7 +150046,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-06-29T21:23:01.549Z",
+      "entriesSnapshotAt": "2026-06-30T16:47:16.675Z",
       "hltbHours": 4.61
     }
   ],
@@ -185397,6 +185420,24 @@
       "creatorUsername": "BojanNS987",
       "entriesCount": 4,
       "winDate": "2026-06-29T07:00:00.000Z"
+    },
+    {
+      "giveawayCode": "Tsfc2",
+      "title": "STAR WARS Jedi: Survivor",
+      "appId": 1774580,
+      "winnerUsername": "Thedogma",
+      "creatorUsername": "zettaivanugen",
+      "entriesCount": 2,
+      "winDate": "2026-06-30T05:42:00.000Z"
+    },
+    {
+      "giveawayCode": "vBjKC",
+      "title": "DOOM: The Dark Ages",
+      "appId": 3017860,
+      "winnerUsername": "BojanNS987",
+      "creatorUsername": "zettaivanugen",
+      "entriesCount": 1,
+      "winDate": "2026-06-30T05:45:00.000Z"
     },
     {
       "giveawayCode": "w6lsy",
