@@ -2182,7 +2182,8 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3043580/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3043580/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3043580/16d2c74cc598dbd305c22d1b2e374cfd00343e30/capsule_184x69.jpg",
-      "startDate": "2026-06-02T18:17:02.000Z"
+      "startDate": "2026-06-02T18:17:02.000Z",
+      "hltbHours": 4.6
     },
     {
       "code": "jSKFe",
@@ -4367,7 +4368,7 @@
     {
       "code": "LgQJ6",
       "url": "https://www.steamgifts.com/giveaway/LgQJ6/final-fantasy-tactics-the-ivalice-chronicles",
-      "title": "FINAL FANTASY TACTICS - The Ivalice C...",
+      "title": "FINAL FANTASY TACTICS - The Ivalice Chronicles",
       "creatorUsername": "Youdontknow",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Youdontknow",
       "appId": 1004640,
@@ -4609,7 +4610,7 @@
     {
       "code": "3Klb9",
       "url": "https://www.steamgifts.com/giveaway/3Klb9/the-elder-scrolls-iv-oblivion-remastered",
-      "title": "The Elder Scrolls IV: Oblivion Remast...",
+      "title": "The Elder Scrolls IV: Oblivion Remastered",
       "creatorUsername": "leniu",
       "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
       "appId": 2623190,
@@ -5209,7 +5210,7 @@
     {
       "code": "aQMBR",
       "url": "https://www.steamgifts.com/giveaway/aQMBR/robocop-rogue-city-unfinished-business",
-      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "title": "RoboCop: Rogue City - Unfinished Business",
       "creatorUsername": "Koalala",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Koalala",
       "appId": 3527760,
@@ -5598,7 +5599,7 @@
     {
       "code": "44g1j",
       "url": "https://www.steamgifts.com/giveaway/44g1j/raidou-remastered-the-mystery-of-the-soulless-army",
-      "title": "RAIDOU Remastered: The Mystery of the...",
+      "title": "RAIDOU Remastered: The Mystery of the Soulless Army",
       "creatorUsername": "Youdontknow",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Youdontknow",
       "appId": 2288350,
@@ -6650,7 +6651,7 @@
     {
       "code": "UtTqc",
       "url": "https://www.steamgifts.com/giveaway/UtTqc/robocop-rogue-city-unfinished-business",
-      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "title": "RoboCop: Rogue City - Unfinished Business",
       "creatorUsername": "Wintermute101",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Wintermute101",
       "appId": 3527760,
@@ -7265,7 +7266,7 @@
     {
       "code": "6lDgn",
       "url": "https://www.steamgifts.com/giveaway/6lDgn/robocop-rogue-city-unfinished-business",
-      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "title": "RoboCop: Rogue City - Unfinished Business",
       "creatorUsername": "leniu",
       "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
       "appId": 3527760,
@@ -8520,7 +8521,7 @@
     {
       "code": "gaH1H",
       "url": "https://www.steamgifts.com/giveaway/gaH1H/the-last-case-of-benedict-fox-definitive-edition",
-      "title": "The Last Case of Benedict Fox Definit...",
+      "title": "The Last Case of Benedict Fox Definitive Edition",
       "creatorUsername": "Ernesttico",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Ernesttico",
       "appId": 2023360,
@@ -8630,7 +8631,7 @@
     {
       "code": "13YP4",
       "url": "https://www.steamgifts.com/giveaway/13YP4/broken-sword-shadow-of-the-templars-reforged",
-      "title": "Broken Sword - Shadow of the Templars...",
+      "title": "Broken Sword - Shadow of the Templars: Reforged",
       "creatorUsername": "Ernesttico",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Ernesttico",
       "appId": 2544110,
@@ -147731,7 +147732,8 @@
       "penaltyForCode": "",
       "giveawayKindChecked": true,
       "entriesFinalized": false,
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "hltbHours": 12.85
     },
     {
       "code": "VL94c",
@@ -148715,7 +148717,8 @@
         "Wintermute101"
       ],
       "entriesFinalized": true,
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "hltbHours": 18.36
     },
     {
       "code": "WZAbo",
@@ -149192,7 +149195,8 @@
         "burntreynolds444"
       ],
       "entriesFinalized": true,
-      "entriesSnapshotAt": "2026-06-30T22:42:38.324Z"
+      "entriesSnapshotAt": "2026-06-30T22:42:38.324Z",
+      "hltbHours": 8.83
     },
     {
       "code": "0KwDb",
@@ -149231,7 +149235,8 @@
         "leniu"
       ],
       "entriesFinalized": true,
-      "entriesSnapshotAt": "2026-06-30T22:42:37.213Z"
+      "entriesSnapshotAt": "2026-06-30T22:42:37.213Z",
+      "hltbHours": 6.51
     },
     {
       "code": "4CiBN",
@@ -150184,7 +150189,8 @@
         "burntreynolds444"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-01T06:56:25.383Z"
+      "entriesSnapshotAt": "2026-07-01T06:56:25.383Z",
+      "hltbHours": 12.08
     },
     {
       "code": "iy8Ea",
@@ -150213,7 +150219,8 @@
         "Ernesttico"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-01T06:56:25.881Z"
+      "entriesSnapshotAt": "2026-07-01T06:56:25.881Z",
+      "hltbHours": 50.48
     },
     {
       "code": "VMq8v",
@@ -150242,7 +150249,8 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-01T06:56:29.382Z"
+      "entriesSnapshotAt": "2026-07-01T06:56:29.382Z",
+      "hltbHours": 64.62
     }
   ],
   "wins": [
