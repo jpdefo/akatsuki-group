@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Akatsuki SteamGifts Sync
 // @namespace    akatsuki-monitor
-// @version      1.11.0
+// @version      1.12.0
 // @author       Koalala
 // @description  Collect Akatsuki members, giveaways, entries and winners from the logged-in SteamGifts session and publish them straight to GitHub.
 // @match        https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts
@@ -24,6 +24,7 @@
   const GITHUB_TOKEN_HELP_URL = "https://github.com/settings/personal-access-tokens/new";
   const GITHUB_SYNC_PATH = "data/steamgifts-sync.json";
   const GITHUB_TOKEN_KEY = "akatsuki-github-token";
+  const PANEL_MINIMIZED_KEY = "akatsuki-panel-minimized";
   // Rate limiting (SteamGifts allows ~120 requests/min). We run at FULL SPEED by
   // default so small/typical syncs stay fast; only when we actually hit a 429 do
   // we start pacing every request and backing off. Very large scrapes are
@@ -69,6 +70,45 @@
     }
   }
 
+  function isPanelMinimized() {
+    try {
+      return localStorage.getItem(PANEL_MINIMIZED_KEY) === "1";
+    } catch {
+      return false;
+    }
+  }
+
+  function setPanelMinimized(minimized) {
+    try {
+      if (minimized) {
+        localStorage.setItem(PANEL_MINIMIZED_KEY, "1");
+      } else {
+        localStorage.removeItem(PANEL_MINIMIZED_KEY);
+      }
+    } catch {
+      /* ignore */
+    }
+  }
+
+  function applyPanelMinimized(minimized) {
+    const panel = state.panel;
+    if (!panel) {
+      return;
+    }
+    const body = panel.querySelector("#akatsuki-body");
+    const toggle = panel.querySelector("#akatsuki-minimize");
+    if (body) {
+      body.style.display = minimized ? "none" : "grid";
+    }
+    // Shrink to a compact header pill when minimized so it stays out of the way.
+    panel.style.width = minimized ? "auto" : "320px";
+    if (toggle) {
+      toggle.textContent = minimized ? "+" : "–";
+      toggle.title = minimized ? "Maximize" : "Minimize";
+      toggle.setAttribute("aria-label", minimized ? "Maximize" : "Minimize");
+    }
+  }
+
   addPanel();
 
   function addPanel() {
@@ -86,15 +126,20 @@
     panel.style.color = "#f4f7fb";
     panel.innerHTML = `
       <div style="display:grid;gap:8px;">
-        <strong>Akatsuki Sync</strong>
-        <div id="akatsuki-version" style="font-size:11px;line-height:1.4;color:#8b97a8;"></div>
-        <input id="akatsuki-token" type="password" placeholder="GitHub token (for direct publish)" style="border:1px solid rgba(110,168,254,.35);border-radius:8px;padding:8px;background:#0f1115;color:#f4f7fb;font:inherit;font-size:12px;" />
-        <a id="akatsuki-token-help" href="${GITHUB_TOKEN_HELP_URL}" target="_blank" rel="noopener" style="font-size:11px;color:#6ea8fe;text-decoration:underline;">Get a token (needs Contents: Read and write)</a>
-        <label style="font-size:12px;color:#c7d2e2;display:flex;align-items:center;gap:6px;">Recent pages to scrape
-          <input id="akatsuki-pages" type="number" min="1" value="10" style="width:64px;border:1px solid rgba(110,168,254,.35);border-radius:8px;padding:6px;background:#0f1115;color:#f4f7fb;font:inherit;font-size:12px;" />
-        </label>
-        <button id="akatsuki-publish-button" style="border:0;border-radius:10px;padding:10px 12px;background:#2ec36b;color:#06210f;font:inherit;font-weight:700;cursor:pointer;">Sync &amp; Publish to GitHub</button>
-        <div id="akatsuki-sync-log" style="font-size:12px;line-height:1.5;color:#c7d2e2;max-height:180px;overflow:auto;"></div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;">
+          <strong>Akatsuki Sync</strong>
+          <button id="akatsuki-minimize" type="button" title="Minimize" aria-label="Minimize" style="border:1px solid rgba(110,168,254,.35);border-radius:8px;width:24px;height:24px;line-height:1;padding:0;background:#0f1115;color:#f4f7fb;font:inherit;font-size:16px;font-weight:700;cursor:pointer;flex:0 0 auto;">–</button>
+        </div>
+        <div id="akatsuki-body" style="display:grid;gap:8px;">
+          <div id="akatsuki-version" style="font-size:11px;line-height:1.4;color:#8b97a8;"></div>
+          <input id="akatsuki-token" type="password" placeholder="GitHub token (for direct publish)" style="border:1px solid rgba(110,168,254,.35);border-radius:8px;padding:8px;background:#0f1115;color:#f4f7fb;font:inherit;font-size:12px;" />
+          <a id="akatsuki-token-help" href="${GITHUB_TOKEN_HELP_URL}" target="_blank" rel="noopener" style="font-size:11px;color:#6ea8fe;text-decoration:underline;">Get a token (needs Contents: Read and write)</a>
+          <label style="font-size:12px;color:#c7d2e2;display:flex;align-items:center;gap:6px;">Recent pages to scrape
+            <input id="akatsuki-pages" type="number" min="1" value="10" style="width:64px;border:1px solid rgba(110,168,254,.35);border-radius:8px;padding:6px;background:#0f1115;color:#f4f7fb;font:inherit;font-size:12px;" />
+          </label>
+          <button id="akatsuki-publish-button" style="border:0;border-radius:10px;padding:10px 12px;background:#2ec36b;color:#06210f;font:inherit;font-weight:700;cursor:pointer;">Sync &amp; Publish to GitHub</button>
+          <div id="akatsuki-sync-log" style="font-size:12px;line-height:1.5;color:#c7d2e2;max-height:180px;overflow:auto;"></div>
+        </div>
       </div>
     `;
     document.body.appendChild(panel);
@@ -104,6 +149,12 @@
     tokenInput.value = getStoredToken();
     tokenInput.addEventListener("change", () => setStoredToken(tokenInput.value.trim()));
     panel.querySelector("#akatsuki-publish-button").addEventListener("click", () => runSync());
+    panel.querySelector("#akatsuki-minimize").addEventListener("click", () => {
+      const next = !isPanelMinimized();
+      setPanelMinimized(next);
+      applyPanelMinimized(next);
+    });
+    applyPanelMinimized(isPanelMinimized());
     log("Ready. Paste a token and use 'Sync & Publish' to commit straight to GitHub.");
     renderVersionInfo();
   }
