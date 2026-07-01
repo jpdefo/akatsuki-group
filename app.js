@@ -5945,10 +5945,22 @@ function getEffectiveWinMonth(win) {
 // win's cycle month, but pushed forward to the game's release month when the
 // game releases later (e.g. a May giveaway for a game that releases in June is
 // tracked under June on the PoP page). Only games with a known later release
-// date are affected; everything else stays in its cycle month. The cycle
-// (lucky/unlucky) math keeps using getEffectiveWinMonth and is unaffected.
+// date are affected; everything else stays in its cycle month. Summer-event
+// wins are special-cased to always count under June (the event month) even when
+// gifted in July, unless the game is unreleased, in which case the release-month
+// push still applies. The cycle (lucky/unlucky) math keeps using
+// getEffectiveWinMonth and is unaffected.
 function getWinPlayMonth(win) {
-  const baseMonth = getEffectiveWinMonth(win);
+  let baseMonth = getEffectiveWinMonth(win);
+  // Summer-event wins all count under June for PoP requirements, even the ones
+  // gifted in July. A manual per-win monthOverride still wins; an unreleased
+  // game still moves forward to its release month (handled below).
+  if (!String(win?.monthOverride || "").trim() && getWinTrackKind(win) === "summer_event") {
+    const yearMatch = /^(\d{4})-\d{2}$/.exec(baseMonth);
+    if (yearMatch) {
+      baseMonth = `${yearMatch[1]}-06`;
+    }
+  }
   const game = findById("games", win.gameId);
   const releaseMonth = getReleaseMonthKey(getWinReleaseDate(win, game));
   return releaseMonth && releaseMonth > baseMonth ? releaseMonth : baseMonth;

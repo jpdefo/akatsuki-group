@@ -731,7 +731,16 @@ export function getEffectiveWinMonth(win, ctx) {
 }
 
 export function getWinPlayMonth(win, ctx) {
-  const baseMonth = getEffectiveWinMonth(win, ctx);
+  let baseMonth = getEffectiveWinMonth(win, ctx);
+  // Summer-event wins all count under June for PoP requirements, even the ones
+  // gifted in July. A manual per-win monthOverride still wins; an unreleased
+  // game still moves forward to its release month (handled below).
+  if (!String(win?.monthOverride || "").trim() && getWinTrackKind(win, ctx) === "summer_event") {
+    const yearMatch = /^(\d{4})-\d{2}$/.exec(baseMonth);
+    if (yearMatch) {
+      baseMonth = `${yearMatch[1]}-06`;
+    }
+  }
   const game = ctx?.gamesById?.get(win.gameId) || null;
   const releaseMonth = getReleaseMonthKey(getWinReleaseDate(win, game, ctx));
   return releaseMonth && releaseMonth > baseMonth ? releaseMonth : baseMonth;
