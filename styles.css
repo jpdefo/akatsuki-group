@@ -216,6 +216,26 @@ h2 {
   overflow: auto;
 }
 
+.penalty-list li {
+  margin-bottom: 8px;
+}
+
+.penalty-status {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--muted, #9fb0c6);
+  opacity: 0.85;
+}
+
+.penalty-description {
+  padding: 1px 6px;
+  border-radius: 6px;
+  background: rgba(148, 163, 184, 0.16);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
 .table-action-button {
   padding: 4px 12px;
   font-size: 0.82rem;

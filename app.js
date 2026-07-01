@@ -129,6 +129,7 @@ const elements = {
   recentGiveaways: document.querySelector("#recent-giveaways"),
   monthlyFilter: document.querySelector("#monthly-filter"),
   monthlyMemberFilter: document.querySelector("#monthly-member-filter"),
+  monthlyGameSearch: document.querySelector("#monthly-game-search"),
   monthlySort: document.querySelector("#monthly-sort"),
   monthlyProgressTable: document.querySelector("#monthly-progress-table"),
   penaltiesFilter: document.querySelector("#penalties-filter"),
@@ -315,6 +316,10 @@ function bindEvents() {
     void loadVisibleGameMedia({ silent: true });
   });
   elements.monthlySort?.addEventListener("change", () => renderProgressViews());
+  elements.monthlyGameSearch?.addEventListener("input", () => {
+    renderProgressViews();
+    void loadVisibleGameMedia({ silent: true });
+  });
   elements.cycleFilter?.addEventListener("change", () => renderCycleHistoryPage());
   elements.cycleGiveawayMonthFilter?.addEventListener("change", () => renderCycleHistoryPage());
   elements.cycleGiveawaySort?.addEventListener("change", () => renderCycleHistoryPage());
@@ -968,7 +973,14 @@ function buildPenaltiesOwedCard() {
     .map((debt) => {
       const name = String(debt.member?.name || "Unknown member");
       const gameTitle = String(debt.game?.title || debt.win.title || "a won game");
-      return `<li><strong>${escapeHtml(name)}</strong>: ${escapeHtml(gameTitle)} (due ${escapeHtml(formatPenaltyDeadline(debt.deadline))})</li>`;
+      const statusParts = buildPenaltyStatusParts(debt.win, debt.game);
+      const statusMarkup = statusParts.length
+        ? `<span class="penalty-status">${statusParts.map((part) => escapeHtml(part)).join(" · ")}</span>`
+        : `<span class="penalty-status">No playtime or achievement data synced yet.</span>`;
+      return `<li>
+        <strong>${escapeHtml(name)}</strong>: ${escapeHtml(gameTitle)} (due ${escapeHtml(formatPenaltyDeadline(debt.deadline))})
+        ${statusMarkup}
+      </li>`;
     })
     .join("");
   const more = debts.length > 15 ? `<li>+${debts.length - 15} more…</li>` : "";
@@ -977,10 +989,38 @@ function buildPenaltiesOwedCard() {
     <article class="member-card negative penalty-owed-card">
       ${buildBadge("danger", "Penalties owed")}
       <h3>${debts.length} penalt${debts.length === 1 ? "y" : "ies"} to pay</h3>
-      <span class="meta-line">Incomplete wins past their ${PENALTY_GRACE_MONTHS}-month deadline with no penalty giveaway attached. Create a "Penalty GA - &lt;won giveaway link&gt;" to settle.</span>
+      <span class="meta-line">Incomplete wins past their ${PENALTY_GRACE_MONTHS}-month deadline with no penalty giveaway attached. To settle, create a giveaway with this description: <code class="penalty-description">Penalty GA - &lt;won giveaway link&gt;</code></span>
       <ul class="penalty-list">${items}${more}</ul>
     </article>
   `;
+}
+
+// One-line "where the winner stands" summary for an owed penalty: how much
+// playtime and how many achievements they have versus the PoP threshold, plus
+// how far short they still are. Empty when the game has no HLTB/achievement data
+// to measure against.
+function buildPenaltyStatusParts(win, game) {
+  const progress = evaluateMonthlyProgress(win);
+  const resolvedGame = game || findById("games", win.gameId);
+  const currentHours = Number(win.currentHours || 0);
+  const requiredHours = Number(progress.requiredHours || 0);
+  const currentAchievements = Number(win.earnedAchievements || 0);
+  const requiredAchievements = Number(progress.requiredAchievements || 0);
+  const totalAchievements = getGameAchievementsTotal(resolvedGame);
+
+  const parts = [];
+  if (requiredHours > 0) {
+    const shortHours = Math.max(0, requiredHours - currentHours);
+    const suffix = shortHours > 0 ? ` (${formatHours(shortHours)} short)` : " (met)";
+    parts.push(`Playtime ${formatHours(currentHours)} / ${formatHours(requiredHours)} needed${suffix}`);
+  }
+  if (requiredAchievements > 0) {
+    const shortAchievements = Math.max(0, requiredAchievements - currentAchievements);
+    const total = totalAchievements ? ` of ${totalAchievements}` : "";
+    const suffix = shortAchievements > 0 ? ` (${shortAchievements} short)` : " (met)";
+    parts.push(`Achievements ${currentAchievements}${total} / ${requiredAchievements} needed${suffix}`);
+  }
+  return parts;
 }
 
 function renderRecentGiveaways() {
@@ -1030,6 +1070,11 @@ function renderProgressViews() {
       ? memberSelection
       : "all";
 
+  // Free-text game search lets you pull the same game across every winner (e.g.
+  // "who all played Elden Ring"). It's a valid scope on its own, so a search with
+  // Month = All months + All members surfaces every matching win.
+  const gameSearch = String(elements.monthlyGameSearch?.value || "").trim().toLowerCase();
+
   const monthlyWins = state.wins.filter((win) => {
     if (selectedMonth && selectedMonth !== "all" && getWinPlayMonth(win) !== selectedMonth) {
       return false;
@@ -1037,7 +1082,14 @@ function renderProgressViews() {
     if (selectedMember !== "all" && win.memberId !== selectedMember) {
       return false;
     }
-    return selectedMonth || selectedMember !== "all";
+    if (gameSearch) {
+      const game = findById("games", win.gameId);
+      const title = String(game?.title || win.title || "").toLowerCase();
+      if (!title.includes(gameSearch)) {
+        return false;
+      }
+    }
+    return Boolean(selectedMonth) || selectedMember !== "all" || Boolean(gameSearch);
   });
   const monthlyGiveaways = selectedMonth && selectedMonth !== "all" ? getGiveawaysForMonth(selectedMonth) : [];
   const period = selectedMonth && selectedMonth !== "all" ? getPeriodInfo(`${selectedMonth}-01`) : null;
