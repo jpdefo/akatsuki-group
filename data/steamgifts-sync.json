@@ -2251,7 +2251,8 @@
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2255370/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2255370/a392d8661820bce934b820dda268eb69e586b9d2/capsule_184x69.jpg",
       "startDate": "2026-06-02T15:16:10.000Z",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 7.84
     },
     {
       "code": "C1Flw",
@@ -4380,7 +4381,7 @@
     {
       "code": "LgQJ6",
       "url": "https://www.steamgifts.com/giveaway/LgQJ6/final-fantasy-tactics-the-ivalice-chronicles",
-      "title": "FINAL FANTASY TACTICS - The Ivalice C...",
+      "title": "FINAL FANTASY TACTICS - The Ivalice Chronicles",
       "creatorUsername": "Youdontknow",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Youdontknow",
       "appId": 1004640,
@@ -148871,7 +148872,8 @@
         "Wintermute101"
       ],
       "entriesFinalized": true,
-      "entriesSnapshotAt": "2026-07-01T18:09:43.547Z"
+      "entriesSnapshotAt": "2026-07-01T18:09:43.547Z",
+      "hltbHours": 35.46
     },
     {
       "code": "ocGj1",
@@ -149313,7 +149315,8 @@
         "leniu"
       ],
       "entriesFinalized": true,
-      "entriesSnapshotAt": "2026-07-01T18:09:41.340Z"
+      "entriesSnapshotAt": "2026-07-01T18:09:41.340Z",
+      "hltbHours": 12.31
     },
     {
       "code": "KbMux",
@@ -150382,7 +150385,8 @@
       "penaltyForCode": "",
       "giveawayKindChecked": true,
       "entriesFinalized": false,
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "hltbHours": 23.49
     }
   ],
   "wins": [

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-01T07:22:44.701531+00:00",
+  "updatedAt": "2026-07-02T07:02:25.511237+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2097,7 +2097,7 @@
       "username": "BojanNS987",
       "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
       "appId": 2023360,
-      "title": "The Last Case of Benedict Fox Definit...",
+      "title": "The Last Case of Benedict Fox Definitive Edition",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2023360/achievements/",
       "visible": true,
       "earnedAchievements": 12,
@@ -2540,6 +2540,40 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 16.47,
       "popThresholdMetAt": "2026-06-26T07:11:08.797425+00:00"
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 2668510,
+      "title": "Red Dead Redemption",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2668510/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 51,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 2677660,
+      "title": "Indiana Jones and the Great Circle",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2677660/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 55,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "BojanNS987",
@@ -5256,12 +5290,12 @@
       "earnedAchievements": 45,
       "totalAchievements": 281,
       "achievementPercent": 16,
-      "playtimeHours": 74.47,
+      "playtimeHours": 76.72,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 74.47,
+      "achievementsPlaytimeHours": 76.72,
       "popThresholdMetAt": "2026-06-26T07:11:08.797696+00:00"
     },
     {
@@ -9014,6 +9048,23 @@
     {
       "username": "chOOkity",
       "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
+      "appId": 2863640,
+      "title": "The Midnight Walk",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2863640/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 16,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "chOOkity",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
       "appId": 3156770,
       "title": "Witchfire",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/3156770/achievements/",
@@ -9114,6 +9165,23 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "achievementsPlaytimeHours": 1.03
+    },
+    {
+      "username": "chOOkity",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
+      "appId": 3920610,
+      "title": "FATAL FRAME II: Crimson Butterfly REMAKE",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/3920610/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 51,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "Drain",
@@ -10504,7 +10572,7 @@
       "username": "Drain",
       "steamProfile": "https://steamcommunity.com/profiles/76561197970556600",
       "appId": 2623190,
-      "title": "The Elder Scrolls IV: Oblivion Remast...",
+      "title": "The Elder Scrolls IV: Oblivion Remastered",
       "progressUrl": "https://steamcommunity.com/profiles/76561197970556600/stats/2623190/achievements/",
       "visible": true,
       "earnedAchievements": 9,
@@ -13932,6 +14000,23 @@
     {
       "username": "Ernesttico",
       "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
+      "appId": 3357650,
+      "title": "PRAGMATA",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/3357650/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 35,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "Ernesttico",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
       "appId": 3483740,
       "title": "Cast n Chill",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/3483740/achievements/",
@@ -13968,7 +14053,7 @@
       "username": "Ernesttico",
       "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
       "appId": 3527760,
-      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "title": "RoboCop: Rogue City - Unfinished Business",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/3527760/achievements/",
       "visible": true,
       "earnedAchievements": 4,
@@ -16124,6 +16209,23 @@
     {
       "username": "Horseflesh",
       "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 1649240,
+      "title": "Returnal",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/1649240/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 38,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
       "appId": 1669000,
       "title": "Age of Wonders 4",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/1669000/achievements/",
@@ -16796,7 +16898,7 @@
       "username": "Horseflesh",
       "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
       "appId": 3527760,
-      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "title": "RoboCop: Rogue City - Unfinished Business",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/3527760/achievements/",
       "visible": true,
       "earnedAchievements": 5,
@@ -18615,12 +18717,12 @@
       "earnedAchievements": 30,
       "totalAchievements": 62,
       "achievementPercent": 48,
-      "playtimeHours": 58.9,
+      "playtimeHours": 59.27,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 58.9,
+      "achievementsPlaytimeHours": 59.27,
       "popThresholdMetAt": "2026-06-26T07:11:08.799308+00:00"
     },
     {
@@ -20046,6 +20148,22 @@
       "error": null,
       "checkedAt": "2026-06-10T07:21:04.880685+00:00",
       "achievementsPlaytimeHours": 97.13
+    },
+    {
+      "username": "Koalala",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198065466175",
+      "appId": 2582320,
+      "title": "Mixtape",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/2582320/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "playtimeSource": "",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": "HTTP Error 403: Forbidden"
     },
     {
       "username": "Koalala",
@@ -25870,6 +25988,23 @@
     {
       "username": "leniu",
       "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
+      "appId": 2057760,
+      "title": "Esoteric Ebb",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2057760/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 56,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "leniu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
       "appId": 2058180,
       "title": "Judgment",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2058180/achievements/",
@@ -26292,6 +26427,23 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 17.82,
       "popThresholdMetAt": "2026-06-26T07:11:08.800233+00:00"
+    },
+    {
+      "username": "leniu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
+      "appId": 3280350,
+      "title": "DEATH STRANDING 2: ON THE BEACH",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/3280350/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 55,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "leniu",
@@ -28909,6 +29061,23 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "achievementsPlaytimeHours": 0.6
+    },
+    {
+      "username": "Saikania",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198262118401",
+      "appId": 1663850,
+      "title": "REPLACED",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/1663850/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 34,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "Saikania",
@@ -34251,6 +34420,23 @@
     {
       "username": "Wintermute101",
       "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
+      "appId": 2147380,
+      "title": "Heroes of Science and Fiction",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2147380/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 67,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "Wintermute101",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
       "appId": 2183900,
       "title": "Warhammer 40,000: Space Marine 2",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2183900/achievements/",
@@ -34322,7 +34508,7 @@
       "username": "Wintermute101",
       "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
       "appId": 2288350,
-      "title": "RAIDOU Remastered: The Mystery of the...",
+      "title": "RAIDOU Remastered: The Mystery of the Soulless Army",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2288350/achievements/",
       "visible": true,
       "earnedAchievements": 22,
@@ -34360,16 +34546,17 @@
       "appId": 2350790,
       "title": "Moonlighter 2: The Endless Vault",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2350790/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 3.58,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 12,
       "totalAchievements": 50,
-      "achievementPercent": 0,
+      "achievementPercent": 24,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 3.58,
+      "popThresholdMetAt": "2026-07-02T07:02:25.511035+00:00"
     },
     {
       "username": "Wintermute101",
@@ -34587,7 +34774,7 @@
       "username": "Wintermute101",
       "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
       "appId": 3527760,
-      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "title": "RoboCop: Rogue City - Unfinished Business",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3527760/achievements/",
       "visible": true,
       "earnedAchievements": 21,
@@ -36261,15 +36448,15 @@
       "title": "Planet of Lana II",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/2997230/achievements/",
       "visible": true,
-      "earnedAchievements": 15,
+      "earnedAchievements": 25,
       "totalAchievements": 25,
-      "achievementPercent": 60,
-      "playtimeHours": 6.03,
+      "achievementPercent": 100,
+      "playtimeHours": 8.95,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 6.03,
+      "achievementsPlaytimeHours": 8.95,
       "popThresholdMetAt": "2026-06-30T07:11:37.905083+00:00"
     },
     {
@@ -40047,7 +40234,7 @@
       "appId": 686060,
       "title": "Mewgenics",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/686060/achievements/",
-      "playtimeHours": 12.15,
+      "playtimeHours": 17.18,
       "visible": true,
       "earnedAchievements": 51,
       "totalAchievements": 281,
@@ -40056,7 +40243,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 12.15
+      "achievementsPlaytimeHours": 17.18
     },
     {
       "username": "zettaivanugen",
@@ -41160,6 +41347,23 @@
     {
       "username": "zettaivanugen",
       "steamProfile": "https://steamcommunity.com/profiles/76561197975039366",
+      "appId": 2057760,
+      "title": "Esoteric Ebb",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/2057760/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 56,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "zettaivanugen",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197975039366",
       "appId": 2075240,
       "title": "Baby Shark: Sing & Swim Party",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/2075240/achievements/",
@@ -41207,6 +41411,23 @@
       "gamesVisible": true,
       "error": null,
       "achievementsPlaytimeHours": 0.05
+    },
+    {
+      "username": "zettaivanugen",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197975039366",
+      "appId": 2255370,
+      "title": "Directive 8020",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/2255370/achievements/",
+      "playtimeHours": 0.03,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 30,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.03
     },
     {
       "username": "zettaivanugen",
@@ -41320,16 +41541,16 @@
       "appId": 2678080,
       "title": "Tides of Tomorrow 🌊",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/2678080/achievements/",
-      "playtimeHours": 0.47,
+      "playtimeHours": 1.77,
       "visible": true,
-      "earnedAchievements": 1,
+      "earnedAchievements": 5,
       "totalAchievements": 39,
-      "achievementPercent": 3,
+      "achievementPercent": 13,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.47
+      "achievementsPlaytimeHours": 1.77
     },
     {
       "username": "zettaivanugen",
@@ -41449,6 +41670,13 @@
       "hltbHours": 0.0,
       "matchedTitle": "Huntdown: Overtime",
       "url": "https://howlongtobeat.com/game/181324"
+    },
+    {
+      "title": "Directive 8020",
+      "appId": 2255370,
+      "hltbHours": 7.84,
+      "matchedTitle": "Directive 8020",
+      "url": "https://howlongtobeat.com/game/116632"
     },
     {
       "title": "MOUSE: P.I. For Hire",
@@ -69136,6 +69364,13 @@
       "url": "https://howlongtobeat.com/game/152017"
     },
     {
+      "title": "DEATH STRANDING 2: ON THE BEACH",
+      "appId": 3280350,
+      "hltbHours": 35.46,
+      "matchedTitle": "Death Stranding 2: On The Beach",
+      "url": "https://howlongtobeat.com/game/118225"
+    },
+    {
       "title": "Red Dead Redemption",
       "appId": 2668510,
       "hltbHours": 17.6,
@@ -69213,6 +69448,13 @@
       "url": "https://howlongtobeat.com/game/162457"
     },
     {
+      "title": "FATAL FRAME II: Crimson Butterfly REMAKE",
+      "appId": 3920610,
+      "hltbHours": 12.31,
+      "matchedTitle": "Fatal Frame II: Crimson Butterfly Remake",
+      "url": "https://howlongtobeat.com/game/174356"
+    },
+    {
       "title": "FINAL FANTASY VII REBIRTH",
       "appId": 2909400,
       "hltbHours": 48.33,
@@ -69239,6 +69481,13 @@
       "hltbHours": 18.06,
       "matchedTitle": "Monster Hunter Wilds",
       "url": "https://howlongtobeat.com/game/141854"
+    },
+    {
+      "title": "Heroes of Science and Fiction",
+      "appId": 2147380,
+      "hltbHours": 0.0,
+      "matchedTitle": "Heroes of Science and Fiction",
+      "url": "https://howlongtobeat.com/game/188179"
     },
     {
       "title": "METAL GEAR SOLID Δ: SNAKE EATER",
@@ -69393,32 +69642,39 @@
       "hltbHours": 64.62,
       "matchedTitle": "Persona 3 Reload",
       "url": "https://howlongtobeat.com/game/129805"
+    },
+    {
+      "title": "Rise of the Ronin",
+      "appId": 1340990,
+      "hltbHours": 23.49,
+      "matchedTitle": "Rise of the Ronin",
+      "url": "https://howlongtobeat.com/game/113548"
     }
   ],
   "steamApiEnabled": true,
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-07-01T07:21:37.432407+00:00",
+  "libraryUpdatedAt": "2026-07-02T07:01:13.833405+00:00",
   "libraryStats": {
-    "durationSeconds": 4.89,
+    "durationSeconds": 9.84,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 13903
+    "totalPlaytimeRows": 13917
   },
   "stats": {
-    "durationSeconds": 72.17,
-    "targetWins": 2317,
-    "uniqueProgressTargets": 2313,
-    "libraryPlaytimeHits": 2259,
-    "cachedReuses": 2192,
-    "achievementSuccesses": 21,
-    "achievementErrors": 100,
-    "cachedFallbacks": 94,
-    "hltbTitlesRequested": 1269,
-    "hltbResultsAvailable": 3994
+    "durationSeconds": 81.53,
+    "targetWins": 2328,
+    "uniqueProgressTargets": 2324,
+    "libraryPlaytimeHits": 2271,
+    "cachedReuses": 2203,
+    "achievementSuccesses": 22,
+    "achievementErrors": 99,
+    "cachedFallbacks": 98,
+    "hltbTitlesRequested": 1270,
+    "hltbResultsAvailable": 3999
   }
 }
