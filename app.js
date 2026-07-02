@@ -1063,7 +1063,9 @@ function renderProgressViews() {
 
   const monthSelection = elements.monthlyFilter.value;
   const selectedMonth =
-    monthSelection === "all" || months.includes(monthSelection) ? monthSelection : months[0] || "";
+    monthSelection === "all" || months.includes(monthSelection)
+      ? monthSelection
+      : getDefaultProgressMonth(months);
   const memberSelection = elements.monthlyMemberFilter?.value || "all";
   const selectedMember =
     memberSelection !== "all" && filterMembers.some((member) => member.id === memberSelection)
@@ -6683,6 +6685,19 @@ function getAvailableMonths() {
   )
     .sort()
     .reverse();
+}
+
+// PoP defaults to the previous calendar month (e.g. in July, June is selected),
+// since the current month's wins are usually still in progress. Falls back to the
+// most recent month with data when the previous month has no wins yet.
+function getDefaultProgressMonth(months) {
+  const now = new Date();
+  const previous = new Date(now.getFullYear(), now.getMonth() - 1, 1);
+  const previousKey = `${previous.getFullYear()}-${String(previous.getMonth() + 1).padStart(2, "0")}`;
+  if (months.includes(previousKey)) {
+    return previousKey;
+  }
+  return months[0] || "";
 }
 
 function compareMemberBucketRows(left, right, sortMode) {
