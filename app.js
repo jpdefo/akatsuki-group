@@ -6676,6 +6676,12 @@ function buildMessageRow(colspan, title, description) {
 }
 
 function getAvailableMonths() {
+  // Unreleased-game wins get a play month pushed forward to their release month
+  // (see getWinPlayMonth), which would otherwise surface future months/cycles in
+  // the pickers before they've actually arrived. Cap the selectable range at the
+  // current month, matching getRenderableCycleMonths. Those wins reappear on their
+  // own once their release month becomes the current month.
+  const currentMonth = monthKey(state.settings.currentDate || "");
   return Array.from(
     new Set([
       ...state.wins.map((win) => getEffectiveWinMonth(win)).filter(Boolean),
@@ -6683,6 +6689,7 @@ function getAvailableMonths() {
       ...state.giveaways.map((giveaway) => getGiveawayMonth(giveaway)).filter(Boolean),
     ]),
   )
+    .filter((month) => !currentMonth || month <= currentMonth)
     .sort()
     .reverse();
 }
