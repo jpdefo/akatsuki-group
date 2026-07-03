@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-02T07:02:25.511237+00:00",
+  "updatedAt": "2026-07-03T08:44:20.361464+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2097,7 +2097,7 @@
       "username": "BojanNS987",
       "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
       "appId": 2023360,
-      "title": "The Last Case of Benedict Fox Definitive Edition",
+      "title": "The Last Case of Benedict Fox Definit...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2023360/achievements/",
       "visible": true,
       "earnedAchievements": 12,
@@ -2273,6 +2273,23 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "achievementsPlaytimeHours": 5.32
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 2246340,
+      "title": "Monster Hunter Wilds",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2246340/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 50,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "BojanNS987",
@@ -2663,6 +2680,23 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "achievementsPlaytimeHours": 2.75
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 2821610,
+      "title": "Echoes of the End: Enhanced Edition",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2821610/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 45,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "BojanNS987",
@@ -5290,12 +5324,12 @@
       "earnedAchievements": 45,
       "totalAchievements": 281,
       "achievementPercent": 16,
-      "playtimeHours": 76.72,
+      "playtimeHours": 78.07,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 76.72,
+      "achievementsPlaytimeHours": 78.07,
       "popThresholdMetAt": "2026-06-26T07:11:08.797696+00:00"
     },
     {
@@ -6826,6 +6860,23 @@
     {
       "username": "burntreynolds444",
       "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 3321460,
+      "title": "Crimson Desert",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 34,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
       "appId": 3337140,
       "title": "After Inc: Revival",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3337140/achievements/",
@@ -8228,6 +8279,23 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 14.98,
       "popThresholdMetAt": "2026-06-26T07:11:08.798075+00:00"
+    },
+    {
+      "username": "chOOkity",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
+      "appId": 1590230,
+      "title": "Tyrion Cuthbert: Attorney of the Arcane",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/1590230/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 8,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "chOOkity",
@@ -10572,7 +10640,7 @@
       "username": "Drain",
       "steamProfile": "https://steamcommunity.com/profiles/76561197970556600",
       "appId": 2623190,
-      "title": "The Elder Scrolls IV: Oblivion Remastered",
+      "title": "The Elder Scrolls IV: Oblivion Remast...",
       "progressUrl": "https://steamcommunity.com/profiles/76561197970556600/stats/2623190/achievements/",
       "visible": true,
       "earnedAchievements": 9,
@@ -14053,7 +14121,7 @@
       "username": "Ernesttico",
       "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
       "appId": 3527760,
-      "title": "RoboCop: Rogue City - Unfinished Business",
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/3527760/achievements/",
       "visible": true,
       "earnedAchievements": 4,
@@ -16898,7 +16966,7 @@
       "username": "Horseflesh",
       "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
       "appId": 3527760,
-      "title": "RoboCop: Rogue City - Unfinished Business",
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/3527760/achievements/",
       "visible": true,
       "earnedAchievements": 5,
@@ -26062,15 +26130,15 @@
       "title": "Total Chaos",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2208350/achievements/",
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 7,
       "totalAchievements": 37,
-      "achievementPercent": 0,
-      "playtimeHours": 0.0,
+      "achievementPercent": 19,
+      "playtimeHours": 2.03,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 2.03
     },
     {
       "username": "leniu",
@@ -26338,6 +26406,22 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 60.33,
       "popThresholdMetAt": "2026-06-26T07:11:08.800221+00:00"
+    },
+    {
+      "username": "leniu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
+      "appId": 2713000,
+      "title": "Resonance: A Plague Tale Legacy",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2713000/achievements/",
+      "playtimeHours": 0.0,
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": "HTTP Error 403: Forbidden"
     },
     {
       "username": "leniu",
@@ -27347,6 +27431,23 @@
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 45,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "Millsshogun",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198075996214",
+      "appId": 3681010,
+      "title": "Nioh 3",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/3681010/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 51,
       "achievementPercent": 0,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -32469,6 +32570,22 @@
     {
       "username": "Thedogma",
       "steamProfile": "https://steamcommunity.com/profiles/76561198011705129",
+      "appId": 785847,
+      "title": "LEGO Star Wars: The Skywalker Saga Ga...",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198011705129/stats/785847/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "playtimeSource": "",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "username": "Thedogma",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198011705129",
       "appId": 1030300,
       "title": "Hollow Knight: Silksong",
       "progressUrl": "https://steamcommunity.com/profiles/76561198011705129/stats/1030300/achievements/",
@@ -34348,6 +34465,22 @@
     {
       "username": "Wintermute101",
       "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
+      "appId": 1962700,
+      "title": "Subnautica 2",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/1962700/achievements/",
+      "playtimeHours": 0.28,
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "username": "Wintermute101",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
       "appId": 1971870,
       "title": "Mortal Kombat 1",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/1971870/achievements/",
@@ -34423,16 +34556,16 @@
       "appId": 2147380,
       "title": "Heroes of Science and Fiction",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2147380/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 2.45,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 11,
       "totalAchievements": 67,
-      "achievementPercent": 0,
+      "achievementPercent": 16,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 2.45
     },
     {
       "username": "Wintermute101",
@@ -34508,7 +34641,7 @@
       "username": "Wintermute101",
       "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
       "appId": 2288350,
-      "title": "RAIDOU Remastered: The Mystery of the Soulless Army",
+      "title": "RAIDOU Remastered: The Mystery of the...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2288350/achievements/",
       "visible": true,
       "earnedAchievements": 22,
@@ -34546,16 +34679,16 @@
       "appId": 2350790,
       "title": "Moonlighter 2: The Endless Vault",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2350790/achievements/",
-      "playtimeHours": 3.58,
+      "playtimeHours": 7.38,
       "visible": true,
-      "earnedAchievements": 12,
+      "earnedAchievements": 21,
       "totalAchievements": 50,
-      "achievementPercent": 24,
+      "achievementPercent": 42,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 3.58,
+      "achievementsPlaytimeHours": 7.38,
       "popThresholdMetAt": "2026-07-02T07:02:25.511035+00:00"
     },
     {
@@ -34575,6 +34708,23 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 10.58,
       "popThresholdMetAt": "2026-06-26T07:11:08.801181+00:00"
+    },
+    {
+      "username": "Wintermute101",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
+      "appId": 2417610,
+      "title": "METAL GEAR SOLID Δ: SNAKE EATER",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2417610/achievements/",
+      "playtimeHours": 1.5,
+      "visible": true,
+      "earnedAchievements": 8,
+      "totalAchievements": 45,
+      "achievementPercent": 18,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 1.5
     },
     {
       "username": "Wintermute101",
@@ -34774,7 +34924,7 @@
       "username": "Wintermute101",
       "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
       "appId": 3527760,
-      "title": "RoboCop: Rogue City - Unfinished Business",
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3527760/achievements/",
       "visible": true,
       "earnedAchievements": 21,
@@ -34787,6 +34937,22 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 11.85,
       "popThresholdMetAt": "2026-06-30T07:11:37.905045+00:00"
+    },
+    {
+      "username": "Wintermute101",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
+      "appId": 3669870,
+      "title": "CONTROL Resonant",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3669870/achievements/",
+      "playtimeHours": 0.0,
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": "HTTP Error 403: Forbidden"
     },
     {
       "username": "WNDRLST",
@@ -39312,6 +39478,23 @@
     {
       "username": "Youdontknow",
       "steamProfile": "https://steamcommunity.com/profiles/76561198121640255",
+      "appId": 2401970,
+      "title": "Ace Attorney Investigations Collection",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198121640255/stats/2401970/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 30,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "Youdontknow",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198121640255",
       "appId": 2420110,
       "title": "Horizon Forbidden West Complete Edition",
       "progressUrl": "https://steamcommunity.com/profiles/76561198121640255/stats/2420110/achievements/",
@@ -39451,6 +39634,23 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 19.3,
       "popThresholdMetAt": "2026-06-26T07:11:08.801745+00:00"
+    },
+    {
+      "username": "Youdontknow",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198121640255",
+      "appId": 2863680,
+      "title": "ZERO PARADES: For Dead Spies",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198121640255/stats/2863680/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 55,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "Youdontknow",
@@ -41350,7 +41550,7 @@
       "appId": 2057760,
       "title": "Esoteric Ebb",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/2057760/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 0.02,
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 56,
@@ -41359,7 +41559,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 0.02
     },
     {
       "username": "zettaivanugen",
@@ -41541,16 +41741,16 @@
       "appId": 2678080,
       "title": "Tides of Tomorrow 🌊",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/2678080/achievements/",
-      "playtimeHours": 1.77,
+      "playtimeHours": 3.68,
       "visible": true,
-      "earnedAchievements": 5,
+      "earnedAchievements": 10,
       "totalAchievements": 39,
-      "achievementPercent": 13,
+      "achievementPercent": 26,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.77
+      "achievementsPlaytimeHours": 3.68
     },
     {
       "username": "zettaivanugen",
@@ -69273,6 +69473,20 @@
       "url": "https://howlongtobeat.com/game/176192"
     },
     {
+      "title": "CONTROL Resonant",
+      "appId": 3669870,
+      "hltbHours": 0.0,
+      "matchedTitle": "Control: Resonant",
+      "url": "https://howlongtobeat.com/game/116190"
+    },
+    {
+      "title": "Resonance: A Plague Tale Legacy",
+      "appId": 2713000,
+      "hltbHours": 0.0,
+      "matchedTitle": "Resonance: A Plague Tale Legacy",
+      "url": "https://howlongtobeat.com/game/169336"
+    },
+    {
       "title": "Dying Light: The Beast",
       "appId": 3008130,
       "hltbHours": 18.46,
@@ -69434,6 +69648,13 @@
       "url": "https://howlongtobeat.com/game/152373"
     },
     {
+      "title": "CONTROL Resonant",
+      "appId": 3669870,
+      "hltbHours": 0.0,
+      "matchedTitle": "Control: Resonant",
+      "url": "https://howlongtobeat.com/game/116190"
+    },
+    {
       "title": "Moons Of Darsalon",
       "appId": 1234180,
       "hltbHours": 8.83,
@@ -69476,6 +69697,13 @@
       "url": "https://howlongtobeat.com/game/82090"
     },
     {
+      "title": "Tyrion Cuthbert: Attorney of the Arcane",
+      "appId": 1590230,
+      "hltbHours": 15.32,
+      "matchedTitle": "Tyrion Cuthbert: Attorney of the Arcane",
+      "url": "https://howlongtobeat.com/game/100667"
+    },
+    {
       "title": "Monster Hunter Wilds",
       "appId": 2246340,
       "hltbHours": 18.06,
@@ -69490,11 +69718,25 @@
       "url": "https://howlongtobeat.com/game/188179"
     },
     {
+      "title": "Echoes of the End: Enhanced Edition",
+      "appId": 2821610,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
       "title": "METAL GEAR SOLID Δ: SNAKE EATER",
       "appId": 2417610,
       "hltbHours": 12.18,
       "matchedTitle": "Metal Gear Solid Δ: Snake Eater",
       "url": "https://howlongtobeat.com/game/129234"
+    },
+    {
+      "title": "Nioh 3",
+      "appId": 3681010,
+      "hltbHours": 27.08,
+      "matchedTitle": "Nioh 3",
+      "url": "https://howlongtobeat.com/game/169134"
     },
     {
       "title": "Hollow Knight: Silksong",
@@ -69649,32 +69891,67 @@
       "hltbHours": 23.49,
       "matchedTitle": "Rise of the Ronin",
       "url": "https://howlongtobeat.com/game/113548"
+    },
+    {
+      "title": "Gears of War: E-Day",
+      "appId": 3010850,
+      "hltbHours": 0.0,
+      "matchedTitle": "Gears of War: E-Day",
+      "url": "https://howlongtobeat.com/game/152017"
+    },
+    {
+      "title": "METAL GEAR SOLID Δ: SNAKE EATER",
+      "appId": 2417610,
+      "hltbHours": 12.18,
+      "matchedTitle": "Metal Gear Solid Δ: Snake Eater",
+      "url": "https://howlongtobeat.com/game/129234"
+    },
+    {
+      "title": "Subnautica 2",
+      "appId": 1962700,
+      "hltbHours": 13.11,
+      "matchedTitle": "Subnautica 2",
+      "url": "https://howlongtobeat.com/game/158248"
+    },
+    {
+      "title": "Until Dawn",
+      "appId": 2172010,
+      "hltbHours": 8.02,
+      "matchedTitle": "Until Dawn",
+      "url": "https://howlongtobeat.com/game/21924"
+    },
+    {
+      "title": "Total Chaos",
+      "appId": 2208350,
+      "hltbHours": 10.77,
+      "matchedTitle": "Total Chaos",
+      "url": "https://howlongtobeat.com/game/166129"
     }
   ],
   "steamApiEnabled": true,
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-07-02T07:01:13.833405+00:00",
+  "libraryUpdatedAt": "2026-07-03T08:43:02.271444+00:00",
   "libraryStats": {
-    "durationSeconds": 9.84,
+    "durationSeconds": 6.45,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 13917
+    "totalPlaytimeRows": 13927
   },
   "stats": {
-    "durationSeconds": 81.53,
-    "targetWins": 2328,
-    "uniqueProgressTargets": 2324,
-    "libraryPlaytimeHits": 2271,
-    "cachedReuses": 2203,
-    "achievementSuccesses": 22,
-    "achievementErrors": 99,
-    "cachedFallbacks": 98,
-    "hltbTitlesRequested": 1270,
-    "hltbResultsAvailable": 3999
+    "durationSeconds": 84.55,
+    "targetWins": 2340,
+    "uniqueProgressTargets": 2336,
+    "libraryPlaytimeHits": 2282,
+    "cachedReuses": 2215,
+    "achievementSuccesses": 18,
+    "achievementErrors": 103,
+    "cachedFallbacks": 99,
+    "hltbTitlesRequested": 1277,
+    "hltbResultsAvailable": 4010
   }
 }

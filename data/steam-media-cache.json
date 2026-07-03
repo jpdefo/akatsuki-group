@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-02T07:01:03.802315+00:00",
+  "updatedAt": "2026-07-03T08:42:55.629222+00:00",
   "apps": {
     "3288210": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3288210/2e13226847bb546625411aed75e74471f6705b18/header.jpg?t=1777969480",
@@ -5134,6 +5134,46 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1778840/eecfe8354f968525e4f5be05c3b9fa76c5dcd691/capsule_231x87.jpg?t=1779285914",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1778840/eecfe8354f968525e4f5be05c3b9fa76c5dcd691/capsule_184x69.jpg?t=1779285914",
       "releaseDate": "2025-05-08",
+      "comingSoon": false
+    },
+    "1699230": {
+      "name": "Hail to the Rainbow",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1699230/e61c0c1c23e8b9aca7447acac3bc7817de8f9b0e/header.jpg?t=1773773369",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1699230/9e764d97b5793e6556d78e51b6f1e552e1eec5a5/capsule_231x87.jpg?t=1773773369",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1699230/9e764d97b5793e6556d78e51b6f1e552e1eec5a5/capsule_184x69.jpg?t=1773773369",
+      "releaseDate": "2025-11-27",
+      "comingSoon": false
+    },
+    "1823990": {
+      "name": "Gravelord",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1823990/header.jpg?t=1779382679",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1823990/9c1cb6ff1dc38076125bc2d4cc5c807e9dafc750/capsule_231x87.jpg?t=1779382679",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1823990/9c1cb6ff1dc38076125bc2d4cc5c807e9dafc750/capsule_184x69.jpg?t=1779382679",
+      "releaseDate": "2026-05-21",
+      "comingSoon": false
+    },
+    "1933000": {
+      "name": "Luna Abyss",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1933000/f74b90a7b96939239b52090220fca1b50d1aaf9b/header.jpg?t=1779870125",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1933000/3160a681955ff6f1b80fd681a9207fdcd2907a03/capsule_231x87.jpg?t=1779870125",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1933000/3160a681955ff6f1b80fd681a9207fdcd2907a03/capsule_184x69.jpg?t=1779870125",
+      "releaseDate": "2026-05-21",
+      "comingSoon": false
+    },
+    "2091020": {
+      "name": "Blades of Fire",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2091020/93a6cdd9e770fcfbc50272de78c1e48f0cfe47e3/header.jpg?t=1780405214",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2091020/9434ece4a406d804a5f945994a4048e76bf9d0cd/capsule_231x87.jpg?t=1780405214",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2091020/9434ece4a406d804a5f945994a4048e76bf9d0cd/capsule_184x69.jpg?t=1780405214",
+      "releaseDate": "2026-05-14",
+      "comingSoon": false
+    },
+    "2414270": {
+      "name": "Sunderfolk",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2414270/60848b3f16ca1c6ab1dadf7ede3b8aa69524fc51/header.jpg?t=1782407626",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2414270/60c0c3f09f2e84a5b66b31faf8e488fbf1890480/capsule_231x87.jpg?t=1782407626",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2414270/60c0c3f09f2e84a5b66b31faf8e488fbf1890480/capsule_184x69.jpg?t=1782407626",
+      "releaseDate": "2025-04-23",
       "comingSoon": false
     }
   }
