@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-03T08:44:20.361464+00:00",
+  "updatedAt": "2026-07-04T08:18:24.287115+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2097,7 +2097,7 @@
       "username": "BojanNS987",
       "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
       "appId": 2023360,
-      "title": "The Last Case of Benedict Fox Definit...",
+      "title": "The Last Case of Benedict Fox Definitive Edition",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2023360/achievements/",
       "visible": true,
       "earnedAchievements": 12,
@@ -8141,6 +8141,23 @@
     {
       "username": "chOOkity",
       "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
+      "appId": 1491410,
+      "title": "Eternal Strands",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/1491410/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 44,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "chOOkity",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
       "appId": 1493640,
       "title": "Banishers: Ghosts of New Eden",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/1493640/achievements/",
@@ -14004,15 +14021,16 @@
       "appId": 2842040,
       "title": "Star Wars Outlaws",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/2842040/achievements/",
-      "visible": false,
+      "visible": true,
       "earnedAchievements": 0,
-      "totalAchievements": 0,
+      "totalAchievements": 59,
       "achievementPercent": 0,
-      "playtimeHours": null,
-      "playtimeSource": "",
+      "playtimeHours": 0.0,
+      "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "error": "HTTP Error 403: Forbidden"
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "Ernesttico",
@@ -16255,6 +16273,23 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "achievementsPlaytimeHours": 6.53
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 1620730,
+      "title": "Hell is Us",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/1620730/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 40,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "Horseflesh",
@@ -20223,15 +20258,16 @@
       "appId": 2582320,
       "title": "Mixtape",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/2582320/achievements/",
-      "visible": false,
+      "visible": true,
       "earnedAchievements": 0,
-      "totalAchievements": 0,
+      "totalAchievements": 26,
       "achievementPercent": 0,
-      "playtimeHours": null,
-      "playtimeSource": "",
+      "playtimeHours": 0.0,
+      "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "error": "HTTP Error 403: Forbidden"
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "Koalala",
@@ -20390,6 +20426,22 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 6.98,
       "popThresholdMetAt": "2026-06-26T07:11:08.799493+00:00"
+    },
+    {
+      "username": "Koalala",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198065466175",
+      "appId": 3259780,
+      "title": "FINAL FANTASY RESONANCE",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/3259780/achievements/",
+      "playtimeHours": 0.0,
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": "HTTP Error 403: Forbidden"
     },
     {
       "username": "Koalala",
@@ -26130,15 +26182,16 @@
       "title": "Total Chaos",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2208350/achievements/",
       "visible": true,
-      "earnedAchievements": 7,
+      "earnedAchievements": 17,
       "totalAchievements": 37,
-      "achievementPercent": 19,
-      "playtimeHours": 2.03,
+      "achievementPercent": 46,
+      "playtimeHours": 5.67,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 2.03
+      "achievementsPlaytimeHours": 5.67,
+      "popThresholdMetAt": "2026-07-04T08:18:24.286662+00:00"
     },
     {
       "username": "leniu",
@@ -29169,16 +29222,16 @@
       "appId": 1663850,
       "title": "REPLACED",
       "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/1663850/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 1.6,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 2,
       "totalAchievements": 34,
-      "achievementPercent": 0,
+      "achievementPercent": 6,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 1.6
     },
     {
       "username": "Saikania",
@@ -34468,7 +34521,7 @@
       "appId": 1962700,
       "title": "Subnautica 2",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/1962700/achievements/",
-      "playtimeHours": 0.28,
+      "playtimeHours": 4.85,
       "visible": false,
       "earnedAchievements": 0,
       "totalAchievements": 0,
@@ -34476,7 +34529,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "error": "HTTP Error 400: Bad Request"
+      "error": "HTTP Error 400: Bad Request",
+      "popThresholdMetAt": "2026-07-04T08:18:24.286898+00:00"
     },
     {
       "username": "Wintermute101",
@@ -34556,16 +34610,16 @@
       "appId": 2147380,
       "title": "Heroes of Science and Fiction",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2147380/achievements/",
-      "playtimeHours": 2.45,
+      "playtimeHours": 3.05,
       "visible": true,
-      "earnedAchievements": 11,
+      "earnedAchievements": 13,
       "totalAchievements": 67,
-      "achievementPercent": 16,
+      "achievementPercent": 19,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.45
+      "achievementsPlaytimeHours": 3.05
     },
     {
       "username": "Wintermute101",
@@ -34679,16 +34733,16 @@
       "appId": 2350790,
       "title": "Moonlighter 2: The Endless Vault",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2350790/achievements/",
-      "playtimeHours": 7.38,
+      "playtimeHours": 9.05,
       "visible": true,
-      "earnedAchievements": 21,
+      "earnedAchievements": 24,
       "totalAchievements": 50,
-      "achievementPercent": 42,
+      "achievementPercent": 48,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 7.38,
+      "achievementsPlaytimeHours": 9.05,
       "popThresholdMetAt": "2026-07-02T07:02:25.511035+00:00"
     },
     {
@@ -34715,16 +34769,17 @@
       "appId": 2417610,
       "title": "METAL GEAR SOLID Δ: SNAKE EATER",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2417610/achievements/",
-      "playtimeHours": 1.5,
+      "playtimeHours": 3.75,
       "visible": true,
-      "earnedAchievements": 8,
+      "earnedAchievements": 11,
       "totalAchievements": 45,
-      "achievementPercent": 18,
+      "achievementPercent": 24,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.5
+      "achievementsPlaytimeHours": 3.75,
+      "popThresholdMetAt": "2026-07-04T08:18:24.286908+00:00"
     },
     {
       "username": "Wintermute101",
@@ -41550,16 +41605,16 @@
       "appId": 2057760,
       "title": "Esoteric Ebb",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/2057760/achievements/",
-      "playtimeHours": 0.02,
+      "playtimeHours": 2.35,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 5,
       "totalAchievements": 56,
-      "achievementPercent": 0,
+      "achievementPercent": 9,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.02
+      "achievementsPlaytimeHours": 2.35
     },
     {
       "username": "zettaivanugen",
@@ -69487,6 +69542,13 @@
       "url": "https://howlongtobeat.com/game/169336"
     },
     {
+      "title": "FINAL FANTASY RESONANCE",
+      "appId": 3259780,
+      "hltbHours": 0.0,
+      "matchedTitle": "Final Fantasy Resonance",
+      "url": "https://howlongtobeat.com/game/187293"
+    },
+    {
       "title": "Dying Light: The Beast",
       "appId": 3008130,
       "hltbHours": 18.46,
@@ -69926,32 +69988,46 @@
       "hltbHours": 10.77,
       "matchedTitle": "Total Chaos",
       "url": "https://howlongtobeat.com/game/166129"
+    },
+    {
+      "title": "The Stone of Madness",
+      "appId": 1309710,
+      "hltbHours": 26.27,
+      "matchedTitle": "The Stone of Madness",
+      "url": "https://howlongtobeat.com/game/124067"
+    },
+    {
+      "title": "Crimson Desert",
+      "appId": 3321460,
+      "hltbHours": 62.73,
+      "matchedTitle": "Crimson Desert",
+      "url": "https://howlongtobeat.com/game/94122"
     }
   ],
   "steamApiEnabled": true,
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-07-03T08:43:02.271444+00:00",
+  "libraryUpdatedAt": "2026-07-04T08:17:20.322163+00:00",
   "libraryStats": {
-    "durationSeconds": 6.45,
+    "durationSeconds": 8.81,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 13927
+    "totalPlaytimeRows": 13933
   },
   "stats": {
-    "durationSeconds": 84.55,
-    "targetWins": 2340,
-    "uniqueProgressTargets": 2336,
-    "libraryPlaytimeHits": 2282,
-    "cachedReuses": 2215,
-    "achievementSuccesses": 18,
+    "durationSeconds": 72.78,
+    "targetWins": 2344,
+    "uniqueProgressTargets": 2340,
+    "libraryPlaytimeHits": 2287,
+    "cachedReuses": 2223,
+    "achievementSuccesses": 14,
     "achievementErrors": 103,
-    "cachedFallbacks": 99,
-    "hltbTitlesRequested": 1277,
-    "hltbResultsAvailable": 4010
+    "cachedFallbacks": 102,
+    "hltbTitlesRequested": 1279,
+    "hltbResultsAvailable": 4013
   }
 }
