@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-03T08:42:55.629222+00:00",
+  "updatedAt": "2026-07-05T08:35:51.404735+00:00",
   "apps": {
     "3288210": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3288210/2e13226847bb546625411aed75e74471f6705b18/header.jpg?t=1777969480",
@@ -5174,6 +5174,30 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2414270/60c0c3f09f2e84a5b66b31faf8e488fbf1890480/capsule_231x87.jpg?t=1782407626",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2414270/60c0c3f09f2e84a5b66b31faf8e488fbf1890480/capsule_184x69.jpg?t=1782407626",
       "releaseDate": "2025-04-23",
+      "comingSoon": false
+    },
+    "2369390": {
+      "name": "Far Cry® 6",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2369390/64af0c6b70ef233bbdff1e5ffe0e397481efb3c9/header.jpg?t=1781619334",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2369390/0155dcf6a44343b85e682b48648d95716f92a5c6/capsule_231x87.jpg?t=1781619334",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2369390/0155dcf6a44343b85e682b48648d95716f92a5c6/capsule_184x69.jpg?t=1781619334",
+      "releaseDate": "2023-05-11",
+      "comingSoon": false
+    },
+    "3375780": {
+      "name": "Trails in the Sky 1st Chapter",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3375780/header.jpg?t=1777572632",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3375780/74827d6ceab6ef1722b86eb1bfb49b879cb3c12d/capsule_231x87.jpg?t=1777572632",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3375780/74827d6ceab6ef1722b86eb1bfb49b879cb3c12d/capsule_184x69.jpg?t=1777572632",
+      "releaseDate": "2025-09-19",
+      "comingSoon": false
+    },
+    "3527290": {
+      "name": "PEAK",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527290/31bac6b2eccf09b368f5e95ce510bae2baf3cfcd/header.jpg?t=1775581133",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527290/1844964d7a353e50eb3cc979ea922729d8c1b0ad/capsule_231x87.jpg?t=1775581133",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527290/1844964d7a353e50eb3cc979ea922729d8c1b0ad/capsule_184x69.jpg?t=1775581133",
+      "releaseDate": "2025-06-16",
       "comingSoon": false
     }
   }
