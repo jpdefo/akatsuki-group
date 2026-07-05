@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Akatsuki SteamGifts Sync
 // @namespace    akatsuki-monitor
-// @version      1.13.0
+// @version      1.13.1
 // @author       Koalala
 // @description  Collect Akatsuki members, giveaways, entries and winners from the logged-in SteamGifts session and publish them straight to GitHub.
 // @match        https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts
@@ -159,27 +159,36 @@
     const tokenEditor = panel.querySelector("#akatsuki-token-editor");
 
     // Once a token is saved we hide it behind a "saved" chip with an Edit
-    // button. This keeps the real token out of the DOM (nothing to read at a
-    // glance) and prevents accidentally typing over an already-configured
-    // token. Pressing Edit re-opens the field pre-filled so it can be verified
-    // (e.g. via inspect) or replaced.
+    // button. The real token is NEVER written into the input, so it can't be
+    // read from the DOM (inspect) or shoulder-surfed, and can't be typed over
+    // by accident. Editing always starts from an empty field: typing a new
+    // value replaces the token; leaving it empty keeps the existing one.
     function showTokenLocked() {
       tokenInput.value = "";
       tokenLockedView.style.display = "flex";
       tokenEditor.style.display = "none";
     }
     function showTokenEditor(focus) {
-      tokenInput.value = getStoredToken();
+      tokenInput.value = "";
       tokenLockedView.style.display = "none";
       tokenEditor.style.display = "grid";
       if (focus) {
         tokenInput.focus();
       }
     }
-    tokenInput.addEventListener("change", () => setStoredToken(tokenInput.value.trim()));
+    function commitTokenInput() {
+      // Only a non-empty value overwrites the stored token, so an empty editor
+      // (or an accidental blur) never wipes an already-configured token.
+      const value = tokenInput.value.trim();
+      if (value) {
+        setStoredToken(value);
+      }
+      tokenInput.value = "";
+    }
+    tokenInput.addEventListener("change", commitTokenInput);
     panel.querySelector("#akatsuki-token-edit").addEventListener("click", () => showTokenEditor(true));
     panel.querySelector("#akatsuki-token-save").addEventListener("click", () => {
-      setStoredToken(tokenInput.value.trim());
+      commitTokenInput();
       if (getStoredToken()) {
         showTokenLocked();
       }
