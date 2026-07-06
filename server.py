@@ -981,6 +981,16 @@ def enrich_sync_payload_with_media(sync_payload: dict) -> dict:
     return build_sync_export_payload(sync_payload, media_lookup=media_lookup)
 
 
+def enrich_sync_payload_with_cached_media(sync_payload: dict) -> dict:
+    # Like enrich_sync_payload_with_media, but reads only what's already in the
+    # media cache (no Steam store fetches), so it's cheap enough to run on every
+    # GET. Without this, the local /api/steamgifts-sync response carried no
+    # releaseDate/comingSoon and unreleased-game wins never surfaced under their
+    # release month on PoP, unlike the published static export which does hydrate.
+    media_lookup = build_media_lookup(load_json(MEDIA_CACHE_PATH, empty_media_cache()))
+    return build_sync_export_payload(sync_payload, media_lookup=media_lookup)
+
+
 def fetch_json(url: str, *, headers: dict | None = None, data: bytes | None = None, method: str | None = None):
     request_headers = {"User-Agent": USER_AGENT, **(headers or {})}
     request = Request(url, headers=request_headers, data=data, method=method or ("POST" if data else "GET"))
@@ -2098,7 +2108,11 @@ class Handler(SimpleHTTPRequestHandler):
             parsed = urlparse(self.path)
             query = parse_qs(parsed.query)
             if parsed.path == "/api/steamgifts-sync":
-                self.write_json(load_sync_payload_with_store_prices(persist=False) if SYNC_PATH.exists() else {})
+                if SYNC_PATH.exists():
+                    payload = enrich_sync_payload_with_cached_media(load_sync_payload_with_store_prices(persist=False))
+                else:
+                    payload = {}
+                self.write_json(payload)
                 return
             if parsed.path == "/api/steam-progress":
                 self.write_json(build_progress_export_payload(load_json(PROGRESS_PATH, empty_progress_payload())))

@@ -305,22 +305,22 @@ test("manual winner wins inherit Steam playtime/achievements (pre-release winner
   assert.equal(flagged.includes("frank"), false, "compliant manual winner is not penalised");
 });
 
-test("summer-event wins count under June for PoP, even when gifted in July", () => {
-  // Rule: every summer-event win belongs to June for PoP/penalty tracking, even
-  // the ones gifted in July. The July win's penalty deadline must therefore be
-  // computed from June (2026-06), not July.
+test("summer-event wins count under July for PoP, even when gifted in June", () => {
+  // Rule: every summer-event win belongs to July for PoP/penalty tracking, even
+  // the ones gifted in June. The June win's penalty deadline must therefore be
+  // computed from July (2026-07), not June.
   const currentDate = "2026-08-15";
   const sync = {
     members: [member("gwen", true, "p-gwen")],
     giveaways: [
-      // Summer-event giveaway gifted in July 2026, below threshold (5h of 100h).
+      // Summer-event giveaway gifted in June 2026, below threshold (5h of 100h).
       giveaway({
         code: "SUM",
         creatorUsername: "x",
         appId: 900,
         winners: [{ username: "gwen" }],
-        startDate: "2026-07-05T00:00:00.000Z",
-        endDate: "2026-07-10T00:00:00.000Z",
+        startDate: "2026-06-05T00:00:00.000Z",
+        endDate: "2026-06-10T00:00:00.000Z",
       }),
     ],
   };
@@ -333,8 +333,8 @@ test("summer-event wins count under June for PoP, even when gifted in July", () 
   const { penalties } = buildPenaltyAndMemberDerived({ sync, progress, overrides, settings: { currentDate } });
 
   const row = [...penalties.owedNow, ...penalties.comingDue].find((r) => r.member === "gwen");
-  assert.ok(row, "the July-gifted summer-event win is tracked for a penalty");
-  assert.equal(row.popMonth, "2026-06", "summer-event win counts under June, not July");
+  assert.ok(row, "the June-gifted summer-event win is tracked for a penalty");
+  assert.equal(row.popMonth, "2026-07", "summer-event win counts under July, not June");
 });
 
 test("threshold met is permanent: a latched win stays met even when now below required", () => {

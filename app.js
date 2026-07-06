@@ -1045,7 +1045,7 @@ function renderProgressViews() {
     return;
   }
 
-  const months = getAvailableMonths();
+  const months = getAvailableMonths({ includeFuturePlayMonths: true });
 
   // Optional per-member filter (merges the old User progress page in here):
   // pick a member to scope the table to their wins, across one month or all.
@@ -1096,12 +1096,15 @@ function renderProgressViews() {
   const monthlyGiveaways = selectedMonth && selectedMonth !== "all" ? getGiveawaysForMonth(selectedMonth) : [];
   const period = selectedMonth && selectedMonth !== "all" ? getPeriodInfo(`${selectedMonth}-01`) : null;
 
+  // Future months exist because an unreleased-game win was pushed to its release
+  // month; label them so they read as deliberate, not a data glitch.
+  const pickerCurrentMonth = monthKey(state.settings.currentDate || "");
   elements.monthlyFilter.innerHTML = months.length
     ? [`<option value="all" ${selectedMonth === "all" ? "selected" : ""}>All months</option>`]
         .concat(
           months.map(
             (month) =>
-              `<option value="${month}" ${month === selectedMonth ? "selected" : ""}>${formatMonthKey(month)}</option>`,
+              `<option value="${month}" ${month === selectedMonth ? "selected" : ""}>${formatMonthKey(month)}${pickerCurrentMonth && month > pickerCurrentMonth ? " (upcoming)" : ""}</option>`,
           ),
         )
         .join("")
@@ -4181,7 +4184,7 @@ function normalizeGiveawayMedia(giveaway) {
 
 function getVisibleMediaAppIds() {
   const appIds = new Set();
-  const months = getAvailableMonths();
+  const months = getAvailableMonths({ includeFuturePlayMonths: true });
   const selectedMonth =
     months.includes(elements.monthlyFilter?.value || "") ? elements.monthlyFilter.value : months[0] || "";
   const monthlyWins = selectedMonth ? state.wins.filter((win) => getWinPlayMonth(win) === selectedMonth) : [];
@@ -5948,19 +5951,19 @@ function getEffectiveWinMonth(win) {
 // game releases later (e.g. a May giveaway for a game that releases in June is
 // tracked under June on the PoP page). Only games with a known later release
 // date are affected; everything else stays in its cycle month. Summer-event
-// wins are special-cased to always count under June (the event month) even when
-// gifted in July, unless the game is unreleased, in which case the release-month
+// wins are special-cased to always count under July (the event month) even when
+// gifted in June, unless the game is unreleased, in which case the release-month
 // push still applies. The cycle (lucky/unlucky) math keeps using
 // getEffectiveWinMonth and is unaffected.
 function getWinPlayMonth(win) {
   let baseMonth = getEffectiveWinMonth(win);
-  // Summer-event wins all count under June for PoP requirements, even the ones
-  // gifted in July. A manual per-win monthOverride still wins; an unreleased
+  // Summer-event wins all count under July for PoP requirements, even the ones
+  // gifted in June. A manual per-win monthOverride still wins; an unreleased
   // game still moves forward to its release month (handled below).
   if (!String(win?.monthOverride || "").trim() && getWinTrackKind(win) === "summer_event") {
     const yearMatch = /^(\d{4})-\d{2}$/.exec(baseMonth);
     if (yearMatch) {
-      baseMonth = `${yearMatch[1]}-06`;
+      baseMonth = `${yearMatch[1]}-07`;
     }
   }
   const game = findById("games", win.gameId);
@@ -6675,12 +6678,15 @@ function buildMessageRow(colspan, title, description) {
   return `<tr><td colspan="${colspan}"><div class="empty-state"><strong>${escapeHtml(title)}</strong><span>${escapeHtml(description)}</span></div></td></tr>`;
 }
 
-function getAvailableMonths() {
+function getAvailableMonths(options) {
   // Unreleased-game wins get a play month pushed forward to their release month
   // (see getWinPlayMonth), which would otherwise surface future months/cycles in
-  // the pickers before they've actually arrived. Cap the selectable range at the
-  // current month, matching getRenderableCycleMonths. Those wins reappear on their
-  // own once their release month becomes the current month.
+  // the pickers before they've actually arrived. By default the selectable range
+  // is capped at the current month, matching getRenderableCycleMonths, so the
+  // cycle pickers never show a cycle that hasn't started. The PoP page opts into
+  // includeFuturePlayMonths so wins for unreleased games stay visible under their
+  // upcoming release month instead of disappearing until it arrives.
+  const includeFuturePlayMonths = Boolean(options?.includeFuturePlayMonths);
   const currentMonth = monthKey(state.settings.currentDate || "");
   return Array.from(
     new Set([
@@ -6689,7 +6695,7 @@ function getAvailableMonths() {
       ...state.giveaways.map((giveaway) => getGiveawayMonth(giveaway)).filter(Boolean),
     ]),
   )
-    .filter((month) => !currentMonth || month <= currentMonth)
+    .filter((month) => includeFuturePlayMonths || !currentMonth || month <= currentMonth)
     .sort()
     .reverse();
 }
@@ -6704,7 +6710,11 @@ function getDefaultProgressMonth(months) {
   if (months.includes(previousKey)) {
     return previousKey;
   }
-  return months[0] || "";
+  // The list may contain upcoming release months (includeFuturePlayMonths); they
+  // are selectable but never the default. Fall back to the newest month that has
+  // already arrived.
+  const currentKey = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
+  return months.find((month) => month <= currentKey) || months[0] || "";
 }
 
 function compareMemberBucketRows(left, right, sortMode) {
