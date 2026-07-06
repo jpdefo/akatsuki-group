@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-06T18:31:58.754361+00:00",
+  "updatedAt": "2026-07-06T18:41:09.146275+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -651,7 +651,21 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 42.85
+      "achievementsPlaytimeHours": 42.85,
+      "progressUrls": [
+        {
+          "url": "https://steamcommunity.com/profiles/76561198295302795/stats/2552430/achievements/",
+          "title": "KINGDOM HEARTS -HD 1.5+2.5 ReMIX-"
+        },
+        {
+          "url": "https://steamcommunity.com/profiles/76561198295302795/stats/2552440/achievements/",
+          "title": "KINGDOM HEARTS HD 2.8 Final Chapter Prologue"
+        },
+        {
+          "url": "https://steamcommunity.com/profiles/76561198295302795/stats/2552450/achievements/",
+          "title": "KINGDOM HEARTS III + Re Mind (DLC)"
+        }
+      ]
     },
     {
       "username": "BojanNS987",
@@ -4901,7 +4915,17 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "popThresholdMetAt": "2026-06-26T07:11:08.797632+00:00",
-      "achievementsPlaytimeHours": 26.07
+      "achievementsPlaytimeHours": 26.07,
+      "progressUrls": [
+        {
+          "url": "https://steamcommunity.com/profiles/76561198106145311/stats/1265920/achievements/",
+          "title": "Life is Strange Remastered"
+        },
+        {
+          "url": "https://steamcommunity.com/profiles/76561198106145311/stats/1265930/achievements/",
+          "title": "Life is Strange: Before the Storm Remastered"
+        }
+      ]
     },
     {
       "username": "burntreynolds444",
@@ -10927,7 +10951,17 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "achievementsPlaytimeHours": 24.09,
-      "popThresholdMetAt": "2026-07-06T18:27:00.286878+00:00"
+      "popThresholdMetAt": "2026-07-06T18:27:00.286878+00:00",
+      "progressUrls": [
+        {
+          "url": "https://steamcommunity.com/profiles/76561199085338397/stats/1265920/achievements/",
+          "title": "Life is Strange Remastered"
+        },
+        {
+          "url": "https://steamcommunity.com/profiles/76561199085338397/stats/1265930/achievements/",
+          "title": "Life is Strange: Before the Storm Remastered"
+        }
+      ]
     },
     {
       "username": "eledhrim",
@@ -14423,7 +14457,17 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 11.4
+      "achievementsPlaytimeHours": 11.4,
+      "progressUrls": [
+        {
+          "url": "https://steamcommunity.com/profiles/76561197971221929/stats/311340/achievements/",
+          "title": "METAL GEAR SOLID V: GROUND ZEROES"
+        },
+        {
+          "url": "https://steamcommunity.com/profiles/76561197971221929/stats/287700/achievements/",
+          "title": "METAL GEAR SOLID V: THE PHANTOM PAIN"
+        }
+      ]
     },
     {
       "username": "Horseflesh",
@@ -19756,7 +19800,21 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "achievementsPlaytimeHours": 97.13,
-      "popThresholdMetAt": "2026-07-06T18:27:00.287073+00:00"
+      "popThresholdMetAt": "2026-07-06T18:27:00.287073+00:00",
+      "progressUrls": [
+        {
+          "url": "https://steamcommunity.com/profiles/76561198065466175/stats/2552430/achievements/",
+          "title": "KINGDOM HEARTS -HD 1.5+2.5 ReMIX-"
+        },
+        {
+          "url": "https://steamcommunity.com/profiles/76561198065466175/stats/2552440/achievements/",
+          "title": "KINGDOM HEARTS HD 2.8 Final Chapter Prologue"
+        },
+        {
+          "url": "https://steamcommunity.com/profiles/76561198065466175/stats/2552450/achievements/",
+          "title": "KINGDOM HEARTS III + Re Mind (DLC)"
+        }
+      ]
     },
     {
       "username": "Koalala",
@@ -20815,7 +20873,17 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "achievementsPlaytimeHours": 5.9,
-      "popThresholdMetAt": "2026-07-06T18:27:00.287104+00:00"
+      "popThresholdMetAt": "2026-07-06T18:27:00.287104+00:00",
+      "progressUrls": [
+        {
+          "url": "https://steamcommunity.com/profiles/76561198010348380/stats/220780/achievements/",
+          "title": "Thomas Was Alone"
+        },
+        {
+          "url": "https://steamcommunity.com/profiles/76561198010348380/stats/365770/achievements/",
+          "title": "Volume"
+        }
+      ]
     },
     {
       "username": "Krlesnik",
@@ -22400,7 +22468,21 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "achievementsPlaytimeHours": 17.3,
-      "popThresholdMetAt": "2026-07-06T18:27:00.287143+00:00"
+      "popThresholdMetAt": "2026-07-06T18:27:00.287143+00:00",
+      "progressUrls": [
+        {
+          "url": "https://steamcommunity.com/profiles/76561198010348380/stats/1546970/achievements/",
+          "title": "Grand Theft Auto III – The Definitive Edition"
+        },
+        {
+          "url": "https://steamcommunity.com/profiles/76561198010348380/stats/1547000/achievements/",
+          "title": "Grand Theft Auto: San Andreas – The Definitive Edition"
+        },
+        {
+          "url": "https://steamcommunity.com/profiles/76561198010348380/stats/1546990/achievements/",
+          "title": "Grand Theft Auto: Vice City – The Definitive Edition"
+        }
+      ]
     },
     {
       "username": "Krlesnik",
@@ -31141,7 +31223,21 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "achievementsPlaytimeHours": 20.68,
-      "popThresholdMetAt": "2026-07-06T18:27:00.287289+00:00"
+      "popThresholdMetAt": "2026-07-06T18:27:00.287289+00:00",
+      "progressUrls": [
+        {
+          "url": "https://steamcommunity.com/profiles/76561198107454289/stats/1369760/achievements/",
+          "title": "NINJA GAIDEN 3: Razor's Edge [NINJA GAIDEN: Master Collection]"
+        },
+        {
+          "url": "https://steamcommunity.com/profiles/76561198107454289/stats/1580780/achievements/",
+          "title": "NINJA GAIDEN Σ [NINJA GAIDEN: Master Collection]"
+        },
+        {
+          "url": "https://steamcommunity.com/profiles/76561198107454289/stats/1580790/achievements/",
+          "title": "NINJA GAIDEN Σ2 [NINJA GAIDEN: Master Collection]"
+        }
+      ]
     },
     {
       "username": "Skull18",
@@ -34124,12 +34220,12 @@
       "earnedAchievements": 20,
       "totalAchievements": 42,
       "achievementPercent": 48,
-      "playtimeHours": 58.27,
+      "playtimeHours": 58.77,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 58.27,
+      "achievementsPlaytimeHours": 58.77,
       "popThresholdMetAt": "2026-06-26T07:11:08.801053+00:00"
     },
     {
@@ -70609,9 +70705,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-07-06T18:31:05.589372+00:00",
+  "libraryUpdatedAt": "2026-07-06T18:39:55.509555+00:00",
   "libraryStats": {
-    "durationSeconds": 4.68,
+    "durationSeconds": 16.63,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -70620,7 +70716,7 @@
     "totalPlaytimeRows": 14207
   },
   "stats": {
-    "durationSeconds": 57.86,
+    "durationSeconds": 90.3,
     "targetWins": 2370,
     "uniqueProgressTargets": 2366,
     "libraryPlaytimeHits": 2341,

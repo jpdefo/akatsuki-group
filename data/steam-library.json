@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-06T18:31:05.589372+00:00",
+  "updatedAt": "2026-07-06T18:39:55.509555+00:00",
   "apiEnabled": true,
   "refreshedScope": "all",
   "refreshedMonth": null,
@@ -96993,8 +96993,8 @@
       "username": "Wintermute101",
       "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
       "appId": 1297900,
-      "playtimeMinutes": 3496,
-      "playtimeHours": 58.27,
+      "playtimeMinutes": 3526,
+      "playtimeHours": 58.77,
       "source": "steam-web-api"
     },
     {
@@ -113872,7 +113872,7 @@
   ],
   "source": "steam-web-api",
   "stats": {
-    "durationSeconds": 4.68,
+    "durationSeconds": 16.63,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
