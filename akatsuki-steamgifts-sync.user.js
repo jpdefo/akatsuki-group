@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Akatsuki SteamGifts Sync
 // @namespace    akatsuki-monitor
-// @version      1.13.1
+// @version      1.13.2
 // @author       Koalala
 // @description  Collect Akatsuki members, giveaways, entries and winners from the logged-in SteamGifts session and publish them straight to GitHub.
 // @match        https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts
@@ -884,9 +884,21 @@
       return giveaway;
     }
 
+    // The server resolves /sub/ (package) giveaways to their base game app id
+    // (data/steam-package-cache.json); the collector only ever sees the sub id
+    // on the SteamGifts page, so keep the resolved appId or every publish would
+    // revert it (wrong image, no HLTB/achievements until the next daily run).
+    const resolvedPackageFields = existingGiveaway.packageId
+      ? {
+          appId: existingGiveaway.appId,
+          ...(existingGiveaway.packageAppIds ? { packageAppIds: existingGiveaway.packageAppIds } : {}),
+        }
+      : {};
+
     return {
       ...existingGiveaway,
       ...giveaway,
+      ...resolvedPackageFields,
       giveawayKind:
         typeof giveaway.giveawayKind === "string" && giveaway.giveawayKind
           ? giveaway.giveawayKind

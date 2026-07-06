@@ -1,5 +1,6 @@
 {
   "427289": {
+    "name": "Borderlands 3: Super Deluxe Edition",
     "apps": [
       {
         "id": 397540,
@@ -16,9 +17,13 @@
         "name": "Borderlands 3: Season Pass",
         "type": "dlc"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/427289/header.jpg?t=1605138918",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/427289/header_ratio.jpg?t=1605138918",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/427289/capsule_231x87.jpg?t=1605138918"
   },
   "1111230": {
+    "name": "FINAL FANTASY XVI COMPLETE EDITION",
     "apps": [
       {
         "id": 2515020,
@@ -35,9 +40,13 @@
         "name": "FINAL FANTASY XVI The Rising Tide",
         "type": "dlc"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/1111230/header.jpg?t=1738604226",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/1111230/header_ratio.jpg?t=1738604226",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/1111230/capsule_231x87.jpg?t=1738604226"
   },
   "817628": {
+    "name": "Grand Theft Auto: The Trilogy – The Definitive Edition",
     "apps": [
       {
         "id": 1546970,
@@ -54,9 +63,13 @@
         "name": "Grand Theft Auto: Vice City – The Definitive Edition",
         "type": "game"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/817628/header.jpg?t=1752520763",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/817628/header_ratio.jpg?t=1752520763",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/817628/capsule_231x87.jpg?t=1752520763"
   },
   "1004410": {
+    "name": "Dead Island 2 Ultimate Edition",
     "apps": [
       {
         "id": 934700,
@@ -113,18 +126,26 @@
         "name": "Dead Island 2 - Pulp Weapons Pack",
         "type": "dlc"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/1004410/ac02ad989b8e78c3974132d67a59c7d60fb5ec3a/header.jpg?t=1733219997",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/1004410/11d7680a2532926ee85d0fa78112670ef8a6c06e/header_ratio.jpg?t=1733219997",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/1004410/5f4a8588eccf495edb4792ca3385e8d428a2f249/capsule_231x87.jpg?t=1733219997"
   },
   "634166": {
+    "name": "SCARLET NEXUS Ultimate Edition",
     "apps": [
       {
         "id": 775500,
         "name": "SCARLET NEXUS",
         "type": "game"
       }
-    ]
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": ""
   },
   "1000794": {
+    "name": "KINGDOM HEARTS INTEGRUM MASTERPIECE",
     "apps": [
       {
         "id": 2552430,
@@ -141,12 +162,16 @@
         "name": "KINGDOM HEARTS III + Re Mind (DLC)",
         "type": "game"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/1000794/header.jpg?t=1719510516",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/1000794/header_ratio.jpg?t=1719510516",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/1000794/capsule_231x87.jpg?t=1719510516"
   },
   "29197": {
     "apps": []
   },
   "785847": {
+    "name": "LEGO® Star Wars™: The Skywalker Saga Galactic Edition",
     "apps": [
       {
         "id": 920210,
@@ -158,18 +183,26 @@
         "name": "LEGO® Star Wars™: The Skywalker Saga Character Collection 1 & 2",
         "type": "dlc"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/785847/header.jpg?t=1698432746",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/785847/header_ratio.jpg?t=1698432746",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/785847/capsule_231x87.jpg?t=1698432746"
   },
   "894783": {
+    "name": "Ghostrunner 2 Brutal Edition",
     "apps": [
       {
         "id": 2144740,
         "name": "Ghostrunner 2",
         "type": "game"
       }
-    ]
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": ""
   },
   "822364": {
+    "name": "Hogwarts Legacy: Digital Deluxe Edition",
     "apps": [
       {
         "id": 990080,
@@ -186,39 +219,55 @@
         "name": "Hogwarts Legacy: Dark Arts Pack",
         "type": "dlc"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/822364/628677c6a0ce06cdf3b66a1782d2f7f158fac853/header.jpg?t=1743609693",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/822364/98c7fbbdd824f951292912ac1d020c0274c1d980/header_ratio.jpg?t=1743609693",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/822364/9ceb51a4a7d50af3e5949d38f4c9b8ac09d3f33f/capsule_231x87.jpg?t=1743609693"
   },
   "1044729": {
     "apps": []
   },
   "215277": {
+    "name": "Assassin's Creed Origins - Gold Edition",
     "apps": [
       {
         "id": 582160,
         "name": "Assassin's Creed® Origins",
         "type": "game"
       }
-    ]
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": ""
   },
   "290658": {
+    "name": "Assassin's Creed Odyssey - Ultimate Edition",
     "apps": [
       {
         "id": 812140,
         "name": "Assassin's Creed® Odyssey",
         "type": "game"
       }
-    ]
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": ""
   },
   "791761": {
+    "name": "Assassin's Creed Valhalla - Complete Edition",
     "apps": [
       {
         "id": 2208920,
         "name": "Assassin's Creed Valhalla",
         "type": "game"
       }
-    ]
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": ""
   },
   "77828": {
+    "name": "LISA: Complete Edition",
     "apps": [
       {
         "id": 336370,
@@ -235,9 +284,13 @@
         "name": "LISA: The Painful",
         "type": "game"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/77828/header.jpg?t=1692395309",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/77828/header_ratio.jpg?t=1692395309",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/77828/capsule_231x87.jpg?t=1692395309"
   },
   "440247": {
+    "name": "Life is Strange Remastered Collection",
     "apps": [
       {
         "id": 1265920,
@@ -249,19 +302,27 @@
         "name": "Life is Strange: Before the Storm Remastered",
         "type": "game"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/440247/header.jpg?t=1644953459",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/440247/header_ratio.jpg?t=1644953459",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/440247/capsule_231x87.jpg?t=1644953459"
   },
   "575970": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "242136": {
+    "name": "South Park: The Fractured But Whole - Gold Edition",
     "apps": [
       {
         "id": 488790,
         "name": "South Park™: The Fractured But Whole™",
         "type": "game"
       }
-    ]
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": ""
   },
   "198297": {
     "apps": []
@@ -276,15 +337,20 @@
     "apps": []
   },
   "401587": {
+    "name": "STAR WARS Jedi: Fallen Order Deluxe Edition",
     "apps": [
       {
         "id": 1172380,
         "name": "STAR WARS Jedi: Fallen Order™",
         "type": "game"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/401587/header.jpg?t=1574100600",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/401587/header_ratio.jpg?t=1574100600",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/401587/capsule_231x87.jpg?t=1574100600"
   },
   "258527": {
+    "name": "Pillars of Eternity II: Deadfire - Obsidian Edition",
     "apps": [
       {
         "id": 560130,
@@ -311,7 +377,10 @@
         "name": "Pillars of Eternity II: Deadfire - The Forgotten Sanctum",
         "type": "dlc"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/258527/header.jpg?t=1561495634",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/258527/header_ratio.jpg?t=1561495634",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/258527/capsule_231x87.jpg?t=1561495634"
   },
   "411862": {
     "apps": []
@@ -323,6 +392,7 @@
     "apps": []
   },
   "575623": {
+    "name": "NINJA GAIDEN: Master Collection",
     "apps": [
       {
         "id": 1369760,
@@ -339,7 +409,10 @@
         "name": "NINJA GAIDEN Σ2 [NINJA GAIDEN: Master Collection]",
         "type": "game"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/575623/header.jpg?t=1623364941",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/575623/header_ratio.jpg?t=1623364941",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/575623/capsule_231x87.jpg?t=1623364941"
   },
   "504022": {
     "apps": []
@@ -348,6 +421,7 @@
     "apps": []
   },
   "298833": {
+    "name": "Metro Exodus - Gold Edition",
     "apps": [
       {
         "id": 412020,
@@ -364,63 +438,87 @@
         "name": "Metro Exodus - The Two Colonels",
         "type": "dlc"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/298833/header.jpg?t=1744672858",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/298833/header_ratio.jpg?t=1744672858",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/298833/capsule_231x87.jpg?t=1744672858"
   },
   "29582": {
+    "name": "Inquisitor Deluxe Edition",
     "apps": [
       {
         "id": 241620,
         "name": "Inquisitor",
         "type": "game"
       }
-    ]
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": ""
   },
   "40061": {
+    "name": "The Council - Complete Season",
     "apps": [
       {
         "id": 287630,
         "name": "The Council",
         "type": "game"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/40061/header_ratio.jpg?t=1585085524",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/40061/header_ratio.jpg?t=1585085524",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/40061/capsule_231x87.jpg?t=1585085524"
   },
   "272962": {
     "apps": []
   },
   "74024": {
+    "name": "Kyn Deluxe Edition",
     "apps": [
       {
         "id": 314560,
         "name": "Kyn",
         "type": "game"
       }
-    ]
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": ""
   },
   "36904": {
     "apps": []
   },
   "62118": {
+    "name": "Resident Evil 5 Gold Edition",
     "apps": [
       {
         "id": 21690,
         "name": "Resident Evil 5",
         "type": "game"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/62118/header.jpg?t=1707269157",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/62118/header_ratio.jpg?t=1707269157",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/62118/capsule_231x87.jpg?t=1707269157"
   },
   "76710": {
     "apps": []
   },
   "133812": {
+    "name": "Tyranny - Deluxe Edition",
     "apps": [
       {
         "id": 362960,
         "name": "Tyranny",
         "type": "game"
       }
-    ]
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": ""
   },
   "132479": {
+    "name": "METAL GEAR SOLID V: The Definitive Experience",
     "apps": [
       {
         "id": 436040,
@@ -492,9 +590,13 @@
         "name": "METAL GEAR SOLID V: THE PHANTOM PAIN - Western Tack",
         "type": "dlc"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/132479/header.jpg?t=1779124110",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/132479/header_ratio.jpg?t=1779124110",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/132479/capsule_231x87.jpg?t=1779124110"
   },
   "183038": {
+    "name": "Dishonored: Death of the Outsider - Deluxe Bundle",
     "apps": [
       {
         "id": 403640,
@@ -506,12 +608,16 @@
         "name": "Dishonored®: Death of the Outsider™",
         "type": "game"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/183038/header.jpg?t=1505447818",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/183038/header_ratio.jpg?t=1505447818",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/183038/capsule_231x87.jpg?t=1505447818"
   },
   "149309": {
     "apps": []
   },
   "183036": {
+    "name": "Wolfenstein II: The New Colossus Digital Deluxe Edition",
     "apps": [
       {
         "id": 650410,
@@ -523,9 +629,13 @@
         "name": "Wolfenstein II: The New Colossus",
         "type": "game"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/183036/header_ratio.jpg?t=1593055233",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/183036/header_ratio.jpg?t=1593055233",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/183036/capsule_231x87.jpg?t=1593055233"
   },
   "56692": {
+    "name": "Life is Strange Complete Season (Episodes 1-5)",
     "apps": [
       {
         "id": 319630,
@@ -552,21 +662,29 @@
         "name": "Life is Strange - Episode 5",
         "type": "dlc"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/56692/header.jpg?t=1509147192",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/56692/header_ratio.jpg?t=1509147192",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/56692/capsule_231x87.jpg?t=1509147192"
   },
   "8500": {
     "apps": []
   },
   "207167": {
+    "name": "Divinity: Original Sin 2 - Divine Edition",
     "apps": [
       {
         "id": 435150,
         "name": "Divinity: Original Sin 2 - Definitive Edition",
         "type": "game"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/207167/header.jpg?t=1505403792",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/207167/header_ratio.jpg?t=1505403792",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/207167/capsule_231x87.jpg?t=1505403792"
   },
   "51209": {
+    "name": "Middle-earth: Shadow of Mordor Game of the Year Edition",
     "apps": [
       {
         "id": 318550,
@@ -578,16 +696,23 @@
         "name": "Middle-earth™: Shadow of Mordor™",
         "type": "game"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/51209/header.jpg?t=1745613556",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/51209/header_ratio.jpg?t=1745613556",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/51209/capsule_231x87.jpg?t=1745613556"
   },
   "69069": {
+    "name": "MotoGP™15: Special Edition",
     "apps": [
       {
         "id": 355130,
         "name": "MotoGP™15",
         "type": "game"
       }
-    ]
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": ""
   },
   "67170": {
     "apps": []
@@ -596,6 +721,7 @@
     "apps": []
   },
   "171306": {
+    "name": "Rising Storm 2: Vietnam - Digital Deluxe Edition",
     "apps": [
       {
         "id": 418460,
@@ -607,9 +733,13 @@
         "name": "Rising Storm 2: Vietnam - Digital Deluxe Edition Upgrade",
         "type": "dlc"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/171306/header.jpg?t=1517167588",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/171306/header_ratio.jpg?t=1517167588",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/171306/capsule_231x87.jpg?t=1517167588"
   },
   "65812": {
+    "name": "The Evil Within Bundle",
     "apps": [
       {
         "id": 268050,
@@ -631,18 +761,26 @@
         "name": "The Evil Within: The Executioner",
         "type": "dlc"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/65812/header.jpg?t=1466708984",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/65812/header_ratio.jpg?t=1466708984",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/65812/capsule_231x87.jpg?t=1466708984"
   },
   "76077": {
+    "name": "STASIS - Deluxe Edition",
     "apps": [
       {
         "id": 380150,
         "name": "STASIS",
         "type": "game"
       }
-    ]
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": ""
   },
   "128345": {
+    "name": "Mortal Kombat XL",
     "apps": [
       {
         "id": 347880,
@@ -659,12 +797,16 @@
         "name": "Mortal Kombat X",
         "type": "game"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/128345/header.jpg?t=1698957925",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/128345/header_ratio.jpg?t=1698957925",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/128345/capsule_231x87.jpg?t=1698957925"
   },
   "54109": {
     "apps": []
   },
   "116814": {
+    "name": "Layers of Fear: Masterpiece Edition",
     "apps": [
       {
         "id": 391720,
@@ -676,7 +818,10 @@
         "name": "Layers of Fear: Inheritance",
         "type": "dlc"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/116814/header.jpg?t=1646423557",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/116814/header_ratio.jpg?t=1646423557",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/116814/capsule_231x87.jpg?t=1646423557"
   },
   "53424": {
     "apps": []
@@ -685,13 +830,17 @@
     "apps": []
   },
   "123425": {
+    "name": "Sniper Elite 4 Deluxe Edition",
     "apps": [
       {
         "id": 312660,
         "name": "Sniper Elite 4",
         "type": "game"
       }
-    ]
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": ""
   },
   "71223": {
     "apps": []
@@ -703,6 +852,7 @@
     "apps": []
   },
   "85500": {
+    "name": "Batman: Arkham Knight Premium Edition",
     "apps": [
       {
         "id": 208650,
@@ -714,7 +864,10 @@
         "name": "Batman™: Arkham Knight Season Pass",
         "type": "dlc"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/85500/header.jpg?t=1454540990",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/85500/header_ratio.jpg?t=1454540990",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/85500/capsule_231x87.jpg?t=1454540990"
   },
   "110589": {
     "apps": []
@@ -723,24 +876,33 @@
     "apps": []
   },
   "68765": {
+    "name": "Asguaard - Deluxe Edition (contains Game+Guide+Goodies)",
     "apps": [
       {
         "id": 332380,
         "name": "Asguaard",
         "type": "game"
       }
-    ]
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": ""
   },
   "50980": {
+    "name": "Resident Evil 6 Complete",
     "apps": [
       {
         "id": 221040,
         "name": "Resident Evil 6",
         "type": "game"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/50980/header.jpg?t=1707269236",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/50980/header_ratio.jpg?t=1707269236",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/50980/capsule_231x87.jpg?t=1707269236"
   },
   "48346": {
+    "name": "Lords of the Fallen Game of the Year Edition 2014",
     "apps": [
       {
         "id": 333800,
@@ -787,12 +949,16 @@
         "name": "Lords of the Fallen™ Artbook",
         "type": "dlc"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/48346/header.jpg?t=1661279288",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/48346/header_ratio.jpg?t=1661279288",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/48346/capsule_231x87.jpg?t=1661279288"
   },
   "48515": {
     "apps": []
   },
   "76328": {
+    "name": "Men of War: Assault Squad 2 - Gold Edition",
     "apps": [
       {
         "id": 244450,
@@ -814,9 +980,13 @@
         "name": "Men of War: Assault Squad 2 - Iron Fist",
         "type": "dlc"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/76328/header.jpg?t=1584122130",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/76328/header_ratio.jpg?t=1584122130",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/76328/capsule_231x87.jpg?t=1584122130"
   },
   "92660": {
+    "name": "LEGO® STAR WARS™: The Force Awakens - Deluxe Edition",
     "apps": [
       {
         "id": 438640,
@@ -828,9 +998,13 @@
         "name": "LEGO® Star Wars™: The Force Awakens - Season Pass",
         "type": "dlc"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/92660/header.jpg?t=1510336038",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/92660/header_ratio.jpg?t=1510336038",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/92660/capsule_231x87.jpg?t=1510336038"
   },
   "460": {
+    "name": "Total War: Medieval II - Definitive Edition",
     "apps": [
       {
         "id": 4780,
@@ -842,12 +1016,16 @@
         "name": "Total War: MEDIEVAL II – Definitive Edition",
         "type": "game"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/460/header.jpg?t=1769130741",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/460/header_ratio.jpg?t=1769130741",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/460/capsule_231x87.jpg?t=1769130741"
   },
   "17983": {
     "apps": []
   },
   "76083": {
+    "name": "Volume: Quadrilateral Edition",
     "apps": [
       {
         "id": 220780,
@@ -869,6 +1047,9 @@
         "name": "Volume - Original Soundtrack",
         "type": "dlc"
       }
-    ]
+    ],
+    "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/76083/header.jpg?t=1447461390",
+    "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/76083/header_ratio.jpg?t=1447461390",
+    "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/76083/capsule_231x87.jpg?t=1447461390"
   }
 }

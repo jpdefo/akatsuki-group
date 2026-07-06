@@ -426,22 +426,35 @@ def parse_store_item_from_url(url: str | None) -> tuple[str, int | None]:
     return match.group(1).lower(), int(match.group(2))
 
 
-def fetch_package_apps(package_id: int) -> list[dict] | None:
-    """All apps contained in a Steam package (sub): [{"id", "name"}, ...] or None.
+def fetch_package_details(package_id: int) -> dict | None:
+    """Contents + artwork of a Steam package (sub), or None.
 
-    None means the store has no data for the package (success=false); transient
-    network failures raise instead so callers can retry on a later run.
+    Returns {"name", "apps": [{"id", "name"}...], "headerImageUrl",
+    "capsuleImageUrl", "capsuleSmallUrl"}. The art is the package's own store
+    art (preferred for display over the base game's art). None means the store
+    has no data for the package (success=false); transient network failures
+    raise instead so callers can retry on a later run.
     """
     payload = fetch_json(f"https://store.steampowered.com/api/packagedetails?packageids={package_id}")
     entry = payload.get(str(package_id), {}) if isinstance(payload, dict) else {}
     if not entry.get("success"):
         return None
+    data = entry.get("data", {}) or {}
     apps = []
-    for app in entry.get("data", {}).get("apps") or []:
+    for app in data.get("apps") or []:
         app_id = parse_int(app.get("id") if isinstance(app, dict) else app)
         if app_id:
             apps.append({"id": app_id, "name": str(app.get("name") or "") if isinstance(app, dict) else ""})
-    return apps or None
+    if not apps:
+        return None
+    return {
+        "name": str(data.get("name") or ""),
+        "apps": apps,
+        # page_image is the classic header; header_image the ratio variant.
+        "headerImageUrl": str(data.get("page_image") or data.get("header_image") or ""),
+        "capsuleImageUrl": str(data.get("header_image") or data.get("page_image") or ""),
+        "capsuleSmallUrl": str(data.get("small_logo") or ""),
+    }
 
 
 def fetch_app_type(app_id: int) -> str:
@@ -454,25 +467,35 @@ def fetch_app_type(app_id: int) -> str:
 
 
 def get_package_cache_entry(package_id: int, cache: dict) -> dict | None:
-    """Cached package contents ({"apps": [{"id", "name", "type"}...]}), or None.
+    """Cached package contents + art ({"apps": [...], "name", header/capsule
+    urls}), or None.
 
-    Legacy cache entries stored only the first app id (or null); those are
-    refetched once so multi-game collections are classified from the full app
-    list. None means a transient fetch failure — nothing is cached, retry later.
-    An empty "apps" list is a permanent store miss and is cached to avoid
+    Legacy cache entries stored only the first app id (or null), and earlier
+    dict entries lacked the package art; both are refetched once. App types are
+    carried over from the old entry so the appdetails calls aren't repeated.
+    None means a transient fetch failure — nothing is cached, retry later. An
+    empty "apps" list is a permanent store miss and is cached to avoid
     re-fetching a dead package forever.
     """
     key = str(package_id)
     entry = cache.get(key)
-    if isinstance(entry, dict) and isinstance(entry.get("apps"), list):
+    if isinstance(entry, dict) and isinstance(entry.get("apps"), list) and "headerImageUrl" in entry:
         return entry
+    known_types = {}
+    if isinstance(entry, dict):
+        known_types = {
+            parse_int(app.get("id")): str(app.get("type") or "")
+            for app in entry.get("apps") or []
+            if isinstance(app, dict)
+        }
     try:
-        apps = fetch_package_apps(package_id)
-        for app in apps or []:
-            app["type"] = fetch_app_type(app["id"]) or ""
+        details = fetch_package_details(package_id)
+        for app in (details or {}).get("apps", []):
+            app["type"] = known_types.get(app["id"]) or fetch_app_type(app["id"]) or ""
     except (HTTPError, URLError, TimeoutError, json.JSONDecodeError):
         return None
-    entry = {"apps": apps or []}
+    # Misses keep a headerImageUrl key so they read as fully-fetched above.
+    entry = details or {"apps": [], "headerImageUrl": ""}
     cache[key] = entry
     return entry
 
@@ -984,10 +1007,20 @@ def get_media_cache_entry(app_id: int, media_cache: dict, *, fetch_missing: bool
     return fetched
 
 
-def with_giveaway_media(giveaway: dict, media_lookup: dict[int, dict] | None = None) -> dict:
+def with_giveaway_media(
+    giveaway: dict,
+    media_lookup: dict[int, dict] | None = None,
+    package_lookup: dict | None = None,
+) -> dict:
     app_id = parse_int(giveaway.get("appId")) or None
     media = build_steam_media(app_id)
     cached_media = (media_lookup or {}).get(app_id or 0, {})
+    # A package giveaway shows the package's own store art when Steam has it
+    # (e.g. the FINAL FANTASY XVI COMPLETE EDITION banner), falling back to the
+    # resolved base game's art.
+    package_id = parse_int(giveaway.get("packageId"), None)
+    package_media = (package_lookup or {}).get(str(package_id)) if package_id else None
+    package_media = package_media if isinstance(package_media, dict) else {}
     return {
         **giveaway,
         "appId": app_id,
@@ -996,9 +1029,18 @@ def with_giveaway_media(giveaway: dict, media_lookup: dict[int, dict] | None = N
         # store_item_assets paths, so the collector's classic
         # cdn.../apps/<id>/header.jpg URL 404s. Fall back to the giveaway's URL
         # (for games not yet hydrated) and finally the derived classic URL.
-        "headerImageUrl": cached_media.get("headerImageUrl") or giveaway.get("headerImageUrl") or media["headerImageUrl"],
-        "capsuleImageUrl": cached_media.get("capsuleImageUrl") or giveaway.get("capsuleImageUrl") or media["capsuleImageUrl"],
-        "capsuleSmallUrl": cached_media.get("capsuleSmallUrl") or giveaway.get("capsuleSmallUrl") or media["capsuleSmallUrl"],
+        "headerImageUrl": package_media.get("headerImageUrl")
+        or cached_media.get("headerImageUrl")
+        or giveaway.get("headerImageUrl")
+        or media["headerImageUrl"],
+        "capsuleImageUrl": package_media.get("capsuleImageUrl")
+        or cached_media.get("capsuleImageUrl")
+        or giveaway.get("capsuleImageUrl")
+        or media["capsuleImageUrl"],
+        "capsuleSmallUrl": package_media.get("capsuleSmallUrl")
+        or cached_media.get("capsuleSmallUrl")
+        or giveaway.get("capsuleSmallUrl")
+        or media["capsuleSmallUrl"],
         "releaseDate": normalize_store_release_date(giveaway.get("releaseDate") or cached_media.get("releaseDate")),
         "comingSoon": bool(giveaway.get("comingSoon") or cached_media.get("comingSoon")),
     }
@@ -1031,9 +1073,13 @@ def build_sync_export_payload(sync_payload: dict, *, media_lookup: dict[int, dic
     # Keep the resolved image URLs in the published giveaways: most reconstruct
     # from appId client-side, but some games use non-standard CDN URLs the
     # appId pattern can't reproduce, so we ship them.
+    package_lookup = load_json(PACKAGE_CACHE_PATH, {})
     return {
         **sync_payload,
-        "giveaways": [with_giveaway_media(giveaway, media_lookup) for giveaway in sync_payload.get("giveaways", [])],
+        "giveaways": [
+            with_giveaway_media(giveaway, media_lookup, package_lookup)
+            for giveaway in sync_payload.get("giveaways", [])
+        ],
     }
 
 
@@ -1311,8 +1357,9 @@ def build_giveaways_payload(sync_payload: dict, progress_payload: dict, library_
     progress_lookup = build_progress_lookup(progress_payload)
     library_playtime_lookup = build_library_playtime_lookup(library_payload)
     library_profile_lookup = build_library_profile_lookup(library_payload)
+    package_lookup = load_json(PACKAGE_CACHE_PATH, {})
     giveaways = sorted(
-        (with_giveaway_media(giveaway, media_lookup) for giveaway in sync_payload.get("giveaways", [])),
+        (with_giveaway_media(giveaway, media_lookup, package_lookup) for giveaway in sync_payload.get("giveaways", [])),
         key=lambda item: (item.get("endDate") or "", item.get("code") or ""),
         reverse=True,
     )
