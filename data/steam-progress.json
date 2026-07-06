@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-06T18:41:09.146275+00:00",
+  "updatedAt": "2026-07-06T18:45:43.368606+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -350,8 +350,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 30.77,
-      "popThresholdMetAt": "2026-06-26T07:11:08.797146+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.797146+00:00",
+      "achievementsPlaytimeHours": 30.77
     },
     {
       "username": "BojanNS987",
@@ -651,7 +651,6 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 42.85,
       "progressUrls": [
         {
           "url": "https://steamcommunity.com/profiles/76561198295302795/stats/2552430/achievements/",
@@ -665,7 +664,8 @@
           "url": "https://steamcommunity.com/profiles/76561198295302795/stats/2552450/achievements/",
           "title": "KINGDOM HEARTS III + Re Mind (DLC)"
         }
-      ]
+      ],
+      "achievementsPlaytimeHours": 42.85
     },
     {
       "username": "BojanNS987",
@@ -2266,8 +2266,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 7.0,
-      "popThresholdMetAt": "2026-06-26T07:11:08.797391+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.797391+00:00",
+      "achievementsPlaytimeHours": 7.0
     },
     {
       "username": "BojanNS987",
@@ -2301,8 +2301,8 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 74.57,
-      "popThresholdMetAt": "2026-06-26T07:11:08.797394+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.797394+00:00",
+      "achievementsPlaytimeHours": 74.57
     },
     {
       "username": "BojanNS987",
@@ -4915,7 +4915,6 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "popThresholdMetAt": "2026-06-26T07:11:08.797632+00:00",
-      "achievementsPlaytimeHours": 26.07,
       "progressUrls": [
         {
           "url": "https://steamcommunity.com/profiles/76561198106145311/stats/1265920/achievements/",
@@ -4925,7 +4924,8 @@
           "url": "https://steamcommunity.com/profiles/76561198106145311/stats/1265930/achievements/",
           "title": "Life is Strange: Before the Storm Remastered"
         }
-      ]
+      ],
+      "achievementsPlaytimeHours": 26.07
     },
     {
       "username": "burntreynolds444",
@@ -7455,8 +7455,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 13.25,
-      "popThresholdMetAt": "2026-06-26T07:11:08.797932+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.797932+00:00",
+      "achievementsPlaytimeHours": 13.25
     },
     {
       "username": "chOOkity",
@@ -9478,8 +9478,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 16.85,
-      "popThresholdMetAt": "2026-06-26T07:11:08.798192+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.798192+00:00",
+      "achievementsPlaytimeHours": 16.85
     },
     {
       "username": "Drain",
@@ -9994,8 +9994,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 10.98,
-      "popThresholdMetAt": "2026-06-26T07:11:08.798258+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.798258+00:00",
+      "achievementsPlaytimeHours": 10.98
     },
     {
       "username": "Drain",
@@ -10084,8 +10084,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 51.28,
-      "popThresholdMetAt": "2026-06-26T07:11:08.798270+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.798270+00:00",
+      "achievementsPlaytimeHours": 51.28
     },
     {
       "username": "Drain",
@@ -10809,8 +10809,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 9.77,
-      "popThresholdMetAt": "2026-06-26T07:11:08.798353+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.798353+00:00",
+      "achievementsPlaytimeHours": 9.77
     },
     {
       "username": "Drain",
@@ -10950,7 +10950,6 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 24.09,
       "popThresholdMetAt": "2026-07-06T18:27:00.286878+00:00",
       "progressUrls": [
         {
@@ -10961,7 +10960,8 @@
           "url": "https://steamcommunity.com/profiles/76561199085338397/stats/1265930/achievements/",
           "title": "Life is Strange: Before the Storm Remastered"
         }
-      ]
+      ],
+      "achievementsPlaytimeHours": 24.09
     },
     {
       "username": "eledhrim",
@@ -12208,8 +12208,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 2.13,
-      "popThresholdMetAt": "2026-06-26T07:11:08.798523+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.798523+00:00",
+      "achievementsPlaytimeHours": 2.13
     },
     {
       "username": "eledhrim",
@@ -12527,8 +12527,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 16.35,
-      "popThresholdMetAt": "2026-07-06T18:27:00.286904+00:00"
+      "popThresholdMetAt": "2026-07-06T18:27:00.286904+00:00",
+      "achievementsPlaytimeHours": 16.35
     },
     {
       "username": "Ernesttico",
@@ -13044,8 +13044,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 109.02,
-      "popThresholdMetAt": "2026-06-26T07:11:08.798626+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.798626+00:00",
+      "achievementsPlaytimeHours": 109.02
     },
     {
       "username": "Ernesttico",
@@ -14457,7 +14457,6 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 11.4,
       "progressUrls": [
         {
           "url": "https://steamcommunity.com/profiles/76561197971221929/stats/311340/achievements/",
@@ -14467,7 +14466,8 @@
           "url": "https://steamcommunity.com/profiles/76561197971221929/stats/287700/achievements/",
           "title": "METAL GEAR SOLID V: THE PHANTOM PAIN"
         }
-      ]
+      ],
+      "achievementsPlaytimeHours": 11.4
     },
     {
       "username": "Horseflesh",
@@ -14640,8 +14640,8 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 8.1,
-      "popThresholdMetAt": "2026-06-26T07:11:08.798785+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.798785+00:00",
+      "achievementsPlaytimeHours": 8.1
     },
     {
       "username": "Horseflesh",
@@ -15354,8 +15354,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 138.4,
-      "popThresholdMetAt": "2026-06-26T07:11:08.798851+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.798851+00:00",
+      "achievementsPlaytimeHours": 138.4
     },
     {
       "username": "Horseflesh",
@@ -17380,8 +17380,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 40.83,
-      "popThresholdMetAt": "2026-06-26T07:11:08.799086+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.799086+00:00",
+      "achievementsPlaytimeHours": 40.83
     },
     {
       "username": "kasztoix",
@@ -17576,8 +17576,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 16.17,
-      "popThresholdMetAt": "2026-06-26T07:11:08.799110+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.799110+00:00",
+      "achievementsPlaytimeHours": 16.17
     },
     {
       "username": "kasztoix",
@@ -17753,8 +17753,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 10.72,
-      "popThresholdMetAt": "2026-06-26T07:11:08.799131+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.799131+00:00",
+      "achievementsPlaytimeHours": 10.72
     },
     {
       "username": "kasztoix",
@@ -18283,8 +18283,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 49.98,
-      "popThresholdMetAt": "2026-06-26T07:11:08.799198+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.799198+00:00",
+      "achievementsPlaytimeHours": 49.98
     },
     {
       "username": "kasztoix",
@@ -18657,8 +18657,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 21.9,
-      "popThresholdMetAt": "2026-06-26T07:11:08.799245+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.799245+00:00",
+      "achievementsPlaytimeHours": 21.9
     },
     {
       "username": "kasztoix",
@@ -19727,8 +19727,8 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 16.52,
-      "popThresholdMetAt": "2026-06-26T07:11:08.799378+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.799378+00:00",
+      "achievementsPlaytimeHours": 16.52
     },
     {
       "username": "Koalala",
@@ -19799,7 +19799,6 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 97.13,
       "popThresholdMetAt": "2026-07-06T18:27:00.287073+00:00",
       "progressUrls": [
         {
@@ -19814,7 +19813,8 @@
           "url": "https://steamcommunity.com/profiles/76561198065466175/stats/2552450/achievements/",
           "title": "KINGDOM HEARTS III + Re Mind (DLC)"
         }
-      ]
+      ],
+      "achievementsPlaytimeHours": 97.13
     },
     {
       "username": "Koalala",
@@ -19866,8 +19866,8 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 14.72,
-      "popThresholdMetAt": "2026-06-26T07:11:08.799392+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.799392+00:00",
+      "achievementsPlaytimeHours": 14.72
     },
     {
       "username": "Koalala",
@@ -20559,8 +20559,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 20.1,
-      "popThresholdMetAt": "2026-06-26T07:11:08.799477+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.799477+00:00",
+      "achievementsPlaytimeHours": 20.1
     },
     {
       "username": "Koalala",
@@ -20872,7 +20872,6 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 5.9,
       "popThresholdMetAt": "2026-07-06T18:27:00.287104+00:00",
       "progressUrls": [
         {
@@ -20883,7 +20882,8 @@
           "url": "https://steamcommunity.com/profiles/76561198010348380/stats/365770/achievements/",
           "title": "Volume"
         }
-      ]
+      ],
+      "achievementsPlaytimeHours": 5.9
     },
     {
       "username": "Krlesnik",
@@ -21561,8 +21561,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 102.97,
-      "popThresholdMetAt": "2026-07-06T18:27:00.287128+00:00"
+      "popThresholdMetAt": "2026-07-06T18:27:00.287128+00:00",
+      "achievementsPlaytimeHours": 102.97
     },
     {
       "username": "Krlesnik",
@@ -21951,8 +21951,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 29.4,
-      "popThresholdMetAt": "2026-06-26T07:11:08.799605+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.799605+00:00",
+      "achievementsPlaytimeHours": 29.4
     },
     {
       "username": "Krlesnik",
@@ -22127,8 +22127,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 16.45,
-      "popThresholdMetAt": "2026-06-26T07:11:08.799625+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.799625+00:00",
+      "achievementsPlaytimeHours": 16.45
     },
     {
       "username": "Krlesnik",
@@ -22467,7 +22467,6 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 17.3,
       "popThresholdMetAt": "2026-07-06T18:27:00.287143+00:00",
       "progressUrls": [
         {
@@ -22482,7 +22481,8 @@
           "url": "https://steamcommunity.com/profiles/76561198010348380/stats/1546990/achievements/",
           "title": "Grand Theft Auto: Vice City – The Definitive Edition"
         }
-      ]
+      ],
+      "achievementsPlaytimeHours": 17.3
     },
     {
       "username": "Krlesnik",
@@ -22605,8 +22605,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 18.1,
-      "popThresholdMetAt": "2026-06-26T07:11:08.799683+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.799683+00:00",
+      "achievementsPlaytimeHours": 18.1
     },
     {
       "username": "Krlesnik",
@@ -22731,8 +22731,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 49.08,
-      "popThresholdMetAt": "2026-06-26T07:11:08.799701+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.799701+00:00",
+      "achievementsPlaytimeHours": 49.08
     },
     {
       "username": "Krlesnik",
@@ -23072,8 +23072,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 17.8,
-      "popThresholdMetAt": "2026-06-26T07:11:08.799747+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.799747+00:00",
+      "achievementsPlaytimeHours": 17.8
     },
     {
       "username": "Krlesnik",
@@ -24339,8 +24339,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 63.43,
-      "popThresholdMetAt": "2026-06-26T07:11:08.799900+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.799900+00:00",
+      "achievementsPlaytimeHours": 63.43
     },
     {
       "username": "leniu",
@@ -25174,8 +25174,8 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 20.15,
-      "popThresholdMetAt": "2026-06-26T07:11:08.800006+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.800006+00:00",
+      "achievementsPlaytimeHours": 20.15
     },
     {
       "username": "leniu",
@@ -25246,8 +25246,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 76.48,
-      "popThresholdMetAt": "2026-06-26T07:11:08.800016+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.800016+00:00",
+      "achievementsPlaytimeHours": 76.48
     },
     {
       "username": "leniu",
@@ -27163,8 +27163,8 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 114.47,
-      "popThresholdMetAt": "2026-06-26T07:11:08.800251+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.800251+00:00",
+      "achievementsPlaytimeHours": 114.47
     },
     {
       "username": "Millsshogun",
@@ -27235,8 +27235,8 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 64.0,
-      "popThresholdMetAt": "2026-06-26T07:11:08.800261+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.800261+00:00",
+      "achievementsPlaytimeHours": 64.0
     },
     {
       "username": "Millsshogun",
@@ -27253,8 +27253,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 57.03,
-      "popThresholdMetAt": "2026-06-26T07:11:08.800263+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.800263+00:00",
+      "achievementsPlaytimeHours": 57.03
     },
     {
       "username": "Millsshogun",
@@ -27818,12 +27818,12 @@
       "earnedAchievements": 48,
       "totalAchievements": 48,
       "achievementPercent": 100,
-      "playtimeHours": 59.08,
+      "playtimeHours": 59.12,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 59.08,
+      "achievementsPlaytimeHours": 59.12,
       "popThresholdMetAt": "2026-06-26T07:11:08.800331+00:00"
     },
     {
@@ -29949,8 +29949,8 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 12.25,
-      "popThresholdMetAt": "2026-06-26T07:11:08.800544+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.800544+00:00",
+      "achievementsPlaytimeHours": 12.25
     },
     {
       "username": "skAd42",
@@ -29967,8 +29967,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 105.75,
-      "popThresholdMetAt": "2026-07-06T18:27:00.287266+00:00"
+      "popThresholdMetAt": "2026-07-06T18:27:00.287266+00:00",
+      "achievementsPlaytimeHours": 105.75
     },
     {
       "username": "skAd42",
@@ -30073,8 +30073,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 99.73,
-      "popThresholdMetAt": "2026-06-26T07:11:08.800556+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.800556+00:00",
+      "achievementsPlaytimeHours": 99.73
     },
     {
       "username": "skAd42",
@@ -30746,8 +30746,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 7.68,
-      "popThresholdMetAt": "2026-06-26T07:11:08.800636+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.800636+00:00",
+      "achievementsPlaytimeHours": 7.68
     },
     {
       "username": "Skull18",
@@ -31222,7 +31222,6 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 20.68,
       "popThresholdMetAt": "2026-07-06T18:27:00.287289+00:00",
       "progressUrls": [
         {
@@ -31237,7 +31236,8 @@
           "url": "https://steamcommunity.com/profiles/76561198107454289/stats/1580790/achievements/",
           "title": "NINJA GAIDEN Σ2 [NINJA GAIDEN: Master Collection]"
         }
-      ]
+      ],
+      "achievementsPlaytimeHours": 20.68
     },
     {
       "username": "Skull18",
@@ -31521,8 +31521,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 20.63,
-      "popThresholdMetAt": "2026-06-26T07:11:08.800723+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.800723+00:00",
+      "achievementsPlaytimeHours": 20.63
     },
     {
       "username": "Skull18",
@@ -31682,8 +31682,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 7.12,
-      "popThresholdMetAt": "2026-06-26T07:11:08.800745+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.800745+00:00",
+      "achievementsPlaytimeHours": 7.12
     },
     {
       "username": "Skull18",
@@ -31718,8 +31718,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 14.92,
-      "popThresholdMetAt": "2026-06-26T07:11:08.800750+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.800750+00:00",
+      "achievementsPlaytimeHours": 14.92
     },
     {
       "username": "Skull18",
@@ -33351,8 +33351,8 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 30.4,
-      "popThresholdMetAt": "2026-06-26T07:11:08.800935+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.800935+00:00",
+      "achievementsPlaytimeHours": 30.4
     },
     {
       "username": "Wintermute101",
@@ -33458,8 +33458,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 22.62,
-      "popThresholdMetAt": "2026-06-26T07:11:08.800948+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.800948+00:00",
+      "achievementsPlaytimeHours": 22.62
     },
     {
       "username": "Wintermute101",
@@ -33512,8 +33512,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 23.93,
-      "popThresholdMetAt": "2026-06-26T07:11:08.800956+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.800956+00:00",
+      "achievementsPlaytimeHours": 23.93
     },
     {
       "username": "Wintermute101",
@@ -35615,8 +35615,8 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 5.97,
-      "popThresholdMetAt": "2026-06-26T07:11:08.801213+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.801213+00:00",
+      "achievementsPlaytimeHours": 5.97
     },
     {
       "username": "WNDRLST",
@@ -35633,8 +35633,8 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 9.92,
-      "popThresholdMetAt": "2026-06-26T07:11:08.801215+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.801215+00:00",
+      "achievementsPlaytimeHours": 9.92
     },
     {
       "username": "WNDRLST",
@@ -36288,8 +36288,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 70.63,
-      "popThresholdMetAt": "2026-06-26T07:11:08.801291+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.801291+00:00",
+      "achievementsPlaytimeHours": 70.63
     },
     {
       "username": "xMisiu",
@@ -37144,8 +37144,8 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 13.78,
-      "popThresholdMetAt": "2026-07-06T18:27:00.287472+00:00"
+      "popThresholdMetAt": "2026-07-06T18:27:00.287472+00:00",
+      "achievementsPlaytimeHours": 13.78
     },
     {
       "username": "xMisiu",
@@ -37595,8 +37595,8 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 14.3,
-      "popThresholdMetAt": "2026-06-26T07:11:08.801431+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.801431+00:00",
+      "achievementsPlaytimeHours": 14.3
     },
     {
       "username": "Youdontknow",
@@ -37717,8 +37717,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 28.77,
-      "popThresholdMetAt": "2026-07-06T18:27:00.287400+00:00"
+      "popThresholdMetAt": "2026-07-06T18:27:00.287400+00:00",
+      "achievementsPlaytimeHours": 28.77
     },
     {
       "username": "Youdontknow",
@@ -38136,8 +38136,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 55.03,
-      "popThresholdMetAt": "2026-06-26T07:11:08.801483+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.801483+00:00",
+      "achievementsPlaytimeHours": 55.03
     },
     {
       "username": "Youdontknow",
@@ -38565,8 +38565,8 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 25.92,
-      "popThresholdMetAt": "2026-06-26T07:11:08.801538+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.801538+00:00",
+      "achievementsPlaytimeHours": 25.92
     },
     {
       "username": "Youdontknow",
@@ -40431,8 +40431,8 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 21.98,
-      "popThresholdMetAt": "2026-06-26T07:11:08.801759+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.801759+00:00",
+      "achievementsPlaytimeHours": 21.98
     },
     {
       "username": "zettaivanugen",
@@ -40520,8 +40520,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 26.05,
-      "popThresholdMetAt": "2026-06-26T07:11:08.801769+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.801769+00:00",
+      "achievementsPlaytimeHours": 26.05
     },
     {
       "username": "zettaivanugen",
@@ -40573,8 +40573,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 30.03,
-      "popThresholdMetAt": "2026-06-26T07:11:08.801775+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.801775+00:00",
+      "achievementsPlaytimeHours": 30.03
     },
     {
       "username": "zettaivanugen",
@@ -41406,8 +41406,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 91.3,
-      "popThresholdMetAt": "2026-06-26T07:11:08.801873+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.801873+00:00",
+      "achievementsPlaytimeHours": 91.3
     },
     {
       "username": "zettaivanugen",
@@ -70705,23 +70705,23 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-07-06T18:39:55.509555+00:00",
+  "libraryUpdatedAt": "2026-07-06T18:44:03.628073+00:00",
   "libraryStats": {
-    "durationSeconds": 16.63,
+    "durationSeconds": 15.92,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14207
+    "totalPlaytimeRows": 14209
   },
   "stats": {
-    "durationSeconds": 90.3,
+    "durationSeconds": 115.67,
     "targetWins": 2370,
     "uniqueProgressTargets": 2366,
     "libraryPlaytimeHits": 2341,
-    "cachedReuses": 2284,
-    "achievementSuccesses": 5,
+    "cachedReuses": 2209,
+    "achievementSuccesses": 80,
     "achievementErrors": 77,
     "cachedFallbacks": 77,
     "hltbTitlesRequested": 1285,

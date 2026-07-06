@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-06T18:39:55.509555+00:00",
+  "updatedAt": "2026-07-06T18:44:03.628073+00:00",
   "apiEnabled": true,
   "refreshedScope": "all",
   "refreshedMonth": null,
@@ -73,7 +73,7 @@
       "steamId": "76561197971221929",
       "gamesVisible": true,
       "playtimeVisible": true,
-      "gameCount": 4017,
+      "gameCount": 4019,
       "error": null
     },
     {
@@ -47536,6 +47536,14 @@
     {
       "username": "Horseflesh",
       "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 1823990,
+      "playtimeMinutes": 0,
+      "playtimeHours": 0.0,
+      "source": "steam-web-api"
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
       "appId": 1868140,
       "playtimeMinutes": 452,
       "playtimeHours": 7.53,
@@ -47835,6 +47843,14 @@
       "appId": 3008130,
       "playtimeMinutes": 661,
       "playtimeHours": 11.02,
+      "source": "steam-web-api"
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 3010850,
+      "playtimeMinutes": 0,
+      "playtimeHours": 0.0,
       "source": "steam-web-api"
     },
     {
@@ -76569,8 +76585,8 @@
       "username": "Millsshogun",
       "steamProfile": "https://steamcommunity.com/profiles/76561198075996214",
       "appId": 2322010,
-      "playtimeMinutes": 3545,
-      "playtimeHours": 59.08,
+      "playtimeMinutes": 3547,
+      "playtimeHours": 59.12,
       "source": "steam-web-api"
     },
     {
@@ -113872,12 +113888,12 @@
   ],
   "source": "steam-web-api",
   "stats": {
-    "durationSeconds": 16.63,
+    "durationSeconds": 15.92,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14207
+    "totalPlaytimeRows": 14209
   }
 }
