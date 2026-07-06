@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-06T09:50:07.244845+00:00",
+  "updatedAt": "2026-07-06T17:31:29.775571+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2007,6 +2007,23 @@
     {
       "username": "BojanNS987",
       "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 1941540,
+      "title": "Mafia: The Old Country",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/1941540/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 55,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
       "appId": 1954200,
       "title": "Kena: Bridge of Spirits",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/1954200/achievements/",
@@ -2236,6 +2253,23 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 7.0,
       "popThresholdMetAt": "2026-06-26T07:11:08.797391+00:00"
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 2172010,
+      "title": "Until Dawn",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2172010/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 29,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "BojanNS987",
@@ -2732,6 +2766,23 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 5.03,
       "popThresholdMetAt": "2026-06-26T07:11:08.797438+00:00"
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 2863680,
+      "title": "ZERO PARADES: For Dead Spies",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2863680/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 55,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "BojanNS987",
@@ -5341,12 +5392,12 @@
       "earnedAchievements": 49,
       "totalAchievements": 281,
       "achievementPercent": 17,
-      "playtimeHours": 82.25,
+      "playtimeHours": 83.43,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 82.25,
+      "achievementsPlaytimeHours": 83.43,
       "popThresholdMetAt": "2026-06-26T07:11:08.797696+00:00"
     },
     {
@@ -6436,6 +6487,23 @@
     {
       "username": "burntreynolds444",
       "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 1771300,
+      "title": "Kingdom Come: Deliverance II",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1771300/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 83,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
       "appId": 1817230,
       "title": "Hi-Fi RUSH",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1817230/achievements/",
@@ -6503,6 +6571,23 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "achievementsPlaytimeHours": 6.88
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 1875580,
+      "title": "Mina the Hollower",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1875580/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 50,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "burntreynolds444",
@@ -10708,7 +10793,7 @@
       "username": "Drain",
       "steamProfile": "https://steamcommunity.com/profiles/76561197970556600",
       "appId": 2623190,
-      "title": "The Elder Scrolls IV: Oblivion Remast...",
+      "title": "The Elder Scrolls IV: Oblivion Remastered",
       "progressUrl": "https://steamcommunity.com/profiles/76561197970556600/stats/2623190/achievements/",
       "visible": true,
       "earnedAchievements": 9,
@@ -13123,6 +13208,22 @@
     {
       "username": "Ernesttico",
       "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
+      "appId": 1111230,
+      "title": "FINAL FANTASY XVI COMPLETE EDITION",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/1111230/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "playtimeSource": "",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": "HTTP Error 400: Bad Request"
+    },
+    {
+      "username": "Ernesttico",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
       "appId": 1121640,
       "title": "The Wandering Village",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/1121640/achievements/",
@@ -14240,7 +14341,7 @@
       "username": "Ernesttico",
       "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
       "appId": 3527760,
-      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "title": "RoboCop: Rogue City - Unfinished Business",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/3527760/achievements/",
       "visible": true,
       "earnedAchievements": 4,
@@ -16889,6 +16990,23 @@
     {
       "username": "Horseflesh",
       "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 2605790,
+      "title": "Deep Rock Galactic: Rogue Core",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/2605790/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 23,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
       "appId": 2622380,
       "title": "ELDEN RING NIGHTREIGN",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/2622380/achievements/",
@@ -17119,7 +17237,7 @@
       "username": "Horseflesh",
       "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
       "appId": 3527760,
-      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "title": "RoboCop: Rogue City - Unfinished Business",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/3527760/achievements/",
       "visible": true,
       "earnedAchievements": 5,
@@ -18938,12 +19056,12 @@
       "earnedAchievements": 30,
       "totalAchievements": 62,
       "achievementPercent": 48,
-      "playtimeHours": 59.27,
+      "playtimeHours": 60.27,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 59.27,
+      "achievementsPlaytimeHours": 60.27,
       "popThresholdMetAt": "2026-06-26T07:11:08.799308+00:00"
     },
     {
@@ -20439,6 +20557,23 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 46.55,
       "popThresholdMetAt": "2026-06-26T07:11:08.799484+00:00"
+    },
+    {
+      "username": "Koalala",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198065466175",
+      "appId": 2680010,
+      "title": "The First Berserker: Khazan",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/2680010/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 57,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "Koalala",
@@ -27632,16 +27767,16 @@
       "appId": 3489700,
       "title": "Stellar Blade",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/3489700/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 1.98,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 2,
       "totalAchievements": 45,
-      "achievementPercent": 0,
+      "achievementPercent": 4,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 1.98
     },
     {
       "username": "Millsshogun",
@@ -28225,6 +28360,23 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 14.32,
       "popThresholdMetAt": "2026-06-26T07:11:08.800406+00:00"
+    },
+    {
+      "username": "Oozyyy",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197985486812",
+      "appId": 2208350,
+      "title": "Total Chaos",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197985486812/stats/2208350/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 37,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "Oozyyy",
@@ -33865,15 +34017,15 @@
       "title": "Gothic 1 Remake",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/1297900/achievements/",
       "visible": true,
-      "earnedAchievements": 18,
+      "earnedAchievements": 20,
       "totalAchievements": 42,
-      "achievementPercent": 43,
-      "playtimeHours": 55.27,
+      "achievementPercent": 48,
+      "playtimeHours": 57.27,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 55.27,
+      "achievementsPlaytimeHours": 57.27,
       "popThresholdMetAt": "2026-06-26T07:11:08.801053+00:00"
     },
     {
@@ -34758,6 +34910,23 @@
     {
       "username": "Wintermute101",
       "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
+      "appId": 2069250,
+      "title": "High On Life 2",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2069250/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 31,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "Wintermute101",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
       "appId": 2072450,
       "title": "Like a Dragon: Infinite Wealth",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2072450/achievements/",
@@ -34864,7 +35033,7 @@
       "username": "Wintermute101",
       "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
       "appId": 2288350,
-      "title": "RAIDOU Remastered: The Mystery of the...",
+      "title": "RAIDOU Remastered: The Mystery of the Soulless Army",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2288350/achievements/",
       "visible": true,
       "earnedAchievements": 22,
@@ -35148,7 +35317,7 @@
       "username": "Wintermute101",
       "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
       "appId": 3527760,
-      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "title": "RoboCop: Rogue City - Unfinished Business",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3527760/achievements/",
       "visible": true,
       "earnedAchievements": 21,
@@ -35475,6 +35644,23 @@
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 56,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "WNDRLST",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198125763485",
+      "appId": 2414270,
+      "title": "Sunderfolk",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198125763485/stats/2414270/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 14,
       "achievementPercent": 0,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -35911,7 +36097,7 @@
       "username": "xMisiu",
       "steamProfile": "https://steamcommunity.com/profiles/76561198082091554",
       "appId": 1004640,
-      "title": "FINAL FANTASY TACTICS - The Ivalice C...",
+      "title": "FINAL FANTASY TACTICS - The Ivalice Chronicles",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/1004640/achievements/",
       "visible": true,
       "earnedAchievements": 20,
@@ -41774,16 +41960,16 @@
       "appId": 2057760,
       "title": "Esoteric Ebb",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/2057760/achievements/",
-      "playtimeHours": 11.97,
+      "playtimeHours": 14.55,
       "visible": true,
-      "earnedAchievements": 32,
+      "earnedAchievements": 39,
       "totalAchievements": 56,
-      "achievementPercent": 57,
+      "achievementPercent": 70,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 11.97,
+      "achievementsPlaytimeHours": 14.55,
       "popThresholdMetAt": "2026-07-05T08:36:55.337593+00:00"
     },
     {
@@ -42102,6 +42288,13 @@
       "hltbHours": 7.84,
       "matchedTitle": "Directive 8020",
       "url": "https://howlongtobeat.com/game/116632"
+    },
+    {
+      "title": "Mina the Hollower",
+      "appId": 1875580,
+      "hltbHours": 18.65,
+      "matchedTitle": "Mina the Hollower",
+      "url": "https://howlongtobeat.com/game/103519"
     },
     {
       "title": "MOUSE: P.I. For Hire",
@@ -70027,6 +70220,13 @@
       "url": "https://howlongtobeat.com/game/158246"
     },
     {
+      "title": "High On Life 2",
+      "appId": 2069250,
+      "hltbHours": 11.82,
+      "matchedTitle": "High On Life 2",
+      "url": "https://howlongtobeat.com/game/169405"
+    },
+    {
       "title": "Kingdom Come: Deliverance II",
       "appId": 1771300,
       "hltbHours": 54.76,
@@ -70053,6 +70253,13 @@
       "hltbHours": 21.07,
       "matchedTitle": "Zero Parades: For Dead Spies",
       "url": "https://howlongtobeat.com/game/172969"
+    },
+    {
+      "title": "Deep Rock Galactic: Rogue Core",
+      "appId": 2605790,
+      "hltbHours": 2.31,
+      "matchedTitle": "Deep Rock Galactic: Rogue Core",
+      "url": "https://howlongtobeat.com/game/138796"
     },
     {
       "title": "DOOM: The Dark Ages",
@@ -70167,6 +70374,13 @@
       "url": "https://howlongtobeat.com/game/166129"
     },
     {
+      "title": "Sunderfolk",
+      "appId": 2414270,
+      "hltbHours": 20.81,
+      "matchedTitle": "Sunderfolk",
+      "url": "https://howlongtobeat.com/game/157937"
+    },
+    {
       "title": "The Stone of Madness",
       "appId": 1309710,
       "hltbHours": 26.27,
@@ -70255,26 +70469,26 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-07-06T09:49:08.917181+00:00",
+  "libraryUpdatedAt": "2026-07-06T17:30:30.227643+00:00",
   "libraryStats": {
-    "durationSeconds": 4.18,
+    "durationSeconds": 5.58,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 13959
+    "totalPlaytimeRows": 13992
   },
   "stats": {
-    "durationSeconds": 62.52,
-    "targetWins": 2354,
-    "uniqueProgressTargets": 2350,
-    "libraryPlaytimeHits": 2297,
-    "cachedReuses": 2232,
-    "achievementSuccesses": 13,
-    "achievementErrors": 105,
-    "cachedFallbacks": 104,
-    "hltbTitlesRequested": 1281,
-    "hltbResultsAvailable": 4024
+    "durationSeconds": 65.14,
+    "targetWins": 2365,
+    "uniqueProgressTargets": 2361,
+    "libraryPlaytimeHits": 2307,
+    "cachedReuses": 2236,
+    "achievementSuccesses": 19,
+    "achievementErrors": 106,
+    "cachedFallbacks": 105,
+    "hltbTitlesRequested": 1282,
+    "hltbResultsAvailable": 4028
   }
 }

@@ -2314,7 +2314,8 @@
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1875580/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1875580/5f701d40d2fdba63cec85579f481b5abad2c92a9/capsule_184x69.jpg",
       "startDate": "2026-06-02T13:08:58.000Z",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 18.65
     },
     {
       "code": "booLQ",
@@ -150052,7 +150053,8 @@
         "Wintermute101"
       ],
       "entriesFinalized": true,
-      "entriesSnapshotAt": "2026-07-06T14:11:59.642Z"
+      "entriesSnapshotAt": "2026-07-06T14:11:59.642Z",
+      "hltbHours": 11.82
     },
     {
       "code": "qLDJR",
@@ -150231,7 +150233,8 @@
         "Horseflesh"
       ],
       "entriesFinalized": true,
-      "entriesSnapshotAt": "2026-07-06T14:12:01.345Z"
+      "entriesSnapshotAt": "2026-07-06T14:12:01.345Z",
+      "hltbHours": 2.31
     },
     {
       "code": "qiVA9",
@@ -150875,7 +150878,8 @@
         "WNDRLST"
       ],
       "entriesFinalized": true,
-      "entriesSnapshotAt": "2026-07-06T14:11:57.902Z"
+      "entriesSnapshotAt": "2026-07-06T14:11:57.902Z",
+      "hltbHours": 20.81
     },
     {
       "code": "DrIzK",
@@ -151036,7 +151040,7 @@
     {
       "code": "ZvvXe",
       "url": "https://www.steamgifts.com/giveaway/ZvvXe/dying-light-2-stay-human-reloaded-edition",
-      "title": "Dying Light 2 Stay Human: Reloaded Ed...",
+      "title": "Dying Light 2 Stay Human: Reloaded Edition",
       "creatorUsername": "Ernesttico",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Ernesttico",
       "appId": 534380,
