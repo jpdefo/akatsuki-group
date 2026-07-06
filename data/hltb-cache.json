@@ -300,11 +300,11 @@
   },
   "final fantasy tactics the ivalice c": {
     "title": "FINAL FANTASY TACTICS - The Ivalice C...",
-    "hltbHours": null,
-    "matchedTitle": "",
-    "gameId": null,
-    "url": "",
-    "checkedAt": "2026-06-07T11:03:58.639007+00:00"
+    "hltbHours": 36.93,
+    "matchedTitle": "Final Fantasy Tactics: The Ivalice Chronicles",
+    "gameId": 169173,
+    "url": "https://howlongtobeat.com/game/169173",
+    "checkedAt": "2026-07-06T18:25:26.711762+00:00"
   },
   "styx blades of greed": {
     "title": "Styx: Blades of Greed",
@@ -336,11 +336,11 @@
   },
   "the elder scrolls iv oblivion remast": {
     "title": "The Elder Scrolls IV: Oblivion Remast...",
-    "hltbHours": null,
-    "matchedTitle": "",
-    "gameId": null,
-    "url": "",
-    "checkedAt": "2026-06-07T11:04:00.123886+00:00"
+    "hltbHours": 17.36,
+    "matchedTitle": "The Elder Scrolls IV: Oblivion Remastered",
+    "gameId": 166969,
+    "url": "https://howlongtobeat.com/game/166969",
+    "checkedAt": "2026-07-06T18:25:37.691993+00:00"
   },
   "eriksholm the stolen dream": {
     "title": "Eriksholm: The Stolen Dream",
@@ -407,11 +407,11 @@
   },
   "robocop rogue city unfinished busi": {
     "title": "RoboCop: Rogue City - Unfinished Busi...",
-    "hltbHours": null,
-    "matchedTitle": "",
-    "gameId": null,
-    "url": "",
-    "checkedAt": "2026-06-07T11:25:22.602064+00:00"
+    "hltbHours": 7.81,
+    "matchedTitle": "RoboCop: Rogue City - Unfinished Business",
+    "gameId": 164922,
+    "url": "https://howlongtobeat.com/game/164922",
+    "checkedAt": "2026-07-06T18:25:33.939543+00:00"
   },
   "let it die inferno": {
     "title": "LET IT DIE: INFERNO",
@@ -472,11 +472,11 @@
   },
   "raidou remastered the mystery of the": {
     "title": "RAIDOU Remastered: The Mystery of the...",
-    "hltbHours": null,
-    "matchedTitle": "",
-    "gameId": null,
-    "url": "",
-    "checkedAt": "2026-06-07T11:25:12.399342+00:00"
+    "hltbHours": 18.96,
+    "matchedTitle": "Raidou Remastered: The Mystery of the Soulless Army",
+    "gameId": 165835,
+    "url": "https://howlongtobeat.com/game/165835",
+    "checkedAt": "2026-07-06T18:25:30.551466+00:00"
   },
   "crisis core final fantasy vii reunion": {
     "title": "CRISIS CORE –FINAL FANTASY VII– REUNION",
@@ -6223,14 +6223,6 @@
     "gameId": 67545,
     "url": "https://howlongtobeat.com/game/67545"
   },
-  "kingdom hearts hd 1 5 2 5 remix": {
-    "title": "KINGDOM HEARTS -HD 1.5+2.5 ReMIX-",
-    "hltbHours": null,
-    "matchedTitle": "",
-    "gameId": null,
-    "url": "",
-    "checkedAt": "2026-06-30T07:10:12.524261+00:00"
-  },
   "kingdom hearts integrum masterpiece": {
     "title": "KINGDOM HEARTS INTEGRUM MASTERPIECE",
     "hltbHours": 0.0,
@@ -6448,13 +6440,6 @@
     "matchedTitle": "Kunitsu-Gami: Path of the Goddess",
     "gameId": 129966,
     "url": "https://howlongtobeat.com/game/129966"
-  },
-  "kyn": {
-    "title": "Kyn",
-    "hltbHours": 0.0,
-    "matchedTitle": "Kyn",
-    "gameId": 29432,
-    "url": "https://howlongtobeat.com/game/29432"
   },
   "kyn deluxe edition": {
     "title": "Kyn Deluxe Edition",
@@ -6681,13 +6666,6 @@
     "matchedTitle": "Last Train Home",
     "gameId": 129989,
     "url": "https://howlongtobeat.com/game/129989"
-  },
-  "layers of fear 2016": {
-    "title": "Layers of Fear (2016)",
-    "hltbHours": null,
-    "matchedTitle": "",
-    "gameId": null,
-    "url": ""
   },
   "layers of fear 2 2019": {
     "title": "Layers of Fear 2 (2019)",
@@ -13850,14 +13828,6 @@
     "url": "https://howlongtobeat.com/game/71310",
     "checkedAt": "2026-06-08T07:31:07.828020+00:00"
   },
-  "divinity original sin 2 definitive edition": {
-    "title": "Divinity: Original Sin 2 - Definitive Edition",
-    "hltbHours": null,
-    "matchedTitle": "",
-    "gameId": null,
-    "url": "",
-    "checkedAt": "2026-07-03T08:43:08.193518+00:00"
-  },
   "druidstone the secret of the menhir forest": {
     "title": "Druidstone: The Secret of the Menhir Forest",
     "hltbHours": 14.59,
@@ -14473,5 +14443,229 @@
     "gameId": 157937,
     "url": "https://howlongtobeat.com/game/157937",
     "checkedAt": "2026-07-06T17:30:33.867206+00:00"
+  },
+  "asguaard": {
+    "title": "Asguaard",
+    "hltbHours": 46.18,
+    "matchedTitle": "Asguaard",
+    "gameId": 17737,
+    "url": "https://howlongtobeat.com/game/17737",
+    "checkedAt": "2026-07-06T18:21:46.609212+00:00"
+  },
+  "grand theft auto iii the definitive edition": {
+    "title": "Grand Theft Auto III – The Definitive Edition",
+    "hltbHours": 14.11,
+    "matchedTitle": "Grand Theft Auto III",
+    "gameId": 4061,
+    "url": "https://howlongtobeat.com/game/4061",
+    "checkedAt": "2026-07-06T18:21:58.824537+00:00"
+  },
+  "grand theft auto san andreas the definitive edition": {
+    "title": "Grand Theft Auto: San Andreas – The Definitive Edition",
+    "hltbHours": 30.16,
+    "matchedTitle": "Grand Theft Auto: San Andreas",
+    "gameId": 4073,
+    "url": "https://howlongtobeat.com/game/4073",
+    "checkedAt": "2026-07-06T18:22:10.810059+00:00"
+  },
+  "grand theft auto vice city the definitive edition": {
+    "title": "Grand Theft Auto: Vice City – The Definitive Edition",
+    "hltbHours": 17.02,
+    "matchedTitle": "Grand Theft Auto: Vice City",
+    "gameId": 4075,
+    "url": "https://howlongtobeat.com/game/4075",
+    "checkedAt": "2026-07-06T18:22:23.990899+00:00"
+  },
+  "inquisitor": {
+    "title": "Inquisitor",
+    "hltbHours": 87.31,
+    "matchedTitle": "Inquisitor",
+    "gameId": 4696,
+    "url": "https://howlongtobeat.com/game/4696",
+    "checkedAt": "2026-07-06T18:22:26.200141+00:00"
+  },
+  "kingdom hearts hd 2 8 final chapter prologue": {
+    "title": "KINGDOM HEARTS HD 2.8 Final Chapter Prologue",
+    "hltbHours": 19.29,
+    "matchedTitle": "Kingdom Hearts HD 2.8 Final Chapter Prologue",
+    "gameId": 37863,
+    "url": "https://howlongtobeat.com/game/37863",
+    "checkedAt": "2026-07-06T18:22:28.262020+00:00"
+  },
+  "kingdom hearts iii re mind dlc": {
+    "title": "KINGDOM HEARTS III + Re Mind (DLC)",
+    "hltbHours": 28.85,
+    "matchedTitle": "Kingdom Hearts III",
+    "gameId": 13157,
+    "url": "https://howlongtobeat.com/game/13157",
+    "checkedAt": "2026-07-06T18:22:36.433784+00:00"
+  },
+  "lisa the painful": {
+    "title": "LISA: The Painful",
+    "hltbHours": 10.87,
+    "matchedTitle": "LISA: The Painful",
+    "gameId": 24233,
+    "url": "https://howlongtobeat.com/game/24233",
+    "checkedAt": "2026-07-06T18:22:38.525081+00:00"
+  },
+  "life is strange episode 1": {
+    "title": "Life is Strange - Episode 1",
+    "hltbHours": 9.55,
+    "matchedTitle": "Life Is Strange: Reunion",
+    "gameId": 180400,
+    "url": "https://howlongtobeat.com/game/180400",
+    "checkedAt": "2026-07-06T18:22:48.029693+00:00"
+  },
+  "life is strange remastered": {
+    "title": "Life is Strange Remastered",
+    "hltbHours": 16.08,
+    "matchedTitle": "Life Is Strange 2",
+    "gameId": 57795,
+    "url": "https://howlongtobeat.com/game/57795",
+    "checkedAt": "2026-07-06T18:22:52.047575+00:00"
+  },
+  "life is strange before the storm remastered": {
+    "title": "Life is Strange: Before the Storm Remastered",
+    "hltbHours": 9.96,
+    "matchedTitle": "Life Is Strange: Before the Storm",
+    "gameId": 46418,
+    "url": "https://howlongtobeat.com/game/46418",
+    "checkedAt": "2026-07-06T18:22:53.932143+00:00"
+  },
+  "lords of the fallen 2014": {
+    "title": "Lords Of The Fallen™ 2014",
+    "hltbHours": 28.44,
+    "matchedTitle": "Lords of the Fallen",
+    "gameId": 112684,
+    "url": "https://howlongtobeat.com/game/112684",
+    "checkedAt": "2026-07-06T18:22:59.895528+00:00"
+  },
+  "middle earth shadow of mordor": {
+    "title": "Middle-earth™: Shadow of Mordor™",
+    "hltbHours": 15.75,
+    "matchedTitle": "Middle-Earth: Shadow of Mordor",
+    "gameId": 18006,
+    "url": "https://howlongtobeat.com/game/18006",
+    "checkedAt": "2026-07-06T18:23:04.067575+00:00"
+  },
+  "motogp 15": {
+    "title": "MotoGP™15",
+    "hltbHours": 10.39,
+    "matchedTitle": "MotoGP 15",
+    "gameId": 27012,
+    "url": "https://howlongtobeat.com/game/27012",
+    "checkedAt": "2026-07-06T18:23:08.147098+00:00"
+  },
+  "ninja gaiden 3 razor s edge ninja gaiden master collection": {
+    "title": "NINJA GAIDEN 3: Razor's Edge [NINJA GAIDEN: Master Collection]",
+    "hltbHours": 7.65,
+    "matchedTitle": "Ninja Gaiden 3: Razor's Edge",
+    "gameId": 6623,
+    "url": "https://howlongtobeat.com/game/6623",
+    "checkedAt": "2026-07-06T18:23:20.018073+00:00"
+  },
+  "ninja gaiden ninja gaiden master collection": {
+    "title": "NINJA GAIDEN Σ [NINJA GAIDEN: Master Collection]",
+    "hltbHours": 27.95,
+    "matchedTitle": "Ninja Gaiden: Master Collection",
+    "gameId": 89284,
+    "url": "https://howlongtobeat.com/game/89284",
+    "checkedAt": "2026-07-06T18:23:23.343890+00:00"
+  },
+  "ninja gaiden 2 ninja gaiden master collection": {
+    "title": "NINJA GAIDEN Σ2 [NINJA GAIDEN: Master Collection]",
+    "hltbHours": 10.07,
+    "matchedTitle": "Ninja Gaiden 2 Black",
+    "gameId": 162522,
+    "url": "https://howlongtobeat.com/game/162522",
+    "checkedAt": "2026-07-06T18:23:36.155605+00:00"
+  },
+  "resident evil 5": {
+    "title": "Resident Evil 5",
+    "hltbHours": 12.05,
+    "matchedTitle": "Resident Evil 5",
+    "gameId": 7722,
+    "url": "https://howlongtobeat.com/game/7722",
+    "checkedAt": "2026-07-06T18:23:37.659028+00:00"
+  },
+  "resident evil 6": {
+    "title": "Resident Evil 6",
+    "hltbHours": 20.81,
+    "matchedTitle": "Resident Evil 6",
+    "gameId": 7725,
+    "url": "https://howlongtobeat.com/game/7725",
+    "checkedAt": "2026-07-06T18:23:41.089746+00:00"
+  },
+  "sniper elite 4": {
+    "title": "Sniper Elite 4",
+    "hltbHours": 10.71,
+    "matchedTitle": "Sniper Elite 4",
+    "gameId": 40715,
+    "url": "https://howlongtobeat.com/game/40715",
+    "checkedAt": "2026-07-06T18:23:42.917650+00:00"
+  },
+  "medieval ii total war kingdoms": {
+    "title": "Medieval II: Total War™ Kingdoms",
+    "hltbHours": 20.84,
+    "matchedTitle": "Medieval II: Total War: Kingdoms",
+    "gameId": 5793,
+    "url": "https://howlongtobeat.com/game/5793",
+    "checkedAt": "2026-07-06T18:23:46.348157+00:00"
+  },
+  "total war medieval ii definitive edition": {
+    "title": "Total War: MEDIEVAL II – Definitive Edition",
+    "hltbHours": 60.73,
+    "matchedTitle": "Total War: Empire - Definitive Edition",
+    "gameId": 116323,
+    "url": "https://howlongtobeat.com/game/116323",
+    "checkedAt": "2026-07-06T18:23:57.952207+00:00"
+  },
+  "thomas was alone": {
+    "title": "Thomas Was Alone",
+    "hltbHours": 3.53,
+    "matchedTitle": "Thomas Was Alone",
+    "gameId": 10306,
+    "url": "https://howlongtobeat.com/game/10306",
+    "checkedAt": "2026-07-06T18:23:59.623172+00:00"
+  },
+  "volume": {
+    "title": "Volume",
+    "hltbHours": 6.96,
+    "matchedTitle": "Volume",
+    "gameId": 29246,
+    "url": "https://howlongtobeat.com/game/29246",
+    "checkedAt": "2026-07-06T18:24:01.874592+00:00"
+  },
+  "kingdom hearts hd 1 5 2 5 remix": {
+    "title": "KINGDOM HEARTS -HD 1.5+2.5 ReMIX-",
+    "hltbHours": 112.88,
+    "matchedTitle": "Kingdom Hearts HD 1.5 + 2.5 ReMIX",
+    "gameId": 42802,
+    "url": "https://howlongtobeat.com/game/42802",
+    "checkedAt": "2026-07-06T18:24:34.671214+00:00"
+  },
+  "kyn": {
+    "title": "Kyn",
+    "hltbHours": 0.0,
+    "matchedTitle": "Kyn",
+    "gameId": 29432,
+    "url": "https://howlongtobeat.com/game/29432",
+    "checkedAt": "2026-07-06T18:24:36.585359+00:00"
+  },
+  "layers of fear 2016": {
+    "title": "Layers of Fear (2016)",
+    "hltbHours": 5.01,
+    "matchedTitle": "Layers of Fear 2",
+    "gameId": 67383,
+    "url": "https://howlongtobeat.com/game/67383",
+    "checkedAt": "2026-07-06T18:24:40.207785+00:00"
+  },
+  "divinity original sin 2 definitive edition": {
+    "title": "Divinity: Original Sin 2 - Definitive Edition",
+    "hltbHours": 60.21,
+    "matchedTitle": "Divinity: Original Sin - Enhanced Edition",
+    "gameId": 31400,
+    "url": "https://howlongtobeat.com/game/31400",
+    "checkedAt": "2026-07-06T18:24:51.194196+00:00"
   }
 }
