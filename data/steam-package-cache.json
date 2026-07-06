@@ -1,76 +1,874 @@
 {
-  "427289": 397540,
-  "1111230": 2515020,
-  "817628": 1546970,
-  "1004410": 934700,
-  "634166": 775500,
-  "1000794": 2552430,
-  "29197": null,
-  "785847": 920210,
-  "894783": 2144740,
-  "822364": 990080,
-  "1044729": null,
-  "215277": 582160,
-  "290658": 812140,
-  "791761": 2208920,
-  "77828": 379310,
-  "440247": 1265920,
-  "575970": null,
-  "242136": 488790,
-  "198297": null,
-  "568629": null,
-  "886310": null,
-  "238819": null,
-  "401587": 1172380,
-  "258527": 560130,
-  "411862": null,
-  "88801": null,
-  "452685": null,
-  "575623": 1369760,
-  "504022": null,
-  "538757": null,
-  "298833": 412020,
-  "29582": 241620,
-  "40061": 287630,
-  "272962": null,
-  "74024": 314560,
-  "36904": null,
-  "62118": 21690,
-  "76710": null,
-  "133812": 362960,
-  "132479": 436040,
-  "183038": 403640,
-  "149309": null,
-  "183036": 650410,
-  "56692": 319630,
-  "8500": null,
-  "207167": 435150,
-  "51209": 318550,
-  "69069": 355130,
-  "67170": null,
-  "64300": null,
-  "171306": 418460,
-  "65812": 268050,
-  "76077": 380150,
-  "128345": 347880,
-  "54109": null,
-  "116814": 391720,
-  "53424": null,
-  "111429": null,
-  "123425": 312660,
-  "71223": null,
-  "123216": null,
-  "53423": null,
-  "85500": 208650,
-  "110589": null,
-  "50854": null,
-  "68765": 332380,
-  "50980": 221040,
-  "48346": 333800,
-  "48515": null,
-  "76328": 244450,
-  "92660": 438640,
-  "460": 4780,
-  "17983": null,
-  "76083": 220780
+  "427289": {
+    "apps": [
+      {
+        "id": 397540,
+        "name": "Borderlands 3",
+        "type": "game"
+      },
+      {
+        "id": 1256890,
+        "name": "Borderlands 3: Digital Deluxe Extras",
+        "type": "dlc"
+      },
+      {
+        "id": 1233062,
+        "name": "Borderlands 3: Season Pass",
+        "type": "dlc"
+      }
+    ]
+  },
+  "1111230": {
+    "apps": [
+      {
+        "id": 2515020,
+        "name": "FINAL FANTASY XVI",
+        "type": "game"
+      },
+      {
+        "id": 2744050,
+        "name": "FINAL FANTASY XVI Echoes of the Fallen",
+        "type": "dlc"
+      },
+      {
+        "id": 2744060,
+        "name": "FINAL FANTASY XVI The Rising Tide",
+        "type": "dlc"
+      }
+    ]
+  },
+  "817628": {
+    "apps": [
+      {
+        "id": 1546970,
+        "name": "Grand Theft Auto III – The Definitive Edition",
+        "type": "game"
+      },
+      {
+        "id": 1547000,
+        "name": "Grand Theft Auto: San Andreas – The Definitive Edition",
+        "type": "game"
+      },
+      {
+        "id": 1546990,
+        "name": "Grand Theft Auto: Vice City – The Definitive Edition",
+        "type": "game"
+      }
+    ]
+  },
+  "1004410": {
+    "apps": [
+      {
+        "id": 934700,
+        "name": "Dead Island 2",
+        "type": "game"
+      },
+      {
+        "id": 2813050,
+        "name": "Dead Island 2 - Character Pack: Cyber Slayer Amy",
+        "type": "dlc"
+      },
+      {
+        "id": 2813070,
+        "name": "Dead Island 2 - Character Pack: Jungle Fantasy Ryan",
+        "type": "dlc"
+      },
+      {
+        "id": 2813040,
+        "name": "Dead Island 2 - Character Pack: Silver Star Jacob",
+        "type": "dlc"
+      },
+      {
+        "id": 2813080,
+        "name": "Dead Island 2 - Character Pack: Steel Horse Carla",
+        "type": "dlc"
+      },
+      {
+        "id": 2813090,
+        "name": "Dead Island 2 - Character Pack: Venice Vogue Bruno",
+        "type": "dlc"
+      },
+      {
+        "id": 2813110,
+        "name": "Dead Island 2 - Expansion Pass",
+        "type": "dlc"
+      },
+      {
+        "id": 2813010,
+        "name": "Dead Island 2 - Golden Weapons Pack",
+        "type": "dlc"
+      },
+      {
+        "id": 2667910,
+        "name": "Dead Island 2 - Kingdom Come: Deliverance II Weapons Pack",
+        "type": "dlc"
+      },
+      {
+        "id": 2813000,
+        "name": "Dead Island 2 - Memories of Banoi Pack",
+        "type": "dlc"
+      },
+      {
+        "id": 2813020,
+        "name": "Dead Island 2 - Pulp Weapons Pack",
+        "type": "dlc"
+      }
+    ]
+  },
+  "634166": {
+    "apps": [
+      {
+        "id": 775500,
+        "name": "SCARLET NEXUS",
+        "type": "game"
+      }
+    ]
+  },
+  "1000794": {
+    "apps": [
+      {
+        "id": 2552430,
+        "name": "KINGDOM HEARTS -HD 1.5+2.5 ReMIX-",
+        "type": "game"
+      },
+      {
+        "id": 2552440,
+        "name": "KINGDOM HEARTS HD 2.8 Final Chapter Prologue",
+        "type": "game"
+      },
+      {
+        "id": 2552450,
+        "name": "KINGDOM HEARTS III + Re Mind (DLC)",
+        "type": "game"
+      }
+    ]
+  },
+  "29197": {
+    "apps": []
+  },
+  "785847": {
+    "apps": [
+      {
+        "id": 920210,
+        "name": "LEGO® Star Wars™: The Skywalker Saga",
+        "type": "game"
+      },
+      {
+        "id": 2194991,
+        "name": "LEGO® Star Wars™: The Skywalker Saga Character Collection 1 & 2",
+        "type": "dlc"
+      }
+    ]
+  },
+  "894783": {
+    "apps": [
+      {
+        "id": 2144740,
+        "name": "Ghostrunner 2",
+        "type": "game"
+      }
+    ]
+  },
+  "822364": {
+    "apps": [
+      {
+        "id": 990080,
+        "name": "Hogwarts Legacy",
+        "type": "game"
+      },
+      {
+        "id": 1880837,
+        "name": "Hogwarts Legacy: Dark Arts Garrison Hat",
+        "type": "dlc"
+      },
+      {
+        "id": 1880832,
+        "name": "Hogwarts Legacy: Dark Arts Pack",
+        "type": "dlc"
+      }
+    ]
+  },
+  "1044729": {
+    "apps": []
+  },
+  "215277": {
+    "apps": [
+      {
+        "id": 582160,
+        "name": "Assassin's Creed® Origins",
+        "type": "game"
+      }
+    ]
+  },
+  "290658": {
+    "apps": [
+      {
+        "id": 812140,
+        "name": "Assassin's Creed® Odyssey",
+        "type": "game"
+      }
+    ]
+  },
+  "791761": {
+    "apps": [
+      {
+        "id": 2208920,
+        "name": "Assassin's Creed Valhalla",
+        "type": "game"
+      }
+    ]
+  },
+  "77828": {
+    "apps": [
+      {
+        "id": 336370,
+        "name": "LISA: Original Soundtrack + Art Collection",
+        "type": "dlc"
+      },
+      {
+        "id": 379310,
+        "name": "LISA: The Joyful",
+        "type": "dlc"
+      },
+      {
+        "id": 335670,
+        "name": "LISA: The Painful",
+        "type": "game"
+      }
+    ]
+  },
+  "440247": {
+    "apps": [
+      {
+        "id": 1265920,
+        "name": "Life is Strange Remastered",
+        "type": "game"
+      },
+      {
+        "id": 1265930,
+        "name": "Life is Strange: Before the Storm Remastered",
+        "type": "game"
+      }
+    ]
+  },
+  "575970": {
+    "apps": []
+  },
+  "242136": {
+    "apps": [
+      {
+        "id": 488790,
+        "name": "South Park™: The Fractured But Whole™",
+        "type": "game"
+      }
+    ]
+  },
+  "198297": {
+    "apps": []
+  },
+  "568629": {
+    "apps": []
+  },
+  "886310": {
+    "apps": []
+  },
+  "238819": {
+    "apps": []
+  },
+  "401587": {
+    "apps": [
+      {
+        "id": 1172380,
+        "name": "STAR WARS Jedi: Fallen Order™",
+        "type": "game"
+      }
+    ]
+  },
+  "258527": {
+    "apps": [
+      {
+        "id": 560130,
+        "name": "Pillars of Eternity II: Deadfire",
+        "type": "game"
+      },
+      {
+        "id": 821940,
+        "name": "Pillars of Eternity II: Deadfire - Beast of Winter",
+        "type": "dlc"
+      },
+      {
+        "id": 854290,
+        "name": "Pillars of Eternity II: Deadfire - Explorer's Pack",
+        "type": "dlc"
+      },
+      {
+        "id": 734830,
+        "name": "Pillars of Eternity II: Deadfire - Seeker, Slayer, Survivor",
+        "type": "dlc"
+      },
+      {
+        "id": 821950,
+        "name": "Pillars of Eternity II: Deadfire - The Forgotten Sanctum",
+        "type": "dlc"
+      }
+    ]
+  },
+  "411862": {
+    "apps": []
+  },
+  "88801": {
+    "apps": []
+  },
+  "452685": {
+    "apps": []
+  },
+  "575623": {
+    "apps": [
+      {
+        "id": 1369760,
+        "name": "NINJA GAIDEN 3: Razor's Edge [NINJA GAIDEN: Master Collection]",
+        "type": "game"
+      },
+      {
+        "id": 1580780,
+        "name": "NINJA GAIDEN Σ [NINJA GAIDEN: Master Collection]",
+        "type": "game"
+      },
+      {
+        "id": 1580790,
+        "name": "NINJA GAIDEN Σ2 [NINJA GAIDEN: Master Collection]",
+        "type": "game"
+      }
+    ]
+  },
+  "504022": {
+    "apps": []
+  },
+  "538757": {
+    "apps": []
+  },
+  "298833": {
+    "apps": [
+      {
+        "id": 412020,
+        "name": "Metro Exodus",
+        "type": "game"
+      },
+      {
+        "id": 889921,
+        "name": "Metro Exodus - Sam's Story",
+        "type": "dlc"
+      },
+      {
+        "id": 889920,
+        "name": "Metro Exodus - The Two Colonels",
+        "type": "dlc"
+      }
+    ]
+  },
+  "29582": {
+    "apps": [
+      {
+        "id": 241620,
+        "name": "Inquisitor",
+        "type": "game"
+      }
+    ]
+  },
+  "40061": {
+    "apps": [
+      {
+        "id": 287630,
+        "name": "The Council",
+        "type": "game"
+      }
+    ]
+  },
+  "272962": {
+    "apps": []
+  },
+  "74024": {
+    "apps": [
+      {
+        "id": 314560,
+        "name": "Kyn",
+        "type": "game"
+      }
+    ]
+  },
+  "36904": {
+    "apps": []
+  },
+  "62118": {
+    "apps": [
+      {
+        "id": 21690,
+        "name": "Resident Evil 5",
+        "type": "game"
+      }
+    ]
+  },
+  "76710": {
+    "apps": []
+  },
+  "133812": {
+    "apps": [
+      {
+        "id": 362960,
+        "name": "Tyranny",
+        "type": "game"
+      }
+    ]
+  },
+  "132479": {
+    "apps": [
+      {
+        "id": 436040,
+        "name": "METAL GEAR ONLINE \"BASIC APPEAL PACK\"",
+        "type": "dlc"
+      },
+      {
+        "id": 436050,
+        "name": "METAL GEAR ONLINE \"BATTLE APPEAL PACK\"",
+        "type": "dlc"
+      },
+      {
+        "id": 437230,
+        "name": "METAL GEAR ONLINE \"DANCE APPEAL PACK\"",
+        "type": "dlc"
+      },
+      {
+        "id": 437231,
+        "name": "METAL GEAR ONLINE \"HERO APPEAL PACK\"",
+        "type": "dlc"
+      },
+      {
+        "id": 436030,
+        "name": "METAL GEAR ONLINE EXPANSION PACK \"CLOAKED IN SILENCE\"",
+        "type": "dlc"
+      },
+      {
+        "id": 311340,
+        "name": "METAL GEAR SOLID V: GROUND ZEROES",
+        "type": "game"
+      },
+      {
+        "id": 287700,
+        "name": "METAL GEAR SOLID V: THE PHANTOM PAIN",
+        "type": "game"
+      },
+      {
+        "id": 406540,
+        "name": "METAL GEAR SOLID V: THE PHANTOM PAIN - Fatigues (Naked Snake)",
+        "type": "dlc"
+      },
+      {
+        "id": 406600,
+        "name": "METAL GEAR SOLID V: THE PHANTOM PAIN - Jumpsuit (EVA)",
+        "type": "dlc"
+      },
+      {
+        "id": 406620,
+        "name": "METAL GEAR SOLID V: THE PHANTOM PAIN - Parade Tack",
+        "type": "dlc"
+      },
+      {
+        "id": 406560,
+        "name": "METAL GEAR SOLID V: THE PHANTOM PAIN - Sneaking Suit (Naked Snake)",
+        "type": "dlc"
+      },
+      {
+        "id": 406590,
+        "name": "METAL GEAR SOLID V: THE PHANTOM PAIN - Sneaking Suit (The Boss)",
+        "type": "dlc"
+      },
+      {
+        "id": 406580,
+        "name": "METAL GEAR SOLID V: THE PHANTOM PAIN - Tuxedo",
+        "type": "dlc"
+      },
+      {
+        "id": 406610,
+        "name": "METAL GEAR SOLID V: THE PHANTOM PAIN - Western Tack",
+        "type": "dlc"
+      }
+    ]
+  },
+  "183038": {
+    "apps": [
+      {
+        "id": 403640,
+        "name": "Dishonored 2",
+        "type": "game"
+      },
+      {
+        "id": 614570,
+        "name": "Dishonored®: Death of the Outsider™",
+        "type": "game"
+      }
+    ]
+  },
+  "149309": {
+    "apps": []
+  },
+  "183036": {
+    "apps": [
+      {
+        "id": 650410,
+        "name": "Wolfenstein II: The Freedom Chronicles - Season Pass",
+        "type": "dlc"
+      },
+      {
+        "id": 612880,
+        "name": "Wolfenstein II: The New Colossus",
+        "type": "game"
+      }
+    ]
+  },
+  "56692": {
+    "apps": [
+      {
+        "id": 319630,
+        "name": "Life is Strange - Episode 1",
+        "type": "game"
+      },
+      {
+        "id": 329880,
+        "name": "Life is Strange - Episode 2",
+        "type": "dlc"
+      },
+      {
+        "id": 329910,
+        "name": "Life is Strange - Episode 3",
+        "type": "dlc"
+      },
+      {
+        "id": 329920,
+        "name": "Life is Strange - Episode 4",
+        "type": "dlc"
+      },
+      {
+        "id": 329930,
+        "name": "Life is Strange - Episode 5",
+        "type": "dlc"
+      }
+    ]
+  },
+  "8500": {
+    "apps": []
+  },
+  "207167": {
+    "apps": [
+      {
+        "id": 435150,
+        "name": "Divinity: Original Sin 2 - Definitive Edition",
+        "type": "game"
+      }
+    ]
+  },
+  "51209": {
+    "apps": [
+      {
+        "id": 318550,
+        "name": "Middle-earth: Shadow of Mordor - GOTY Edition Upgrade",
+        "type": "dlc"
+      },
+      {
+        "id": 241930,
+        "name": "Middle-earth™: Shadow of Mordor™",
+        "type": "game"
+      }
+    ]
+  },
+  "69069": {
+    "apps": [
+      {
+        "id": 355130,
+        "name": "MotoGP™15",
+        "type": "game"
+      }
+    ]
+  },
+  "67170": {
+    "apps": []
+  },
+  "64300": {
+    "apps": []
+  },
+  "171306": {
+    "apps": [
+      {
+        "id": 418460,
+        "name": "Rising Storm 2: Vietnam",
+        "type": "game"
+      },
+      {
+        "id": 629750,
+        "name": "Rising Storm 2: Vietnam - Digital Deluxe Edition Upgrade",
+        "type": "dlc"
+      }
+    ]
+  },
+  "65812": {
+    "apps": [
+      {
+        "id": 268050,
+        "name": "The Evil Within",
+        "type": "game"
+      },
+      {
+        "id": 354710,
+        "name": "The Evil Within - The Consequence",
+        "type": "dlc"
+      },
+      {
+        "id": 345980,
+        "name": "The Evil Within: The Assignment",
+        "type": "dlc"
+      },
+      {
+        "id": 359930,
+        "name": "The Evil Within: The Executioner",
+        "type": "dlc"
+      }
+    ]
+  },
+  "76077": {
+    "apps": [
+      {
+        "id": 380150,
+        "name": "STASIS",
+        "type": "game"
+      }
+    ]
+  },
+  "128345": {
+    "apps": [
+      {
+        "id": 347880,
+        "name": "Kombat Pack",
+        "type": "dlc"
+      },
+      {
+        "id": 524620,
+        "name": "Kombat Pack 2",
+        "type": "dlc"
+      },
+      {
+        "id": 307780,
+        "name": "Mortal Kombat X",
+        "type": "game"
+      }
+    ]
+  },
+  "54109": {
+    "apps": []
+  },
+  "116814": {
+    "apps": [
+      {
+        "id": 391720,
+        "name": "Layers of Fear (2016)",
+        "type": "game"
+      },
+      {
+        "id": 493530,
+        "name": "Layers of Fear: Inheritance",
+        "type": "dlc"
+      }
+    ]
+  },
+  "53424": {
+    "apps": []
+  },
+  "111429": {
+    "apps": []
+  },
+  "123425": {
+    "apps": [
+      {
+        "id": 312660,
+        "name": "Sniper Elite 4",
+        "type": "game"
+      }
+    ]
+  },
+  "71223": {
+    "apps": []
+  },
+  "123216": {
+    "apps": []
+  },
+  "53423": {
+    "apps": []
+  },
+  "85500": {
+    "apps": [
+      {
+        "id": 208650,
+        "name": "Batman™: Arkham Knight",
+        "type": "game"
+      },
+      {
+        "id": 367480,
+        "name": "Batman™: Arkham Knight Season Pass",
+        "type": "dlc"
+      }
+    ]
+  },
+  "110589": {
+    "apps": []
+  },
+  "50854": {
+    "apps": []
+  },
+  "68765": {
+    "apps": [
+      {
+        "id": 332380,
+        "name": "Asguaard",
+        "type": "game"
+      }
+    ]
+  },
+  "50980": {
+    "apps": [
+      {
+        "id": 221040,
+        "name": "Resident Evil 6",
+        "type": "game"
+      }
+    ]
+  },
+  "48346": {
+    "apps": [
+      {
+        "id": 333800,
+        "name": "Lords of the Fallen -  Ancient Labyrinth",
+        "type": "dlc"
+      },
+      {
+        "id": 317201,
+        "name": "Lords of the Fallen - Demonic Weapon Pack",
+        "type": "dlc"
+      },
+      {
+        "id": 317208,
+        "name": "Lords of the Fallen - Lion Heart Pack",
+        "type": "dlc"
+      },
+      {
+        "id": 317200,
+        "name": "Lords of the Fallen - Monk Decipher",
+        "type": "dlc"
+      },
+      {
+        "id": 317203,
+        "name": "Lords of the Fallen - The Arcane Boost",
+        "type": "dlc"
+      },
+      {
+        "id": 317202,
+        "name": "Lords of the Fallen - The Foundation Boost",
+        "type": "dlc"
+      },
+      {
+        "id": 327270,
+        "name": "Lords of the Fallen Soundtrack",
+        "type": "dlc"
+      },
+      {
+        "id": 265300,
+        "name": "Lords Of The Fallen™ 2014",
+        "type": "game"
+      },
+      {
+        "id": 328820,
+        "name": "Lords of the Fallen™ Artbook",
+        "type": "dlc"
+      }
+    ]
+  },
+  "48515": {
+    "apps": []
+  },
+  "76328": {
+    "apps": [
+      {
+        "id": 244450,
+        "name": "Men of War: Assault Squad 2",
+        "type": "game"
+      },
+      {
+        "id": 357760,
+        "name": "Men of War: Assault Squad 2 - Airborne",
+        "type": "dlc"
+      },
+      {
+        "id": 271850,
+        "name": "Men of War: Assault Squad 2 - Deluxe Edition upgrade",
+        "type": "dlc"
+      },
+      {
+        "id": 327130,
+        "name": "Men of War: Assault Squad 2 - Iron Fist",
+        "type": "dlc"
+      }
+    ]
+  },
+  "92660": {
+    "apps": [
+      {
+        "id": 438640,
+        "name": "LEGO® STAR WARS™: The Force Awakens",
+        "type": "game"
+      },
+      {
+        "id": 439241,
+        "name": "LEGO® Star Wars™: The Force Awakens - Season Pass",
+        "type": "dlc"
+      }
+    ]
+  },
+  "460": {
+    "apps": [
+      {
+        "id": 4780,
+        "name": "Medieval II: Total War™ Kingdoms",
+        "type": "game"
+      },
+      {
+        "id": 4700,
+        "name": "Total War: MEDIEVAL II – Definitive Edition",
+        "type": "game"
+      }
+    ]
+  },
+  "17983": {
+    "apps": []
+  },
+  "76083": {
+    "apps": [
+      {
+        "id": 220780,
+        "name": "Thomas Was Alone",
+        "type": "game"
+      },
+      {
+        "id": 365770,
+        "name": "Volume",
+        "type": "game"
+      },
+      {
+        "id": 395440,
+        "name": "Volume - Making of eBook",
+        "type": "dlc"
+      },
+      {
+        "id": 395441,
+        "name": "Volume - Original Soundtrack",
+        "type": "dlc"
+      }
+    ]
+  }
 }

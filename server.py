@@ -426,59 +426,141 @@ def parse_store_item_from_url(url: str | None) -> tuple[str, int | None]:
     return match.group(1).lower(), int(match.group(2))
 
 
-def fetch_package_base_app(package_id: int) -> int | None:
-    """Return the base app id for a Steam package (sub), or None.
+def fetch_package_apps(package_id: int) -> list[dict] | None:
+    """All apps contained in a Steam package (sub): [{"id", "name"}, ...] or None.
 
-    SteamGifts giveaways for editions/bundles link to /sub/<id>, but Steam tracks
-    playtime + achievements under the base /app/<id>. We resolve the first app in
-    the package (the base game for "Complete/Ultimate Edition" style packages).
+    None means the store has no data for the package (success=false); transient
+    network failures raise instead so callers can retry on a later run.
     """
     payload = fetch_json(f"https://store.steampowered.com/api/packagedetails?packageids={package_id}")
     entry = payload.get(str(package_id), {}) if isinstance(payload, dict) else {}
     if not entry.get("success"):
         return None
-    apps = entry.get("data", {}).get("apps") or []
-    if not apps:
+    apps = []
+    for app in entry.get("data", {}).get("apps") or []:
+        app_id = parse_int(app.get("id") if isinstance(app, dict) else app)
+        if app_id:
+            apps.append({"id": app_id, "name": str(app.get("name") or "") if isinstance(app, dict) else ""})
+    return apps or None
+
+
+def fetch_app_type(app_id: int) -> str:
+    """Steam store type for an app: "game", "dlc", "music", ... ("" if unknown)."""
+    payload = fetch_json(
+        f"https://store.steampowered.com/api/appdetails?{urlencode({'appids': str(app_id), 'filters': 'basic', 'l': 'english'})}"
+    )
+    data = (payload.get(str(app_id)) or {}).get("data") or {}
+    return str(data.get("type") or "")
+
+
+def get_package_cache_entry(package_id: int, cache: dict) -> dict | None:
+    """Cached package contents ({"apps": [{"id", "name", "type"}...]}), or None.
+
+    Legacy cache entries stored only the first app id (or null); those are
+    refetched once so multi-game collections are classified from the full app
+    list. None means a transient fetch failure — nothing is cached, retry later.
+    An empty "apps" list is a permanent store miss and is cached to avoid
+    re-fetching a dead package forever.
+    """
+    key = str(package_id)
+    entry = cache.get(key)
+    if isinstance(entry, dict) and isinstance(entry.get("apps"), list):
+        return entry
+    try:
+        apps = fetch_package_apps(package_id)
+        for app in apps or []:
+            app["type"] = fetch_app_type(app["id"]) or ""
+    except (HTTPError, URLError, TimeoutError, json.JSONDecodeError):
         return None
-    first = apps[0]
-    app_id = first.get("id") if isinstance(first, dict) else first
-    return parse_int(app_id) or None
+    entry = {"apps": apps or []}
+    cache[key] = entry
+    return entry
+
+
+def package_game_apps(entry: dict | None) -> list[dict]:
+    """The actual games in a cached package entry, excluding DLC/soundtracks.
+
+    An app with an unknown type (delisted, store fetch failed) counts as a game
+    so a real game is never silently dropped from a collection.
+    """
+    apps = entry.get("apps") if isinstance(entry, dict) else None
+    if not isinstance(apps, list):
+        return []
+    return [
+        app
+        for app in apps
+        if isinstance(app, dict) and parse_int(app.get("id")) and str(app.get("type") or "game") == "game"
+    ]
 
 
 def resolve_package_app_ids(sync_payload: dict) -> int:
-    """Resolve /sub/ giveaways to their base app id, once, with a persistent cache.
+    """Resolve /sub/ giveaways to their base game app id(s), with a persistent cache.
 
-    A giveaway is resolved at most once: after success it carries `packageId`
-    (the sub) and `appId` becomes the base app, and the resolver skips it forever.
-    A package is fetched from Steam at most once (cached in PACKAGE_CACHE_PATH),
-    so repeat runs do no network work for already-seen packages.
+    SteamGifts giveaways for editions/bundles link to /sub/<id>, but Steam tracks
+    playtime, HLTB and achievements per /app/<id>. Two shapes:
+
+    - Edition (one game, rest DLC — "Complete/Ultimate/GOTY Edition"): `appId`
+      becomes the base game's app id, deduping with plain giveaways of the same
+      game. DLC is ignored entirely.
+    - Multi-game collection (2+ games, e.g. KINGDOM HEARTS INTEGRUM): `appId`
+      stays the sub id (its own game identity) and `packageAppIds` lists the
+      contained games; HLTB and achievements are summed over them downstream.
+
+    Runs are idempotent: the desired ids are recomputed from the package cache
+    (no network for known packages) and rewritten only when they differ, so
+    older first-app resolutions self-heal. Win records snapshot their giveaway's
+    appId, so they are re-synced here too.
     """
     cache = load_json(PACKAGE_CACHE_PATH, {})
-    cache_dirty = False
+    cache_before = json.dumps(cache, sort_keys=True)
     resolved = 0
     for giveaway in sync_payload.get("giveaways", []):
-        if giveaway.get("packageId"):
-            continue  # already resolved — never re-check
         store_type, store_id = parse_store_item_from_url(giveaway.get("steamAppUrl"))
-        if store_type != "sub" or not store_id:
+        # The package (sub) id: a previously stored packageId, else a /sub/ URL.
+        package_id = parse_int(giveaway.get("packageId"), None) or (store_id if store_type == "sub" else None)
+        if not package_id:
             continue
-        key = str(store_id)
-        if key in cache:
-            base_app = cache[key]
+        entry = get_package_cache_entry(package_id, cache)
+        if entry is None:
+            continue  # transient fetch failure — retry next run
+        games = package_game_apps(entry)
+        if not games:
+            continue  # dead/empty package — leave the giveaway as-is
+        if len(games) == 1:
+            desired_app_id, component_ids = games[0]["id"], None
         else:
-            try:
-                base_app = fetch_package_base_app(store_id)
-            except (HTTPError, URLError, TimeoutError, json.JSONDecodeError):
-                continue  # transient failure — leave unresolved, retry next run
-            cache[key] = base_app
-            cache_dirty = True
-        if base_app:
-            giveaway["packageId"] = store_id
-            giveaway["appId"] = base_app
-            resolved += 1
-    if cache_dirty:
+            desired_app_id, component_ids = package_id, [app["id"] for app in games]
+        if (
+            parse_int(giveaway.get("packageId"), None) == package_id
+            and parse_int(giveaway.get("appId"), None) == desired_app_id
+            and (giveaway.get("packageAppIds") or None) == component_ids
+        ):
+            continue  # already in the desired shape
+        giveaway["packageId"] = package_id
+        giveaway["appId"] = desired_app_id
+        if component_ids:
+            giveaway["packageAppIds"] = component_ids
+        else:
+            giveaway.pop("packageAppIds", None)
+        resolved += 1
+
+    # Keep win records keyed to the same app as their giveaway, else the
+    # progress refresh would fetch achievements for the stale (sub) id.
+    app_id_by_code = {
+        giveaway.get("code"): giveaway.get("appId")
+        for giveaway in sync_payload.get("giveaways", [])
+        if giveaway.get("code") and giveaway.get("appId")
+    }
+    wins_updated = 0
+    for win in sync_payload.get("wins", []):
+        resolved_app = app_id_by_code.get(win.get("giveawayCode"))
+        if resolved_app and win.get("appId") != resolved_app:
+            win["appId"] = resolved_app
+            wins_updated += 1
+
+    if json.dumps(cache, sort_keys=True) != cache_before:
         save_json(PACKAGE_CACHE_PATH, cache)
-    if resolved:
+    if resolved or wins_updated:
         save_json(SYNC_PATH, sync_payload)
     return resolved
 
@@ -1479,6 +1561,13 @@ def refresh_steam_library(
         for giveaway in sync_payload.get("giveaways", [])
         if parse_int(giveaway.get("appId"))
     }
+    # Multi-game collections track playtime per contained game (summed later).
+    tracked_app_ids.update(
+        parse_int(component)
+        for giveaway in sync_payload.get("giveaways", [])
+        for component in giveaway.get("packageAppIds", [])
+        if parse_int(component)
+    )
     refreshed_profiles = 0
     error_profiles = 0
     missing_api_profiles = 0
@@ -1651,7 +1740,7 @@ def search_hltb(title: str) -> dict | None:
         )
 
 
-def choose_hltb_match(title: str, results: list[dict]) -> dict | None:
+def choose_hltb_match(title: str, results: list[dict], *, with_score: bool = False):
     normalized_title = normalize_title(title)
     best_match = None
     best_score = 0.0
@@ -1666,8 +1755,10 @@ def choose_hltb_match(title: str, results: list[dict]) -> dict | None:
             score += 0.25
         elif normalized_title in candidate or candidate in normalized_title:
             score += 0.1
+        # Strong penalty: a store name like "KINGDOM HEARTS III + Re Mind (DLC)"
+        # otherwise scores the Re Mind DLC entry above the Kingdom Hearts III game.
         if item.get("game_type") != "game":
-            score -= 0.15
+            score -= 0.25
         if not item.get("comp_main"):
             score -= 0.05
         if score > best_score:
@@ -1675,8 +1766,8 @@ def choose_hltb_match(title: str, results: list[dict]) -> dict | None:
             best_match = item
 
     if best_score < 0.45:
-        return None
-    return best_match
+        best_match = None
+    return (best_match, best_score) if with_score else best_match
 
 
 HLTB_MISS_RETRY = timedelta(days=7)
@@ -1706,14 +1797,45 @@ def hltb_entry_needs_retry(entry) -> bool:
     return datetime.now(timezone.utc) - checked_dt >= HLTB_MISS_RETRY
 
 
+def hltb_search_attempts(title: str) -> list[str]:
+    """Search-term variants for a title, tried in order until one matches.
+
+    HLTB's search AND-matches whitespace tokens and returns nothing for
+    punctuation-heavy store names ("KINGDOM HEARTS -HD 1.5+2.5 ReMIX-",
+    "KINGDOM HEARTS III + Re Mind (DLC)"). Try the raw title, then a cleaned
+    variant (no parentheticals/punctuation), then progressively drop trailing
+    tokens; choose_hltb_match's score threshold rejects bad broad matches.
+    """
+    attempts = [title.strip()]
+    cleaned = normalize_title(re.sub(r"\([^)]*\)", " ", title))
+    if cleaned and cleaned != attempts[0].lower():
+        attempts.append(cleaned)
+    tokens = cleaned.split()
+    while len(tokens) > 2 and len(attempts) < 6:
+        tokens = tokens[:-1]
+        attempts.append(" ".join(tokens))
+    return attempts
+
+
 def lookup_hltb_hours(title: str, cache: dict, *, force: bool = False) -> dict:
     cache_key = normalize_title(title)
     if not force and cache_key in cache:
         return cache[cache_key]
 
     try:
-        payload = search_hltb(title)
-        best_match = choose_hltb_match(title, payload.get("data", [])) if payload else None
+        # Keep the best match across attempts: a narrowed search ("kingdom hearts
+        # iii re mind") can surface only the DLC while a later attempt ("kingdom
+        # hearts iii") surfaces the real game. Stop early on a confident match so
+        # clean titles still cost a single search.
+        best_match = None
+        best_score = 0.0
+        for terms in hltb_search_attempts(title):
+            payload = search_hltb(terms)
+            match, score = choose_hltb_match(title, payload.get("data", []), with_score=True) if payload else (None, 0.0)
+            if match and score > best_score:
+                best_match, best_score = match, score
+            if best_score >= 0.9:
+                break
     except (HTTPError, URLError, TimeoutError, json.JSONDecodeError):
         best_match = None
 
@@ -1729,8 +1851,25 @@ def lookup_hltb_hours(title: str, cache: dict, *, force: bool = False) -> dict:
     return result
 
 
+def package_hltb_lookup_names(giveaway: dict, package_cache: dict) -> list[str]:
+    """HLTB search names for a package giveaway: its component games' store names.
+
+    A resolved edition ("FINAL FANTASY XVI COMPLETE EDITION") searches HLTB as its
+    base game; a multi-game collection searches each contained game and the hours
+    are summed by the caller. Returns [] for non-package giveaways, which search
+    by their own title.
+    """
+    package_id = parse_int(giveaway.get("packageId"), None)
+    if not package_id:
+        return []
+    entry = package_cache.get(str(package_id))
+    names = [str(app.get("name") or "").strip() for app in package_game_apps(entry)]
+    return [name for name in names if name]
+
+
 def enrich_sync_with_hltb(sync_payload: dict, *, remote_titles: set[str] | None = None) -> tuple[dict, list[dict]]:
     cache = load_json(HLTB_CACHE_PATH, {})
+    package_cache = load_json(PACKAGE_CACHE_PATH, {})
     changed = False
     hltb_items = []
     remote_title_keys = {
@@ -1738,23 +1877,48 @@ def enrich_sync_with_hltb(sync_payload: dict, *, remote_titles: set[str] | None 
         for title in (remote_titles or set())
         if normalize_title(title)
     }
-    all_titles = sorted(
-        {
-            giveaway.get("title")
-            for giveaway in sync_payload.get("giveaways", [])
-            if giveaway.get("title")
-        }
-    )
-    title_results = {}
-    for title in all_titles:
-        cache_key = normalize_title(title)
-        if not cache_key:
+    # Map each giveaway title to the names actually searched on HLTB: the title
+    # itself, or — for resolved packages — the contained games' store names, so
+    # "FINAL FANTASY XVI COMPLETE EDITION" searches as "FINAL FANTASY XVI" and
+    # multi-game collections sum over their games.
+    lookup_names_by_title = {}
+    for giveaway in sync_payload.get("giveaways", []):
+        title = giveaway.get("title")
+        if not title or title in lookup_names_by_title:
             continue
-        cached = cache.get(cache_key)
-        if (remote_titles is None or cache_key in remote_title_keys) and hltb_entry_needs_retry(cached):
-            cached = lookup_hltb_hours(title, cache, force=True)
-        if cached is not None:
-            title_results[title] = cached
+        names = package_hltb_lookup_names(giveaway, package_cache)
+        lookup_names_by_title[title] = names or [title]
+
+    name_results = {}
+    for title, names in sorted(lookup_names_by_title.items()):
+        in_scope = remote_titles is None or normalize_title(title) in remote_title_keys
+        for name in names:
+            cache_key = normalize_title(name)
+            if not cache_key or name in name_results:
+                continue
+            cached = cache.get(cache_key)
+            if in_scope and hltb_entry_needs_retry(cached):
+                cached = lookup_hltb_hours(name, cache, force=True)
+            if cached is not None:
+                name_results[name] = cached
+
+    title_results = {}
+    for title, names in lookup_names_by_title.items():
+        entries = [name_results[name] for name in names if name_results.get(name)]
+        if not entries:
+            continue
+        if len(names) == 1:
+            title_results[title] = entries[0]
+            continue
+        # Multi-game collection: total time is the sum of the games that have
+        # hours; missing lookups self-heal on later runs like any other miss.
+        hours = [entry.get("hltbHours") for entry in entries if entry.get("hltbHours")]
+        title_results[title] = {
+            "title": title,
+            "hltbHours": round(sum(hours), 2) if hours else None,
+            "matchedTitle": " + ".join(entry.get("matchedTitle") for entry in entries if entry.get("matchedTitle")),
+            "url": next((entry.get("url") for entry in entries if entry.get("url")), ""),
+        }
 
     for giveaway in sync_payload.get("giveaways", []):
         title = giveaway.get("title") or ""
@@ -1976,6 +2140,16 @@ def refresh_steam_progress(
     progress_cache = build_progress_cache(existing_progress_payload)
     steam_api_key = get_steam_api_key()
     steam_id_cache: dict[str, str] = {}
+    # Multi-game collections (KINGDOM HEARTS INTEGRUM etc.) key their progress on
+    # the sub id but play out across the contained games: achievements and
+    # playtime are fetched per component app and summed into the one entry.
+    package_components_by_app = {
+        parse_int(giveaway.get("appId")): [
+            parse_int(component) for component in giveaway.get("packageAppIds", []) if parse_int(component)
+        ]
+        for giveaway in sync_payload.get("giveaways", [])
+        if giveaway.get("packageAppIds") and parse_int(giveaway.get("appId"))
+    }
     seen = set()
     achievement_successes = 0
     achievement_errors = 0
@@ -1992,14 +2166,17 @@ def refresh_steam_progress(
             continue
         seen.add(key)
 
+        component_ids = package_components_by_app.get(int(app_id)) or [int(app_id)]
         cached_item = progress_cache.get((steam_profile, int(app_id)))
-        library_item = library_playtime_lookup.get((steam_profile, int(app_id)), {})
+        library_items = [library_playtime_lookup.get((steam_profile, component), {}) for component in component_ids]
         library_profile = library_profile_lookup.get(steam_profile, {})
-        api_playtime = library_item.get("playtimeHours")
+        component_playtimes = [item.get("playtimeHours") for item in library_items if item.get("playtimeHours") is not None]
+        api_playtime = round(sum(component_playtimes), 2) if component_playtimes else None
         if api_playtime is not None:
             library_playtime_hits += 1
 
-        progress_url = build_achievement_url(steam_profile, app_id)
+        # Point the profile link at a real app page (the sub id has none).
+        progress_url = build_achievement_url(steam_profile, component_ids[0])
         item = merge_progress_item(
             cached_item,
             username=username,
@@ -2009,7 +2186,7 @@ def refresh_steam_progress(
             progress_url=progress_url,
             api_playtime=api_playtime,
         )
-        item["playtimeSource"] = library_item.get("source", "")
+        item["playtimeSource"] = next((li.get("source") for li in library_items if li.get("source")), "")
         item["playtimeVisible"] = library_profile.get("playtimeVisible")
         item["gamesVisible"] = library_profile.get("gamesVisible")
 
@@ -2034,7 +2211,22 @@ def refresh_steam_progress(
             steam_id = extract_steam_id_from_profile(steam_profile, steam_api_key, steam_id_cache)
             if not steam_id:
                 raise RuntimeError("Could not resolve a Steam ID for achievements.")
-            item.update(fetch_player_achievements(steam_id, app_id, steam_api_key))
+            earned = 0
+            total = 0
+            visible = False
+            for component in component_ids:
+                result = fetch_player_achievements(steam_id, component, steam_api_key)
+                visible = visible or bool(result.get("visible"))
+                earned += parse_int(result.get("earnedAchievements"))
+                total += parse_int(result.get("totalAchievements"))
+            item.update(
+                {
+                    "visible": visible,
+                    "earnedAchievements": earned,
+                    "totalAchievements": total,
+                    "achievementPercent": round(earned / total * 100) if total else 0,
+                }
+            )
             if api_playtime is not None:
                 item["playtimeHours"] = api_playtime
             item["achievementsPlaytimeHours"] = api_playtime
@@ -2052,7 +2244,7 @@ def refresh_steam_progress(
                     progress_url=progress_url,
                     api_playtime=api_playtime,
                 )
-                item["playtimeSource"] = library_item.get("source", "")
+                item["playtimeSource"] = next((li.get("source") for li in library_items if li.get("source")), "")
                 item["playtimeVisible"] = library_profile.get("playtimeVisible")
                 item["gamesVisible"] = library_profile.get("gamesVisible")
                 cached_fallbacks += 1
