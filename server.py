@@ -2142,14 +2142,21 @@ def refresh_steam_progress(
     steam_id_cache: dict[str, str] = {}
     # Multi-game collections (KINGDOM HEARTS INTEGRUM etc.) key their progress on
     # the sub id but play out across the contained games: achievements and
-    # playtime are fetched per component app and summed into the one entry.
-    package_components_by_app = {
-        parse_int(giveaway.get("appId")): [
-            parse_int(component) for component in giveaway.get("packageAppIds", []) if parse_int(component)
+    # playtime are fetched per component app and summed into the one entry, and
+    # each game's name (from the package cache) labels its achievements link.
+    package_cache = load_json(PACKAGE_CACHE_PATH, {})
+    package_components_by_app = {}
+    for giveaway in sync_payload.get("giveaways", []):
+        giveaway_app_id = parse_int(giveaway.get("appId"))
+        if not giveaway.get("packageAppIds") or not giveaway_app_id:
+            continue
+        cache_entry = package_cache.get(str(parse_int(giveaway.get("packageId"), None) or ""))
+        names = {parse_int(app.get("id")): str(app.get("name") or "") for app in package_game_apps(cache_entry)}
+        package_components_by_app[giveaway_app_id] = [
+            {"appId": component, "name": names.get(component, "")}
+            for component in (parse_int(raw) for raw in giveaway.get("packageAppIds", []))
+            if component
         ]
-        for giveaway in sync_payload.get("giveaways", [])
-        if giveaway.get("packageAppIds") and parse_int(giveaway.get("appId"))
-    }
     seen = set()
     achievement_successes = 0
     achievement_errors = 0
@@ -2166,7 +2173,21 @@ def refresh_steam_progress(
             continue
         seen.add(key)
 
-        component_ids = package_components_by_app.get(int(app_id)) or [int(app_id)]
+        components = package_components_by_app.get(int(app_id)) or []
+        component_ids = [component["appId"] for component in components] or [int(app_id)]
+        # One achievements link per contained game so a collection win can be
+        # verified on every game; single-app wins keep the plain progressUrl.
+        progress_links = (
+            [
+                {
+                    "url": build_achievement_url(steam_profile, component["appId"]),
+                    "title": component["name"] or f"App {component['appId']}",
+                }
+                for component in components
+            ]
+            if len(components) > 1
+            else None
+        )
         cached_item = progress_cache.get((steam_profile, int(app_id)))
         library_items = [library_playtime_lookup.get((steam_profile, component), {}) for component in component_ids]
         library_profile = library_profile_lookup.get(steam_profile, {})
@@ -2189,6 +2210,10 @@ def refresh_steam_progress(
         item["playtimeSource"] = next((li.get("source") for li in library_items if li.get("source")), "")
         item["playtimeVisible"] = library_profile.get("playtimeVisible")
         item["gamesVisible"] = library_profile.get("gamesVisible")
+        if progress_links:
+            item["progressUrls"] = progress_links
+        else:
+            item.pop("progressUrls", None)
 
         # Achievements can only change when a game is played more, so skip the
         # per-game API call unless playtime increased since the last achievement
@@ -2247,6 +2272,10 @@ def refresh_steam_progress(
                 item["playtimeSource"] = next((li.get("source") for li in library_items if li.get("source")), "")
                 item["playtimeVisible"] = library_profile.get("playtimeVisible")
                 item["gamesVisible"] = library_profile.get("gamesVisible")
+                if progress_links:
+                    item["progressUrls"] = progress_links
+                else:
+                    item.pop("progressUrls", None)
                 cached_fallbacks += 1
             item["error"] = str(error)
 
@@ -2535,6 +2564,7 @@ PROGRESS_EXPORT_FIELDS = (
     "totalAchievements",
     "visible",
     "progressUrl",
+    "progressUrls",
     "popThresholdMetAt",
 )
 HLTB_EXPORT_FIELDS = ("appId", "title", "hltbHours")

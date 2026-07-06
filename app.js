@@ -2698,7 +2698,7 @@ function renderMonthlyDetailsTable(target, winsSubset, sortMode = elements.month
               ${effectiveMonth ? `<span class="meta-line">Counts in ${escapeHtml(formatMonthKey(effectiveMonth))}${win?.monthOverride ? " (manual override)" : ""}</span>` : ""}
               ${prereleaseNote ? `<span class="meta-line">${escapeHtml(prereleaseNote)}</span>` : ""}
             </div>
-            ${buildEvidenceNoteMarkup(win.evidenceNotes)}
+            ${buildEvidenceNoteMarkup(win.evidenceNotes, win.progressLinks)}
             <div class="row-actions">
               <button class="inline-action" data-edit-action="month" data-win-id="${win.id}">Edit month</button>
             </div>
@@ -4068,6 +4068,9 @@ function applySteamProgress(payload) {
     nextWin.evidenceNotes = progress.progressUrl
       ? `Steam sync: ${progress.progressUrl}`
       : nextWin.evidenceNotes;
+    // Multi-game collection: one achievements link per contained game.
+    nextWin.progressLinks =
+      Array.isArray(progress.progressUrls) && progress.progressUrls.length > 1 ? progress.progressUrls : null;
     return nextWin;
   });
 
@@ -5287,7 +5290,19 @@ function describeProgress(win, game, requiredHours, requiredAchievements, compli
   return progressBits.join(" • ");
 }
 
-function buildEvidenceNoteMarkup(note) {
+function buildEvidenceNoteMarkup(note, progressLinks) {
+  // A multi-game collection win tracks several apps; link each game's
+  // achievements page instead of the single default link.
+  if (Array.isArray(progressLinks) && progressLinks.length > 1) {
+    const links = progressLinks
+      .map(
+        (link) =>
+          `<a class="linked-title" href="${escapeHtml(String(link?.url || ""))}" target="_blank" rel="noreferrer">${escapeHtml(String(link?.title || "Achievements"))}</a>`,
+      )
+      .join(" • ");
+    return `<span class="meta-line">Steam sync achievements: ${links}</span>`;
+  }
+
   const value = String(note || "").trim();
   if (!value) {
     return "";
