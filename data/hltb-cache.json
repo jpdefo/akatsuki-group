@@ -14667,5 +14667,13 @@
     "gameId": 31400,
     "url": "https://howlongtobeat.com/game/31400",
     "checkedAt": "2026-07-06T18:24:51.194196+00:00"
+  },
+  "gravelord": {
+    "title": "Gravelord",
+    "hltbHours": 7.14,
+    "matchedTitle": "Gravelord",
+    "gameId": 158426,
+    "url": "https://howlongtobeat.com/game/158426",
+    "checkedAt": "2026-07-06T21:32:26.169188+00:00"
   }
 }
