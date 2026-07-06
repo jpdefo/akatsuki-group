@@ -168,7 +168,8 @@
     "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/1000794/capsule_231x87.jpg?t=1719510516"
   },
   "29197": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "785847": {
     "name": "LEGO® Star Wars™: The Skywalker Saga Galactic Edition",
@@ -225,7 +226,8 @@
     "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/822364/9ceb51a4a7d50af3e5949d38f4c9b8ac09d3f33f/capsule_231x87.jpg?t=1743609693"
   },
   "1044729": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "215277": {
     "name": "Assassin's Creed Origins - Gold Edition",
@@ -325,16 +327,20 @@
     "capsuleSmallUrl": ""
   },
   "198297": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "568629": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "886310": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "238819": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "401587": {
     "name": "STAR WARS Jedi: Fallen Order Deluxe Edition",
@@ -383,13 +389,16 @@
     "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/258527/capsule_231x87.jpg?t=1561495634"
   },
   "411862": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "88801": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "452685": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "575623": {
     "name": "NINJA GAIDEN: Master Collection",
@@ -415,10 +424,12 @@
     "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/575623/capsule_231x87.jpg?t=1623364941"
   },
   "504022": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "538757": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "298833": {
     "name": "Metro Exodus - Gold Edition",
@@ -470,7 +481,8 @@
     "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/40061/capsule_231x87.jpg?t=1585085524"
   },
   "272962": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "74024": {
     "name": "Kyn Deluxe Edition",
@@ -486,7 +498,8 @@
     "capsuleSmallUrl": ""
   },
   "36904": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "62118": {
     "name": "Resident Evil 5 Gold Edition",
@@ -502,7 +515,8 @@
     "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/62118/capsule_231x87.jpg?t=1707269157"
   },
   "76710": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "133812": {
     "name": "Tyranny - Deluxe Edition",
@@ -614,7 +628,8 @@
     "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/183038/capsule_231x87.jpg?t=1505447818"
   },
   "149309": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "183036": {
     "name": "Wolfenstein II: The New Colossus Digital Deluxe Edition",
@@ -668,7 +683,8 @@
     "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/56692/capsule_231x87.jpg?t=1509147192"
   },
   "8500": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "207167": {
     "name": "Divinity: Original Sin 2 - Divine Edition",
@@ -715,10 +731,12 @@
     "capsuleSmallUrl": ""
   },
   "67170": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "64300": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "171306": {
     "name": "Rising Storm 2: Vietnam - Digital Deluxe Edition",
@@ -803,7 +821,8 @@
     "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/128345/capsule_231x87.jpg?t=1698957925"
   },
   "54109": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "116814": {
     "name": "Layers of Fear: Masterpiece Edition",
@@ -824,10 +843,12 @@
     "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/116814/capsule_231x87.jpg?t=1646423557"
   },
   "53424": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "111429": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "123425": {
     "name": "Sniper Elite 4 Deluxe Edition",
@@ -843,13 +864,16 @@
     "capsuleSmallUrl": ""
   },
   "71223": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "123216": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "53423": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "85500": {
     "name": "Batman: Arkham Knight Premium Edition",
@@ -870,10 +894,12 @@
     "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/85500/capsule_231x87.jpg?t=1454540990"
   },
   "110589": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "50854": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "68765": {
     "name": "Asguaard - Deluxe Edition (contains Game+Guide+Goodies)",
@@ -955,7 +981,8 @@
     "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/48346/capsule_231x87.jpg?t=1661279288"
   },
   "48515": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "76328": {
     "name": "Men of War: Assault Squad 2 - Gold Edition",
@@ -1022,7 +1049,8 @@
     "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/460/capsule_231x87.jpg?t=1769130741"
   },
   "17983": {
-    "apps": []
+    "apps": [],
+    "headerImageUrl": ""
   },
   "76083": {
     "name": "Volume: Quadrilateral Edition",
