@@ -1,7 +1,7 @@
 {
   "source": "akatsuki-steamgifts-sync",
   "collectorVersion": "1.13.1",
-  "syncedAt": "2026-07-05T21:40:05.721Z",
+  "syncedAt": "2026-07-06T14:12:05.060Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -2293,9 +2293,15 @@
       "points": 20,
       "entriesCount": 4,
       "endDate": "2026-06-30T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "burntreynolds444",
+          "profileUrl": "https://www.steamgifts.com/user/burntreynolds444",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "burntreynolds444",
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayMonthOverride": "2026-06",
@@ -2306,7 +2312,7 @@
       "steamStoreId": 1875580,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1875580/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1875580/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1875580/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1875580/5f701d40d2fdba63cec85579f481b5abad2c92a9/capsule_184x69.jpg",
       "startDate": "2026-06-02T13:08:58.000Z",
       "penaltyForCode": ""
     },
@@ -148643,7 +148649,7 @@
         "leniu"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:34.436Z",
+      "entriesSnapshotAt": "2026-07-06T14:12:03.574Z",
       "hltbHours": 27.96
     },
     {
@@ -149809,9 +149815,15 @@
       "entriesCount": 2,
       "startDate": "2026-06-28T07:55:20.000Z",
       "endDate": "2026-07-04T07:00:00.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "Koalala",
+          "profileUrl": "https://www.steamgifts.com/user/Koalala",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "Koalala",
       "regionRestricted": false,
       "giveawayKind": "summer_event",
       "giveawayMonthOverride": "",
@@ -149821,8 +149833,8 @@
         "Oozyyy",
         "Koalala"
       ],
-      "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:33.233Z",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-07-06T14:12:02.710Z",
       "hltbHours": 34.72
     },
     {
@@ -149917,9 +149929,15 @@
       "entriesCount": 3,
       "startDate": "2026-06-28T14:39:50.000Z",
       "endDate": "2026-07-05T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "BojanNS987",
+          "profileUrl": "https://www.steamgifts.com/user/BojanNS987",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "BojanNS987",
       "regionRestricted": false,
       "giveawayKind": "summer_event",
       "giveawayMonthOverride": "",
@@ -149930,8 +149948,8 @@
         "leniu",
         "BojanNS987"
       ],
-      "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:27.805Z",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-07-06T14:11:58.243Z",
       "hltbHours": 12.27
     },
     {
@@ -149962,7 +149980,7 @@
         "Millsshogun"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:28.302Z",
+      "entriesSnapshotAt": "2026-07-06T14:11:58.757Z",
       "hltbHours": 16.03
     },
     {
@@ -149995,7 +150013,7 @@
         "burntreynolds444"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:28.801Z",
+      "entriesSnapshotAt": "2026-07-06T14:11:59.275Z",
       "hltbHours": 14.61
     },
     {
@@ -150013,9 +150031,15 @@
       "entriesCount": 4,
       "startDate": "2026-06-28T14:27:59.000Z",
       "endDate": "2026-07-05T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "Wintermute101",
+          "profileUrl": "https://www.steamgifts.com/user/Wintermute101",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "Wintermute101",
       "regionRestricted": false,
       "giveawayKind": "summer_event",
       "giveawayMonthOverride": "",
@@ -150027,8 +150051,8 @@
         "burntreynolds444",
         "Wintermute101"
       ],
-      "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:29.305Z"
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-07-06T14:11:59.642Z"
     },
     {
       "code": "qLDJR",
@@ -150045,9 +150069,15 @@
       "entriesCount": 1,
       "startDate": "2026-06-28T14:25:54.000Z",
       "endDate": "2026-07-05T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "burntreynolds444",
+          "profileUrl": "https://www.steamgifts.com/user/burntreynolds444",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "burntreynolds444",
       "regionRestricted": false,
       "giveawayKind": "summer_event",
       "giveawayMonthOverride": "",
@@ -150056,8 +150086,8 @@
       "entryUsers": [
         "burntreynolds444"
       ],
-      "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:29.809Z",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-07-06T14:12:00.011Z",
       "hltbHours": 54.76
     },
     {
@@ -150103,9 +150133,15 @@
       "entriesCount": 4,
       "startDate": "2026-06-28T14:22:38.000Z",
       "endDate": "2026-07-05T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "Ernesttico",
+          "profileUrl": "https://www.steamgifts.com/user/Ernesttico",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "Ernesttico",
       "regionRestricted": false,
       "giveawayKind": "summer_event",
       "giveawayMonthOverride": "",
@@ -150117,8 +150153,8 @@
         "Ernesttico",
         "Wintermute101"
       ],
-      "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:30.327Z",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-07-06T14:12:00.563Z",
       "packageId": 1111230
     },
     {
@@ -150136,9 +150172,15 @@
       "entriesCount": 6,
       "startDate": "2026-06-28T14:21:19.000Z",
       "endDate": "2026-07-05T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "BojanNS987",
+          "profileUrl": "https://www.steamgifts.com/user/BojanNS987",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "BojanNS987",
       "regionRestricted": false,
       "giveawayKind": "summer_event",
       "giveawayMonthOverride": "",
@@ -150152,8 +150194,8 @@
         "BojanNS987",
         "Wintermute101"
       ],
-      "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:30.843Z",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-07-06T14:12:00.949Z",
       "hltbHours": 21.07
     },
     {
@@ -150171,9 +150213,15 @@
       "entriesCount": 1,
       "startDate": "2026-06-28T14:19:12.000Z",
       "endDate": "2026-07-05T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "Horseflesh",
+          "profileUrl": "https://www.steamgifts.com/user/Horseflesh",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "Horseflesh",
       "regionRestricted": false,
       "giveawayKind": "summer_event",
       "giveawayMonthOverride": "",
@@ -150182,8 +150230,8 @@
       "entryUsers": [
         "Horseflesh"
       ],
-      "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:31.345Z"
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-07-06T14:12:01.345Z"
     },
     {
       "code": "qiVA9",
@@ -150212,7 +150260,7 @@
         "Oozyyy"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:31.853Z",
+      "entriesSnapshotAt": "2026-07-06T14:12:01.875Z",
       "hltbHours": 14.2
     },
     {
@@ -150366,7 +150414,7 @@
         "Ernesttico"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:25.400Z",
+      "entriesSnapshotAt": "2026-07-06T14:11:55.938Z",
       "hltbHours": 6.19
     },
     {
@@ -150394,7 +150442,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:25.770Z",
+      "entriesSnapshotAt": "2026-07-06T14:11:56.307Z",
       "hltbHours": 4.61
     },
     {
@@ -150500,7 +150548,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:32.722Z",
+      "entriesSnapshotAt": "2026-07-06T14:12:02.344Z",
       "hltbHours": 64.62
     },
     {
@@ -150575,7 +150623,7 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3010850/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3010850/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3010850/d0917fcdbf27faffb3380f6f67e71e90f84b7ed5/capsule_184x69.jpg",
-      "entriesCount": 6,
+      "entriesCount": 7,
       "startDate": "2026-07-02T10:09:03.000Z",
       "endDate": "2026-07-06T18:00:00.000Z",
       "winners": [],
@@ -150587,6 +150635,7 @@
       "penaltyForCode": "",
       "giveawayKindChecked": true,
       "entryUsers": [
+        "Millsshogun",
         "Koalala",
         "Ernesttico",
         "chOOkity",
@@ -150595,7 +150644,7 @@
         "Horseflesh"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:18.115Z"
+      "entriesSnapshotAt": "2026-07-06T14:11:49.326Z"
     },
     {
       "code": "QvaE3",
@@ -150692,9 +150741,15 @@
       "entriesCount": 5,
       "startDate": "2026-07-02T18:55:13.000Z",
       "endDate": "2026-07-05T19:00:00.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "BojanNS987",
+          "profileUrl": "https://www.steamgifts.com/user/BojanNS987",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "BojanNS987",
       "regionRestricted": false,
       "giveawayKind": "summer_event",
       "giveawayMonthOverride": "",
@@ -150707,8 +150762,8 @@
         "BojanNS987",
         "Horseflesh"
       ],
-      "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:26.267Z",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-07-06T14:11:57.172Z",
       "hltbHours": 8.02
     },
     {
@@ -150764,9 +150819,15 @@
       "entriesCount": 3,
       "startDate": "2026-07-02T18:47:05.000Z",
       "endDate": "2026-07-05T19:00:00.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "Oozyyy",
+          "profileUrl": "https://www.steamgifts.com/user/Oozyyy",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "Oozyyy",
       "regionRestricted": false,
       "giveawayKind": "summer_event",
       "giveawayMonthOverride": "",
@@ -150777,8 +150838,8 @@
         "BojanNS987",
         "burntreynolds444"
       ],
-      "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:26.769Z",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-07-06T14:11:57.538Z",
       "hltbHours": 10.77
     },
     {
@@ -150796,9 +150857,15 @@
       "entriesCount": 1,
       "startDate": "2026-07-02T18:45:09.000Z",
       "endDate": "2026-07-05T19:00:00.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "WNDRLST",
+          "profileUrl": "https://www.steamgifts.com/user/WNDRLST",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "WNDRLST",
       "regionRestricted": false,
       "giveawayKind": "summer_event",
       "giveawayMonthOverride": "",
@@ -150807,8 +150874,8 @@
       "entryUsers": [
         "WNDRLST"
       ],
-      "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:27.301Z"
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-07-06T14:11:57.902Z"
     },
     {
       "code": "DrIzK",
@@ -150822,7 +150889,7 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1699230/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1699230/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1699230/9e764d97b5793e6556d78e51b6f1e552e1eec5a5/capsule_184x69.jpg",
-      "entriesCount": 3,
+      "entriesCount": 2,
       "startDate": "2026-07-02T23:16:04.000Z",
       "endDate": "2026-07-06T18:00:00.000Z",
       "winners": [],
@@ -150834,12 +150901,11 @@
       "penaltyForCode": "",
       "giveawayKindChecked": true,
       "entryUsers": [
-        "chOOkity",
         "Horseflesh",
         "BojanNS987"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:16.609Z"
+      "entriesSnapshotAt": "2026-07-06T14:11:47.783Z"
     },
     {
       "code": "DEY6Z",
@@ -150871,7 +150937,7 @@
         "BojanNS987"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:17.103Z"
+      "entriesSnapshotAt": "2026-07-06T14:11:48.306Z"
     },
     {
       "code": "V7dnW",
@@ -150900,7 +150966,7 @@
         "Horseflesh"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:17.604Z"
+      "entriesSnapshotAt": "2026-07-06T14:11:48.813Z"
     },
     {
       "code": "5NuvW",
@@ -150918,8 +150984,8 @@
       "startDate": "2026-07-03T09:54:42.000Z",
       "endDate": "2026-07-06T10:53:00.000Z",
       "winners": [],
-      "resultStatus": "open",
-      "resultLabel": "Open",
+      "resultStatus": "awaiting_feedback",
+      "resultLabel": "Awaiting feedback",
       "regionRestricted": false,
       "giveawayKind": "summer_event",
       "giveawayMonthOverride": "",
@@ -150929,7 +150995,7 @@
         "Ernesttico"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:16.101Z",
+      "entriesSnapshotAt": "2026-07-06T14:11:56.814Z",
       "hltbHours": 26.27
     },
     {
@@ -150964,13 +151030,13 @@
         "Horseflesh"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:22.490Z",
+      "entriesSnapshotAt": "2026-07-06T14:11:53.367Z",
       "hltbHours": 62.73
     },
     {
       "code": "ZvvXe",
       "url": "https://www.steamgifts.com/giveaway/ZvvXe/dying-light-2-stay-human-reloaded-edition",
-      "title": "Dying Light 2 Stay Human: Reloaded Edition",
+      "title": "Dying Light 2 Stay Human: Reloaded Ed...",
       "creatorUsername": "Ernesttico",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Ernesttico",
       "appId": 534380,
@@ -150994,7 +151060,7 @@
         "Koalala"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:19.777Z"
+      "entriesSnapshotAt": "2026-07-06T14:11:50.904Z"
     },
     {
       "code": "c5PFG",
@@ -151023,7 +151089,7 @@
         "Koalala"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:20.283Z",
+      "entriesSnapshotAt": "2026-07-06T14:11:51.402Z",
       "hltbHours": 24.69
     },
     {
@@ -151054,7 +151120,7 @@
         "Millsshogun"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:20.783Z",
+      "entriesSnapshotAt": "2026-07-06T14:11:51.827Z",
       "hltbHours": 17.63
     },
     {
@@ -151087,7 +151153,7 @@
         "chOOkity"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:21.282Z",
+      "entriesSnapshotAt": "2026-07-06T14:11:52.340Z",
       "hltbHours": 10.71
     },
     {
@@ -151119,7 +151185,7 @@
         "leniu"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:21.991Z",
+      "entriesSnapshotAt": "2026-07-06T14:11:52.853Z",
       "hltbHours": 38.23
     },
     {
@@ -151152,7 +151218,7 @@
         "burntreynolds444"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:18.767Z",
+      "entriesSnapshotAt": "2026-07-06T14:11:49.800Z",
       "packageId": 1111230
     },
     {
@@ -151185,7 +151251,7 @@
         "Koalala"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:19.271Z"
+      "entriesSnapshotAt": "2026-07-06T14:11:50.399Z"
     },
     {
       "code": "eR2uH",
@@ -151212,7 +151278,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:22.852Z",
+      "entriesSnapshotAt": "2026-07-06T14:11:53.693Z",
       "hltbHours": 30.53
     },
     {
@@ -151242,7 +151308,7 @@
         "chOOkity"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:23.355Z",
+      "entriesSnapshotAt": "2026-07-06T14:11:54.108Z",
       "hltbHours": 23.57
     },
     {
@@ -151272,7 +151338,7 @@
         "Ernesttico"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:23.856Z",
+      "entriesSnapshotAt": "2026-07-06T14:11:54.524Z",
       "hltbHours": 35.47
     },
     {
@@ -151300,7 +151366,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:24.216Z"
+      "entriesSnapshotAt": "2026-07-06T14:11:54.894Z"
     },
     {
       "code": "vorU2",
@@ -151329,7 +151395,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-05T21:38:24.893Z",
+      "entriesSnapshotAt": "2026-07-06T14:11:55.415Z",
       "hltbHours": 72.35
     }
   ],
@@ -151359,6 +151425,15 @@
       "winnerUsername": "zettaivanugen",
       "creatorUsername": "Horseflesh",
       "entriesCount": 3,
+      "winDate": "2026-06-30T18:00:00.000Z"
+    },
+    {
+      "giveawayCode": "ezoJp",
+      "title": "Mina the Hollower",
+      "appId": 1875580,
+      "winnerUsername": "burntreynolds444",
+      "creatorUsername": "chOOkity",
+      "entriesCount": 4,
       "winDate": "2026-06-30T18:00:00.000Z"
     },
     {
@@ -151867,7 +151942,7 @@
     },
     {
       "giveawayCode": "LgQJ6",
-      "title": "FINAL FANTASY TACTICS - The Ivalice C...",
+      "title": "FINAL FANTASY TACTICS - The Ivalice Chronicles",
       "appId": 1004640,
       "winnerUsername": "xMisiu",
       "creatorUsername": "Youdontknow",
@@ -151930,7 +152005,7 @@
     },
     {
       "giveawayCode": "3Klb9",
-      "title": "The Elder Scrolls IV: Oblivion Remast...",
+      "title": "The Elder Scrolls IV: Oblivion Remastered",
       "appId": 2623190,
       "winnerUsername": "Drain",
       "creatorUsername": "leniu",
@@ -152083,7 +152158,7 @@
     },
     {
       "giveawayCode": "aQMBR",
-      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "title": "RoboCop: Rogue City - Unfinished Business",
       "appId": 3527760,
       "winnerUsername": "Wintermute101",
       "creatorUsername": "Koalala",
@@ -152182,7 +152257,7 @@
     },
     {
       "giveawayCode": "44g1j",
-      "title": "RAIDOU Remastered: The Mystery of the...",
+      "title": "RAIDOU Remastered: The Mystery of the Soulless Army",
       "appId": 2288350,
       "winnerUsername": "Wintermute101",
       "creatorUsername": "Youdontknow",
@@ -152434,7 +152509,7 @@
     },
     {
       "giveawayCode": "UtTqc",
-      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "title": "RoboCop: Rogue City - Unfinished Business",
       "appId": 3527760,
       "winnerUsername": "Ernesttico",
       "creatorUsername": "Wintermute101",
@@ -152569,7 +152644,7 @@
     },
     {
       "giveawayCode": "6lDgn",
-      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "title": "RoboCop: Rogue City - Unfinished Business",
       "appId": 3527760,
       "winnerUsername": "Horseflesh",
       "creatorUsername": "leniu",
@@ -187110,6 +187185,15 @@
       "winDate": "2026-07-04T07:00:00.000Z"
     },
     {
+      "giveawayCode": "KFN0C",
+      "title": "The First Berserker: Khazan",
+      "appId": 2680010,
+      "winnerUsername": "Koalala",
+      "creatorUsername": "BojanNS987",
+      "entriesCount": 2,
+      "winDate": "2026-07-04T07:00:00.000Z"
+    },
+    {
       "giveawayCode": "MN9kJ",
       "title": "Marvel's Spider-Man 2",
       "appId": 2651280,
@@ -187126,6 +187210,60 @@
       "creatorUsername": "BojanNS987",
       "entriesCount": 2,
       "winDate": "2026-07-04T07:00:00.000Z"
+    },
+    {
+      "giveawayCode": "s8UGv",
+      "title": "Mafia: The Old Country",
+      "appId": 1941540,
+      "winnerUsername": "BojanNS987",
+      "creatorUsername": "chOOkity",
+      "entriesCount": 3,
+      "winDate": "2026-07-05T18:00:00.000Z"
+    },
+    {
+      "giveawayCode": "qcgL3",
+      "title": "High On Life 2",
+      "appId": 2069250,
+      "winnerUsername": "Wintermute101",
+      "creatorUsername": "chOOkity",
+      "entriesCount": 4,
+      "winDate": "2026-07-05T18:00:00.000Z"
+    },
+    {
+      "giveawayCode": "qLDJR",
+      "title": "Kingdom Come: Deliverance II",
+      "appId": 1771300,
+      "winnerUsername": "burntreynolds444",
+      "creatorUsername": "chOOkity",
+      "entriesCount": 1,
+      "winDate": "2026-07-05T18:00:00.000Z"
+    },
+    {
+      "giveawayCode": "ox8al",
+      "title": "FINAL FANTASY XVI COMPLETE EDITION",
+      "appId": 1111230,
+      "winnerUsername": "Ernesttico",
+      "creatorUsername": "chOOkity",
+      "entriesCount": 4,
+      "winDate": "2026-07-05T18:00:00.000Z"
+    },
+    {
+      "giveawayCode": "qSrh7",
+      "title": "ZERO PARADES: For Dead Spies",
+      "appId": 2863680,
+      "winnerUsername": "BojanNS987",
+      "creatorUsername": "chOOkity",
+      "entriesCount": 6,
+      "winDate": "2026-07-05T18:00:00.000Z"
+    },
+    {
+      "giveawayCode": "yMkWL",
+      "title": "Deep Rock Galactic: Rogue Core",
+      "appId": 2605790,
+      "winnerUsername": "Horseflesh",
+      "creatorUsername": "chOOkity",
+      "entriesCount": 1,
+      "winDate": "2026-07-05T18:00:00.000Z"
     },
     {
       "giveawayCode": "kMXUO",
@@ -187191,12 +187329,39 @@
       "winDate": "2026-07-05T17:00:00.000Z"
     },
     {
+      "giveawayCode": "Ua8Vk",
+      "title": "Until Dawn",
+      "appId": 2172010,
+      "winnerUsername": "BojanNS987",
+      "creatorUsername": "leniu",
+      "entriesCount": 5,
+      "winDate": "2026-07-05T19:00:00.000Z"
+    },
+    {
       "giveawayCode": "a8tJo",
       "title": "Blades of Fire",
       "appId": 2091020,
       "winnerUsername": "burntreynolds444",
       "creatorUsername": "leniu",
       "entriesCount": 3,
+      "winDate": "2026-07-05T19:00:00.000Z"
+    },
+    {
+      "giveawayCode": "Db1N9",
+      "title": "Total Chaos",
+      "appId": 2208350,
+      "winnerUsername": "Oozyyy",
+      "creatorUsername": "leniu",
+      "entriesCount": 3,
+      "winDate": "2026-07-05T19:00:00.000Z"
+    },
+    {
+      "giveawayCode": "a5Ra7",
+      "title": "Sunderfolk",
+      "appId": 2414270,
+      "winnerUsername": "WNDRLST",
+      "creatorUsername": "leniu",
+      "entriesCount": 1,
       "winDate": "2026-07-05T19:00:00.000Z"
     }
   ]
