@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-06T18:27:00.287507+00:00",
+  "updatedAt": "2026-07-06T18:31:58.754361+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -29630,7 +29630,7 @@
       "appId": 1663850,
       "title": "REPLACED",
       "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/1663850/achievements/",
-      "playtimeHours": 6.9,
+      "playtimeHours": 7.4,
       "visible": true,
       "earnedAchievements": 7,
       "totalAchievements": 34,
@@ -29639,7 +29639,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 6.9,
+      "achievementsPlaytimeHours": 7.4,
       "popThresholdMetAt": "2026-07-05T08:36:55.337297+00:00"
     },
     {
@@ -42850,11 +42850,11 @@
       "url": "https://howlongtobeat.com/game/7676"
     },
     {
-      "title": "FINAL FANTASY TACTICS - The Ivalice C...",
+      "title": "FINAL FANTASY TACTICS - The Ivalice Chronicles",
       "appId": 1004640,
-      "hltbHours": 36.93,
-      "matchedTitle": "Final Fantasy Tactics: The Ivalice Chronicles",
-      "url": "https://howlongtobeat.com/game/169173"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "Cast n Chill",
@@ -42899,9 +42899,9 @@
       "url": "https://howlongtobeat.com/game/141849"
     },
     {
-      "title": "The Elder Scrolls IV: Oblivion Remast...",
+      "title": "The Elder Scrolls IV: Oblivion Remastered",
       "appId": 2623190,
-      "hltbHours": 17.36,
+      "hltbHours": 17.5,
       "matchedTitle": "The Elder Scrolls IV: Oblivion Remastered",
       "url": "https://howlongtobeat.com/game/166969"
     },
@@ -43018,7 +43018,7 @@
       "url": "https://howlongtobeat.com/game/165177"
     },
     {
-      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "title": "RoboCop: Rogue City - Unfinished Business",
       "appId": 3527760,
       "hltbHours": 7.81,
       "matchedTitle": "RoboCop: Rogue City - Unfinished Business",
@@ -43102,7 +43102,7 @@
       "url": "https://howlongtobeat.com/game/65945"
     },
     {
-      "title": "RAIDOU Remastered: The Mystery of the...",
+      "title": "RAIDOU Remastered: The Mystery of the Soulless Army",
       "appId": 2288350,
       "hltbHours": 18.96,
       "matchedTitle": "Raidou Remastered: The Mystery of the Soulless Army",
@@ -43319,7 +43319,7 @@
       "url": "https://howlongtobeat.com/game/132803"
     },
     {
-      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "title": "RoboCop: Rogue City - Unfinished Business",
       "appId": 3527760,
       "hltbHours": 7.81,
       "matchedTitle": "RoboCop: Rogue City - Unfinished Business",
@@ -43431,7 +43431,7 @@
       "url": "https://howlongtobeat.com/game/110165"
     },
     {
-      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "title": "RoboCop: Rogue City - Unfinished Business",
       "appId": 3527760,
       "hltbHours": 7.81,
       "matchedTitle": "RoboCop: Rogue City - Unfinished Business",
@@ -45916,7 +45916,7 @@
       "url": "https://howlongtobeat.com/game/100074"
     },
     {
-      "title": "LEGO Star Wars: The Skywalker Saga Ga...",
+      "title": "LEGO® Star Wars™: The Skywalker Saga",
       "appId": 920210,
       "hltbHours": 18.59,
       "matchedTitle": "LEGO Star Wars: The Skywalker Saga",
@@ -46329,14 +46329,14 @@
       "url": "https://howlongtobeat.com/game/46402"
     },
     {
-      "title": "Assassin's Creed Odyssey - Ultimate E...",
+      "title": "Assassin's Creed® Odyssey",
       "appId": 812140,
       "hltbHours": 45.61,
       "matchedTitle": "Assassin's Creed Odyssey",
       "url": "https://howlongtobeat.com/game/57503"
     },
     {
-      "title": "Assassin's Creed Valhalla - Complete ...",
+      "title": "Assassin's Creed Valhalla",
       "appId": 2208920,
       "hltbHours": 61.16,
       "matchedTitle": "Assassin's Creed Valhalla",
@@ -47407,7 +47407,7 @@
       "url": "https://howlongtobeat.com/game/79776"
     },
     {
-      "title": "LEGO Star Wars: The Skywalker Saga Ga...",
+      "title": "LEGO® Star Wars™: The Skywalker Saga",
       "appId": 920210,
       "hltbHours": 18.59,
       "matchedTitle": "LEGO Star Wars: The Skywalker Saga",
@@ -48044,7 +48044,7 @@
       "url": "https://howlongtobeat.com/game/126456"
     },
     {
-      "title": "LEGO Star Wars: The Skywalker Saga Ga...",
+      "title": "LEGO® Star Wars™: The Skywalker Saga",
       "appId": 920210,
       "hltbHours": 18.59,
       "matchedTitle": "LEGO Star Wars: The Skywalker Saga",
@@ -48093,7 +48093,7 @@
       "url": "https://howlongtobeat.com/game/57143"
     },
     {
-      "title": "South Park: The Fractured But Whole -...",
+      "title": "South Park™: The Fractured But Whole™",
       "appId": 488790,
       "hltbHours": 18.17,
       "matchedTitle": "South Park: The Fractured But Whole",
@@ -48317,7 +48317,7 @@
       "url": "https://howlongtobeat.com/game/78271"
     },
     {
-      "title": "Assassin's Creed Odyssey - Ultimate E...",
+      "title": "Assassin's Creed® Odyssey",
       "appId": 812140,
       "hltbHours": 45.61,
       "matchedTitle": "Assassin's Creed Odyssey",
@@ -48429,7 +48429,7 @@
       "url": "https://howlongtobeat.com/game/111710"
     },
     {
-      "title": "Assassin's Creed Valhalla - Complete ...",
+      "title": "Assassin's Creed Valhalla",
       "appId": 2208920,
       "hltbHours": 61.16,
       "matchedTitle": "Assassin's Creed Valhalla",
@@ -51915,7 +51915,7 @@
       "url": "https://howlongtobeat.com/game/64937"
     },
     {
-      "title": "STAR WARS Jedi: Fallen Order Deluxe E...",
+      "title": "STAR WARS Jedi: Fallen Order™",
       "appId": 1172380,
       "hltbHours": 17.27,
       "matchedTitle": "Star Wars Jedi: Fallen Order",
@@ -52426,11 +52426,11 @@
       "url": "https://howlongtobeat.com/game/90830"
     },
     {
-      "title": "Pillars of Eternity II: Deadfire - Ob...",
+      "title": "Pillars of Eternity II: Deadfire",
       "appId": 560130,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 41.87,
+      "matchedTitle": "Pillars of Eternity II: Deadfire",
+      "url": "https://howlongtobeat.com/game/44045"
     },
     {
       "title": "Warhammer 40,000: Chaos Gate - Daemonhunters",
@@ -64270,7 +64270,7 @@
       "url": ""
     },
     {
-      "title": "Wolfenstein II: The New Colossus Digi...",
+      "title": "Wolfenstein II: The New Colossus",
       "appId": 612880,
       "hltbHours": 10.75,
       "matchedTitle": "Wolfenstein II: The New Colossus",
@@ -64683,7 +64683,7 @@
       "url": "https://howlongtobeat.com/game/26799"
     },
     {
-      "title": "Life is Strange Complete Season (Epis...",
+      "title": "Life is Strange - Episode 1",
       "appId": 319630,
       "hltbHours": 9.55,
       "matchedTitle": "Life Is Strange: Reunion",
@@ -65978,7 +65978,7 @@
       "url": "https://howlongtobeat.com/game/38317"
     },
     {
-      "title": "Middle-earth: Shadow of Mordor Game o...",
+      "title": "Middle-earth™: Shadow of Mordor™",
       "appId": 241930,
       "hltbHours": 15.75,
       "matchedTitle": "Middle-Earth: Shadow of Mordor",
@@ -66790,7 +66790,7 @@
       "url": "https://howlongtobeat.com/game/10533"
     },
     {
-      "title": "Rising Storm 2: Vietnam - Digital Del...",
+      "title": "Rising Storm 2: Vietnam",
       "appId": 418460,
       "hltbHours": 2.18,
       "matchedTitle": "Rising Storm 2: Vietnam",
@@ -68869,7 +68869,7 @@
       "url": "https://howlongtobeat.com/game/1383"
     },
     {
-      "title": "Asguaard - Deluxe Edition (contains G...",
+      "title": "Asguaard",
       "appId": 332380,
       "hltbHours": 46.18,
       "matchedTitle": "Asguaard",
@@ -68988,7 +68988,7 @@
       "url": "https://howlongtobeat.com/game/25311"
     },
     {
-      "title": "Lords of the Fallen Game of the Year ...",
+      "title": "Lords Of The Fallen™ 2014",
       "appId": 265300,
       "hltbHours": 28.44,
       "matchedTitle": "Lords of the Fallen",
@@ -69338,7 +69338,7 @@
       "url": "https://howlongtobeat.com/game/67383"
     },
     {
-      "title": "Men of War: Assault Squad 2 - Gold Ed...",
+      "title": "Men of War: Assault Squad 2",
       "appId": 244450,
       "hltbHours": 57.25,
       "matchedTitle": "Men of War: Assault Squad 2",
@@ -69373,7 +69373,7 @@
       "url": "https://howlongtobeat.com/game/27148"
     },
     {
-      "title": "LEGO STAR WARS: The Force Awakens - D...",
+      "title": "LEGO® STAR WARS™: The Force Awakens",
       "appId": 438640,
       "hltbHours": 9.19,
       "matchedTitle": "LEGO Star Wars: The Force Awakens",
@@ -69576,7 +69576,7 @@
       "url": "https://howlongtobeat.com/game/10833"
     },
     {
-      "title": "Lords of the Fallen Game of the Year ...",
+      "title": "Lords Of The Fallen™ 2014",
       "appId": 265300,
       "hltbHours": 28.44,
       "matchedTitle": "Lords of the Fallen",
@@ -70178,7 +70178,7 @@
       "url": "https://howlongtobeat.com/game/47803"
     },
     {
-      "title": "LEGO Star Wars: The Skywalker Saga Ga...",
+      "title": "LEGO® Star Wars™: The Skywalker Saga",
       "appId": 920210,
       "hltbHours": 18.59,
       "matchedTitle": "LEGO Star Wars: The Skywalker Saga",
@@ -70535,7 +70535,7 @@
       "url": "https://howlongtobeat.com/game/94122"
     },
     {
-      "title": "Dying Light 2 Stay Human: Reloaded Ed...",
+      "title": "Dying Light 2 Stay Human: Reloaded Edition",
       "appId": 534380,
       "hltbHours": null,
       "matchedTitle": "",
@@ -70609,9 +70609,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-07-06T18:25:23.260683+00:00",
+  "libraryUpdatedAt": "2026-07-06T18:31:05.589372+00:00",
   "libraryStats": {
-    "durationSeconds": 18.33,
+    "durationSeconds": 4.68,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -70620,12 +70620,12 @@
     "totalPlaytimeRows": 14207
   },
   "stats": {
-    "durationSeconds": 115.37,
+    "durationSeconds": 57.86,
     "targetWins": 2370,
     "uniqueProgressTargets": 2366,
     "libraryPlaytimeHits": 2341,
-    "cachedReuses": 2266,
-    "achievementSuccesses": 23,
+    "cachedReuses": 2284,
+    "achievementSuccesses": 5,
     "achievementErrors": 77,
     "cachedFallbacks": 77,
     "hltbTitlesRequested": 1285,

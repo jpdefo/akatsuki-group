@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-06T18:25:23.260683+00:00",
+  "updatedAt": "2026-07-06T18:31:05.589372+00:00",
   "apiEnabled": true,
   "refreshedScope": "all",
   "refreshedMonth": null,
@@ -85241,8 +85241,8 @@
       "username": "Saikania",
       "steamProfile": "https://steamcommunity.com/profiles/76561198262118401",
       "appId": 1663850,
-      "playtimeMinutes": 414,
-      "playtimeHours": 6.9,
+      "playtimeMinutes": 444,
+      "playtimeHours": 7.4,
       "source": "steam-web-api"
     },
     {
@@ -113872,7 +113872,7 @@
   ],
   "source": "steam-web-api",
   "stats": {
-    "durationSeconds": 18.33,
+    "durationSeconds": 4.68,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,

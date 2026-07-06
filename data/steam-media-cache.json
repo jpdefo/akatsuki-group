@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-05T08:35:51.404735+00:00",
+  "updatedAt": "2026-07-06T18:31:00.652905+00:00",
   "apps": {
     "3288210": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3288210/2e13226847bb546625411aed75e74471f6705b18/header.jpg?t=1777969480",
@@ -5198,6 +5198,30 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527290/1844964d7a353e50eb3cc979ea922729d8c1b0ad/capsule_231x87.jpg?t=1775581133",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527290/1844964d7a353e50eb3cc979ea922729d8c1b0ad/capsule_184x69.jpg?t=1775581133",
       "releaseDate": "2025-06-16",
+      "comingSoon": false
+    },
+    "612880": {
+      "name": "Wolfenstein II: The New Colossus",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/612880/header.jpg?t=1750784115",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/612880/capsule_231x87.jpg?t=1750784115",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/612880/capsule_184x69.jpg?t=1750784115",
+      "releaseDate": "2017-10-26",
+      "comingSoon": false
+    },
+    "241930": {
+      "name": "Middle-earth™: Shadow of Mordor™",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/241930/header.jpg?t=1780594906",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/241930/capsule_231x87.jpg?t=1780594906",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/241930/capsule_184x69.jpg?t=1780594906",
+      "releaseDate": "2014-09-30",
+      "comingSoon": false
+    },
+    "265300": {
+      "name": "Lords Of The Fallen™ 2014",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/265300/header.jpg?t=1728377554",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/265300/capsule_231x87.jpg?t=1728377554",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/265300/capsule_184x69.jpg?t=1728377554",
+      "releaseDate": "2014-10-28",
       "comingSoon": false
     }
   }
