@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-05T08:36:55.337634+00:00",
+  "updatedAt": "2026-07-06T09:50:07.244845+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -5338,15 +5338,15 @@
       "title": "Mewgenics",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/686060/achievements/",
       "visible": true,
-      "earnedAchievements": 45,
+      "earnedAchievements": 49,
       "totalAchievements": 281,
-      "achievementPercent": 16,
-      "playtimeHours": 78.37,
+      "achievementPercent": 17,
+      "playtimeHours": 82.25,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 78.37,
+      "achievementsPlaytimeHours": 82.25,
       "popThresholdMetAt": "2026-06-26T07:11:08.797696+00:00"
     },
     {
@@ -6608,6 +6608,23 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 7.6,
       "popThresholdMetAt": "2026-06-26T07:11:08.797848+00:00"
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 2091020,
+      "title": "Blades of Fire",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/2091020/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 45,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "burntreynolds444",
@@ -13925,6 +13942,22 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 10.47,
       "popThresholdMetAt": "2026-06-26T07:11:08.798748+00:00"
+    },
+    {
+      "username": "Ernesttico",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
+      "appId": 1962700,
+      "title": "Subnautica 2",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/1962700/achievements/",
+      "playtimeHours": 0.0,
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": "HTTP Error 400: Bad Request"
     },
     {
       "username": "Ernesttico",
@@ -23651,15 +23684,15 @@
       "title": "Persona 3 Reload",
       "progressUrl": "https://steamcommunity.com/profiles/76561198010348380/stats/2161700/achievements/",
       "visible": true,
-      "earnedAchievements": 36,
+      "earnedAchievements": 38,
       "totalAchievements": 56,
-      "achievementPercent": 64,
-      "playtimeHours": 52.25,
+      "achievementPercent": 68,
+      "playtimeHours": 55.6,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 52.25,
+      "achievementsPlaytimeHours": 55.6,
       "popThresholdMetAt": "2026-06-26T07:11:08.799856+00:00"
     },
     {
@@ -26267,15 +26300,15 @@
       "title": "Total Chaos",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2208350/achievements/",
       "visible": true,
-      "earnedAchievements": 24,
+      "earnedAchievements": 33,
       "totalAchievements": 37,
-      "achievementPercent": 65,
-      "playtimeHours": 12.55,
+      "achievementPercent": 89,
+      "playtimeHours": 17.57,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 12.55,
+      "achievementsPlaytimeHours": 17.57,
       "popThresholdMetAt": "2026-07-04T08:18:24.286662+00:00"
     },
     {
@@ -26401,6 +26434,23 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 31.25,
       "popThresholdMetAt": "2026-06-26T07:11:08.800204+00:00"
+    },
+    {
+      "username": "leniu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
+      "appId": 2417610,
+      "title": "METAL GEAR SOLID Δ: SNAKE EATER",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2417610/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 45,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "leniu",
@@ -29340,7 +29390,7 @@
       "appId": 1663850,
       "title": "REPLACED",
       "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/1663850/achievements/",
-      "playtimeHours": 5.3,
+      "playtimeHours": 6.4,
       "visible": true,
       "earnedAchievements": 5,
       "totalAchievements": 34,
@@ -29349,7 +29399,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 5.3,
+      "achievementsPlaytimeHours": 6.4,
       "popThresholdMetAt": "2026-07-05T08:36:55.337297+00:00"
     },
     {
@@ -33815,15 +33865,15 @@
       "title": "Gothic 1 Remake",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/1297900/achievements/",
       "visible": true,
-      "earnedAchievements": 14,
+      "earnedAchievements": 18,
       "totalAchievements": 42,
-      "achievementPercent": 33,
-      "playtimeHours": 47.57,
+      "achievementPercent": 43,
+      "playtimeHours": 55.27,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 47.57,
+      "achievementsPlaytimeHours": 55.27,
       "popThresholdMetAt": "2026-06-26T07:11:08.801053+00:00"
     },
     {
@@ -34888,7 +34938,7 @@
       "appId": 2417610,
       "title": "METAL GEAR SOLID Δ: SNAKE EATER",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2417610/achievements/",
-      "playtimeHours": 3.75,
+      "playtimeHours": 4.08,
       "visible": true,
       "earnedAchievements": 11,
       "totalAchievements": 45,
@@ -34897,7 +34947,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 3.75,
+      "achievementsPlaytimeHours": 4.08,
       "popThresholdMetAt": "2026-07-04T08:18:24.286908+00:00"
     },
     {
@@ -41724,16 +41774,16 @@
       "appId": 2057760,
       "title": "Esoteric Ebb",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/2057760/achievements/",
-      "playtimeHours": 7.53,
+      "playtimeHours": 11.97,
       "visible": true,
-      "earnedAchievements": 21,
+      "earnedAchievements": 32,
       "totalAchievements": 56,
-      "achievementPercent": 38,
+      "achievementPercent": 57,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 7.53,
+      "achievementsPlaytimeHours": 11.97,
       "popThresholdMetAt": "2026-07-05T08:36:55.337593+00:00"
     },
     {
@@ -70103,6 +70153,13 @@
       "url": "https://howlongtobeat.com/game/21924"
     },
     {
+      "title": "Blades of Fire",
+      "appId": 2091020,
+      "hltbHours": 30.96,
+      "matchedTitle": "Blades of Fire",
+      "url": "https://howlongtobeat.com/game/164588"
+    },
+    {
       "title": "Total Chaos",
       "appId": 2208350,
       "hltbHours": 10.77,
@@ -70160,7 +70217,7 @@
     },
     {
       "title": "FINAL FANTASY XVI COMPLETE EDITION",
-      "appId": 2515020,
+      "appId": 1111230,
       "hltbHours": null,
       "matchedTitle": "",
       "url": ""
@@ -70198,26 +70255,26 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-07-05T08:35:56.409645+00:00",
+  "libraryUpdatedAt": "2026-07-06T09:49:08.917181+00:00",
   "libraryStats": {
-    "durationSeconds": 4.82,
+    "durationSeconds": 4.18,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 13946
+    "totalPlaytimeRows": 13959
   },
   "stats": {
-    "durationSeconds": 63.76,
-    "targetWins": 2352,
-    "uniqueProgressTargets": 2348,
-    "libraryPlaytimeHits": 2294,
-    "cachedReuses": 2222,
-    "achievementSuccesses": 21,
+    "durationSeconds": 62.52,
+    "targetWins": 2354,
+    "uniqueProgressTargets": 2350,
+    "libraryPlaytimeHits": 2297,
+    "cachedReuses": 2232,
+    "achievementSuccesses": 13,
     "achievementErrors": 105,
     "cachedFallbacks": 104,
-    "hltbTitlesRequested": 1280,
-    "hltbResultsAvailable": 4023
+    "hltbTitlesRequested": 1281,
+    "hltbResultsAvailable": 4024
   }
 }

@@ -14208,7 +14208,7 @@
     "matchedTitle": "The Blood of Dawnwalker",
     "gameId": 144338,
     "url": "https://howlongtobeat.com/game/144338",
-    "checkedAt": "2026-06-29T07:30:30.818447+00:00"
+    "checkedAt": "2026-07-06T09:49:09.770566+00:00"
   },
   "assassin s creed black flag resynced": {
     "title": "Assassin's Creed Black Flag Resynced",
@@ -14433,5 +14433,13 @@
     "gameId": 187293,
     "url": "https://howlongtobeat.com/game/187293",
     "checkedAt": "2026-07-04T08:17:21.236311+00:00"
+  },
+  "blades of fire": {
+    "title": "Blades of Fire",
+    "hltbHours": 30.96,
+    "matchedTitle": "Blades of Fire",
+    "gameId": 164588,
+    "url": "https://howlongtobeat.com/game/164588",
+    "checkedAt": "2026-07-06T09:49:09.558874+00:00"
   }
 }
