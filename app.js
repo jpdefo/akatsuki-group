@@ -2829,7 +2829,7 @@ function buildGameCell(game, win) {
     <div class="game-cell">
       ${imageMarkup}
       <div>
-        <strong>${titleMarkup}</strong>${win?.manualWinner ? ` ${buildBadge("info", "Manual")}` : ""}
+        <strong>${titleMarkup}</strong>
         ${game?.appId ? `<span class="meta-line">App ${game.appId}</span>` : ""}
       </div>
     </div>
