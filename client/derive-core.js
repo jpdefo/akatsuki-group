@@ -1330,6 +1330,7 @@ export function buildPenaltyAndMemberDerived({ sync = {}, progress = {}, overrid
     payer: record.creator?.name || record.giveaway.creatorUsername || "Unknown member",
     game: record.targetGame?.title || record.target?.title || record.giveaway.title || "",
     giveawayPageUrl: getGiveawayPageUrl(record.giveaway),
+    wonGiveawayUrl: getGiveawayPageUrl(record.target),
     createdAt: record.giveaway.createdAt || null,
     manualWinner: Boolean(record.targetWin?.manualWinner),
     ...penaltyProgressFigures(record.targetWin, ctx),

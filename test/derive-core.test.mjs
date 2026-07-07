@@ -247,6 +247,9 @@ test("penalties: overdue / coming-due / grandfathered / complete / paid / pop_fr
 
   assert.equal(penalties.counts.settled, 1, "exactly one settled");
   assert.equal(penalties.settled[0].payer, "eve");
+  // Both links: the created penalty GA and the won GA it pays off (via penaltyForCode)
+  assert.match(penalties.settled[0].giveawayPageUrl, /\/giveaway\/PEN\//);
+  assert.match(penalties.settled[0].wonGiveawayUrl, /\/giveaway\/PAD\//);
 
   // grandfathered / complete / pop_free / paid must NOT appear as owed or coming-due
   const flagged = [...penalties.owedNow, ...penalties.comingDue].map((r) => r.member);

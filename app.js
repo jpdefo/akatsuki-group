@@ -3182,11 +3182,20 @@ function renderPenaltiesPage() {
       const payer = record.creator?.name || record.giveaway.creatorUsername || "Unknown member";
       const gameTitle = record.targetGame?.title || record.target?.title || record.giveaway.title || "";
       const [hoursCell, achievementsCell] = buildPenaltyProgressCells(record.targetWin);
-      // Paid -> the game links to the penalty giveaway that settled the debt.
+      // Paid -> the game links to the won giveaway that caused the penalty
+      // (when the "Penalty GA - <link>" description resolved it), with a
+      // secondary link to the created penalty giveaway. Legacy penalties with
+      // no resolved target fall back to linking the penalty giveaway itself.
+      const wonUrl = getGiveawayPageUrl(record.target);
+      const penaltyUrl = getGiveawayPageUrl(record.giveaway);
+      const penaltyLink =
+        wonUrl && penaltyUrl
+          ? ` <a class="penalty-ga-link" href="${escapeHtml(penaltyUrl)}" target="_blank" rel="noreferrer">Penalty GA ↗</a>`
+          : "";
       rows.push(`
         <tr>
           <td>${escapeHtml(payer)}</td>
-          <td>${linkedGame(gameTitle, getGiveawayPageUrl(record.giveaway))}${record.targetWin?.manualWinner ? ` ${buildBadge("info", "Manual")}` : ""}</td>
+          <td>${linkedGame(gameTitle, wonUrl || penaltyUrl)}${penaltyLink}${record.targetWin?.manualWinner ? ` ${buildBadge("info", "Manual")}` : ""}</td>
           <td>${escapeHtml(hoursCell)}</td>
           <td>${escapeHtml(achievementsCell)}</td>
           <td>${buildBadge("success", "Settled")}</td>
@@ -3250,10 +3259,17 @@ function renderPenaltiesPageFromDerived(penalties) {
 
   if (filter === "all" || filter === "settled") {
     for (const row of settled) {
+      // Same linking as the live path: title -> won giveaway when resolved
+      // (penalty giveaway as legacy fallback), plus a secondary penalty link.
+      const penaltyLink =
+        row.wonGiveawayUrl && row.giveawayPageUrl
+          ? ` <a class="penalty-ga-link" href="${escapeHtml(row.giveawayPageUrl)}" target="_blank" rel="noreferrer">Penalty GA ↗</a>`
+          : "";
+      const gameCell = `${linkedGame(row.game, row.wonGiveawayUrl || row.giveawayPageUrl)}${penaltyLink}${row.manualWinner ? ` ${buildBadge("info", "Manual")}` : ""}`;
       rows.push(`
         <tr>
           <td>${escapeHtml(row.payer)}</td>
-          <td>${gameCellWithTag(row)}</td>
+          <td>${gameCell}</td>
           <td>${escapeHtml(hoursCell(row))}</td>
           <td>${escapeHtml(achievementsCell(row))}</td>
           <td>${buildBadge("success", "Settled")}</td>

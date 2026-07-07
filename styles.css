@@ -407,6 +407,19 @@ h2 {
   color: var(--accent);
 }
 
+.penalty-ga-link {
+  margin-left: 6px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.penalty-ga-link:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
 .giveaway-meta-line {
   display: flex;
   flex-wrap: wrap;
