@@ -1,10 +1,10 @@
 {
   "source": "akatsuki-steamgifts-sync",
   "collectorVersion": "1.13.2",
-  "syncedAt": "2026-07-07T21:01:41.919Z",
+  "syncedAt": "2026-07-07T22:20:29.044Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
-    "name": "AKATSUKI GAMES S.GIFTS"
+    "name": "AKATSUKI GAMES S.GIFTS - Searching 'oblivion'"
   },
   "members": [
     {
@@ -150623,9 +150623,15 @@
       "entriesCount": 2,
       "startDate": "2026-06-29T20:54:24.000Z",
       "endDate": "2026-07-07T20:51:00.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "BojanNS987",
+          "profileUrl": "https://www.steamgifts.com/user/BojanNS987",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "BojanNS987",
       "regionRestricted": false,
       "giveawayKind": "summer_event",
       "giveawayMonthOverride": "",
@@ -150635,8 +150641,8 @@
         "BojanNS987",
         "Ernesttico"
       ],
-      "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-07T21:01:35.381Z",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-07-07T22:20:26.127Z",
       "hltbHours": 6.19
     },
     {
@@ -150770,7 +150776,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-07T21:01:41.081Z",
+      "entriesSnapshotAt": "2026-07-07T22:20:28.217Z",
       "hltbHours": 64.62
     },
     {
@@ -151402,7 +151408,7 @@
         {
           "username": "Millsshogun",
           "profileUrl": "https://www.steamgifts.com/user/Millsshogun",
-          "status": "Awaiting Feedback"
+          "status": "Won"
         }
       ],
       "resultStatus": "won",
@@ -151439,7 +151445,7 @@
         {
           "username": "Horseflesh",
           "profileUrl": "https://www.steamgifts.com/user/Horseflesh",
-          "status": "Awaiting Feedback"
+          "status": "Won"
         }
       ],
       "resultStatus": "won",
@@ -151478,7 +151484,7 @@
         {
           "username": "burntreynolds444",
           "profileUrl": "https://www.steamgifts.com/user/burntreynolds444",
-          "status": "Awaiting Feedback"
+          "status": "Won"
         }
       ],
       "resultStatus": "won",
@@ -151607,7 +151613,7 @@
         "Thedogma"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-07T21:01:35.838Z",
+      "entriesSnapshotAt": "2026-07-07T22:20:26.549Z",
       "hltbHours": 30.53
     },
     {
@@ -151639,7 +151645,7 @@
         "chOOkity"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-07T21:01:36.275Z",
+      "entriesSnapshotAt": "2026-07-07T22:20:26.962Z",
       "hltbHours": 23.57
     },
     {
@@ -151669,7 +151675,7 @@
         "Ernesttico"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-07T21:01:36.883Z",
+      "entriesSnapshotAt": "2026-07-07T22:20:27.384Z",
       "hltbHours": 35.47
     },
     {
@@ -151726,7 +151732,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-07T21:01:37.320Z",
+      "entriesSnapshotAt": "2026-07-07T22:20:27.801Z",
       "hltbHours": 72.35
     },
     {
@@ -151741,7 +151747,7 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2623190/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2623190/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2623190/4efc3257aabd776d4624da40146fb021d1ef5b38/capsule_184x69.jpg",
-      "entriesCount": 0,
+      "entriesCount": 1,
       "startDate": "2026-07-07T09:35:30.000Z",
       "endDate": "2026-07-08T18:00:00.000Z",
       "winners": [],
@@ -151752,9 +151758,11 @@
       "giveawayMonthOverride": "",
       "penaltyForCode": "",
       "giveawayKindChecked": true,
-      "entryUsers": [],
+      "entryUsers": [
+        "burntreynolds444"
+      ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-07T21:01:34.534Z"
+      "entriesSnapshotAt": "2026-07-07T22:20:25.421Z"
     },
     {
       "code": "xoJSi",
@@ -151784,7 +151792,7 @@
         "Horseflesh"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-07T21:01:34.928Z"
+      "entriesSnapshotAt": "2026-07-07T22:20:25.844Z"
     }
   ],
   "wins": [
@@ -187715,6 +187723,15 @@
       "creatorUsername": "Wintermute101",
       "entriesCount": 7,
       "winDate": "2026-07-02T17:00:00.000Z"
+    },
+    {
+      "giveawayCode": "nECjj",
+      "title": "Planet of Lana II",
+      "appId": 2997230,
+      "winnerUsername": "BojanNS987",
+      "creatorUsername": "Thedogma",
+      "entriesCount": 2,
+      "winDate": "2026-07-07T20:51:00.000Z"
     },
     {
       "giveawayCode": "u2MTI",
