@@ -2382,7 +2382,8 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2678080/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2678080/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2678080/828aade97ed391db6d7406806357f6619c8075f0/capsule_184x69.jpg",
-      "startDate": "2026-06-02T06:12:48.000Z"
+      "startDate": "2026-06-02T06:12:48.000Z",
+      "hltbHours": 10.54
     },
     {
       "code": "xDUes",
@@ -2723,7 +2724,8 @@
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2678080/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2678080/828aade97ed391db6d7406806357f6619c8075f0/capsule_184x69.jpg",
       "startDate": "2026-05-04T13:36:02.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "hltbHours": 10.54
     },
     {
       "code": "XSQMJ",
@@ -4389,7 +4391,7 @@
     {
       "code": "LgQJ6",
       "url": "https://www.steamgifts.com/giveaway/LgQJ6/final-fantasy-tactics-the-ivalice-chronicles",
-      "title": "FINAL FANTASY TACTICS - The Ivalice C...",
+      "title": "FINAL FANTASY TACTICS - The Ivalice Chronicles",
       "creatorUsername": "Youdontknow",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Youdontknow",
       "appId": 1004640,
@@ -4632,7 +4634,7 @@
     {
       "code": "3Klb9",
       "url": "https://www.steamgifts.com/giveaway/3Klb9/the-elder-scrolls-iv-oblivion-remastered",
-      "title": "The Elder Scrolls IV: Oblivion Remast...",
+      "title": "The Elder Scrolls IV: Oblivion Remastered",
       "creatorUsername": "leniu",
       "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
       "appId": 2623190,
@@ -5232,7 +5234,7 @@
     {
       "code": "aQMBR",
       "url": "https://www.steamgifts.com/giveaway/aQMBR/robocop-rogue-city-unfinished-business",
-      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "title": "RoboCop: Rogue City - Unfinished Business",
       "creatorUsername": "Koalala",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Koalala",
       "appId": 3527760,
@@ -5621,7 +5623,7 @@
     {
       "code": "44g1j",
       "url": "https://www.steamgifts.com/giveaway/44g1j/raidou-remastered-the-mystery-of-the-soulless-army",
-      "title": "RAIDOU Remastered: The Mystery of the...",
+      "title": "RAIDOU Remastered: The Mystery of the Soulless Army",
       "creatorUsername": "Youdontknow",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Youdontknow",
       "appId": 2288350,
@@ -5786,7 +5788,8 @@
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1608070/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1608070/capsule_184x69.jpg",
       "startDate": "2025-10-11T17:29:49.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "hltbHours": 13.77
     },
     {
       "code": "t1axg",
@@ -6673,7 +6676,7 @@
     {
       "code": "UtTqc",
       "url": "https://www.steamgifts.com/giveaway/UtTqc/robocop-rogue-city-unfinished-business",
-      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "title": "RoboCop: Rogue City - Unfinished Business",
       "creatorUsername": "Wintermute101",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Wintermute101",
       "appId": 3527760,
@@ -7288,7 +7291,7 @@
     {
       "code": "6lDgn",
       "url": "https://www.steamgifts.com/giveaway/6lDgn/robocop-rogue-city-unfinished-business",
-      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "title": "RoboCop: Rogue City - Unfinished Business",
       "creatorUsername": "leniu",
       "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
       "appId": 3527760,
@@ -7476,7 +7479,8 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1492730/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1492730/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1492730/capsule_184x69.jpg",
-      "startDate": "2025-07-02T17:51:42.000Z"
+      "startDate": "2025-07-02T17:51:42.000Z",
+      "hltbHours": 32.81
     },
     {
       "code": "EyObD",
@@ -9754,7 +9758,8 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1608070/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1608070/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1608070/capsule_184x69.jpg",
-      "startDate": "2025-06-27T18:01:27.000Z"
+      "startDate": "2025-06-27T18:01:27.000Z",
+      "hltbHours": 13.77
     },
     {
       "code": "5fFa6",
@@ -16204,7 +16209,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2024-11",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 7.6
     },
     {
       "code": "ZhzfU",
@@ -18054,7 +18060,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 31.23
     },
     {
       "code": "jEPhK",
@@ -22527,7 +22534,8 @@
       "entriesSnapshotAt": "2026-06-10T22:50:07.375Z",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 3.26
     },
     {
       "code": "ML4d9",
@@ -23147,7 +23155,8 @@
       "entriesSnapshotAt": "2026-06-10T22:50:17.988Z",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 3.26
     },
     {
       "code": "ZVHxI",
@@ -24083,7 +24092,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 3.26
     },
     {
       "code": "5MPZX",
@@ -30970,7 +30980,8 @@
       "entriesSnapshotAt": "2026-06-11T22:58:17.688Z",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 3.94
     },
     {
       "code": "xrECI",
@@ -33255,7 +33266,8 @@
       "entriesSnapshotAt": "2026-06-11T23:01:43.275Z",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 38.71
     },
     {
       "code": "lA5Wo",
@@ -34823,7 +34835,8 @@
       "entriesSnapshotAt": "2026-06-11T23:00:40.323Z",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 17.92
     },
     {
       "code": "iLoFV",
@@ -34946,7 +34959,8 @@
       "entriesSnapshotAt": "2026-06-11T23:02:22.319Z",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 5.59
     },
     {
       "code": "6zfkR",
@@ -34988,7 +35002,8 @@
       "entriesSnapshotAt": "2026-06-11T23:03:20.503Z",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 10.04
     },
     {
       "code": "vh9Az",
@@ -37535,7 +37550,8 @@
       "entriesSnapshotAt": "2026-06-11T23:04:55.198Z",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 10.04
     },
     {
       "code": "fucY6",
@@ -38101,7 +38117,8 @@
       "entriesSnapshotAt": "2026-06-11T23:05:22.968Z",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 40.57
     },
     {
       "code": "mcH7V",
@@ -41312,7 +41329,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 13.77
     },
     {
       "code": "Srr7K",
@@ -41381,7 +41399,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 7.78
     },
     {
       "code": "cMoWe",
@@ -42761,7 +42780,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2023-02",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 17.92
     },
     {
       "code": "5IDbl",
@@ -43407,7 +43427,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2023-01",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 13.77
     },
     {
       "code": "7cW6f",
@@ -43511,7 +43532,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2023-01",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 17.92
     },
     {
       "code": "tFgoH",
@@ -43615,7 +43637,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2023-01",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 7.78
     },
     {
       "code": "cH1kT",
@@ -44262,7 +44285,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 7.78
     },
     {
       "code": "UA1uI",
@@ -44296,7 +44320,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 7.78
     },
     {
       "code": "ZSMoG",
@@ -44564,7 +44589,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2022-11",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 17.0
     },
     {
       "code": "S49HL",
@@ -44598,7 +44624,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2022-11",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 17.92
     },
     {
       "code": "13bAi",
@@ -44876,7 +44903,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2022-11",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 17.92
     },
     {
       "code": "98one",
@@ -45190,7 +45218,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2022-11",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 7.78
     },
     {
       "code": "gOo9r",
@@ -45468,7 +45497,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2022-10",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 10.04
     },
     {
       "code": "G0l2u",
@@ -45740,7 +45770,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 7.78
     },
     {
       "code": "Uw0KW",
@@ -45780,7 +45811,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2022-10",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 13.77
     },
     {
       "code": "A1aYp",
@@ -45947,7 +45979,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2022-10",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 17.92
     },
     {
       "code": "85SNT",
@@ -46162,7 +46195,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2022-09",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 14.16
     },
     {
       "code": "CSZbJ",
@@ -46698,7 +46732,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2022-09",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 17.92
     },
     {
       "code": "Z6BhA",
@@ -47205,7 +47240,8 @@
       "entriesSnapshotAt": "2026-06-11T23:11:28.980Z",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 32.05
     },
     {
       "code": "uKu4Q",
@@ -48132,7 +48168,8 @@
       "entriesSnapshotAt": "2026-06-11T23:12:36.419Z",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 7.43
     },
     {
       "code": "ttoQw",
@@ -48160,7 +48197,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 41.73
     },
     {
       "code": "BKIdd",
@@ -49667,7 +49705,8 @@
       "entriesSnapshotAt": "2026-06-11T23:16:25.113Z",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 7.43
     },
     {
       "code": "gb9mj",
@@ -51410,7 +51449,8 @@
       "entriesSnapshotAt": "2026-06-11T23:16:39.127Z",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 23.69
     },
     {
       "code": "fPnQi",
@@ -51696,7 +51736,8 @@
       "entriesSnapshotAt": "2026-06-11T23:16:18.323Z",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 43.55
     },
     {
       "code": "x6qVY",
@@ -52302,7 +52343,8 @@
       "entriesSnapshotAt": "2026-06-11T23:18:25.638Z",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 7.43
     },
     {
       "code": "sHOnF",
@@ -52865,7 +52907,8 @@
       "entriesSnapshotAt": "2026-06-11T23:18:53.481Z",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 7.43
     },
     {
       "code": "8quTB",
@@ -53731,7 +53774,8 @@
       "entriesSnapshotAt": "2026-06-11T23:19:25.923Z",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 5.59
     },
     {
       "code": "SWgXj",
@@ -54180,7 +54224,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 38.71
     },
     {
       "code": "BvkVQ",
@@ -56381,7 +56426,8 @@
       "entriesSnapshotAt": "2026-06-11T23:20:41.836Z",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 43.55
     },
     {
       "code": "QHofj",
@@ -57038,7 +57084,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2022-06",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 43.55
     },
     {
       "code": "z9Q0C",
@@ -57830,7 +57877,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2022-04",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 43.55
     },
     {
       "code": "EFa2K",
@@ -58731,7 +58779,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2022-04",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 17.0
     },
     {
       "code": "HuXcQ",
@@ -59219,7 +59268,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2022-03",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 17.0
     },
     {
       "code": "hOT4P",
@@ -59993,7 +60043,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2022-03",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 5.59
     },
     {
       "code": "w8lM3",
@@ -60947,7 +60998,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2022-01",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 17.0
     },
     {
       "code": "wTNCD",
@@ -62242,7 +62294,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 17.0
     },
     {
       "code": "1Fbsw",
@@ -65447,7 +65500,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2021-10",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 7.43
     },
     {
       "code": "vG3mW",
@@ -66494,7 +66548,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2021-09",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 7.43
     },
     {
       "code": "ODKA5",
@@ -66720,7 +66775,8 @@
       "entriesSnapshotAt": "2026-06-12T23:48:26.398Z",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 41.73
     },
     {
       "code": "g2Rup",
@@ -66985,7 +67041,8 @@
       "penaltyForCode": "",
       "entryUsers": [
         "Skull18"
-      ]
+      ],
+      "hltbHours": 22.74
     },
     {
       "code": "m0L9v",
@@ -67874,7 +67931,8 @@
       "entriesSnapshotAt": "2026-06-12T23:50:46.717Z",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 19.92
     },
     {
       "code": "myOgP",
@@ -70097,7 +70155,8 @@
       "entriesSnapshotAt": "2026-06-12T23:50:55.942Z",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 23.69
     },
     {
       "code": "GGsBg",
@@ -71506,7 +71565,8 @@
       "entriesSnapshotAt": "2026-06-12T23:51:57.005Z",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 18.32
     },
     {
       "code": "CGaEG",
@@ -72938,7 +72998,8 @@
       "entriesSnapshotAt": "2026-06-12T23:49:54.853Z",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 18.32
     },
     {
       "code": "ZvcOq",
@@ -73017,7 +73078,8 @@
       "entriesSnapshotAt": "2026-06-12T23:50:01.026Z",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 72.56
     },
     {
       "code": "fevbp",
@@ -73657,7 +73719,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 43.55
     },
     {
       "code": "JoTNJ",
@@ -75154,7 +75217,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2021-04",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 38.71
     },
     {
       "code": "uzggj",
@@ -75783,7 +75847,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2021-03",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 9.85
     },
     {
       "code": "Ygy6p",
@@ -76481,7 +76546,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2021-03",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 43.55
     },
     {
       "code": "2YZgk",
@@ -77039,7 +77105,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2021-02",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 43.55
     },
     {
       "code": "ZoRqo",
@@ -77738,7 +77805,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2021-01",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 43.55
     },
     {
       "code": "fMCaM",
@@ -79305,7 +79373,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2020-12",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 6.91
     },
     {
       "code": "ISRcs",
@@ -82103,7 +82172,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2020-09",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 5.01
     },
     {
       "code": "wWlDK",
@@ -85347,7 +85417,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2020-06",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 18.52
     },
     {
       "code": "c1tRm",
@@ -85381,7 +85452,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2020-06",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 18.61
     },
     {
       "code": "Iw77y",
@@ -86708,7 +86780,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2020-04",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 23.69
     },
     {
       "code": "Pqsgc",
@@ -87861,7 +87934,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2020-03",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 2.5
     },
     {
       "code": "64Fhc",
@@ -91968,7 +92042,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2019-11",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 23.69
     },
     {
       "code": "B2uqw",
@@ -92631,7 +92706,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2019-10",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 3.14
     },
     {
       "code": "9qPNT",
@@ -95980,7 +96056,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 5.56
     },
     {
       "code": "nbixK",
@@ -96851,7 +96928,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2019-06",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 10.17
     },
     {
       "code": "iWcDF",
@@ -98799,7 +98877,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2019-05",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 5.01
     },
     {
       "code": "nGvTe",
@@ -99113,7 +99192,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2019-05",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 18.52
     },
     {
       "code": "dfdXy",
@@ -100510,7 +100590,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2019-04",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 5.56
     },
     {
       "code": "BUv3e",
@@ -100823,7 +100904,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2019-03",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 5.56
     },
     {
       "code": "2Ga0C",
@@ -106362,7 +106444,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 24.22
     },
     {
       "code": "2tiXp",
@@ -110643,7 +110726,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2018-09",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 19.92
     },
     {
       "code": "giitC",
@@ -112526,7 +112610,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 31.23
     },
     {
       "code": "CO4n5",
@@ -118104,7 +118189,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2018-04",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 31.23
     },
     {
       "code": "Tz0bA",
@@ -118768,7 +118854,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2018-03",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 9.1
     },
     {
       "code": "Tp8Rk",
@@ -121774,7 +121861,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2018-01",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 31.23
     },
     {
       "code": "JpMQF",
@@ -122889,7 +122977,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 31.23
     },
     {
       "code": "ONZFw",
@@ -125958,7 +126047,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2017-11",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 31.23
     },
     {
       "code": "RkM9m",
@@ -128954,7 +129044,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2017-08",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 24.22
     },
     {
       "code": "yb79m",
@@ -130663,7 +130754,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2017-07",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 17.31
     },
     {
       "code": "awzzN",
@@ -131920,7 +132012,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2017-06",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 32.05
     },
     {
       "code": "8L5A3",
@@ -134439,7 +134532,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 24.22
     },
     {
       "code": "HEbQ7",
@@ -135517,7 +135611,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 32.05
     },
     {
       "code": "DNtJ6",
@@ -135656,7 +135751,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 23.42
     },
     {
       "code": "Hj6Ak",
@@ -140744,7 +140840,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 24.59
     },
     {
       "code": "Dgtlz",
@@ -141859,7 +141956,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 8.33
     },
     {
       "code": "UeLWh",
@@ -143979,7 +144077,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "hltbHours": 1.5
     },
     {
       "code": "aQRhS",
@@ -149164,7 +149263,7 @@
     {
       "code": "utQfp",
       "url": "https://www.steamgifts.com/giveaway/utQfp/lego-star-wars-the-skywalker-saga-galactic-edition",
-      "title": "LEGO Star Wars: The Skywalker Saga Ga...",
+      "title": "LEGO® Star Wars™: The Skywalker Saga",
       "creatorUsername": "Ernesttico",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Ernesttico",
       "appId": 920210,
@@ -150708,7 +150807,8 @@
       "entriesSnapshotAt": "2026-07-07T08:58:08.081Z",
       "entryUsers": [
         "BojanNS987"
-      ]
+      ],
+      "hltbHours": 12.79
     },
     {
       "code": "dSTRd",
@@ -151056,7 +151156,8 @@
         "BojanNS987"
       ],
       "entriesFinalized": true,
-      "entriesSnapshotAt": "2026-07-07T08:58:08.581Z"
+      "entriesSnapshotAt": "2026-07-07T08:58:08.581Z",
+      "hltbHours": 8.86
     },
     {
       "code": "DEY6Z",
@@ -151094,7 +151195,8 @@
         "BojanNS987"
       ],
       "entriesFinalized": true,
-      "entriesSnapshotAt": "2026-07-07T08:58:09.095Z"
+      "entriesSnapshotAt": "2026-07-07T08:58:09.095Z",
+      "hltbHours": 7.89
     },
     {
       "code": "V7dnW",
@@ -151207,7 +151309,7 @@
     {
       "code": "ZvvXe",
       "url": "https://www.steamgifts.com/giveaway/ZvvXe/dying-light-2-stay-human-reloaded-edition",
-      "title": "Dying Light 2 Stay Human: Reloaded Ed...",
+      "title": "Dying Light 2 Stay Human: Reloaded Edition",
       "creatorUsername": "Ernesttico",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Ernesttico",
       "appId": 534380,
