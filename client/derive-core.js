@@ -1246,6 +1246,8 @@ export function getGiveawayPageUrl(giveaway) {
 
 // Penalty giveaways that have been created, resolved to the won giveaway they
 // settle (the audit/settled list). Mirrors app.js getPenaltyGiveawayRecords.
+// Penalty giveaways without a resolvable "Penalty GA - <link>" target (legacy,
+// pre-2026) are excluded: with no known paid-for game they aren't "settled".
 export function getPenaltyGiveawayRecords(wins, ctx) {
   const giveaways = ctx?.giveaways || [];
   return giveaways
@@ -1262,6 +1264,7 @@ export function getPenaltyGiveawayRecords(wins, ctx) {
         targetGame: targetWin ? ctx?.gamesById?.get(targetWin.gameId) || null : null,
       };
     })
+    .filter((record) => record.target)
     .sort((left, right) => String(right.giveaway.createdAt || "").localeCompare(String(left.giveaway.createdAt || "")));
 }
 

@@ -214,6 +214,8 @@ test("penalties: overdue / coming-due / grandfathered / complete / paid / pop_fr
       giveaway({ code: "PAD", creatorUsername: "dave", appId: 600, winners: [{ username: "eve" }], startDate: "2026-01-05T00:00:00.000Z", endDate: "2026-01-10T00:00:00.000Z" }),
       // the penalty giveaway that settles PAD (kind via override below)
       giveaway({ code: "PEN", creatorUsername: "eve", appId: 700, penaltyForCode: "PAD", startDate: "2026-03-01T00:00:00.000Z", endDate: "2026-03-02T00:00:00.000Z" }),
+      // legacy penalty giveaway with no "Penalty GA - <link>" target -> NOT settled
+      giveaway({ code: "LGC", creatorUsername: "eve", appId: 800, startDate: "2024-03-01T00:00:00.000Z", endDate: "2024-03-02T00:00:00.000Z" }),
     ],
   };
   const progress = {
@@ -231,6 +233,7 @@ test("penalties: overdue / coming-due / grandfathered / complete / paid / pop_fr
     giveaways: {
       "sg-POF": { giveawayKindOverride: "pop_free" },
       "sg-PEN": { giveawayKindOverride: "penalty" },
+      "sg-LGC": { giveawayKindOverride: "penalty" },
     },
   };
 
@@ -245,7 +248,7 @@ test("penalties: overdue / coming-due / grandfathered / complete / paid / pop_fr
   assert.equal(penalties.counts.comingDue, 1, "exactly one coming-due");
   assert.equal(penalties.comingDue[0].member, "eve");
 
-  assert.equal(penalties.counts.settled, 1, "exactly one settled");
+  assert.equal(penalties.counts.settled, 1, "exactly one settled (unlinked legacy LGC excluded)");
   assert.equal(penalties.settled[0].payer, "eve");
   // Both links: the created penalty GA and the won GA it pays off (via penaltyForCode)
   assert.match(penalties.settled[0].giveawayPageUrl, /\/giveaway\/PEN\//);

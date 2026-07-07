@@ -3059,7 +3059,9 @@ function getOutstandingPenalties() {
 }
 
 // Penalty giveaways that have been created, resolved to the won giveaway they
-// pay off (the audit/settled list).
+// pay off (the audit/settled list). Penalty giveaways without a resolvable
+// "Penalty GA - <link>" target (legacy, pre-2026) are excluded: with no known
+// paid-for game they aren't "settled".
 function getPenaltyGiveawayRecords() {
   return state.giveaways
     .filter((giveaway) => getGiveawayKind(giveaway) === "penalty")
@@ -3079,6 +3081,7 @@ function getPenaltyGiveawayRecords() {
         targetGame: targetWin ? findById("games", targetWin.gameId) : null,
       };
     })
+    .filter((record) => record.target)
     .sort((left, right) => String(right.giveaway.createdAt || "").localeCompare(String(left.giveaway.createdAt || "")));
 }
 
@@ -3182,10 +3185,8 @@ function renderPenaltiesPage() {
       const payer = record.creator?.name || record.giveaway.creatorUsername || "Unknown member";
       const gameTitle = record.targetGame?.title || record.target?.title || record.giveaway.title || "";
       const [hoursCell, achievementsCell] = buildPenaltyProgressCells(record.targetWin);
-      // Paid -> the game links to the won giveaway that caused the penalty
-      // (when the "Penalty GA - <link>" description resolved it), with a
-      // secondary link to the created penalty giveaway. Legacy penalties with
-      // no resolved target fall back to linking the penalty giveaway itself.
+      // Paid -> the game that broke the rules links to its won giveaway, with
+      // a secondary link to the created penalty giveaway.
       const wonUrl = getGiveawayPageUrl(record.target);
       const penaltyUrl = getGiveawayPageUrl(record.giveaway);
       const penaltyLink =
@@ -3259,8 +3260,8 @@ function renderPenaltiesPageFromDerived(penalties) {
 
   if (filter === "all" || filter === "settled") {
     for (const row of settled) {
-      // Same linking as the live path: title -> won giveaway when resolved
-      // (penalty giveaway as legacy fallback), plus a secondary penalty link.
+      // Same linking as the live path: title -> won giveaway, plus a
+      // secondary link to the created penalty giveaway.
       const penaltyLink =
         row.wonGiveawayUrl && row.giveawayPageUrl
           ? ` <a class="penalty-ga-link" href="${escapeHtml(row.giveawayPageUrl)}" target="_blank" rel="noreferrer">Penalty GA ↗</a>`
