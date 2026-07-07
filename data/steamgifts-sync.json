@@ -1,7 +1,7 @@
 {
   "source": "akatsuki-steamgifts-sync",
   "collectorVersion": "1.13.2",
-  "syncedAt": "2026-07-07T08:58:10.739Z",
+  "syncedAt": "2026-07-07T09:43:07.589Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -4391,7 +4391,7 @@
     {
       "code": "LgQJ6",
       "url": "https://www.steamgifts.com/giveaway/LgQJ6/final-fantasy-tactics-the-ivalice-chronicles",
-      "title": "FINAL FANTASY TACTICS - The Ivalice Chronicles",
+      "title": "FINAL FANTASY TACTICS - The Ivalice C...",
       "creatorUsername": "Youdontknow",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Youdontknow",
       "appId": 1004640,
@@ -4634,7 +4634,7 @@
     {
       "code": "3Klb9",
       "url": "https://www.steamgifts.com/giveaway/3Klb9/the-elder-scrolls-iv-oblivion-remastered",
-      "title": "The Elder Scrolls IV: Oblivion Remastered",
+      "title": "The Elder Scrolls IV: Oblivion Remast...",
       "creatorUsername": "leniu",
       "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
       "appId": 2623190,
@@ -5234,7 +5234,7 @@
     {
       "code": "aQMBR",
       "url": "https://www.steamgifts.com/giveaway/aQMBR/robocop-rogue-city-unfinished-business",
-      "title": "RoboCop: Rogue City - Unfinished Business",
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
       "creatorUsername": "Koalala",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Koalala",
       "appId": 3527760,
@@ -5623,7 +5623,7 @@
     {
       "code": "44g1j",
       "url": "https://www.steamgifts.com/giveaway/44g1j/raidou-remastered-the-mystery-of-the-soulless-army",
-      "title": "RAIDOU Remastered: The Mystery of the Soulless Army",
+      "title": "RAIDOU Remastered: The Mystery of the...",
       "creatorUsername": "Youdontknow",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Youdontknow",
       "appId": 2288350,
@@ -6676,7 +6676,7 @@
     {
       "code": "UtTqc",
       "url": "https://www.steamgifts.com/giveaway/UtTqc/robocop-rogue-city-unfinished-business",
-      "title": "RoboCop: Rogue City - Unfinished Business",
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
       "creatorUsername": "Wintermute101",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Wintermute101",
       "appId": 3527760,
@@ -7291,7 +7291,7 @@
     {
       "code": "6lDgn",
       "url": "https://www.steamgifts.com/giveaway/6lDgn/robocop-rogue-city-unfinished-business",
-      "title": "RoboCop: Rogue City - Unfinished Business",
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
       "creatorUsername": "leniu",
       "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
       "appId": 3527760,
@@ -44590,7 +44590,7 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "2022-11",
       "penaltyForCode": "",
-      "hltbHours": 17.0
+      "hltbHours": 17
     },
     {
       "code": "S49HL",
@@ -58780,7 +58780,7 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "2022-04",
       "penaltyForCode": "",
-      "hltbHours": 17.0
+      "hltbHours": 17
     },
     {
       "code": "HuXcQ",
@@ -59269,7 +59269,7 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "2022-03",
       "penaltyForCode": "",
-      "hltbHours": 17.0
+      "hltbHours": 17
     },
     {
       "code": "hOT4P",
@@ -60999,7 +60999,7 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "2022-01",
       "penaltyForCode": "",
-      "hltbHours": 17.0
+      "hltbHours": 17
     },
     {
       "code": "wTNCD",
@@ -62295,7 +62295,7 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "",
       "penaltyForCode": "",
-      "hltbHours": 17.0
+      "hltbHours": 17
     },
     {
       "code": "1Fbsw",
@@ -149263,7 +149263,7 @@
     {
       "code": "utQfp",
       "url": "https://www.steamgifts.com/giveaway/utQfp/lego-star-wars-the-skywalker-saga-galactic-edition",
-      "title": "LEGO® Star Wars™: The Skywalker Saga",
+      "title": "LEGO Star Wars: The Skywalker Saga Ga...",
       "creatorUsername": "Ernesttico",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Ernesttico",
       "appId": 920210,
@@ -150637,7 +150637,7 @@
         "Ernesttico"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-07T08:58:06.487Z",
+      "entriesSnapshotAt": "2026-07-07T09:43:04.960Z",
       "hltbHours": 6.19
     },
     {
@@ -150665,7 +150665,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-07T08:58:06.875Z",
+      "entriesSnapshotAt": "2026-07-07T09:43:05.386Z",
       "hltbHours": 4.61
     },
     {
@@ -150771,7 +150771,7 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-07T08:58:09.534Z",
+      "entriesSnapshotAt": "2026-07-07T09:43:06.789Z",
       "hltbHours": 64.62
     },
     {
@@ -151303,13 +151303,13 @@
         "Horseflesh"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-07T08:58:03.383Z",
+      "entriesSnapshotAt": "2026-07-07T09:43:01.738Z",
       "hltbHours": 62.73
     },
     {
       "code": "ZvvXe",
       "url": "https://www.steamgifts.com/giveaway/ZvvXe/dying-light-2-stay-human-reloaded-edition",
-      "title": "Dying Light 2 Stay Human: Reloaded Edition",
+      "title": "Dying Light 2 Stay Human: Reloaded Ed...",
       "creatorUsername": "Ernesttico",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Ernesttico",
       "appId": 534380,
@@ -151334,7 +151334,7 @@
         "Koalala"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-07T08:57:59.552Z"
+      "entriesSnapshotAt": "2026-07-07T09:42:58.857Z"
     },
     {
       "code": "c5PFG",
@@ -151363,7 +151363,7 @@
         "Koalala"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-07T08:58:00.096Z",
+      "entriesSnapshotAt": "2026-07-07T09:42:59.647Z",
       "hltbHours": 24.69
     },
     {
@@ -151394,7 +151394,7 @@
         "Millsshogun"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-07T08:58:00.670Z",
+      "entriesSnapshotAt": "2026-07-07T09:43:00.342Z",
       "hltbHours": 17.63
     },
     {
@@ -151427,7 +151427,7 @@
         "chOOkity"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-07T08:58:01.553Z",
+      "entriesSnapshotAt": "2026-07-07T09:43:00.830Z",
       "hltbHours": 10.71
     },
     {
@@ -151459,7 +151459,7 @@
         "leniu"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-07T08:58:02.407Z",
+      "entriesSnapshotAt": "2026-07-07T09:43:01.297Z",
       "hltbHours": 38.23
     },
     {
@@ -151515,7 +151515,7 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3375780/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3375780/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3375780/74827d6ceab6ef1722b86eb1bfb49b879cb3c12d/capsule_184x69.jpg",
-      "entriesCount": 6,
+      "entriesCount": 7,
       "startDate": "2026-07-04T21:01:01.000Z",
       "endDate": "2026-07-07T10:00:00.000Z",
       "winners": [],
@@ -151527,6 +151527,7 @@
       "penaltyForCode": "",
       "giveawayKindChecked": true,
       "entryUsers": [
+        "Ernesttico",
         "leniu",
         "Wintermute101",
         "Youdontknow",
@@ -151535,7 +151536,7 @@
         "Koalala"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-07T08:57:59.020Z"
+      "entriesSnapshotAt": "2026-07-07T09:42:58.348Z"
     },
     {
       "code": "eR2uH",
@@ -151562,7 +151563,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-07T08:58:03.762Z",
+      "entriesSnapshotAt": "2026-07-07T09:43:02.194Z",
       "hltbHours": 30.53
     },
     {
@@ -151592,7 +151593,7 @@
         "chOOkity"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-07T08:58:04.371Z",
+      "entriesSnapshotAt": "2026-07-07T09:43:02.897Z",
       "hltbHours": 23.57
     },
     {
@@ -151622,7 +151623,7 @@
         "Ernesttico"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-07T08:58:04.908Z",
+      "entriesSnapshotAt": "2026-07-07T09:43:03.366Z",
       "hltbHours": 35.47
     },
     {
@@ -151650,7 +151651,7 @@
       "giveawayKindChecked": true,
       "entryUsers": [],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-07T08:58:05.305Z"
+      "entriesSnapshotAt": "2026-07-07T09:43:03.662Z"
     },
     {
       "code": "vorU2",
@@ -151679,8 +151680,62 @@
         "Wintermute101"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-07T08:58:05.904Z",
+      "entriesSnapshotAt": "2026-07-07T09:43:04.129Z",
       "hltbHours": 72.35
+    },
+    {
+      "code": "1AXLL",
+      "url": "https://www.steamgifts.com/giveaway/1AXLL/the-elder-scrolls-iv-oblivion-remastered",
+      "title": "The Elder Scrolls IV: Oblivion Remast...",
+      "creatorUsername": "chOOkity",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/chOOkity",
+      "appId": 2623190,
+      "steamAppUrl": "https://store.steampowered.com/app/2623190?utm_source=SteamGifts",
+      "points": 50,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2623190/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2623190/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2623190/capsule_184x69.jpg",
+      "entriesCount": 0,
+      "startDate": "2026-07-07T09:35:30.000Z",
+      "endDate": "2026-07-08T18:00:00.000Z",
+      "winners": [],
+      "resultStatus": "open",
+      "resultLabel": "Open",
+      "regionRestricted": false,
+      "giveawayKind": "summer_event",
+      "giveawayMonthOverride": "",
+      "penaltyForCode": "",
+      "giveawayKindChecked": true,
+      "entryUsers": [],
+      "entriesFinalized": false,
+      "entriesSnapshotAt": "2026-07-07T09:43:05.888Z"
+    },
+    {
+      "code": "xoJSi",
+      "url": "https://www.steamgifts.com/giveaway/xoJSi/directive-8020",
+      "title": "Directive 8020",
+      "creatorUsername": "chOOkity",
+      "creatorProfileUrl": "https://www.steamgifts.com/user/chOOkity",
+      "appId": 2255370,
+      "steamAppUrl": "https://store.steampowered.com/app/2255370?utm_source=SteamGifts",
+      "points": 50,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2255370/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2255370/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2255370/capsule_184x69.jpg",
+      "entriesCount": 0,
+      "startDate": "2026-07-07T09:32:59.000Z",
+      "endDate": "2026-07-08T18:00:00.000Z",
+      "winners": [],
+      "resultStatus": "open",
+      "resultLabel": "Open",
+      "regionRestricted": false,
+      "giveawayKind": "summer_event",
+      "giveawayMonthOverride": "",
+      "penaltyForCode": "",
+      "giveawayKindChecked": true,
+      "entryUsers": [],
+      "entriesFinalized": false,
+      "entriesSnapshotAt": "2026-07-07T09:43:06.339Z"
     }
   ],
   "wins": [
