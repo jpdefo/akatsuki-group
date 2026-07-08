@@ -1,11 +1,14 @@
 {
-  "savedAt": "2026-07-08T20:31:33.971Z",
+  "savedAt": "2026-07-08T21:23:44.706Z",
   "overrides": {
     "games": {
       "app:534380": {
         "hltbHoursOverride": 24.5
       },
       "app:2821610": {
+        "hltbHoursOverride": 12
+      },
+      "app:2147380": {
         "hltbHoursOverride": 12
       }
     },
