@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-07T09:04:22.702196+00:00",
+  "updatedAt": "2026-07-08T08:04:03.280271+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2512,7 +2512,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 6.88
+      "achievementsPlaytimeHours": 6.88,
+      "popThresholdMetAt": "2026-07-08T08:04:03.279133+00:00"
     },
     {
       "username": "BojanNS987",
@@ -2866,6 +2867,23 @@
       "gamesVisible": true,
       "error": "HTTP Error 500: Internal Server Error",
       "popThresholdMetAt": "2026-06-26T07:11:08.797441+00:00"
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 2997230,
+      "title": "Planet of Lana II",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2997230/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 25,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "BojanNS987",
@@ -5469,15 +5487,15 @@
       "title": "Mewgenics",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/686060/achievements/",
       "visible": true,
-      "earnedAchievements": 49,
+      "earnedAchievements": 50,
       "totalAchievements": 281,
-      "achievementPercent": 17,
-      "playtimeHours": 84.22,
+      "achievementPercent": 18,
+      "playtimeHours": 85.47,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 84.22,
+      "achievementsPlaytimeHours": 85.47,
       "popThresholdMetAt": "2026-06-26T07:11:08.797696+00:00"
     },
     {
@@ -6905,6 +6923,23 @@
     {
       "username": "burntreynolds444",
       "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 2358720,
+      "title": "Black Myth: Wukong",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/2358720/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 81,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
       "appId": 2375550,
       "title": "Like a Dragon Gaiden: The Man Who Erased His Name",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/2375550/achievements/",
@@ -7182,6 +7217,23 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 12.92,
       "popThresholdMetAt": "2026-06-26T07:11:08.797892+00:00"
+    },
+    {
+      "username": "chOOkity",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
+      "appId": 534380,
+      "title": "Dying Light 2 Stay Human: Reloaded Ed...",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/534380/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 65,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "chOOkity",
@@ -9278,7 +9330,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 11.78
+      "achievementsPlaytimeHours": 11.78,
+      "popThresholdMetAt": "2026-07-08T08:04:03.279367+00:00"
     },
     {
       "username": "chOOkity",
@@ -9499,12 +9552,12 @@
       "earnedAchievements": 1,
       "totalAchievements": 37,
       "achievementPercent": 3,
-      "playtimeHours": 1.03,
+      "playtimeHours": 1.17,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 1.03
+      "achievementsPlaytimeHours": 1.17
     },
     {
       "username": "chOOkity",
@@ -14305,7 +14358,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 2.62
+      "achievementsPlaytimeHours": 2.62,
+      "popThresholdMetAt": "2026-07-08T08:04:03.279493+00:00"
     },
     {
       "username": "Ernesttico",
@@ -14470,6 +14524,23 @@
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 35,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "Ernesttico",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
+      "appId": 3375780,
+      "title": "Trails in the Sky 1st Chapter",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/3375780/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 43,
       "achievementPercent": 0,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -17169,7 +17240,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 2.88
+      "achievementsPlaytimeHours": 2.88,
+      "popThresholdMetAt": "2026-07-08T08:04:03.279595+00:00"
     },
     {
       "username": "Horseflesh",
@@ -17291,6 +17363,23 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 2947440,
+      "title": "SILENT HILL f",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/2947440/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 56,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "Horseflesh",
@@ -17430,6 +17519,23 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 3321460,
+      "title": "Crimson Desert",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/3321460/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 34,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
       "achievementsPlaytimeHours": 0.0
     },
     {
@@ -19275,12 +19381,12 @@
       "earnedAchievements": 30,
       "totalAchievements": 62,
       "achievementPercent": 48,
-      "playtimeHours": 60.27,
+      "playtimeHours": 61.7,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 60.27,
+      "achievementsPlaytimeHours": 61.7,
       "popThresholdMetAt": "2026-06-26T07:11:08.799308+00:00"
     },
     {
@@ -20655,6 +20761,23 @@
     {
       "username": "Koalala",
       "steamProfile": "https://steamcommunity.com/profiles/76561198065466175",
+      "appId": 2369390,
+      "title": "Far Cry 6",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/2369390/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 99,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "Koalala",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198065466175",
       "appId": 2417610,
       "title": "METAL GEAR SOLID Δ: SNAKE EATER",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/2417610/achievements/",
@@ -20944,12 +21067,12 @@
       "earnedAchievements": 6,
       "totalAchievements": 45,
       "achievementPercent": 13,
-      "playtimeHours": 13.2,
+      "playtimeHours": 13.32,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 13.2,
+      "achievementsPlaytimeHours": 13.32,
       "popThresholdMetAt": "2026-06-26T07:11:08.799495+00:00"
     },
     {
@@ -27859,6 +27982,23 @@
     {
       "username": "Millsshogun",
       "steamProfile": "https://steamcommunity.com/profiles/76561198075996214",
+      "appId": 1888160,
+      "title": "ARMORED CORE VI FIRES OF RUBICON",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/1888160/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 30,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "Millsshogun",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198075996214",
       "appId": 1888930,
       "title": "The Last of Us Part I",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/1888930/achievements/",
@@ -28059,16 +28199,17 @@
       "appId": 3489700,
       "title": "Stellar Blade",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/3489700/achievements/",
-      "playtimeHours": 2.48,
+      "playtimeHours": 7.87,
       "visible": true,
-      "earnedAchievements": 3,
+      "earnedAchievements": 4,
       "totalAchievements": 45,
-      "achievementPercent": 7,
+      "achievementPercent": 9,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.48
+      "achievementsPlaytimeHours": 7.87,
+      "popThresholdMetAt": "2026-07-08T08:04:03.279857+00:00"
     },
     {
       "username": "Millsshogun",
@@ -35279,16 +35420,16 @@
       "appId": 2069250,
       "title": "High On Life 2",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2069250/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 2.73,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 1,
       "totalAchievements": 31,
-      "achievementPercent": 0,
+      "achievementPercent": 3,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 2.73
     },
     {
       "username": "Wintermute101",
@@ -37271,15 +37412,15 @@
       "title": "CODE VEIN II",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/2362060/achievements/",
       "visible": true,
-      "earnedAchievements": 8,
+      "earnedAchievements": 9,
       "totalAchievements": 36,
-      "achievementPercent": 22,
-      "playtimeHours": 16.22,
+      "achievementPercent": 25,
+      "playtimeHours": 19.23,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 16.22,
+      "achievementsPlaytimeHours": 19.23,
       "popThresholdMetAt": "2026-06-26T07:11:08.801392+00:00"
     },
     {
@@ -37297,7 +37438,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 7.9
+      "achievementsPlaytimeHours": 7.9,
+      "popThresholdMetAt": "2026-07-08T08:04:03.280093+00:00"
     },
     {
       "username": "xMisiu",
@@ -41235,16 +41377,16 @@
       "appId": 686060,
       "title": "Mewgenics",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/686060/achievements/",
-      "playtimeHours": 17.18,
+      "playtimeHours": 17.68,
       "visible": true,
-      "earnedAchievements": 51,
+      "earnedAchievements": 56,
       "totalAchievements": 281,
-      "achievementPercent": 18,
+      "achievementPercent": 20,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 17.18
+      "achievementsPlaytimeHours": 17.68
     },
     {
       "username": "zettaivanugen",
@@ -42352,16 +42494,16 @@
       "appId": 2057760,
       "title": "Esoteric Ebb",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/2057760/achievements/",
-      "playtimeHours": 14.55,
+      "playtimeHours": 19.18,
       "visible": true,
-      "earnedAchievements": 39,
+      "earnedAchievements": 56,
       "totalAchievements": 56,
-      "achievementPercent": 70,
+      "achievementPercent": 100,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 14.55,
+      "achievementsPlaytimeHours": 19.18,
       "popThresholdMetAt": "2026-07-05T08:36:55.337593+00:00"
     },
     {
@@ -46052,9 +46194,9 @@
     {
       "title": "Hellblade II: Senua’s Saga",
       "appId": 2461850,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 7.11,
+      "matchedTitle": "Hellblade II: Senua's Saga",
+      "url": "https://howlongtobeat.com/game/72854"
     },
     {
       "title": "Ultros",
@@ -46248,9 +46390,9 @@
     {
       "title": "Hellblade II: Senua’s Saga",
       "appId": 2461850,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 7.11,
+      "matchedTitle": "Hellblade II: Senua's Saga",
+      "url": "https://howlongtobeat.com/game/72854"
     },
     {
       "title": "Balatro",
@@ -46332,9 +46474,9 @@
     {
       "title": "Hellblade II: Senua’s Saga",
       "appId": 2461850,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 7.11,
+      "matchedTitle": "Hellblade II: Senua's Saga",
+      "url": "https://howlongtobeat.com/game/72854"
     },
     {
       "title": "Granblue Fantasy: Relink",
@@ -46738,9 +46880,9 @@
     {
       "title": "Hellblade II: Senua’s Saga",
       "appId": 2461850,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 7.11,
+      "matchedTitle": "Hellblade II: Senua's Saga",
+      "url": "https://howlongtobeat.com/game/72854"
     },
     {
       "title": "Slay the Princess — The Pristine Cut",
@@ -46927,9 +47069,9 @@
     {
       "title": "Hellblade II: Senua’s Saga",
       "appId": 2461850,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 7.11,
+      "matchedTitle": "Hellblade II: Senua's Saga",
+      "url": "https://howlongtobeat.com/game/72854"
     },
     {
       "title": "Hades II",
@@ -70879,6 +71021,13 @@
       "url": "https://howlongtobeat.com/game/83152"
     },
     {
+      "title": "Trails in the Sky 1st Chapter",
+      "appId": 3375780,
+      "hltbHours": 39.84,
+      "matchedTitle": "Trails in the Sky 1st Chapter",
+      "url": "https://howlongtobeat.com/game/156025"
+    },
+    {
       "title": "Hades II",
       "appId": 1145350,
       "hltbHours": 30.53,
@@ -70905,32 +71054,46 @@
       "hltbHours": 72.35,
       "matchedTitle": "Mewgenics",
       "url": "https://howlongtobeat.com/game/135404"
+    },
+    {
+      "title": "The Elder Scrolls IV: Oblivion Remastered",
+      "appId": 2623190,
+      "hltbHours": 17.5,
+      "matchedTitle": "The Elder Scrolls IV: Oblivion Remastered",
+      "url": "https://howlongtobeat.com/game/166969"
+    },
+    {
+      "title": "Directive 8020",
+      "appId": 2255370,
+      "hltbHours": 7.84,
+      "matchedTitle": "Directive 8020",
+      "url": "https://howlongtobeat.com/game/116632"
     }
   ],
   "steamApiEnabled": true,
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-07-07T09:01:13.137112+00:00",
+  "libraryUpdatedAt": "2026-07-08T08:03:07.811273+00:00",
   "libraryStats": {
-    "durationSeconds": 3.74,
+    "durationSeconds": 4.25,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14214
+    "totalPlaytimeRows": 14237
   },
   "stats": {
-    "durationSeconds": 193.31,
-    "targetWins": 2377,
-    "uniqueProgressTargets": 2373,
-    "libraryPlaytimeHits": 2348,
-    "cachedReuses": 2284,
-    "achievementSuccesses": 11,
+    "durationSeconds": 59.73,
+    "targetWins": 2385,
+    "uniqueProgressTargets": 2381,
+    "libraryPlaytimeHits": 2356,
+    "cachedReuses": 2282,
+    "achievementSuccesses": 21,
     "achievementErrors": 78,
     "cachedFallbacks": 78,
-    "hltbTitlesRequested": 1289,
-    "hltbResultsAvailable": 4035
+    "hltbTitlesRequested": 1291,
+    "hltbResultsAvailable": 4038
   }
 }

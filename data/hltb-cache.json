@@ -14142,11 +14142,11 @@
   },
   "hellblade ii senua s saga": {
     "title": "Hellblade II: Senua’s Saga",
-    "hltbHours": null,
-    "matchedTitle": "",
-    "gameId": null,
-    "url": "",
-    "checkedAt": "2026-07-01T07:21:40.172909+00:00"
+    "hltbHours": 7.11,
+    "matchedTitle": "Hellblade II: Senua's Saga",
+    "gameId": 72854,
+    "url": "https://howlongtobeat.com/game/72854",
+    "checkedAt": "2026-07-08T08:03:10.555180+00:00"
   },
   "final fantasy tactics the ivalice chronicles": {
     "title": "FINAL FANTASY TACTICS - The Ivalice Chronicles",
@@ -14266,7 +14266,7 @@
     "matchedTitle": "Gears of War: E-Day",
     "gameId": 152017,
     "url": "https://howlongtobeat.com/game/152017",
-    "checkedAt": "2026-07-01T07:21:38.412912+00:00"
+    "checkedAt": "2026-07-08T08:03:08.438799+00:00"
   },
   "huntdown overtime": {
     "title": "HUNTDOWN: OVERTIME",
@@ -14274,7 +14274,7 @@
     "matchedTitle": "Huntdown: Overtime",
     "gameId": 181324,
     "url": "https://howlongtobeat.com/game/181324",
-    "checkedAt": "2026-07-01T07:21:39.142248+00:00"
+    "checkedAt": "2026-07-08T08:03:09.020258+00:00"
   },
   "keeper": {
     "title": "Keeper",
@@ -14322,7 +14322,7 @@
     "matchedTitle": "Warhammer 40,000: Dawn of War IV",
     "gameId": 172963,
     "url": "https://howlongtobeat.com/game/172963",
-    "checkedAt": "2026-07-01T07:21:45.887186+00:00"
+    "checkedAt": "2026-07-08T08:03:11.252124+00:00"
   },
   "death stranding 2 on the beach": {
     "title": "DEATH STRANDING 2: ON THE BEACH",
@@ -14699,5 +14699,13 @@
     "gameId": 139630,
     "url": "https://howlongtobeat.com/game/139630",
     "checkedAt": "2026-07-07T09:03:02.662944+00:00"
+  },
+  "trails in the sky 1st chapter": {
+    "title": "Trails in the Sky 1st Chapter",
+    "hltbHours": 39.84,
+    "matchedTitle": "Trails in the Sky 1st Chapter",
+    "gameId": 156025,
+    "url": "https://howlongtobeat.com/game/156025",
+    "checkedAt": "2026-07-08T08:03:11.113837+00:00"
   }
 }
