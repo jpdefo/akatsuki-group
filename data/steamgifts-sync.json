@@ -1,7 +1,7 @@
 {
   "source": "akatsuki-steamgifts-sync",
   "collectorVersion": "1.13.2",
-  "syncedAt": "2026-07-08T12:52:30.768Z",
+  "syncedAt": "2026-07-08T18:20:04.276Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -4634,7 +4634,7 @@
     {
       "code": "3Klb9",
       "url": "https://www.steamgifts.com/giveaway/3Klb9/the-elder-scrolls-iv-oblivion-remastered",
-      "title": "The Elder Scrolls IV: Oblivion Remastered",
+      "title": "The Elder Scrolls IV: Oblivion Remast...",
       "creatorUsername": "leniu",
       "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
       "appId": 2623190,
@@ -5234,7 +5234,7 @@
     {
       "code": "aQMBR",
       "url": "https://www.steamgifts.com/giveaway/aQMBR/robocop-rogue-city-unfinished-business",
-      "title": "RoboCop: Rogue City - Unfinished Business",
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
       "creatorUsername": "Koalala",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Koalala",
       "appId": 3527760,
@@ -5623,7 +5623,7 @@
     {
       "code": "44g1j",
       "url": "https://www.steamgifts.com/giveaway/44g1j/raidou-remastered-the-mystery-of-the-soulless-army",
-      "title": "RAIDOU Remastered: The Mystery of the Soulless Army",
+      "title": "RAIDOU Remastered: The Mystery of the...",
       "creatorUsername": "Youdontknow",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Youdontknow",
       "appId": 2288350,
@@ -6676,7 +6676,7 @@
     {
       "code": "UtTqc",
       "url": "https://www.steamgifts.com/giveaway/UtTqc/robocop-rogue-city-unfinished-business",
-      "title": "RoboCop: Rogue City - Unfinished Business",
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
       "creatorUsername": "Wintermute101",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Wintermute101",
       "appId": 3527760,
@@ -7291,7 +7291,7 @@
     {
       "code": "6lDgn",
       "url": "https://www.steamgifts.com/giveaway/6lDgn/robocop-rogue-city-unfinished-business",
-      "title": "RoboCop: Rogue City - Unfinished Business",
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
       "creatorUsername": "leniu",
       "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
       "appId": 3527760,
@@ -150769,9 +150769,15 @@
       "entriesCount": 1,
       "startDate": "2026-06-30T21:37:49.000Z",
       "endDate": "2026-07-04T21:36:00.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "Wintermute101",
+          "profileUrl": "https://www.steamgifts.com/user/Wintermute101",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "Wintermute101",
       "regionRestricted": false,
       "giveawayKind": "summer_event",
       "giveawayMonthOverride": "",
@@ -150780,8 +150786,8 @@
       "entryUsers": [
         "Wintermute101"
       ],
-      "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-08T12:52:29.851Z",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-07-08T18:20:03.327Z",
       "hltbHours": 64.62
     },
     {
@@ -151643,9 +151649,15 @@
       "entriesCount": 3,
       "startDate": "2026-07-04T19:56:29.000Z",
       "endDate": "2026-07-07T20:00:00.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "leniu",
+          "profileUrl": "https://www.steamgifts.com/user/leniu",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "leniu",
       "regionRestricted": false,
       "giveawayKind": "summer_event",
       "giveawayMonthOverride": "",
@@ -151656,8 +151668,8 @@
         "zettaivanugen",
         "chOOkity"
       ],
-      "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-08T12:52:28.441Z",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-07-08T18:20:02.697Z",
       "hltbHours": 23.57
     },
     {
@@ -151675,9 +151687,15 @@
       "entriesCount": 1,
       "startDate": "2026-07-04T19:55:49.000Z",
       "endDate": "2026-07-07T20:00:00.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "Ernesttico",
+          "profileUrl": "https://www.steamgifts.com/user/Ernesttico",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "Ernesttico",
       "regionRestricted": false,
       "giveawayKind": "summer_event",
       "giveawayMonthOverride": "",
@@ -151686,8 +151704,8 @@
       "entryUsers": [
         "Ernesttico"
       ],
-      "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-08T12:52:29.024Z",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-07-08T18:20:03.009Z",
       "hltbHours": 35.47
     },
     {
@@ -151769,8 +151787,8 @@
       "startDate": "2026-07-07T09:35:30.000Z",
       "endDate": "2026-07-08T18:00:00.000Z",
       "winners": [],
-      "resultStatus": "open",
-      "resultLabel": "Open",
+      "resultStatus": "awaiting_feedback",
+      "resultLabel": "Awaiting feedback",
       "regionRestricted": false,
       "giveawayKind": "summer_event",
       "giveawayMonthOverride": "",
@@ -151781,7 +151799,7 @@
         "burntreynolds444"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-08T12:52:27.044Z",
+      "entriesSnapshotAt": "2026-07-08T18:20:01.883Z",
       "hltbHours": 17.5
     },
     {
@@ -151800,8 +151818,8 @@
       "startDate": "2026-07-07T09:32:59.000Z",
       "endDate": "2026-07-08T18:00:00.000Z",
       "winners": [],
-      "resultStatus": "open",
-      "resultLabel": "Open",
+      "resultStatus": "awaiting_feedback",
+      "resultLabel": "Awaiting feedback",
       "regionRestricted": false,
       "giveawayKind": "summer_event",
       "giveawayMonthOverride": "",
@@ -151812,7 +151830,7 @@
         "Horseflesh"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-08T12:52:27.538Z",
+      "entriesSnapshotAt": "2026-07-08T18:20:02.372Z",
       "hltbHours": 7.84
     }
   ],
@@ -152422,7 +152440,7 @@
     },
     {
       "giveawayCode": "3Klb9",
-      "title": "The Elder Scrolls IV: Oblivion Remastered",
+      "title": "The Elder Scrolls IV: Oblivion Remast...",
       "appId": 2623190,
       "winnerUsername": "Drain",
       "creatorUsername": "leniu",
@@ -152575,7 +152593,7 @@
     },
     {
       "giveawayCode": "aQMBR",
-      "title": "RoboCop: Rogue City - Unfinished Business",
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
       "appId": 3527760,
       "winnerUsername": "Wintermute101",
       "creatorUsername": "Koalala",
@@ -152674,7 +152692,7 @@
     },
     {
       "giveawayCode": "44g1j",
-      "title": "RAIDOU Remastered: The Mystery of the Soulless Army",
+      "title": "RAIDOU Remastered: The Mystery of the...",
       "appId": 2288350,
       "winnerUsername": "Wintermute101",
       "creatorUsername": "Youdontknow",
@@ -152926,7 +152944,7 @@
     },
     {
       "giveawayCode": "UtTqc",
-      "title": "RoboCop: Rogue City - Unfinished Business",
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
       "appId": 3527760,
       "winnerUsername": "Ernesttico",
       "creatorUsername": "Wintermute101",
@@ -153061,7 +153079,7 @@
     },
     {
       "giveawayCode": "6lDgn",
-      "title": "RoboCop: Rogue City - Unfinished Business",
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
       "appId": 3527760,
       "winnerUsername": "Horseflesh",
       "creatorUsername": "leniu",
@@ -187773,6 +187791,15 @@
       "winDate": "2026-07-03T17:09:00.000Z"
     },
     {
+      "giveawayCode": "VMq8v",
+      "title": "Persona 3 Reload",
+      "appId": 2161700,
+      "winnerUsername": "Wintermute101",
+      "creatorUsername": "WNDRLST",
+      "entriesCount": 1,
+      "winDate": "2026-07-04T21:36:00.000Z"
+    },
+    {
       "giveawayCode": "slVFW",
       "title": "Spirit of the North 2",
       "appId": 1778840,
@@ -187968,6 +187995,24 @@
       "winnerUsername": "Koalala",
       "creatorUsername": "BojanNS987",
       "entriesCount": 2,
+      "winDate": "2026-07-07T20:00:00.000Z"
+    },
+    {
+      "giveawayCode": "j9TJl",
+      "title": "Avatar: Frontiers of Pandora",
+      "appId": 2840770,
+      "winnerUsername": "leniu",
+      "creatorUsername": "BojanNS987",
+      "entriesCount": 3,
+      "winDate": "2026-07-07T20:00:00.000Z"
+    },
+    {
+      "giveawayCode": "SwbE6",
+      "title": "PowerWash Simulator 2",
+      "appId": 2968420,
+      "winnerUsername": "Ernesttico",
+      "creatorUsername": "BojanNS987",
+      "entriesCount": 1,
       "winDate": "2026-07-07T20:00:00.000Z"
     },
     {
