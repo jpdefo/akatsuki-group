@@ -1,7 +1,14 @@
 {
-  "savedAt": "2026-07-03T14:05:44.237Z",
+  "savedAt": "2026-07-08T20:31:33.971Z",
   "overrides": {
-    "games": {},
+    "games": {
+      "app:534380": {
+        "hltbHoursOverride": 24.5
+      },
+      "app:2821610": {
+        "hltbHoursOverride": 12
+      }
+    },
     "wins": {
       "sg-win-COnkv-Ernesttico": {
         "requiredAchievementsOverride": 2
@@ -38,7 +45,9 @@
           }
         ]
       },
-      "sg-R91uQ": {},
+      "sg-R91uQ": {
+        "cycleMonthOverride": "2026-04"
+      },
       "sg-LqrvT": {
         "giveawayKindOverride": "extra"
       },
@@ -323,6 +332,12 @@
       },
       "sg-slVFW": {
         "giveawayKindOverride": "summer_event"
+      },
+      "sg-c5PFG": {
+        "summerBasePointsOverride": 120
+      },
+      "sg-CZ9sE": {
+        "summerBasePointsOverride": 80
       }
     },
     "cycleMembers": {
