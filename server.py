@@ -1817,7 +1817,7 @@ def choose_hltb_match(title: str, results: list[dict], *, with_score: bool = Fal
     return (best_match, best_score) if with_score else best_match
 
 
-HLTB_MISS_RETRY = timedelta(days=7)
+HLTB_MISS_RETRY = timedelta(days=2)
 
 
 def hltb_entry_needs_retry(entry) -> bool:
@@ -1869,6 +1869,7 @@ def lookup_hltb_hours(title: str, cache: dict, *, force: bool = False) -> dict:
     if not force and cache_key in cache:
         return cache[cache_key]
 
+    errored = False
     try:
         # Keep the best match across attempts: a narrowed search ("kingdom hearts
         # iii re mind") can surface only the DLC while a later attempt ("kingdom
@@ -1885,6 +1886,7 @@ def lookup_hltb_hours(title: str, cache: dict, *, force: bool = False) -> dict:
                 break
     except (HTTPError, URLError, TimeoutError, json.JSONDecodeError):
         best_match = None
+        errored = True
 
     result = {
         "title": title,
@@ -1894,7 +1896,12 @@ def lookup_hltb_hours(title: str, cache: dict, *, force: bool = False) -> dict:
         "url": f"{HLTB_BASE}/game/{best_match.get('game_id')}" if best_match and best_match.get("game_id") else "",
         "checkedAt": utc_now(),
     }
-    cache[cache_key] = result
+    # Don't poison the cache with a transient network/parse failure: an errored
+    # lookup would otherwise persist as a "miss" and be locked in for the whole
+    # HLTB_MISS_RETRY window. Return the empty result for this run but let the
+    # next run retry immediately.
+    if not errored:
+        cache[cache_key] = result
     return result
 
 
