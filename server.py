@@ -10,7 +10,6 @@ import threading
 import time
 import traceback
 from datetime import datetime, timedelta, timezone
-from difflib import SequenceMatcher
 from email.utils import parsedate_to_datetime
 from http import HTTPStatus
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
@@ -40,7 +39,7 @@ USER_AGENT = (
     "(KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
 )
 STEAM_API_BASE = "https://api.steampowered.com"
-HLTB_BASE = "https://howlongtobeat.com"
+AUGMENTED_STEAM_API_BASE = "https://api.augmentedsteam.com"
 SNAPSHOT_CONTRACT_VERSION = 1
 STATIC_FILE_NAMES = [
     "admin.html",
@@ -590,7 +589,7 @@ def resolve_package_app_ids(sync_payload: dict) -> int:
 
 def fix_truncated_titles(sync_payload: dict, media_cache: dict) -> int:
     """Replace giveaway titles truncated by SteamGifts (ending in ...) with the
-    canonical Steam store name, so display and HLTB matching use the full title.
+    canonical Steam store name, so display uses the full title.
 
     Only truncated titles are touched, and the store name is cached, so this does
     near-zero work after the first pass.
@@ -1119,10 +1118,17 @@ def enrich_sync_payload_with_cached_media(sync_payload: dict) -> dict:
     return build_sync_export_payload(sync_payload, media_lookup=media_lookup)
 
 
-def fetch_json(url: str, *, headers: dict | None = None, data: bytes | None = None, method: str | None = None):
+def fetch_json(
+    url: str,
+    *,
+    headers: dict | None = None,
+    data: bytes | None = None,
+    method: str | None = None,
+    attempts: int = 4,
+):
     request_headers = {"User-Agent": USER_AGENT, **(headers or {})}
     request = Request(url, headers=request_headers, data=data, method=method or ("POST" if data else "GET"))
-    with open_url(request) as response:
+    with open_url(request, attempts=attempts) as response:
         return json.loads(response.read().decode("utf-8", errors="replace"))
 
 
@@ -1704,119 +1710,6 @@ def refresh_steam_library(
     return payload
 
 
-def normalize_title(value: str) -> str:
-    return re.sub(r"\s+", " ", re.sub(r"[^a-z0-9]+", " ", value.lower())).strip()
-
-
-def fetch_hltb_auth() -> dict:
-    return fetch_json(
-        f"{HLTB_BASE}/api/bleed/init?t={int(time.time() * 1000)}",
-        headers={"Referer": f"{HLTB_BASE}/", "Origin": HLTB_BASE},
-    )
-
-
-def search_hltb(title: str) -> dict | None:
-    auth = fetch_hltb_auth()
-    payload = {
-        "searchType": "games",
-        "searchTerms": title.strip().split(),
-        "searchPage": 1,
-        "size": 20,
-        "searchOptions": {
-            "games": {
-                "userId": 0,
-                "platform": "",
-                "sortCategory": "popular",
-                "rangeCategory": "main",
-                "rangeTime": {"min": 0, "max": 0},
-                "gameplay": {
-                    "perspective": "",
-                    "flow": "",
-                    "genre": "",
-                    "difficulty": "",
-                },
-                "rangeYear": {"min": "", "max": ""},
-                "modifier": "",
-            },
-            "users": {"sortCategory": "postcount"},
-            "lists": {"sortCategory": "follows"},
-            "filter": "",
-            "sort": 0,
-            "randomizer": 0,
-        },
-        "useCache": True,
-    }
-    hp_key = auth.get("hpKey")
-    hp_val = auth.get("hpVal")
-    if hp_key:
-        payload[hp_key] = hp_val
-
-    headers = {
-        "Content-Type": "application/json",
-        "Accept": "*/*",
-        "Referer": f"{HLTB_BASE}/",
-        "Origin": HLTB_BASE,
-        "x-auth-token": str(auth.get("token") or ""),
-        "x-hp-key": str(hp_key or ""),
-        "x-hp-val": str(hp_val or ""),
-    }
-
-    try:
-        return fetch_json(
-            f"{HLTB_BASE}/api/bleed",
-            headers=headers,
-            data=json.dumps(payload).encode("utf-8"),
-            method="POST",
-        )
-    except HTTPError as error:
-        if error.code != HTTPStatus.FORBIDDEN:
-            raise
-        auth = fetch_hltb_auth()
-        hp_key = auth.get("hpKey")
-        hp_val = auth.get("hpVal")
-        if hp_key:
-            payload[hp_key] = hp_val
-        headers["x-auth-token"] = str(auth.get("token") or "")
-        headers["x-hp-key"] = str(hp_key or "")
-        headers["x-hp-val"] = str(hp_val or "")
-        return fetch_json(
-            f"{HLTB_BASE}/api/bleed",
-            headers=headers,
-            data=json.dumps(payload).encode("utf-8"),
-            method="POST",
-        )
-
-
-def choose_hltb_match(title: str, results: list[dict], *, with_score: bool = False):
-    normalized_title = normalize_title(title)
-    best_match = None
-    best_score = 0.0
-
-    for item in results:
-        game_name = item.get("game_name") or ""
-        candidate = normalize_title(game_name)
-        if not candidate:
-            continue
-        score = SequenceMatcher(None, normalized_title, candidate).ratio()
-        if candidate == normalized_title:
-            score += 0.25
-        elif normalized_title in candidate or candidate in normalized_title:
-            score += 0.1
-        # Strong penalty: a store name like "KINGDOM HEARTS III + Re Mind (DLC)"
-        # otherwise scores the Re Mind DLC entry above the Kingdom Hearts III game.
-        if item.get("game_type") != "game":
-            score -= 0.25
-        if not item.get("comp_main"):
-            score -= 0.05
-        if score > best_score:
-            best_score = score
-            best_match = item
-
-    if best_score < 0.45:
-        best_match = None
-    return (best_match, best_score) if with_score else best_match
-
-
 HLTB_MISS_RETRY = timedelta(days=2)
 
 
@@ -1824,8 +1717,8 @@ def hltb_entry_needs_retry(entry) -> bool:
     """A cached HLTB result should be re-fetched when it has no usable hours.
 
     Misses are stored (None hours = no match, 0 hours = HLTB has the game but no
-    completion time yet, e.g. an unreleased title) so we don't hammer HLTB, but
-    they must be retried periodically so released games and titles that failed a
+    completion time yet, e.g. an unreleased title) so we don't hammer the API, but
+    they must be retried periodically so released games and app ids that failed a
     transient lookup eventually populate. Real (truthy) hours are kept as-is.
     """
     if not isinstance(entry, dict):
@@ -1844,58 +1737,46 @@ def hltb_entry_needs_retry(entry) -> bool:
     return datetime.now(timezone.utc) - checked_dt >= HLTB_MISS_RETRY
 
 
-def hltb_search_attempts(title: str) -> list[str]:
-    """Search-term variants for a title, tried in order until one matches.
+def lookup_hltb_hours(app_id: int, cache: dict, *, force: bool = False) -> dict:
+    """HowLongToBeat "Main Story" hours for a Steam app id, via Augmented Steam.
 
-    HLTB's search AND-matches whitespace tokens and returns nothing for
-    punctuation-heavy store names ("KINGDOM HEARTS -HD 1.5+2.5 ReMIX-",
-    "KINGDOM HEARTS III + Re Mind (DLC)"). Try the raw title, then a cleaned
-    variant (no parentheticals/punctuation), then progressively drop trailing
-    tokens; choose_hltb_match's score threshold rejects bad broad matches.
+    Augmented Steam's own backend (the same one its browser extension calls) already
+    resolves Steam app id -> HLTB game server-side and serves it unauthenticated at
+    GET /app/<appid>/v2 alongside reviews/wsgf/player-count data. That sidesteps
+    title-matching entirely: HLTB's public search only takes free text, so going
+    straight to HLTB would mean fuzzy-matching store titles against it ourselves.
+
+    A bulk cold-cache backfill fires this once per unique app id, which is enough
+    to trip Augmented Steam's per-IP rate limit; a 429 there carries a Retry-After
+    that can run into the tens of minutes. attempts=1 skips open_url's normal
+    retry-with-sleep for that response — a 429 fails this single lookup
+    immediately (self-heals on a later run) instead of blocking the whole refresh.
     """
-    attempts = [title.strip()]
-    cleaned = normalize_title(re.sub(r"\([^)]*\)", " ", title))
-    if cleaned and cleaned != attempts[0].lower():
-        attempts.append(cleaned)
-    tokens = cleaned.split()
-    while len(tokens) > 2 and len(attempts) < 6:
-        tokens = tokens[:-1]
-        attempts.append(" ".join(tokens))
-    return attempts
-
-
-def lookup_hltb_hours(title: str, cache: dict, *, force: bool = False) -> dict:
-    cache_key = normalize_title(title)
+    cache_key = str(app_id)
     if not force and cache_key in cache:
         return cache[cache_key]
 
     errored = False
+    rate_limited = False
+    hltb = None
     try:
-        # Keep the best match across attempts: a narrowed search ("kingdom hearts
-        # iii re mind") can surface only the DLC while a later attempt ("kingdom
-        # hearts iii") surfaces the real game. Stop early on a confident match so
-        # clean titles still cost a single search.
-        best_match = None
-        best_score = 0.0
-        for terms in hltb_search_attempts(title):
-            payload = search_hltb(terms)
-            match, score = choose_hltb_match(title, payload.get("data", []), with_score=True) if payload else (None, 0.0)
-            if match and score > best_score:
-                best_match, best_score = match, score
-            if best_score >= 0.9:
-                break
-    except (HTTPError, URLError, TimeoutError, json.JSONDecodeError):
-        best_match = None
+        payload = fetch_json(f"{AUGMENTED_STEAM_API_BASE}/app/{app_id}/v2", attempts=1)
+        hltb = payload.get("hltb") if isinstance(payload, dict) else None
+    except HTTPError as error:
+        errored = True
+        rate_limited = error.code == HTTPStatus.TOO_MANY_REQUESTS
+    except (URLError, TimeoutError, json.JSONDecodeError):
         errored = True
 
+    story_minutes = hltb.get("story") if hltb else None
     result = {
-        "title": title,
-        "hltbHours": round(float(best_match.get("comp_main", 0)) / 3600, 2) if best_match else None,
-        "matchedTitle": best_match.get("game_name") if best_match else "",
-        "gameId": best_match.get("game_id") if best_match else None,
-        "url": f"{HLTB_BASE}/game/{best_match.get('game_id')}" if best_match and best_match.get("game_id") else "",
+        "appId": app_id,
+        "hltbHours": round(story_minutes / 60, 2) if story_minutes else None,
+        "url": (hltb.get("url") if hltb else "") or "",
         "checkedAt": utc_now(),
     }
+    if rate_limited:
+        result["rateLimited"] = True
     # Don't poison the cache with a transient network/parse failure: an errored
     # lookup would otherwise persist as a "miss" and be locked in for the whole
     # HLTB_MISS_RETRY window. Return the empty result for this run but let the
@@ -1905,78 +1786,60 @@ def lookup_hltb_hours(title: str, cache: dict, *, force: bool = False) -> dict:
     return result
 
 
-def package_hltb_lookup_names(giveaway: dict, package_cache: dict) -> list[str]:
-    """HLTB search names for a package giveaway: its component games' store names.
-
-    A resolved edition ("FINAL FANTASY XVI COMPLETE EDITION") searches HLTB as its
-    base game; a multi-game collection searches each contained game and the hours
-    are summed by the caller. Returns [] for non-package giveaways, which search
-    by their own title.
-    """
-    package_id = parse_int(giveaway.get("packageId"), None)
-    if not package_id:
-        return []
-    entry = package_cache.get(str(package_id))
-    names = [str(app.get("name") or "").strip() for app in package_game_apps(entry)]
-    return [name for name in names if name]
-
-
-def enrich_sync_with_hltb(sync_payload: dict, *, remote_titles: set[str] | None = None) -> tuple[dict, list[dict]]:
+def enrich_sync_with_hltb(sync_payload: dict, *, remote_app_ids: set[int] | None = None) -> tuple[dict, list[dict]]:
     cache = load_json(HLTB_CACHE_PATH, {})
-    package_cache = load_json(PACKAGE_CACHE_PATH, {})
     changed = False
     hltb_items = []
-    remote_title_keys = {
-        normalize_title(title)
-        for title in (remote_titles or set())
-        if normalize_title(title)
-    }
-    # Map each giveaway title to the names actually searched on HLTB: the title
-    # itself, or — for resolved packages — the contained games' store names, so
-    # "FINAL FANTASY XVI COMPLETE EDITION" searches as "FINAL FANTASY XVI" and
-    # multi-game collections sum over their games.
-    lookup_names_by_title = {}
+
+    # Map each giveaway's app id to the app id(s) actually looked up: its own, or -
+    # for a resolved multi-game collection (see resolve_package_app_ids) - each
+    # contained game's app id, summed below.
+    lookup_app_ids_by_giveaway_app_id: dict[int, list[int]] = {}
     for giveaway in sync_payload.get("giveaways", []):
-        title = giveaway.get("title")
-        if not title or title in lookup_names_by_title:
+        app_id = parse_int(giveaway.get("appId"), None)
+        if not app_id or app_id in lookup_app_ids_by_giveaway_app_id:
             continue
-        names = package_hltb_lookup_names(giveaway, package_cache)
-        lookup_names_by_title[title] = names or [title]
+        component_ids = [cid for cid in (parse_int(raw, None) for raw in giveaway.get("packageAppIds", [])) if cid]
+        lookup_app_ids_by_giveaway_app_id[app_id] = component_ids or [app_id]
 
-    name_results = {}
-    for title, names in sorted(lookup_names_by_title.items()):
-        in_scope = remote_titles is None or normalize_title(title) in remote_title_keys
-        for name in names:
-            cache_key = normalize_title(name)
-            if not cache_key or name in name_results:
-                continue
-            cached = cache.get(cache_key)
-            if in_scope and hltb_entry_needs_retry(cached):
-                cached = lookup_hltb_hours(name, cache, force=True)
-            if cached is not None:
-                name_results[name] = cached
+    lookup_app_ids = {cid for ids in lookup_app_ids_by_giveaway_app_id.values() for cid in ids}
+    entry_by_app_id = {}
+    rate_limited = False
+    for app_id in sorted(lookup_app_ids):
+        if rate_limited:
+            break
+        in_scope = remote_app_ids is None or app_id in remote_app_ids
+        cached = cache.get(str(app_id))
+        if in_scope and hltb_entry_needs_retry(cached):
+            cached = lookup_hltb_hours(app_id, cache, force=True)
+            rate_limited = bool(cached.get("rateLimited"))
+            if not rate_limited:
+                # A cold cache can need one live request per unique app id; a small
+                # pace keeps a large backfill under Augmented Steam's per-IP rate
+                # limit instead of tripping it (its 429 Retry-After runs long).
+                time.sleep(0.3)
+        if cached is not None:
+            entry_by_app_id[app_id] = cached
 
-    title_results = {}
-    for title, names in lookup_names_by_title.items():
-        entries = [name_results[name] for name in names if name_results.get(name)]
+    result_by_giveaway_app_id = {}
+    for giveaway_app_id, component_ids in lookup_app_ids_by_giveaway_app_id.items():
+        entries = [entry_by_app_id[cid] for cid in component_ids if entry_by_app_id.get(cid)]
         if not entries:
             continue
-        if len(names) == 1:
-            title_results[title] = entries[0]
+        if len(component_ids) == 1:
+            result_by_giveaway_app_id[giveaway_app_id] = entries[0]
             continue
         # Multi-game collection: total time is the sum of the games that have
         # hours; missing lookups self-heal on later runs like any other miss.
         hours = [entry.get("hltbHours") for entry in entries if entry.get("hltbHours")]
-        title_results[title] = {
-            "title": title,
+        result_by_giveaway_app_id[giveaway_app_id] = {
+            "appId": giveaway_app_id,
             "hltbHours": round(sum(hours), 2) if hours else None,
-            "matchedTitle": " + ".join(entry.get("matchedTitle") for entry in entries if entry.get("matchedTitle")),
             "url": next((entry.get("url") for entry in entries if entry.get("url")), ""),
         }
 
     for giveaway in sync_payload.get("giveaways", []):
-        title = giveaway.get("title") or ""
-        cached = title_results.get(title)
+        cached = result_by_giveaway_app_id.get(parse_int(giveaway.get("appId"), None))
         if not cached:
             continue
         hltb_hours = cached.get("hltbHours")
@@ -1985,16 +1848,15 @@ def enrich_sync_with_hltb(sync_payload: dict, *, remote_titles: set[str] | None 
             changed = True
 
     for giveaway in sync_payload.get("giveaways", []):
-        title = giveaway.get("title") or ""
-        cached = title_results.get(title)
+        app_id = parse_int(giveaway.get("appId"), None)
+        cached = result_by_giveaway_app_id.get(app_id)
         if not cached:
             continue
         hltb_items.append(
             {
-                "title": title,
-                "appId": giveaway.get("appId"),
+                "title": giveaway.get("title") or "",
+                "appId": app_id,
                 "hltbHours": cached.get("hltbHours"),
-                "matchedTitle": cached.get("matchedTitle", ""),
                 "url": cached.get("url", ""),
             }
         )
@@ -2185,10 +2047,10 @@ def refresh_steam_progress(
     # Look up HLTB for the wins in scope (the selected month, or all active wins
     # on a full refresh). Cached hits are reused; only misses/stale entries are
     # re-fetched, so released games and recovered lookups self-heal over time.
-    remote_titles = {win.get("title") for win in target_wins if win.get("title")}
+    remote_app_ids = {app_id for win in target_wins if (app_id := parse_int(win.get("appId"), None))}
     sync_payload, hltb_items = enrich_sync_with_hltb(
         sync_payload,
-        remote_titles=remote_titles,
+        remote_app_ids=remote_app_ids,
     )
     existing_progress_payload = load_json(PROGRESS_PATH, empty_progress_payload())
     progress_cache = build_progress_cache(existing_progress_payload)
@@ -2360,7 +2222,7 @@ def refresh_steam_progress(
             "achievementSuccesses": achievement_successes,
             "achievementErrors": achievement_errors,
             "cachedFallbacks": cached_fallbacks,
-            "hltbTitlesRequested": len(remote_titles),
+            "hltbAppIdsRequested": len(remote_app_ids),
             "hltbResultsAvailable": len(hltb_items),
         },
     }
