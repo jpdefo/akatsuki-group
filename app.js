@@ -52,6 +52,8 @@ let steamProgressByKey = new Map(); // `${steamProfile}|${appId}` -> progress en
 let steamProgressItems = []; // raw progress rows (game merge looks up by appId)
 let steamHltbByAppId = new Map();
 let steamHltbByTitle = new Map();
+let steamHltbUrlByAppId = new Map();
+let steamHltbUrlByTitle = new Map();
 
 const defaultState = {
   settings: {
@@ -2666,6 +2668,7 @@ function renderMonthlyDetailsTable(target, winsSubset, sortMode = elements.month
       const progress = evaluateMonthlyProgress(win);
       const prereleaseNote = buildPrereleaseMonthNote(win, game);
       const hltbHours = getGameHltbHours(game);
+      const hltbUrl = getGameHltbUrl(game);
       const totalAchievements = getGameAchievementsTotal(game);
       const effectiveMonth = getWinPlayMonth(win);
 
@@ -2676,7 +2679,7 @@ function renderMonthlyDetailsTable(target, winsSubset, sortMode = elements.month
           <td>${buildGiveawayCreatorMarkup(win)}</td>
           <td>
             <div class="value-stack">
-              <span>${hltbHours ? formatHours(hltbHours) : "-"}</span>
+              <span>${hltbHours ? (hltbUrl ? `<a href="${escapeHtml(hltbUrl)}" target="_blank" rel="noopener noreferrer">${formatHours(hltbHours)}</a>` : formatHours(hltbHours)) : "-"}</span>
               ${game?.hltbHoursOverride !== undefined && game?.hltbHoursOverride !== null ? `<span class="meta-line override-note">Manual override</span>` : ""}
               ${game ? `<button class="inline-action" data-edit-action="hltb" data-game-id="${game.id}">Edit HLTB</button>` : ""}
             </div>
@@ -3502,17 +3505,18 @@ function renderGames() {
   }
 
   elements.gamesTable.innerHTML = state.games
-    .map(
-      (game) => `
+    .map((game) => {
+      const hltbUrl = getGameHltbUrl(game);
+      return `
         <tr>
           <td><strong>${escapeHtml(game.title)}</strong></td>
           <td>${game.appId}</td>
-          <td>${formatHours(game.hltbHours)}</td>
+          <td>${hltbUrl ? `<a href="${escapeHtml(hltbUrl)}" target="_blank" rel="noopener noreferrer">${formatHours(game.hltbHours)}</a>` : formatHours(game.hltbHours)}</td>
           <td>${game.achievementsTotal}</td>
           <td><button class="table-action" data-delete-type="games" data-delete-id="${game.id}">Delete</button></td>
         </tr>
-      `,
-    )
+      `;
+    })
     .join("");
 }
 
@@ -4058,6 +4062,12 @@ function applySteamProgress(payload) {
   );
   steamHltbByAppId = hltbByAppId;
   steamHltbByTitle = hltbByTitle;
+  steamHltbUrlByAppId = new Map(
+    hltbItems.filter((item) => item?.appId && item?.url).map((item) => [Number(item.appId), item.url]),
+  );
+  steamHltbUrlByTitle = new Map(
+    hltbItems.filter((item) => item?.title && item?.url).map((item) => [item.title, item.url]),
+  );
 
   state.wins = state.wins.map((win) => {
     const member = findById("members", win.memberId);
@@ -5916,6 +5926,10 @@ function getGameHltbHours(game) {
     return Number(game.hltbHoursOverride || 0);
   }
   return getBaseGameHltbHours(game);
+}
+
+function getGameHltbUrl(game) {
+  return steamHltbUrlByAppId.get(Number(game?.appId)) || steamHltbUrlByTitle.get(game?.title) || "";
 }
 
 function getGameAchievementsTotal(game) {
