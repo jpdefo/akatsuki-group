@@ -1,7 +1,7 @@
 {
   "source": "akatsuki-steamgifts-sync",
   "collectorVersion": "1.13.2",
-  "syncedAt": "2026-07-08T20:14:30.491Z",
+  "syncedAt": "2026-07-09T16:55:03.225Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -4330,7 +4330,7 @@
     {
       "code": "LgQJ6",
       "url": "https://www.steamgifts.com/giveaway/LgQJ6/final-fantasy-tactics-the-ivalice-chronicles",
-      "title": "FINAL FANTASY TACTICS - The Ivalice Chronicles",
+      "title": "FINAL FANTASY TACTICS - The Ivalice C...",
       "creatorUsername": "Youdontknow",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Youdontknow",
       "appId": 1004640,
@@ -4566,7 +4566,7 @@
     {
       "code": "3Klb9",
       "url": "https://www.steamgifts.com/giveaway/3Klb9/the-elder-scrolls-iv-oblivion-remastered",
-      "title": "The Elder Scrolls IV: Oblivion Remastered",
+      "title": "The Elder Scrolls IV: Oblivion Remast...",
       "creatorUsername": "leniu",
       "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
       "appId": 2623190,
@@ -5149,7 +5149,7 @@
     {
       "code": "aQMBR",
       "url": "https://www.steamgifts.com/giveaway/aQMBR/robocop-rogue-city-unfinished-business",
-      "title": "RoboCop: Rogue City - Unfinished Business",
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
       "creatorUsername": "Koalala",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Koalala",
       "appId": 3527760,
@@ -5527,7 +5527,7 @@
     {
       "code": "44g1j",
       "url": "https://www.steamgifts.com/giveaway/44g1j/raidou-remastered-the-mystery-of-the-soulless-army",
-      "title": "RAIDOU Remastered: The Mystery of the Soulless Army",
+      "title": "RAIDOU Remastered: The Mystery of the...",
       "creatorUsername": "Youdontknow",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Youdontknow",
       "appId": 2288350,
@@ -6549,7 +6549,7 @@
     {
       "code": "UtTqc",
       "url": "https://www.steamgifts.com/giveaway/UtTqc/robocop-rogue-city-unfinished-business",
-      "title": "RoboCop: Rogue City - Unfinished Business",
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
       "creatorUsername": "Wintermute101",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Wintermute101",
       "appId": 3527760,
@@ -7149,7 +7149,7 @@
     {
       "code": "6lDgn",
       "url": "https://www.steamgifts.com/giveaway/6lDgn/robocop-rogue-city-unfinished-business",
-      "title": "RoboCop: Rogue City - Unfinished Business",
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
       "creatorUsername": "leniu",
       "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
       "appId": 3527760,
@@ -75162,7 +75162,7 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "",
       "penaltyForCode": "",
-      "hltbHours": 20.0
+      "hltbHours": 20
     },
     {
       "code": "3oYUq",
@@ -86391,7 +86391,7 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "2020-03",
       "penaltyForCode": "",
-      "hltbHours": 3.0
+      "hltbHours": 3
     },
     {
       "code": "89up0",
@@ -86522,7 +86522,7 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "2020-02",
       "penaltyForCode": "",
-      "hltbHours": 3.0
+      "hltbHours": 3
     },
     {
       "code": "EbAyL",
@@ -100286,7 +100286,7 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "2019-02",
       "penaltyForCode": "",
-      "hltbHours": 29.0
+      "hltbHours": 29
     },
     {
       "code": "zguG4",
@@ -102501,7 +102501,7 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "2019-01",
       "penaltyForCode": "",
-      "hltbHours": 29.0
+      "hltbHours": 29
     },
     {
       "code": "r4WVe",
@@ -106458,7 +106458,7 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "",
       "penaltyForCode": "",
-      "hltbHours": 51.0
+      "hltbHours": 51
     },
     {
       "code": "6ZcMa",
@@ -107922,7 +107922,7 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "",
       "penaltyForCode": "",
-      "hltbHours": 6.0
+      "hltbHours": 6
     },
     {
       "code": "I67qg",
@@ -111555,7 +111555,7 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "2018-07",
       "penaltyForCode": "",
-      "hltbHours": 2.0
+      "hltbHours": 2
     },
     {
       "code": "KHXB9",
@@ -114844,7 +114844,7 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "2018-04",
       "penaltyForCode": "",
-      "hltbHours": 51.0
+      "hltbHours": 51
     },
     {
       "code": "JSa3G",
@@ -115775,7 +115775,7 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "2018-04",
       "penaltyForCode": "",
-      "hltbHours": 2.0
+      "hltbHours": 2
     },
     {
       "code": "awxXD",
@@ -116978,7 +116978,7 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "2018-03",
       "penaltyForCode": "",
-      "hltbHours": 2.0
+      "hltbHours": 2
     },
     {
       "code": "86P4I",
@@ -119108,7 +119108,7 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "2018-01",
       "penaltyForCode": "",
-      "hltbHours": 51.0
+      "hltbHours": 51
     },
     {
       "code": "ukh9t",
@@ -129344,7 +129344,7 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "2017-05",
       "penaltyForCode": "",
-      "hltbHours": 6.0
+      "hltbHours": 6
     },
     {
       "code": "iZVMd",
@@ -129585,7 +129585,7 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "",
       "penaltyForCode": "",
-      "hltbHours": 12.0
+      "hltbHours": 12
     },
     {
       "code": "Sa98N",
@@ -139649,7 +139649,7 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "",
       "penaltyForCode": "",
-      "hltbHours": 6.0
+      "hltbHours": 6
     },
     {
       "code": "ZV4HI",
@@ -142185,7 +142185,7 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "",
       "penaltyForCode": "",
-      "hltbHours": 6.0
+      "hltbHours": 6
     },
     {
       "code": "9nqUt",
@@ -144480,7 +144480,7 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "",
       "penaltyForCode": "",
-      "hltbHours": 21.0
+      "hltbHours": 21
     },
     {
       "code": "QTocj",
@@ -144584,7 +144584,7 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "2016-09",
       "penaltyForCode": "",
-      "hltbHours": 6.0
+      "hltbHours": 6
     },
     {
       "code": "OfwFl",
@@ -146037,7 +146037,7 @@
     {
       "code": "utQfp",
       "url": "https://www.steamgifts.com/giveaway/utQfp/lego-star-wars-the-skywalker-saga-galactic-edition",
-      "title": "LEGO® Star Wars™: The Skywalker Saga",
+      "title": "LEGO Star Wars: The Skywalker Saga Ga...",
       "creatorUsername": "Ernesttico",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Ernesttico",
       "appId": 920210,
@@ -148051,7 +148051,7 @@
     {
       "code": "ZvvXe",
       "url": "https://www.steamgifts.com/giveaway/ZvvXe/dying-light-2-stay-human-reloaded-edition",
-      "title": "Dying Light 2 Stay Human: Reloaded Edition",
+      "title": "Dying Light 2 Stay Human: Reloaded Ed...",
       "creatorUsername": "Ernesttico",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Ernesttico",
       "appId": 534380,
@@ -148484,7 +148484,7 @@
     {
       "code": "1AXLL",
       "url": "https://www.steamgifts.com/giveaway/1AXLL/the-elder-scrolls-iv-oblivion-remastered",
-      "title": "The Elder Scrolls IV: Oblivion Remastered",
+      "title": "The Elder Scrolls IV: Oblivion Remast...",
       "creatorUsername": "chOOkity",
       "creatorProfileUrl": "https://www.steamgifts.com/user/chOOkity",
       "appId": 2623190,
@@ -148509,7 +148509,7 @@
         "burntreynolds444"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-08T20:14:28.499Z"
+      "entriesSnapshotAt": "2026-07-09T16:55:01.499Z"
     },
     {
       "code": "xoJSi",
@@ -148539,7 +148539,7 @@
         "Horseflesh"
       ],
       "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-08T20:14:28.946Z"
+      "entriesSnapshotAt": "2026-07-09T16:55:02.372Z"
     }
   ],
   "wins": [
