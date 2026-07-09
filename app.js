@@ -2681,7 +2681,7 @@ function renderMonthlyDetailsTable(target, winsSubset, sortMode = elements.month
           <td>${buildGiveawayCreatorMarkup(win)}</td>
           <td>
             <div class="value-stack">
-              <span>${hltbHours ? (hltbUrl ? `<a href="${escapeHtml(hltbUrl)}" target="_blank" rel="noopener noreferrer">${formatHours(hltbHours)}</a>` : formatHours(hltbHours)) : "-"}</span>
+              <span>${hltbHours ? (hltbUrl ? `<a class="linked-title" href="${escapeHtml(hltbUrl)}" target="_blank" rel="noopener noreferrer">${formatHours(hltbHours)}</a>` : formatHours(hltbHours)) : "-"}</span>
               ${game?.hltbUrlOverride ? `<span class="meta-line override-note">Manual link override</span>` : game?.hltbHoursOverride !== undefined && game?.hltbHoursOverride !== null ? `<span class="meta-line override-note">Manual hours override</span>` : ""}
               ${game ? `<button class="inline-action" data-edit-action="hltb" data-game-id="${game.id}">Edit HLTB</button>` : ""}
             </div>
@@ -3513,7 +3513,7 @@ function renderGames() {
         <tr>
           <td><strong>${escapeHtml(game.title)}</strong></td>
           <td>${game.appId}</td>
-          <td>${hltbUrl ? `<a href="${escapeHtml(hltbUrl)}" target="_blank" rel="noopener noreferrer">${formatHours(game.hltbHours)}</a>` : formatHours(game.hltbHours)}</td>
+          <td>${hltbUrl ? `<a class="linked-title" href="${escapeHtml(hltbUrl)}" target="_blank" rel="noopener noreferrer">${formatHours(game.hltbHours)}</a>` : formatHours(game.hltbHours)}</td>
           <td>${game.achievementsTotal}</td>
           <td><button class="table-action" data-delete-type="games" data-delete-id="${game.id}">Delete</button></td>
         </tr>
