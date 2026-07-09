@@ -104,7 +104,7 @@ const runtime = {
   sharedOverrides: normalizeOverrideState(),
   sharedOverridesLoaded: false,
 };
-const GAME_OVERRIDE_FIELDS = ["hltbHoursOverride", "achievementTargetOverride"];
+const GAME_OVERRIDE_FIELDS = ["hltbHoursOverride", "hltbUrlOverride", "achievementTargetOverride"];
 const WIN_OVERRIDE_FIELDS = ["requiredAchievementsOverride", "monthOverride"];
 const GIVEAWAY_OVERRIDE_FIELDS = ["giveawayKindOverride", "manualWinners", "cycleMonthOverride", "summerBasePointsOverride"];
 const MEMBER_OVERRIDE_FIELDS = ["membershipStatus"];
@@ -2680,8 +2680,10 @@ function renderMonthlyDetailsTable(target, winsSubset, sortMode = elements.month
           <td>
             <div class="value-stack">
               <span>${hltbHours ? (hltbUrl ? `<a href="${escapeHtml(hltbUrl)}" target="_blank" rel="noopener noreferrer">${formatHours(hltbHours)}</a>` : formatHours(hltbHours)) : "-"}</span>
-              ${game?.hltbHoursOverride !== undefined && game?.hltbHoursOverride !== null ? `<span class="meta-line override-note">Manual override</span>` : ""}
-              ${game ? `<button class="inline-action" data-edit-action="hltb" data-game-id="${game.id}">Edit HLTB</button>` : ""}
+              ${game?.hltbHoursOverride !== undefined && game?.hltbHoursOverride !== null ? `<span class="meta-line override-note">Manual hours override</span>` : ""}
+              ${game?.hltbUrlOverride ? `<span class="meta-line override-note">Manual link override</span>` : ""}
+              ${game ? `<button class="inline-action" data-edit-action="hltb" data-game-id="${game.id}">Edit hours</button>` : ""}
+              ${game ? `<button class="inline-action" data-edit-action="hltb-url" data-game-id="${game.id}">Edit link</button>` : ""}
             </div>
           </td>
           <td>${progress.requiredHours ? formatHours(progress.requiredHours) : "-"}</td>
@@ -5929,6 +5931,9 @@ function getGameHltbHours(game) {
 }
 
 function getGameHltbUrl(game) {
+  if (game?.hltbUrlOverride) {
+    return game.hltbUrlOverride;
+  }
   return steamHltbUrlByAppId.get(Number(game?.appId)) || steamHltbUrlByTitle.get(game?.title) || "";
 }
 
@@ -6297,6 +6302,26 @@ function handleEditAction(button) {
     return;
   }
 
+  if (action === "hltb-url") {
+    const game = findById("games", button.dataset.gameId);
+    if (!game) {
+      return;
+    }
+    openEditModal({
+      title: `Edit HLTB link for ${game.title}`,
+      description: "Leave the field empty to clear the manual override and fall back to the synced match.",
+      label: "HLTB link",
+      initialValue: game.hltbUrlOverride ?? getGameHltbUrl(game),
+      inputType: "text",
+      inputAttributes: { placeholder: "https://howlongtobeat.com/game/..." },
+      parse: parseHltbUrlOverrideInput,
+      onSave: (nextValue) => {
+        updateOverrideField("games", getGameOverrideKey(game), "hltbUrlOverride", nextValue);
+      },
+    });
+    return;
+  }
+
   if (action === "achievement-target") {
     const win = findById("wins", button.dataset.winId);
     const game = win ? findById("games", win.gameId) : null;
@@ -6536,6 +6561,13 @@ function saveEditModal(clearOverride) {
 
   config.onSave(parsed.value);
   closeEditModal();
+}
+
+function parseHltbUrlOverrideInput(rawValue) {
+  if (!/^https?:\/\/\S+$/.test(rawValue)) {
+    return { error: "Enter a valid http(s) URL or leave the field empty." };
+  }
+  return { value: rawValue };
 }
 
 function parseNumericOverrideInput(rawValue, options = {}) {
