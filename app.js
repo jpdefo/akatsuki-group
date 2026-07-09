@@ -2680,10 +2680,8 @@ function renderMonthlyDetailsTable(target, winsSubset, sortMode = elements.month
           <td>
             <div class="value-stack">
               <span>${hltbHours ? (hltbUrl ? `<a href="${escapeHtml(hltbUrl)}" target="_blank" rel="noopener noreferrer">${formatHours(hltbHours)}</a>` : formatHours(hltbHours)) : "-"}</span>
-              ${game?.hltbHoursOverride !== undefined && game?.hltbHoursOverride !== null ? `<span class="meta-line override-note">Manual hours override</span>` : ""}
-              ${game?.hltbUrlOverride ? `<span class="meta-line override-note">Manual link override</span>` : ""}
-              ${game ? `<button class="inline-action" data-edit-action="hltb" data-game-id="${game.id}">Edit hours</button>` : ""}
-              ${game ? `<button class="inline-action" data-edit-action="hltb-url" data-game-id="${game.id}">Edit link</button>` : ""}
+              ${game?.hltbUrlOverride ? `<span class="meta-line override-note">Manual link override</span>` : game?.hltbHoursOverride !== undefined && game?.hltbHoursOverride !== null ? `<span class="meta-line override-note">Manual hours override</span>` : ""}
+              ${game ? `<button class="inline-action" data-edit-action="hltb" data-game-id="${game.id}">Edit HLTB</button>` : ""}
             </div>
           </td>
           <td>${progress.requiredHours ? formatHours(progress.requiredHours) : "-"}</td>
@@ -6283,40 +6281,28 @@ function handleEditAction(button) {
     }
     openEditModal({
       title: `Edit HLTB for ${game.title}`,
-      description: "Leave the field empty to clear the manual override and fall back to synced data.",
-      label: "HLTB hours",
-      initialValue: game.hltbHoursOverride ?? getGameHltbHours(game),
-      inputType: "number",
-      inputAttributes: { min: "0", step: "0.1" },
-      parse: (raw) => parseNumericOverrideInput(raw, { integer: false }),
-      onSave: (nextValue) => {
-        const baseValue = getBaseGameHltbHours(game);
-        updateOverrideField(
-          "games",
-          getGameOverrideKey(game),
-          "hltbHoursOverride",
-          nextValue === null || nextValue === baseValue ? null : nextValue,
-        );
-      },
-    });
-    return;
-  }
-
-  if (action === "hltb-url") {
-    const game = findById("games", button.dataset.gameId);
-    if (!game) {
-      return;
-    }
-    openEditModal({
-      title: `Edit HLTB link for ${game.title}`,
-      description: "Leave the field empty to clear the manual override and fall back to the synced match.",
-      label: "HLTB link",
-      initialValue: game.hltbUrlOverride ?? getGameHltbUrl(game),
+      description:
+        "Enter hours (e.g. 12.5) to correct the number, or paste an HLTB link to correct the match - not both. Leave empty to clear the override and fall back to synced data.",
+      label: "HLTB hours or link",
+      initialValue: game.hltbUrlOverride || game.hltbHoursOverride || getGameHltbHours(game),
       inputType: "text",
-      inputAttributes: { placeholder: "https://howlongtobeat.com/game/..." },
-      parse: parseHltbUrlOverrideInput,
+      inputAttributes: { placeholder: "12.5 or https://howlongtobeat.com/game/..." },
+      parse: parseHltbOverrideInput,
       onSave: (nextValue) => {
-        updateOverrideField("games", getGameOverrideKey(game), "hltbUrlOverride", nextValue);
+        const key = getGameOverrideKey(game);
+        if (nextValue?.url) {
+          updateOverrideField("games", key, "hltbUrlOverride", nextValue.url);
+          updateOverrideField("games", key, "hltbHoursOverride", null);
+          return;
+        }
+        if (nextValue?.hours !== undefined) {
+          const baseValue = getBaseGameHltbHours(game);
+          updateOverrideField("games", key, "hltbHoursOverride", nextValue.hours === baseValue ? null : nextValue.hours);
+          updateOverrideField("games", key, "hltbUrlOverride", null);
+          return;
+        }
+        updateOverrideField("games", key, "hltbHoursOverride", null);
+        updateOverrideField("games", key, "hltbUrlOverride", null);
       },
     });
     return;
@@ -6563,11 +6549,15 @@ function saveEditModal(clearOverride) {
   closeEditModal();
 }
 
-function parseHltbUrlOverrideInput(rawValue) {
-  if (!/^https?:\/\/\S+$/.test(rawValue)) {
-    return { error: "Enter a valid http(s) URL or leave the field empty." };
+function parseHltbOverrideInput(rawValue) {
+  if (/^https?:\/\/\S+$/.test(rawValue)) {
+    return { value: { url: rawValue } };
   }
-  return { value: rawValue };
+  const hours = Number(rawValue);
+  if (Number.isFinite(hours) && hours >= 0) {
+    return { value: { hours } };
+  }
+  return { error: "Enter HLTB hours (a number) or an http(s) link, or leave the field empty." };
 }
 
 function parseNumericOverrideInput(rawValue, options = {}) {
