@@ -101,6 +101,8 @@ const runtime = {
   renderSuspended: false,
   editModal: null,
   editModalState: null,
+  hltbEditModal: null,
+  hltbEditState: null,
   sharedOverrides: normalizeOverrideState(),
   sharedOverridesLoaded: false,
 };
@@ -6279,32 +6281,7 @@ function handleEditAction(button) {
     if (!game) {
       return;
     }
-    openEditModal({
-      title: `Edit HLTB for ${game.title}`,
-      description:
-        "Enter hours (e.g. 12.5) to correct the number, or paste an HLTB link to correct the match - not both. Leave empty to clear the override and fall back to synced data.",
-      label: "HLTB hours or link",
-      initialValue: game.hltbUrlOverride || game.hltbHoursOverride || getGameHltbHours(game),
-      inputType: "text",
-      inputAttributes: { placeholder: "12.5 or https://howlongtobeat.com/game/..." },
-      parse: parseHltbOverrideInput,
-      onSave: (nextValue) => {
-        const key = getGameOverrideKey(game);
-        if (nextValue?.url) {
-          updateOverrideField("games", key, "hltbUrlOverride", nextValue.url);
-          updateOverrideField("games", key, "hltbHoursOverride", null);
-          return;
-        }
-        if (nextValue?.hours !== undefined) {
-          const baseValue = getBaseGameHltbHours(game);
-          updateOverrideField("games", key, "hltbHoursOverride", nextValue.hours === baseValue ? null : nextValue.hours);
-          updateOverrideField("games", key, "hltbUrlOverride", null);
-          return;
-        }
-        updateOverrideField("games", key, "hltbHoursOverride", null);
-        updateOverrideField("games", key, "hltbUrlOverride", null);
-      },
-    });
+    openHltbEditModal(game);
     return;
   }
 
@@ -6549,15 +6526,176 @@ function saveEditModal(clearOverride) {
   closeEditModal();
 }
 
-function parseHltbOverrideInput(rawValue) {
-  if (/^https?:\/\/\S+$/.test(rawValue)) {
-    return { value: { url: rawValue } };
+function ensureHltbEditModal() {
+  if (runtime.hltbEditModal) {
+    return runtime.hltbEditModal;
   }
-  const hours = Number(rawValue);
-  if (Number.isFinite(hours) && hours >= 0) {
-    return { value: { hours } };
+
+  const wrapper = document.createElement("div");
+  wrapper.innerHTML = `
+    <div id="hltb-edit-modal" class="modal-backdrop" hidden>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="hltb-edit-title">
+        <h2 id="hltb-edit-title"></h2>
+        <p class="modal-copy">Set an hours override, or correct the HLTB link - not both. Editing one locks the other.</p>
+        <p id="hltb-edit-error" class="modal-error" hidden></p>
+        <label class="modal-field">
+          <span>HLTB hours</span>
+          <input id="hltb-edit-hours-input" type="number" min="0" step="0.1" />
+          <span id="hltb-edit-hours-hint" class="meta-line"></span>
+        </label>
+        <label class="modal-field">
+          <span>HLTB link</span>
+          <input id="hltb-edit-link-input" type="text" placeholder="https://howlongtobeat.com/game/..." />
+        </label>
+        <div class="modal-actions">
+          <button type="button" class="button secondary" data-hltb-modal-clear="true">Clear override</button>
+          <button type="button" class="button secondary" data-hltb-modal-cancel="true">Cancel</button>
+          <button type="button" class="button primary" data-hltb-modal-save="true">Save</button>
+        </div>
+      </div>
+    </div>
+  `;
+  document.body.append(wrapper.firstElementChild);
+
+  const root = document.querySelector("#hltb-edit-modal");
+  const modal = {
+    root,
+    title: root.querySelector("#hltb-edit-title"),
+    error: root.querySelector("#hltb-edit-error"),
+    hoursInput: root.querySelector("#hltb-edit-hours-input"),
+    hoursHint: root.querySelector("#hltb-edit-hours-hint"),
+    linkInput: root.querySelector("#hltb-edit-link-input"),
+    clearButton: root.querySelector("[data-hltb-modal-clear]"),
+    cancelButton: root.querySelector("[data-hltb-modal-cancel]"),
+    saveButton: root.querySelector("[data-hltb-modal-save]"),
+  };
+
+  modal.hoursInput.addEventListener("input", () => {
+    const state = runtime.hltbEditState;
+    if (!state) {
+      return;
+    }
+    const hoursChanged = modal.hoursInput.value.trim() !== state.initialHours;
+    modal.linkInput.disabled = hoursChanged;
+    if (!hoursChanged) {
+      modal.linkInput.value = state.initialLink;
+    }
+  });
+  modal.linkInput.addEventListener("input", () => {
+    const state = runtime.hltbEditState;
+    if (!state) {
+      return;
+    }
+    const linkChanged = modal.linkInput.value.trim() !== state.initialLink;
+    modal.hoursInput.disabled = linkChanged;
+    modal.hoursInput.value = linkChanged ? "" : state.initialHours;
+  });
+  modal.clearButton.addEventListener("click", () => {
+    const state = runtime.hltbEditState;
+    if (!state) {
+      return;
+    }
+    updateOverrideField("games", state.overrideKey, "hltbHoursOverride", null);
+    updateOverrideField("games", state.overrideKey, "hltbUrlOverride", null);
+    closeHltbEditModal();
+  });
+  modal.cancelButton.addEventListener("click", closeHltbEditModal);
+  modal.saveButton.addEventListener("click", saveHltbEditModal);
+  for (const input of [modal.hoursInput, modal.linkInput]) {
+    input.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        saveHltbEditModal();
+      }
+      if (event.key === "Escape") {
+        event.preventDefault();
+        closeHltbEditModal();
+      }
+    });
   }
-  return { error: "Enter HLTB hours (a number) or an http(s) link, or leave the field empty." };
+  modal.root.addEventListener("click", (event) => {
+    if (event.target === modal.root) {
+      closeHltbEditModal();
+    }
+  });
+
+  runtime.hltbEditModal = modal;
+  return modal;
+}
+
+function openHltbEditModal(game) {
+  const modal = ensureHltbEditModal();
+  const initialHours = String(getGameHltbHours(game) || "");
+  const initialLink = getGameHltbUrl(game) || "";
+  runtime.hltbEditState = {
+    overrideKey: getGameOverrideKey(game),
+    initialHours,
+    initialLink,
+  };
+
+  modal.title.textContent = `Edit HLTB for ${game.title}`;
+  modal.error.hidden = true;
+  modal.error.textContent = "";
+  modal.hoursInput.value = initialHours;
+  modal.hoursInput.disabled = false;
+  const baseHours = getBaseGameHltbHours(game);
+  modal.hoursHint.textContent = baseHours ? `Synced: ${formatHours(baseHours)}` : "No synced hours";
+  modal.linkInput.value = initialLink;
+  modal.linkInput.disabled = false;
+  modal.root.hidden = false;
+  modal.hoursInput.focus();
+  modal.hoursInput.select();
+}
+
+function closeHltbEditModal() {
+  const modal = ensureHltbEditModal();
+  runtime.hltbEditState = null;
+  modal.root.hidden = true;
+  modal.error.hidden = true;
+  modal.error.textContent = "";
+}
+
+function saveHltbEditModal() {
+  const modal = ensureHltbEditModal();
+  const state = runtime.hltbEditState;
+  if (!state) {
+    return;
+  }
+
+  const hoursRaw = modal.hoursInput.value.trim();
+  const linkRaw = modal.linkInput.value.trim();
+  const linkChanged = linkRaw !== state.initialLink;
+  const hoursChanged = hoursRaw !== state.initialHours;
+
+  if (linkChanged) {
+    if (linkRaw && !/^https?:\/\/\S+$/.test(linkRaw)) {
+      modal.error.hidden = false;
+      modal.error.textContent = "Enter a valid http(s) URL or leave the field empty.";
+      return;
+    }
+    updateOverrideField("games", state.overrideKey, "hltbUrlOverride", linkRaw || null);
+    updateOverrideField("games", state.overrideKey, "hltbHoursOverride", null);
+    closeHltbEditModal();
+    return;
+  }
+
+  if (hoursChanged) {
+    if (hoursRaw) {
+      const hours = Number(hoursRaw);
+      if (!Number.isFinite(hours) || hours < 0) {
+        modal.error.hidden = false;
+        modal.error.textContent = "Enter a valid number or leave the field empty.";
+        return;
+      }
+      updateOverrideField("games", state.overrideKey, "hltbHoursOverride", hours);
+    } else {
+      updateOverrideField("games", state.overrideKey, "hltbHoursOverride", null);
+    }
+    closeHltbEditModal();
+    return;
+  }
+
+  closeHltbEditModal();
 }
 
 function parseNumericOverrideInput(rawValue, options = {}) {
