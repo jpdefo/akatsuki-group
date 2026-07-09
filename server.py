@@ -1118,10 +1118,17 @@ def enrich_sync_payload_with_cached_media(sync_payload: dict) -> dict:
     return build_sync_export_payload(sync_payload, media_lookup=media_lookup)
 
 
-def fetch_json(url: str, *, headers: dict | None = None, data: bytes | None = None, method: str | None = None):
+def fetch_json(
+    url: str,
+    *,
+    headers: dict | None = None,
+    data: bytes | None = None,
+    method: str | None = None,
+    attempts: int = 4,
+):
     request_headers = {"User-Agent": USER_AGENT, **(headers or {})}
     request = Request(url, headers=request_headers, data=data, method=method or ("POST" if data else "GET"))
-    with open_url(request) as response:
+    with open_url(request, attempts=attempts) as response:
         return json.loads(response.read().decode("utf-8", errors="replace"))
 
 
@@ -1738,17 +1745,27 @@ def lookup_hltb_hours(app_id: int, cache: dict, *, force: bool = False) -> dict:
     GET /app/<appid>/v2 alongside reviews/wsgf/player-count data. That sidesteps
     title-matching entirely: HLTB's public search only takes free text, so going
     straight to HLTB would mean fuzzy-matching store titles against it ourselves.
+
+    A bulk cold-cache backfill fires this once per unique app id, which is enough
+    to trip Augmented Steam's per-IP rate limit; a 429 there carries a Retry-After
+    that can run into the tens of minutes. attempts=1 skips open_url's normal
+    retry-with-sleep for that response — a 429 fails this single lookup
+    immediately (self-heals on a later run) instead of blocking the whole refresh.
     """
     cache_key = str(app_id)
     if not force and cache_key in cache:
         return cache[cache_key]
 
     errored = False
+    rate_limited = False
     hltb = None
     try:
-        payload = fetch_json(f"{AUGMENTED_STEAM_API_BASE}/app/{app_id}/v2")
+        payload = fetch_json(f"{AUGMENTED_STEAM_API_BASE}/app/{app_id}/v2", attempts=1)
         hltb = payload.get("hltb") if isinstance(payload, dict) else None
-    except (HTTPError, URLError, TimeoutError, json.JSONDecodeError):
+    except HTTPError as error:
+        errored = True
+        rate_limited = error.code == HTTPStatus.TOO_MANY_REQUESTS
+    except (URLError, TimeoutError, json.JSONDecodeError):
         errored = True
 
     story_minutes = hltb.get("story") if hltb else None
@@ -1758,6 +1775,8 @@ def lookup_hltb_hours(app_id: int, cache: dict, *, force: bool = False) -> dict:
         "url": (hltb.get("url") if hltb else "") or "",
         "checkedAt": utc_now(),
     }
+    if rate_limited:
+        result["rateLimited"] = True
     # Don't poison the cache with a transient network/parse failure: an errored
     # lookup would otherwise persist as a "miss" and be locked in for the whole
     # HLTB_MISS_RETRY window. Return the empty result for this run but let the
@@ -1785,11 +1804,20 @@ def enrich_sync_with_hltb(sync_payload: dict, *, remote_app_ids: set[int] | None
 
     lookup_app_ids = {cid for ids in lookup_app_ids_by_giveaway_app_id.values() for cid in ids}
     entry_by_app_id = {}
+    rate_limited = False
     for app_id in sorted(lookup_app_ids):
+        if rate_limited:
+            break
         in_scope = remote_app_ids is None or app_id in remote_app_ids
         cached = cache.get(str(app_id))
         if in_scope and hltb_entry_needs_retry(cached):
             cached = lookup_hltb_hours(app_id, cache, force=True)
+            rate_limited = bool(cached.get("rateLimited"))
+            if not rate_limited:
+                # A cold cache can need one live request per unique app id; a small
+                # pace keeps a large backfill under Augmented Steam's per-IP rate
+                # limit instead of tripping it (its 429 Retry-After runs long).
+                time.sleep(0.3)
         if cached is not None:
             entry_by_app_id[app_id] = cached
 
