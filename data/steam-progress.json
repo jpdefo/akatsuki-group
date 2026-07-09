@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-09T09:01:28.911513+00:00",
+  "updatedAt": "2026-07-09T12:35:48.441851+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -12669,7 +12669,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 3.67
+      "achievementsPlaytimeHours": 3.67,
+      "popThresholdMetAt": "2026-07-09T12:35:48.441403+00:00"
     },
     {
       "username": "Ernesttico",
@@ -21853,7 +21854,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 3.63
+      "achievementsPlaytimeHours": 3.63,
+      "popThresholdMetAt": "2026-07-09T12:35:48.441565+00:00"
     },
     {
       "username": "Krlesnik",
@@ -24693,7 +24695,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 7.62
+      "achievementsPlaytimeHours": 7.62,
+      "popThresholdMetAt": "2026-07-09T12:35:48.441601+00:00"
     },
     {
       "username": "leniu",
@@ -28265,16 +28268,16 @@
       "appId": 3489700,
       "title": "Stellar Blade",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/3489700/achievements/",
-      "playtimeHours": 15.52,
+      "playtimeHours": 17.42,
       "visible": true,
-      "earnedAchievements": 6,
+      "earnedAchievements": 9,
       "totalAchievements": 45,
-      "achievementPercent": 13,
+      "achievementPercent": 20,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 15.52,
+      "achievementsPlaytimeHours": 17.42,
       "popThresholdMetAt": "2026-07-08T08:04:03.279857+00:00"
     },
     {
@@ -30350,7 +30353,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 10.27
+      "achievementsPlaytimeHours": 10.27,
+      "popThresholdMetAt": "2026-07-09T12:35:48.441682+00:00"
     },
     {
       "username": "skAd42",
@@ -37518,12 +37522,12 @@
       "earnedAchievements": 9,
       "totalAchievements": 36,
       "achievementPercent": 25,
-      "playtimeHours": 19.23,
+      "playtimeHours": 21.15,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 19.23,
+      "achievementsPlaytimeHours": 21.15,
       "popThresholdMetAt": "2026-06-26T07:11:08.801392+00:00"
     },
     {
@@ -42911,14 +42915,3249 @@
       "error": "HTTP Error 403: Forbidden"
     }
   ],
-  "hltb": [],
+  "hltb": [
+    {
+      "title": "Borderlands 3: Super Deluxe Edition",
+      "appId": 397540,
+      "hltbHours": 23.4,
+      "url": "https://howlongtobeat.com/game/65882"
+    },
+    {
+      "title": "The Precinct",
+      "appId": 490110,
+      "hltbHours": 12.17,
+      "url": "https://howlongtobeat.com/game/129891"
+    },
+    {
+      "title": "Steel Seed",
+      "appId": 458430,
+      "hltbHours": 9.35,
+      "url": "https://howlongtobeat.com/game/129898"
+    },
+    {
+      "title": "The Precinct",
+      "appId": 490110,
+      "hltbHours": 12.17,
+      "url": "https://howlongtobeat.com/game/129891"
+    },
+    {
+      "title": "The Precinct",
+      "appId": 490110,
+      "hltbHours": 12.17,
+      "url": "https://howlongtobeat.com/game/129891"
+    },
+    {
+      "title": "The Precinct",
+      "appId": 490110,
+      "hltbHours": 12.17,
+      "url": "https://howlongtobeat.com/game/129891"
+    },
+    {
+      "title": "ASTRONEER",
+      "appId": 361420,
+      "hltbHours": 25.38,
+      "url": "https://howlongtobeat.com/game/42182"
+    },
+    {
+      "title": "Planescape: Torment: Enhanced Edition",
+      "appId": 466300,
+      "hltbHours": 31.22,
+      "url": "https://howlongtobeat.com/game/7093"
+    },
+    {
+      "title": "Suicide Squad: Kill the Justice League",
+      "appId": 315210,
+      "hltbHours": 11.9,
+      "url": "https://howlongtobeat.com/game/82067"
+    },
+    {
+      "title": "Abiotic Factor",
+      "appId": 427410,
+      "hltbHours": 48.75,
+      "url": "https://howlongtobeat.com/game/149774"
+    },
+    {
+      "title": "System Shock",
+      "appId": 482400,
+      "hltbHours": 17.33,
+      "url": "https://howlongtobeat.com/game/74181"
+    },
+    {
+      "title": "Suicide Squad: Kill the Justice League",
+      "appId": 315210,
+      "hltbHours": 11.9,
+      "url": "https://howlongtobeat.com/game/82067"
+    },
+    {
+      "title": "Suicide Squad: Kill the Justice League",
+      "appId": 315210,
+      "hltbHours": 11.9,
+      "url": "https://howlongtobeat.com/game/82067"
+    },
+    {
+      "title": "The Pedestrian",
+      "appId": 466630,
+      "hltbHours": 4.03,
+      "url": "https://howlongtobeat.com/game/74727"
+    },
+    {
+      "title": "Wolcen: Lords of Mayhem",
+      "appId": 424370,
+      "hltbHours": 17.35,
+      "url": "https://howlongtobeat.com/game/36540"
+    },
+    {
+      "title": "System Shock",
+      "appId": 482400,
+      "hltbHours": 17.33,
+      "url": "https://howlongtobeat.com/game/74181"
+    },
+    {
+      "title": "Ni no Kuni II: Revenant Kingdom - The...",
+      "appId": 198297,
+      "hltbHours": null,
+      "url": ""
+    },
+    {
+      "title": "System Shock",
+      "appId": 482400,
+      "hltbHours": 17.33,
+      "url": "https://howlongtobeat.com/game/74181"
+    },
+    {
+      "title": "BELOW",
+      "appId": 250680,
+      "hltbHours": 18.98,
+      "url": "https://howlongtobeat.com/game/21675"
+    },
+    {
+      "title": "ASTRONEER",
+      "appId": 361420,
+      "hltbHours": 25.38,
+      "url": "https://howlongtobeat.com/game/42182"
+    },
+    {
+      "title": "System Shock",
+      "appId": 482400,
+      "hltbHours": 17.33,
+      "url": "https://howlongtobeat.com/game/74181"
+    },
+    {
+      "title": "System Shock",
+      "appId": 482400,
+      "hltbHours": 17.33,
+      "url": "https://howlongtobeat.com/game/74181"
+    },
+    {
+      "title": "Marvel's Midnight Suns",
+      "appId": 368260,
+      "hltbHours": 40.42,
+      "url": "https://howlongtobeat.com/game/97298"
+    },
+    {
+      "title": "System Shock",
+      "appId": 482400,
+      "hltbHours": 17.33,
+      "url": "https://howlongtobeat.com/game/74181"
+    },
+    {
+      "title": "Marvel's Midnight Suns",
+      "appId": 368260,
+      "hltbHours": 40.42,
+      "url": "https://howlongtobeat.com/game/97298"
+    },
+    {
+      "title": "System Shock",
+      "appId": 482400,
+      "hltbHours": 17.33,
+      "url": "https://howlongtobeat.com/game/74181"
+    },
+    {
+      "title": "Marvel's Midnight Suns",
+      "appId": 368260,
+      "hltbHours": 40.42,
+      "url": "https://howlongtobeat.com/game/97298"
+    },
+    {
+      "title": "System Shock",
+      "appId": 482400,
+      "hltbHours": 17.33,
+      "url": "https://howlongtobeat.com/game/74181"
+    },
+    {
+      "title": "Marvel's Midnight Suns",
+      "appId": 368260,
+      "hltbHours": 40.42,
+      "url": "https://howlongtobeat.com/game/97298"
+    },
+    {
+      "title": "Marvel's Midnight Suns",
+      "appId": 368260,
+      "hltbHours": 40.42,
+      "url": "https://howlongtobeat.com/game/97298"
+    },
+    {
+      "title": "Ghost Song",
+      "appId": 347800,
+      "hltbHours": 9.75,
+      "url": "https://howlongtobeat.com/game/37065"
+    },
+    {
+      "title": "Praey for the Gods",
+      "appId": 494430,
+      "hltbHours": 7.13,
+      "url": "https://howlongtobeat.com/game/64731"
+    },
+    {
+      "title": "Grand Theft Auto V Legacy",
+      "appId": 271590,
+      "hltbHours": 32.03,
+      "url": "https://howlongtobeat.com/game/4064"
+    },
+    {
+      "title": "GTFO",
+      "appId": 493520,
+      "hltbHours": 8.72,
+      "url": "https://howlongtobeat.com/game/69992"
+    },
+    {
+      "title": "Pillars of Eternity II: Deadfire - Ob...",
+      "appId": 238819,
+      "hltbHours": null,
+      "url": ""
+    },
+    {
+      "title": "Borderlands 3: Super Deluxe Edition",
+      "appId": 397540,
+      "hltbHours": 23.4,
+      "url": "https://howlongtobeat.com/game/65882"
+    },
+    {
+      "title": "Alice: Madness Returns",
+      "appId": 19680,
+      "hltbHours": 13.95,
+      "url": "https://howlongtobeat.com/game/340"
+    },
+    {
+      "title": "Danganronpa: Trigger Happy Havoc",
+      "appId": 413410,
+      "hltbHours": 25.22,
+      "url": "https://howlongtobeat.com/game/16630"
+    },
+    {
+      "title": "Divinity: Original Sin 2 - Definitive Edition",
+      "appId": 435150,
+      "hltbHours": 59.25,
+      "url": "https://howlongtobeat.com/game/39525"
+    },
+    {
+      "title": "Marvel's Midnight Suns",
+      "appId": 368260,
+      "hltbHours": 40.42,
+      "url": "https://howlongtobeat.com/game/97298"
+    },
+    {
+      "title": "Marvel's Midnight Suns",
+      "appId": 368260,
+      "hltbHours": 40.42,
+      "url": "https://howlongtobeat.com/game/97298"
+    },
+    {
+      "title": "Wreckfest",
+      "appId": 228380,
+      "hltbHours": 17.82,
+      "url": "https://howlongtobeat.com/game/16136"
+    },
+    {
+      "title": "Forget Me Not: My Organic Garden",
+      "appId": 363980,
+      "hltbHours": 9.17,
+      "url": "https://howlongtobeat.com/game/33478"
+    },
+    {
+      "title": "Alice: Madness Returns",
+      "appId": 19680,
+      "hltbHours": 13.95,
+      "url": "https://howlongtobeat.com/game/340"
+    },
+    {
+      "title": "Danganronpa: Trigger Happy Havoc",
+      "appId": 413410,
+      "hltbHours": 25.22,
+      "url": "https://howlongtobeat.com/game/16630"
+    },
+    {
+      "title": "Cuphead",
+      "appId": 268910,
+      "hltbHours": 10.5,
+      "url": "https://howlongtobeat.com/game/21680"
+    },
+    {
+      "title": "Ni no Kuni II: Revenant Kingdom - The...",
+      "appId": 198297,
+      "hltbHours": null,
+      "url": ""
+    },
+    {
+      "title": "Nioh: Complete Edition",
+      "appId": 485510,
+      "hltbHours": 41.97,
+      "url": "https://howlongtobeat.com/game/50419"
+    },
+    {
+      "title": "Divinity: Original Sin 2 - Definitive Edition",
+      "appId": 435150,
+      "hltbHours": 59.25,
+      "url": "https://howlongtobeat.com/game/39525"
+    },
+    {
+      "title": "BELOW",
+      "appId": 250680,
+      "hltbHours": 18.98,
+      "url": "https://howlongtobeat.com/game/21675"
+    },
+    {
+      "title": "Praey for the Gods",
+      "appId": 494430,
+      "hltbHours": 7.13,
+      "url": "https://howlongtobeat.com/game/64731"
+    },
+    {
+      "title": "Cuphead",
+      "appId": 268910,
+      "hltbHours": 10.5,
+      "url": "https://howlongtobeat.com/game/21680"
+    },
+    {
+      "title": "Manifold Garden",
+      "appId": 473950,
+      "hltbHours": 4.73,
+      "url": "https://howlongtobeat.com/game/67993"
+    },
+    {
+      "title": "Manifold Garden",
+      "appId": 473950,
+      "hltbHours": 4.73,
+      "url": "https://howlongtobeat.com/game/67993"
+    },
+    {
+      "title": "Praey for the Gods",
+      "appId": 494430,
+      "hltbHours": 7.13,
+      "url": "https://howlongtobeat.com/game/64731"
+    },
+    {
+      "title": "We Happy Few",
+      "appId": 320240,
+      "hltbHours": 20.78,
+      "url": "https://howlongtobeat.com/game/27102"
+    },
+    {
+      "title": "The Bradwell Conspiracy",
+      "appId": 421790,
+      "hltbHours": 3.87,
+      "url": "https://howlongtobeat.com/game/62977"
+    },
+    {
+      "title": "Ys VI: The Ark of Napishtim",
+      "appId": 312540,
+      "hltbHours": 12.23,
+      "url": "https://howlongtobeat.com/game/11473"
+    },
+    {
+      "title": "Ys I & II Chronicles+",
+      "appId": 223810,
+      "hltbHours": 13.3,
+      "url": "https://howlongtobeat.com/game/16486"
+    },
+    {
+      "title": "Borderlands 3",
+      "appId": 397540,
+      "hltbHours": 23.4,
+      "url": "https://howlongtobeat.com/game/65882"
+    },
+    {
+      "title": "Pillars of Eternity II: Deadfire - Ob...",
+      "appId": 238819,
+      "hltbHours": null,
+      "url": ""
+    },
+    {
+      "title": "Warhammer 40,000: Inquisitor - Martyr...",
+      "appId": 411862,
+      "hltbHours": null,
+      "url": ""
+    },
+    {
+      "title": "Firewatch",
+      "appId": 383870,
+      "hltbHours": 4.07,
+      "url": "https://howlongtobeat.com/game/26806"
+    },
+    {
+      "title": "Oxygen Not Included",
+      "appId": 457140,
+      "hltbHours": 96.3,
+      "url": "https://howlongtobeat.com/game/44050"
+    },
+    {
+      "title": "FINAL FANTASY X/X-2 HD Remaster",
+      "appId": 359870,
+      "hltbHours": 50.43,
+      "url": "https://howlongtobeat.com/game/16449"
+    },
+    {
+      "title": "Yu-Gi-Oh! Legacy of the Duelist",
+      "appId": 480650,
+      "hltbHours": 18.78,
+      "url": "https://howlongtobeat.com/game/28952"
+    },
+    {
+      "title": "Dying Light Enhanced Edition ROW",
+      "appId": 88801,
+      "hltbHours": null,
+      "url": ""
+    },
+    {
+      "title": "Wolfenstein: The New Order",
+      "appId": 201810,
+      "hltbHours": 11.35,
+      "url": "https://howlongtobeat.com/game/16886"
+    },
+    {
+      "title": "Jenny LeClue - Detectivu",
+      "appId": 319870,
+      "hltbHours": 10.1,
+      "url": "https://howlongtobeat.com/game/68329"
+    },
+    {
+      "title": "Nioh: Complete Edition",
+      "appId": 485510,
+      "hltbHours": 41.97,
+      "url": "https://howlongtobeat.com/game/50419"
+    },
+    {
+      "title": "Katana ZERO",
+      "appId": 460950,
+      "hltbHours": 4.73,
+      "url": "https://howlongtobeat.com/game/33020"
+    },
+    {
+      "title": "Borderlands 3: Super Deluxe Edition",
+      "appId": 397540,
+      "hltbHours": 23.4,
+      "url": "https://howlongtobeat.com/game/65882"
+    },
+    {
+      "title": "System Shock",
+      "appId": 482400,
+      "hltbHours": 17.33,
+      "url": "https://howlongtobeat.com/game/74181"
+    },
+    {
+      "title": "Serious Sam 4",
+      "appId": 257420,
+      "hltbHours": 9.42,
+      "url": "https://howlongtobeat.com/game/72618"
+    },
+    {
+      "title": "Borderlands 3",
+      "appId": 397540,
+      "hltbHours": 23.4,
+      "url": "https://howlongtobeat.com/game/65882"
+    },
+    {
+      "title": "Divinity: Original Sin 2 - Definitive Edition",
+      "appId": 435150,
+      "hltbHours": 59.25,
+      "url": "https://howlongtobeat.com/game/39525"
+    },
+    {
+      "title": "Divinity: Original Sin 2 - Definitive Edition",
+      "appId": 435150,
+      "hltbHours": 59.25,
+      "url": "https://howlongtobeat.com/game/39525"
+    },
+    {
+      "title": "Crusader Kings III Royal Edition",
+      "appId": 452685,
+      "hltbHours": null,
+      "url": ""
+    },
+    {
+      "title": "Ni no Kuni II: Revenant Kingdom - The...",
+      "appId": 198297,
+      "hltbHours": null,
+      "url": ""
+    },
+    {
+      "title": "Zwei: The Ilvard Insurrection",
+      "appId": 427700,
+      "hltbHours": 20.0,
+      "url": "https://howlongtobeat.com/game/50232"
+    },
+    {
+      "title": "No Man's Sky",
+      "appId": 275850,
+      "hltbHours": 32.15,
+      "url": "https://howlongtobeat.com/game/20074"
+    },
+    {
+      "title": "Borderlands 3",
+      "appId": 397540,
+      "hltbHours": 23.4,
+      "url": "https://howlongtobeat.com/game/65882"
+    },
+    {
+      "title": "Katana ZERO",
+      "appId": 460950,
+      "hltbHours": 4.73,
+      "url": "https://howlongtobeat.com/game/33020"
+    },
+    {
+      "title": "Borderlands 3",
+      "appId": 397540,
+      "hltbHours": 23.4,
+      "url": "https://howlongtobeat.com/game/65882"
+    },
+    {
+      "title": "Metro Exodus - Gold Edition",
+      "appId": 412020,
+      "hltbHours": 15.92,
+      "url": "https://howlongtobeat.com/game/46401"
+    },
+    {
+      "title": "Ghost 1.0",
+      "appId": 463270,
+      "hltbHours": 12.93,
+      "url": "https://howlongtobeat.com/game/37834"
+    },
+    {
+      "title": "Spelunky 2",
+      "appId": 418530,
+      "hltbHours": 27.25,
+      "url": "https://howlongtobeat.com/game/75151"
+    },
+    {
+      "title": "Metro Exodus",
+      "appId": 412020,
+      "hltbHours": 15.92,
+      "url": "https://howlongtobeat.com/game/46401"
+    },
+    {
+      "title": "Serious Sam 4",
+      "appId": 257420,
+      "hltbHours": 9.42,
+      "url": "https://howlongtobeat.com/game/72618"
+    },
+    {
+      "title": "Salt",
+      "appId": 327860,
+      "hltbHours": null,
+      "url": "https://howlongtobeat.com/game/24367"
+    },
+    {
+      "title": "Serious Sam 4",
+      "appId": 257420,
+      "hltbHours": 9.42,
+      "url": "https://howlongtobeat.com/game/72618"
+    },
+    {
+      "title": "Indivisible",
+      "appId": 421170,
+      "hltbHours": 18.68,
+      "url": "https://howlongtobeat.com/game/27434"
+    },
+    {
+      "title": "Borderlands 3",
+      "appId": 397540,
+      "hltbHours": 23.4,
+      "url": "https://howlongtobeat.com/game/65882"
+    },
+    {
+      "title": "Ghost of a Tale",
+      "appId": 417290,
+      "hltbHours": 11.4,
+      "url": "https://howlongtobeat.com/game/21687"
+    },
+    {
+      "title": "Borderlands 3",
+      "appId": 397540,
+      "hltbHours": 23.4,
+      "url": "https://howlongtobeat.com/game/65882"
+    },
+    {
+      "title": "No Man's Sky",
+      "appId": 275850,
+      "hltbHours": 32.15,
+      "url": "https://howlongtobeat.com/game/20074"
+    },
+    {
+      "title": "State of Decay 2: Juggernaut Edition",
+      "appId": 495420,
+      "hltbHours": 16.13,
+      "url": "https://howlongtobeat.com/game/46403"
+    },
+    {
+      "title": "Metro Exodus",
+      "appId": 412020,
+      "hltbHours": 15.92,
+      "url": "https://howlongtobeat.com/game/46401"
+    },
+    {
+      "title": "BELOW",
+      "appId": 250680,
+      "hltbHours": 18.98,
+      "url": "https://howlongtobeat.com/game/21675"
+    },
+    {
+      "title": "LUNA The Shadow Dust",
+      "appId": 465100,
+      "hltbHours": 3.0,
+      "url": "https://howlongtobeat.com/game/74128"
+    },
+    {
+      "title": "LUNA The Shadow Dust",
+      "appId": 465100,
+      "hltbHours": 3.0,
+      "url": "https://howlongtobeat.com/game/74128"
+    },
+    {
+      "title": "The Council - Complete Season",
+      "appId": 287630,
+      "hltbHours": 14.22,
+      "url": "https://howlongtobeat.com/game/52117"
+    },
+    {
+      "title": "Wolcen: Lords of Mayhem",
+      "appId": 424370,
+      "hltbHours": 17.35,
+      "url": "https://howlongtobeat.com/game/36540"
+    },
+    {
+      "title": "We Happy Few",
+      "appId": 320240,
+      "hltbHours": 20.78,
+      "url": "https://howlongtobeat.com/game/27102"
+    },
+    {
+      "title": "Frostpunk",
+      "appId": 323190,
+      "hltbHours": 10.63,
+      "url": "https://howlongtobeat.com/game/41585"
+    },
+    {
+      "title": "Deliver Us The Moon",
+      "appId": 428660,
+      "hltbHours": 5.17,
+      "url": "https://howlongtobeat.com/game/71372"
+    },
+    {
+      "title": "Indivisible",
+      "appId": 421170,
+      "hltbHours": 18.68,
+      "url": "https://howlongtobeat.com/game/27434"
+    },
+    {
+      "title": "Mosaic",
+      "appId": 349270,
+      "hltbHours": 3.02,
+      "url": "https://howlongtobeat.com/game/62986"
+    },
+    {
+      "title": "Deliver Us The Moon",
+      "appId": 428660,
+      "hltbHours": 5.17,
+      "url": "https://howlongtobeat.com/game/71372"
+    },
+    {
+      "title": "We Happy Few",
+      "appId": 320240,
+      "hltbHours": 20.78,
+      "url": "https://howlongtobeat.com/game/27102"
+    },
+    {
+      "title": "State of Mind",
+      "appId": 437630,
+      "hltbHours": 9.63,
+      "url": "https://howlongtobeat.com/game/59973"
+    },
+    {
+      "title": "Mosaic",
+      "appId": 349270,
+      "hltbHours": 3.02,
+      "url": "https://howlongtobeat.com/game/62986"
+    },
+    {
+      "title": "The Church in the Darkness",
+      "appId": 339830,
+      "hltbHours": 2.05,
+      "url": "https://howlongtobeat.com/game/40792"
+    },
+    {
+      "title": "We Happy Few",
+      "appId": 320240,
+      "hltbHours": 20.78,
+      "url": "https://howlongtobeat.com/game/27102"
+    },
+    {
+      "title": "Tales of Berseria",
+      "appId": 429660,
+      "hltbHours": 44.22,
+      "url": "https://howlongtobeat.com/game/33713"
+    },
+    {
+      "title": "We Happy Few",
+      "appId": 320240,
+      "hltbHours": 20.78,
+      "url": "https://howlongtobeat.com/game/27102"
+    },
+    {
+      "title": "Divinity: Original Sin 2 - Definitive Edition",
+      "appId": 435150,
+      "hltbHours": 59.25,
+      "url": "https://howlongtobeat.com/game/39525"
+    },
+    {
+      "title": "Deliver Us The Moon",
+      "appId": 428660,
+      "hltbHours": 5.17,
+      "url": "https://howlongtobeat.com/game/71372"
+    },
+    {
+      "title": "Jenny LeClue - Detectivu",
+      "appId": 319870,
+      "hltbHours": 10.1,
+      "url": "https://howlongtobeat.com/game/68329"
+    },
+    {
+      "title": "Tales of Symphonia",
+      "appId": 372360,
+      "hltbHours": 46.42,
+      "url": "https://howlongtobeat.com/game/9603"
+    },
+    {
+      "title": "Children of Morta",
+      "appId": 330020,
+      "hltbHours": 14.15,
+      "url": "https://howlongtobeat.com/game/22534"
+    },
+    {
+      "title": "Katana ZERO",
+      "appId": 460950,
+      "hltbHours": 4.73,
+      "url": "https://howlongtobeat.com/game/33020"
+    },
+    {
+      "title": "Wailing Heights",
+      "appId": 443650,
+      "hltbHours": 4.25,
+      "url": "https://howlongtobeat.com/game/38666"
+    },
+    {
+      "title": "DARQ: Complete Edition",
+      "appId": 433550,
+      "hltbHours": 2.12,
+      "url": "https://howlongtobeat.com/game/69726"
+    },
+    {
+      "title": "Indivisible",
+      "appId": 421170,
+      "hltbHours": 18.68,
+      "url": "https://howlongtobeat.com/game/27434"
+    },
+    {
+      "title": "Call of Cthulhu",
+      "appId": 399810,
+      "hltbHours": 8.15,
+      "url": "https://howlongtobeat.com/game/62073"
+    },
+    {
+      "title": "The Surge",
+      "appId": 378540,
+      "hltbHours": 20.87,
+      "url": "https://howlongtobeat.com/game/44914"
+    },
+    {
+      "title": "Wreckfest",
+      "appId": 228380,
+      "hltbHours": 17.82,
+      "url": "https://howlongtobeat.com/game/16136"
+    },
+    {
+      "title": "Children of Morta",
+      "appId": 330020,
+      "hltbHours": 14.15,
+      "url": "https://howlongtobeat.com/game/22534"
+    },
+    {
+      "title": "Vampyr",
+      "appId": 427290,
+      "hltbHours": 16.93,
+      "url": "https://howlongtobeat.com/game/35857"
+    },
+    {
+      "title": "HITMAN 2 - Standard Edition",
+      "appId": 272962,
+      "hltbHours": null,
+      "url": ""
+    },
+    {
+      "title": "The Witcher Adventure Game",
+      "appId": 303800,
+      "hltbHours": 5.13,
+      "url": "https://howlongtobeat.com/game/20461"
+    },
+    {
+      "title": "Hellblade: Senua's Sacrifice",
+      "appId": 414340,
+      "hltbHours": 7.52,
+      "url": "https://howlongtobeat.com/game/41638"
+    },
+    {
+      "title": "Katana ZERO",
+      "appId": 460950,
+      "hltbHours": 4.73,
+      "url": "https://howlongtobeat.com/game/33020"
+    },
+    {
+      "title": "Finding Paradise",
+      "appId": 337340,
+      "hltbHours": 5.08,
+      "url": "https://howlongtobeat.com/game/43941"
+    },
+    {
+      "title": "The Universim",
+      "appId": 352720,
+      "hltbHours": 9.8,
+      "url": "https://howlongtobeat.com/game/31962"
+    },
+    {
+      "title": "Finding Paradise",
+      "appId": 337340,
+      "hltbHours": 5.08,
+      "url": "https://howlongtobeat.com/game/43941"
+    },
+    {
+      "title": "Goetia",
+      "appId": 421740,
+      "hltbHours": 7.52,
+      "url": "https://howlongtobeat.com/game/36774"
+    },
+    {
+      "title": "The Turing Test",
+      "appId": 499520,
+      "hltbHours": null,
+      "url": ""
+    },
+    {
+      "title": "Katana ZERO",
+      "appId": 460950,
+      "hltbHours": 4.73,
+      "url": "https://howlongtobeat.com/game/33020"
+    },
+    {
+      "title": "Ghost of a Tale",
+      "appId": 417290,
+      "hltbHours": 11.4,
+      "url": "https://howlongtobeat.com/game/21687"
+    },
+    {
+      "title": "Call of Cthulhu",
+      "appId": 399810,
+      "hltbHours": 8.15,
+      "url": "https://howlongtobeat.com/game/62073"
+    },
+    {
+      "title": "Praey for the Gods",
+      "appId": 494430,
+      "hltbHours": 7.13,
+      "url": "https://howlongtobeat.com/game/64731"
+    },
+    {
+      "title": "Vampyr",
+      "appId": 427290,
+      "hltbHours": 16.93,
+      "url": "https://howlongtobeat.com/game/35857"
+    },
+    {
+      "title": "Yoku's Island Express",
+      "appId": 334940,
+      "hltbHours": 5.65,
+      "url": "https://howlongtobeat.com/game/56962"
+    },
+    {
+      "title": "Praey for the Gods",
+      "appId": 494430,
+      "hltbHours": 7.13,
+      "url": "https://howlongtobeat.com/game/64731"
+    },
+    {
+      "title": "Strange Brigade",
+      "appId": 312670,
+      "hltbHours": 8.15,
+      "url": "https://howlongtobeat.com/game/57336"
+    },
+    {
+      "title": "Unavowed",
+      "appId": 336140,
+      "hltbHours": 9.62,
+      "url": "https://howlongtobeat.com/game/54219"
+    },
+    {
+      "title": "Darkwood",
+      "appId": 274520,
+      "hltbHours": 18.35,
+      "url": "https://howlongtobeat.com/game/20102"
+    },
+    {
+      "title": "APE OUT",
+      "appId": 447150,
+      "hltbHours": 2.15,
+      "url": "https://howlongtobeat.com/game/56938"
+    },
+    {
+      "title": "7 Days to Die",
+      "appId": 251570,
+      "hltbHours": 53.23,
+      "url": "https://howlongtobeat.com/game/13500"
+    },
+    {
+      "title": "Skullgirls 2nd Encore",
+      "appId": 245170,
+      "hltbHours": 3.2,
+      "url": "https://howlongtobeat.com/game/39099"
+    },
+    {
+      "title": "Edge Of Eternity",
+      "appId": 269190,
+      "hltbHours": 29.0,
+      "url": "https://howlongtobeat.com/game/62960"
+    },
+    {
+      "title": "ELEX",
+      "appId": 411300,
+      "hltbHours": 27.47,
+      "url": "https://howlongtobeat.com/game/27129"
+    },
+    {
+      "title": "Frostpunk",
+      "appId": 323190,
+      "hltbHours": 10.63,
+      "url": "https://howlongtobeat.com/game/41585"
+    },
+    {
+      "title": "Hand of Fate 2",
+      "appId": 456670,
+      "hltbHours": 22.2,
+      "url": "https://howlongtobeat.com/game/50430"
+    },
+    {
+      "title": "Mage's Initiation: Reign of the Elements",
+      "appId": 270610,
+      "hltbHours": 11.3,
+      "url": "https://howlongtobeat.com/game/66853"
+    },
+    {
+      "title": "Bleed 2",
+      "appId": 396350,
+      "hltbHours": 1.08,
+      "url": "https://howlongtobeat.com/game/43520"
+    },
+    {
+      "title": "Praey for the Gods",
+      "appId": 494430,
+      "hltbHours": 7.13,
+      "url": "https://howlongtobeat.com/game/64731"
+    },
+    {
+      "title": "Seven: Enhanced Edition",
+      "appId": 471010,
+      "hltbHours": 15.05,
+      "url": "https://howlongtobeat.com/game/51056"
+    },
+    {
+      "title": "Vampyr",
+      "appId": 427290,
+      "hltbHours": 16.93,
+      "url": "https://howlongtobeat.com/game/35857"
+    },
+    {
+      "title": "Resident Evil 7 Biohazard",
+      "appId": 418370,
+      "hltbHours": 9.22,
+      "url": "https://howlongtobeat.com/game/38051"
+    },
+    {
+      "title": "Masquerada: Songs and Shadows",
+      "appId": 459090,
+      "hltbHours": 14.27,
+      "url": "https://howlongtobeat.com/game/39828"
+    },
+    {
+      "title": "Edge Of Eternity",
+      "appId": 269190,
+      "hltbHours": 29.0,
+      "url": "https://howlongtobeat.com/game/62960"
+    },
+    {
+      "title": "BELOW",
+      "appId": 250680,
+      "hltbHours": 18.98,
+      "url": "https://howlongtobeat.com/game/21675"
+    },
+    {
+      "title": "No Man's Sky",
+      "appId": 275850,
+      "hltbHours": 32.15,
+      "url": "https://howlongtobeat.com/game/20074"
+    },
+    {
+      "title": "Metro Exodus",
+      "appId": 412020,
+      "hltbHours": 15.92,
+      "url": "https://howlongtobeat.com/game/46401"
+    },
+    {
+      "title": "Yoku's Island Express",
+      "appId": 334940,
+      "hltbHours": 5.65,
+      "url": "https://howlongtobeat.com/game/56962"
+    },
+    {
+      "title": "Oxygen Not Included",
+      "appId": 457140,
+      "hltbHours": 96.3,
+      "url": "https://howlongtobeat.com/game/44050"
+    },
+    {
+      "title": "Pyre",
+      "appId": 462770,
+      "hltbHours": 11.18,
+      "url": "https://howlongtobeat.com/game/40340"
+    },
+    {
+      "title": "Death's Gambit: Afterlife",
+      "appId": 356650,
+      "hltbHours": 9.95,
+      "url": "https://howlongtobeat.com/game/25040"
+    },
+    {
+      "title": "Tom Clancy’s The Division",
+      "appId": 365590,
+      "hltbHours": 24.22,
+      "url": "https://howlongtobeat.com/game/20073"
+    },
+    {
+      "title": "Conarium",
+      "appId": 313780,
+      "hltbHours": 4.07,
+      "url": "https://howlongtobeat.com/game/46123"
+    },
+    {
+      "title": "Corpse Party",
+      "appId": 251270,
+      "hltbHours": 10.07,
+      "url": "https://howlongtobeat.com/game/1935"
+    },
+    {
+      "title": "ELEX",
+      "appId": 411300,
+      "hltbHours": 27.47,
+      "url": "https://howlongtobeat.com/game/27129"
+    },
+    {
+      "title": "Omensight: Definitive Edition",
+      "appId": 455820,
+      "hltbHours": 6.18,
+      "url": "https://howlongtobeat.com/game/56487"
+    },
+    {
+      "title": "Earthworms",
+      "appId": 320330,
+      "hltbHours": 3.38,
+      "url": "https://howlongtobeat.com/game/53664"
+    },
+    {
+      "title": "METAL GEAR SOLID V: THE PHANTOM PAIN",
+      "appId": 287700,
+      "hltbHours": 45.68,
+      "url": "https://howlongtobeat.com/game/5918"
+    },
+    {
+      "title": "Castle of Illusion",
+      "appId": 227600,
+      "hltbHours": 2.63,
+      "url": "https://howlongtobeat.com/game/13771"
+    },
+    {
+      "title": "Pyre",
+      "appId": 462770,
+      "hltbHours": 11.18,
+      "url": "https://howlongtobeat.com/game/40340"
+    },
+    {
+      "title": "Hero-U: Rogue to Redemption",
+      "appId": 375440,
+      "hltbHours": 25.02,
+      "url": "https://howlongtobeat.com/game/58880"
+    },
+    {
+      "title": "Metro Exodus",
+      "appId": 412020,
+      "hltbHours": 15.92,
+      "url": "https://howlongtobeat.com/game/46401"
+    },
+    {
+      "title": "Nimbatus - The Space Drone Constructor",
+      "appId": 383840,
+      "hltbHours": 5.68,
+      "url": "https://howlongtobeat.com/game/57439"
+    },
+    {
+      "title": "FINAL FANTASY IX",
+      "appId": 377840,
+      "hltbHours": 38.1,
+      "url": "https://howlongtobeat.com/game/3505"
+    },
+    {
+      "title": "Kingdom Come: Deliverance",
+      "appId": 379430,
+      "hltbHours": 42.67,
+      "url": "https://howlongtobeat.com/game/21697"
+    },
+    {
+      "title": "Wolcen: Lords of Mayhem",
+      "appId": 424370,
+      "hltbHours": 17.35,
+      "url": "https://howlongtobeat.com/game/36540"
+    },
+    {
+      "title": "METAL GEAR SOLID V: THE PHANTOM PAIN",
+      "appId": 287700,
+      "hltbHours": 45.68,
+      "url": "https://howlongtobeat.com/game/5918"
+    },
+    {
+      "title": "Factorio",
+      "appId": 427520,
+      "hltbHours": 51.0,
+      "url": "https://howlongtobeat.com/game/17455"
+    },
+    {
+      "title": "Cuphead",
+      "appId": 268910,
+      "hltbHours": 10.5,
+      "url": "https://howlongtobeat.com/game/21680"
+    },
+    {
+      "title": "Ys VI: The Ark of Napishtim",
+      "appId": 312540,
+      "hltbHours": 12.23,
+      "url": "https://howlongtobeat.com/game/11473"
+    },
+    {
+      "title": "Surviving Mars",
+      "appId": 464920,
+      "hltbHours": 22.18,
+      "url": "https://howlongtobeat.com/game/45951"
+    },
+    {
+      "title": "Unavowed",
+      "appId": 336140,
+      "hltbHours": 9.62,
+      "url": "https://howlongtobeat.com/game/54219"
+    },
+    {
+      "title": "Hob",
+      "appId": 404680,
+      "hltbHours": 10.32,
+      "url": "https://howlongtobeat.com/game/37105"
+    },
+    {
+      "title": "The Banner Saga 3",
+      "appId": 485460,
+      "hltbHours": 9.68,
+      "url": "https://howlongtobeat.com/game/54142"
+    },
+    {
+      "title": "Call of Cthulhu",
+      "appId": 399810,
+      "hltbHours": 8.15,
+      "url": "https://howlongtobeat.com/game/62073"
+    },
+    {
+      "title": "Call of Duty: Ghosts",
+      "appId": 209160,
+      "hltbHours": 6.0,
+      "url": "https://howlongtobeat.com/game/14322"
+    },
+    {
+      "title": "Dying Light Enhanced Edition ROW",
+      "appId": 88801,
+      "hltbHours": null,
+      "url": ""
+    },
+    {
+      "title": "Sherlock Holmes: Crimes and Punishments",
+      "appId": 241260,
+      "hltbHours": 12.6,
+      "url": "https://howlongtobeat.com/game/21386"
+    },
+    {
+      "title": "State of Mind",
+      "appId": 437630,
+      "hltbHours": 9.63,
+      "url": "https://howlongtobeat.com/game/59973"
+    },
+    {
+      "title": "Metro Exodus",
+      "appId": 412020,
+      "hltbHours": 15.92,
+      "url": "https://howlongtobeat.com/game/46401"
+    },
+    {
+      "title": "The Universim",
+      "appId": 352720,
+      "hltbHours": 9.8,
+      "url": "https://howlongtobeat.com/game/31962"
+    },
+    {
+      "title": "Hero-U: Rogue to Redemption",
+      "appId": 375440,
+      "hltbHours": 25.02,
+      "url": "https://howlongtobeat.com/game/58880"
+    },
+    {
+      "title": "Hollow Knight",
+      "appId": 367520,
+      "hltbHours": 26.98,
+      "url": "https://howlongtobeat.com/game/26286"
+    },
+    {
+      "title": "Nioh: Complete Edition",
+      "appId": 485510,
+      "hltbHours": 41.97,
+      "url": "https://howlongtobeat.com/game/50419"
+    },
+    {
+      "title": "METAL GEAR SOLID V: The Definitive Ex...",
+      "appId": 132479,
+      "hltbHours": 45.68,
+      "url": "https://howlongtobeat.com/game/5918"
+    },
+    {
+      "title": "The Council",
+      "appId": 287630,
+      "hltbHours": 14.22,
+      "url": "https://howlongtobeat.com/game/52117"
+    },
+    {
+      "title": "State of Mind",
+      "appId": 437630,
+      "hltbHours": 9.63,
+      "url": "https://howlongtobeat.com/game/59973"
+    },
+    {
+      "title": "Axiom Verge",
+      "appId": 332200,
+      "hltbHours": 10.7,
+      "url": "https://howlongtobeat.com/game/25024"
+    },
+    {
+      "title": "Little Nightmares",
+      "appId": 424840,
+      "hltbHours": 3.57,
+      "url": "https://howlongtobeat.com/game/39417"
+    },
+    {
+      "title": "GET EVEN",
+      "appId": 299950,
+      "hltbHours": 7.32,
+      "url": "https://howlongtobeat.com/game/21686"
+    },
+    {
+      "title": "Planescape: Torment: Enhanced Edition",
+      "appId": 466300,
+      "hltbHours": 31.22,
+      "url": "https://howlongtobeat.com/game/7093"
+    },
+    {
+      "title": "Dishonored: Death of the Outsider - D...",
+      "appId": 183038,
+      "hltbHours": 12.5,
+      "url": "https://howlongtobeat.com/game/26731"
+    },
+    {
+      "title": "State of Mind",
+      "appId": 437630,
+      "hltbHours": 9.63,
+      "url": "https://howlongtobeat.com/game/59973"
+    },
+    {
+      "title": "Omensight: Definitive Edition",
+      "appId": 455820,
+      "hltbHours": 6.18,
+      "url": "https://howlongtobeat.com/game/56487"
+    },
+    {
+      "title": "Hollow Knight",
+      "appId": 367520,
+      "hltbHours": 26.98,
+      "url": "https://howlongtobeat.com/game/26286"
+    },
+    {
+      "title": "No Man's Sky",
+      "appId": 275850,
+      "hltbHours": 32.15,
+      "url": "https://howlongtobeat.com/game/20074"
+    },
+    {
+      "title": "Strange Brigade",
+      "appId": 312670,
+      "hltbHours": 8.15,
+      "url": "https://howlongtobeat.com/game/57336"
+    },
+    {
+      "title": "Death's Gambit: Afterlife",
+      "appId": 356650,
+      "hltbHours": 9.95,
+      "url": "https://howlongtobeat.com/game/25040"
+    },
+    {
+      "title": "We Happy Few",
+      "appId": 320240,
+      "hltbHours": 20.78,
+      "url": "https://howlongtobeat.com/game/27102"
+    },
+    {
+      "title": "Frostpunk",
+      "appId": 323190,
+      "hltbHours": 10.63,
+      "url": "https://howlongtobeat.com/game/41585"
+    },
+    {
+      "title": "Blackwood Crossing",
+      "appId": 453310,
+      "hltbHours": 2.0,
+      "url": "https://howlongtobeat.com/game/44240"
+    },
+    {
+      "title": "Vampyr",
+      "appId": 427290,
+      "hltbHours": 16.93,
+      "url": "https://howlongtobeat.com/game/35857"
+    },
+    {
+      "title": "The Council",
+      "appId": 287630,
+      "hltbHours": 14.22,
+      "url": "https://howlongtobeat.com/game/52117"
+    },
+    {
+      "title": "Melty Blood Actress Again Current Code",
+      "appId": 411370,
+      "hltbHours": 1.08,
+      "url": "https://howlongtobeat.com/game/35251"
+    },
+    {
+      "title": "ELEX",
+      "appId": 411300,
+      "hltbHours": 27.47,
+      "url": "https://howlongtobeat.com/game/27129"
+    },
+    {
+      "title": "Planet Coaster",
+      "appId": 493340,
+      "hltbHours": 28.1,
+      "url": "https://howlongtobeat.com/game/40413"
+    },
+    {
+      "title": "Zero Escape: Zero Time Dilemma",
+      "appId": 311240,
+      "hltbHours": 20.37,
+      "url": "https://howlongtobeat.com/game/33283"
+    },
+    {
+      "title": "Sherlock Holmes: Crimes and Punishments",
+      "appId": 241260,
+      "hltbHours": 12.6,
+      "url": "https://howlongtobeat.com/game/21386"
+    },
+    {
+      "title": "The Banner Saga 3",
+      "appId": 485460,
+      "hltbHours": 9.68,
+      "url": "https://howlongtobeat.com/game/54142"
+    },
+    {
+      "title": "Cuphead",
+      "appId": 268910,
+      "hltbHours": 10.5,
+      "url": "https://howlongtobeat.com/game/21680"
+    },
+    {
+      "title": "Strange Brigade",
+      "appId": 312670,
+      "hltbHours": 8.15,
+      "url": "https://howlongtobeat.com/game/57336"
+    },
+    {
+      "title": "State of Mind",
+      "appId": 437630,
+      "hltbHours": 9.63,
+      "url": "https://howlongtobeat.com/game/59973"
+    },
+    {
+      "title": "Omensight: Definitive Edition",
+      "appId": 455820,
+      "hltbHours": 6.18,
+      "url": "https://howlongtobeat.com/game/56487"
+    },
+    {
+      "title": "Frostpunk",
+      "appId": 323190,
+      "hltbHours": 10.63,
+      "url": "https://howlongtobeat.com/game/41585"
+    },
+    {
+      "title": "RiME",
+      "appId": 493200,
+      "hltbHours": 5.72,
+      "url": "https://howlongtobeat.com/game/20064"
+    },
+    {
+      "title": "Nioh: Complete Edition",
+      "appId": 485510,
+      "hltbHours": 41.97,
+      "url": "https://howlongtobeat.com/game/50419"
+    },
+    {
+      "title": "The Legend of Heroes: Trails in the Sky the 3rd",
+      "appId": 436670,
+      "hltbHours": 32.4,
+      "url": "https://howlongtobeat.com/game/10013"
+    },
+    {
+      "title": "Agony",
+      "appId": 487720,
+      "hltbHours": 7.62,
+      "url": "https://howlongtobeat.com/game/56879"
+    },
+    {
+      "title": "ELEX",
+      "appId": 411300,
+      "hltbHours": 27.47,
+      "url": "https://howlongtobeat.com/game/27129"
+    },
+    {
+      "title": "The Surge",
+      "appId": 378540,
+      "hltbHours": 20.87,
+      "url": "https://howlongtobeat.com/game/44914"
+    },
+    {
+      "title": "SpellForce 3 Reforced",
+      "appId": 311290,
+      "hltbHours": 29.52,
+      "url": "https://howlongtobeat.com/game/38199"
+    },
+    {
+      "title": "Oxygen Not Included",
+      "appId": 457140,
+      "hltbHours": 96.3,
+      "url": "https://howlongtobeat.com/game/44050"
+    },
+    {
+      "title": "State of Mind",
+      "appId": 437630,
+      "hltbHours": 9.63,
+      "url": "https://howlongtobeat.com/game/59973"
+    },
+    {
+      "title": "The Banner Saga 3",
+      "appId": 485460,
+      "hltbHours": 9.68,
+      "url": "https://howlongtobeat.com/game/54142"
+    },
+    {
+      "title": "Frostpunk",
+      "appId": 323190,
+      "hltbHours": 10.63,
+      "url": "https://howlongtobeat.com/game/41585"
+    },
+    {
+      "title": "Wizard of Legend",
+      "appId": 445980,
+      "hltbHours": 8.63,
+      "url": "https://howlongtobeat.com/game/26294"
+    },
+    {
+      "title": "Tales of Berseria",
+      "appId": 429660,
+      "hltbHours": 44.22,
+      "url": "https://howlongtobeat.com/game/33713"
+    },
+    {
+      "title": "Omensight: Definitive Edition",
+      "appId": 455820,
+      "hltbHours": 6.18,
+      "url": "https://howlongtobeat.com/game/56487"
+    },
+    {
+      "title": "Little Nightmares",
+      "appId": 424840,
+      "hltbHours": 3.57,
+      "url": "https://howlongtobeat.com/game/39417"
+    },
+    {
+      "title": "NARUTO SHIPPUDEN: Ultimate Ninja STORM Revolution",
+      "appId": 272510,
+      "hltbHours": 4.75,
+      "url": "https://howlongtobeat.com/game/21077"
+    },
+    {
+      "title": "Sherlock Holmes: Crimes and Punishments",
+      "appId": 241260,
+      "hltbHours": 12.6,
+      "url": "https://howlongtobeat.com/game/21386"
+    },
+    {
+      "title": "Hob",
+      "appId": 404680,
+      "hltbHours": 10.32,
+      "url": "https://howlongtobeat.com/game/37105"
+    },
+    {
+      "title": "Finding Paradise",
+      "appId": 337340,
+      "hltbHours": 5.08,
+      "url": "https://howlongtobeat.com/game/43941"
+    },
+    {
+      "title": "Frostpunk",
+      "appId": 323190,
+      "hltbHours": 10.63,
+      "url": "https://howlongtobeat.com/game/41585"
+    },
+    {
+      "title": "Republique",
+      "appId": 317100,
+      "hltbHours": 11.67,
+      "url": "https://howlongtobeat.com/game/24348"
+    },
+    {
+      "title": "The Council",
+      "appId": 287630,
+      "hltbHours": 14.22,
+      "url": "https://howlongtobeat.com/game/52117"
+    },
+    {
+      "title": "Vampyr",
+      "appId": 427290,
+      "hltbHours": 16.93,
+      "url": "https://howlongtobeat.com/game/35857"
+    },
+    {
+      "title": "Factorio",
+      "appId": 427520,
+      "hltbHours": 51.0,
+      "url": "https://howlongtobeat.com/game/17455"
+    },
+    {
+      "title": "SpyParty",
+      "appId": 329070,
+      "hltbHours": 0.5,
+      "url": "https://howlongtobeat.com/game/58335"
+    },
+    {
+      "title": "Cuphead",
+      "appId": 268910,
+      "hltbHours": 10.5,
+      "url": "https://howlongtobeat.com/game/21680"
+    },
+    {
+      "title": "Where the Water Tastes Like Wine",
+      "appId": 447120,
+      "hltbHours": 11.3,
+      "url": "https://howlongtobeat.com/game/53717"
+    },
+    {
+      "title": "Frostpunk",
+      "appId": 323190,
+      "hltbHours": 10.63,
+      "url": "https://howlongtobeat.com/game/41585"
+    },
+    {
+      "title": "Vampyr",
+      "appId": 427290,
+      "hltbHours": 16.93,
+      "url": "https://howlongtobeat.com/game/35857"
+    },
+    {
+      "title": "Crossing Souls",
+      "appId": 331690,
+      "hltbHours": 8.82,
+      "url": "https://howlongtobeat.com/game/25103"
+    },
+    {
+      "title": "Planescape: Torment: Enhanced Edition",
+      "appId": 466300,
+      "hltbHours": 31.22,
+      "url": "https://howlongtobeat.com/game/7093"
+    },
+    {
+      "title": "Syberia 3",
+      "appId": 464340,
+      "hltbHours": 12.67,
+      "url": "https://howlongtobeat.com/game/45367"
+    },
+    {
+      "title": "Zero Escape: Zero Time Dilemma",
+      "appId": 311240,
+      "hltbHours": 20.37,
+      "url": "https://howlongtobeat.com/game/33283"
+    },
+    {
+      "title": "Surviving Mars",
+      "appId": 464920,
+      "hltbHours": 22.18,
+      "url": "https://howlongtobeat.com/game/45951"
+    },
+    {
+      "title": "The Council",
+      "appId": 287630,
+      "hltbHours": 14.22,
+      "url": "https://howlongtobeat.com/game/52117"
+    },
+    {
+      "title": "Kingdom Come: Deliverance",
+      "appId": 379430,
+      "hltbHours": 42.67,
+      "url": "https://howlongtobeat.com/game/21697"
+    },
+    {
+      "title": "Blackwood Crossing",
+      "appId": 453310,
+      "hltbHours": 2.0,
+      "url": "https://howlongtobeat.com/game/44240"
+    },
+    {
+      "title": "Batman - The Telltale Series",
+      "appId": 498240,
+      "hltbHours": 8.38,
+      "url": "https://howlongtobeat.com/game/38801"
+    },
+    {
+      "title": "Pyre",
+      "appId": 462770,
+      "hltbHours": 11.18,
+      "url": "https://howlongtobeat.com/game/40340"
+    },
+    {
+      "title": "Battle Chef Brigade Deluxe",
+      "appId": 452570,
+      "hltbHours": 9.1,
+      "url": "https://howlongtobeat.com/game/40696"
+    },
+    {
+      "title": "The Surge",
+      "appId": 378540,
+      "hltbHours": 20.87,
+      "url": "https://howlongtobeat.com/game/44914"
+    },
+    {
+      "title": "ELEX",
+      "appId": 411300,
+      "hltbHours": 27.47,
+      "url": "https://howlongtobeat.com/game/27129"
+    },
+    {
+      "title": "Dishonored 2",
+      "appId": 403640,
+      "hltbHours": 12.5,
+      "url": "https://howlongtobeat.com/game/26731"
+    },
+    {
+      "title": "Where the Water Tastes Like Wine",
+      "appId": 447120,
+      "hltbHours": 11.3,
+      "url": "https://howlongtobeat.com/game/53717"
+    },
+    {
+      "title": "Firewatch",
+      "appId": 383870,
+      "hltbHours": 4.07,
+      "url": "https://howlongtobeat.com/game/26806"
+    },
+    {
+      "title": "Vampyr",
+      "appId": 427290,
+      "hltbHours": 16.93,
+      "url": "https://howlongtobeat.com/game/35857"
+    },
+    {
+      "title": "Beat Cop",
+      "appId": 461950,
+      "hltbHours": 8.03,
+      "url": "https://howlongtobeat.com/game/41028"
+    },
+    {
+      "title": "Book of Demons",
+      "appId": 449960,
+      "hltbHours": 9.97,
+      "url": "https://howlongtobeat.com/game/41486"
+    },
+    {
+      "title": "Blackwood Crossing",
+      "appId": 453310,
+      "hltbHours": 2.0,
+      "url": "https://howlongtobeat.com/game/44240"
+    },
+    {
+      "title": "Prey",
+      "appId": 480490,
+      "hltbHours": 16.38,
+      "url": "https://howlongtobeat.com/game/44590"
+    },
+    {
+      "title": "Tales of Berseria",
+      "appId": 429660,
+      "hltbHours": 44.22,
+      "url": "https://howlongtobeat.com/game/33713"
+    },
+    {
+      "title": "SpellForce 3 Reforced",
+      "appId": 311290,
+      "hltbHours": 29.52,
+      "url": "https://howlongtobeat.com/game/38199"
+    },
+    {
+      "title": "Kingdom Come: Deliverance",
+      "appId": 379430,
+      "hltbHours": 42.67,
+      "url": "https://howlongtobeat.com/game/21697"
+    },
+    {
+      "title": "Hand of Fate 2",
+      "appId": 456670,
+      "hltbHours": 22.2,
+      "url": "https://howlongtobeat.com/game/50430"
+    },
+    {
+      "title": "No Man's Sky",
+      "appId": 275850,
+      "hltbHours": 32.15,
+      "url": "https://howlongtobeat.com/game/20074"
+    },
+    {
+      "title": "GET EVEN",
+      "appId": 299950,
+      "hltbHours": 7.32,
+      "url": "https://howlongtobeat.com/game/21686"
+    },
+    {
+      "title": "Little Nightmares",
+      "appId": 424840,
+      "hltbHours": 3.57,
+      "url": "https://howlongtobeat.com/game/39417"
+    },
+    {
+      "title": "The Surge",
+      "appId": 378540,
+      "hltbHours": 20.87,
+      "url": "https://howlongtobeat.com/game/44914"
+    },
+    {
+      "title": "ELEX",
+      "appId": 411300,
+      "hltbHours": 27.47,
+      "url": "https://howlongtobeat.com/game/27129"
+    },
+    {
+      "title": "InnerSpace",
+      "appId": 347000,
+      "hltbHours": 5.57,
+      "url": "https://howlongtobeat.com/game/52091"
+    },
+    {
+      "title": "RiME",
+      "appId": 493200,
+      "hltbHours": 5.72,
+      "url": "https://howlongtobeat.com/game/20064"
+    },
+    {
+      "title": "Hollow Knight",
+      "appId": 367520,
+      "hltbHours": 26.98,
+      "url": "https://howlongtobeat.com/game/26286"
+    },
+    {
+      "title": "Kingdom Come: Deliverance",
+      "appId": 379430,
+      "hltbHours": 42.67,
+      "url": "https://howlongtobeat.com/game/21697"
+    },
+    {
+      "title": "Hellblade: Senua's Sacrifice",
+      "appId": 414340,
+      "hltbHours": 7.52,
+      "url": "https://howlongtobeat.com/game/41638"
+    },
+    {
+      "title": "Sherlock Holmes: Crimes and Punishments",
+      "appId": 241260,
+      "hltbHours": 12.6,
+      "url": "https://howlongtobeat.com/game/21386"
+    },
+    {
+      "title": "Heat Signature",
+      "appId": 268130,
+      "hltbHours": 14.45,
+      "url": "https://howlongtobeat.com/game/25041"
+    },
+    {
+      "title": "White Day: A Labyrinth Named School",
+      "appId": 466130,
+      "hltbHours": 8.62,
+      "url": "https://howlongtobeat.com/game/29441"
+    },
+    {
+      "title": "GOD EATER 2 Rage Burst",
+      "appId": 438490,
+      "hltbHours": 54.13,
+      "url": "https://howlongtobeat.com/game/29463"
+    },
+    {
+      "title": "Planescape: Torment: Enhanced Edition",
+      "appId": 466300,
+      "hltbHours": 31.22,
+      "url": "https://howlongtobeat.com/game/7093"
+    },
+    {
+      "title": "Factorio",
+      "appId": 427520,
+      "hltbHours": 51.0,
+      "url": "https://howlongtobeat.com/game/17455"
+    },
+    {
+      "title": "DARK SOULS III",
+      "appId": 374320,
+      "hltbHours": 31.22,
+      "url": "https://howlongtobeat.com/game/26803"
+    },
+    {
+      "title": "Syberia 3",
+      "appId": 464340,
+      "hltbHours": 12.67,
+      "url": "https://howlongtobeat.com/game/45367"
+    },
+    {
+      "title": "Hollow Knight",
+      "appId": 367520,
+      "hltbHours": 26.98,
+      "url": "https://howlongtobeat.com/game/26286"
+    },
+    {
+      "title": "Republique",
+      "appId": 317100,
+      "hltbHours": 11.67,
+      "url": "https://howlongtobeat.com/game/24348"
+    },
+    {
+      "title": "Conarium",
+      "appId": 313780,
+      "hltbHours": 4.07,
+      "url": "https://howlongtobeat.com/game/46123"
+    },
+    {
+      "title": "Hob",
+      "appId": 404680,
+      "hltbHours": 10.32,
+      "url": "https://howlongtobeat.com/game/37105"
+    },
+    {
+      "title": "Seven: Enhanced Edition",
+      "appId": 471010,
+      "hltbHours": 15.05,
+      "url": "https://howlongtobeat.com/game/51056"
+    },
+    {
+      "title": "Prey",
+      "appId": 480490,
+      "hltbHours": 16.38,
+      "url": "https://howlongtobeat.com/game/44590"
+    },
+    {
+      "title": "Planet Coaster",
+      "appId": 493340,
+      "hltbHours": 28.1,
+      "url": "https://howlongtobeat.com/game/40413"
+    },
+    {
+      "title": "Finding Paradise",
+      "appId": 337340,
+      "hltbHours": 5.08,
+      "url": "https://howlongtobeat.com/game/43941"
+    },
+    {
+      "title": "Planescape: Torment: Enhanced Edition",
+      "appId": 466300,
+      "hltbHours": 31.22,
+      "url": "https://howlongtobeat.com/game/7093"
+    },
+    {
+      "title": "Salt and Sanctuary",
+      "appId": 283640,
+      "hltbHours": 16.42,
+      "url": "https://howlongtobeat.com/game/25107"
+    },
+    {
+      "title": "Little Nightmares",
+      "appId": 424840,
+      "hltbHours": 3.57,
+      "url": "https://howlongtobeat.com/game/39417"
+    },
+    {
+      "title": "Deus Ex: Mankind Divided",
+      "appId": 337000,
+      "hltbHours": 16.02,
+      "url": "https://howlongtobeat.com/game/25434"
+    },
+    {
+      "title": "DARK SOULS III",
+      "appId": 374320,
+      "hltbHours": 31.22,
+      "url": "https://howlongtobeat.com/game/26803"
+    },
+    {
+      "title": "Republique",
+      "appId": 317100,
+      "hltbHours": 11.67,
+      "url": "https://howlongtobeat.com/game/24348"
+    },
+    {
+      "title": "Vanquish",
+      "appId": 460810,
+      "hltbHours": 6.08,
+      "url": "https://howlongtobeat.com/game/10899"
+    },
+    {
+      "title": "Seven: Enhanced Edition",
+      "appId": 471010,
+      "hltbHours": 15.05,
+      "url": "https://howlongtobeat.com/game/51056"
+    },
+    {
+      "title": "Nioh: Complete Edition",
+      "appId": 485510,
+      "hltbHours": 41.97,
+      "url": "https://howlongtobeat.com/game/50419"
+    },
+    {
+      "title": "Expeditions: Viking",
+      "appId": 445190,
+      "hltbHours": 29.83,
+      "url": "https://howlongtobeat.com/game/43605"
+    },
+    {
+      "title": "Trillion: God of Destruction",
+      "appId": 451780,
+      "hltbHours": 16.97,
+      "url": "https://howlongtobeat.com/game/36421"
+    },
+    {
+      "title": "SKYHILL",
+      "appId": 382140,
+      "hltbHours": 3.25,
+      "url": "https://howlongtobeat.com/game/30768"
+    },
+    {
+      "title": "UNLOVED",
+      "appId": 321270,
+      "hltbHours": 6.03,
+      "url": "https://howlongtobeat.com/game/29322"
+    },
+    {
+      "title": "Hand of Fate 2",
+      "appId": 456670,
+      "hltbHours": 22.2,
+      "url": "https://howlongtobeat.com/game/50430"
+    },
+    {
+      "title": "Little Nightmares",
+      "appId": 424840,
+      "hltbHours": 3.57,
+      "url": "https://howlongtobeat.com/game/39417"
+    },
+    {
+      "title": "No Man's Sky",
+      "appId": 275850,
+      "hltbHours": 32.15,
+      "url": "https://howlongtobeat.com/game/20074"
+    },
+    {
+      "title": "Cuphead",
+      "appId": 268910,
+      "hltbHours": 10.5,
+      "url": "https://howlongtobeat.com/game/21680"
+    },
+    {
+      "title": "RiME",
+      "appId": 493200,
+      "hltbHours": 5.72,
+      "url": "https://howlongtobeat.com/game/20064"
+    },
+    {
+      "title": "Blueprint Tycoon",
+      "appId": 454060,
+      "hltbHours": 5.58,
+      "url": "https://howlongtobeat.com/game/36709"
+    },
+    {
+      "title": "Orwell: Keeping an Eye On You",
+      "appId": 491950,
+      "hltbHours": 4.55,
+      "url": "https://howlongtobeat.com/game/40789"
+    },
+    {
+      "title": "Cuphead",
+      "appId": 268910,
+      "hltbHours": 10.5,
+      "url": "https://howlongtobeat.com/game/21680"
+    },
+    {
+      "title": "Vampyr",
+      "appId": 427290,
+      "hltbHours": 16.93,
+      "url": "https://howlongtobeat.com/game/35857"
+    },
+    {
+      "title": "Stellar Impact - Carrier Ship DLC",
+      "appId": 435150,
+      "hltbHours": 59.25,
+      "url": "https://howlongtobeat.com/game/39525"
+    },
+    {
+      "title": "RiME",
+      "appId": 493200,
+      "hltbHours": 5.72,
+      "url": "https://howlongtobeat.com/game/20064"
+    },
+    {
+      "title": "Silence",
+      "appId": 314790,
+      "hltbHours": 5.5,
+      "url": "https://howlongtobeat.com/game/39922"
+    },
+    {
+      "title": "Little Nightmares",
+      "appId": 424840,
+      "hltbHours": 3.57,
+      "url": "https://howlongtobeat.com/game/39417"
+    },
+    {
+      "title": "DARK SOULS III",
+      "appId": 374320,
+      "hltbHours": 31.22,
+      "url": "https://howlongtobeat.com/game/26803"
+    },
+    {
+      "title": "FINAL FANTASY X/X-2 HD Remaster",
+      "appId": 359870,
+      "hltbHours": 50.43,
+      "url": "https://howlongtobeat.com/game/16449"
+    },
+    {
+      "title": "We Happy Few",
+      "appId": 320240,
+      "hltbHours": 20.78,
+      "url": "https://howlongtobeat.com/game/27102"
+    },
+    {
+      "title": "Shadow Warrior 2",
+      "appId": 324800,
+      "hltbHours": 7.63,
+      "url": "https://howlongtobeat.com/game/39740"
+    },
+    {
+      "title": "Outlast 2",
+      "appId": 414700,
+      "hltbHours": 7.18,
+      "url": "https://howlongtobeat.com/game/32537"
+    },
+    {
+      "title": "Hob",
+      "appId": 404680,
+      "hltbHours": 10.32,
+      "url": "https://howlongtobeat.com/game/37105"
+    },
+    {
+      "title": "RiME",
+      "appId": 493200,
+      "hltbHours": 5.72,
+      "url": "https://howlongtobeat.com/game/20064"
+    },
+    {
+      "title": "Planescape: Torment: Enhanced Edition",
+      "appId": 466300,
+      "hltbHours": 31.22,
+      "url": "https://howlongtobeat.com/game/7093"
+    },
+    {
+      "title": "Orwell: Keeping an Eye On You",
+      "appId": 491950,
+      "hltbHours": 4.55,
+      "url": "https://howlongtobeat.com/game/40789"
+    },
+    {
+      "title": "Divinity: Original Sin 2 - Definitive Edition",
+      "appId": 435150,
+      "hltbHours": 59.25,
+      "url": "https://howlongtobeat.com/game/39525"
+    },
+    {
+      "title": "RiME",
+      "appId": 493200,
+      "hltbHours": 5.72,
+      "url": "https://howlongtobeat.com/game/20064"
+    },
+    {
+      "title": "Beat Cop",
+      "appId": 461950,
+      "hltbHours": 8.03,
+      "url": "https://howlongtobeat.com/game/41028"
+    },
+    {
+      "title": "Danganronpa: Trigger Happy Havoc",
+      "appId": 413410,
+      "hltbHours": 25.22,
+      "url": "https://howlongtobeat.com/game/16630"
+    },
+    {
+      "title": "Orwell: Keeping an Eye On You",
+      "appId": 491950,
+      "hltbHours": 4.55,
+      "url": "https://howlongtobeat.com/game/40789"
+    },
+    {
+      "title": "ELEX",
+      "appId": 411300,
+      "hltbHours": 27.47,
+      "url": "https://howlongtobeat.com/game/27129"
+    },
+    {
+      "title": "Little Nightmares",
+      "appId": 424840,
+      "hltbHours": 3.57,
+      "url": "https://howlongtobeat.com/game/39417"
+    },
+    {
+      "title": "GOD EATER 2 Rage Burst",
+      "appId": 438490,
+      "hltbHours": 54.13,
+      "url": "https://howlongtobeat.com/game/29463"
+    },
+    {
+      "title": "METAL GEAR SOLID V: The Definitive Ex...",
+      "appId": 132479,
+      "hltbHours": 45.68,
+      "url": "https://howlongtobeat.com/game/5918"
+    },
+    {
+      "title": "EARTHLOCK: Festival of Magic",
+      "appId": 258030,
+      "hltbHours": null,
+      "url": ""
+    },
+    {
+      "title": "DARK SOULS III",
+      "appId": 374320,
+      "hltbHours": 31.22,
+      "url": "https://howlongtobeat.com/game/26803"
+    },
+    {
+      "title": "Cuphead",
+      "appId": 268910,
+      "hltbHours": 10.5,
+      "url": "https://howlongtobeat.com/game/21680"
+    },
+    {
+      "title": "Ghost of a Tale",
+      "appId": 417290,
+      "hltbHours": 11.4,
+      "url": "https://howlongtobeat.com/game/21687"
+    },
+    {
+      "title": "Dishonored 2",
+      "appId": 403640,
+      "hltbHours": 12.5,
+      "url": "https://howlongtobeat.com/game/26731"
+    },
+    {
+      "title": "Prey",
+      "appId": 480490,
+      "hltbHours": 16.38,
+      "url": "https://howlongtobeat.com/game/44590"
+    },
+    {
+      "title": "Resident Evil 7 Biohazard",
+      "appId": 418370,
+      "hltbHours": 9.22,
+      "url": "https://howlongtobeat.com/game/38051"
+    },
+    {
+      "title": "FINAL FANTASY X/X-2 HD Remaster",
+      "appId": 359870,
+      "hltbHours": 50.43,
+      "url": "https://howlongtobeat.com/game/16449"
+    },
+    {
+      "title": "Beat Cop",
+      "appId": 461950,
+      "hltbHours": 8.03,
+      "url": "https://howlongtobeat.com/game/41028"
+    },
+    {
+      "title": "The Walking Dead: Michonne - A Telltale Miniseries",
+      "appId": 429570,
+      "hltbHours": 3.95,
+      "url": "https://howlongtobeat.com/game/33662"
+    },
+    {
+      "title": "Clustertruck",
+      "appId": 397950,
+      "hltbHours": 3.63,
+      "url": "https://howlongtobeat.com/game/40215"
+    },
+    {
+      "title": "Battle Worlds: Kronos",
+      "appId": 237470,
+      "hltbHours": 38.08,
+      "url": "https://howlongtobeat.com/game/16189"
+    },
+    {
+      "title": "FINAL FANTASY X/X-2 HD Remaster",
+      "appId": 359870,
+      "hltbHours": 50.43,
+      "url": "https://howlongtobeat.com/game/16449"
+    },
+    {
+      "title": "Hollow Knight",
+      "appId": 367520,
+      "hltbHours": 26.98,
+      "url": "https://howlongtobeat.com/game/26286"
+    },
+    {
+      "title": "Prey",
+      "appId": 480490,
+      "hltbHours": 16.38,
+      "url": "https://howlongtobeat.com/game/44590"
+    },
+    {
+      "title": "Dex",
+      "appId": 269650,
+      "hltbHours": 11.1,
+      "url": "https://howlongtobeat.com/game/21172"
+    },
+    {
+      "title": "Dishonored 2",
+      "appId": 403640,
+      "hltbHours": 12.5,
+      "url": "https://howlongtobeat.com/game/26731"
+    },
+    {
+      "title": "7 Days to Die",
+      "appId": 251570,
+      "hltbHours": 53.23,
+      "url": "https://howlongtobeat.com/game/13500"
+    },
+    {
+      "title": "Fallout 4",
+      "appId": 377160,
+      "hltbHours": 27.8,
+      "url": "https://howlongtobeat.com/game/26729"
+    },
+    {
+      "title": "Tom Clancy’s The Division",
+      "appId": 365590,
+      "hltbHours": 24.22,
+      "url": "https://howlongtobeat.com/game/20073"
+    },
+    {
+      "title": "Little Nightmares",
+      "appId": 424840,
+      "hltbHours": 3.57,
+      "url": "https://howlongtobeat.com/game/39417"
+    },
+    {
+      "title": "Osiris: New Dawn",
+      "appId": 402710,
+      "hltbHours": 21.42,
+      "url": "https://howlongtobeat.com/game/40351"
+    },
+    {
+      "title": "ELEX",
+      "appId": 411300,
+      "hltbHours": 27.47,
+      "url": "https://howlongtobeat.com/game/27129"
+    },
+    {
+      "title": "Darkest Dungeon",
+      "appId": 262060,
+      "hltbHours": 56.75,
+      "url": "https://howlongtobeat.com/game/22535"
+    },
+    {
+      "title": "Hellblade: Senua's Sacrifice",
+      "appId": 414340,
+      "hltbHours": 7.52,
+      "url": "https://howlongtobeat.com/game/41638"
+    },
+    {
+      "title": "RiME",
+      "appId": 493200,
+      "hltbHours": 5.72,
+      "url": "https://howlongtobeat.com/game/20064"
+    },
+    {
+      "title": "Planet Coaster",
+      "appId": 493340,
+      "hltbHours": 28.1,
+      "url": "https://howlongtobeat.com/game/40413"
+    },
+    {
+      "title": "Hellblade: Senua's Sacrifice",
+      "appId": 414340,
+      "hltbHours": 7.52,
+      "url": "https://howlongtobeat.com/game/41638"
+    },
+    {
+      "title": "GOD EATER 2 Rage Burst",
+      "appId": 438490,
+      "hltbHours": 54.13,
+      "url": "https://howlongtobeat.com/game/29463"
+    },
+    {
+      "title": "RiME",
+      "appId": 493200,
+      "hltbHours": 5.72,
+      "url": "https://howlongtobeat.com/game/20064"
+    },
+    {
+      "title": "Vanquish",
+      "appId": 460810,
+      "hltbHours": 6.08,
+      "url": "https://howlongtobeat.com/game/10899"
+    },
+    {
+      "title": "Deus Ex: Mankind Divided",
+      "appId": 337000,
+      "hltbHours": 16.02,
+      "url": "https://howlongtobeat.com/game/25434"
+    },
+    {
+      "title": "METAL GEAR SOLID V: THE PHANTOM PAIN",
+      "appId": 287700,
+      "hltbHours": 45.68,
+      "url": "https://howlongtobeat.com/game/5918"
+    },
+    {
+      "title": "Conarium",
+      "appId": 313780,
+      "hltbHours": 4.07,
+      "url": "https://howlongtobeat.com/game/46123"
+    },
+    {
+      "title": "Vikings - Wolves of Midgard",
+      "appId": 404590,
+      "hltbHours": 17.3,
+      "url": "https://howlongtobeat.com/game/40164"
+    },
+    {
+      "title": "Darkest Dungeon",
+      "appId": 262060,
+      "hltbHours": 56.75,
+      "url": "https://howlongtobeat.com/game/22535"
+    },
+    {
+      "title": "Prey",
+      "appId": 480490,
+      "hltbHours": 16.38,
+      "url": "https://howlongtobeat.com/game/44590"
+    },
+    {
+      "title": "Little Nightmares",
+      "appId": 424840,
+      "hltbHours": 3.57,
+      "url": "https://howlongtobeat.com/game/39417"
+    },
+    {
+      "title": "Beat Cop",
+      "appId": 461950,
+      "hltbHours": 8.03,
+      "url": "https://howlongtobeat.com/game/41028"
+    },
+    {
+      "title": "Mafia III: Definitive Edition",
+      "appId": 360430,
+      "hltbHours": 25.07,
+      "url": "https://howlongtobeat.com/game/78629"
+    },
+    {
+      "title": "Resident Evil 7 Biohazard",
+      "appId": 418370,
+      "hltbHours": 9.22,
+      "url": "https://howlongtobeat.com/game/38051"
+    },
+    {
+      "title": "Dishonored 2",
+      "appId": 403640,
+      "hltbHours": 12.5,
+      "url": "https://howlongtobeat.com/game/26731"
+    },
+    {
+      "title": "METAL GEAR SOLID V: THE PHANTOM PAIN",
+      "appId": 287700,
+      "hltbHours": 45.68,
+      "url": "https://howlongtobeat.com/game/5918"
+    },
+    {
+      "title": "NARUTO SHIPPUDEN: Ultimate Ninja STORM 4",
+      "appId": 349040,
+      "hltbHours": 9.03,
+      "url": "https://howlongtobeat.com/game/34139"
+    },
+    {
+      "title": "Beat Cop",
+      "appId": 461950,
+      "hltbHours": 8.03,
+      "url": "https://howlongtobeat.com/game/41028"
+    },
+    {
+      "title": "Conarium",
+      "appId": 313780,
+      "hltbHours": 4.07,
+      "url": "https://howlongtobeat.com/game/46123"
+    },
+    {
+      "title": "The Technomancer",
+      "appId": 338390,
+      "hltbHours": 18.55,
+      "url": "https://howlongtobeat.com/game/38277"
+    },
+    {
+      "title": "Torment: Tides of Numenera",
+      "appId": 272270,
+      "hltbHours": 25.17,
+      "url": "https://howlongtobeat.com/game/10533"
+    },
+    {
+      "title": "Grand Theft Auto V Legacy",
+      "appId": 271590,
+      "hltbHours": 32.03,
+      "url": "https://howlongtobeat.com/game/4064"
+    },
+    {
+      "title": "RiME",
+      "appId": 493200,
+      "hltbHours": 5.72,
+      "url": "https://howlongtobeat.com/game/20064"
+    },
+    {
+      "title": "ASTRONEER",
+      "appId": 361420,
+      "hltbHours": 25.38,
+      "url": "https://howlongtobeat.com/game/42182"
+    },
+    {
+      "title": "Enter the Gungeon",
+      "appId": 311690,
+      "hltbHours": 22.45,
+      "url": "https://howlongtobeat.com/game/35549"
+    },
+    {
+      "title": "Vanquish",
+      "appId": 460810,
+      "hltbHours": 6.08,
+      "url": "https://howlongtobeat.com/game/10899"
+    },
+    {
+      "title": "White Night",
+      "appId": 301560,
+      "hltbHours": 6.0,
+      "url": "https://howlongtobeat.com/game/21729"
+    },
+    {
+      "title": "Resident Evil 7 Biohazard",
+      "appId": 418370,
+      "hltbHours": 9.22,
+      "url": "https://howlongtobeat.com/game/38051"
+    },
+    {
+      "title": "Prey",
+      "appId": 480490,
+      "hltbHours": 16.38,
+      "url": "https://howlongtobeat.com/game/44590"
+    },
+    {
+      "title": "Grand Ages: Medieval",
+      "appId": 310470,
+      "hltbHours": 12.0,
+      "url": "https://howlongtobeat.com/game/30526"
+    },
+    {
+      "title": "7 Days to Die",
+      "appId": 251570,
+      "hltbHours": 53.23,
+      "url": "https://howlongtobeat.com/game/13500"
+    },
+    {
+      "title": "Castlevania: Lords of Shadow – Mirror of Fate HD",
+      "appId": 282530,
+      "hltbHours": 8.35,
+      "url": "https://howlongtobeat.com/game/1588"
+    },
+    {
+      "title": "Call of Duty: Black Ops II",
+      "appId": 202970,
+      "hltbHours": 7.05,
+      "url": "https://howlongtobeat.com/game/1472"
+    },
+    {
+      "title": "Outlast 2",
+      "appId": 414700,
+      "hltbHours": 7.18,
+      "url": "https://howlongtobeat.com/game/32537"
+    },
+    {
+      "title": "Fallout 4",
+      "appId": 377160,
+      "hltbHours": 27.8,
+      "url": "https://howlongtobeat.com/game/26729"
+    },
+    {
+      "title": "Danganronpa: Trigger Happy Havoc",
+      "appId": 413410,
+      "hltbHours": 25.22,
+      "url": "https://howlongtobeat.com/game/16630"
+    },
+    {
+      "title": "Killing Floor 2",
+      "appId": 232090,
+      "hltbHours": 16.28,
+      "url": "https://howlongtobeat.com/game/25991"
+    },
+    {
+      "title": "Shovel Knight: Treasure Trove",
+      "appId": 250760,
+      "hltbHours": null,
+      "url": ""
+    },
+    {
+      "title": "The Evil Within Bundle",
+      "appId": 268050,
+      "hltbHours": 15.32,
+      "url": "https://howlongtobeat.com/game/9866"
+    },
+    {
+      "title": "GOD EATER 2 Rage Burst",
+      "appId": 438490,
+      "hltbHours": 54.13,
+      "url": "https://howlongtobeat.com/game/29463"
+    },
+    {
+      "title": "DARK SOULS III",
+      "appId": 374320,
+      "hltbHours": 31.22,
+      "url": "https://howlongtobeat.com/game/26803"
+    },
+    {
+      "title": "Batman - The Telltale Series",
+      "appId": 498240,
+      "hltbHours": 8.38,
+      "url": "https://howlongtobeat.com/game/38801"
+    },
+    {
+      "title": "Prey",
+      "appId": 480490,
+      "hltbHours": 16.38,
+      "url": "https://howlongtobeat.com/game/44590"
+    },
+    {
+      "title": "Mortal Kombat XL",
+      "appId": 307780,
+      "hltbHours": 5.68,
+      "url": "https://howlongtobeat.com/game/21255"
+    },
+    {
+      "title": "Deus Ex: Mankind Divided",
+      "appId": 337000,
+      "hltbHours": 16.02,
+      "url": "https://howlongtobeat.com/game/25434"
+    },
+    {
+      "title": "TASTEE: Lethal Tactics",
+      "appId": 365190,
+      "hltbHours": 4.45,
+      "url": "https://howlongtobeat.com/game/38258"
+    },
+    {
+      "title": "DARK SOULS III",
+      "appId": 374320,
+      "hltbHours": 31.22,
+      "url": "https://howlongtobeat.com/game/26803"
+    },
+    {
+      "title": "Tom Clancy’s The Division",
+      "appId": 365590,
+      "hltbHours": 24.22,
+      "url": "https://howlongtobeat.com/game/20073"
+    },
+    {
+      "title": "GOD EATER 2 Rage Burst",
+      "appId": 438490,
+      "hltbHours": 54.13,
+      "url": "https://howlongtobeat.com/game/29463"
+    },
+    {
+      "title": "FINAL FANTASY TYPE-0 HD",
+      "appId": 340170,
+      "hltbHours": 23.55,
+      "url": "https://howlongtobeat.com/game/24671"
+    },
+    {
+      "title": "Killing Floor 2",
+      "appId": 232090,
+      "hltbHours": 16.28,
+      "url": "https://howlongtobeat.com/game/25991"
+    },
+    {
+      "title": "Dishonored 2",
+      "appId": 403640,
+      "hltbHours": 12.5,
+      "url": "https://howlongtobeat.com/game/26731"
+    },
+    {
+      "title": "Deus Ex: Mankind Divided",
+      "appId": 337000,
+      "hltbHours": 16.02,
+      "url": "https://howlongtobeat.com/game/25434"
+    },
+    {
+      "title": "Enter the Gungeon",
+      "appId": 311690,
+      "hltbHours": 22.45,
+      "url": "https://howlongtobeat.com/game/35549"
+    },
+    {
+      "title": "The Technomancer",
+      "appId": 338390,
+      "hltbHours": 18.55,
+      "url": "https://howlongtobeat.com/game/38277"
+    },
+    {
+      "title": "Syberia 3",
+      "appId": 464340,
+      "hltbHours": 12.67,
+      "url": "https://howlongtobeat.com/game/45367"
+    },
+    {
+      "title": "BlazBlue: Chronophantasma Extend",
+      "appId": 388750,
+      "hltbHours": 15.45,
+      "url": "https://howlongtobeat.com/game/14341"
+    },
+    {
+      "title": "The Turing Test",
+      "appId": 499520,
+      "hltbHours": null,
+      "url": ""
+    },
+    {
+      "title": "Shadow Warrior 2",
+      "appId": 324800,
+      "hltbHours": 7.63,
+      "url": "https://howlongtobeat.com/game/39740"
+    },
+    {
+      "title": "Grand Theft Auto V Legacy",
+      "appId": 271590,
+      "hltbHours": 32.03,
+      "url": "https://howlongtobeat.com/game/4064"
+    },
+    {
+      "title": "Deus Ex: Mankind Divided",
+      "appId": 337000,
+      "hltbHours": 16.02,
+      "url": "https://howlongtobeat.com/game/25434"
+    },
+    {
+      "title": "Shovel Knight: Treasure Trove",
+      "appId": 250760,
+      "hltbHours": null,
+      "url": ""
+    },
+    {
+      "title": "Assassin’s Creed IV Black Flag",
+      "appId": 242050,
+      "hltbHours": 23.42,
+      "url": "https://howlongtobeat.com/game/12707"
+    },
+    {
+      "title": "Tabletop Simulator",
+      "appId": 286160,
+      "hltbHours": 9.85,
+      "url": "https://howlongtobeat.com/game/17993"
+    },
+    {
+      "title": "Galactic Civilizations III",
+      "appId": 226860,
+      "hltbHours": 27.2,
+      "url": "https://howlongtobeat.com/game/25173"
+    },
+    {
+      "title": "FINAL FANTASY TYPE-0 HD",
+      "appId": 340170,
+      "hltbHours": 23.55,
+      "url": "https://howlongtobeat.com/game/24671"
+    },
+    {
+      "title": "DYNASTY WARRIORS 8: Xtreme Legends Complete Edition",
+      "appId": 278080,
+      "hltbHours": 21.22,
+      "url": "https://howlongtobeat.com/game/19081"
+    },
+    {
+      "title": "Dex",
+      "appId": 269650,
+      "hltbHours": 11.1,
+      "url": "https://howlongtobeat.com/game/21172"
+    },
+    {
+      "title": "Orwell: Keeping an Eye On You",
+      "appId": 491950,
+      "hltbHours": 4.55,
+      "url": "https://howlongtobeat.com/game/40789"
+    },
+    {
+      "title": "Orwell: Keeping an Eye On You",
+      "appId": 491950,
+      "hltbHours": 4.55,
+      "url": "https://howlongtobeat.com/game/40789"
+    },
+    {
+      "title": "Deus Ex: Mankind Divided",
+      "appId": 337000,
+      "hltbHours": 16.02,
+      "url": "https://howlongtobeat.com/game/25434"
+    },
+    {
+      "title": "Fallout 4",
+      "appId": 377160,
+      "hltbHours": 27.8,
+      "url": "https://howlongtobeat.com/game/26729"
+    },
+    {
+      "title": "Planet Coaster",
+      "appId": 493340,
+      "hltbHours": 28.1,
+      "url": "https://howlongtobeat.com/game/40413"
+    },
+    {
+      "title": "Dishonored 2",
+      "appId": 403640,
+      "hltbHours": 12.5,
+      "url": "https://howlongtobeat.com/game/26731"
+    },
+    {
+      "title": "Enter the Gungeon",
+      "appId": 311690,
+      "hltbHours": 22.45,
+      "url": "https://howlongtobeat.com/game/35549"
+    },
+    {
+      "title": "METAL GEAR SOLID V: THE PHANTOM PAIN",
+      "appId": 287700,
+      "hltbHours": 45.68,
+      "url": "https://howlongtobeat.com/game/5918"
+    },
+    {
+      "title": "Mafia III: Definitive Edition",
+      "appId": 360430,
+      "hltbHours": 25.07,
+      "url": "https://howlongtobeat.com/game/78629"
+    },
+    {
+      "title": "One Piece Burning Blood",
+      "appId": 425220,
+      "hltbHours": 5.1,
+      "url": "https://howlongtobeat.com/game/37675"
+    },
+    {
+      "title": "TASTEE: Lethal Tactics",
+      "appId": 365190,
+      "hltbHours": 4.45,
+      "url": "https://howlongtobeat.com/game/38258"
+    },
+    {
+      "title": "Mortal Kombat XL",
+      "appId": 307780,
+      "hltbHours": 5.68,
+      "url": "https://howlongtobeat.com/game/21255"
+    },
+    {
+      "title": "The Walking Dead: Michonne - A Telltale Miniseries",
+      "appId": 429570,
+      "hltbHours": 3.95,
+      "url": "https://howlongtobeat.com/game/33662"
+    },
+    {
+      "title": "Republique",
+      "appId": 317100,
+      "hltbHours": 11.67,
+      "url": "https://howlongtobeat.com/game/24348"
+    },
+    {
+      "title": "Batman - The Telltale Series",
+      "appId": 498240,
+      "hltbHours": 8.38,
+      "url": "https://howlongtobeat.com/game/38801"
+    },
+    {
+      "title": "Call of Duty: Black Ops II",
+      "appId": 202970,
+      "hltbHours": 7.05,
+      "url": "https://howlongtobeat.com/game/1472"
+    },
+    {
+      "title": "The Evil Within",
+      "appId": 268050,
+      "hltbHours": 15.32,
+      "url": "https://howlongtobeat.com/game/9866"
+    },
+    {
+      "title": "DOOM 3",
+      "appId": 208200,
+      "hltbHours": 9.6,
+      "url": "https://howlongtobeat.com/game/2705"
+    },
+    {
+      "title": "Dex",
+      "appId": 269650,
+      "hltbHours": 11.1,
+      "url": "https://howlongtobeat.com/game/21172"
+    },
+    {
+      "title": "Planet Coaster",
+      "appId": 493340,
+      "hltbHours": 28.1,
+      "url": "https://howlongtobeat.com/game/40413"
+    },
+    {
+      "title": "Shadow Warrior 2",
+      "appId": 324800,
+      "hltbHours": 7.63,
+      "url": "https://howlongtobeat.com/game/39740"
+    },
+    {
+      "title": "TASTEE: Lethal Tactics",
+      "appId": 365190,
+      "hltbHours": 4.45,
+      "url": "https://howlongtobeat.com/game/38258"
+    },
+    {
+      "title": "Fallout 4",
+      "appId": 377160,
+      "hltbHours": 27.8,
+      "url": "https://howlongtobeat.com/game/26729"
+    },
+    {
+      "title": "Singularity",
+      "appId": 42670,
+      "hltbHours": 7.03,
+      "url": "https://howlongtobeat.com/game/8585"
+    },
+    {
+      "title": "Enter the Gungeon",
+      "appId": 311690,
+      "hltbHours": 22.45,
+      "url": "https://howlongtobeat.com/game/35549"
+    },
+    {
+      "title": "Mortal Kombat X",
+      "appId": 307780,
+      "hltbHours": 5.68,
+      "url": "https://howlongtobeat.com/game/21255"
+    },
+    {
+      "title": "Resident Evil 7 Biohazard",
+      "appId": 418370,
+      "hltbHours": 9.22,
+      "url": "https://howlongtobeat.com/game/38051"
+    },
+    {
+      "title": "Deus Ex: Mankind Divided",
+      "appId": 337000,
+      "hltbHours": 16.02,
+      "url": "https://howlongtobeat.com/game/25434"
+    },
+    {
+      "title": "Goetia",
+      "appId": 421740,
+      "hltbHours": 7.52,
+      "url": "https://howlongtobeat.com/game/36774"
+    },
+    {
+      "title": "Dex",
+      "appId": 269650,
+      "hltbHours": 11.1,
+      "url": "https://howlongtobeat.com/game/21172"
+    },
+    {
+      "title": "NARUTO SHIPPUDEN: Ultimate Ninja STORM 4",
+      "appId": 349040,
+      "hltbHours": 9.03,
+      "url": "https://howlongtobeat.com/game/34139"
+    },
+    {
+      "title": "Silence",
+      "appId": 314790,
+      "hltbHours": 5.5,
+      "url": "https://howlongtobeat.com/game/39922"
+    },
+    {
+      "title": "Fallout 4",
+      "appId": 377160,
+      "hltbHours": 27.8,
+      "url": "https://howlongtobeat.com/game/26729"
+    },
+    {
+      "title": "Deus Ex: Mankind Divided",
+      "appId": 337000,
+      "hltbHours": 16.02,
+      "url": "https://howlongtobeat.com/game/25434"
+    },
+    {
+      "title": "Enter the Gungeon",
+      "appId": 311690,
+      "hltbHours": 22.45,
+      "url": "https://howlongtobeat.com/game/35549"
+    },
+    {
+      "title": "War for the Overworld",
+      "appId": 230190,
+      "hltbHours": 14.97,
+      "url": "https://howlongtobeat.com/game/25538"
+    },
+    {
+      "title": "Dishonored 2",
+      "appId": 403640,
+      "hltbHours": 12.5,
+      "url": "https://howlongtobeat.com/game/26731"
+    },
+    {
+      "title": "Mass Effect (2007)",
+      "appId": 17460,
+      "hltbHours": 16.9,
+      "url": "https://howlongtobeat.com/game/5698"
+    },
+    {
+      "title": "The Escapists",
+      "appId": 298630,
+      "hltbHours": 19.42,
+      "url": "https://howlongtobeat.com/game/15198"
+    },
+    {
+      "title": "Skullgirls 2nd Encore",
+      "appId": 245170,
+      "hltbHours": 3.2,
+      "url": "https://howlongtobeat.com/game/39099"
+    },
+    {
+      "title": "Firewatch",
+      "appId": 383870,
+      "hltbHours": 4.07,
+      "url": "https://howlongtobeat.com/game/26806"
+    },
+    {
+      "title": "Castle of Illusion",
+      "appId": 227600,
+      "hltbHours": 2.63,
+      "url": "https://howlongtobeat.com/game/13771"
+    },
+    {
+      "title": "Darkest Dungeon",
+      "appId": 262060,
+      "hltbHours": 56.75,
+      "url": "https://howlongtobeat.com/game/22535"
+    },
+    {
+      "title": "Wolfenstein: The New Order",
+      "appId": 201810,
+      "hltbHours": 11.35,
+      "url": "https://howlongtobeat.com/game/16886"
+    },
+    {
+      "title": "The Walking Dead: Michonne - A Telltale Miniseries",
+      "appId": 429570,
+      "hltbHours": 3.95,
+      "url": "https://howlongtobeat.com/game/33662"
+    },
+    {
+      "title": "The Technomancer",
+      "appId": 338390,
+      "hltbHours": 18.55,
+      "url": "https://howlongtobeat.com/game/38277"
+    },
+    {
+      "title": "SUPERHOT",
+      "appId": 322500,
+      "hltbHours": 2.38,
+      "url": "https://howlongtobeat.com/game/21723"
+    },
+    {
+      "title": "FINAL FANTASY TYPE-0 HD",
+      "appId": 340170,
+      "hltbHours": 23.55,
+      "url": "https://howlongtobeat.com/game/24671"
+    },
+    {
+      "title": "NARUTO SHIPPUDEN: Ultimate Ninja STORM 4",
+      "appId": 349040,
+      "hltbHours": 9.03,
+      "url": "https://howlongtobeat.com/game/34139"
+    },
+    {
+      "title": "Fallout 4",
+      "appId": 377160,
+      "hltbHours": 27.8,
+      "url": "https://howlongtobeat.com/game/26729"
+    },
+    {
+      "title": "Resident Evil Revelations - Complete ...",
+      "appId": 50854,
+      "hltbHours": null,
+      "url": ""
+    },
+    {
+      "title": "The LEGO Movie - Videogame",
+      "appId": 267530,
+      "hltbHours": 7.65,
+      "url": "https://howlongtobeat.com/game/16585"
+    },
+    {
+      "title": "Armikrog",
+      "appId": 334120,
+      "hltbHours": 3.75,
+      "url": "https://howlongtobeat.com/game/30364"
+    },
+    {
+      "title": "I Am Bread",
+      "appId": 327890,
+      "hltbHours": 2.85,
+      "url": "https://howlongtobeat.com/game/23899"
+    },
+    {
+      "title": "FINAL FANTASY TYPE-0 HD",
+      "appId": 340170,
+      "hltbHours": 23.55,
+      "url": "https://howlongtobeat.com/game/24671"
+    },
+    {
+      "title": "LEGO STAR WARS: The Force Awakens",
+      "appId": 438640,
+      "hltbHours": 9.17,
+      "url": "https://howlongtobeat.com/game/34189"
+    },
+    {
+      "title": "Call of Duty: Ghosts",
+      "appId": 209160,
+      "hltbHours": 6.0,
+      "url": "https://howlongtobeat.com/game/14322"
+    },
+    {
+      "title": "Salt",
+      "appId": 327860,
+      "hltbHours": null,
+      "url": "https://howlongtobeat.com/game/24367"
+    },
+    {
+      "title": "GOD EATER 2 Rage Burst",
+      "appId": 438490,
+      "hltbHours": 54.13,
+      "url": "https://howlongtobeat.com/game/29463"
+    },
+    {
+      "title": "Firewatch",
+      "appId": 383870,
+      "hltbHours": 4.07,
+      "url": "https://howlongtobeat.com/game/26806"
+    },
+    {
+      "title": "Road to Ballhalla",
+      "appId": 425410,
+      "hltbHours": 2.6,
+      "url": "https://howlongtobeat.com/game/40209"
+    },
+    {
+      "title": "I am Weapon: Revival",
+      "appId": 335700,
+      "hltbHours": null,
+      "url": "https://howlongtobeat.com/game/31262"
+    },
+    {
+      "title": "Project CARS",
+      "appId": 234630,
+      "hltbHours": 33.15,
+      "url": "https://howlongtobeat.com/game/20072"
+    },
+    {
+      "title": "Metro: Last Light Redux",
+      "appId": 287390,
+      "hltbHours": 9.77,
+      "url": "https://howlongtobeat.com/game/20883"
+    },
+    {
+      "title": "Hatoful Boyfriend Collector's Edition",
+      "appId": 48515,
+      "hltbHours": null,
+      "url": ""
+    },
+    {
+      "title": "DARK SOULS III",
+      "appId": 374320,
+      "hltbHours": 31.22,
+      "url": "https://howlongtobeat.com/game/26803"
+    },
+    {
+      "title": "Salt and Sanctuary",
+      "appId": 283640,
+      "hltbHours": 16.42,
+      "url": "https://howlongtobeat.com/game/25107"
+    },
+    {
+      "title": "SKYHILL",
+      "appId": 382140,
+      "hltbHours": 3.25,
+      "url": "https://howlongtobeat.com/game/30768"
+    },
+    {
+      "title": "Men of War: Assault Squad 2",
+      "appId": 244450,
+      "hltbHours": 57.25,
+      "url": "https://howlongtobeat.com/game/17286"
+    },
+    {
+      "title": "LEGO® STAR WARS™: The Force Awakens",
+      "appId": 438640,
+      "hltbHours": 9.17,
+      "url": "https://howlongtobeat.com/game/34189"
+    },
+    {
+      "title": "Call of Duty: Ghosts",
+      "appId": 209160,
+      "hltbHours": 6.0,
+      "url": "https://howlongtobeat.com/game/14322"
+    },
+    {
+      "title": "The LEGO Movie - Videogame",
+      "appId": 267530,
+      "hltbHours": 7.65,
+      "url": "https://howlongtobeat.com/game/16585"
+    },
+    {
+      "title": "NARUTO SHIPPUDEN: Ultimate Ninja STORM 4",
+      "appId": 349040,
+      "hltbHours": 9.03,
+      "url": "https://howlongtobeat.com/game/34139"
+    },
+    {
+      "title": "Unreal Tournament 3",
+      "appId": 13210,
+      "hltbHours": 10.57,
+      "url": "https://howlongtobeat.com/game/10833"
+    },
+    {
+      "title": "Metro 2033 Redux",
+      "appId": 286690,
+      "hltbHours": 9.05,
+      "url": "https://howlongtobeat.com/game/20737"
+    },
+    {
+      "title": "Verdun",
+      "appId": 242860,
+      "hltbHours": 5.83,
+      "url": "https://howlongtobeat.com/game/18125"
+    },
+    {
+      "title": "The Witcher Adventure Game",
+      "appId": 303800,
+      "hltbHours": 5.13,
+      "url": "https://howlongtobeat.com/game/20461"
+    },
+    {
+      "title": "Castlevania: Lords of Shadow – Mirror of Fate HD",
+      "appId": 282530,
+      "hltbHours": 8.35,
+      "url": "https://howlongtobeat.com/game/1588"
+    },
+    {
+      "title": "Fallout 4",
+      "appId": 377160,
+      "hltbHours": 27.8,
+      "url": "https://howlongtobeat.com/game/26729"
+    },
+    {
+      "title": "SUPERHOT",
+      "appId": 322500,
+      "hltbHours": 2.38,
+      "url": "https://howlongtobeat.com/game/21723"
+    },
+    {
+      "title": "Castle of Illusion",
+      "appId": 227600,
+      "hltbHours": 2.63,
+      "url": "https://howlongtobeat.com/game/13771"
+    },
+    {
+      "title": "Call of Duty: Black Ops III - Multiplayer Starter Pack",
+      "appId": 437350,
+      "hltbHours": null,
+      "url": ""
+    },
+    {
+      "title": "Homeworld Remastered Collection",
+      "appId": 244160,
+      "hltbHours": 21.0,
+      "url": "https://howlongtobeat.com/game/24517"
+    },
+    {
+      "title": "NARUTO SHIPPUDEN: Ultimate Ninja STORM Revolution",
+      "appId": 272510,
+      "hltbHours": 4.75,
+      "url": "https://howlongtobeat.com/game/21077"
+    },
+    {
+      "title": "Call of Duty: Ghosts",
+      "appId": 209160,
+      "hltbHours": 6.0,
+      "url": "https://howlongtobeat.com/game/14322"
+    },
+    {
+      "title": "FINAL FANTASY X/X-2 HD Remaster",
+      "appId": 359870,
+      "hltbHours": 50.43,
+      "url": "https://howlongtobeat.com/game/16449"
+    }
+  ],
   "steamApiEnabled": true,
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-07-09T08:59:31.091066+00:00",
+  "libraryUpdatedAt": "2026-07-09T12:30:32.686456+00:00",
   "libraryStats": {
-    "durationSeconds": 6.35,
+    "durationSeconds": 18.98,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -42927,7 +46166,7 @@
     "totalPlaytimeRows": 14241
   },
   "stats": {
-    "durationSeconds": 124.18,
+    "durationSeconds": 334.75,
     "targetWins": 2390,
     "uniqueProgressTargets": 2386,
     "libraryPlaytimeHits": 2361,
@@ -42935,7 +46174,7 @@
     "achievementSuccesses": 6,
     "achievementErrors": 78,
     "cachedFallbacks": 78,
-    "hltbTitlesRequested": 1291,
-    "hltbResultsAvailable": 4038
+    "hltbAppIdsRequested": 1276,
+    "hltbResultsAvailable": 539
   }
 }
