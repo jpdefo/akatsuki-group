@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-08T21:43:25.806559+00:00",
+  "updatedAt": "2026-07-09T20:00:17.924436+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -385,7 +385,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 14.2
+      "achievementsPlaytimeHours": 14.2,
+      "popThresholdMetAt": "2026-07-09T20:00:17.923408+00:00"
     },
     {
       "username": "BojanNS987",
@@ -5490,12 +5491,12 @@
       "earnedAchievements": 50,
       "totalAchievements": 281,
       "achievementPercent": 18,
-      "playtimeHours": 86.68,
+      "playtimeHours": 86.83,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 86.68,
+      "achievementsPlaytimeHours": 86.83,
       "popThresholdMetAt": "2026-06-26T07:11:08.797696+00:00"
     },
     {
@@ -9734,7 +9735,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 8.28
+      "achievementsPlaytimeHours": 8.28,
+      "popThresholdMetAt": "2026-07-09T20:00:17.923680+00:00"
     },
     {
       "username": "Drain",
@@ -10924,7 +10926,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 3.27
+      "achievementsPlaytimeHours": 3.27,
+      "popThresholdMetAt": "2026-07-09T20:00:17.923714+00:00"
     },
     {
       "username": "Drain",
@@ -11182,7 +11185,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 7.03
+      "achievementsPlaytimeHours": 7.03,
+      "popThresholdMetAt": "2026-07-09T20:00:17.923721+00:00"
     },
     {
       "username": "eledhrim",
@@ -14393,7 +14397,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 2.9
+      "achievementsPlaytimeHours": 2.9,
+      "popThresholdMetAt": "2026-07-09T20:00:17.923783+00:00"
     },
     {
       "username": "Ernesttico",
@@ -14575,12 +14580,12 @@
       "earnedAchievements": 36,
       "totalAchievements": 38,
       "achievementPercent": 95,
-      "playtimeHours": 19.45,
+      "playtimeHours": 20.77,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 19.45,
+      "achievementsPlaytimeHours": 20.77,
       "popThresholdMetAt": "2026-06-26T07:11:08.798765+00:00"
     },
     {
@@ -19395,15 +19400,15 @@
       "title": "Trine 5: A Clockwork Conspiracy",
       "progressUrl": "https://steamcommunity.com/profiles/76561198043996154/stats/1436700/achievements/",
       "visible": true,
-      "earnedAchievements": 30,
+      "earnedAchievements": 32,
       "totalAchievements": 62,
-      "achievementPercent": 48,
-      "playtimeHours": 63.18,
+      "achievementPercent": 52,
+      "playtimeHours": 64.53,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 63.18,
+      "achievementsPlaytimeHours": 64.53,
       "popThresholdMetAt": "2026-06-26T07:11:08.799308+00:00"
     },
     {
@@ -21101,12 +21106,12 @@
       "earnedAchievements": 6,
       "totalAchievements": 45,
       "achievementPercent": 13,
-      "playtimeHours": 13.32,
+      "playtimeHours": 13.9,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 13.32,
+      "achievementsPlaytimeHours": 13.9,
       "popThresholdMetAt": "2026-06-26T07:11:08.799495+00:00"
     },
     {
@@ -21116,14 +21121,15 @@
       "title": "Assassin's Creed Black Flag Resynced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/3751950/achievements/",
       "playtimeHours": 0.0,
-      "visible": false,
+      "visible": true,
       "earnedAchievements": 0,
-      "totalAchievements": 0,
+      "totalAchievements": 49,
       "achievementPercent": 0,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "error": "HTTP Error 403: Forbidden"
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "Krlesnik",
@@ -21464,7 +21470,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 9.45
+      "achievementsPlaytimeHours": 9.45,
+      "popThresholdMetAt": "2026-07-09T20:00:17.923963+00:00"
     },
     {
       "username": "Krlesnik",
@@ -22166,7 +22173,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 33.42
+      "achievementsPlaytimeHours": 33.42,
+      "popThresholdMetAt": "2026-07-09T20:00:17.923986+00:00"
     },
     {
       "username": "Krlesnik",
@@ -22414,7 +22422,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 47.2
+      "achievementsPlaytimeHours": 47.2,
+      "popThresholdMetAt": "2026-07-09T20:00:17.923993+00:00"
     },
     {
       "username": "Krlesnik",
@@ -22718,7 +22727,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 44.65
+      "achievementsPlaytimeHours": 44.65,
+      "popThresholdMetAt": "2026-07-09T20:00:17.924001+00:00"
     },
     {
       "username": "Krlesnik",
@@ -23431,7 +23441,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 135.12
+      "achievementsPlaytimeHours": 135.12,
+      "popThresholdMetAt": "2026-07-09T20:00:17.924014+00:00"
     },
     {
       "username": "Krlesnik",
@@ -24807,7 +24818,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 25.85
+      "achievementsPlaytimeHours": 25.85,
+      "popThresholdMetAt": "2026-07-09T20:00:17.924040+00:00"
     },
     {
       "username": "leniu",
@@ -25591,7 +25603,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 27.73
+      "achievementsPlaytimeHours": 27.73,
+      "popThresholdMetAt": "2026-07-09T20:00:17.924057+00:00"
     },
     {
       "username": "leniu",
@@ -25966,7 +25979,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 61.05
+      "achievementsPlaytimeHours": 61.05,
+      "popThresholdMetAt": "2026-07-09T20:00:17.924065+00:00"
     },
     {
       "username": "leniu",
@@ -26662,7 +26676,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 66.55
+      "achievementsPlaytimeHours": 66.55,
+      "popThresholdMetAt": "2026-07-09T20:00:17.924079+00:00"
     },
     {
       "username": "leniu",
@@ -27342,16 +27357,17 @@
       "appId": 3357650,
       "title": "PRAGMATA",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/3357650/achievements/",
-      "playtimeHours": 2.58,
+      "playtimeHours": 5.77,
       "visible": true,
-      "earnedAchievements": 5,
+      "earnedAchievements": 6,
       "totalAchievements": 35,
-      "achievementPercent": 14,
+      "achievementPercent": 17,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.58
+      "achievementsPlaytimeHours": 5.77,
+      "popThresholdMetAt": "2026-07-09T20:00:17.924095+00:00"
     },
     {
       "username": "Millsshogun",
@@ -27474,7 +27490,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 61.67
+      "achievementsPlaytimeHours": 61.67,
+      "popThresholdMetAt": "2026-07-09T20:00:17.924099+00:00"
     },
     {
       "username": "Millsshogun",
@@ -28250,16 +28267,16 @@
       "appId": 3489700,
       "title": "Stellar Blade",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/3489700/achievements/",
-      "playtimeHours": 13.83,
+      "playtimeHours": 20.15,
       "visible": true,
-      "earnedAchievements": 6,
+      "earnedAchievements": 12,
       "totalAchievements": 45,
-      "achievementPercent": 13,
+      "achievementPercent": 27,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 13.83,
+      "achievementsPlaytimeHours": 20.15,
       "popThresholdMetAt": "2026-07-08T08:04:03.279857+00:00"
     },
     {
@@ -28949,7 +28966,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 13.67
+      "achievementsPlaytimeHours": 13.67,
+      "popThresholdMetAt": "2026-07-09T20:00:17.924129+00:00"
     },
     {
       "username": "Oozyyy",
@@ -30387,7 +30405,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 13.6
+      "achievementsPlaytimeHours": 13.6,
+      "popThresholdMetAt": "2026-07-09T20:00:17.924171+00:00"
     },
     {
       "username": "skAd42",
@@ -33768,16 +33787,16 @@
       "appId": 686060,
       "title": "Mewgenics",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/686060/achievements/",
-      "playtimeHours": 2.38,
+      "playtimeHours": 5.92,
       "visible": true,
-      "earnedAchievements": 7,
+      "earnedAchievements": 10,
       "totalAchievements": 281,
-      "achievementPercent": 2,
+      "achievementPercent": 4,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.38
+      "achievementsPlaytimeHours": 5.92
     },
     {
       "username": "Wintermute101",
@@ -34582,7 +34601,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 50.67
+      "achievementsPlaytimeHours": 50.67,
+      "popThresholdMetAt": "2026-07-09T20:00:17.924254+00:00"
     },
     {
       "username": "Wintermute101",
@@ -37500,12 +37520,12 @@
       "earnedAchievements": 9,
       "totalAchievements": 36,
       "achievementPercent": 25,
-      "playtimeHours": 19.23,
+      "playtimeHours": 21.15,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 19.23,
+      "achievementsPlaytimeHours": 21.15,
       "popThresholdMetAt": "2026-06-26T07:11:08.801392+00:00"
     },
     {
@@ -38132,7 +38152,8 @@
       "error": "HTTP Error 400: Bad Request",
       "playtimeSource": "",
       "playtimeVisible": true,
-      "gamesVisible": true
+      "gamesVisible": true,
+      "popThresholdMetAt": "2026-07-09T20:00:17.924315+00:00"
     },
     {
       "username": "Youdontknow",
@@ -38431,7 +38452,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 76.55
+      "achievementsPlaytimeHours": 76.55,
+      "popThresholdMetAt": "2026-07-09T20:00:17.924324+00:00"
     },
     {
       "username": "Youdontknow",
@@ -38947,7 +38969,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 26.72
+      "achievementsPlaytimeHours": 26.72,
+      "popThresholdMetAt": "2026-07-09T20:00:17.924336+00:00"
     },
     {
       "username": "Youdontknow",
@@ -41221,7 +41244,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 9.52
+      "achievementsPlaytimeHours": 9.52,
+      "popThresholdMetAt": "2026-07-09T20:00:17.924382+00:00"
     },
     {
       "username": "zettaivanugen",
@@ -41328,7 +41352,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 13.45
+      "achievementsPlaytimeHours": 13.45,
+      "popThresholdMetAt": "2026-07-09T20:00:17.924386+00:00"
     },
     {
       "username": "zettaivanugen",
@@ -43354,9 +43379,9 @@
     {
       "title": "FINAL FANTASY TACTICS - The Ivalice Chronicles",
       "appId": 1004640,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 36.81,
+      "matchedTitle": "Final Fantasy Tactics: The Ivalice Chronicles",
+      "url": "https://howlongtobeat.com/game/169173"
     },
     {
       "title": "Cast n Chill",
@@ -44383,9 +44408,9 @@
     {
       "title": "FINAL FANTASY TACTICS - The Ivalice Chronicles",
       "appId": 1004640,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 36.81,
+      "matchedTitle": "Final Fantasy Tactics: The Ivalice Chronicles",
+      "url": "https://howlongtobeat.com/game/169173"
     },
     {
       "title": "Flintlock: The Siege of Dawn",
@@ -44747,9 +44772,9 @@
     {
       "title": "Legacy of Kain™ Soul Reaver 1&2 Remastered",
       "appId": 2521380,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 17.95,
+      "matchedTitle": "Legacy of Kain: Soul Reaver 1 & 2 Remastered",
+      "url": "https://howlongtobeat.com/game/157302"
     },
     {
       "title": "Neva",
@@ -44943,9 +44968,9 @@
     {
       "title": "Suikoden I&II HD Remaster Gate Rune and Dunan Unification Wars",
       "appId": 1932640,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 32.89,
+      "matchedTitle": "Suikoden I & II HD Remaster: Gate Rune and Dunan Unification Wars",
+      "url": "https://howlongtobeat.com/game/118188"
     },
     {
       "title": "The Elder Scrolls IV: Oblivion Remastered",
@@ -45062,9 +45087,9 @@
     {
       "title": "Assassin’s Creed Shadows",
       "appId": 3159330,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 35.58,
+      "matchedTitle": "Assassin's Creed Shadows",
+      "url": "https://howlongtobeat.com/game/145003"
     },
     {
       "title": "Wanderstop",
@@ -45601,9 +45626,9 @@
     {
       "title": "Legacy of Kain™ Soul Reaver 1&2 Remastered",
       "appId": 2521380,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 17.95,
+      "matchedTitle": "Legacy of Kain: Soul Reaver 1 & 2 Remastered",
+      "url": "https://howlongtobeat.com/game/157302"
     },
     {
       "title": "Red Dead Redemption",
@@ -46154,9 +46179,9 @@
     {
       "title": "Beyond Good & Evil - 20th Anniversary Edition",
       "appId": 2556990,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 10.81,
+      "matchedTitle": "Beyond Good & Evil",
+      "url": "https://howlongtobeat.com/game/1018"
     },
     {
       "title": "Minit Fun Racer",
@@ -47078,9 +47103,9 @@
     {
       "title": "Demon Slayer -Kimetsu no Yaiba- Sweep the Board!",
       "appId": 2424110,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 8.12,
+      "matchedTitle": "Demon Slayer: Kimetsu no Yaiba - Sweep the Board!",
+      "url": "https://howlongtobeat.com/game/137749"
     },
     {
       "title": "Crow Country",
@@ -48709,9 +48734,9 @@
     {
       "title": "Ni no Kuni Wrath of the White Witch™ Remastered",
       "appId": 798460,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 44.09,
+      "matchedTitle": "Ni no Kuni: Wrath of the White Witch",
+      "url": "https://howlongtobeat.com/game/6585"
     },
     {
       "title": "Tinykin",
@@ -49045,9 +49070,9 @@
     {
       "title": "Dying Light 2 Stay Human: Reloaded Edition",
       "appId": 534380,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 24.41,
+      "matchedTitle": "Dying Light 2: Stay Human",
+      "url": "https://howlongtobeat.com/game/57425"
     },
     {
       "title": "Lords of the Fallen",
@@ -49458,9 +49483,9 @@
     {
       "title": "Dying Light 2 Stay Human: Reloaded Edition",
       "appId": 534380,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 24.41,
+      "matchedTitle": "Dying Light 2: Stay Human",
+      "url": "https://howlongtobeat.com/game/57425"
     },
     {
       "title": "Ratchet & Clank: Rift Apart",
@@ -49521,9 +49546,9 @@
     {
       "title": "DRAGON QUEST® XI S: Echoes of an Elusive Age™ - Definitive Edition",
       "appId": 1295510,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 57.56,
+      "matchedTitle": "Dragon Quest XI S: Echoes of an Elusive Age - Definitive Edition",
+      "url": "https://howlongtobeat.com/game/69743"
     },
     {
       "title": "FINAL FANTASY VII REMAKE INTERGRADE",
@@ -49850,9 +49875,9 @@
     {
       "title": "Dying Light 2 Stay Human: Reloaded Edition",
       "appId": 534380,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 24.41,
+      "matchedTitle": "Dying Light 2: Stay Human",
+      "url": "https://howlongtobeat.com/game/57425"
     },
     {
       "title": "Lost Judgment",
@@ -50886,9 +50911,9 @@
     {
       "title": "Dying Light 2 Stay Human: Reloaded Edition",
       "appId": 534380,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 24.41,
+      "matchedTitle": "Dying Light 2: Stay Human",
+      "url": "https://howlongtobeat.com/game/57425"
     },
     {
       "title": "Cult of the Lamb",
@@ -52244,9 +52269,9 @@
     {
       "title": "Pathfinder: Wrath of the Righteous - Enhanced Edition",
       "appId": 1184370,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 56.73,
+      "matchedTitle": "Pathfinder: Wrath of the Righteous",
+      "url": "https://howlongtobeat.com/game/83856"
     },
     {
       "title": "Eiyuden Chronicle: Rising",
@@ -52405,9 +52430,9 @@
     {
       "title": "Ni no Kuni Wrath of the White Witch™ Remastered",
       "appId": 798460,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 44.09,
+      "matchedTitle": "Ni no Kuni: Wrath of the White Witch",
+      "url": "https://howlongtobeat.com/game/6585"
     },
     {
       "title": "GOD EATER 3",
@@ -52629,9 +52654,9 @@
     {
       "title": "Dying Light 2 Stay Human: Reloaded Edition",
       "appId": 534380,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 24.41,
+      "matchedTitle": "Dying Light 2: Stay Human",
+      "url": "https://howlongtobeat.com/game/57425"
     },
     {
       "title": "ELDEN RING",
@@ -52790,9 +52815,9 @@
     {
       "title": "Dying Light 2 Stay Human: Reloaded Edition",
       "appId": 534380,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 24.41,
+      "matchedTitle": "Dying Light 2: Stay Human",
+      "url": "https://howlongtobeat.com/game/57425"
     },
     {
       "title": "THE HOUSE OF THE DEAD: Remake",
@@ -53378,9 +53403,9 @@
     {
       "title": "Dying Light 2 Stay Human: Reloaded Edition",
       "appId": 534380,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 24.41,
+      "matchedTitle": "Dying Light 2: Stay Human",
+      "url": "https://howlongtobeat.com/game/57425"
     },
     {
       "title": "ELEX II",
@@ -53644,9 +53669,9 @@
     {
       "title": "Dying Light 2 Stay Human: Reloaded Edition",
       "appId": 534380,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 24.41,
+      "matchedTitle": "Dying Light 2: Stay Human",
+      "url": "https://howlongtobeat.com/game/57425"
     },
     {
       "title": "NieR Replicant™ ver.1.22474487139...",
@@ -54099,9 +54124,9 @@
     {
       "title": "Dying Light 2 Stay Human: Reloaded Edition",
       "appId": 534380,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 24.41,
+      "matchedTitle": "Dying Light 2: Stay Human",
+      "url": "https://howlongtobeat.com/game/57425"
     },
     {
       "title": "God of War",
@@ -54113,9 +54138,9 @@
     {
       "title": "Ni no Kuni Wrath of the White Witch™ Remastered",
       "appId": 798460,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 44.09,
+      "matchedTitle": "Ni no Kuni: Wrath of the White Witch",
+      "url": "https://howlongtobeat.com/game/6585"
     },
     {
       "title": "ELDEN RING",
@@ -55457,9 +55482,9 @@
     {
       "title": "DRAGON QUEST® XI S: Echoes of an Elusive Age™ - Definitive Edition",
       "appId": 1295510,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 57.56,
+      "matchedTitle": "Dragon Quest XI S: Echoes of an Elusive Age - Definitive Edition",
+      "url": "https://howlongtobeat.com/game/69743"
     },
     {
       "title": "Tales of ARISE",
@@ -55485,9 +55510,9 @@
     {
       "title": "Dying Light 2 Stay Human: Reloaded Edition",
       "appId": 534380,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 24.41,
+      "matchedTitle": "Dying Light 2: Stay Human",
+      "url": "https://howlongtobeat.com/game/57425"
     },
     {
       "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
@@ -55751,9 +55776,9 @@
     {
       "title": "Ni no Kuni Wrath of the White Witch™ Remastered",
       "appId": 798460,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 44.09,
+      "matchedTitle": "Ni no Kuni: Wrath of the White Witch",
+      "url": "https://howlongtobeat.com/game/6585"
     },
     {
       "title": "Crusader Kings III Royal Edition",
@@ -55765,9 +55790,9 @@
     {
       "title": "Dying Light 2 Stay Human: Reloaded Edition",
       "appId": 534380,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 24.41,
+      "matchedTitle": "Dying Light 2: Stay Human",
+      "url": "https://howlongtobeat.com/game/57425"
     },
     {
       "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
@@ -56381,9 +56406,9 @@
     {
       "title": "Ni no Kuni Wrath of the White Witch™ Remastered",
       "appId": 798460,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 44.09,
+      "matchedTitle": "Ni no Kuni: Wrath of the White Witch",
+      "url": "https://howlongtobeat.com/game/6585"
     },
     {
       "title": "Valheim",
@@ -57459,9 +57484,9 @@
     {
       "title": "Marvel's Avengers - The Definitive Edition",
       "appId": 997070,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 12.48,
+      "matchedTitle": "Marvel's Avengers",
+      "url": "https://howlongtobeat.com/game/67961"
     },
     {
       "title": "Mystic Pillars X Kantara",
@@ -57655,9 +57680,9 @@
     {
       "title": "Marvel's Avengers - The Definitive Edition",
       "appId": 997070,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 12.48,
+      "matchedTitle": "Marvel's Avengers",
+      "url": "https://howlongtobeat.com/game/67961"
     },
     {
       "title": "Rogue Legacy 2",
@@ -59713,9 +59738,9 @@
     {
       "title": "Ni no Kuni Wrath of the White Witch™ Remastered",
       "appId": 798460,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 44.09,
+      "matchedTitle": "Ni no Kuni: Wrath of the White Witch",
+      "url": "https://howlongtobeat.com/game/6585"
     },
     {
       "title": "GreedFall",
@@ -63605,9 +63630,9 @@
     {
       "title": "STAR OCEAN™ - THE LAST HOPE -™ 4K & Full HD Remaster",
       "appId": 609150,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 44.08,
+      "matchedTitle": "Star Ocean: The Last Hope",
+      "url": "https://howlongtobeat.com/game/9046"
     },
     {
       "title": "State of Mind",
@@ -64298,9 +64323,9 @@
     {
       "title": "STAR OCEAN™ - THE LAST HOPE -™ 4K & Full HD Remaster",
       "appId": 609150,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 44.08,
+      "matchedTitle": "Star Ocean: The Last Hope",
+      "url": "https://howlongtobeat.com/game/9046"
     },
     {
       "title": "Dead In Vinland",
@@ -65894,9 +65919,9 @@
     {
       "title": "STAR OCEAN™ - THE LAST HOPE -™ 4K & Full HD Remaster",
       "appId": 609150,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 44.08,
+      "matchedTitle": "Star Ocean: The Last Hope",
+      "url": "https://howlongtobeat.com/game/9046"
     },
     {
       "title": "RiME",
@@ -66552,9 +66577,9 @@
     {
       "title": "The Walking Dead: Michonne - A Telltale Miniseries",
       "appId": 429570,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 42.21,
+      "matchedTitle": "The Walking Dead: The Telltale Definitive Series",
+      "url": "https://howlongtobeat.com/game/69341"
     },
     {
       "title": "Hybrids Arena",
@@ -67490,9 +67515,9 @@
     {
       "title": "Castlevania: Lords of Shadow – Mirror of Fate HD",
       "appId": 282530,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 8.35,
+      "matchedTitle": "Castlevania: Lords of Shadow - Mirror of Fate",
+      "url": "https://howlongtobeat.com/game/1588"
     },
     {
       "title": "Call of Duty: Black Ops II",
@@ -68379,9 +68404,9 @@
     {
       "title": "The Walking Dead: Michonne - A Telltale Miniseries",
       "appId": 429570,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 42.21,
+      "matchedTitle": "The Walking Dead: The Telltale Definitive Series",
+      "url": "https://howlongtobeat.com/game/69341"
     },
     {
       "title": "Portal Knights",
@@ -69191,9 +69216,9 @@
     {
       "title": "The Walking Dead: Michonne - A Telltale Miniseries",
       "appId": 429570,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 42.21,
+      "matchedTitle": "The Walking Dead: The Telltale Definitive Series",
+      "url": "https://howlongtobeat.com/game/69341"
     },
     {
       "title": "The Technomancer",
@@ -70171,9 +70196,9 @@
     {
       "title": "Castlevania: Lords of Shadow – Mirror of Fate HD",
       "appId": 282530,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 8.35,
+      "matchedTitle": "Castlevania: Lords of Shadow - Mirror of Fate",
+      "url": "https://howlongtobeat.com/game/1588"
     },
     {
       "title": "Windscape",
@@ -70360,9 +70385,9 @@
     {
       "title": "Call of Duty: Black Ops III - Multiplayer Starter Pack",
       "appId": 437350,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 9.03,
+      "matchedTitle": "Call of Duty: Black Ops III",
+      "url": "https://howlongtobeat.com/game/27127"
     },
     {
       "title": "Sid Meier's Civilization: Beyond Earth",
@@ -70787,9 +70812,9 @@
     {
       "title": "Echoes of the End: Enhanced Edition",
       "appId": 2821610,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 11.89,
+      "matchedTitle": "Echoes of the End",
+      "url": "https://howlongtobeat.com/game/111173"
     },
     {
       "title": "METAL GEAR SOLID Δ: SNAKE EATER",
@@ -70815,9 +70840,9 @@
     {
       "title": "Assassin’s Creed Shadows",
       "appId": 3159330,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 35.58,
+      "matchedTitle": "Assassin's Creed Shadows",
+      "url": "https://howlongtobeat.com/game/145003"
     },
     {
       "title": "The First Berserker: Khazan",
@@ -71067,9 +71092,9 @@
     {
       "title": "Dying Light 2 Stay Human: Reloaded Edition",
       "appId": 534380,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "hltbHours": 24.41,
+      "matchedTitle": "Dying Light 2: Stay Human",
+      "url": "https://howlongtobeat.com/game/57425"
     },
     {
       "title": "Far Cry 6",
@@ -71160,25 +71185,25 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-07-08T21:42:28.374195+00:00",
+  "libraryUpdatedAt": "2026-07-09T19:58:12.428745+00:00",
   "libraryStats": {
-    "durationSeconds": 5.58,
+    "durationSeconds": 6.05,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14241
+    "totalPlaytimeRows": 14243
   },
   "stats": {
-    "durationSeconds": 63.03,
+    "durationSeconds": 131.56,
     "targetWins": 2390,
     "uniqueProgressTargets": 2386,
     "libraryPlaytimeHits": 2361,
-    "cachedReuses": 2292,
-    "achievementSuccesses": 16,
-    "achievementErrors": 78,
-    "cachedFallbacks": 78,
+    "cachedReuses": 2296,
+    "achievementSuccesses": 13,
+    "achievementErrors": 77,
+    "cachedFallbacks": 77,
     "hltbTitlesRequested": 1291,
     "hltbResultsAvailable": 4038
   }
