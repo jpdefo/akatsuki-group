@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-09T20:00:17.924436+00:00",
+  "updatedAt": "2026-07-10T08:56:35.564209+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -21120,16 +21120,16 @@
       "appId": 3751950,
       "title": "Assassin's Creed Black Flag Resynced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/3751950/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 3.32,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 2,
       "totalAchievements": 49,
-      "achievementPercent": 0,
+      "achievementPercent": 4,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 3.32
     },
     {
       "username": "Krlesnik",
@@ -28267,7 +28267,7 @@
       "appId": 3489700,
       "title": "Stellar Blade",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/3489700/achievements/",
-      "playtimeHours": 20.15,
+      "playtimeHours": 20.83,
       "visible": true,
       "earnedAchievements": 12,
       "totalAchievements": 45,
@@ -28276,7 +28276,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 20.15,
+      "achievementsPlaytimeHours": 20.83,
       "popThresholdMetAt": "2026-07-08T08:04:03.279857+00:00"
     },
     {
@@ -33787,7 +33787,7 @@
       "appId": 686060,
       "title": "Mewgenics",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/686060/achievements/",
-      "playtimeHours": 5.92,
+      "playtimeHours": 8.58,
       "visible": true,
       "earnedAchievements": 10,
       "totalAchievements": 281,
@@ -33796,7 +33796,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 5.92
+      "achievementsPlaytimeHours": 8.58
     },
     {
       "username": "Wintermute101",
@@ -71185,23 +71185,23 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-07-09T19:58:12.428745+00:00",
+  "libraryUpdatedAt": "2026-07-10T08:55:38.242331+00:00",
   "libraryStats": {
-    "durationSeconds": 6.05,
+    "durationSeconds": 8.98,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14243
+    "totalPlaytimeRows": 14244
   },
   "stats": {
-    "durationSeconds": 131.56,
+    "durationSeconds": 66.32,
     "targetWins": 2390,
     "uniqueProgressTargets": 2386,
     "libraryPlaytimeHits": 2361,
-    "cachedReuses": 2296,
-    "achievementSuccesses": 13,
+    "cachedReuses": 2302,
+    "achievementSuccesses": 7,
     "achievementErrors": 77,
     "cachedFallbacks": 77,
     "hltbTitlesRequested": 1291,
