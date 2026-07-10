@@ -1,7 +1,7 @@
 {
   "source": "akatsuki-steamgifts-sync",
   "collectorVersion": "1.13.2",
-  "syncedAt": "2026-07-09T19:56:48.862Z",
+  "syncedAt": "2026-07-10T12:57:42.701Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -4391,7 +4391,7 @@
     {
       "code": "LgQJ6",
       "url": "https://www.steamgifts.com/giveaway/LgQJ6/final-fantasy-tactics-the-ivalice-chronicles",
-      "title": "FINAL FANTASY TACTICS - The Ivalice Chronicles",
+      "title": "FINAL FANTASY TACTICS - The Ivalice C...",
       "creatorUsername": "Youdontknow",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Youdontknow",
       "appId": 1004640,
@@ -4634,7 +4634,7 @@
     {
       "code": "3Klb9",
       "url": "https://www.steamgifts.com/giveaway/3Klb9/the-elder-scrolls-iv-oblivion-remastered",
-      "title": "The Elder Scrolls IV: Oblivion Remastered",
+      "title": "The Elder Scrolls IV: Oblivion Remast...",
       "creatorUsername": "leniu",
       "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
       "appId": 2623190,
@@ -5234,7 +5234,7 @@
     {
       "code": "aQMBR",
       "url": "https://www.steamgifts.com/giveaway/aQMBR/robocop-rogue-city-unfinished-business",
-      "title": "RoboCop: Rogue City - Unfinished Business",
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
       "creatorUsername": "Koalala",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Koalala",
       "appId": 3527760,
@@ -5623,7 +5623,7 @@
     {
       "code": "44g1j",
       "url": "https://www.steamgifts.com/giveaway/44g1j/raidou-remastered-the-mystery-of-the-soulless-army",
-      "title": "RAIDOU Remastered: The Mystery of the Soulless Army",
+      "title": "RAIDOU Remastered: The Mystery of the...",
       "creatorUsername": "Youdontknow",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Youdontknow",
       "appId": 2288350,
@@ -6676,7 +6676,7 @@
     {
       "code": "UtTqc",
       "url": "https://www.steamgifts.com/giveaway/UtTqc/robocop-rogue-city-unfinished-business",
-      "title": "RoboCop: Rogue City - Unfinished Business",
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
       "creatorUsername": "Wintermute101",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Wintermute101",
       "appId": 3527760,
@@ -7291,7 +7291,7 @@
     {
       "code": "6lDgn",
       "url": "https://www.steamgifts.com/giveaway/6lDgn/robocop-rogue-city-unfinished-business",
-      "title": "RoboCop: Rogue City - Unfinished Business",
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
       "creatorUsername": "leniu",
       "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
       "appId": 3527760,
@@ -149306,7 +149306,7 @@
     {
       "code": "utQfp",
       "url": "https://www.steamgifts.com/giveaway/utQfp/lego-star-wars-the-skywalker-saga-galactic-edition",
-      "title": "LEGO® Star Wars™: The Skywalker Saga",
+      "title": "LEGO Star Wars: The Skywalker Saga Ga...",
       "creatorUsername": "Ernesttico",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Ernesttico",
       "appId": 920210,
@@ -151371,7 +151371,7 @@
     {
       "code": "ZvvXe",
       "url": "https://www.steamgifts.com/giveaway/ZvvXe/dying-light-2-stay-human-reloaded-edition",
-      "title": "Dying Light 2 Stay Human: Reloaded Edition",
+      "title": "Dying Light 2 Stay Human: Reloaded Ed...",
       "creatorUsername": "Ernesttico",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Ernesttico",
       "appId": 534380,
@@ -151815,7 +151815,7 @@
     {
       "code": "1AXLL",
       "url": "https://www.steamgifts.com/giveaway/1AXLL/the-elder-scrolls-iv-oblivion-remastered",
-      "title": "The Elder Scrolls IV: Oblivion Remastered",
+      "title": "The Elder Scrolls IV: Oblivion Remast...",
       "creatorUsername": "chOOkity",
       "creatorProfileUrl": "https://www.steamgifts.com/user/chOOkity",
       "appId": 2623190,
@@ -151827,9 +151827,15 @@
       "entriesCount": 2,
       "startDate": "2026-07-07T09:35:30.000Z",
       "endDate": "2026-07-08T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "zettaivanugen",
+          "profileUrl": "https://www.steamgifts.com/user/zettaivanugen",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "zettaivanugen",
       "regionRestricted": false,
       "giveawayKind": "summer_event",
       "giveawayMonthOverride": "",
@@ -151839,8 +151845,8 @@
         "zettaivanugen",
         "burntreynolds444"
       ],
-      "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-09T19:56:47.441Z",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-07-10T12:57:41.596Z",
       "hltbHours": 17.5
     },
     {
@@ -151858,9 +151864,15 @@
       "entriesCount": 2,
       "startDate": "2026-07-07T09:32:59.000Z",
       "endDate": "2026-07-08T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "BojanNS987",
+          "profileUrl": "https://www.steamgifts.com/user/BojanNS987",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "BojanNS987",
       "regionRestricted": false,
       "giveawayKind": "summer_event",
       "giveawayMonthOverride": "",
@@ -151870,8 +151882,8 @@
         "BojanNS987",
         "Horseflesh"
       ],
-      "entriesFinalized": false,
-      "entriesSnapshotAt": "2026-07-09T19:56:47.954Z",
+      "entriesFinalized": true,
+      "entriesSnapshotAt": "2026-07-10T12:57:41.889Z",
       "hltbHours": 7.84
     }
   ],
@@ -188064,6 +188076,24 @@
       "creatorUsername": "BojanNS987",
       "entriesCount": 1,
       "winDate": "2026-07-07T20:00:00.000Z"
+    },
+    {
+      "giveawayCode": "1AXLL",
+      "title": "The Elder Scrolls IV: Oblivion Remast...",
+      "appId": 2623190,
+      "winnerUsername": "zettaivanugen",
+      "creatorUsername": "chOOkity",
+      "entriesCount": 2,
+      "winDate": "2026-07-08T18:00:00.000Z"
+    },
+    {
+      "giveawayCode": "xoJSi",
+      "title": "Directive 8020",
+      "appId": 2255370,
+      "winnerUsername": "BojanNS987",
+      "creatorUsername": "chOOkity",
+      "entriesCount": 2,
+      "winDate": "2026-07-08T18:00:00.000Z"
     }
   ]
 }
