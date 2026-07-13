@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-12T07:55:05.586541+00:00",
+  "updatedAt": "2026-07-13T08:41:31.886294+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -1163,12 +1163,12 @@
       "earnedAchievements": 29,
       "totalAchievements": 67,
       "achievementPercent": 43,
-      "playtimeHours": 58.12,
+      "playtimeHours": 58.55,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 58.12,
+      "achievementsPlaytimeHours": 58.55,
       "popThresholdMetAt": "2026-06-26T07:11:08.797257+00:00"
     },
     {
@@ -5505,15 +5505,15 @@
       "title": "Mewgenics",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/686060/achievements/",
       "visible": true,
-      "earnedAchievements": 52,
+      "earnedAchievements": 53,
       "totalAchievements": 281,
       "achievementPercent": 19,
-      "playtimeHours": 90.52,
+      "playtimeHours": 92.65,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 90.52,
+      "achievementsPlaytimeHours": 92.65,
       "popThresholdMetAt": "2026-06-26T07:11:08.797696+00:00"
     },
     {
@@ -16811,16 +16811,17 @@
       "appId": 1649240,
       "title": "Returnal",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/1649240/achievements/",
-      "playtimeHours": 2.78,
+      "playtimeHours": 5.03,
       "visible": true,
-      "earnedAchievements": 5,
+      "earnedAchievements": 8,
       "totalAchievements": 38,
-      "achievementPercent": 13,
+      "achievementPercent": 21,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.78
+      "achievementsPlaytimeHours": 5.03,
+      "popThresholdMetAt": "2026-07-13T08:41:31.885538+00:00"
     },
     {
       "username": "Horseflesh",
@@ -17257,12 +17258,12 @@
       "earnedAchievements": 0,
       "totalAchievements": 15,
       "achievementPercent": 0,
-      "playtimeHours": 0.0,
+      "playtimeHours": 0.2,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 0.2
     },
     {
       "username": "Horseflesh",
@@ -17409,7 +17410,7 @@
       "appId": 2947440,
       "title": "SILENT HILL f",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/2947440/achievements/",
-      "playtimeHours": 0.23,
+      "playtimeHours": 0.35,
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 56,
@@ -17418,7 +17419,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.23
+      "achievementsPlaytimeHours": 0.35
     },
     {
       "username": "Horseflesh",
@@ -19420,12 +19421,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 62,
       "achievementPercent": 52,
-      "playtimeHours": 66.15,
+      "playtimeHours": 68.03,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 66.15,
+      "achievementsPlaytimeHours": 68.03,
       "popThresholdMetAt": "2026-06-26T07:11:08.799308+00:00"
     },
     {
@@ -21123,12 +21124,12 @@
       "earnedAchievements": 6,
       "totalAchievements": 45,
       "achievementPercent": 13,
-      "playtimeHours": 18.7,
+      "playtimeHours": 19.58,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 18.7,
+      "achievementsPlaytimeHours": 19.58,
       "popThresholdMetAt": "2026-06-26T07:11:08.799495+00:00"
     },
     {
@@ -27374,16 +27375,16 @@
       "appId": 3357650,
       "title": "PRAGMATA",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/3357650/achievements/",
-      "playtimeHours": 11.1,
+      "playtimeHours": 15.55,
       "visible": true,
-      "earnedAchievements": 17,
+      "earnedAchievements": 22,
       "totalAchievements": 35,
-      "achievementPercent": 49,
+      "achievementPercent": 63,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 11.1,
+      "achievementsPlaytimeHours": 15.55,
       "popThresholdMetAt": "2026-07-09T20:00:17.924095+00:00"
     },
     {
@@ -28284,16 +28285,16 @@
       "appId": 3489700,
       "title": "Stellar Blade",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/3489700/achievements/",
-      "playtimeHours": 27.47,
+      "playtimeHours": 29.5,
       "visible": true,
-      "earnedAchievements": 17,
+      "earnedAchievements": 21,
       "totalAchievements": 45,
-      "achievementPercent": 38,
+      "achievementPercent": 47,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 27.47,
+      "achievementsPlaytimeHours": 29.5,
       "popThresholdMetAt": "2026-07-08T08:04:03.279857+00:00"
     },
     {
@@ -30096,7 +30097,7 @@
       "appId": 1663850,
       "title": "REPLACED",
       "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/1663850/achievements/",
-      "playtimeHours": 8.17,
+      "playtimeHours": 9.07,
       "visible": true,
       "earnedAchievements": 11,
       "totalAchievements": 34,
@@ -30105,7 +30106,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 8.17,
+      "achievementsPlaytimeHours": 9.07,
       "popThresholdMetAt": "2026-07-05T08:36:55.337297+00:00"
     },
     {
@@ -33804,16 +33805,17 @@
       "appId": 686060,
       "title": "Mewgenics",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/686060/achievements/",
-      "playtimeHours": 19.67,
+      "playtimeHours": 20.83,
       "visible": true,
-      "earnedAchievements": 24,
+      "earnedAchievements": 29,
       "totalAchievements": 281,
-      "achievementPercent": 9,
+      "achievementPercent": 10,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 19.67
+      "achievementsPlaytimeHours": 20.83,
+      "popThresholdMetAt": "2026-07-13T08:41:31.886038+00:00"
     },
     {
       "username": "Wintermute101",
@@ -35577,16 +35579,16 @@
       "appId": 2161700,
       "title": "Persona 3 Reload",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2161700/achievements/",
-      "playtimeHours": 0.55,
+      "playtimeHours": 4.98,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 5,
       "totalAchievements": 56,
-      "achievementPercent": 0,
+      "achievementPercent": 9,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.55
+      "achievementsPlaytimeHours": 4.98
     },
     {
       "username": "Wintermute101",
@@ -40779,15 +40781,16 @@
       "title": "Homeworld Remastered Collection",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/244160/achievements/",
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 4,
       "totalAchievements": 34,
-      "achievementPercent": 0,
-      "playtimeHours": 4.57,
+      "achievementPercent": 12,
+      "playtimeHours": 5.67,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 4.57
+      "achievementsPlaytimeHours": 5.67,
+      "popThresholdMetAt": "2026-07-13T08:41:31.886193+00:00"
     },
     {
       "username": "zettaivanugen",
@@ -40848,15 +40851,16 @@
       "title": "NARUTO SHIPPUDEN: Ultimate Ninja STORM Revolution",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/272510/achievements/",
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 8,
       "totalAchievements": 50,
-      "achievementPercent": 0,
-      "playtimeHours": 0.0,
+      "achievementPercent": 16,
+      "playtimeHours": 4.97,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 4.97,
+      "popThresholdMetAt": "2026-07-13T08:41:31.886200+00:00"
     },
     {
       "username": "zettaivanugen",
@@ -42342,12 +42346,12 @@
       "earnedAchievements": 19,
       "totalAchievements": 55,
       "achievementPercent": 35,
-      "playtimeHours": 8.42,
+      "playtimeHours": 8.67,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 8.42
+      "achievementsPlaytimeHours": 8.67
     },
     {
       "username": "zettaivanugen",
@@ -71219,9 +71223,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-07-12T07:53:15.983498+00:00",
+  "libraryUpdatedAt": "2026-07-13T08:40:30.946289+00:00",
   "libraryStats": {
-    "durationSeconds": 5.26,
+    "durationSeconds": 5.68,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71230,12 +71234,12 @@
     "totalPlaytimeRows": 14245
   },
   "stats": {
-    "durationSeconds": 114.88,
+    "durationSeconds": 66.63,
     "targetWins": 2392,
     "uniqueProgressTargets": 2388,
     "libraryPlaytimeHits": 2363,
-    "cachedReuses": 2300,
-    "achievementSuccesses": 11,
+    "cachedReuses": 2292,
+    "achievementSuccesses": 19,
     "achievementErrors": 77,
     "cachedFallbacks": 77,
     "hltbTitlesRequested": 1289,
