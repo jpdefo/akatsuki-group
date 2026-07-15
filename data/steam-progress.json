@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-14T07:42:55.458884+00:00",
+  "updatedAt": "2026-07-15T07:47:43.652794+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -5508,12 +5508,12 @@
       "earnedAchievements": 54,
       "totalAchievements": 281,
       "achievementPercent": 19,
-      "playtimeHours": 93.08,
+      "playtimeHours": 93.33,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 93.08,
+      "achievementsPlaytimeHours": 93.33,
       "popThresholdMetAt": "2026-06-26T07:11:08.797696+00:00"
     },
     {
@@ -6699,7 +6699,7 @@
       "appId": 1875580,
       "title": "Mina the Hollower",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1875580/achievements/",
-      "playtimeHours": 0.1,
+      "playtimeHours": 0.23,
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 50,
@@ -6708,7 +6708,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.1
+      "achievementsPlaytimeHours": 0.23
     },
     {
       "username": "burntreynolds444",
@@ -9238,12 +9238,12 @@
       "earnedAchievements": 0,
       "totalAchievements": 34,
       "achievementPercent": 0,
-      "playtimeHours": 0.22,
+      "playtimeHours": 0.43,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 0.22
+      "achievementsPlaytimeHours": 0.43
     },
     {
       "username": "chOOkity",
@@ -10986,7 +10986,7 @@
       "username": "Drain",
       "steamProfile": "https://steamcommunity.com/profiles/76561197970556600",
       "appId": 2623190,
-      "title": "The Elder Scrolls IV: Oblivion Remastered",
+      "title": "The Elder Scrolls IV: Oblivion Remast...",
       "progressUrl": "https://steamcommunity.com/profiles/76561197970556600/stats/2623190/achievements/",
       "visible": true,
       "earnedAchievements": 9,
@@ -14626,7 +14626,7 @@
       "username": "Ernesttico",
       "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
       "appId": 3527760,
-      "title": "RoboCop: Rogue City - Unfinished Business",
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/3527760/achievements/",
       "visible": true,
       "earnedAchievements": 4,
@@ -17600,7 +17600,7 @@
       "username": "Horseflesh",
       "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
       "appId": 3527760,
-      "title": "RoboCop: Rogue City - Unfinished Business",
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/3527760/achievements/",
       "visible": true,
       "earnedAchievements": 5,
@@ -19421,12 +19421,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 62,
       "achievementPercent": 52,
-      "playtimeHours": 68.92,
+      "playtimeHours": 70.82,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 68.92,
+      "achievementsPlaytimeHours": 70.82,
       "popThresholdMetAt": "2026-06-26T07:11:08.799308+00:00"
     },
     {
@@ -28285,7 +28285,7 @@
       "appId": 3489700,
       "title": "Stellar Blade",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/3489700/achievements/",
-      "playtimeHours": 31.05,
+      "playtimeHours": 32.8,
       "visible": true,
       "earnedAchievements": 26,
       "totalAchievements": 45,
@@ -28294,7 +28294,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 31.05,
+      "achievementsPlaytimeHours": 32.8,
       "popThresholdMetAt": "2026-07-08T08:04:03.279857+00:00"
     },
     {
@@ -35579,16 +35579,16 @@
       "appId": 2161700,
       "title": "Persona 3 Reload",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2161700/achievements/",
-      "playtimeHours": 7.3,
+      "playtimeHours": 11.75,
       "visible": true,
-      "earnedAchievements": 7,
+      "earnedAchievements": 15,
       "totalAchievements": 56,
-      "achievementPercent": 12,
+      "achievementPercent": 27,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 7.3
+      "achievementsPlaytimeHours": 11.75
     },
     {
       "username": "Wintermute101",
@@ -35664,7 +35664,7 @@
       "username": "Wintermute101",
       "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
       "appId": 2288350,
-      "title": "RAIDOU Remastered: The Mystery of the Soulless Army",
+      "title": "RAIDOU Remastered: The Mystery of the...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2288350/achievements/",
       "visible": true,
       "earnedAchievements": 22,
@@ -35948,7 +35948,7 @@
       "username": "Wintermute101",
       "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
       "appId": 3527760,
-      "title": "RoboCop: Rogue City - Unfinished Business",
+      "title": "RoboCop: Rogue City - Unfinished Busi...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3527760/achievements/",
       "visible": true,
       "earnedAchievements": 21,
@@ -36727,7 +36727,7 @@
       "username": "xMisiu",
       "steamProfile": "https://steamcommunity.com/profiles/76561198082091554",
       "appId": 1004640,
-      "title": "FINAL FANTASY TACTICS - The Ivalice Chronicles",
+      "title": "FINAL FANTASY TACTICS - The Ivalice C...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/1004640/achievements/",
       "visible": true,
       "earnedAchievements": 20,
@@ -37539,12 +37539,12 @@
       "earnedAchievements": 9,
       "totalAchievements": 36,
       "achievementPercent": 25,
-      "playtimeHours": 21.17,
+      "playtimeHours": 21.73,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 21.17,
+      "achievementsPlaytimeHours": 21.73,
       "popThresholdMetAt": "2026-06-26T07:11:08.801392+00:00"
     },
     {
@@ -46245,7 +46245,7 @@
     {
       "title": "Baby Shark: Sing & Swim Party",
       "appId": 2075240,
-      "hltbHours": 0.0,
+      "hltbHours": 4.67,
       "matchedTitle": "Baby Shark: Sing & Swim Party",
       "url": "https://howlongtobeat.com/game/138084"
     },
@@ -70584,7 +70584,7 @@
     {
       "title": "Assassin's Creed Black Flag Resynced",
       "appId": 3751950,
-      "hltbHours": 0.0,
+      "hltbHours": 20.08,
       "matchedTitle": "Assassin's Creed Black Flag Resynced",
       "url": "https://howlongtobeat.com/game/185013"
     },
@@ -71223,9 +71223,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-07-14T07:41:54.775245+00:00",
+  "libraryUpdatedAt": "2026-07-15T07:45:54.572105+00:00",
   "libraryStats": {
-    "durationSeconds": 8.69,
+    "durationSeconds": 7.29,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71234,15 +71234,15 @@
     "totalPlaytimeRows": 14245
   },
   "stats": {
-    "durationSeconds": 69.38,
+    "durationSeconds": 116.38,
     "targetWins": 2392,
     "uniqueProgressTargets": 2388,
     "libraryPlaytimeHits": 2363,
-    "cachedReuses": 2299,
-    "achievementSuccesses": 12,
+    "cachedReuses": 2300,
+    "achievementSuccesses": 11,
     "achievementErrors": 77,
     "cachedFallbacks": 77,
-    "hltbTitlesRequested": 1289,
+    "hltbTitlesRequested": 1291,
     "hltbResultsAvailable": 4038
   }
 }
