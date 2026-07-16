@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-15T07:47:43.652794+00:00",
+  "updatedAt": "2026-07-16T07:51:39.701161+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -6699,16 +6699,16 @@
       "appId": 1875580,
       "title": "Mina the Hollower",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1875580/achievements/",
-      "playtimeHours": 0.23,
+      "playtimeHours": 1.32,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 1,
       "totalAchievements": 50,
-      "achievementPercent": 0,
+      "achievementPercent": 2,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.23
+      "achievementsPlaytimeHours": 1.32
     },
     {
       "username": "burntreynolds444",
@@ -19421,12 +19421,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 62,
       "achievementPercent": 52,
-      "playtimeHours": 70.82,
+      "playtimeHours": 72.68,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 70.82,
+      "achievementsPlaytimeHours": 72.68,
       "popThresholdMetAt": "2026-06-26T07:11:08.799308+00:00"
     },
     {
@@ -28887,7 +28887,7 @@
       "appId": 2101960,
       "title": "Cronos: The New Dawn",
       "progressUrl": "https://steamcommunity.com/profiles/76561197985486812/stats/2101960/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 0.08,
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 47,
@@ -28896,7 +28896,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 0.08
     },
     {
       "username": "Oozyyy",
@@ -35579,16 +35579,16 @@
       "appId": 2161700,
       "title": "Persona 3 Reload",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2161700/achievements/",
-      "playtimeHours": 11.75,
+      "playtimeHours": 15.67,
       "visible": true,
-      "earnedAchievements": 15,
+      "earnedAchievements": 19,
       "totalAchievements": 56,
-      "achievementPercent": 27,
+      "achievementPercent": 34,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 11.75
+      "achievementsPlaytimeHours": 15.67
     },
     {
       "username": "Wintermute101",
@@ -37626,15 +37626,16 @@
       "title": "Life is Strange: Reunion",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/2624870/achievements/",
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 4,
       "totalAchievements": 29,
-      "achievementPercent": 0,
-      "playtimeHours": 0.0,
+      "achievementPercent": 14,
+      "playtimeHours": 2.47,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 2.47,
+      "popThresholdMetAt": "2026-07-16T07:51:39.700955+00:00"
     },
     {
       "username": "xMisiu",
@@ -71223,23 +71224,23 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-07-15T07:45:54.572105+00:00",
+  "libraryUpdatedAt": "2026-07-16T07:50:39.103781+00:00",
   "libraryStats": {
-    "durationSeconds": 7.29,
+    "durationSeconds": 8.71,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14245
+    "totalPlaytimeRows": 14247
   },
   "stats": {
-    "durationSeconds": 116.38,
+    "durationSeconds": 69.32,
     "targetWins": 2392,
     "uniqueProgressTargets": 2388,
     "libraryPlaytimeHits": 2363,
-    "cachedReuses": 2300,
-    "achievementSuccesses": 11,
+    "cachedReuses": 2302,
+    "achievementSuccesses": 9,
     "achievementErrors": 77,
     "cachedFallbacks": 77,
     "hltbTitlesRequested": 1291,
