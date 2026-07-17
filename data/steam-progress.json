@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-16T07:51:39.701161+00:00",
+  "updatedAt": "2026-07-17T07:50:11.902489+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -6699,7 +6699,7 @@
       "appId": 1875580,
       "title": "Mina the Hollower",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1875580/achievements/",
-      "playtimeHours": 1.32,
+      "playtimeHours": 1.72,
       "visible": true,
       "earnedAchievements": 1,
       "totalAchievements": 50,
@@ -6708,7 +6708,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.32
+      "achievementsPlaytimeHours": 1.72
     },
     {
       "username": "burntreynolds444",
@@ -19421,12 +19421,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 62,
       "achievementPercent": 52,
-      "playtimeHours": 72.68,
+      "playtimeHours": 73.72,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 72.68,
+      "achievementsPlaytimeHours": 73.72,
       "popThresholdMetAt": "2026-06-26T07:11:08.799308+00:00"
     },
     {
@@ -28285,16 +28285,16 @@
       "appId": 3489700,
       "title": "Stellar Blade",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/3489700/achievements/",
-      "playtimeHours": 32.8,
+      "playtimeHours": 34.42,
       "visible": true,
-      "earnedAchievements": 26,
+      "earnedAchievements": 29,
       "totalAchievements": 45,
-      "achievementPercent": 58,
+      "achievementPercent": 64,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 32.8,
+      "achievementsPlaytimeHours": 34.42,
       "popThresholdMetAt": "2026-07-08T08:04:03.279857+00:00"
     },
     {
@@ -28887,16 +28887,16 @@
       "appId": 2101960,
       "title": "Cronos: The New Dawn",
       "progressUrl": "https://steamcommunity.com/profiles/76561197985486812/stats/2101960/achievements/",
-      "playtimeHours": 0.08,
+      "playtimeHours": 0.72,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 2,
       "totalAchievements": 47,
-      "achievementPercent": 0,
+      "achievementPercent": 4,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.08
+      "achievementsPlaytimeHours": 0.72
     },
     {
       "username": "Oozyyy",
@@ -35579,16 +35579,17 @@
       "appId": 2161700,
       "title": "Persona 3 Reload",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2161700/achievements/",
-      "playtimeHours": 15.67,
+      "playtimeHours": 18.05,
       "visible": true,
-      "earnedAchievements": 19,
+      "earnedAchievements": 21,
       "totalAchievements": 56,
-      "achievementPercent": 34,
+      "achievementPercent": 38,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 15.67
+      "achievementsPlaytimeHours": 18.05,
+      "popThresholdMetAt": "2026-07-17T07:50:11.902264+00:00"
     },
     {
       "username": "Wintermute101",
@@ -37626,15 +37627,15 @@
       "title": "Life is Strange: Reunion",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/2624870/achievements/",
       "visible": true,
-      "earnedAchievements": 4,
+      "earnedAchievements": 9,
       "totalAchievements": 29,
-      "achievementPercent": 14,
-      "playtimeHours": 2.47,
+      "achievementPercent": 31,
+      "playtimeHours": 6.25,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 2.47,
+      "achievementsPlaytimeHours": 6.25,
       "popThresholdMetAt": "2026-07-16T07:51:39.700955+00:00"
     },
     {
@@ -42907,15 +42908,16 @@
       "appId": 3105440,
       "title": "Heroes of Might and Magic: Olden Era",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/3105440/achievements/",
-      "visible": false,
+      "visible": true,
       "earnedAchievements": 0,
-      "totalAchievements": 0,
+      "totalAchievements": 22,
       "achievementPercent": 0,
-      "playtimeHours": null,
-      "playtimeSource": "",
+      "playtimeHours": 0.0,
+      "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "error": "HTTP Error 403: Forbidden"
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "zettaivanugen",
@@ -71224,25 +71226,25 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-07-16T07:50:39.103781+00:00",
+  "libraryUpdatedAt": "2026-07-17T07:48:09.320328+00:00",
   "libraryStats": {
-    "durationSeconds": 8.71,
+    "durationSeconds": 8.65,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14247
+    "totalPlaytimeRows": 14255
   },
   "stats": {
-    "durationSeconds": 69.32,
+    "durationSeconds": 131.24,
     "targetWins": 2392,
     "uniqueProgressTargets": 2388,
-    "libraryPlaytimeHits": 2363,
-    "cachedReuses": 2302,
-    "achievementSuccesses": 9,
-    "achievementErrors": 77,
-    "cachedFallbacks": 77,
+    "libraryPlaytimeHits": 2364,
+    "cachedReuses": 2301,
+    "achievementSuccesses": 11,
+    "achievementErrors": 76,
+    "cachedFallbacks": 76,
     "hltbTitlesRequested": 1291,
     "hltbResultsAvailable": 4038
   }
