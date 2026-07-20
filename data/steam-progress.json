@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-19T07:55:24.942451+00:00",
+  "updatedAt": "2026-07-20T08:33:24.272127+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -1163,12 +1163,12 @@
       "earnedAchievements": 30,
       "totalAchievements": 67,
       "achievementPercent": 45,
-      "playtimeHours": 60.03,
+      "playtimeHours": 64.02,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 60.03,
+      "achievementsPlaytimeHours": 64.02,
       "popThresholdMetAt": "2026-06-26T07:11:08.797257+00:00"
     },
     {
@@ -9238,12 +9238,12 @@
       "earnedAchievements": 0,
       "totalAchievements": 34,
       "achievementPercent": 0,
-      "playtimeHours": 0.43,
+      "playtimeHours": 0.88,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 0.43
+      "achievementsPlaytimeHours": 0.88
     },
     {
       "username": "chOOkity",
@@ -17498,15 +17498,16 @@
       "title": "Marathon",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/3065800/achievements/",
       "visible": true,
-      "earnedAchievements": 1,
+      "earnedAchievements": 2,
       "totalAchievements": 14,
-      "achievementPercent": 7,
-      "playtimeHours": 0.28,
+      "achievementPercent": 14,
+      "playtimeHours": 2.1,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 0.28
+      "achievementsPlaytimeHours": 2.1,
+      "popThresholdMetAt": "2026-07-20T08:33:24.271535+00:00"
     },
     {
       "username": "Horseflesh",
@@ -19421,12 +19422,12 @@
       "earnedAchievements": 33,
       "totalAchievements": 62,
       "achievementPercent": 53,
-      "playtimeHours": 74.52,
+      "playtimeHours": 76.05,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 74.52,
+      "achievementsPlaytimeHours": 76.05,
       "popThresholdMetAt": "2026-06-26T07:11:08.799308+00:00"
     },
     {
@@ -20220,12 +20221,12 @@
       "earnedAchievements": 11,
       "totalAchievements": 40,
       "achievementPercent": 28,
-      "playtimeHours": 6.0,
+      "playtimeHours": 6.22,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 6.0,
+      "achievementsPlaytimeHours": 6.22,
       "popThresholdMetAt": "2026-06-26T07:11:08.799400+00:00"
     },
     {
@@ -21138,16 +21139,17 @@
       "appId": 3751950,
       "title": "Assassin's Creed Black Flag Resynced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/3751950/achievements/",
-      "playtimeHours": 3.32,
+      "playtimeHours": 12.02,
       "visible": true,
-      "earnedAchievements": 2,
+      "earnedAchievements": 7,
       "totalAchievements": 49,
-      "achievementPercent": 4,
+      "achievementPercent": 14,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 3.32
+      "achievementsPlaytimeHours": 12.02,
+      "popThresholdMetAt": "2026-07-20T08:33:24.271635+00:00"
     },
     {
       "username": "Krlesnik",
@@ -24277,15 +24279,15 @@
       "title": "Persona 3 Reload",
       "progressUrl": "https://steamcommunity.com/profiles/76561198010348380/stats/2161700/achievements/",
       "visible": true,
-      "earnedAchievements": 38,
+      "earnedAchievements": 41,
       "totalAchievements": 56,
-      "achievementPercent": 68,
-      "playtimeHours": 59.65,
+      "achievementPercent": 73,
+      "playtimeHours": 69.07,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 59.65,
+      "achievementsPlaytimeHours": 69.07,
       "popThresholdMetAt": "2026-06-26T07:11:08.799856+00:00"
     },
     {
@@ -28285,7 +28287,7 @@
       "appId": 3489700,
       "title": "Stellar Blade",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/3489700/achievements/",
-      "playtimeHours": 45.07,
+      "playtimeHours": 48.8,
       "visible": true,
       "earnedAchievements": 42,
       "totalAchievements": 45,
@@ -28294,7 +28296,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 45.07,
+      "achievementsPlaytimeHours": 48.8,
       "popThresholdMetAt": "2026-07-08T08:04:03.279857+00:00"
     },
     {
@@ -28887,16 +28889,16 @@
       "appId": 2101960,
       "title": "Cronos: The New Dawn",
       "progressUrl": "https://steamcommunity.com/profiles/76561197985486812/stats/2101960/achievements/",
-      "playtimeHours": 6.48,
+      "playtimeHours": 9.45,
       "visible": true,
-      "earnedAchievements": 17,
+      "earnedAchievements": 19,
       "totalAchievements": 47,
-      "achievementPercent": 36,
+      "achievementPercent": 40,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 6.48,
+      "achievementsPlaytimeHours": 9.45,
       "popThresholdMetAt": "2026-07-18T07:24:03.672072+00:00"
     },
     {
@@ -30098,7 +30100,7 @@
       "appId": 1663850,
       "title": "REPLACED",
       "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/1663850/achievements/",
-      "playtimeHours": 9.07,
+      "playtimeHours": 9.32,
       "visible": true,
       "earnedAchievements": 11,
       "totalAchievements": 34,
@@ -30107,7 +30109,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 9.07,
+      "achievementsPlaytimeHours": 9.32,
       "popThresholdMetAt": "2026-07-05T08:36:55.337297+00:00"
     },
     {
@@ -35457,7 +35459,7 @@
       "appId": 1962700,
       "title": "Subnautica 2",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/1962700/achievements/",
-      "playtimeHours": 5.93,
+      "playtimeHours": 7.4,
       "visible": false,
       "earnedAchievements": 0,
       "totalAchievements": 0,
@@ -35528,7 +35530,7 @@
       "appId": 2069250,
       "title": "High On Life 2",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2069250/achievements/",
-      "playtimeHours": 9.07,
+      "playtimeHours": 10.15,
       "visible": true,
       "earnedAchievements": 9,
       "totalAchievements": 31,
@@ -35537,7 +35539,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 9.07,
+      "achievementsPlaytimeHours": 10.15,
       "popThresholdMetAt": "2026-07-18T07:24:03.672273+00:00"
     },
     {
@@ -37632,12 +37634,12 @@
       "earnedAchievements": 28,
       "totalAchievements": 29,
       "achievementPercent": 97,
-      "playtimeHours": 16.5,
+      "playtimeHours": 16.85,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 16.5,
+      "achievementsPlaytimeHours": 16.85,
       "popThresholdMetAt": "2026-07-16T07:51:39.700955+00:00"
     },
     {
@@ -71228,23 +71230,23 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-07-19T07:53:34.497600+00:00",
+  "libraryUpdatedAt": "2026-07-20T08:32:29.632132+00:00",
   "libraryStats": {
-    "durationSeconds": 5.42,
+    "durationSeconds": 5.24,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14264
+    "totalPlaytimeRows": 14266
   },
   "stats": {
-    "durationSeconds": 115.88,
+    "durationSeconds": 59.89,
     "targetWins": 2393,
     "uniqueProgressTargets": 2388,
     "libraryPlaytimeHits": 2364,
-    "cachedReuses": 2300,
-    "achievementSuccesses": 12,
+    "cachedReuses": 2296,
+    "achievementSuccesses": 16,
     "achievementErrors": 76,
     "cachedFallbacks": 76,
     "hltbTitlesRequested": 1291,
