@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-21T08:04:37.716385+00:00",
+  "updatedAt": "2026-07-22T08:04:02.191554+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -1160,15 +1160,15 @@
       "title": "Days Gone",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/1259420/achievements/",
       "visible": true,
-      "earnedAchievements": 30,
+      "earnedAchievements": 32,
       "totalAchievements": 67,
-      "achievementPercent": 45,
-      "playtimeHours": 66.35,
+      "achievementPercent": 48,
+      "playtimeHours": 71.2,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 66.35,
+      "achievementsPlaytimeHours": 71.2,
       "popThresholdMetAt": "2026-06-26T07:11:08.797257+00:00"
     },
     {
@@ -6699,7 +6699,7 @@
       "appId": 1875580,
       "title": "Mina the Hollower",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1875580/achievements/",
-      "playtimeHours": 2.18,
+      "playtimeHours": 2.37,
       "visible": true,
       "earnedAchievements": 1,
       "totalAchievements": 50,
@@ -6708,7 +6708,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.18
+      "achievementsPlaytimeHours": 2.37
     },
     {
       "username": "burntreynolds444",
@@ -19368,12 +19368,12 @@
       "earnedAchievements": 18,
       "totalAchievements": 20,
       "achievementPercent": 90,
-      "playtimeHours": 22.02,
+      "playtimeHours": 22.55,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 22.02,
+      "achievementsPlaytimeHours": 22.55,
       "popThresholdMetAt": "2026-06-26T07:11:08.799300+00:00"
     },
     {
@@ -19422,12 +19422,12 @@
       "earnedAchievements": 33,
       "totalAchievements": 62,
       "achievementPercent": 53,
-      "playtimeHours": 77.35,
+      "playtimeHours": 78.73,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 77.35,
+      "achievementsPlaytimeHours": 78.73,
       "popThresholdMetAt": "2026-06-26T07:11:08.799308+00:00"
     },
     {
@@ -24282,12 +24282,12 @@
       "earnedAchievements": 41,
       "totalAchievements": 56,
       "achievementPercent": 73,
-      "playtimeHours": 72.6,
+      "playtimeHours": 77.25,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 72.6,
+      "achievementsPlaytimeHours": 77.25,
       "popThresholdMetAt": "2026-06-26T07:11:08.799856+00:00"
     },
     {
@@ -25884,15 +25884,15 @@
       "title": "Sea of Stars: Sunset Edition",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/1244090/achievements/",
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 2,
       "totalAchievements": 54,
-      "achievementPercent": 0,
-      "playtimeHours": 0.0,
+      "achievementPercent": 4,
+      "playtimeHours": 2.25,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 2.25
     },
     {
       "username": "leniu",
@@ -27363,12 +27363,12 @@
       "earnedAchievements": 5,
       "totalAchievements": 44,
       "achievementPercent": 11,
-      "playtimeHours": 3.6,
+      "playtimeHours": 4.25,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 3.6,
+      "achievementsPlaytimeHours": 4.25,
       "popThresholdMetAt": "2026-06-26T07:11:08.800236+00:00"
     },
     {
@@ -27377,16 +27377,16 @@
       "appId": 3357650,
       "title": "PRAGMATA",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/3357650/achievements/",
-      "playtimeHours": 24.4,
+      "playtimeHours": 26.3,
       "visible": true,
-      "earnedAchievements": 32,
+      "earnedAchievements": 33,
       "totalAchievements": 35,
-      "achievementPercent": 91,
+      "achievementPercent": 94,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 24.4,
+      "achievementsPlaytimeHours": 26.3,
       "popThresholdMetAt": "2026-07-09T20:00:17.924095+00:00"
     },
     {
@@ -28287,16 +28287,16 @@
       "appId": 3489700,
       "title": "Stellar Blade",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/3489700/achievements/",
-      "playtimeHours": 54.3,
+      "playtimeHours": 56.43,
       "visible": true,
-      "earnedAchievements": 42,
+      "earnedAchievements": 45,
       "totalAchievements": 45,
-      "achievementPercent": 93,
+      "achievementPercent": 100,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 54.3,
+      "achievementsPlaytimeHours": 56.43,
       "popThresholdMetAt": "2026-07-08T08:04:03.279857+00:00"
     },
     {
@@ -29032,16 +29032,16 @@
       "appId": 3017860,
       "title": "DOOM: The Dark Ages",
       "progressUrl": "https://steamcommunity.com/profiles/76561197985486812/stats/3017860/achievements/",
-      "playtimeHours": 1.37,
+      "playtimeHours": 3.22,
       "visible": true,
-      "earnedAchievements": 1,
+      "earnedAchievements": 5,
       "totalAchievements": 38,
-      "achievementPercent": 3,
+      "achievementPercent": 13,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.37
+      "achievementsPlaytimeHours": 3.22
     },
     {
       "username": "Oozyyy",
@@ -33542,7 +33542,7 @@
       "appId": 920210,
       "title": "LEGO Star Wars: The Skywalker Saga Ga...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198011705129/stats/920210/achievements/",
-      "playtimeHours": 2.12,
+      "playtimeHours": 2.68,
       "visible": true,
       "earnedAchievements": 3,
       "totalAchievements": 45,
@@ -33551,7 +33551,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.12
+      "achievementsPlaytimeHours": 2.68
     },
     {
       "username": "Thedogma",
@@ -33577,7 +33577,7 @@
       "appId": 1774580,
       "title": "STAR WARS Jedi: Survivor",
       "progressUrl": "https://steamcommunity.com/profiles/76561198011705129/stats/1774580/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 1.42,
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 53,
@@ -33586,7 +33586,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 1.42
     },
     {
       "username": "Wintermute101",
@@ -37631,15 +37631,15 @@
       "title": "Life is Strange: Reunion",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/2624870/achievements/",
       "visible": true,
-      "earnedAchievements": 28,
+      "earnedAchievements": 29,
       "totalAchievements": 29,
-      "achievementPercent": 97,
-      "playtimeHours": 16.85,
+      "achievementPercent": 100,
+      "playtimeHours": 21.03,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 16.85,
+      "achievementsPlaytimeHours": 21.03,
       "popThresholdMetAt": "2026-07-16T07:51:39.700955+00:00"
     },
     {
@@ -71230,9 +71230,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-07-21T08:02:43.132956+00:00",
+  "libraryUpdatedAt": "2026-07-22T08:03:10.152885+00:00",
   "libraryStats": {
-    "durationSeconds": 5.78,
+    "durationSeconds": 3.99,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71241,12 +71241,12 @@
     "totalPlaytimeRows": 14266
   },
   "stats": {
-    "durationSeconds": 120.38,
+    "durationSeconds": 56.04,
     "targetWins": 2393,
     "uniqueProgressTargets": 2388,
     "libraryPlaytimeHits": 2364,
-    "cachedReuses": 2298,
-    "achievementSuccesses": 14,
+    "cachedReuses": 2295,
+    "achievementSuccesses": 17,
     "achievementErrors": 76,
     "cachedFallbacks": 76,
     "hltbTitlesRequested": 1291,
