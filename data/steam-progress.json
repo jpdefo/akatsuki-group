@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-22T08:04:02.191554+00:00",
+  "updatedAt": "2026-07-23T08:18:30.256158+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -905,6 +905,23 @@
     {
       "username": "BojanNS987",
       "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 1118520,
+      "title": "Paralives",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/1118520/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
       "appId": 1124300,
       "title": "HUMANKIND",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/1124300/achievements/",
@@ -1160,15 +1177,15 @@
       "title": "Days Gone",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/1259420/achievements/",
       "visible": true,
-      "earnedAchievements": 32,
+      "earnedAchievements": 33,
       "totalAchievements": 67,
-      "achievementPercent": 48,
-      "playtimeHours": 71.2,
+      "achievementPercent": 49,
+      "playtimeHours": 74.67,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 71.2,
+      "achievementsPlaytimeHours": 74.67,
       "popThresholdMetAt": "2026-06-26T07:11:08.797257+00:00"
     },
     {
@@ -6699,7 +6716,7 @@
       "appId": 1875580,
       "title": "Mina the Hollower",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1875580/achievements/",
-      "playtimeHours": 2.37,
+      "playtimeHours": 2.67,
       "visible": true,
       "earnedAchievements": 1,
       "totalAchievements": 50,
@@ -6708,7 +6725,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.37
+      "achievementsPlaytimeHours": 2.67
     },
     {
       "username": "burntreynolds444",
@@ -19368,12 +19385,12 @@
       "earnedAchievements": 18,
       "totalAchievements": 20,
       "achievementPercent": 90,
-      "playtimeHours": 22.55,
+      "playtimeHours": 22.88,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 22.55,
+      "achievementsPlaytimeHours": 22.88,
       "popThresholdMetAt": "2026-06-26T07:11:08.799300+00:00"
     },
     {
@@ -19422,12 +19439,12 @@
       "earnedAchievements": 33,
       "totalAchievements": 62,
       "achievementPercent": 53,
-      "playtimeHours": 78.73,
+      "playtimeHours": 79.75,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 78.73,
+      "achievementsPlaytimeHours": 79.75,
       "popThresholdMetAt": "2026-06-26T07:11:08.799308+00:00"
     },
     {
@@ -24279,15 +24296,15 @@
       "title": "Persona 3 Reload",
       "progressUrl": "https://steamcommunity.com/profiles/76561198010348380/stats/2161700/achievements/",
       "visible": true,
-      "earnedAchievements": 41,
+      "earnedAchievements": 43,
       "totalAchievements": 56,
-      "achievementPercent": 73,
-      "playtimeHours": 77.25,
+      "achievementPercent": 77,
+      "playtimeHours": 85.18,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 77.25,
+      "achievementsPlaytimeHours": 85.18,
       "popThresholdMetAt": "2026-06-26T07:11:08.799856+00:00"
     },
     {
@@ -25884,15 +25901,15 @@
       "title": "Sea of Stars: Sunset Edition",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/1244090/achievements/",
       "visible": true,
-      "earnedAchievements": 2,
+      "earnedAchievements": 4,
       "totalAchievements": 54,
-      "achievementPercent": 4,
-      "playtimeHours": 2.25,
+      "achievementPercent": 7,
+      "playtimeHours": 6.08,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.25
+      "achievementsPlaytimeHours": 6.08
     },
     {
       "username": "leniu",
@@ -28889,16 +28906,16 @@
       "appId": 2101960,
       "title": "Cronos: The New Dawn",
       "progressUrl": "https://steamcommunity.com/profiles/76561197985486812/stats/2101960/achievements/",
-      "playtimeHours": 9.95,
+      "playtimeHours": 11.87,
       "visible": true,
-      "earnedAchievements": 19,
+      "earnedAchievements": 22,
       "totalAchievements": 47,
-      "achievementPercent": 40,
+      "achievementPercent": 47,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 9.95,
+      "achievementsPlaytimeHours": 11.87,
       "popThresholdMetAt": "2026-07-18T07:24:03.672072+00:00"
     },
     {
@@ -35047,15 +35064,15 @@
       "title": "The Alters",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/1601570/achievements/",
       "visible": true,
-      "earnedAchievements": 35,
+      "earnedAchievements": 36,
       "totalAchievements": 63,
-      "achievementPercent": 56,
-      "playtimeHours": 29.23,
+      "achievementPercent": 57,
+      "playtimeHours": 30.73,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 29.23,
+      "achievementsPlaytimeHours": 30.73,
       "popThresholdMetAt": "2026-06-26T07:11:08.801108+00:00"
     },
     {
@@ -35530,16 +35547,16 @@
       "appId": 2069250,
       "title": "High On Life 2",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2069250/achievements/",
-      "playtimeHours": 10.43,
+      "playtimeHours": 13.55,
       "visible": true,
-      "earnedAchievements": 9,
+      "earnedAchievements": 12,
       "totalAchievements": 31,
-      "achievementPercent": 29,
+      "achievementPercent": 39,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 10.43,
+      "achievementsPlaytimeHours": 13.55,
       "popThresholdMetAt": "2026-07-18T07:24:03.672273+00:00"
     },
     {
@@ -35707,7 +35724,7 @@
       "appId": 2350790,
       "title": "Moonlighter 2: The Endless Vault",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2350790/achievements/",
-      "playtimeHours": 13.18,
+      "playtimeHours": 13.9,
       "visible": true,
       "earnedAchievements": 32,
       "totalAchievements": 50,
@@ -35716,7 +35733,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 13.18,
+      "achievementsPlaytimeHours": 13.9,
       "popThresholdMetAt": "2026-07-02T07:02:25.511035+00:00"
     },
     {
@@ -40805,15 +40822,16 @@
       "title": "Shovel Knight: Treasure Trove",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/250760/achievements/",
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 14,
       "totalAchievements": 138,
-      "achievementPercent": 0,
-      "playtimeHours": 4.57,
+      "achievementPercent": 10,
+      "playtimeHours": 5.78,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 4.57
+      "achievementsPlaytimeHours": 5.78,
+      "popThresholdMetAt": "2026-07-23T08:18:30.256070+00:00"
     },
     {
       "username": "zettaivanugen",
@@ -40843,12 +40861,12 @@
       "earnedAchievements": 0,
       "totalAchievements": 77,
       "achievementPercent": 0,
-      "playtimeHours": 0.18,
+      "playtimeHours": 0.23,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 0.18
+      "achievementsPlaytimeHours": 0.23
     },
     {
       "username": "zettaivanugen",
@@ -41035,15 +41053,16 @@
       "title": "Danganronpa: Trigger Happy Havoc",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/413410/achievements/",
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 4,
       "totalAchievements": 38,
-      "achievementPercent": 0,
-      "playtimeHours": 6.37,
+      "achievementPercent": 11,
+      "playtimeHours": 7.8,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 6.37
+      "achievementsPlaytimeHours": 7.8,
+      "popThresholdMetAt": "2026-07-23T08:18:30.256090+00:00"
     },
     {
       "username": "zettaivanugen",
@@ -41210,15 +41229,16 @@
       "title": ">observer_",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/514900/achievements/",
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 2,
       "totalAchievements": 19,
-      "achievementPercent": 0,
-      "playtimeHours": 4.05,
+      "achievementPercent": 11,
+      "playtimeHours": 4.25,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 4.05
+      "achievementsPlaytimeHours": 4.25,
+      "popThresholdMetAt": "2026-07-23T08:18:30.256098+00:00"
     },
     {
       "username": "zettaivanugen",
@@ -42841,7 +42861,7 @@
       "appId": 2678080,
       "title": "Tides of Tomorrow 🌊",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/2678080/achievements/",
-      "playtimeHours": 3.68,
+      "playtimeHours": 4.07,
       "visible": true,
       "earnedAchievements": 10,
       "totalAchievements": 39,
@@ -42850,7 +42870,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 3.68,
+      "achievementsPlaytimeHours": 4.07,
       "popThresholdMetAt": "2026-07-07T09:04:22.702165+00:00"
     },
     {
@@ -42979,6 +42999,13 @@
       "hltbHours": 7.84,
       "matchedTitle": "Directive 8020",
       "url": "https://howlongtobeat.com/game/116632"
+    },
+    {
+      "title": "Paralives",
+      "appId": 1118520,
+      "hltbHours": 7.75,
+      "matchedTitle": "Paralives",
+      "url": "https://howlongtobeat.com/game/71509"
     },
     {
       "title": "Mina the Hollower",
@@ -71230,26 +71257,26 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-07-22T08:03:10.152885+00:00",
+  "libraryUpdatedAt": "2026-07-23T08:16:47.050234+00:00",
   "libraryStats": {
-    "durationSeconds": 3.99,
+    "durationSeconds": 5.04,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14266
+    "totalPlaytimeRows": 14267
   },
   "stats": {
-    "durationSeconds": 56.04,
-    "targetWins": 2393,
-    "uniqueProgressTargets": 2388,
-    "libraryPlaytimeHits": 2364,
-    "cachedReuses": 2295,
-    "achievementSuccesses": 17,
+    "durationSeconds": 108.25,
+    "targetWins": 2394,
+    "uniqueProgressTargets": 2389,
+    "libraryPlaytimeHits": 2365,
+    "cachedReuses": 2293,
+    "achievementSuccesses": 20,
     "achievementErrors": 76,
     "cachedFallbacks": 76,
-    "hltbTitlesRequested": 1291,
-    "hltbResultsAvailable": 4038
+    "hltbTitlesRequested": 1292,
+    "hltbResultsAvailable": 4039
   }
 }
