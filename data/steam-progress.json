@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-28T08:11:19.075214+00:00",
+  "updatedAt": "2026-07-29T08:14:37.116862+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -7120,16 +7120,17 @@
       "appId": 3232380,
       "title": "FROGGY HATES SNOW",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3232380/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 6.63,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 12,
       "totalAchievements": 42,
-      "achievementPercent": 0,
+      "achievementPercent": 29,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 6.63,
+      "popThresholdMetAt": "2026-07-29T08:14:37.115952+00:00"
     },
     {
       "username": "burntreynolds444",
@@ -9252,15 +9253,15 @@
       "title": "MOUSE: P.I. For Hire",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2416450/achievements/",
       "visible": true,
-      "earnedAchievements": 3,
+      "earnedAchievements": 10,
       "totalAchievements": 34,
-      "achievementPercent": 9,
-      "playtimeHours": 4.97,
+      "achievementPercent": 29,
+      "playtimeHours": 6.35,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 4.97,
+      "achievementsPlaytimeHours": 6.35,
       "popThresholdMetAt": "2026-07-25T07:47:27.673974+00:00"
     },
     {
@@ -17413,14 +17414,15 @@
       "title": "Halo: Campaign Evolved",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/2806050/achievements/",
       "playtimeHours": 0.0,
-      "visible": false,
+      "visible": true,
       "earnedAchievements": 0,
-      "totalAchievements": 0,
+      "totalAchievements": 58,
       "achievementPercent": 0,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "error": "HTTP Error 403: Forbidden"
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "Horseflesh",
@@ -19386,12 +19388,12 @@
       "earnedAchievements": 18,
       "totalAchievements": 20,
       "achievementPercent": 90,
-      "playtimeHours": 25.63,
+      "playtimeHours": 26.48,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 25.63,
+      "achievementsPlaytimeHours": 26.48,
       "popThresholdMetAt": "2026-06-26T07:11:08.799300+00:00"
     },
     {
@@ -19440,12 +19442,12 @@
       "earnedAchievements": 33,
       "totalAchievements": 62,
       "achievementPercent": 53,
-      "playtimeHours": 82.2,
+      "playtimeHours": 82.87,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 82.2,
+      "achievementsPlaytimeHours": 82.87,
       "popThresholdMetAt": "2026-06-26T07:11:08.799308+00:00"
     },
     {
@@ -25902,15 +25904,15 @@
       "title": "Sea of Stars: Sunset Edition",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/1244090/achievements/",
       "visible": true,
-      "earnedAchievements": 34,
+      "earnedAchievements": 46,
       "totalAchievements": 54,
-      "achievementPercent": 63,
-      "playtimeHours": 41.18,
+      "achievementPercent": 85,
+      "playtimeHours": 48.13,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 41.18,
+      "achievementsPlaytimeHours": 48.13,
       "popThresholdMetAt": "2026-07-24T08:03:29.716023+00:00"
     },
     {
@@ -30191,7 +30193,7 @@
       "appId": 2416450,
       "title": "MOUSE: P.I. For Hire",
       "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/2416450/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 0.12,
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 34,
@@ -30200,7 +30202,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 0.12
     },
     {
       "username": "Saikania",
@@ -37312,12 +37314,12 @@
       "earnedAchievements": 14,
       "totalAchievements": 101,
       "achievementPercent": 14,
-      "playtimeHours": 7.47,
+      "playtimeHours": 11.05,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 7.47,
+      "achievementsPlaytimeHours": 11.05,
       "popThresholdMetAt": "2026-06-26T07:11:08.801361+00:00"
     },
     {
@@ -42928,7 +42930,7 @@
       "appId": 3043580,
       "title": "Keeper",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/3043580/achievements/",
-      "playtimeHours": 1.37,
+      "playtimeHours": 1.38,
       "visible": true,
       "earnedAchievements": 4,
       "totalAchievements": 13,
@@ -42937,7 +42939,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.37,
+      "achievementsPlaytimeHours": 1.38,
       "popThresholdMetAt": "2026-07-27T09:21:38.116190+00:00"
     },
     {
@@ -71271,9 +71273,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-07-28T08:09:38.870568+00:00",
+  "libraryUpdatedAt": "2026-07-29T08:13:36.034315+00:00",
   "libraryStats": {
-    "durationSeconds": 5.11,
+    "durationSeconds": 9.34,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71282,14 +71284,14 @@
     "totalPlaytimeRows": 14277
   },
   "stats": {
-    "durationSeconds": 105.33,
+    "durationSeconds": 70.44,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2365,
     "cachedReuses": 2301,
-    "achievementSuccesses": 12,
-    "achievementErrors": 76,
-    "cachedFallbacks": 76,
+    "achievementSuccesses": 13,
+    "achievementErrors": 75,
+    "cachedFallbacks": 75,
     "hltbTitlesRequested": 1292,
     "hltbResultsAvailable": 4039
   }
