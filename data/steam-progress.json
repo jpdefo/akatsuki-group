@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-29T08:14:37.116862+00:00",
+  "updatedAt": "2026-07-30T08:03:05.893969+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -6716,7 +6716,7 @@
       "appId": 1875580,
       "title": "Mina the Hollower",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1875580/achievements/",
-      "playtimeHours": 2.67,
+      "playtimeHours": 3.5,
       "visible": true,
       "earnedAchievements": 1,
       "totalAchievements": 50,
@@ -6725,7 +6725,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.67
+      "achievementsPlaytimeHours": 3.5
     },
     {
       "username": "burntreynolds444",
@@ -7120,16 +7120,16 @@
       "appId": 3232380,
       "title": "FROGGY HATES SNOW",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3232380/achievements/",
-      "playtimeHours": 6.63,
+      "playtimeHours": 12.82,
       "visible": true,
-      "earnedAchievements": 12,
+      "earnedAchievements": 17,
       "totalAchievements": 42,
-      "achievementPercent": 29,
+      "achievementPercent": 40,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 6.63,
+      "achievementsPlaytimeHours": 12.82,
       "popThresholdMetAt": "2026-07-29T08:14:37.115952+00:00"
     },
     {
@@ -19388,12 +19388,12 @@
       "earnedAchievements": 18,
       "totalAchievements": 20,
       "achievementPercent": 90,
-      "playtimeHours": 26.48,
+      "playtimeHours": 27.05,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 26.48,
+      "achievementsPlaytimeHours": 27.05,
       "popThresholdMetAt": "2026-06-26T07:11:08.799300+00:00"
     },
     {
@@ -19442,12 +19442,12 @@
       "earnedAchievements": 33,
       "totalAchievements": 62,
       "achievementPercent": 53,
-      "playtimeHours": 82.87,
+      "playtimeHours": 82.88,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 82.87,
+      "achievementsPlaytimeHours": 82.88,
       "popThresholdMetAt": "2026-06-26T07:11:08.799308+00:00"
     },
     {
@@ -27064,16 +27064,17 @@
       "appId": 2417610,
       "title": "METAL GEAR SOLID Δ: SNAKE EATER",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2417610/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 10.25,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 19,
       "totalAchievements": 45,
-      "achievementPercent": 0,
+      "achievementPercent": 42,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 10.25,
+      "popThresholdMetAt": "2026-07-30T08:03:05.893550+00:00"
     },
     {
       "username": "leniu",
@@ -28094,16 +28095,16 @@
       "appId": 1888160,
       "title": "ARMORED CORE VI FIRES OF RUBICON",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/1888160/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 1.25,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 3,
       "totalAchievements": 30,
-      "achievementPercent": 0,
+      "achievementPercent": 10,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 1.25
     },
     {
       "username": "Millsshogun",
@@ -29053,7 +29054,7 @@
       "appId": 3017860,
       "title": "DOOM: The Dark Ages",
       "progressUrl": "https://steamcommunity.com/profiles/76561197985486812/stats/3017860/achievements/",
-      "playtimeHours": 15.32,
+      "playtimeHours": 16.93,
       "visible": true,
       "earnedAchievements": 14,
       "totalAchievements": 38,
@@ -29062,7 +29063,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 15.32,
+      "achievementsPlaytimeHours": 16.93,
       "popThresholdMetAt": "2026-07-25T07:47:27.674478+00:00"
     },
     {
@@ -33564,7 +33565,7 @@
       "appId": 920210,
       "title": "LEGO Star Wars: The Skywalker Saga Ga...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198011705129/stats/920210/achievements/",
-      "playtimeHours": 2.9,
+      "playtimeHours": 3.12,
       "visible": true,
       "earnedAchievements": 4,
       "totalAchievements": 45,
@@ -33573,7 +33574,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.9
+      "achievementsPlaytimeHours": 3.12
     },
     {
       "username": "Thedogma",
@@ -36760,12 +36761,12 @@
       "earnedAchievements": 22,
       "totalAchievements": 50,
       "achievementPercent": 44,
-      "playtimeHours": 20.23,
+      "playtimeHours": 20.52,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 20.23,
+      "achievementsPlaytimeHours": 20.52,
       "popThresholdMetAt": "2026-07-06T18:27:00.287372+00:00"
     },
     {
@@ -71273,18 +71274,18 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-07-29T08:13:36.034315+00:00",
+  "libraryUpdatedAt": "2026-07-30T08:02:14.144793+00:00",
   "libraryStats": {
-    "durationSeconds": 9.34,
+    "durationSeconds": 4.36,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14277
+    "totalPlaytimeRows": 14278
   },
   "stats": {
-    "durationSeconds": 70.44,
+    "durationSeconds": 56.12,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2365,
