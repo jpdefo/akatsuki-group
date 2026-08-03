@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-02T07:59:40.833302+00:00",
+  "updatedAt": "2026-08-03T08:57:10.552009+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -7120,16 +7120,16 @@
       "appId": 3232380,
       "title": "FROGGY HATES SNOW",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3232380/achievements/",
-      "playtimeHours": 23.5,
+      "playtimeHours": 29.2,
       "visible": true,
-      "earnedAchievements": 21,
+      "earnedAchievements": 24,
       "totalAchievements": 42,
-      "achievementPercent": 50,
+      "achievementPercent": 57,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 23.5,
+      "achievementsPlaytimeHours": 29.2,
       "popThresholdMetAt": "2026-07-29T08:14:37.115952+00:00"
     },
     {
@@ -7174,14 +7174,15 @@
       "title": "Dead as Disco",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3404260/achievements/",
       "playtimeHours": 0.0,
-      "visible": false,
+      "visible": true,
       "earnedAchievements": 0,
-      "totalAchievements": 0,
+      "totalAchievements": 24,
       "achievementPercent": 0,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "error": "HTTP Error 400: Bad Request"
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "chOOkity",
@@ -9517,15 +9518,16 @@
       "title": "Dead as Disco",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/3404260/achievements/",
       "playtimeHours": 3.08,
-      "visible": false,
+      "visible": true,
       "earnedAchievements": 0,
-      "totalAchievements": 0,
+      "totalAchievements": 24,
       "achievementPercent": 0,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "error": "HTTP Error 400: Bad Request",
-      "popThresholdMetAt": "2026-06-26T07:11:08.798180+00:00"
+      "error": null,
+      "popThresholdMetAt": "2026-06-26T07:11:08.798180+00:00",
+      "achievementsPlaytimeHours": 3.08
     },
     {
       "username": "chOOkity",
@@ -27190,16 +27192,17 @@
       "appId": 2677660,
       "title": "Indiana Jones and the Great Circle",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2677660/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 9.33,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 12,
       "totalAchievements": 55,
-      "achievementPercent": 0,
+      "achievementPercent": 22,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 9.33,
+      "popThresholdMetAt": "2026-08-03T08:57:10.551642+00:00"
     },
     {
       "username": "leniu",
@@ -28095,7 +28098,7 @@
       "appId": 1888160,
       "title": "ARMORED CORE VI FIRES OF RUBICON",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/1888160/achievements/",
-      "playtimeHours": 8.18,
+      "playtimeHours": 9.67,
       "visible": true,
       "earnedAchievements": 9,
       "totalAchievements": 30,
@@ -28104,7 +28107,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 8.18,
+      "achievementsPlaytimeHours": 9.67,
       "popThresholdMetAt": "2026-07-31T08:28:37.889064+00:00"
     },
     {
@@ -35731,7 +35734,7 @@
       "appId": 2350790,
       "title": "Moonlighter 2: The Endless Vault",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2350790/achievements/",
-      "playtimeHours": 21.65,
+      "playtimeHours": 23.1,
       "visible": true,
       "earnedAchievements": 37,
       "totalAchievements": 50,
@@ -35740,7 +35743,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 21.65,
+      "achievementsPlaytimeHours": 23.1,
       "popThresholdMetAt": "2026-07-02T07:02:25.511035+00:00"
     },
     {
@@ -37313,15 +37316,15 @@
       "title": "UNCHARTED: Legacy of Thieves Collection",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/1659420/achievements/",
       "visible": true,
-      "earnedAchievements": 14,
+      "earnedAchievements": 17,
       "totalAchievements": 101,
-      "achievementPercent": 14,
-      "playtimeHours": 15.88,
+      "achievementPercent": 17,
+      "playtimeHours": 17.83,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 15.88,
+      "achievementsPlaytimeHours": 17.83,
       "popThresholdMetAt": "2026-06-26T07:11:08.801361+00:00"
     },
     {
@@ -71275,9 +71278,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-08-02T07:58:46.288970+00:00",
+  "libraryUpdatedAt": "2026-08-03T08:55:21.691242+00:00",
   "libraryStats": {
-    "durationSeconds": 4.93,
+    "durationSeconds": 4.73,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71286,14 +71289,14 @@
     "totalPlaytimeRows": 14281
   },
   "stats": {
-    "durationSeconds": 59.48,
+    "durationSeconds": 113.6,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2365,
     "cachedReuses": 2305,
-    "achievementSuccesses": 9,
-    "achievementErrors": 75,
-    "cachedFallbacks": 75,
+    "achievementSuccesses": 11,
+    "achievementErrors": 73,
+    "cachedFallbacks": 73,
     "hltbTitlesRequested": 1292,
     "hltbResultsAvailable": 4039
   }

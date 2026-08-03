@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-02T07:58:46.288970+00:00",
+  "updatedAt": "2026-08-03T08:55:21.691242+00:00",
   "apiEnabled": true,
   "refreshedScope": "all",
   "refreshedMonth": null,
@@ -28,7 +28,7 @@
       "steamId": "76561198106145311",
       "gamesVisible": true,
       "playtimeVisible": true,
-      "gameCount": 17982,
+      "gameCount": 17983,
       "error": null
     },
     {
@@ -73,7 +73,7 @@
       "steamId": "76561197971221929",
       "gamesVisible": true,
       "playtimeVisible": true,
-      "gameCount": 4025,
+      "gameCount": 4026,
       "error": null
     },
     {
@@ -22849,8 +22849,8 @@
       "username": "burntreynolds444",
       "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
       "appId": 3232380,
-      "playtimeMinutes": 1410,
-      "playtimeHours": 23.5,
+      "playtimeMinutes": 1752,
+      "playtimeHours": 29.2,
       "source": "steam-web-api"
     },
     {
@@ -47441,8 +47441,8 @@
       "username": "Horseflesh",
       "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
       "appId": 1361210,
-      "playtimeMinutes": 151971,
-      "playtimeHours": 2532.85,
+      "playtimeMinutes": 152170,
+      "playtimeHours": 2536.17,
       "source": "steam-web-api"
     },
     {
@@ -58521,8 +58521,8 @@
       "username": "Koalala",
       "steamProfile": "https://steamcommunity.com/profiles/76561198065466175",
       "appId": 588650,
-      "playtimeMinutes": 1123,
-      "playtimeHours": 18.72,
+      "playtimeMinutes": 1183,
+      "playtimeHours": 19.72,
       "source": "steam-web-api"
     },
     {
@@ -74529,8 +74529,8 @@
       "username": "leniu",
       "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
       "appId": 2677660,
-      "playtimeMinutes": 0,
-      "playtimeHours": 0.0,
+      "playtimeMinutes": 560,
+      "playtimeHours": 9.33,
       "source": "steam-web-api"
     },
     {
@@ -76945,8 +76945,8 @@
       "username": "Millsshogun",
       "steamProfile": "https://steamcommunity.com/profiles/76561198075996214",
       "appId": 1888160,
-      "playtimeMinutes": 491,
-      "playtimeHours": 8.18,
+      "playtimeMinutes": 580,
+      "playtimeHours": 9.67,
       "source": "steam-web-api"
     },
     {
@@ -85977,8 +85977,8 @@
       "username": "Saikania",
       "steamProfile": "https://steamcommunity.com/profiles/76561198262118401",
       "appId": 2868840,
-      "playtimeMinutes": 11801,
-      "playtimeHours": 196.68,
+      "playtimeMinutes": 11887,
+      "playtimeHours": 198.12,
       "source": "steam-web-api"
     },
     {
@@ -87441,8 +87441,8 @@
       "username": "skAd42",
       "steamProfile": "https://steamcommunity.com/profiles/76561198110002845",
       "appId": 1623730,
-      "playtimeMinutes": 9422,
-      "playtimeHours": 157.03,
+      "playtimeMinutes": 9625,
+      "playtimeHours": 160.42,
       "source": "steam-web-api"
     },
     {
@@ -98049,8 +98049,8 @@
       "username": "Wintermute101",
       "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
       "appId": 1939970,
-      "playtimeMinutes": 59,
-      "playtimeHours": 0.98,
+      "playtimeMinutes": 95,
+      "playtimeHours": 1.58,
       "source": "steam-web-api"
     },
     {
@@ -98257,8 +98257,8 @@
       "username": "Wintermute101",
       "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
       "appId": 2350790,
-      "playtimeMinutes": 1299,
-      "playtimeHours": 21.65,
+      "playtimeMinutes": 1386,
+      "playtimeHours": 23.1,
       "source": "steam-web-api"
     },
     {
@@ -101817,8 +101817,8 @@
       "username": "xMisiu",
       "steamProfile": "https://steamcommunity.com/profiles/76561198082091554",
       "appId": 1659420,
-      "playtimeMinutes": 953,
-      "playtimeHours": 15.88,
+      "playtimeMinutes": 1070,
+      "playtimeHours": 17.83,
       "source": "steam-web-api"
     },
     {
@@ -114464,7 +114464,7 @@
   ],
   "source": "steam-web-api",
   "stats": {
-    "durationSeconds": 4.93,
+    "durationSeconds": 4.73,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
