@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-03T08:57:10.552009+00:00",
+  "updatedAt": "2026-08-04T08:13:23.724857+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -6787,14 +6787,15 @@
       "title": "Beast of Reincarnation",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/2001760/achievements/",
       "playtimeHours": 0.0,
-      "visible": false,
+      "visible": true,
       "earnedAchievements": 0,
-      "totalAchievements": 0,
+      "totalAchievements": 46,
       "achievementPercent": 0,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "error": "HTTP Error 403: Forbidden"
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "burntreynolds444",
@@ -7120,7 +7121,7 @@
       "appId": 3232380,
       "title": "FROGGY HATES SNOW",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3232380/achievements/",
-      "playtimeHours": 29.2,
+      "playtimeHours": 29.38,
       "visible": true,
       "earnedAchievements": 24,
       "totalAchievements": 42,
@@ -7129,7 +7130,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 29.2,
+      "achievementsPlaytimeHours": 29.38,
       "popThresholdMetAt": "2026-07-29T08:14:37.115952+00:00"
     },
     {
@@ -9254,15 +9255,15 @@
       "title": "MOUSE: P.I. For Hire",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2416450/achievements/",
       "visible": true,
-      "earnedAchievements": 12,
+      "earnedAchievements": 13,
       "totalAchievements": 34,
-      "achievementPercent": 35,
-      "playtimeHours": 9.58,
+      "achievementPercent": 38,
+      "playtimeHours": 11.38,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 9.58,
+      "achievementsPlaytimeHours": 11.38,
       "popThresholdMetAt": "2026-07-25T07:47:27.673974+00:00"
     },
     {
@@ -33604,16 +33605,16 @@
       "appId": 1774580,
       "title": "STAR WARS Jedi: Survivor",
       "progressUrl": "https://steamcommunity.com/profiles/76561198011705129/stats/1774580/achievements/",
-      "playtimeHours": 1.42,
+      "playtimeHours": 2.18,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 2,
       "totalAchievements": 53,
-      "achievementPercent": 0,
+      "achievementPercent": 4,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.42
+      "achievementsPlaytimeHours": 2.18
     },
     {
       "username": "Wintermute101",
@@ -42935,16 +42936,16 @@
       "appId": 3043580,
       "title": "Keeper",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/3043580/achievements/",
-      "playtimeHours": 1.38,
+      "playtimeHours": 2.33,
       "visible": true,
-      "earnedAchievements": 4,
+      "earnedAchievements": 8,
       "totalAchievements": 13,
-      "achievementPercent": 31,
+      "achievementPercent": 62,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.38,
+      "achievementsPlaytimeHours": 2.33,
       "popThresholdMetAt": "2026-07-27T09:21:38.116190+00:00"
     },
     {
@@ -71278,25 +71279,25 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-08-03T08:55:21.691242+00:00",
+  "libraryUpdatedAt": "2026-08-04T08:12:29.885087+00:00",
   "libraryStats": {
-    "durationSeconds": 4.73,
+    "durationSeconds": 4.75,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14281
+    "totalPlaytimeRows": 14284
   },
   "stats": {
-    "durationSeconds": 113.6,
+    "durationSeconds": 58.6,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2365,
-    "cachedReuses": 2305,
-    "achievementSuccesses": 11,
-    "achievementErrors": 73,
-    "cachedFallbacks": 73,
+    "cachedReuses": 2308,
+    "achievementSuccesses": 9,
+    "achievementErrors": 72,
+    "cachedFallbacks": 72,
     "hltbTitlesRequested": 1292,
     "hltbResultsAvailable": 4039
   }
