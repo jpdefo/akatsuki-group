@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-05T08:11:59.624419+00:00",
+  "updatedAt": "2026-08-06T08:11:50.407270+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -7121,16 +7121,16 @@
       "appId": 3232380,
       "title": "FROGGY HATES SNOW",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3232380/achievements/",
-      "playtimeHours": 31.25,
+      "playtimeHours": 31.7,
       "visible": true,
-      "earnedAchievements": 25,
+      "earnedAchievements": 27,
       "totalAchievements": 42,
-      "achievementPercent": 60,
+      "achievementPercent": 64,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 31.25,
+      "achievementsPlaytimeHours": 31.7,
       "popThresholdMetAt": "2026-07-29T08:14:37.115952+00:00"
     },
     {
@@ -9258,12 +9258,12 @@
       "earnedAchievements": 14,
       "totalAchievements": 34,
       "achievementPercent": 41,
-      "playtimeHours": 12.1,
+      "playtimeHours": 13.52,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 12.1,
+      "achievementsPlaytimeHours": 13.52,
       "popThresholdMetAt": "2026-07-25T07:47:27.673974+00:00"
     },
     {
@@ -33570,16 +33570,16 @@
       "appId": 920210,
       "title": "LEGO Star Wars: The Skywalker Saga Ga...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198011705129/stats/920210/achievements/",
-      "playtimeHours": 3.12,
+      "playtimeHours": 4.58,
       "visible": true,
-      "earnedAchievements": 4,
+      "earnedAchievements": 5,
       "totalAchievements": 45,
-      "achievementPercent": 9,
+      "achievementPercent": 11,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 3.12
+      "achievementsPlaytimeHours": 4.58
     },
     {
       "username": "Thedogma",
@@ -37317,15 +37317,15 @@
       "title": "UNCHARTED: Legacy of Thieves Collection",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/1659420/achievements/",
       "visible": true,
-      "earnedAchievements": 17,
+      "earnedAchievements": 22,
       "totalAchievements": 101,
-      "achievementPercent": 17,
-      "playtimeHours": 17.83,
+      "achievementPercent": 22,
+      "playtimeHours": 20.53,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 17.83,
+      "achievementsPlaytimeHours": 20.53,
       "popThresholdMetAt": "2026-06-26T07:11:08.801361+00:00"
     },
     {
@@ -70633,7 +70633,7 @@
     {
       "title": "Beast of Reincarnation",
       "appId": 2001760,
-      "hltbHours": 0.0,
+      "hltbHours": 15.0,
       "matchedTitle": "Beast of Reincarnation",
       "url": "https://howlongtobeat.com/game/169407"
     },
@@ -71279,23 +71279,23 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-08-05T08:11:05.640510+00:00",
+  "libraryUpdatedAt": "2026-08-06T08:10:07.635736+00:00",
   "libraryStats": {
-    "durationSeconds": 4.92,
+    "durationSeconds": 4.38,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14288
+    "totalPlaytimeRows": 14290
   },
   "stats": {
-    "durationSeconds": 58.92,
+    "durationSeconds": 107.16,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2365,
-    "cachedReuses": 2310,
-    "achievementSuccesses": 7,
+    "cachedReuses": 2309,
+    "achievementSuccesses": 8,
     "achievementErrors": 72,
     "cachedFallbacks": 72,
     "hltbTitlesRequested": 1292,
