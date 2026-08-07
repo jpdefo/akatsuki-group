@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-06T08:11:50.407270+00:00",
+  "updatedAt": "2026-08-07T06:56:57.657023+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -7121,16 +7121,16 @@
       "appId": 3232380,
       "title": "FROGGY HATES SNOW",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3232380/achievements/",
-      "playtimeHours": 31.7,
+      "playtimeHours": 32.75,
       "visible": true,
-      "earnedAchievements": 27,
+      "earnedAchievements": 28,
       "totalAchievements": 42,
-      "achievementPercent": 64,
+      "achievementPercent": 67,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 31.7,
+      "achievementsPlaytimeHours": 32.75,
       "popThresholdMetAt": "2026-07-29T08:14:37.115952+00:00"
     },
     {
@@ -9258,12 +9258,12 @@
       "earnedAchievements": 14,
       "totalAchievements": 34,
       "achievementPercent": 41,
-      "playtimeHours": 13.52,
+      "playtimeHours": 13.7,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 13.52,
+      "achievementsPlaytimeHours": 13.7,
       "popThresholdMetAt": "2026-07-25T07:47:27.673974+00:00"
     },
     {
@@ -33570,16 +33570,17 @@
       "appId": 920210,
       "title": "LEGO Star Wars: The Skywalker Saga Ga...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198011705129/stats/920210/achievements/",
-      "playtimeHours": 4.58,
+      "playtimeHours": 7.33,
       "visible": true,
-      "earnedAchievements": 5,
+      "earnedAchievements": 7,
       "totalAchievements": 45,
-      "achievementPercent": 11,
+      "achievementPercent": 16,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 4.58
+      "achievementsPlaytimeHours": 7.33,
+      "popThresholdMetAt": "2026-08-07T06:56:57.656809+00:00"
     },
     {
       "username": "Thedogma",
@@ -37320,12 +37321,12 @@
       "earnedAchievements": 22,
       "totalAchievements": 101,
       "achievementPercent": 22,
-      "playtimeHours": 20.53,
+      "playtimeHours": 21.7,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 20.53,
+      "achievementsPlaytimeHours": 21.7,
       "popThresholdMetAt": "2026-06-26T07:11:08.801361+00:00"
     },
     {
@@ -71279,18 +71280,18 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-08-06T08:10:07.635736+00:00",
+  "libraryUpdatedAt": "2026-08-07T06:56:02.522454+00:00",
   "libraryStats": {
-    "durationSeconds": 4.38,
+    "durationSeconds": 5.23,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14290
+    "totalPlaytimeRows": 14293
   },
   "stats": {
-    "durationSeconds": 107.16,
+    "durationSeconds": 60.38,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2365,
