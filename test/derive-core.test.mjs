@@ -259,6 +259,59 @@ test("penalties: overdue / coming-due / grandfathered / complete / paid / pop_fr
   assert.deepEqual(flagged.sort(), ["dave", "eve"]); // only the OVD(dave) + CDU(eve)
 });
 
+test("penalties: the clock runs off the Steam refresh, not the SteamGifts sync", () => {
+  // A win whose deadline is Jun 1 2026. The SteamGifts sync is from Jun 15 (past
+  // the deadline), but the playtime/achievements were last refreshed on May 20 —
+  // and those are what the penalty is judged on. So as far as the data goes the
+  // win is still coming due (12 days left), not overdue.
+  const sync = {
+    members: [member("dave", true, "p-dave")],
+    giveaways: [
+      giveaway({ code: "OVD", creatorUsername: "x", appId: 100, winners: [{ username: "dave" }], startDate: "2026-01-05T00:00:00.000Z", endDate: "2026-01-10T00:00:00.000Z" }),
+    ],
+  };
+  const progress = {
+    updatedAt: "2026-05-20T04:00:00.000Z",
+    progress: [progressEntry("p-dave", 100, 5)],
+    hltb: [{ appId: 100, hltbHours: 100 }],
+  };
+
+  const { penalties } = buildPenaltyAndMemberDerived({
+    sync,
+    progress,
+    overrides: {},
+    settings: { currentDate: "2026-06-15" },
+  });
+  assert.equal(penalties.referenceDate, "2026-05-20", "reference date comes from the progress refresh");
+  assert.equal(penalties.counts.overdue, 0);
+  assert.equal(penalties.counts.comingDue, 1);
+  // ~12 days May 20 -> Jun 1; the exact rounding depends on the local timezone
+  // (parseDate anchors at local noon), so pin the range, not the digit.
+  assert.ok([11, 12].includes(penalties.comingDue[0].daysLeft), `daysLeft ${penalties.comingDue[0].daysLeft}`);
+
+  // A newer library (playtime) refresh wins over an older progress refresh, and
+  // pushes the same win past its deadline.
+  const later = buildPenaltyAndMemberDerived({
+    sync,
+    progress: { ...progress, libraryUpdatedAt: "2026-06-10T04:00:00.000Z" },
+    overrides: {},
+    settings: { currentDate: "2026-06-15" },
+  });
+  assert.equal(later.penalties.referenceDate, "2026-06-10");
+  assert.equal(later.penalties.counts.overdue, 1);
+  assert.ok([9, 10].includes(later.penalties.owedNow[0].daysOverdue), `daysOverdue ${later.penalties.owedNow[0].daysOverdue}`); // Jun 1 -> Jun 10
+
+  // No Steam refresh recorded at all: fall back to the SteamGifts sync date.
+  const fallback = buildPenaltyAndMemberDerived({
+    sync,
+    progress: { progress: progress.progress, hltb: progress.hltb },
+    overrides: {},
+    settings: { currentDate: "2026-06-15" },
+  });
+  assert.equal(fallback.penalties.referenceDate, "2026-06-15");
+  assert.equal(fallback.penalties.counts.overdue, 1);
+});
+
 test("penalties: member bucket rows (wins, playtime, threshold-met)", () => {
   const currentDate = "2026-06-15";
   const sync = {

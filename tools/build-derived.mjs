@@ -78,6 +78,8 @@ function main() {
     now,
   });
 
+  // Penalty timing runs off the Steam refresh date (playtime/achievements), which
+  // buildPenaltyAndMemberDerived reads from the progress payload itself.
   const penaltiesAndMembers = buildPenaltyAndMemberDerived({
     sync,
     progress,

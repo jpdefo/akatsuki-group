@@ -514,7 +514,9 @@ export function buildSummerEventDerived({
 //   gamesById,        // Map(gameId -> game)
 //   membersById,      // Map(memberId -> member)
 //   syncGiveaways,    // normalized raw sync giveaways (release-date fallback)
-//   currentDate,      // "YYYY-MM-DD" reference date for penalty timing
+//   currentDate,      // "YYYY-MM-DD" SteamGifts sync date (period/date fallbacks)
+//   penaltyReferenceDate, // "YYYY-MM-DD" Steam playtime/achievement sync date: the
+//                     // reference "today" for penalty timing (falls back to currentDate)
 //   penaltyReady,     // gate: false suppresses penalty classification (app load)
 // }
 
@@ -815,6 +817,25 @@ export function isWinPenaltyPaid(win, ctx) {
   );
 }
 
+// Reference "today" for penalty timing (overdue / days left). The judgement is
+// about playtime + achievements, so it is only as current as the Steam refresh
+// that produced them — NOT the SteamGifts sync (settings.currentDate), which can
+// be days newer or older and says nothing about a member's progress. Takes the
+// freshest of the progress refresh and the library (playtime) refresh, and only
+// falls back to the SteamGifts sync date when no Steam refresh is recorded.
+export function resolvePenaltyReferenceDate({ progressUpdatedAt, libraryUpdatedAt, currentDate } = {}) {
+  const candidates = [progressUpdatedAt, libraryUpdatedAt]
+    .map((value) => String(value || "").trim())
+    .filter(Boolean)
+    .map((value) => ({ value, time: new Date(value).getTime() }))
+    .filter((item) => Number.isFinite(item.time))
+    .sort((left, right) => right.time - left.time);
+  if (candidates.length) {
+    return candidates[0].value.slice(0, 10);
+  }
+  return String(currentDate || "").slice(0, 10);
+}
+
 export function getPenaltyDeadlineForMonth(popMonth) {
   const match = /^(\d{4})-(\d{2})$/.exec(String(popMonth || ""));
   if (!match) {
@@ -850,7 +871,9 @@ export function getWinPenaltyInfo(win, ctx) {
   if (isWinPenaltyPaid(win, ctx)) {
     return { status: "paid", popMonth, deadline };
   }
-  const now = parseDate(ctx?.currentDate || "");
+  // Timed against the Steam refresh, not the SteamGifts sync — see
+  // resolvePenaltyReferenceDate.
+  const now = parseDate(ctx?.penaltyReferenceDate || ctx?.currentDate || "");
   const reference = Number.isFinite(now.getTime()) ? now : new Date();
   const days = Math.round((deadline.getTime() - reference.getTime()) / 86400000);
   if (reference.getTime() >= deadline.getTime()) {
@@ -1288,6 +1311,15 @@ function penaltyProgressFigures(win, ctx) {
 // shaped so the frontend can render them directly without recomputing.
 export function buildPenaltyAndMemberDerived({ sync = {}, progress = {}, overrides = {}, settings = {} } = {}) {
   const graph = buildEntityGraph({ sync, progress, overrides, settings });
+  // Penalty clock = the Steam refresh that produced the playtime/achievements,
+  // taken from the progress payload unless the caller passes one explicitly.
+  const penaltyReferenceDate =
+    String(settings.penaltyReferenceDate || "").slice(0, 10) ||
+    resolvePenaltyReferenceDate({
+      progressUpdatedAt: progress?.updatedAt,
+      libraryUpdatedAt: progress?.libraryUpdatedAt,
+      currentDate: settings.currentDate,
+    });
   const ctx = {
     giveaways: graph.giveaways,
     giveawayBySourceId: new Map(graph.giveaways.map((giveaway) => [giveaway.sourceId, giveaway])),
@@ -1295,6 +1327,7 @@ export function buildPenaltyAndMemberDerived({ sync = {}, progress = {}, overrid
     membersById: graph.membersById,
     syncGiveaways: graph.syncGiveaways,
     currentDate: settings.currentDate || "",
+    penaltyReferenceDate,
     penaltyReady: true,
   };
 
@@ -1344,6 +1377,7 @@ export function buildPenaltyAndMemberDerived({ sync = {}, progress = {}, overrid
 
   return {
     penalties: {
+      referenceDate: penaltyReferenceDate,
       counts: { overdue: owedNow.length, comingDue: comingDue.length, settled: settled.length },
       owedNow,
       comingDue,

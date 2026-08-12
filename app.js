@@ -68,6 +68,7 @@ const defaultState = {
   sync: {
     steamgifts: null,
     steamProgressUpdatedAt: null,
+    steamLibraryUpdatedAt: null,
     dashboard: null,
     lastProgressStats: null,
     lastLibraryStats: null,
@@ -2978,6 +2979,25 @@ function formatPenaltyDeadline(date) {
   return date.toLocaleDateString("en-US", { timeZone: "UTC", year: "numeric", month: "short", day: "numeric" });
 }
 
+// Reference "today" for penalty timing. A penalty is judged on playtime and
+// achievements, so the clock only advances as far as the last Steam refresh that
+// produced them — not the SteamGifts sync date (state.settings.currentDate),
+// which can be days apart and says nothing about a member's progress. Uses the
+// freshest of the progress and library (playtime) refreshes, falling back to the
+// SteamGifts sync date when no Steam refresh is recorded.
+function getPenaltyReferenceDate() {
+  const candidates = [state.sync?.steamProgressUpdatedAt, state.sync?.steamLibraryUpdatedAt]
+    .map((value) => String(value || "").trim())
+    .filter(Boolean)
+    .map((value) => ({ value, time: new Date(value).getTime() }))
+    .filter((item) => Number.isFinite(item.time))
+    .sort((left, right) => right.time - left.time);
+  if (candidates.length) {
+    return candidates[0].value.slice(0, 10);
+  }
+  return String(state.settings.currentDate || "").slice(0, 10);
+}
+
 function getWinGiveawayCodeKey(win) {
   const giveaway = findGiveawayForWin(win);
   return giveaway ? getGiveawayCodeKey(giveaway) : "";
@@ -3037,7 +3057,7 @@ function getWinPenaltyInfo(win) {
   if (isWinPenaltyPaid(win)) {
     return { status: "paid", popMonth, deadline };
   }
-  const now = parseDate(state.settings.currentDate || "");
+  const now = parseDate(getPenaltyReferenceDate());
   const reference = Number.isFinite(now.getTime()) ? now : new Date();
   const days = Math.round((deadline.getTime() - reference.getTime()) / 86400000);
   if (reference.getTime() >= deadline.getTime()) {
@@ -3114,6 +3134,14 @@ function buildPenaltyProgressCells(win) {
   return [hours, achievements];
 }
 
+// The counts plus the date the "Overdue Xd" / "Due in Xd" badges are measured
+// from, so a stale Steam refresh is visible instead of silently skewing them.
+function buildPenaltiesSummaryText(overdueCount, comingCount, settledCount, referenceDate) {
+  const base = `${overdueCount} owed now • ${comingCount} coming due • ${settledCount} settled`;
+  const formatted = referenceDate ? formatDate(referenceDate) : "";
+  return formatted && formatted !== "-" ? `${base} • timed from the ${formatted} Steam sync` : base;
+}
+
 function isPenaltyDataReady() {
   return Boolean(state.sync?.steamProgressUpdatedAt) && runtime.sharedOverridesLoaded;
 }
@@ -3148,7 +3176,12 @@ function renderPenaltiesPage() {
   const comingCount = winRows.filter((row) => row.info.status === "coming-due").length;
 
   if (elements.penaltiesSummary) {
-    elements.penaltiesSummary.textContent = `${overdueCount} owed now • ${comingCount} coming due • ${settled.length} settled`;
+    elements.penaltiesSummary.textContent = buildPenaltiesSummaryText(
+      overdueCount,
+      comingCount,
+      settled.length,
+      getPenaltyReferenceDate(),
+    );
   }
 
   const linkedGame = (title, url) =>
@@ -3223,7 +3256,12 @@ function renderPenaltiesPageFromDerived(penalties) {
   const settled = penalties.settled || [];
 
   if (elements.penaltiesSummary) {
-    elements.penaltiesSummary.textContent = `${owedNow.length} owed now • ${comingDue.length} coming due • ${settled.length} settled`;
+    elements.penaltiesSummary.textContent = buildPenaltiesSummaryText(
+      owedNow.length,
+      comingDue.length,
+      settled.length,
+      penalties.referenceDate || "",
+    );
   }
 
   const linkedGame = (title, url) =>
@@ -4110,6 +4148,7 @@ function applySteamProgress(payload) {
   state.sync = {
     ...state.sync,
     steamProgressUpdatedAt: payload?.updatedAt || new Date().toISOString(),
+    steamLibraryUpdatedAt: payload?.libraryUpdatedAt || state.sync?.steamLibraryUpdatedAt || null,
     lastProgressStats: payload?.stats || null,
     lastLibraryStats: payload?.libraryStats || state.sync?.lastLibraryStats || null,
   };
@@ -5536,6 +5575,7 @@ function buildPersistedState() {
     sync: {
       steamgifts: null,
       steamProgressUpdatedAt: state.sync?.steamProgressUpdatedAt || null,
+      steamLibraryUpdatedAt: state.sync?.steamLibraryUpdatedAt || null,
     },
     sharedOverrides: undefined,
     overrides: normalizeOverrideState(state.overrides),
