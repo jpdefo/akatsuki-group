@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-12T07:03:05.092118+00:00",
+  "updatedAt": "2026-08-13T07:07:53.402160+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -9258,12 +9258,12 @@
       "earnedAchievements": 21,
       "totalAchievements": 34,
       "achievementPercent": 62,
-      "playtimeHours": 18.67,
+      "playtimeHours": 19.07,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 18.67,
+      "achievementsPlaytimeHours": 19.07,
       "popThresholdMetAt": "2026-07-25T07:47:27.673974+00:00"
     },
     {
@@ -33570,16 +33570,16 @@
       "appId": 920210,
       "title": "LEGO Star Wars: The Skywalker Saga Ga...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198011705129/stats/920210/achievements/",
-      "playtimeHours": 13.35,
+      "playtimeHours": 14.28,
       "visible": true,
-      "earnedAchievements": 9,
+      "earnedAchievements": 10,
       "totalAchievements": 45,
-      "achievementPercent": 20,
+      "achievementPercent": 22,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 13.35,
+      "achievementsPlaytimeHours": 14.28,
       "popThresholdMetAt": "2026-08-07T06:56:57.656809+00:00"
     },
     {
@@ -35612,16 +35612,16 @@
       "appId": 2161700,
       "title": "Persona 3 Reload",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2161700/achievements/",
-      "playtimeHours": 31.88,
+      "playtimeHours": 36.68,
       "visible": true,
-      "earnedAchievements": 29,
+      "earnedAchievements": 34,
       "totalAchievements": 56,
-      "achievementPercent": 52,
+      "achievementPercent": 61,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 31.88,
+      "achievementsPlaytimeHours": 36.68,
       "popThresholdMetAt": "2026-07-17T07:50:11.902264+00:00"
     },
     {
@@ -71280,9 +71280,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-08-12T07:02:10.137210+00:00",
+  "libraryUpdatedAt": "2026-08-13T07:06:14.460758+00:00",
   "libraryStats": {
-    "durationSeconds": 5.03,
+    "durationSeconds": 4.17,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71291,12 +71291,12 @@
     "totalPlaytimeRows": 14304
   },
   "stats": {
-    "durationSeconds": 59.99,
+    "durationSeconds": 103.12,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2365,
-    "cachedReuses": 2308,
-    "achievementSuccesses": 9,
+    "cachedReuses": 2310,
+    "achievementSuccesses": 7,
     "achievementErrors": 72,
     "cachedFallbacks": 72,
     "hltbTitlesRequested": 1292,
