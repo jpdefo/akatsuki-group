@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-13T07:07:53.402160+00:00",
+  "updatedAt": "2026-08-14T07:03:57.939850+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -27193,7 +27193,7 @@
       "appId": 2677660,
       "title": "Indiana Jones and the Great Circle",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2677660/achievements/",
-      "playtimeHours": 15.02,
+      "playtimeHours": 17.2,
       "visible": true,
       "earnedAchievements": 16,
       "totalAchievements": 55,
@@ -27202,7 +27202,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 15.02,
+      "achievementsPlaytimeHours": 17.2,
       "popThresholdMetAt": "2026-08-03T08:57:10.551642+00:00"
     },
     {
@@ -35612,16 +35612,16 @@
       "appId": 2161700,
       "title": "Persona 3 Reload",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2161700/achievements/",
-      "playtimeHours": 36.68,
+      "playtimeHours": 39.6,
       "visible": true,
-      "earnedAchievements": 34,
+      "earnedAchievements": 35,
       "totalAchievements": 56,
-      "achievementPercent": 61,
+      "achievementPercent": 62,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 36.68,
+      "achievementsPlaytimeHours": 39.6,
       "popThresholdMetAt": "2026-07-17T07:50:11.902264+00:00"
     },
     {
@@ -37318,15 +37318,15 @@
       "title": "UNCHARTED: Legacy of Thieves Collection",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/1659420/achievements/",
       "visible": true,
-      "earnedAchievements": 23,
+      "earnedAchievements": 24,
       "totalAchievements": 101,
-      "achievementPercent": 23,
-      "playtimeHours": 24.28,
+      "achievementPercent": 24,
+      "playtimeHours": 27.38,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 24.28,
+      "achievementsPlaytimeHours": 27.38,
       "popThresholdMetAt": "2026-06-26T07:11:08.801361+00:00"
     },
     {
@@ -71280,18 +71280,18 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-08-13T07:06:14.460758+00:00",
+  "libraryUpdatedAt": "2026-08-14T07:03:06.126432+00:00",
   "libraryStats": {
-    "durationSeconds": 4.17,
+    "durationSeconds": 4.12,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14304
+    "totalPlaytimeRows": 14307
   },
   "stats": {
-    "durationSeconds": 103.12,
+    "durationSeconds": 55.95,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2365,
