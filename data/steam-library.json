@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-14T07:03:06.126432+00:00",
+  "updatedAt": "2026-08-15T06:16:23.033715+00:00",
   "apiEnabled": true,
   "refreshedScope": "all",
   "refreshedMonth": null,
@@ -19,7 +19,7 @@
       "steamId": "76561198073410742",
       "gamesVisible": true,
       "playtimeVisible": true,
-      "gameCount": 10119,
+      "gameCount": 10136,
       "error": null
     },
     {
@@ -37,7 +37,7 @@
       "steamId": "76561197994366772",
       "gamesVisible": true,
       "playtimeVisible": true,
-      "gameCount": 6484,
+      "gameCount": 6485,
       "error": null
     },
     {
@@ -91,7 +91,7 @@
       "steamId": "76561198065466175",
       "gamesVisible": true,
       "playtimeVisible": true,
-      "gameCount": 8862,
+      "gameCount": 8864,
       "error": null
     },
     {
@@ -109,7 +109,7 @@
       "steamId": "76561198092676316",
       "gamesVisible": true,
       "playtimeVisible": true,
-      "gameCount": 2951,
+      "gameCount": 2952,
       "error": null
     },
     {
@@ -19897,8 +19897,8 @@
       "username": "burntreynolds444",
       "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
       "appId": 1091500,
-      "playtimeMinutes": 12608,
-      "playtimeHours": 210.13,
+      "playtimeMinutes": 12714,
+      "playtimeHours": 211.9,
       "source": "steam-web-api"
     },
     {
@@ -62753,8 +62753,8 @@
       "username": "Koalala",
       "steamProfile": "https://steamcommunity.com/profiles/76561198065466175",
       "appId": 3489700,
-      "playtimeMinutes": 1175,
-      "playtimeHours": 19.58,
+      "playtimeMinutes": 1236,
+      "playtimeHours": 20.6,
       "source": "steam-web-api"
     },
     {
@@ -94129,8 +94129,8 @@
       "username": "Thedogma",
       "steamProfile": "https://steamcommunity.com/profiles/76561198011705129",
       "appId": 920210,
-      "playtimeMinutes": 857,
-      "playtimeHours": 14.28,
+      "playtimeMinutes": 1118,
+      "playtimeHours": 18.63,
       "source": "steam-web-api"
     },
     {
@@ -98393,8 +98393,8 @@
       "username": "Wintermute101",
       "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
       "appId": 2161700,
-      "playtimeMinutes": 2376,
-      "playtimeHours": 39.6,
+      "playtimeMinutes": 2464,
+      "playtimeHours": 41.07,
       "source": "steam-web-api"
     },
     {
@@ -114672,7 +114672,7 @@
   ],
   "source": "steam-web-api",
   "stats": {
-    "durationSeconds": 4.12,
+    "durationSeconds": 8.73,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,

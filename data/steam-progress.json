@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-14T07:03:57.939850+00:00",
+  "updatedAt": "2026-08-15T06:17:22.325096+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -21148,12 +21148,12 @@
       "earnedAchievements": 6,
       "totalAchievements": 45,
       "achievementPercent": 13,
-      "playtimeHours": 19.58,
+      "playtimeHours": 20.6,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 19.58,
+      "achievementsPlaytimeHours": 20.6,
       "popThresholdMetAt": "2026-06-26T07:11:08.799495+00:00"
     },
     {
@@ -33570,16 +33570,16 @@
       "appId": 920210,
       "title": "LEGO Star Wars: The Skywalker Saga Ga...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198011705129/stats/920210/achievements/",
-      "playtimeHours": 14.28,
+      "playtimeHours": 18.63,
       "visible": true,
-      "earnedAchievements": 10,
+      "earnedAchievements": 12,
       "totalAchievements": 45,
-      "achievementPercent": 22,
+      "achievementPercent": 27,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 14.28,
+      "achievementsPlaytimeHours": 18.63,
       "popThresholdMetAt": "2026-08-07T06:56:57.656809+00:00"
     },
     {
@@ -35612,7 +35612,7 @@
       "appId": 2161700,
       "title": "Persona 3 Reload",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2161700/achievements/",
-      "playtimeHours": 39.6,
+      "playtimeHours": 41.07,
       "visible": true,
       "earnedAchievements": 35,
       "totalAchievements": 56,
@@ -35621,7 +35621,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 39.6,
+      "achievementsPlaytimeHours": 41.07,
       "popThresholdMetAt": "2026-07-17T07:50:11.902264+00:00"
     },
     {
@@ -71280,9 +71280,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-08-14T07:03:06.126432+00:00",
+  "libraryUpdatedAt": "2026-08-15T06:16:23.033715+00:00",
   "libraryStats": {
-    "durationSeconds": 4.12,
+    "durationSeconds": 8.73,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71291,7 +71291,7 @@
     "totalPlaytimeRows": 14307
   },
   "stats": {
-    "durationSeconds": 55.95,
+    "durationSeconds": 68.03,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2365,
