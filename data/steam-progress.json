@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-15T06:17:22.325096+00:00",
+  "updatedAt": "2026-08-16T06:19:53.680103+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -17433,7 +17433,7 @@
       "appId": 2947440,
       "title": "SILENT HILL f",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/2947440/achievements/",
-      "playtimeHours": 0.35,
+      "playtimeHours": 0.5,
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 56,
@@ -17442,7 +17442,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.35
+      "achievementsPlaytimeHours": 0.5
     },
     {
       "username": "Horseflesh",
@@ -21148,12 +21148,12 @@
       "earnedAchievements": 6,
       "totalAchievements": 45,
       "achievementPercent": 13,
-      "playtimeHours": 20.6,
+      "playtimeHours": 21.67,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 20.6,
+      "achievementsPlaytimeHours": 21.67,
       "popThresholdMetAt": "2026-06-26T07:11:08.799495+00:00"
     },
     {
@@ -28934,7 +28934,7 @@
       "appId": 2208350,
       "title": "Total Chaos",
       "progressUrl": "https://steamcommunity.com/profiles/76561197985486812/stats/2208350/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 0.33,
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 37,
@@ -28943,7 +28943,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 0.33
     },
     {
       "username": "Oozyyy",
@@ -33570,16 +33570,16 @@
       "appId": 920210,
       "title": "LEGO Star Wars: The Skywalker Saga Ga...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198011705129/stats/920210/achievements/",
-      "playtimeHours": 18.63,
+      "playtimeHours": 19.42,
       "visible": true,
-      "earnedAchievements": 12,
+      "earnedAchievements": 13,
       "totalAchievements": 45,
-      "achievementPercent": 27,
+      "achievementPercent": 29,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 18.63,
+      "achievementsPlaytimeHours": 19.42,
       "popThresholdMetAt": "2026-08-07T06:56:57.656809+00:00"
     },
     {
@@ -35612,16 +35612,16 @@
       "appId": 2161700,
       "title": "Persona 3 Reload",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2161700/achievements/",
-      "playtimeHours": 41.07,
+      "playtimeHours": 42.12,
       "visible": true,
-      "earnedAchievements": 35,
+      "earnedAchievements": 36,
       "totalAchievements": 56,
-      "achievementPercent": 62,
+      "achievementPercent": 64,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 41.07,
+      "achievementsPlaytimeHours": 42.12,
       "popThresholdMetAt": "2026-07-17T07:50:11.902264+00:00"
     },
     {
@@ -35902,7 +35902,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 58.85,
+      "playtimeHours": 60.02,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -71280,9 +71280,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-08-15T06:16:23.033715+00:00",
+  "libraryUpdatedAt": "2026-08-16T06:18:04.923886+00:00",
   "libraryStats": {
-    "durationSeconds": 8.73,
+    "durationSeconds": 6.34,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71291,12 +71291,12 @@
     "totalPlaytimeRows": 14307
   },
   "stats": {
-    "durationSeconds": 68.03,
+    "durationSeconds": 115.11,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2365,
-    "cachedReuses": 2310,
-    "achievementSuccesses": 7,
+    "cachedReuses": 2308,
+    "achievementSuccesses": 9,
     "achievementErrors": 72,
     "cachedFallbacks": 72,
     "hltbTitlesRequested": 1292,
