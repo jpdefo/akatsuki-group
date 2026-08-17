@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T06:18:04.923886+00:00",
+  "updatedAt": "2026-08-17T06:26:38.398906+00:00",
   "apiEnabled": true,
   "refreshedScope": "all",
   "refreshedMonth": null,
@@ -11,7 +11,7 @@
       "gamesVisible": true,
       "playtimeVisible": true,
       "gameCount": 881,
-      "error": null
+      "error": "HTTP Error 401: Unauthorized"
     },
     {
       "username": "bron99",
@@ -20,7 +20,7 @@
       "gamesVisible": true,
       "playtimeVisible": true,
       "gameCount": 10140,
-      "error": null
+      "error": "HTTP Error 401: Unauthorized"
     },
     {
       "username": "burntreynolds444",
@@ -29,7 +29,7 @@
       "gamesVisible": true,
       "playtimeVisible": true,
       "gameCount": 18007,
-      "error": null
+      "error": "HTTP Error 401: Unauthorized"
     },
     {
       "username": "chOOkity",
@@ -38,7 +38,7 @@
       "gamesVisible": true,
       "playtimeVisible": true,
       "gameCount": 6485,
-      "error": null
+      "error": "HTTP Error 401: Unauthorized"
     },
     {
       "username": "Drain",
@@ -47,7 +47,7 @@
       "gamesVisible": true,
       "playtimeVisible": true,
       "gameCount": 3586,
-      "error": null
+      "error": "HTTP Error 401: Unauthorized"
     },
     {
       "username": "eledhrim",
@@ -56,7 +56,7 @@
       "gamesVisible": true,
       "playtimeVisible": true,
       "gameCount": 657,
-      "error": null
+      "error": "HTTP Error 401: Unauthorized"
     },
     {
       "username": "Ernesttico",
@@ -65,7 +65,7 @@
       "gamesVisible": true,
       "playtimeVisible": true,
       "gameCount": 1350,
-      "error": null
+      "error": "HTTP Error 401: Unauthorized"
     },
     {
       "username": "Horseflesh",
@@ -74,7 +74,7 @@
       "gamesVisible": true,
       "playtimeVisible": true,
       "gameCount": 4027,
-      "error": null
+      "error": "HTTP Error 401: Unauthorized"
     },
     {
       "username": "kasztoix",
@@ -83,7 +83,7 @@
       "gamesVisible": true,
       "playtimeVisible": true,
       "gameCount": 6590,
-      "error": null
+      "error": "HTTP Error 401: Unauthorized"
     },
     {
       "username": "Koalala",
@@ -92,7 +92,7 @@
       "gamesVisible": true,
       "playtimeVisible": true,
       "gameCount": 8864,
-      "error": null
+      "error": "HTTP Error 401: Unauthorized"
     },
     {
       "username": "Krlesnik",
@@ -101,7 +101,7 @@
       "gamesVisible": true,
       "playtimeVisible": true,
       "gameCount": 3144,
-      "error": null
+      "error": "HTTP Error 401: Unauthorized"
     },
     {
       "username": "leniu",
@@ -110,7 +110,7 @@
       "gamesVisible": true,
       "playtimeVisible": true,
       "gameCount": 2952,
-      "error": null
+      "error": "HTTP Error 401: Unauthorized"
     },
     {
       "username": "Millsshogun",
@@ -119,7 +119,7 @@
       "gamesVisible": true,
       "playtimeVisible": true,
       "gameCount": 660,
-      "error": null
+      "error": "HTTP Error 401: Unauthorized"
     },
     {
       "username": "Oozyyy",
@@ -128,7 +128,7 @@
       "gamesVisible": true,
       "playtimeVisible": true,
       "gameCount": 2460,
-      "error": null
+      "error": "HTTP Error 401: Unauthorized"
     },
     {
       "username": "Saikania",
@@ -137,7 +137,7 @@
       "gamesVisible": true,
       "playtimeVisible": true,
       "gameCount": 2696,
-      "error": null
+      "error": "HTTP Error 401: Unauthorized"
     },
     {
       "username": "skAd42",
@@ -146,7 +146,7 @@
       "gamesVisible": true,
       "playtimeVisible": true,
       "gameCount": 374,
-      "error": null
+      "error": "HTTP Error 401: Unauthorized"
     },
     {
       "username": "Skull18",
@@ -155,7 +155,7 @@
       "gamesVisible": true,
       "playtimeVisible": true,
       "gameCount": 1653,
-      "error": null
+      "error": "HTTP Error 401: Unauthorized"
     },
     {
       "username": "Thedogma",
@@ -164,7 +164,7 @@
       "gamesVisible": true,
       "playtimeVisible": true,
       "gameCount": 829,
-      "error": null
+      "error": "HTTP Error 401: Unauthorized"
     },
     {
       "username": "Wintermute101",
@@ -173,7 +173,7 @@
       "gamesVisible": true,
       "playtimeVisible": true,
       "gameCount": 2106,
-      "error": null
+      "error": "HTTP Error 401: Unauthorized"
     },
     {
       "username": "WNDRLST",
@@ -182,7 +182,7 @@
       "gamesVisible": true,
       "playtimeVisible": true,
       "gameCount": 568,
-      "error": null
+      "error": "HTTP Error 401: Unauthorized"
     },
     {
       "username": "xMisiu",
@@ -191,7 +191,7 @@
       "gamesVisible": true,
       "playtimeVisible": true,
       "gameCount": 961,
-      "error": null
+      "error": "HTTP Error 401: Unauthorized"
     },
     {
       "username": "Youdontknow",
@@ -200,7 +200,7 @@
       "gamesVisible": true,
       "playtimeVisible": true,
       "gameCount": 4624,
-      "error": null
+      "error": "HTTP Error 401: Unauthorized"
     },
     {
       "username": "zettaivanugen",
@@ -209,7 +209,7 @@
       "gamesVisible": true,
       "playtimeVisible": true,
       "gameCount": 4153,
-      "error": null
+      "error": "HTTP Error 401: Unauthorized"
     }
   ],
   "playtimes": [
@@ -114672,10 +114672,10 @@
   ],
   "source": "steam-web-api",
   "stats": {
-    "durationSeconds": 6.34,
+    "durationSeconds": 2.31,
     "targetProfiles": 23,
-    "refreshedProfiles": 23,
-    "errorProfiles": 0,
+    "refreshedProfiles": 0,
+    "errorProfiles": 23,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
     "totalPlaytimeRows": 14307
