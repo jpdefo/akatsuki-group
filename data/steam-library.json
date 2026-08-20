@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T06:21:13.281245+00:00",
+  "updatedAt": "2026-08-20T06:21:53.475476+00:00",
   "apiEnabled": true,
   "refreshedScope": "all",
   "refreshedMonth": null,
@@ -114672,7 +114672,7 @@
   ],
   "source": "steam-web-api",
   "stats": {
-    "durationSeconds": 1.99,
+    "durationSeconds": 4.43,
     "targetProfiles": 23,
     "refreshedProfiles": 0,
     "errorProfiles": 23,

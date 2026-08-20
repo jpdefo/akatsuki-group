@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T06:21:18.559917+00:00",
+  "updatedAt": "2026-08-20T06:23:01.938589+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -71280,9 +71280,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-08-19T06:21:13.281245+00:00",
+  "libraryUpdatedAt": "2026-08-20T06:21:53.475476+00:00",
   "libraryStats": {
-    "durationSeconds": 1.99,
+    "durationSeconds": 4.43,
     "targetProfiles": 23,
     "refreshedProfiles": 0,
     "errorProfiles": 23,
@@ -71291,7 +71291,7 @@
     "totalPlaytimeRows": 14307
   },
   "stats": {
-    "durationSeconds": 7.28,
+    "durationSeconds": 72.91,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2365,
