@@ -371,6 +371,12 @@ function bindEvents() {
       return;
     }
 
+    const copyPenaltyButton = event.target.closest("[data-copy-penalty]");
+    if (copyPenaltyButton) {
+      handleCopyPenaltyDescription(copyPenaltyButton);
+      return;
+    }
+
     const deleteButton = event.target.closest("[data-delete-type]");
     if (!deleteButton) {
       return;
@@ -973,59 +979,205 @@ function buildPenaltiesOwedCard() {
   if (!debts.length) {
     return "";
   }
-  const items = debts
-    .slice(0, 15)
-    .map((debt) => {
-      const name = String(debt.member?.name || "Unknown member");
-      const gameTitle = String(debt.game?.title || debt.win.title || "a won game");
-      const statusParts = buildPenaltyStatusParts(debt.win, debt.game);
-      const statusMarkup = statusParts.length
-        ? `<span class="penalty-status">${statusParts.map((part) => escapeHtml(part)).join(" · ")}</span>`
-        : `<span class="penalty-status">No playtime or achievement data synced yet.</span>`;
-      return `<li>
-        <strong>${escapeHtml(name)}</strong>: ${escapeHtml(gameTitle)} (due ${escapeHtml(formatPenaltyDeadline(debt.deadline))})
-        ${statusMarkup}
-      </li>`;
+
+  // Group by member so someone who owes several games reads as one block instead
+  // of repeating their name per row. getOutstandingPenalties already sorts by
+  // deadline, so insertion order puts the most urgent member first and keeps each
+  // member's own tiles deadline-ordered.
+  const groups = new Map();
+  for (const debt of debts) {
+    const name = String(debt.member?.name || debt.win.winnerUsername || "Unknown member");
+    const key = debt.member?.id || debt.win.memberId || name;
+    if (!groups.has(key)) {
+      groups.set(key, { name, debts: [] });
+    }
+    groups.get(key).debts.push(debt);
+  }
+
+  const groupsMarkup = Array.from(groups.values())
+    .map((group) => {
+      const count =
+        group.debts.length > 1 ? `<span class="penalty-group-count">${group.debts.length}</span>` : "";
+      return `
+        <section class="penalty-group">
+          <h4 class="penalty-group-name">${escapeHtml(group.name)}${count}</h4>
+          <div class="penalty-tiles">${group.debts.map(buildPenaltyTile).join("")}</div>
+        </section>
+      `;
     })
     .join("");
-  const more = debts.length > 15 ? `<li>+${debts.length - 15} more…</li>` : "";
+
+  // Which Steam refresh the "Overdue Xd" counters are measured from, so a stale
+  // sync is visible instead of silently skewing them (same idea as the summary
+  // line on the penalties page).
+  const reference = formatDate(getPenaltyReferenceDate());
+  const timedFrom = reference && reference !== "-" ? ` Timed from the ${reference} Steam sync.` : "";
+  const memberNote = groups.size > 1 ? ` across ${groups.size} members` : "";
 
   return `
     <article class="member-card negative penalty-owed-card">
-      ${buildBadge("danger", "Penalties owed")}
-      <h3>${debts.length} penalt${debts.length === 1 ? "y" : "ies"} to pay</h3>
-      <span class="meta-line">Incomplete wins past their ${PENALTY_GRACE_MONTHS}-month deadline with no penalty giveaway attached. To settle, create a giveaway with this description: <code class="penalty-description">Penalty GA - &lt;won giveaway link&gt;</code></span>
-      <ul class="penalty-list">${items}${more}</ul>
+      <div class="penalty-card-head">
+        ${buildBadge("danger", "Penalties owed")}
+        <h3>${debts.length} penalt${debts.length === 1 ? "y" : "ies"} to pay${escapeHtml(memberNote)}</h3>
+      </div>
+      <span class="meta-line">Incomplete wins past their ${PENALTY_GRACE_MONTHS}-month deadline with no penalty giveaway attached.${escapeHtml(timedFrom)} <a class="penalty-card-link" href="penalties.html">Open penalties &rarr;</a></span>
+      <span class="meta-line">To settle, create a giveaway described <code class="penalty-description">Penalty GA - &lt;won giveaway link&gt;</code></span>
+      <div class="penalty-groups">${groupsMarkup}</div>
     </article>
   `;
 }
 
-// One-line "where the winner stands" summary for an owed penalty: how much
-// playtime and how many achievements they have versus the PoP threshold, plus
-// how far short they still are. Empty when the game has no HLTB/achievement data
-// to measure against.
-function buildPenaltyStatusParts(win, game) {
+// One owed penalty as a self-contained tile: the game (linked to the giveaway the
+// winner has to play), how overdue it is, and how far short they are on each
+// requirement. The copy button hands over the exact description the settling
+// giveaway needs, which is the one thing the card used to describe but never give.
+function buildPenaltyTile(debt) {
+  const win = debt.win;
+  const game = debt.game;
+  const title = String(game?.title || win.title || "a won game");
+  const url = getGiveawayUrl(win);
+  const titleMarkup = url
+    ? `<a class="linked-title" href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(title)}</a>`
+    : escapeHtml(title);
+
+  // Same art resolution chain the PoP table's game cell uses, leading with the
+  // wide header image so the tile reads like the giveaway cards.
+  const syncedGiveaway = findSyncedGiveawayForWin(win, game);
+  const resolvedAppId = getResolvedGameAppId(game, syncedGiveaway);
+  const fallback = getSteamMediaUrls(resolvedAppId);
+  const image = buildImageMarkup({
+    className: "penalty-thumb",
+    alt: title,
+    appId: resolvedAppId,
+    sources: [
+      game?.headerImageUrl,
+      syncedGiveaway?.headerImageUrl,
+      game?.capsuleImageUrl,
+      syncedGiveaway?.capsuleImageUrl,
+      game?.capsuleSmallUrl,
+      syncedGiveaway?.capsuleSmallUrl,
+      fallback.headerImageUrl,
+      fallback.capsuleImageUrl,
+      fallback.capsuleSmallUrl,
+    ],
+    placeholder: "No art",
+  });
+  const steamAppUrl = game?.steamAppUrl || syncedGiveaway?.steamAppUrl || "";
+  const imageMarkup = steamAppUrl
+    ? `<a class="penalty-thumb-link" href="${escapeHtml(steamAppUrl)}" target="_blank" rel="noreferrer">${image}</a>`
+    : image;
+
+  const metaParts = [`due ${formatPenaltyDeadline(debt.deadline)}`];
+  if (debt.popMonth) {
+    metaParts.push(`PoP ${formatMonthKey(debt.popMonth)}`);
+  }
+
+  // SteamGifts has no query parameters for prefilling /giveaways/new, so the
+  // closest thing to a "create it with the description already in" link is to put
+  // the description on the clipboard and open the form in the same click: one
+  // paste on arrival, then pick the group.
+  const settleButton = url
+    ? `<button type="button" class="penalty-copy" data-copy-penalty="Penalty GA - ${escapeHtml(url)}" data-open-url="${escapeHtml(NEW_GIVEAWAY_URL)}">Create penalty GA &#8599;</button>`
+    : "";
+
+  return `
+    <article class="penalty-tile">
+      ${imageMarkup}
+      <div class="penalty-tile-head">
+        <span class="penalty-tile-title">${titleMarkup}</span>
+        ${buildBadge("danger", `Overdue ${Number(debt.daysOverdue || 0)}d`)}
+      </div>
+      <span class="penalty-tile-meta">${escapeHtml(metaParts.join(" · "))}</span>
+      ${buildPenaltyMeters(win, debt.game)}
+      ${settleButton}
+    </article>
+  `;
+}
+
+// The two PoP requirements as meters. Falls back to a note when the game has no
+// HLTB time and no achievement total to measure against (that state still counts
+// as a penalty, so it must say something rather than render empty bars).
+function buildPenaltyMeters(win, game) {
+  const figures = getPenaltyProgressFigures(win, game);
+  const meters = [];
+  if (figures.requiredHours > 0) {
+    meters.push(buildPenaltyMeter("Playtime", figures.currentHours, figures.requiredHours, formatHours));
+  }
+  if (figures.requiredAchievements > 0) {
+    const label = figures.totalAchievements
+      ? `Achievements (${figures.totalAchievements} total)`
+      : "Achievements";
+    meters.push(
+      buildPenaltyMeter(label, figures.currentAchievements, figures.requiredAchievements, (value) =>
+        String(Math.round(value)),
+      ),
+    );
+  }
+  if (!meters.length) {
+    return `<span class="penalty-status">No playtime or achievement data synced yet.</span>`;
+  }
+  return `<div class="penalty-meters">${meters.join("")}</div>`;
+}
+
+function buildPenaltyMeter(label, current, required, format) {
+  const percent = required > 0 ? Math.min(100, Math.max(0, (current / required) * 100)) : 0;
+  const shortfall = Math.max(0, required - current);
+  const note = shortfall > 0 ? `${format(shortfall)} short` : "met";
+  return `
+    <div class="penalty-meter">
+      <div class="penalty-meter-head">
+        <span class="penalty-meter-label">${escapeHtml(label)} <span class="penalty-meter-note${shortfall > 0 ? "" : " is-met"}">${escapeHtml(note)}</span></span>
+        <span class="penalty-meter-value">${escapeHtml(`${format(current)} / ${format(required)}`)}</span>
+      </div>
+      <div class="penalty-meter-track">
+        <div class="penalty-meter-fill${shortfall > 0 ? "" : " is-met"}" style="width: ${percent.toFixed(1)}%"></div>
+      </div>
+    </div>
+  `;
+}
+
+// Puts the settling giveaway's description on the clipboard. Deliberately does
+// not re-render: the transient "Copied" label lives on the button itself and a
+// render would wipe it.
+async function handleCopyPenaltyDescription(button) {
+  const text = String(button.dataset.copyPenalty || "");
+  const openUrl = String(button.dataset.openUrl || "");
+  const restore = button.innerHTML;
+  let copied = false;
+  if (text && navigator.clipboard?.writeText) {
+    try {
+      await navigator.clipboard.writeText(text);
+      copied = true;
+    } catch {
+      copied = false;
+    }
+  }
+  // Open regardless: a failed clipboard write (insecure origin, denied
+  // permission) shouldn't block getting to the form.
+  if (openUrl) {
+    window.open(openUrl, "_blank", "noreferrer");
+  }
+  button.textContent = copied ? "Description copied - paste it in" : "Copy failed, description not copied";
+  button.classList.add(copied ? "is-copied" : "is-failed");
+  window.setTimeout(() => {
+    button.innerHTML = restore;
+    button.classList.remove("is-copied", "is-failed");
+  }, 2600);
+}
+
+// Raw "where the winner stands" figures for an owed penalty: playtime and
+// achievements against the PoP threshold. Returns numbers so the caller decides
+// the presentation (meters here, text elsewhere).
+function getPenaltyProgressFigures(win, game) {
   const progress = evaluateMonthlyProgress(win);
   const resolvedGame = game || findById("games", win.gameId);
-  const currentHours = Number(win.currentHours || 0);
-  const requiredHours = Number(progress.requiredHours || 0);
-  const currentAchievements = Number(win.earnedAchievements || 0);
-  const requiredAchievements = Number(progress.requiredAchievements || 0);
-  const totalAchievements = getGameAchievementsTotal(resolvedGame);
-
-  const parts = [];
-  if (requiredHours > 0) {
-    const shortHours = Math.max(0, requiredHours - currentHours);
-    const suffix = shortHours > 0 ? ` (${formatHours(shortHours)} short)` : " (met)";
-    parts.push(`Playtime ${formatHours(currentHours)} / ${formatHours(requiredHours)} needed${suffix}`);
-  }
-  if (requiredAchievements > 0) {
-    const shortAchievements = Math.max(0, requiredAchievements - currentAchievements);
-    const total = totalAchievements ? ` of ${totalAchievements}` : "";
-    const suffix = shortAchievements > 0 ? ` (${shortAchievements} short)` : " (met)";
-    parts.push(`Achievements ${currentAchievements}${total} / ${requiredAchievements} needed${suffix}`);
-  }
-  return parts;
+  return {
+    currentHours: Number(win.currentHours || 0),
+    requiredHours: Number(progress.requiredHours || 0),
+    currentAchievements: Number(win.earnedAchievements || 0),
+    requiredAchievements: Number(progress.requiredAchievements || 0),
+    totalAchievements: getGameAchievementsTotal(resolvedGame),
+  };
 }
 
 function renderRecentGiveaways() {
@@ -2554,25 +2706,55 @@ function getCurrentCycleMissingGiveawaySummary() {
 
 function buildGiveawayCard(giveaway) {
   const title = escapeHtml(giveaway.title || "Unknown giveaway");
+  // Header art first: it is the widest of the three and the card now leads with a
+  // full-width 16:9 image instead of a 92x48 thumbnail nobody could recognise.
   const image = buildImageMarkup({
     className: "giveaway-image",
     alt: title,
     appId: giveaway?.appId,
-    sources: [giveaway.capsuleImageUrl, giveaway.headerImageUrl, giveaway.capsuleSmallUrl],
+    sources: [giveaway.headerImageUrl, giveaway.capsuleImageUrl, giveaway.capsuleSmallUrl],
     placeholder: "No image",
   });
 
+  const winners = (giveaway.winners || []).filter(Boolean);
+  const noWinners = giveaway.resultStatus === "no_winners";
+  const winnerMarkup = noWinners
+    ? `<span class="giveaway-winner is-empty">No winners</span>`
+    : winners.length
+      ? `<span class="giveaway-winner" title="${escapeHtml(winners.join(", "))}">${escapeHtml(
+          winners.length > 1 ? `${winners[0]} +${winners.length - 1}` : winners[0],
+        )}</span>`
+      : "";
+
+  const creator = String(giveaway.creatorUsername || "").trim();
+  const creatorMarkup = creator
+    ? giveaway.creatorProfileUrl
+      ? `<a class="linked-title" href="${escapeHtml(giveaway.creatorProfileUrl)}" target="_blank" rel="noreferrer">${escapeHtml(creator)}</a>`
+      : escapeHtml(creator)
+    : "-";
+
+  const facts = [];
+  const points = Number(giveaway.points || 0);
+  if (points > 0) {
+    facts.push(`${points}P`);
+  }
+  facts.push(`${Number(giveaway.entriesCount || 0).toLocaleString("en-US")} entries`);
+  if (giveaway.endDate) {
+    facts.push(formatDate(giveaway.endDate));
+  }
+
   return `
     <article class="giveaway-card">
-      ${giveaway.steamAppUrl ? `<a href="${escapeHtml(giveaway.steamAppUrl)}" target="_blank" rel="noreferrer">${image}</a>` : image}
+      ${giveaway.steamAppUrl ? `<a class="giveaway-image-link" href="${escapeHtml(giveaway.steamAppUrl)}" target="_blank" rel="noreferrer">${image}</a>` : image}
       <div class="giveaway-card-body">
         <h3 class="giveaway-title">
           ${giveaway.url ? `<a href="${escapeHtml(giveaway.url)}" target="_blank" rel="noreferrer">${title}</a>` : title}
         </h3>
-        <span class="meta-line">Created by ${escapeHtml(giveaway.creatorUsername || "-")}</span>
+        ${winnerMarkup}
         <div class="giveaway-meta-line">
-          <span>${Number(giveaway.entriesCount || 0).toLocaleString("en-US")} entries</span>
+          <span class="giveaway-creator">by ${creatorMarkup}</span>
         </div>
+        <div class="giveaway-meta-line">${facts.map((fact) => `<span>${escapeHtml(fact)}</span>`).join("")}</div>
       </div>
     </article>
   `;
@@ -2699,14 +2881,15 @@ function renderMonthlyDetailsTable(target, winsSubset, sortMode = elements.month
           </td>
           <td class="status-notes-cell">
             <div class="status-notes-stack">
-              ${buildBadge(progress.badge, progress.label)}
-              <span class="meta-line">${escapeHtml(progress.note)}</span>
-              ${effectiveMonth ? `<span class="meta-line">Counts in ${escapeHtml(formatMonthKey(effectiveMonth))}${win?.monthOverride ? " (manual override)" : ""}</span>` : ""}
+              <div class="status-notes-line">
+                ${buildBadge(progress.badge, progress.label)}
+                ${effectiveMonth ? `<span class="meta-line">in ${escapeHtml(formatMonthKey(effectiveMonth))}${win?.monthOverride ? " (override)" : ""}</span>` : ""}
+              </div>
               ${prereleaseNote ? `<span class="meta-line">${escapeHtml(prereleaseNote)}</span>` : ""}
-            </div>
-            ${buildEvidenceNoteMarkup(win.evidenceNotes, win.progressLinks)}
-            <div class="row-actions">
-              <button class="inline-action" data-edit-action="month" data-win-id="${win.id}">Edit month</button>
+              <div class="status-notes-line">
+                <button class="inline-action" data-edit-action="month" data-win-id="${win.id}">Edit month</button>
+                ${buildEvidenceNoteMarkup(win.evidenceNotes, win.progressLinks)}
+              </div>
             </div>
           </td>
         </tr>
@@ -2955,6 +3138,7 @@ function evaluateMonthlyProgress(win) {
 // release-aware), landing on the 1st of the following month: a January PoP win is
 // due June 1, February due July 1, and Gothic (shown in June) due November 1.
 // PoP months before Jan 2026 are grandfathered as paid.
+const NEW_GIVEAWAY_URL = "https://www.steamgifts.com/giveaways/new";
 const PENALTY_GRACE_MONTHS = 4;
 const PENALTY_TRACKING_START_MONTH = "2026-01";
 
@@ -3068,7 +3252,12 @@ function getWinPenaltyInfo(win) {
 
 function getWinPenaltyDebt(win) {
   const info = getWinPenaltyInfo(win);
-  return info && info.status === "overdue" ? { win, deadline: info.deadline } : null;
+  if (!info || info.status !== "overdue") {
+    return null;
+  }
+  // Carry daysOverdue/popMonth through: the overview card renders both, and
+  // recomputing them there would duplicate the classifier.
+  return { win, deadline: info.deadline, daysOverdue: info.daysOverdue, popMonth: info.popMonth };
 }
 
 function getOutstandingPenalties() {
@@ -5366,7 +5555,7 @@ function buildEvidenceNoteMarkup(note, progressLinks) {
           `<a class="linked-title" href="${escapeHtml(String(link?.url || ""))}" target="_blank" rel="noreferrer">${escapeHtml(String(link?.title || "Achievements"))}</a>`,
       )
       .join(" • ");
-    return `<span class="meta-line">Steam sync achievements: ${links}</span>`;
+    return `<span class="meta-line">${links}</span>`;
   }
 
   const value = String(note || "").trim();
@@ -5376,12 +5565,12 @@ function buildEvidenceNoteMarkup(note, progressLinks) {
 
   const steamSyncMatch = value.match(/^Steam sync:\s*(https?:\/\/\S+)$/i);
   if (steamSyncMatch) {
-    return `<span class="meta-line">Steam sync: <a class="linked-title" href="${escapeHtml(steamSyncMatch[1])}" target="_blank" rel="noreferrer">Open achievements page</a></span>`;
+    return `<span class="meta-line"><a class="linked-title" href="${escapeHtml(steamSyncMatch[1])}" target="_blank" rel="noreferrer">Achievements &#8599;</a></span>`;
   }
 
   const urlOnlyMatch = value.match(/^(https?:\/\/\S+)$/i);
   if (urlOnlyMatch) {
-    return `<span class="meta-line"><a class="linked-title" href="${escapeHtml(urlOnlyMatch[1])}" target="_blank" rel="noreferrer">Open evidence link</a></span>`;
+    return `<span class="meta-line"><a class="linked-title" href="${escapeHtml(urlOnlyMatch[1])}" target="_blank" rel="noreferrer">Evidence &#8599;</a></span>`;
   }
 
   return `<span class="meta-line">${escapeHtml(value)}</span>`;

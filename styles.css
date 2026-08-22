@@ -204,20 +204,190 @@ h2 {
 
 #member-overview .penalty-owed-card {
   grid-column: 1 / -1;
+  padding: 14px 16px 16px;
 }
 
-.penalty-list {
-  margin: 8px 0 0;
-  padding-left: 18px;
-  font-size: 0.85rem;
-  line-height: 1.6;
-  color: var(--muted, #c7d2e2);
-  max-height: 240px;
+/* The card lives in the member grid, so `.member-card strong` (a 1.3rem block)
+   would hit any bold text inside it. Nothing here emits <strong>, but keep the
+   guard so a future edit can't reintroduce the blow-up. */
+.penalty-owed-card strong {
+  display: inline;
+  margin: 0;
+  font-size: inherit;
+}
+
+.penalty-card-head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#member-overview .penalty-owed-card .penalty-card-head h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.penalty-card-link {
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.penalty-card-link:hover {
+  text-decoration: underline;
+}
+
+/* Members flow side by side, so the usual 2-3 penalties fill one row instead of
+   stacking down the page. The cap only bites when a Steam refresh flips a batch
+   of deadlines at once. */
+.penalty-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  align-items: start;
+  gap: 12px;
+  margin-top: 12px;
+  max-height: 560px;
   overflow: auto;
 }
 
-.penalty-list li {
-  margin-bottom: 8px;
+.penalty-group {
+  display: grid;
+  gap: 6px;
+  align-content: start;
+}
+
+.penalty-group-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+
+.penalty-group-count {
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: rgba(239, 68, 68, 0.18);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #fca5a5;
+}
+
+.penalty-tiles {
+  display: grid;
+  gap: 8px;
+}
+
+.penalty-thumb-link {
+  display: block;
+  line-height: 0;
+}
+
+.penalty-thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 460 / 215;
+  object-fit: cover;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #1d2633 0%, #11161e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.penalty-thumb.placeholder {
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.penalty-tile {
+  display: grid;
+  gap: 7px;
+  align-content: start;
+  padding: 9px;
+  border: 1px solid var(--line);
+  border-left: 3px solid rgba(239, 68, 68, 0.65);
+  border-radius: 12px;
+  background: rgba(15, 17, 21, 0.55);
+}
+
+.penalty-tile-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.penalty-tile-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.penalty-tile-meta {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.penalty-meters {
+  display: grid;
+  gap: 6px;
+}
+
+.penalty-meter {
+  display: grid;
+  gap: 3px;
+}
+
+.penalty-meter-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 0.76rem;
+  color: var(--muted);
+}
+
+.penalty-meter-label {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.penalty-meter-value {
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+
+.penalty-meter-track {
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.18);
+  overflow: hidden;
+}
+
+.penalty-meter-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--danger);
+}
+
+.penalty-meter-fill.is-met {
+  background: var(--success);
+}
+
+.penalty-meter-note {
+  color: #fca5a5;
+}
+
+.penalty-meter-note.is-met {
+  color: var(--success);
 }
 
 .penalty-status {
@@ -225,6 +395,31 @@ h2 {
   font-size: 0.8rem;
   color: var(--muted, #9fb0c6);
   opacity: 0.85;
+}
+
+.penalty-copy {
+  justify-self: start;
+  padding: 4px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(110, 168, 254, 0.35);
+  background: #1a2233;
+  color: #f4f7fb;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.penalty-copy:hover {
+  border-color: rgba(110, 168, 254, 0.6);
+}
+
+.penalty-copy.is-copied {
+  border-color: rgba(34, 197, 94, 0.55);
+  color: #86efac;
+}
+
+.penalty-copy.is-failed {
+  border-color: rgba(239, 68, 68, 0.55);
+  color: #fca5a5;
 }
 
 .penalty-description {
@@ -309,26 +504,32 @@ h2 {
   color: var(--danger);
 }
 
+/* Wraps instead of scrolling sideways: the whole set is visible at once and the
+   cards use the full width of the dashboard. */
 .giveaway-grid {
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(220px, 250px);
-  gap: 10px;
-  overflow-x: auto;
-  padding-bottom: 4px;
-  scroll-snap-type: x proximity;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 12px;
 }
 
 .giveaway-card {
   display: flex;
-  align-items: stretch;
-  gap: 10px;
+  flex-direction: column;
+  gap: 8px;
   background: var(--panel-strong);
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 10px;
-  min-height: 74px;
-  scroll-snap-align: start;
+  overflow: hidden;
+}
+
+.giveaway-card:hover {
+  border-color: rgba(110, 168, 254, 0.4);
+}
+
+.giveaway-image-link {
+  display: block;
+  line-height: 0;
 }
 
 .giveaway-card-body {
@@ -336,6 +537,32 @@ h2 {
   min-width: 0;
   display: grid;
   gap: 4px;
+  align-content: start;
+}
+
+.giveaway-winner {
+  font-size: 0.8rem;
+  color: var(--success);
+}
+
+.giveaway-winner::before {
+  content: "Won by ";
+  color: var(--muted);
+}
+
+.giveaway-winner.is-empty {
+  color: var(--muted);
+}
+
+.giveaway-winner.is-empty::before {
+  content: "";
+}
+
+.giveaway-creator {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .giveaway-image,
@@ -368,11 +595,10 @@ h2 {
 }
 
 .giveaway-image {
-  width: 92px;
-  min-width: 92px;
-  height: 48px;
+  width: 100%;
+  aspect-ratio: 460 / 215;
   object-fit: cover;
-  align-self: center;
+  border-radius: 10px;
 }
 
 .game-thumb {
@@ -390,10 +616,16 @@ h2 {
   font-size: 0.8rem;
 }
 
+/* Two lines max, then ellipsis: long store titles used to push the card taller
+   than its neighbours and break the grid's rhythm. */
 .giveaway-title {
   margin: 0;
   font-size: 0.9rem;
   line-height: 1.25;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .giveaway-title a,
@@ -801,13 +1033,29 @@ td small,
   font: inherit;
 }
 
+/* Cap the width so the notes wrap inside the cell instead of stretching the whole
+   table wider than the viewport. */
 .status-notes-cell {
-  min-width: 220px;
+  min-width: 190px;
+  max-width: 260px;
 }
 
 .status-notes-stack {
   display: grid;
-  gap: 4px;
+  gap: 5px;
+}
+
+/* Badge, counted month and the edit button share one line: three stacked rows
+   was most of this column's height. */
+.status-notes-line {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.status-notes-line .meta-line {
+  margin-top: 0;
 }
 
 .progress-row.success td {
@@ -944,8 +1192,9 @@ td small,
     grid-column: auto;
   }
 
-  .giveaway-grid {
-    grid-auto-columns: minmax(220px, 240px);
+
+  .penalty-groups {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -987,12 +1236,6 @@ td small,
   }
 
   .giveaway-grid {
-    grid-auto-columns: minmax(200px, 220px);
-  }
-
-  .giveaway-image {
-    width: 82px;
-    min-width: 82px;
-    height: 42px;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   }
 }
