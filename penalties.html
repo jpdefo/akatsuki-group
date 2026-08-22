@@ -10,12 +10,12 @@
   <body>
     <div class="app-shell">
       <header class="hero">
-        <div>
-          <p class="eyebrow">Play or pay</p>
-          <h1>Akatsuki Penalties</h1>
-          <p class="hero-copy">
-            Who owes a penalty giveaway, who is approaching a deadline, and which penalties have already been paid.
-          </p>
+        <div class="hero-identity">
+          <img class="hero-logo" src="akatsuki.png" alt="Akatsuki" />
+          <div>
+            <h1>Akatsuki Penalties</h1>
+            <p class="hero-copy">Who owes a penalty giveaway, and when it is due</p>
+          </div>
         </div>
         <div class="hero-actions page-nav">
           <a class="button secondary" href="index.html">Overview</a>
@@ -28,25 +28,20 @@
           <a class="button secondary" href="inactive-users.html">Inactive users</a>
           <a class="button secondary" href="giveaways.html">Giveaways</a>
           <a class="button secondary" href="admin.html">Admin</a>
+          <span class="hero-sync-actions">
+            <button id="sync-refresh" class="button primary">Load server sync</button>
+            <button id="steam-refresh-all" class="button secondary">Refresh Steam data</button>
+          </span>
           <button id="quick-publish" class="button primary" hidden>Publish to GitHub Pages</button>
         </div>
       </header>
 
       <main>
-        <section class="card">
-          <div class="section-heading">
-            <div>
-              <h2>Automatic sync</h2>
-              <p class="section-copy">
-                Load the server sync here too if you want to refresh this page directly.
-              </p>
-            </div>
+        <section class="card sync-card">
+          <div class="sync-bar">
+            <h2 class="sync-bar-title">Automatic sync</h2>
+            <div id="sync-status" class="sync-status"></div>
           </div>
-          <div class="sync-actions">
-            <button id="sync-refresh" class="button primary">Load server sync</button>
-            <button id="steam-refresh-all" class="button secondary">Refresh Steam data</button>
-          </div>
-          <div id="sync-status" class="sync-status"></div>
         </section>
 
         <section class="card">
@@ -54,42 +49,48 @@
             <div>
               <h2>Penalties</h2>
               <p class="section-copy">
-                A winner who hasn't met the PoP threshold within 4 months of winning owes a penalty giveaway
-                (<strong>Penalty GA - &lt;won giveaway link&gt;</strong>) for that game. Wins before January 2026 are
-                grandfathered as paid, and finishing the game later clears the debt.
+                Still under the threshold 4 months after a win? That is one penalty giveaway owed.
+                <details class="rule-details">
+                  <summary>Rules</summary>
+                  Settle it with a giveaway described
+                  <code class="penalty-description">Penalty GA - &lt;won giveaway link&gt;</code>, which each card's
+                  button copies for you. Finishing the game clears the debt at any point, even past the deadline.
+                  Wins from before January 2026 are grandfathered as paid.
+                </details>
               </p>
             </div>
             <div class="section-summary">
               <div id="storage-status" class="pill"></div>
-              <p id="penalties-summary" class="section-copy"></p>
+              <div id="penalties-clock" class="pill"></div>
             </div>
-            <div class="section-filters">
+          </div>
+
+          <div id="penalties-summary-cards" class="summary-grid penalties-summary-grid"></div>
+
+          <div class="penalties-controls">
+            <div id="penalties-filter" class="segmented" role="group" aria-label="Filter penalties">
+              <button type="button" class="segmented-option" data-penalties-filter="all">All</button>
+              <button type="button" class="segmented-option" data-penalties-filter="overdue">Owed now</button>
+              <button type="button" class="segmented-option" data-penalties-filter="coming-due">Coming due</button>
+              <button type="button" class="segmented-option" data-penalties-filter="settled">Settled</button>
+            </div>
+            <div class="penalties-controls-right">
               <label class="inline-filter">
-                Show
-                <select id="penalties-filter">
-                  <option value="all">All</option>
-                  <option value="overdue">Owed now</option>
-                  <option value="coming-due">Coming due</option>
-                  <option value="settled">Settled</option>
+                Search
+                <input id="penalties-search" type="search" placeholder="Member or game" autocomplete="off" />
+              </label>
+              <label class="inline-filter">
+                Sort within each date
+                <select id="penalties-sort">
+                  <option value="member" selected>Member (A-Z)</option>
+                  <option value="shortfall">Furthest from the threshold</option>
+                  <option value="game">Game (A-Z)</option>
                 </select>
               </label>
             </div>
           </div>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Member</th>
-                  <th>Game</th>
-                  <th>Hours (have / need)</th>
-                  <th>Achievements (have / need)</th>
-                  <th>Status</th>
-                  <th>Deadline</th>
-                </tr>
-              </thead>
-              <tbody id="penalties-table"></tbody>
-            </table>
-          </div>
+
+          <div id="penalties-groups" class="penalty-page-groups"></div>
         </section>
       </main>
     </div>

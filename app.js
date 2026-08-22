@@ -106,6 +106,10 @@ const runtime = {
   hltbEditState: null,
   sharedOverrides: normalizeOverrideState(),
   sharedOverridesLoaded: false,
+  // Penalties page view state. Not persisted: it is a per-visit lens, and the
+  // filter is also settable by clicking a summary card.
+  penaltiesFilter: "all",
+  penaltiesSearch: "",
 };
 const GAME_OVERRIDE_FIELDS = ["hltbHoursOverride", "hltbUrlOverride", "achievementTargetOverride"];
 const WIN_OVERRIDE_FIELDS = ["requiredAchievementsOverride", "monthOverride"];
@@ -138,8 +142,11 @@ const elements = {
   monthlySort: document.querySelector("#monthly-sort"),
   monthlyProgressTable: document.querySelector("#monthly-progress-table"),
   penaltiesFilter: document.querySelector("#penalties-filter"),
-  penaltiesTable: document.querySelector("#penalties-table"),
-  penaltiesSummary: document.querySelector("#penalties-summary"),
+  penaltiesGroups: document.querySelector("#penalties-groups"),
+  penaltiesSummaryCards: document.querySelector("#penalties-summary-cards"),
+  penaltiesClock: document.querySelector("#penalties-clock"),
+  penaltiesSearch: document.querySelector("#penalties-search"),
+  penaltiesSort: document.querySelector("#penalties-sort"),
   cycleFilter: document.querySelector("#cycle-filter"),
   cycleSummary: document.querySelector("#cycle-summary"),
   cycleBestGifterWarning: document.querySelector("#cycle-best-gifter-warning"),
@@ -245,7 +252,7 @@ async function loadFullData() {
 // Pages fully served by derived.json: penalties + active/inactive member lists.
 // Their table ids appear only on those pages, so presence is a reliable signal.
 function detectDerivedFastPage() {
-  return Boolean(elements.penaltiesTable || elements.activeUsersTable || elements.inactiveUsersTable);
+  return Boolean(elements.penaltiesGroups || elements.activeUsersTable || elements.inactiveUsersTable);
 }
 
 function hasLocalOverrides() {
@@ -348,15 +355,19 @@ function bindEvents() {
   elements.activeUsersSort?.addEventListener("change", () => renderMemberBuckets());
   elements.monthlyMemberFilter?.addEventListener("change", () => {
     // Looking at a single member's wins reads best newest-first; the all-members
-    // view defaults back to "least hours first" for PoP triage. The user can pick
-    // any sort afterwards (this only sets the default on member switch).
+    // view defaults back to winner order. The user can pick any sort afterwards
+    // (this only sets the default on member switch).
     if (elements.monthlySort) {
       const viewingMember = (elements.monthlyMemberFilter.value || "all") !== "all";
-      elements.monthlySort.value = viewingMember ? "date-desc" : "hours-asc";
+      elements.monthlySort.value = viewingMember ? "date-desc" : "winner";
     }
     renderProgressViews();
   });
-  elements.penaltiesFilter?.addEventListener("change", () => renderPenaltiesPage());
+  elements.penaltiesSort?.addEventListener("change", () => renderPenaltiesPage());
+  elements.penaltiesSearch?.addEventListener("input", () => {
+    runtime.penaltiesSearch = elements.penaltiesSearch.value || "";
+    renderPenaltiesPage();
+  });
 
   document.addEventListener("click", (event) => {
     const editButton = event.target.closest("[data-edit-action]");
@@ -374,6 +385,13 @@ function bindEvents() {
     const copyPenaltyButton = event.target.closest("[data-copy-penalty]");
     if (copyPenaltyButton) {
       handleCopyPenaltyDescription(copyPenaltyButton);
+      return;
+    }
+
+    const penaltiesFilterButton = event.target.closest("[data-penalties-filter]");
+    if (penaltiesFilterButton) {
+      runtime.penaltiesFilter = penaltiesFilterButton.dataset.penaltiesFilter || "all";
+      renderPenaltiesPage();
       return;
     }
 
@@ -802,15 +820,33 @@ async function updateCollectorVersionStatus(installedVersion) {
   if (!latest) {
     return;
   }
+  // Short labels: this lands in a one-line chip, and the full explanation lives
+  // in the title attribute for anyone who hovers.
   if (!installedVersion) {
-    node.innerHTML = `<span class="sync-collector-warn">Latest userscript: v${escapeHtml(latest)} — run a sync with the updated userscript to record its version here.</span>`;
+    node.innerHTML = `<span class="sync-collector-warn" title="Run a sync with the updated userscript to record its version here.">v${escapeHtml(latest)} available</span>`;
     return;
   }
   if (compareCollectorVersions(installedVersion, latest) < 0) {
-    node.innerHTML = `<a class="sync-collector-warn" href="${escapeHtml(COLLECTOR_SCRIPT_RAW_URL)}" target="_blank" rel="noreferrer">⚠ Userscript outdated — v${escapeHtml(latest)} available (this sync used v${escapeHtml(installedVersion)}). Click to update.</a>`;
+    node.innerHTML = `<a class="sync-collector-warn" href="${escapeHtml(COLLECTOR_SCRIPT_RAW_URL)}" target="_blank" rel="noreferrer" title="This sync used v${escapeHtml(installedVersion)}. Click to update to v${escapeHtml(latest)}.">&#9888; update to v${escapeHtml(latest)}</a>`;
   } else {
-    node.innerHTML = `<span class="sync-collector-ok">Userscript up to date (v${escapeHtml(latest)}).</span>`;
+    node.innerHTML = `<span class="sync-collector-ok" title="Userscript up to date (v${escapeHtml(latest)}).">up to date</span>`;
   }
+}
+
+// One compact chip per data source, on a single line. Same component on every
+// page: the sync freshness is reference data you glance at, so it should cost a
+// line, not a block of hero tiles.
+function buildSyncChip({ label, updatedAt, tone = "", emptyText = "" }) {
+  const known = Boolean(updatedAt);
+  const value = known ? formatDateTime(updatedAt) : emptyText || "not refreshed";
+  const ago = known ? formatTimeAgoShort(updatedAt) : "";
+  return `
+    <span class="sync-chip ${escapeHtml(tone)}">
+      <span class="sync-chip-label">${escapeHtml(label)}</span>
+      <span class="sync-chip-value" title="${escapeHtml(value)}">${escapeHtml(known ? formatDate(updatedAt) : value)}</span>
+      ${ago ? `<span class="sync-chip-ago">${escapeHtml(ago)}</span>` : ""}
+    </span>
+  `;
 }
 
 function renderSyncStatus() {
@@ -823,16 +859,21 @@ function renderSyncStatus() {
     const syncedAt = state.sync?.dashboard?.summary?.syncedAt;
     const collectorVersion = String(state.sync?.dashboard?.summary?.collectorVersion || "").trim();
     elements.syncStatus.innerHTML = `
-      <article class="alert-card info">
-        <h3>Published snapshot</h3>
-        <p>Showing precomputed data${syncedAt ? ` from the ${escapeHtml(formatDateTime(syncedAt))} sync` : ""}.</p>
-        <p class="sync-collector">${collectorVersion ? `Userscript v${escapeHtml(collectorVersion)}` : "Userscript version unknown"}</p>
-        <p id="collector-version-status" class="sync-collector-status"></p>
-      </article>
+      <span class="sync-chip info">
+        <span class="sync-chip-label">Published snapshot</span>
+        <span class="sync-chip-value">${escapeHtml(syncedAt ? formatDate(syncedAt) : "unknown")}</span>
+        ${syncedAt ? `<span class="sync-chip-ago">${escapeHtml(formatTimeAgoShort(syncedAt))}</span>` : ""}
+      </span>
+      <span class="sync-chip">
+        <span class="sync-chip-label">Userscript</span>
+        <span class="sync-chip-value">${collectorVersion ? `v${escapeHtml(collectorVersion)}` : "unknown"}</span>
+        <span id="collector-version-status" class="sync-chip-ago"></span>
+      </span>
     `;
     updateCollectorVersionStatus(collectorVersion);
     return;
   }
+
   const sync = state.sync?.steamgifts;
   const progressUpdatedAt = state.sync?.steamProgressUpdatedAt;
   const dashboardSummary = state.sync?.dashboard?.summary;
@@ -841,10 +882,10 @@ function renderSyncStatus() {
 
   if (!sync) {
     elements.syncStatus.innerHTML = `
-      <article class="alert-card info">
-        <h3>No SteamGifts sync loaded</h3>
-        <p>Open the Admin tools page to import a SteamGifts JSON file, or install the SteamGifts userscript and run it from the group page.</p>
-      </article>
+      <span class="sync-chip warning">
+        <span class="sync-chip-label">No SteamGifts sync loaded</span>
+        <span class="sync-chip-ago">Import a JSON on Admin, or run the userscript on the group page.</span>
+      </span>
     `;
     return;
   }
@@ -867,38 +908,24 @@ function renderSyncStatus() {
   const giveawayCount = dashboardSummary?.giveaways ?? state.giveaways.length;
 
   elements.syncStatus.innerHTML = `
-    <article class="alert-card success sync-stat">
-      <h3>SteamGifts synced</h3>
-      <p class="sync-time">${formatDateTime(sync.syncedAt)}</p>
-      <p class="sync-ago">${escapeHtml(formatTimeAgo(sync.syncedAt))}</p>
-      <p class="sync-collector">${collectorVersion ? `Userscript v${escapeHtml(collectorVersion)}` : "Userscript version unknown"}</p>
-      <p id="collector-version-status" class="sync-collector-status"></p>
-    </article>
-    <article class="alert-card info sync-stat">
-      <h3>Achievements synced</h3>
-      ${
-        progressUpdatedAt
-          ? `<p class="sync-time">${formatDateTime(progressUpdatedAt)}</p>
-             <p class="sync-ago">${escapeHtml(formatTimeAgo(progressUpdatedAt))}</p>`
-          : `<p class="sync-empty">Not refreshed yet.</p>`
-      }
-    </article>
-    <article class="alert-card ${librarySummary?.libraryApiEnabled ? "success" : "warning"} sync-stat">
-      <h3>Playtime synced</h3>
-      ${
-        playtimeUpdatedAt
-          ? `<p class="sync-time">${formatDateTime(playtimeUpdatedAt)}</p>
-             <p class="sync-ago">${escapeHtml(formatTimeAgo(playtimeUpdatedAt))}</p>`
-          : librarySummary?.libraryApiEnabled
-            ? `<p class="sync-empty">No snapshot stored yet.</p>`
-            : `<p class="sync-empty">Set STEAM_WEB_API_KEY to enable playtime snapshots.</p>`
-      }
-    </article>
-    <article class="alert-card sync-stat">
-      <h3>Group</h3>
-      <p class="sync-time">${memberCount} members</p>
-      <p class="sync-ago">${giveawayCount} tracked giveaways</p>
-    </article>
+    ${buildSyncChip({ label: "SteamGifts", updatedAt: sync.syncedAt, tone: "success" })}
+    ${buildSyncChip({ label: "Achievements", updatedAt: progressUpdatedAt, tone: "info" })}
+    ${buildSyncChip({
+      label: "Playtime",
+      updatedAt: playtimeUpdatedAt,
+      tone: librarySummary?.libraryApiEnabled ? "success" : "warning",
+      emptyText: librarySummary?.libraryApiEnabled ? "no snapshot yet" : "needs STEAM_WEB_API_KEY",
+    })}
+    <span class="sync-chip">
+      <span class="sync-chip-label">Group</span>
+      <span class="sync-chip-value">${memberCount} members</span>
+      <span class="sync-chip-ago">${giveawayCount} giveaways</span>
+    </span>
+    <span class="sync-chip">
+      <span class="sync-chip-label">Userscript</span>
+      <span class="sync-chip-value">${collectorVersion ? `v${escapeHtml(collectorVersion)}` : "unknown"}</span>
+      <span id="collector-version-status" class="sync-chip-ago"></span>
+    </span>
   `;
   updateCollectorVersionStatus(collectorVersion);
 }
@@ -926,6 +953,30 @@ function formatTimeAgo(dateInput) {
   }
   const days = Math.floor(hours / 24);
   return `Updated ${days} day${days === 1 ? "" : "s"} ago`;
+}
+
+// Short form of formatTimeAgo for the sync chips, which must stay on one line.
+function formatTimeAgoShort(dateInput) {
+  if (!dateInput) {
+    return "";
+  }
+  const then = new Date(dateInput).getTime();
+  if (!Number.isFinite(then)) {
+    return "";
+  }
+  const diffMs = Date.now() - then;
+  const minutes = Math.floor(diffMs / 60000);
+  if (minutes < 1) {
+    return "just now";
+  }
+  if (minutes < 60) {
+    return `${minutes}m ago`;
+  }
+  const hours = Math.floor(minutes / 60);
+  if (hours < 24) {
+    return `${hours}h ago`;
+  }
+  return `${Math.floor(hours / 24)}d ago`;
 }
 
 function renderServerViews() {
@@ -975,41 +1026,40 @@ function renderMemberOverview() {
 }
 
 function buildPenaltiesOwedCard() {
-  const debts = getOutstandingPenalties();
+  if (!isPenaltyDataReady()) {
+    return "";
+  }
+  const debts = buildPenaltiesPageData().owedNow.map((row) => ({ ...row, status: "overdue" }));
   if (!debts.length) {
     return "";
   }
 
   // Group by member so someone who owes several games reads as one block instead
-  // of repeating their name per row. getOutstandingPenalties already sorts by
-  // deadline, so insertion order puts the most urgent member first and keeps each
-  // member's own tiles deadline-ordered.
+  // of repeating their name per tile. buildPenaltiesPageData already sorts by
+  // deadline, so insertion order puts the most urgent member first.
   const groups = new Map();
-  for (const debt of debts) {
-    const name = String(debt.member?.name || debt.win.winnerUsername || "Unknown member");
-    const key = debt.member?.id || debt.win.memberId || name;
-    if (!groups.has(key)) {
-      groups.set(key, { name, debts: [] });
+  for (const row of debts) {
+    const name = String(row.member || "Unknown member");
+    if (!groups.has(name)) {
+      groups.set(name, []);
     }
-    groups.get(key).debts.push(debt);
+    groups.get(name).push(row);
   }
 
-  const groupsMarkup = Array.from(groups.values())
-    .map((group) => {
-      const count =
-        group.debts.length > 1 ? `<span class="penalty-group-count">${group.debts.length}</span>` : "";
+  const groupsMarkup = Array.from(groups.entries())
+    .map(([name, rows]) => {
+      const count = rows.length > 1 ? `<span class="penalty-group-count">${rows.length}</span>` : "";
       return `
         <section class="penalty-group">
-          <h4 class="penalty-group-name">${escapeHtml(group.name)}${count}</h4>
-          <div class="penalty-tiles">${group.debts.map(buildPenaltyTile).join("")}</div>
+          <h4 class="penalty-group-name">${escapeHtml(name)}${count}</h4>
+          <div class="penalty-tiles">${rows.map((row) => buildPenaltyRowTile(row)).join("")}</div>
         </section>
       `;
     })
     .join("");
 
   // Which Steam refresh the "Overdue Xd" counters are measured from, so a stale
-  // sync is visible instead of silently skewing them (same idea as the summary
-  // line on the penalties page).
+  // sync is visible instead of silently skewing them.
   const reference = formatDate(getPenaltyReferenceDate());
   const timedFrom = reference && reference !== "-" ? ` Timed from the ${reference} Steam sync.` : "";
   const memberNote = groups.size > 1 ? ` across ${groups.size} members` : "";
@@ -1027,69 +1077,75 @@ function buildPenaltiesOwedCard() {
   `;
 }
 
-// One owed penalty as a self-contained tile: the game (linked to the giveaway the
-// winner has to play), how overdue it is, and how far short they are on each
-// requirement. The copy button hands over the exact description the settling
-// giveaway needs, which is the one thing the card used to describe but never give.
-function buildPenaltyTile(debt) {
-  const win = debt.win;
-  const game = debt.game;
-  const title = String(game?.title || win.title || "a won game");
-  const url = getGiveawayUrl(win);
-  const titleMarkup = url
-    ? `<a class="linked-title" href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(title)}</a>`
+// One penalty as a self-contained tile: the game art, how overdue it is, and how
+// far short the winner still is on each requirement. Shared by the overview card
+// (grouped by member) and the penalties page (grouped by date), so the two always
+// look the same. Art is resolved from appId, the one field both the live and the
+// derived row shapes carry.
+function buildPenaltyRowTile(row, { showMember = false } = {}) {
+  const settled = row.status === "settled";
+  const title = String(row.game || "a won game");
+  const linkUrl = settled ? row.wonGiveawayUrl || row.giveawayPageUrl : row.giveawayUrl;
+  const titleMarkup = linkUrl
+    ? `<a class="linked-title" href="${escapeHtml(linkUrl)}" target="_blank" rel="noreferrer">${escapeHtml(title)}</a>`
     : escapeHtml(title);
 
-  // Same art resolution chain the PoP table's game cell uses, leading with the
-  // wide header image so the tile reads like the giveaway cards.
-  const syncedGiveaway = findSyncedGiveawayForWin(win, game);
-  const resolvedAppId = getResolvedGameAppId(game, syncedGiveaway);
-  const fallback = getSteamMediaUrls(resolvedAppId);
+  // The synced URLs first: guessing header.jpg from an appId 404s for packages and
+  // some delisted apps. The derived URLs are the fallback, and buildImageMarkup's
+  // onerror handler still does a store lookup for the appId after those.
+  const fallback = getSteamMediaUrls(row.appId);
   const image = buildImageMarkup({
     className: "penalty-thumb",
     alt: title,
-    appId: resolvedAppId,
+    appId: row.appId,
     sources: [
-      game?.headerImageUrl,
-      syncedGiveaway?.headerImageUrl,
-      game?.capsuleImageUrl,
-      syncedGiveaway?.capsuleImageUrl,
-      game?.capsuleSmallUrl,
-      syncedGiveaway?.capsuleSmallUrl,
+      row.headerImageUrl,
+      row.capsuleImageUrl,
       fallback.headerImageUrl,
       fallback.capsuleImageUrl,
+      row.capsuleSmallUrl,
       fallback.capsuleSmallUrl,
     ],
     placeholder: "No art",
   });
-  const steamAppUrl = game?.steamAppUrl || syncedGiveaway?.steamAppUrl || "";
-  const imageMarkup = steamAppUrl
-    ? `<a class="penalty-thumb-link" href="${escapeHtml(steamAppUrl)}" target="_blank" rel="noreferrer">${image}</a>`
+  const imageMarkup = row.steamAppUrl
+    ? `<a class="penalty-thumb-link" href="${escapeHtml(row.steamAppUrl)}" target="_blank" rel="noreferrer">${image}</a>`
     : image;
 
-  const metaParts = [`due ${formatPenaltyDeadline(debt.deadline)}`];
-  if (debt.popMonth) {
-    metaParts.push(`PoP ${formatMonthKey(debt.popMonth)}`);
+  const metaParts = [];
+  if (settled) {
+    metaParts.push(`paid ${row.createdAt ? formatDate(row.createdAt) : "-"}`);
+  } else {
+    metaParts.push(`due ${formatPenaltyDeadline(row.deadline ? new Date(row.deadline) : null)}`);
+  }
+  if (row.popMonth) {
+    metaParts.push(`PoP ${formatMonthKey(row.popMonth)}`);
   }
 
-  // SteamGifts has no query parameters for prefilling /giveaways/new, so the
-  // closest thing to a "create it with the description already in" link is to put
-  // the description on the clipboard and open the form in the same click: one
-  // paste on arrival, then pick the group.
-  const settleButton = url
-    ? `<button type="button" class="penalty-copy" data-copy-penalty="Penalty GA - ${escapeHtml(url)}" data-open-url="${escapeHtml(NEW_GIVEAWAY_URL)}">Create penalty GA &#8599;</button>`
-    : "";
+  const action = settled
+    ? row.giveawayPageUrl
+      ? `<a class="penalty-ga-link" href="${escapeHtml(row.giveawayPageUrl)}" target="_blank" rel="noreferrer">Penalty GA &#8599;</a>`
+      : ""
+    : row.giveawayUrl
+      ? `<button type="button" class="penalty-copy" data-copy-penalty="Penalty GA - ${escapeHtml(row.giveawayUrl)}" data-open-url="${escapeHtml(NEW_GIVEAWAY_URL)}" title="Copies &quot;Penalty GA - ${escapeHtml(row.giveawayUrl)}&quot; to your clipboard and opens the SteamGifts create-giveaway page. Paste it into the description with Ctrl+V, then pick the group.">
+          <span class="penalty-copy-title">Create penalty GA &#8599;</span>
+          <span class="penalty-copy-hint">copies the description for Ctrl+V</span>
+        </button>`
+      : "";
+
+  const memberLine = showMember ? `<span class="penalty-tile-member">${escapeHtml(row.member || "")}</span>` : "";
 
   return `
-    <article class="penalty-tile">
+    <article class="penalty-tile${settled ? " settled" : ""}">
       ${imageMarkup}
       <div class="penalty-tile-head">
         <span class="penalty-tile-title">${titleMarkup}</span>
-        ${buildBadge("danger", `Overdue ${Number(debt.daysOverdue || 0)}d`)}
+        ${getPenaltyStatusBadge(row)}
       </div>
+      ${memberLine}
       <span class="penalty-tile-meta">${escapeHtml(metaParts.join(" · "))}</span>
-      ${buildPenaltyMeters(win, debt.game)}
-      ${settleButton}
+      ${buildPenaltyRowMeters(row)}
+      ${action}
     </article>
   `;
 }
@@ -1097,19 +1153,20 @@ function buildPenaltyTile(debt) {
 // The two PoP requirements as meters. Falls back to a note when the game has no
 // HLTB time and no achievement total to measure against (that state still counts
 // as a penalty, so it must say something rather than render empty bars).
-function buildPenaltyMeters(win, game) {
-  const figures = getPenaltyProgressFigures(win, game);
+function buildPenaltyRowMeters(row) {
   const meters = [];
-  if (figures.requiredHours > 0) {
-    meters.push(buildPenaltyMeter("Playtime", figures.currentHours, figures.requiredHours, formatHours));
+  if (Number(row.requiredHours || 0) > 0) {
+    meters.push(buildPenaltyMeter("Playtime", Number(row.currentHours || 0), Number(row.requiredHours || 0), formatHours));
   }
-  if (figures.requiredAchievements > 0) {
-    const label = figures.totalAchievements
-      ? `Achievements (${figures.totalAchievements} total)`
-      : "Achievements";
+  if (Number(row.requiredAchievements || 0) > 0) {
+    // No "(N total)" here: it pushed the meter head onto a second line, and the
+    // PoP table already carries the game's achievement total.
     meters.push(
-      buildPenaltyMeter(label, figures.currentAchievements, figures.requiredAchievements, (value) =>
-        String(Math.round(value)),
+      buildPenaltyMeter(
+        "Achievements",
+        Number(row.earnedAchievements || 0),
+        Number(row.requiredAchievements || 0),
+        (value) => String(Math.round(value)),
       ),
     );
   }
@@ -1136,9 +1193,10 @@ function buildPenaltyMeter(label, current, required, format) {
   `;
 }
 
-// Puts the settling giveaway's description on the clipboard. Deliberately does
-// not re-render: the transient "Copied" label lives on the button itself and a
-// render would wipe it.
+// The "create penalty GA" action: load the clipboard with the exact description
+// the settling giveaway needs, then open the form. SteamGifts has no query
+// parameters for prefilling /giveaways/new, so a paste is as close as it gets --
+// the button says so, and the confirmation names the Ctrl+V.
 async function handleCopyPenaltyDescription(button) {
   const text = String(button.dataset.copyPenalty || "");
   const openUrl = String(button.dataset.openUrl || "");
@@ -1157,17 +1215,19 @@ async function handleCopyPenaltyDescription(button) {
   if (openUrl) {
     window.open(openUrl, "_blank", "noreferrer");
   }
-  button.textContent = copied ? "Description copied - paste it in" : "Copy failed, description not copied";
+  button.innerHTML = copied
+    ? `<span class="penalty-copy-title">Copied &#10003;</span><span class="penalty-copy-hint">paste with Ctrl+V in the description</span>`
+    : `<span class="penalty-copy-title">Copy failed</span><span class="penalty-copy-hint">${escapeHtml(text)}</span>`;
   button.classList.add(copied ? "is-copied" : "is-failed");
   window.setTimeout(() => {
     button.innerHTML = restore;
     button.classList.remove("is-copied", "is-failed");
-  }, 2600);
+  }, 3200);
 }
 
 // Raw "where the winner stands" figures for an owed penalty: playtime and
 // achievements against the PoP threshold. Returns numbers so the caller decides
-// the presentation (meters here, text elsewhere).
+// the presentation.
 function getPenaltyProgressFigures(win, game) {
   const progress = evaluateMonthlyProgress(win);
   const resolvedGame = game || findById("games", win.gameId);
@@ -2838,7 +2898,7 @@ function computeMemberBucketRows(isActiveMember) {
     .sort((left, right) => compareMemberBucketRows(left, right, sortMode));
 }
 
-function renderMonthlyDetailsTable(target, winsSubset, sortMode = elements.monthlySort?.value || "hours-asc") {
+function renderMonthlyDetailsTable(target, winsSubset, sortMode = elements.monthlySort?.value || "winner") {
   if (!winsSubset.length) {
     target.innerHTML = buildEmptyRow(9);
     return;
@@ -2905,6 +2965,23 @@ function compareMonthlyWins(left, right, sortMode) {
   const rightGame = findById("games", right.gameId);
   const leftProgress = evaluateMonthlyProgress(left);
   const rightProgress = evaluateMonthlyProgress(right);
+
+  // Unmet thresholds first in every mode: the table exists to surface who still
+  // owes playtime, so a completed win never sits above an incomplete one.
+  const thresholdRank = (progress) => (progress.badge === "danger" ? 0 : 1);
+  const completionCompare = thresholdRank(leftProgress) - thresholdRank(rightProgress);
+  if (completionCompare !== 0) {
+    return completionCompare;
+  }
+
+  if (sortMode === "winner") {
+    const winnerCompare = String(leftMember?.name || "").localeCompare(String(rightMember?.name || ""), "en-US", {
+      sensitivity: "base",
+    });
+    if (winnerCompare !== 0) {
+      return winnerCompare;
+    }
+  }
 
   if (sortMode === "creator") {
     const creatorCompare = String(left.creatorUsername || "").localeCompare(String(right.creatorUsername || ""), "en-US", {
@@ -3311,206 +3388,298 @@ function getGiveawayPageUrl(giveaway) {
   return code ? `https://www.steamgifts.com/giveaway/${code}/` : "";
 }
 
-// "have / need" cells for a win: current playtime vs required 25%, and earned
-// achievements vs the required 10%.
-function buildPenaltyProgressCells(win) {
-  if (!win) {
-    return ["-", "-"];
-  }
-  const progress = evaluateMonthlyProgress(win);
-  const hours = `${formatHours(Number(win.currentHours || 0))} / ${formatHours(progress.requiredHours || 0)}`;
-  const achievements = `${Number(win.earnedAchievements || 0)} / ${progress.requiredAchievements || 0}`;
-  return [hours, achievements];
-}
-
-// The counts plus the date the "Overdue Xd" / "Due in Xd" badges are measured
-// from, so a stale Steam refresh is visible instead of silently skewing them.
-function buildPenaltiesSummaryText(overdueCount, comingCount, settledCount, referenceDate) {
-  const base = `${overdueCount} owed now • ${comingCount} coming due • ${settledCount} settled`;
-  const formatted = referenceDate ? formatDate(referenceDate) : "";
-  return formatted && formatted !== "-" ? `${base} • timed from the ${formatted} Steam sync` : base;
-}
-
 function isPenaltyDataReady() {
   return Boolean(state.sync?.steamProgressUpdatedAt) && runtime.sharedOverridesLoaded;
 }
 
+// Both render paths now agree on one row shape (the one derived.json already
+// emits), so the page has a single renderer instead of two that drifted apart.
+// Both render paths agree on one row shape (the one derived.json emits), so the
+// page has a single renderer and the tiles are literally the same component the
+// overview card uses.
 function renderPenaltiesPage() {
-  if (!elements.penaltiesTable) {
+  if (!elements.penaltiesGroups) {
     return;
   }
-  if (runtime.derivedFastPath && runtime.derived?.penalties) {
-    renderPenaltiesPageFromDerived(runtime.derived.penalties);
-    return;
-  }
-  if (!isPenaltyDataReady()) {
-    elements.penaltiesTable.innerHTML = `<tr><td colspan="6" class="meta-line">Loading penalty data — waiting for Steam playtime/achievements and overrides…</td></tr>`;
-    if (elements.penaltiesSummary) {
-      elements.penaltiesSummary.textContent = "Loading…";
+
+  const data =
+    runtime.derivedFastPath && runtime.derived?.penalties
+      ? runtime.derived.penalties
+      : isPenaltyDataReady()
+        ? buildPenaltiesPageData()
+        : null;
+
+  if (!data) {
+    elements.penaltiesGroups.innerHTML = buildEmptyPanel(
+      "Loading penalty data",
+      "Waiting for Steam playtime/achievements and overrides…",
+    );
+    if (elements.penaltiesSummaryCards) {
+      elements.penaltiesSummaryCards.innerHTML = "";
+    }
+    if (elements.penaltiesClock) {
+      elements.penaltiesClock.textContent = "Loading…";
     }
     return;
   }
-  const filter = elements.penaltiesFilter?.value || "all";
 
-  const winRows = [];
+  renderPenaltiesSummaryCards(data);
+  renderPenaltiesClock(data.referenceDate);
+  renderPenaltiesFilterButtons();
+  renderPenaltiesGroups(data);
+}
+
+// The live equivalent of buildPenaltyAndMemberDerived's penalties block. Keeping
+// the two shapes identical is what lets one renderer serve both paths.
+function buildPenaltiesPageData() {
+  const owedNow = [];
+  const comingDue = [];
+
   for (const win of state.wins) {
     const info = getWinPenaltyInfo(win);
     if (!info || (info.status !== "overdue" && info.status !== "coming-due")) {
       continue;
     }
-    winRows.push({ win, info });
-  }
-  const settled = getPenaltyGiveawayRecords();
-  const overdueCount = winRows.filter((row) => row.info.status === "overdue").length;
-  const comingCount = winRows.filter((row) => row.info.status === "coming-due").length;
-
-  if (elements.penaltiesSummary) {
-    elements.penaltiesSummary.textContent = buildPenaltiesSummaryText(
-      overdueCount,
-      comingCount,
-      settled.length,
-      getPenaltyReferenceDate(),
-    );
-  }
-
-  const linkedGame = (title, url) =>
-    url
-      ? `<a class="linked-title" href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(title)}</a>`
-      : escapeHtml(title);
-
-  const rows = [];
-
-  if (filter === "all" || filter === "overdue" || filter === "coming-due") {
-    winRows
-      .filter((row) => filter === "all" || row.info.status === filter)
-      .sort((left, right) => left.info.deadline.getTime() - right.info.deadline.getTime())
-      .forEach(({ win, info }) => {
-        const member = findById("members", win.memberId);
-        const game = findById("games", win.gameId);
-        const overdue = info.status === "overdue";
-        const statusBadge = buildBadge(
-          overdue ? "danger" : "warning",
-          overdue ? `Overdue ${info.daysOverdue}d` : `Due in ${info.daysLeft}d`,
-        );
-        const [hoursCell, achievementsCell] = buildPenaltyProgressCells(win);
-        // Not yet paid -> the game links to the won giveaway (the one to play).
-        rows.push(`
-          <tr>
-            <td>${escapeHtml(member?.name || win.winnerUsername || "Unknown member")}</td>
-            <td>${linkedGame(game?.title || win.title || "", getGiveawayUrl(win))}</td>
-            <td>${escapeHtml(hoursCell)}</td>
-            <td>${escapeHtml(achievementsCell)}</td>
-            <td>${statusBadge}</td>
-            <td>${escapeHtml(formatPenaltyDeadline(info.deadline))}</td>
-          </tr>
-        `);
-      });
-  }
-
-  if (filter === "all" || filter === "settled") {
-    for (const record of settled) {
-      const payer = record.creator?.name || record.giveaway.creatorUsername || "Unknown member";
-      const gameTitle = record.targetGame?.title || record.target?.title || record.giveaway.title || "";
-      const [hoursCell, achievementsCell] = buildPenaltyProgressCells(record.targetWin);
-      // Paid -> the game that broke the rules links to its won giveaway, with
-      // a secondary link to the created penalty giveaway.
-      const wonUrl = getGiveawayPageUrl(record.target);
-      const penaltyUrl = getGiveawayPageUrl(record.giveaway);
-      const penaltyLink =
-        wonUrl && penaltyUrl
-          ? ` <a class="penalty-ga-link" href="${escapeHtml(penaltyUrl)}" target="_blank" rel="noreferrer">Penalty GA ↗</a>`
-          : "";
-      rows.push(`
-        <tr>
-          <td>${escapeHtml(payer)}</td>
-          <td>${linkedGame(gameTitle, wonUrl || penaltyUrl)}${penaltyLink}</td>
-          <td>${escapeHtml(hoursCell)}</td>
-          <td>${escapeHtml(achievementsCell)}</td>
-          <td>${buildBadge("success", "Settled")}</td>
-          <td>${escapeHtml(record.giveaway.createdAt ? formatDate(record.giveaway.createdAt) : "-")}</td>
-        </tr>
-      `);
+    const member = findById("members", win.memberId);
+    const game = findById("games", win.gameId);
+    const figures = getPenaltyProgressFigures(win, game);
+    const syncedGiveaway = findSyncedGiveawayForWin(win, game);
+    const row = {
+      member: member?.name || win.winnerUsername || "Unknown member",
+      game: game?.title || win.title || "",
+      appId: getResolvedGameAppId(game, syncedGiveaway) || null,
+      steamAppUrl: game?.steamAppUrl || syncedGiveaway?.steamAppUrl || "",
+      headerImageUrl: game?.headerImageUrl || syncedGiveaway?.headerImageUrl || "",
+      capsuleImageUrl: game?.capsuleImageUrl || syncedGiveaway?.capsuleImageUrl || "",
+      capsuleSmallUrl: game?.capsuleSmallUrl || syncedGiveaway?.capsuleSmallUrl || "",
+      giveawayUrl: getGiveawayUrl(win),
+      deadline: info.deadline instanceof Date ? info.deadline.toISOString() : null,
+      popMonth: info.popMonth,
+      currentHours: figures.currentHours,
+      requiredHours: figures.requiredHours,
+      earnedAchievements: figures.currentAchievements,
+      requiredAchievements: figures.requiredAchievements,
+      totalAchievements: figures.totalAchievements,
+    };
+    if (info.status === "overdue") {
+      row.daysOverdue = info.daysOverdue;
+      owedNow.push(row);
+    } else {
+      row.daysLeft = info.daysLeft;
+      comingDue.push(row);
     }
   }
 
-  elements.penaltiesTable.innerHTML = rows.length ? rows.join("") : buildEmptyRow(6);
+  const settled = getPenaltyGiveawayRecords().map((record) => {
+    const figures = record.targetWin
+      ? getPenaltyProgressFigures(record.targetWin, record.targetGame)
+      : { currentHours: 0, requiredHours: 0, currentAchievements: 0, requiredAchievements: 0, totalAchievements: 0 };
+    return {
+      payer: record.creator?.name || record.giveaway.creatorUsername || "Unknown member",
+      game: record.targetGame?.title || record.target?.title || record.giveaway.title || "",
+      appId: Number(record.targetGame?.appId || 0) || null,
+      steamAppUrl: record.targetGame?.steamAppUrl || "",
+      headerImageUrl: record.targetGame?.headerImageUrl || record.target?.headerImageUrl || "",
+      capsuleImageUrl: record.targetGame?.capsuleImageUrl || record.target?.capsuleImageUrl || "",
+      capsuleSmallUrl: record.targetGame?.capsuleSmallUrl || record.target?.capsuleSmallUrl || "",
+      giveawayPageUrl: getGiveawayPageUrl(record.giveaway),
+      wonGiveawayUrl: getGiveawayPageUrl(record.target),
+      createdAt: record.giveaway.createdAt || null,
+      currentHours: figures.currentHours,
+      requiredHours: figures.requiredHours,
+      earnedAchievements: figures.currentAchievements,
+      requiredAchievements: figures.requiredAchievements,
+      totalAchievements: figures.totalAchievements,
+    };
+  });
+
+  return {
+    referenceDate: getPenaltyReferenceDate(),
+    counts: { overdue: owedNow.length, comingDue: comingDue.length, settled: settled.length },
+    owedNow,
+    comingDue,
+    settled,
+  };
 }
 
-// Renders the penalties table straight from precomputed derived.json rows (the
-// fast path), formatting raw figures with the same helpers the live path uses.
-function renderPenaltiesPageFromDerived(penalties) {
-  const filter = elements.penaltiesFilter?.value || "all";
-  const owedNow = penalties.owedNow || [];
-  const comingDue = penalties.comingDue || [];
-  const settled = penalties.settled || [];
-
-  if (elements.penaltiesSummary) {
-    elements.penaltiesSummary.textContent = buildPenaltiesSummaryText(
-      owedNow.length,
-      comingDue.length,
-      settled.length,
-      penalties.referenceDate || "",
-    );
+// Counts as clickable cards: they were a prose sentence, which made the page's
+// main axis invisible and unclickable.
+function renderPenaltiesSummaryCards(data) {
+  if (!elements.penaltiesSummaryCards) {
+    return;
   }
+  const counts = data.counts || {
+    overdue: (data.owedNow || []).length,
+    comingDue: (data.comingDue || []).length,
+    settled: (data.settled || []).length,
+  };
+  const cards = [
+    { filter: "all", label: "Outstanding", value: Number(counts.overdue || 0) + Number(counts.comingDue || 0), tone: "" },
+    { filter: "overdue", label: "Owed now", value: Number(counts.overdue || 0), tone: "danger" },
+    { filter: "coming-due", label: "Coming due", value: Number(counts.comingDue || 0), tone: "warning" },
+    { filter: "settled", label: "Settled", value: Number(counts.settled || 0), tone: "success" },
+  ];
+  elements.penaltiesSummaryCards.innerHTML = cards
+    .map((card) => {
+      const active = runtime.penaltiesFilter === card.filter;
+      return `
+        <button type="button" class="summary-card penalties-summary-card ${card.tone}${active ? " is-active" : ""}" data-penalties-filter="${escapeHtml(card.filter)}" aria-pressed="${active}">
+          <strong>${card.value}</strong>
+          <span>${escapeHtml(card.label)}</span>
+        </button>
+      `;
+    })
+    .join("");
+}
 
-  const linkedGame = (title, url) =>
-    url
-      ? `<a class="linked-title" href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${escapeHtml(title)}</a>`
-      : escapeHtml(title);
-  const gameCell = (row) => linkedGame(row.game, row.giveawayUrl || row.giveawayPageUrl);
-  const hoursCell = (row) => `${formatHours(Number(row.currentHours || 0))} / ${formatHours(Number(row.requiredHours || 0))}`;
-  const achievementsCell = (row) => `${Number(row.earnedAchievements || 0)} / ${Number(row.requiredAchievements || 0)}`;
+// Every "Overdue Xd" / "Due in Xd" on this page is measured from the Steam
+// refresh that produced the playtime and achievements, not from today. A stale
+// refresh silently skews all of them, so say how stale it is.
+function renderPenaltiesClock(referenceDate) {
+  if (!elements.penaltiesClock) {
+    return;
+  }
+  const reference = String(referenceDate || "").slice(0, 10);
+  if (!reference) {
+    elements.penaltiesClock.textContent = "No Steam refresh recorded";
+    elements.penaltiesClock.className = "pill danger";
+    return;
+  }
+  const days = differenceInDays(parseDate(todayISO()), parseDate(reference));
+  const staleness = !Number.isFinite(days) || days <= 3 ? "" : days <= 14 ? " warning" : " danger";
+  const age = !Number.isFinite(days) || days <= 0 ? "today" : days === 1 ? "1 day old" : `${days} days old`;
+  elements.penaltiesClock.textContent = `Timed from the ${formatDate(reference)} Steam sync (${age})`;
+  elements.penaltiesClock.className = `pill${staleness}`;
+}
+
+function renderPenaltiesFilterButtons() {
+  if (!elements.penaltiesFilter) {
+    return;
+  }
+  for (const button of elements.penaltiesFilter.querySelectorAll("[data-penalties-filter]")) {
+    const active = button.dataset.penaltiesFilter === runtime.penaltiesFilter;
+    button.classList.toggle("is-active", active);
+    button.setAttribute("aria-pressed", String(active));
+  }
+}
+
+// How far a row still is from the PoP threshold, as a 0-2 score (each
+// requirement contributes its own fraction). Drives the "furthest from the
+// threshold" sort.
+function getPenaltyShortfallScore(row) {
+  const requiredHours = Number(row.requiredHours || 0);
+  const requiredAchievements = Number(row.requiredAchievements || 0);
+  const hoursGap = requiredHours > 0 ? Math.max(0, requiredHours - Number(row.currentHours || 0)) / requiredHours : 0;
+  const achievementGap =
+    requiredAchievements > 0
+      ? Math.max(0, requiredAchievements - Number(row.earnedAchievements || 0)) / requiredAchievements
+      : 0;
+  return hoursGap + achievementGap;
+}
+
+// "Due in 6d" and "Due in 128d" used to carry the same warning badge. Grade them
+// so the ones that actually need attention stand out.
+function getPenaltyStatusBadge(row) {
+  if (row.status === "settled") {
+    return buildBadge("success", "Settled");
+  }
+  if (row.status === "overdue") {
+    return buildBadge("danger", `Overdue ${Number(row.daysOverdue || 0)}d`);
+  }
+  const days = Number(row.daysLeft || 0);
+  const level = days <= 14 ? "danger" : days <= 45 ? "warning" : "info";
+  return buildBadge(level, `Due in ${days}d`);
+}
+
+// The page is organised by date: one section per deadline (or per month paid, for
+// settled rows), so you see each wave of penalties as a set.
+function renderPenaltiesGroups(data) {
+  const filter = runtime.penaltiesFilter || "all";
+  const search = String(runtime.penaltiesSearch || "").trim().toLowerCase();
+  const sortMode = elements.penaltiesSort?.value || "member";
 
   const rows = [];
-
-  if (filter === "all" || filter === "overdue" || filter === "coming-due") {
-    [
-      ...owedNow.map((row) => ({ ...row, status: "overdue" })),
-      ...comingDue.map((row) => ({ ...row, status: "coming-due" })),
-    ]
-      .filter((row) => filter === "all" || row.status === filter)
-      .sort((left, right) => new Date(left.deadline || 0).getTime() - new Date(right.deadline || 0).getTime())
-      .forEach((row) => {
-        const overdue = row.status === "overdue";
-        const statusBadge = buildBadge(
-          overdue ? "danger" : "warning",
-          overdue ? `Overdue ${row.daysOverdue}d` : `Due in ${row.daysLeft}d`,
-        );
-        rows.push(`
-          <tr>
-            <td>${escapeHtml(row.member)}</td>
-            <td>${gameCell(row)}</td>
-            <td>${escapeHtml(hoursCell(row))}</td>
-            <td>${escapeHtml(achievementsCell(row))}</td>
-            <td>${statusBadge}</td>
-            <td>${escapeHtml(formatPenaltyDeadline(row.deadline ? new Date(row.deadline) : null))}</td>
-          </tr>
-        `);
-      });
+  if (filter === "all" || filter === "overdue") {
+    rows.push(...(data.owedNow || []).map((row) => ({ ...row, status: "overdue" })));
   }
-
+  if (filter === "all" || filter === "coming-due") {
+    rows.push(...(data.comingDue || []).map((row) => ({ ...row, status: "coming-due" })));
+  }
   if (filter === "all" || filter === "settled") {
-    for (const row of settled) {
-      // Same linking as the live path: title -> won giveaway, plus a
-      // secondary link to the created penalty giveaway.
-      const penaltyLink =
-        row.wonGiveawayUrl && row.giveawayPageUrl
-          ? ` <a class="penalty-ga-link" href="${escapeHtml(row.giveawayPageUrl)}" target="_blank" rel="noreferrer">Penalty GA ↗</a>`
-          : "";
-      rows.push(`
-        <tr>
-          <td>${escapeHtml(row.payer)}</td>
-          <td>${linkedGame(row.game, row.wonGiveawayUrl || row.giveawayPageUrl)}${penaltyLink}</td>
-          <td>${escapeHtml(hoursCell(row))}</td>
-          <td>${escapeHtml(achievementsCell(row))}</td>
-          <td>${buildBadge("success", "Settled")}</td>
-          <td>${escapeHtml(row.createdAt ? formatDate(row.createdAt) : "-")}</td>
-        </tr>
-      `);
-    }
+    rows.push(...(data.settled || []).map((row) => ({ ...row, status: "settled", member: row.member || row.payer })));
   }
 
-  elements.penaltiesTable.innerHTML = rows.length ? rows.join("") : buildEmptyRow(6);
+  const visible = search
+    ? rows.filter((row) => `${row.member || ""} ${row.game || ""}`.toLowerCase().includes(search))
+    : rows;
+
+  if (!visible.length) {
+    elements.penaltiesGroups.innerHTML = search
+      ? buildEmptyPanel("No match", `Nothing matches "${search}".`)
+      : buildEmptyPanel("Nothing here", "No penalties in this view.");
+    return;
+  }
+
+  // Group key: the deadline for unpaid rows, the month it was paid for settled
+  // ones. Unpaid groups sort by date ascending (most urgent first) and always sit
+  // above the settled ones, which read newest-first as an audit trail.
+  const groups = new Map();
+  for (const row of visible) {
+    const settled = row.status === "settled";
+    const key = settled
+      ? `settled:${String(row.createdAt || "").slice(0, 7)}`
+      : `due:${String(row.deadline || "").slice(0, 10)}`;
+    if (!groups.has(key)) {
+      groups.set(key, {
+        settled,
+        sortValue: new Date(settled ? row.createdAt || 0 : row.deadline || 0).getTime(),
+        label: settled
+          ? `Paid ${row.createdAt ? formatMonthKey(String(row.createdAt).slice(0, 7)) : "date unknown"}`
+          : `Due ${formatPenaltyDeadline(row.deadline ? new Date(row.deadline) : null)}`,
+        rows: [],
+      });
+    }
+    groups.get(key).rows.push(row);
+  }
+
+  const byText = (left, right, key) =>
+    String(left[key] || "").localeCompare(String(right[key] || ""), "en", { sensitivity: "base" });
+  const sortRows = (list) =>
+    list.sort((left, right) => {
+      if (sortMode === "game") {
+        return byText(left, right, "game") || byText(left, right, "member");
+      }
+      if (sortMode === "shortfall") {
+        return getPenaltyShortfallScore(right) - getPenaltyShortfallScore(left) || byText(left, right, "member");
+      }
+      return byText(left, right, "member") || byText(left, right, "game");
+    });
+
+  const ordered = Array.from(groups.values()).sort((left, right) => {
+    if (left.settled !== right.settled) {
+      return left.settled ? 1 : -1;
+    }
+    return left.settled ? right.sortValue - left.sortValue : left.sortValue - right.sortValue;
+  });
+
+  elements.penaltiesGroups.innerHTML = ordered
+    .map((group) => {
+      sortRows(group.rows);
+      const badge = group.settled
+        ? buildBadge("success", `${group.rows.length} settled`)
+        : getPenaltyStatusBadge(group.rows[0]);
+      return `
+        <section class="penalty-date-group${group.settled ? " settled" : ""}">
+          <div class="penalty-date-heading">
+            <h3>${escapeHtml(group.label)}</h3>
+            ${badge}
+            <span class="meta-line">${group.rows.length} game${group.rows.length === 1 ? "" : "s"}</span>
+          </div>
+          <div class="penalty-tiles-grid">${group.rows.map((row) => buildPenaltyRowTile(row, { showMember: true })).join("")}</div>
+        </section>
+      `;
+    })
+    .join("");
 }
 
 function evaluateBaseMonthlyProgress(win) {

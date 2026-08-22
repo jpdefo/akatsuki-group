@@ -38,34 +38,49 @@ body {
   box-shadow: var(--shadow);
 }
 
+/* One compact bar: identity on the left, every destination and action on the
+   right. It is chrome on every page, so it costs a row, not a screenful. */
 .hero {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  padding: 24px;
-  margin-bottom: 18px;
+  gap: 16px;
+  padding: 10px 16px;
+  margin-bottom: 10px;
 }
 
-.hero-title {
+.hero-identity {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
+  min-width: 0;
 }
 
-.hero-logo-inline {
-  width: 72px;
-  height: 72px;
+.hero-logo {
+  width: 34px;
+  height: 34px;
   object-fit: contain;
   flex-shrink: 0;
 }
 
+.hero h1 {
+  font-size: 1.15rem;
+  line-height: 1.2;
+}
+
 .eyebrow {
-  margin: 0 0 8px;
+  margin: 0 0 3px;
   color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-size: 0.78rem;
   font-weight: 700;
+}
+
+.hero .hero-copy {
+  margin: 1px 0 0;
+  font-size: 0.8rem;
+  max-width: 46ch;
 }
 
 h1,
@@ -76,21 +91,29 @@ h2 {
 .hero-copy,
 .section-copy {
   color: var(--muted);
-  margin: 8px 0 0;
+  margin: 5px 0 0;
   max-width: 70ch;
   line-height: 1.4;
+  font-size: 0.88rem;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 8px;
   align-content: flex-start;
   justify-content: flex-end;
 }
 
 .page-nav {
-  gap: 10px;
+  gap: 5px;
+}
+
+.page-nav .button {
+  padding: 6px 10px;
+  border-radius: 9px;
+  font-size: 0.83rem;
+  font-weight: 600;
 }
 
 .page-nav .button[aria-current="page"] {
@@ -117,15 +140,15 @@ h2 {
 }
 
 .card {
-  padding: 18px;
+  padding: 14px 16px;
 }
 
 .section-heading {
   display: flex;
   justify-content: space-between;
-  gap: 16px;
+  gap: 14px;
   align-items: flex-start;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   flex-wrap: wrap;
 }
 
@@ -323,10 +346,21 @@ h2 {
   gap: 8px;
 }
 
+/* The badge is a fixed-width fact; only the title may wrap, and at most twice so
+   a long store name can't make one tile taller than its neighbours. */
+.penalty-tile-head .badge {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
 .penalty-tile-title {
   font-size: 0.95rem;
   font-weight: 600;
   line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .penalty-tile-meta {
@@ -351,6 +385,7 @@ h2 {
   gap: 8px;
   font-size: 0.76rem;
   color: var(--muted);
+  white-space: nowrap;
 }
 
 .penalty-meter-label {
@@ -358,6 +393,10 @@ h2 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.penalty-meter-value {
+  flex: 0 0 auto;
 }
 
 .penalty-meter-value {
@@ -398,14 +437,39 @@ h2 {
 }
 
 .penalty-copy {
-  justify-self: start;
-  padding: 4px 10px;
+  display: grid;
+  gap: 1px;
+  justify-self: stretch;
+  text-align: left;
+  padding: 6px 10px;
   border-radius: 8px;
   border: 1px solid rgba(110, 168, 254, 0.35);
   background: #1a2233;
   color: #f4f7fb;
+  font: inherit;
   font-size: 0.78rem;
   cursor: pointer;
+}
+
+.penalty-copy-title {
+  font-weight: 600;
+}
+
+/* Spells out that the click loads the clipboard, so the paste is expected. */
+.penalty-copy-hint {
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.penalty-copy.is-copied .penalty-copy-hint {
+  color: #86efac;
+}
+
+.penalty-copy.is-failed .penalty-copy-hint {
+  color: #fca5a5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .penalty-copy:hover {
@@ -420,6 +484,211 @@ h2 {
 .penalty-copy.is-failed {
   border-color: rgba(239, 68, 68, 0.55);
   color: #fca5a5;
+}
+
+/* Long-form rules stay out of the way until asked for. */
+.rule-details {
+  display: inline;
+}
+
+.rule-details > summary {
+  display: inline;
+  margin-left: 6px;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 0.82rem;
+}
+
+.rule-details[open] > summary {
+  display: block;
+  margin: 6px 0 4px;
+}
+
+.rule-details[open] {
+  display: block;
+  margin-top: 4px;
+}
+
+.penalty-page-groups {
+  display: grid;
+  gap: 18px;
+}
+
+/* One section per deadline, so each wave of penalties reads as a set. */
+.penalty-date-group {
+  display: grid;
+  gap: 10px;
+  padding: 13px 14px;
+  border: 1px solid var(--line);
+  border-left: 3px solid rgba(239, 68, 68, 0.5);
+  border-radius: 14px;
+  background: rgba(15, 17, 21, 0.4);
+}
+
+.penalty-date-group.settled {
+  border-left-color: rgba(34, 197, 94, 0.5);
+}
+
+.penalty-date-heading {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.penalty-date-heading h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.penalty-date-heading .meta-line {
+  margin-top: 0;
+}
+
+.penalty-tiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  align-items: start;
+  gap: 10px;
+}
+
+.penalty-tile-member {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.penalty-tile.settled {
+  border-left-color: rgba(34, 197, 94, 0.6);
+}
+
+/* --- Penalties page ---------------------------------------------------- */
+
+.penalties-summary-grid {
+  margin-bottom: 14px;
+}
+
+/* The counts are the page's main filter, so they are buttons, not text. */
+.penalties-summary-card {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  color: var(--text);
+  cursor: pointer;
+  padding: 14px 16px;
+}
+
+.penalties-summary-card strong {
+  font-size: 1.6rem;
+  margin-bottom: 4px;
+}
+
+.penalties-summary-card:hover {
+  border-color: rgba(110, 168, 254, 0.45);
+}
+
+.penalties-summary-card.is-active {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px rgba(110, 168, 254, 0.35);
+}
+
+.penalties-summary-card.danger strong {
+  color: #ffd0d0;
+}
+
+.penalties-summary-card.warning strong {
+  color: #ffe3ad;
+}
+
+.penalties-summary-card.success strong {
+  color: #c7f9d6;
+}
+
+.penalties-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.penalties-controls-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.segmented {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #0f131a;
+}
+
+.segmented-option {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  border-radius: 9px;
+  padding: 7px 13px;
+  font: inherit;
+  font-size: 0.86rem;
+  cursor: pointer;
+}
+
+.segmented-option:hover {
+  color: var(--text);
+}
+
+.segmented-option.is-active {
+  background: rgba(110, 168, 254, 0.16);
+  border: 1px solid rgba(110, 168, 254, 0.4);
+  padding: 6px 12px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.pill.warning {
+  background: rgba(245, 158, 11, 0.14);
+  color: #ffe3ad;
+  border-color: rgba(245, 158, 11, 0.35);
+}
+
+.pill.danger {
+  background: rgba(239, 68, 68, 0.14);
+  color: #ffd0d0;
+  border-color: rgba(239, 68, 68, 0.35);
+}
+
+/* Meter inside a table cell: figures on top, bar underneath. */
+.penalty-cell-meter {
+  display: grid;
+  gap: 4px;
+  min-width: 96px;
+}
+
+.penalty-date-cell {
+  white-space: nowrap;
+}
+
+.penalty-date-label {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.penalty-row.settled td {
+  background: rgba(34, 197, 94, 0.04);
+}
+
+.penalty-row.overdue td {
+  background: rgba(239, 68, 68, 0.05);
 }
 
 .penalty-description {
@@ -674,51 +943,95 @@ h2 {
 .sync-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 10px;
+  gap: 8px;
+}
+
+.sync-actions .button {
+  padding: 6px 10px;
+  font-size: 0.82rem;
+}
+
+/* The sync strip is the same component on every page: one line, always visible,
+   showing when each source was last updated. */
+.sync-card {
+  padding: 9px 14px;
+}
+
+.sync-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+}
+
+.sync-bar-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
 }
 
 .sync-status {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 12px;
-}
-
-.sync-stat {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
-.sync-stat .sync-time {
-  margin: 4px 0 0;
-  font-size: 1.45rem;
-  font-weight: 700;
-  line-height: 1.2;
+/* The sync tools live in the header now, so the strip itself is one line. */
+.hero-sync-actions {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-left: 10px;
+  margin-left: 4px;
+  border-left: 1px solid var(--line);
+}
+
+.hero-sync-actions .button {
+  padding: 6px 10px;
+  border-radius: 9px;
+  font-size: 0.83rem;
+}
+
+.sync-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  padding-left: 9px;
+  border-left: 2px solid var(--line);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.sync-chip.success {
+  border-left-color: rgba(34, 197, 94, 0.6);
+}
+
+.sync-chip.info {
+  border-left-color: rgba(110, 168, 254, 0.6);
+}
+
+.sync-chip.warning {
+  border-left-color: rgba(245, 158, 11, 0.6);
+}
+
+.sync-chip-label {
+  color: var(--muted);
+}
+
+.sync-chip-value {
   color: var(--text);
+  font-weight: 600;
 }
 
-.sync-stat .sync-ago {
-  margin: 0;
-  font-size: 0.85rem;
+.sync-chip-ago {
   color: var(--muted);
-}
-
-.sync-stat .sync-empty {
-  margin: 4px 0 0;
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-
-.sync-collector {
-  margin: 8px 0 0;
-  font-size: 0.85rem;
-  color: var(--muted);
-}
-
-.sync-collector-status {
-  margin: 2px 0 0;
-  font-size: 0.82rem;
+  font-size: 0.74rem;
 }
 
 .sync-collector-status .sync-collector-ok {
@@ -764,9 +1077,9 @@ h2 {
 .alert-card {
   border: 1px solid var(--line);
   background: var(--panel-strong);
-  border-left-width: 4px;
-  border-radius: 16px;
-  padding: 12px 14px;
+  border-left-width: 3px;
+  border-radius: 12px;
+  padding: 10px 12px;
 }
 
 .alert-card.warning {

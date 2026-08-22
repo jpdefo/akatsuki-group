@@ -10,12 +10,12 @@
   <body>
     <div class="app-shell">
       <header class="hero">
-        <div>
-          <p class="eyebrow">PoP review</p>
-          <h1>Akatsuki PoP Progress</h1>
-          <p class="hero-copy">
-            Focused winner threshold review without cycle administration mixed into the page.
-          </p>
+        <div class="hero-identity">
+          <img class="hero-logo" src="akatsuki.png" alt="Akatsuki" />
+          <div>
+            <h1>Akatsuki PoP Progress</h1>
+            <p class="hero-copy">Winner threshold review</p>
+          </div>
         </div>
         <div class="hero-actions page-nav">
           <a class="button secondary" href="index.html">Overview</a>
@@ -28,25 +28,20 @@
           <a class="button secondary" href="inactive-users.html">Inactive users</a>
           <a class="button secondary" href="giveaways.html">Giveaways</a>
           <a class="button secondary" href="admin.html">Admin</a>
+          <span class="hero-sync-actions">
+            <button id="sync-refresh" class="button primary">Load server sync</button>
+            <button id="steam-refresh-all" class="button secondary">Refresh Steam data</button>
+          </span>
           <button id="quick-publish" class="button primary" hidden>Publish to GitHub Pages</button>
         </div>
       </header>
 
       <main>
-        <section class="card">
-          <div class="section-heading">
-            <div>
-              <h2>Automatic sync</h2>
-              <p class="section-copy">
-                Load the server sync here too if you want to refresh this page directly.
-              </p>
-            </div>
+        <section class="card sync-card">
+          <div class="sync-bar">
+            <h2 class="sync-bar-title">Automatic sync</h2>
+            <div id="sync-status" class="sync-status"></div>
           </div>
-          <div class="sync-actions">
-            <button id="sync-refresh" class="button primary">Load server sync</button>
-            <button id="steam-refresh-all" class="button secondary">Refresh Steam data</button>
-          </div>
-          <div id="sync-status" class="sync-status"></div>
         </section>
 
         <section class="card">
@@ -83,7 +78,8 @@
               <label class="inline-filter">
                 Sort
                 <select id="monthly-sort">
-                  <option value="hours-asc" selected>Total hours (least first)</option>
+                  <option value="winner" selected>Winner (A-Z)</option>
+                  <option value="hours-asc">Total hours (least first)</option>
                   <option value="hours-desc">Total hours (most first)</option>
                   <option value="achievements-asc">Achievements % (least first)</option>
                   <option value="achievements-desc">Achievements % (most first)</option>

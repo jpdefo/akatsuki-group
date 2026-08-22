@@ -1331,6 +1331,25 @@ export function buildPenaltyAndMemberDerived({ sync = {}, progress = {}, overrid
     penaltyReady: true,
   };
 
+  // Real store art, keyed by appId, taken from the synced giveaway records. The
+  // frontend can guess header.jpg from an appId, but that URL 404s for packages
+  // and some delisted apps, so ship the URLs the collector actually saw.
+  const mediaByAppId = new Map();
+  for (const giveaway of sync.giveaways || []) {
+    const appId = Number(giveaway?.appId || 0);
+    if (!appId || mediaByAppId.has(appId)) {
+      continue;
+    }
+    if (giveaway.headerImageUrl || giveaway.capsuleImageUrl || giveaway.capsuleSmallUrl) {
+      mediaByAppId.set(appId, {
+        headerImageUrl: giveaway.headerImageUrl || "",
+        capsuleImageUrl: giveaway.capsuleImageUrl || "",
+        capsuleSmallUrl: giveaway.capsuleSmallUrl || "",
+      });
+    }
+  }
+  const mediaFor = (appId) => mediaByAppId.get(Number(appId || 0)) || {};
+
   const owedNow = [];
   const comingDue = [];
   for (const win of graph.wins) {
@@ -1344,6 +1363,11 @@ export function buildPenaltyAndMemberDerived({ sync = {}, progress = {}, overrid
       member: member?.name || win.creatorUsername || "Unknown member",
       memberKey: member ? getStableMemberKey(member) : "",
       game: game?.title || win.title || "",
+      // The frontend derives the store art from appId (getSteamMediaUrls), so the
+      // penalty tiles look the same on the derived fast path as on the live one.
+      appId: Number(game?.appId || 0) || null,
+      steamAppUrl: game?.steamAppUrl || "",
+      ...mediaFor(game?.appId),
       giveawayUrl: getWinGiveawayUrl(win),
       deadline: info.deadline instanceof Date ? info.deadline.toISOString() : null,
       popMonth: info.popMonth,
@@ -1365,6 +1389,9 @@ export function buildPenaltyAndMemberDerived({ sync = {}, progress = {}, overrid
   const settled = getPenaltyGiveawayRecords(graph.wins, ctx).map((record) => ({
     payer: record.creator?.name || record.giveaway.creatorUsername || "Unknown member",
     game: record.targetGame?.title || record.target?.title || record.giveaway.title || "",
+    appId: Number(record.targetGame?.appId || 0) || null,
+    steamAppUrl: record.targetGame?.steamAppUrl || "",
+    ...mediaFor(record.targetGame?.appId),
     giveawayPageUrl: getGiveawayPageUrl(record.giveaway),
     wonGiveawayUrl: getGiveawayPageUrl(record.target),
     createdAt: record.giveaway.createdAt || null,
