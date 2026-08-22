@@ -225,6 +225,58 @@ h2 {
   font-size: 0.85rem;
 }
 
+/* Member directory: both stats labelled and the same weight. The old card made
+   an unlabeled date its loudest element. */
+.member-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin: 6px 0 0;
+}
+
+.member-stats > div {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.member-stats dt {
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+
+.member-stats dd {
+  margin: 0;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.inline-toggle {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  align-self: flex-end;
+  padding-bottom: 9px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.inline-toggle input {
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.section-filters .button {
+  align-self: flex-end;
+}
+
+#member-overview-summary {
+  margin: 0 0 10px;
+}
+
 #member-overview .penalty-owed-card {
   grid-column: 1 / -1;
   padding: 14px 16px 16px;
@@ -944,6 +996,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  margin-bottom: 10px;
 }
 
 .sync-actions .button {

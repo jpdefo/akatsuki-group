@@ -110,6 +110,10 @@ const runtime = {
   // filter is also settable by clicking a summary card.
   penaltiesFilter: "all",
   penaltiesSearch: "",
+  // Member directory view state. Edit mode is off by default so the grid reads
+  // as a directory rather than a form.
+  memberSearch: "",
+  memberEditMode: false,
 };
 const GAME_OVERRIDE_FIELDS = ["hltbHoursOverride", "hltbUrlOverride", "achievementTargetOverride"];
 const WIN_OVERRIDE_FIELDS = ["requiredAchievementsOverride", "monthOverride"];
@@ -142,6 +146,10 @@ const elements = {
   monthlySort: document.querySelector("#monthly-sort"),
   monthlyProgressTable: document.querySelector("#monthly-progress-table"),
   penaltiesFilter: document.querySelector("#penalties-filter"),
+  memberSearch: document.querySelector("#member-search"),
+  memberSort: document.querySelector("#member-sort"),
+  memberEditMode: document.querySelector("#member-edit-mode"),
+  memberOverviewSummary: document.querySelector("#member-overview-summary"),
   penaltiesGroups: document.querySelector("#penalties-groups"),
   penaltiesSummaryCards: document.querySelector("#penalties-summary-cards"),
   penaltiesClock: document.querySelector("#penalties-clock"),
@@ -362,6 +370,15 @@ function bindEvents() {
       elements.monthlySort.value = viewingMember ? "date-desc" : "winner";
     }
     renderProgressViews();
+  });
+  elements.memberSearch?.addEventListener("input", () => {
+    runtime.memberSearch = elements.memberSearch.value || "";
+    renderMemberOverview();
+  });
+  elements.memberSort?.addEventListener("change", () => renderMemberOverview());
+  elements.memberEditMode?.addEventListener("change", () => {
+    runtime.memberEditMode = Boolean(elements.memberEditMode.checked);
+    renderMemberOverview();
   });
   elements.penaltiesSort?.addEventListener("change", () => renderPenaltiesPage());
   elements.penaltiesSearch?.addEventListener("input", () => {
@@ -993,26 +1010,87 @@ function renderMemberOverview() {
   const allMembers = [...(dashboardMembers.active || []), ...(dashboardMembers.inactive || [])];
   // Effective membership honors the manual override, so a member set inactive
   // drops out of the directory (and stays out across future syncs).
-  const activeMembers = allMembers
-    .filter((member) => {
-      const stateMember = findMemberByUsername(member.username);
-      return stateMember
-        ? getMemberMembershipStatus(stateMember) === "active"
-        : Boolean(member.isActiveMember);
-    })
-    .sort((left, right) =>
-      String(left.username || "").localeCompare(String(right.username || ""), "en", { sensitivity: "base" }),
-    );
+  const activeMembers = allMembers.filter((member) => {
+    const stateMember = findMemberByUsername(member.username);
+    return stateMember
+      ? getMemberMembershipStatus(stateMember) === "active"
+      : Boolean(member.isActiveMember);
+  });
 
   if (!activeMembers.length) {
     elements.memberOverview.innerHTML = buildEmptyPanel(
       "No tracked members yet.",
       "Run the SteamGifts sync to populate the server-backed member directory.",
     );
+    if (elements.memberOverviewSummary) {
+      elements.memberOverviewSummary.textContent = "";
+    }
     return;
   }
 
-  const cards = activeMembers.map(buildMemberCard);
+  // Signals the app already computes but never surfaced per member: who owes a
+  // penalty right now, and who still has a cycle giveaway to create this month.
+  const flags = buildMemberFlagIndex();
+  const decorated = activeMembers.map((member) => {
+    const stateMember = findMemberByUsername(member.username);
+    const currentMonth = monthKey(state.settings.currentDate || "");
+    const overrideKey = stateMember ? getCycleMemberOverrideKey(stateMember, currentMonth) : "";
+    const paused = overrideKey ? getCycleMemberStatus(stateMember, currentMonth) === "paused" : false;
+    const name = String(member.username || "");
+    return {
+      member,
+      stateMember,
+      overrideKey,
+      paused,
+      penalties: flags.penalties.get(name.toLowerCase()) || 0,
+      missingGiveaways: flags.missing.get(name.toLowerCase()) || 0,
+      winsCount: Number(member.winsCount || 0),
+      lastWinTime: member.lastWinDate ? new Date(member.lastWinDate).getTime() : NaN,
+    };
+  });
+
+  const search = String(runtime.memberSearch || "").trim().toLowerCase();
+  const visible = search
+    ? decorated.filter((row) => String(row.member.username || "").toLowerCase().includes(search))
+    : decorated;
+
+  const sortMode = elements.memberSort?.value || "name";
+  const byName = (left, right) =>
+    String(left.member.username || "").localeCompare(String(right.member.username || ""), "en", {
+      sensitivity: "base",
+    });
+  // Undated members sort last in both directions rather than pretending to be
+  // the oldest or the newest.
+  const lastWin = (row, fallback) => (Number.isFinite(row.lastWinTime) ? row.lastWinTime : fallback);
+  visible.sort((left, right) => {
+    if (sortMode === "wins-desc") {
+      return right.winsCount - left.winsCount || byName(left, right);
+    }
+    if (sortMode === "wins-asc") {
+      return left.winsCount - right.winsCount || byName(left, right);
+    }
+    if (sortMode === "recent") {
+      return lastWin(right, -Infinity) - lastWin(left, -Infinity) || byName(left, right);
+    }
+    if (sortMode === "stale") {
+      return lastWin(left, Infinity) - lastWin(right, Infinity) || byName(left, right);
+    }
+    return byName(left, right);
+  });
+
+  if (elements.memberOverviewSummary) {
+    const pausedCount = decorated.filter((row) => row.paused).length;
+    const parts = [`${decorated.length} active member${decorated.length === 1 ? "" : "s"}`];
+    if (pausedCount) {
+      parts.push(`${pausedCount} paused this month`);
+    }
+    if (search) {
+      parts.push(`${visible.length} matching “${search}”`);
+    }
+    elements.memberOverviewSummary.textContent = parts.join(" · ");
+  }
+
+  const cards = visible.map(buildMemberCard);
   const cycleReminderCard = buildCurrentCycleMissingGiveawaysCard();
   if (cycleReminderCard) {
     cards.unshift(cycleReminderCard);
@@ -1022,7 +1100,34 @@ function renderMemberOverview() {
     cards.unshift(penaltiesCard);
   }
 
+  if (!visible.length && !cards.length) {
+    elements.memberOverview.innerHTML = buildEmptyPanel("No match", `No member matches "${search}".`);
+    return;
+  }
+
   elements.memberOverview.innerHTML = cards.join("");
+}
+
+// Per-member counts of the two things that need action, keyed by lowercased
+// username so the dashboard directory and the state records can be matched up.
+function buildMemberFlagIndex() {
+  const penalties = new Map();
+  const missing = new Map();
+
+  if (isPenaltyDataReady()) {
+    for (const row of buildPenaltiesPageData().owedNow) {
+      const key = String(row.member || "").toLowerCase();
+      penalties.set(key, (penalties.get(key) || 0) + 1);
+    }
+  }
+
+  const summary = getCurrentCycleMissingGiveawaySummary();
+  for (const entry of summary?.members || []) {
+    const key = String(entry.member?.name || entry.member?.steamgiftsUsername || "").toLowerCase();
+    missing.set(key, entry.missing);
+  }
+
+  return { penalties, missing };
 }
 
 function buildPenaltiesOwedCard() {
@@ -2638,52 +2743,63 @@ function renderMemberBucketTable(target, isActiveMember) {
     .join("");
 }
 
-function buildMemberCard(member) {
+function buildMemberCard(row) {
+  const { member, stateMember, overrideKey, paused } = row;
   const title = escapeHtml(member.username || "Unknown member");
-  const usernameMarkup = member.steamProfile
-    ? `<a class="linked-title" href="${escapeHtml(member.steamProfile)}" target="_blank" rel="noreferrer">${title}</a>`
+  const profileUrl = member.profileUrl || member.steamProfile || "";
+  const usernameMarkup = profileUrl
+    ? `<a class="linked-title" href="${escapeHtml(profileUrl)}" target="_blank" rel="noreferrer">${title}</a>`
     : title;
 
-  // Tag + editor reflect the member's cycle obligation status for the current
-  // month. Pause is an explicit choice only (never auto-set from giveaways).
-  const stateMember = findMemberByUsername(member.username);
-  const currentMonth = monthKey(state.settings.currentDate || "");
-  const overrideKey = stateMember ? getCycleMemberOverrideKey(stateMember, currentMonth) : "";
-  const paused = overrideKey ? getCycleMemberStatus(stateMember, currentMonth) === "paused" : false;
-  const statusBadge = buildBadge(paused ? "warning" : "success", paused ? "Paused" : "Active");
-  const statusEditor = overrideKey
+  const badges = [buildBadge(paused ? "warning" : "success", paused ? "Paused" : "Active")];
+  if (row.penalties) {
+    badges.push(buildBadge("danger", row.penalties > 1 ? `${row.penalties} penalties` : "Penalty owed"));
+  }
+  if (row.missingGiveaways) {
+    badges.push(
+      buildBadge("info", row.missingGiveaways > 1 ? `${row.missingGiveaways} GAs due` : "GA due"),
+    );
+  }
+
+  // Editors are an admin action on a directory you mostly read, so they stay
+  // behind the "Edit statuses" toggle instead of doubling every card's height.
+  const editors = runtime.memberEditMode
     ? `
-      <label class="inline-select-wrap member-status-edit">
-        <span class="meta-line">Cycle status</span>
-        <select class="inline-select" data-cycle-member-status-select="true" data-cycle-member-key="${escapeHtml(overrideKey)}">
-          <option value="active" ${paused ? "" : "selected"}>Active</option>
-          <option value="paused" ${paused ? "selected" : ""}>Paused</option>
-        </select>
-      </label>`
+      ${
+        overrideKey
+          ? `<label class="inline-select-wrap member-status-edit">
+              <span class="meta-line">Cycle status</span>
+              <select class="inline-select" data-cycle-member-status-select="true" data-cycle-member-key="${escapeHtml(overrideKey)}">
+                <option value="active" ${paused ? "" : "selected"}>Active</option>
+                <option value="paused" ${paused ? "selected" : ""}>Paused</option>
+              </select>
+            </label>`
+          : ""
+      }
+      ${
+        stateMember
+          ? `<label class="inline-select-wrap member-status-edit">
+              <span class="meta-line">Membership</span>
+              <select class="inline-select" data-member-status-select="true" data-member-key="${escapeHtml(getMemberOverrideKey(stateMember))}">
+                <option value="active" ${getMemberMembershipStatus(stateMember) === "inactive" ? "" : "selected"}>Active member</option>
+                <option value="inactive" ${getMemberMembershipStatus(stateMember) === "inactive" ? "selected" : ""}>Left group (inactive)</option>
+              </select>
+            </label>`
+          : ""
+      }`
     : "";
 
-  const memberKey = stateMember ? getMemberOverrideKey(stateMember) : "";
-  const isInactive = stateMember ? getMemberMembershipStatus(stateMember) === "inactive" : false;
-  const membershipEditor = memberKey
-    ? `
-      <label class="inline-select-wrap member-status-edit">
-        <span class="meta-line">Membership</span>
-        <select class="inline-select" data-member-status-select="true" data-member-key="${escapeHtml(memberKey)}">
-          <option value="active" ${isInactive ? "" : "selected"}>Active member</option>
-          <option value="inactive" ${isInactive ? "selected" : ""}>Left group (inactive)</option>
-        </select>
-      </label>`
-    : "";
-
+  // The old card put an unlabeled 1.3rem date as its loudest element. Both stats
+  // are now labelled and the same weight as each other.
   return `
-    <article class="member-card">
-      ${statusBadge}
+    <article class="member-card${paused ? " neutral" : ""}${row.penalties ? " negative" : ""}">
+      <div class="member-card-badges">${badges.join("")}</div>
       <h3>${usernameMarkup}</h3>
-      <span class="meta-line">${member.winsCount || 0} tracked win(s)</span>
-      <strong>${member.lastWinDate ? formatDate(member.lastWinDate) : "No wins yet"}</strong>
-      ${statusEditor}
-      ${membershipEditor}
-      <span class="meta-line">${member.profileUrl ? `<a class="linked-title" href="${escapeHtml(member.profileUrl)}" target="_blank" rel="noreferrer">Open SteamGifts profile</a>` : "SteamGifts profile unavailable"}</span>
+      <dl class="member-stats">
+        <div><dt>Wins</dt><dd>${row.winsCount}</dd></div>
+        <div><dt>Last win</dt><dd>${escapeHtml(member.lastWinDate ? formatDate(member.lastWinDate) : "none")}</dd></div>
+      </dl>
+      ${editors}
     </article>
   `;
 }

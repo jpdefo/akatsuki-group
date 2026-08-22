@@ -52,10 +52,29 @@
                 Every current member, tagged with this month's cycle status (active or paused).
               </p>
             </div>
-            <div class="sync-actions">
-               <a class="button secondary" href="./api/members.json" target="_blank" rel="noreferrer">Open members JSON</a>
+            <div class="section-filters">
+              <label class="inline-filter">
+                Search
+                <input id="member-search" type="search" placeholder="Username" autocomplete="off" />
+              </label>
+              <label class="inline-filter">
+                Sort
+                <select id="member-sort">
+                  <option value="name" selected>Name (A-Z)</option>
+                  <option value="wins-desc">Most wins</option>
+                  <option value="wins-asc">Fewest wins</option>
+                  <option value="recent">Most recent win</option>
+                  <option value="stale">Longest without a win</option>
+                </select>
+              </label>
+              <label class="inline-toggle">
+                <input id="member-edit-mode" type="checkbox" />
+                Edit statuses
+              </label>
+              <a class="button secondary" href="./api/members.json" target="_blank" rel="noreferrer">JSON</a>
             </div>
           </div>
+          <p id="member-overview-summary" class="section-copy"></p>
           <div id="member-overview" class="member-grid"></div>
         </section>
 
