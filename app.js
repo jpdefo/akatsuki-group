@@ -1139,9 +1139,8 @@ function buildPenaltiesOwedCard() {
     return "";
   }
 
-  // Group by member so someone who owes several games reads as one block instead
-  // of repeating their name per tile. buildPenaltiesPageData already sorts by
-  // deadline, so insertion order puts the most urgent member first.
+  // Grouped by member so someone who owes several games reads as one block.
+  // buildPenaltiesPageData sorts by deadline, so the most urgent member is first.
   const groups = new Map();
   for (const row of debts) {
     const name = String(row.member || "Unknown member");
@@ -1174,9 +1173,9 @@ function buildPenaltiesOwedCard() {
       <div class="penalty-card-head">
         ${buildBadge("danger", "Penalties owed")}
         <h3>${debts.length} penalt${debts.length === 1 ? "y" : "ies"} to pay${escapeHtml(memberNote)}</h3>
+        <a class="penalty-card-link" href="penalties.html">Open penalties &rarr;</a>
       </div>
-      <span class="meta-line">Incomplete wins past their ${PENALTY_GRACE_MONTHS}-month deadline with no penalty giveaway attached.${escapeHtml(timedFrom)} <a class="penalty-card-link" href="penalties.html">Open penalties &rarr;</a></span>
-      <span class="meta-line">To settle, create a giveaway described <code class="penalty-description">Penalty GA - &lt;won giveaway link&gt;</code></span>
+      <span class="meta-line">Incomplete wins past their ${PENALTY_GRACE_MONTHS}-month deadline with no penalty giveaway attached.${escapeHtml(timedFrom)}</span>
       <div class="penalty-groups">${groupsMarkup}</div>
     </article>
   `;
@@ -2743,62 +2742,78 @@ function renderMemberBucketTable(target, isActiveMember) {
     .join("");
 }
 
+// One line per member. The old card carried an "Active" badge on every row, which
+// said nothing (the directory only lists active members) while costing a line each
+// — so status is now a coloured dot and only exceptions get a word.
 function buildMemberCard(row) {
   const { member, stateMember, overrideKey, paused } = row;
-  const title = escapeHtml(member.username || "Unknown member");
+  const name = String(member.username || "Unknown member");
   const profileUrl = member.profileUrl || member.steamProfile || "";
-  const usernameMarkup = profileUrl
-    ? `<a class="linked-title" href="${escapeHtml(profileUrl)}" target="_blank" rel="noreferrer">${title}</a>`
-    : title;
+  const nameMarkup = profileUrl
+    ? `<a class="linked-title" href="${escapeHtml(profileUrl)}" target="_blank" rel="noreferrer">${escapeHtml(name)}</a>`
+    : escapeHtml(name);
 
-  const badges = [buildBadge(paused ? "warning" : "success", paused ? "Paused" : "Active")];
+  // Highest-priority exception wins the dot; the title spells all of them out.
+  const notes = [];
   if (row.penalties) {
-    badges.push(buildBadge("danger", row.penalties > 1 ? `${row.penalties} penalties` : "Penalty owed"));
+    notes.push(row.penalties > 1 ? `${row.penalties} penalties owed` : "1 penalty owed");
   }
   if (row.missingGiveaways) {
-    badges.push(
-      buildBadge("info", row.missingGiveaways > 1 ? `${row.missingGiveaways} GAs due` : "GA due"),
-    );
+    notes.push(row.missingGiveaways > 1 ? `${row.missingGiveaways} cycle giveaways due` : "1 cycle giveaway due");
   }
-
-  // Editors are an admin action on a directory you mostly read, so they stay
-  // behind the "Edit statuses" toggle instead of doubling every card's height.
-  const editors = runtime.memberEditMode
-    ? `
-      ${
-        overrideKey
-          ? `<label class="inline-select-wrap member-status-edit">
-              <span class="meta-line">Cycle status</span>
-              <select class="inline-select" data-cycle-member-status-select="true" data-cycle-member-key="${escapeHtml(overrideKey)}">
-                <option value="active" ${paused ? "" : "selected"}>Active</option>
-                <option value="paused" ${paused ? "selected" : ""}>Paused</option>
-              </select>
-            </label>`
-          : ""
-      }
-      ${
-        stateMember
-          ? `<label class="inline-select-wrap member-status-edit">
-              <span class="meta-line">Membership</span>
-              <select class="inline-select" data-member-status-select="true" data-member-key="${escapeHtml(getMemberOverrideKey(stateMember))}">
-                <option value="active" ${getMemberMembershipStatus(stateMember) === "inactive" ? "" : "selected"}>Active member</option>
-                <option value="inactive" ${getMemberMembershipStatus(stateMember) === "inactive" ? "selected" : ""}>Left group (inactive)</option>
-              </select>
-            </label>`
-          : ""
-      }`
+  if (paused) {
+    notes.push("paused this month");
+  }
+  const tone = row.penalties ? "danger" : row.missingGiveaways ? "info" : paused ? "warning" : "ok";
+  const flag = notes.length
+    ? `<span class="member-chip-flag ${tone}">${escapeHtml(
+        row.penalties
+          ? row.penalties > 1
+            ? `${row.penalties} penalties`
+            : "penalty"
+          : row.missingGiveaways
+            ? row.missingGiveaways > 1
+              ? `${row.missingGiveaways} GAs due`
+              : "GA due"
+            : "paused",
+      )}</span>`
     : "";
 
-  // The old card put an unlabeled 1.3rem date as its loudest element. Both stats
-  // are now labelled and the same weight as each other.
+  const editors = runtime.memberEditMode
+    ? `
+      <div class="member-chip-editors">
+        ${
+          overrideKey
+            ? `<select class="inline-select" title="Cycle status" data-cycle-member-status-select="true" data-cycle-member-key="${escapeHtml(overrideKey)}">
+                <option value="active" ${paused ? "" : "selected"}>Active</option>
+                <option value="paused" ${paused ? "selected" : ""}>Paused</option>
+              </select>`
+            : ""
+        }
+        ${
+          stateMember
+            ? `<select class="inline-select" title="Membership" data-member-status-select="true" data-member-key="${escapeHtml(getMemberOverrideKey(stateMember))}">
+                <option value="active" ${getMemberMembershipStatus(stateMember) === "inactive" ? "" : "selected"}>Member</option>
+                <option value="inactive" ${getMemberMembershipStatus(stateMember) === "inactive" ? "selected" : ""}>Left group</option>
+              </select>`
+            : ""
+        }
+      </div>`
+    : "";
+
+  const lastWin = member.lastWinDate ? formatDate(member.lastWinDate) : "no wins";
+  const title = `${name} — ${row.winsCount} win${row.winsCount === 1 ? "" : "s"}, last ${lastWin}${
+    notes.length ? ` — ${notes.join(", ")}` : ""
+  }`;
+
   return `
-    <article class="member-card${paused ? " neutral" : ""}${row.penalties ? " negative" : ""}">
-      <div class="member-card-badges">${badges.join("")}</div>
-      <h3>${usernameMarkup}</h3>
-      <dl class="member-stats">
-        <div><dt>Wins</dt><dd>${row.winsCount}</dd></div>
-        <div><dt>Last win</dt><dd>${escapeHtml(member.lastWinDate ? formatDate(member.lastWinDate) : "none")}</dd></div>
-      </dl>
+    <article class="member-chip ${tone}" title="${escapeHtml(title)}">
+      <span class="member-chip-line">
+        <span class="member-chip-dot"></span>
+        <span class="member-chip-name">${nameMarkup}</span>
+        ${flag}
+        <span class="member-chip-stats"><b>${row.winsCount}</b> · ${escapeHtml(lastWin)}</span>
+      </span>
       ${editors}
     </article>
   `;
@@ -2816,13 +2831,11 @@ function buildCurrentCycleMissingGiveawaysCard() {
   });
 
   return `
-    <article class="member-card neutral">
-      ${buildBadge("warning", "Cycle giveaway pending")}
-      <h3>${escapeHtml(formatMonthKey(summary.monthKey))}</h3>
-      <strong>${summary.members.length}</strong>
-      <div class="member-card-meta">
-        <span>Active members still missing at least one required cycle giveaway.</span>
-        <span>${escapeHtml(missingNames.join(", "))}</span>
+    <article class="member-card neutral penalty-owed-card">
+      <div class="penalty-card-head">
+        ${buildBadge("warning", `${summary.members.length} cycle GA${summary.members.length === 1 ? "" : "s"} pending`)}
+        <span class="meta-line">${escapeHtml(formatMonthKey(summary.monthKey))}: ${escapeHtml(missingNames.join(", "))}</span>
+        <a class="penalty-card-link" href="cycles.html">Open cycles &rarr;</a>
       </div>
     </article>
   `;

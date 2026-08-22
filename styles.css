@@ -199,12 +199,6 @@ h2 {
   gap: 14px;
 }
 
-/* Overview directory: compact cards so every current member fits at a glance. */
-#member-overview {
-  grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
-  gap: 10px;
-}
-
 #member-overview .member-card {
   padding: 11px 13px;
   border-radius: 13px;
@@ -223,6 +217,151 @@ h2 {
 #member-overview .member-status-edit .inline-select {
   padding: 4px 6px;
   font-size: 0.85rem;
+}
+
+/* Member directory: one line per member. Status is a coloured dot, and only an
+   exception (penalty, giveaway due, paused) gets a word. */
+#member-overview {
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 6px;
+}
+
+.member-chip {
+  display: grid;
+  gap: 5px;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--panel-strong);
+}
+
+.member-chip.danger {
+  border-color: rgba(239, 68, 68, 0.45);
+}
+
+.member-chip.warning {
+  border-color: rgba(245, 158, 11, 0.45);
+}
+
+.member-chip.info {
+  border-color: rgba(110, 168, 254, 0.45);
+}
+
+.member-chip-line {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+  font-size: 0.85rem;
+}
+
+.member-chip-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: var(--success);
+}
+
+.member-chip.danger .member-chip-dot {
+  background: var(--danger);
+}
+
+.member-chip.warning .member-chip-dot {
+  background: var(--warning);
+}
+
+.member-chip.info .member-chip-dot {
+  background: var(--accent);
+}
+
+.member-chip-name {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.member-chip-flag {
+  padding: 1px 6px;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.member-chip-flag.danger {
+  background: rgba(239, 68, 68, 0.16);
+  color: #ffd0d0;
+}
+
+.member-chip-flag.warning {
+  background: rgba(245, 158, 11, 0.16);
+  color: #ffe3ad;
+}
+
+.member-chip-flag.info {
+  background: rgba(110, 168, 254, 0.16);
+  color: #d4e5ff;
+}
+
+.member-chip-stats {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 0.76rem;
+  white-space: nowrap;
+}
+
+.member-chip-stats b {
+  color: var(--text);
+}
+
+.member-chip-editors {
+  display: flex;
+  gap: 5px;
+}
+
+.member-chip-editors .inline-select {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 3px 5px;
+  font-size: 0.76rem;
+}
+
+#member-overview .penalty-owed-card {
+  grid-column: 1 / -1;
+  padding: 12px 14px 14px;
+}
+
+/* The cycle reminder stays a one-line summary; the cycles page owns its detail. */
+#member-overview .member-card.neutral.penalty-owed-card {
+  padding: 8px 11px;
+}
+
+.penalty-inline-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  min-width: 0;
+}
+
+.penalty-inline-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 0.83rem;
+}
+
+.penalty-inline-member {
+  font-weight: 600;
+}
+
+.penalty-inline-due {
+  color: #fca5a5;
+  font-size: 0.74rem;
 }
 
 /* Member directory: both stats labelled and the same weight. The old card made
@@ -275,11 +414,6 @@ h2 {
 
 #member-overview-summary {
   margin: 0 0 10px;
-}
-
-#member-overview .penalty-owed-card {
-  grid-column: 1 / -1;
-  padding: 14px 16px 16px;
 }
 
 /* The card lives in the member grid, so `.member-card strong` (a 1.3rem block)
