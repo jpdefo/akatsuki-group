@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T13:26:12.859993+00:00",
+  "updatedAt": "2026-08-23T18:00:17.983967+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2347,7 +2347,7 @@
       "appId": 2172010,
       "title": "Until Dawn",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2172010/achievements/",
-      "playtimeHours": 2.5,
+      "playtimeHours": 3.0,
       "visible": true,
       "earnedAchievements": 2,
       "totalAchievements": 29,
@@ -2356,7 +2356,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.5,
+      "achievementsPlaytimeHours": 3.0,
       "popThresholdMetAt": "2026-08-23T13:26:12.859340+00:00"
     },
     {
@@ -7143,7 +7143,7 @@
       "appId": 3321460,
       "title": "Crimson Desert",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 0.65,
+      "playtimeHours": 1.45,
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 34,
@@ -7152,7 +7152,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.65
+      "achievementsPlaytimeHours": 1.45
     },
     {
       "username": "burntreynolds444",
@@ -27199,16 +27199,16 @@
       "appId": 2677660,
       "title": "Indiana Jones and the Great Circle",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2677660/achievements/",
-      "playtimeHours": 36.53,
+      "playtimeHours": 41.03,
       "visible": true,
-      "earnedAchievements": 30,
+      "earnedAchievements": 31,
       "totalAchievements": 55,
-      "achievementPercent": 55,
+      "achievementPercent": 56,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 36.53,
+      "achievementsPlaytimeHours": 41.03,
       "popThresholdMetAt": "2026-08-03T08:57:10.551642+00:00"
     },
     {
@@ -71289,9 +71289,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-08-23T13:24:45.903182+00:00",
+  "libraryUpdatedAt": "2026-08-23T17:59:20.941568+00:00",
   "libraryStats": {
-    "durationSeconds": 16.57,
+    "durationSeconds": 5.88,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71300,12 +71300,12 @@
     "totalPlaytimeRows": 14312
   },
   "stats": {
-    "durationSeconds": 103.54,
+    "durationSeconds": 62.94,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2365,
-    "cachedReuses": 2283,
-    "achievementSuccesses": 34,
+    "cachedReuses": 2310,
+    "achievementSuccesses": 7,
     "achievementErrors": 72,
     "cachedFallbacks": 72,
     "hltbTitlesRequested": 1292,

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T13:24:45.903182+00:00",
+  "updatedAt": "2026-08-23T17:59:20.941568+00:00",
   "apiEnabled": true,
   "refreshedScope": "all",
   "refreshedMonth": null,
@@ -10,7 +10,7 @@
       "steamId": "76561198295302795",
       "gamesVisible": true,
       "playtimeVisible": true,
-      "gameCount": 883,
+      "gameCount": 884,
       "error": null
     },
     {
@@ -28,7 +28,7 @@
       "steamId": "76561198106145311",
       "gamesVisible": true,
       "playtimeVisible": true,
-      "gameCount": 18031,
+      "gameCount": 18039,
       "error": null
     },
     {
@@ -4041,8 +4041,8 @@
       "username": "BojanNS987",
       "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
       "appId": 2172010,
-      "playtimeMinutes": 150,
-      "playtimeHours": 2.5,
+      "playtimeMinutes": 180,
+      "playtimeHours": 3.0,
       "source": "steam-web-api"
     },
     {
@@ -22929,8 +22929,8 @@
       "username": "burntreynolds444",
       "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
       "appId": 3321460,
-      "playtimeMinutes": 39,
-      "playtimeHours": 0.65,
+      "playtimeMinutes": 87,
+      "playtimeHours": 1.45,
       "source": "steam-web-api"
     },
     {
@@ -32489,8 +32489,8 @@
       "username": "chOOkity",
       "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
       "appId": 2651280,
-      "playtimeMinutes": 39,
-      "playtimeHours": 0.65,
+      "playtimeMinutes": 68,
+      "playtimeHours": 1.13,
       "source": "steam-web-api"
     },
     {
@@ -46473,8 +46473,8 @@
       "username": "Horseflesh",
       "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
       "appId": 784080,
-      "playtimeMinutes": 10586,
-      "playtimeHours": 176.43,
+      "playtimeMinutes": 10604,
+      "playtimeHours": 176.73,
       "source": "steam-web-api"
     },
     {
@@ -74657,8 +74657,8 @@
       "username": "leniu",
       "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
       "appId": 2677660,
-      "playtimeMinutes": 2192,
-      "playtimeHours": 36.53,
+      "playtimeMinutes": 2462,
+      "playtimeHours": 41.03,
       "source": "steam-web-api"
     },
     {
@@ -114712,7 +114712,7 @@
   ],
   "source": "steam-web-api",
   "stats": {
-    "durationSeconds": 16.57,
+    "durationSeconds": 5.88,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
