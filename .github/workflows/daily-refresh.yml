@@ -38,6 +38,15 @@ jobs:
         with:
           node-version: "24"
 
+      # Fail the run before anything is committed or deployed if the key is dead.
+      # A revoked key does not error out per-call in a visible way: every profile
+      # fetch 401s, the cached values survive, and the job would otherwise commit
+      # a "refresh" whose only change is a timestamp.
+      - name: Verify Steam Web API key
+        run: python server.py --check-steam-key
+        env:
+          STEAM_WEB_API_KEY: ${{ secrets.STEAM_WEB_API_KEY }}
+
       - name: Hydrate Steam media cache
         run: python server.py --hydrate-sync-media --recent-days 365
         env:

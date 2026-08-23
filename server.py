@@ -1458,6 +1458,46 @@ def get_steam_api_key() -> str:
     return load_dotenv_values().get("STEAM_WEB_API_KEY", "").strip()
 
 
+def verify_steam_api_key(api_key: str) -> None:
+    """Fail fast when the Steam Web API key is missing or no longer valid.
+
+    A revoked key does not break the refresh loudly: every per-profile call just
+    raises HTTP 401/403, each profile keeps its cached values, and the run still
+    writes a payload whose only real change is `updatedAt`. That silently froze
+    playtime/achievements for a week before anyone noticed, so the daily job
+    checks the key up front and stops instead of committing stale data.
+    """
+    if not api_key:
+        raise SystemExit(
+            "STEAM_WEB_API_KEY is not configured. Set it in .env locally, or as the"
+            " STEAM_WEB_API_KEY repository secret for the daily refresh workflow."
+        )
+    # Robin Walker's profile: a stable, always-public steamid, so a failure here
+    # is about the key and never about the member whose data we happen to fetch.
+    query = urlencode({"key": api_key, "steamids": "76561197960435530"})
+    try:
+        fetch_json(f"{STEAM_API_BASE}/ISteamUser/GetPlayerSummaries/v2/?{query}")
+    except HTTPError as error:
+        if error.code in {401, 403}:
+            raise SystemExit(
+                f"STEAM_WEB_API_KEY was rejected by Steam (HTTP {error.code}). The key is"
+                " revoked or mistyped: mint a new one at https://steamcommunity.com/dev/apikey,"
+                " then update .env and the STEAM_WEB_API_KEY repository secret."
+            ) from error
+        raise
+
+
+def assert_profiles_refreshed(stats: dict, label: str) -> None:
+    """Stop the run when a refresh reached Steam for nobody at all."""
+    refreshed = parse_int(stats.get("refreshedProfiles"))
+    errored = parse_int(stats.get("errorProfiles"))
+    if errored and not refreshed:
+        raise SystemExit(
+            f"{label}: all {errored} profile(s) failed, none refreshed. Refusing to"
+            " report success on stale data. Check STEAM_WEB_API_KEY and Steam availability."
+        )
+
+
 def extract_steam_id_from_profile(steam_profile: str, api_key: str, cache: dict[str, str]) -> str | None:
     if not steam_profile:
         return None
@@ -2524,11 +2564,17 @@ def main() -> None:
     parser.add_argument("--refresh-steam-progress", action="store_true", help="Refresh cached Steam progress data")
     parser.add_argument("--full-refresh", action="store_true", help="(now the default; accepted for compatibility) Steam refresh always covers all months")
     parser.add_argument("--include-inactive", action="store_true", help="Also refresh inactive (left-the-group) members; pair with --full-refresh for a one-time all-members run")
+    parser.add_argument("--check-steam-key", action="store_true", help="Verify STEAM_WEB_API_KEY against Steam and exit non-zero if it is missing or revoked")
     args = parser.parse_args()
 
     ensure_data_dir()
     performed_task = False
     sync_payload: dict | None = None
+
+    if args.check_steam_key:
+        verify_steam_api_key(get_steam_api_key())
+        print("STEAM_WEB_API_KEY is valid.")
+        performed_task = True
 
     if args.merge_sync_file:
         incoming_path = Path(args.merge_sync_file)
@@ -2572,26 +2618,39 @@ def main() -> None:
             raise SystemExit("No SteamGifts sync data available yet.")
         # Always a full refresh now (per-month scope removed); the playtime-delta
         # gate keeps it cheap. --include-inactive still widens it to everyone.
+        # Preflight before either refresh: a revoked key otherwise fails every
+        # per-profile call quietly and the run still "succeeds" with stale data.
+        verify_steam_api_key(get_steam_api_key())
         if args.refresh_steam_library and not args.refresh_steam_progress:
             library_payload = refresh_steam_library(
                 sync_payload,
                 full_refresh=True,
                 include_inactive=args.include_inactive,
             )
+            library_stats = library_payload.get("stats", {})
             print(
                 "Refreshed Steam library:"
-                f" {library_payload.get('stats', {}).get('profilesTargeted', 0)} targeted profile(s)."
+                f" {library_stats.get('refreshedProfiles', 0)} of"
+                f" {library_stats.get('targetProfiles', 0)} profile(s)."
             )
+            assert_profiles_refreshed(library_stats, "Steam library refresh")
         if args.refresh_steam_progress:
             progress_payload = refresh_steam_progress(
                 sync_payload,
                 full_refresh=True,
                 include_inactive=args.include_inactive,
             )
+            progress_stats = progress_payload.get("stats", {})
             print(
                 "Refreshed Steam progress:"
-                f" {progress_payload.get('stats', {}).get('uniqueProgressTargets', 0)} target(s)."
+                f" {progress_stats.get('uniqueProgressTargets', 0)} target(s)."
             )
+            assert_profiles_refreshed(progress_payload.get("libraryStats", {}), "Steam library refresh")
+            if progress_stats.get("achievementErrors") and not progress_stats.get("achievementSuccesses"):
+                raise SystemExit(
+                    f"Steam progress refresh: all {progress_stats['achievementErrors']} achievement"
+                    " request(s) failed, none succeeded. Refusing to report success on stale data."
+                )
         performed_task = True
 
     if args.export_static:
