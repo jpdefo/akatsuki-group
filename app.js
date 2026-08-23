@@ -114,6 +114,12 @@ const runtime = {
   // as a directory rather than a form.
   memberSearch: "",
   memberEditMode: false,
+  // Cycles page view state. Same idea: the page is read far more often than it
+  // is edited, so the inline editors stay out of the way until asked for.
+  cycleEditMode: false,
+  cycleShowPaused: false,
+  cycleMemberSearch: "",
+  cycleGiveawaySearch: "",
 };
 const GAME_OVERRIDE_FIELDS = ["hltbHoursOverride", "hltbUrlOverride", "achievementTargetOverride"];
 const WIN_OVERRIDE_FIELDS = ["requiredAchievementsOverride", "monthOverride"];
@@ -160,6 +166,13 @@ const elements = {
   cycleBestGifterWarning: document.querySelector("#cycle-best-gifter-warning"),
   cycleTable: document.querySelector("#cycle-table"),
   cycleGiveawaysTable: document.querySelector("#cycle-giveaways-table"),
+  cycleMemberSearch: document.querySelector("#cycle-member-search"),
+  cycleMemberSort: document.querySelector("#cycle-member-sort"),
+  cycleEditMode: document.querySelector("#cycle-edit-mode"),
+  cycleShowPaused: document.querySelector("#cycle-show-paused"),
+  cycleTableHead: document.querySelector("#cycle-table-head"),
+  cycleGiveawaysHead: document.querySelector("#cycle-giveaways-head"),
+  cycleGiveawaySearch: document.querySelector("#cycle-giveaway-search"),
   cycleGiveawayMonthFilter: document.querySelector("#cycle-giveaway-month-filter"),
   cycleGiveawaySort: document.querySelector("#cycle-giveaway-sort"),
   cycleWinsTable: document.querySelector("#cycle-wins-table"),
@@ -343,6 +356,23 @@ function bindEvents() {
   elements.cycleFilter?.addEventListener("change", () => renderCycleHistoryPage());
   elements.cycleGiveawayMonthFilter?.addEventListener("change", () => renderCycleHistoryPage());
   elements.cycleGiveawaySort?.addEventListener("change", () => renderCycleHistoryPage());
+  elements.cycleMemberSort?.addEventListener("change", () => renderCycleHistoryPage());
+  elements.cycleMemberSearch?.addEventListener("input", () => {
+    runtime.cycleMemberSearch = elements.cycleMemberSearch.value || "";
+    renderCycleHistoryPage();
+  });
+  elements.cycleGiveawaySearch?.addEventListener("input", () => {
+    runtime.cycleGiveawaySearch = elements.cycleGiveawaySearch.value || "";
+    renderCycleHistoryPage();
+  });
+  elements.cycleEditMode?.addEventListener("change", () => {
+    runtime.cycleEditMode = Boolean(elements.cycleEditMode.checked);
+    renderCycleHistoryPage();
+  });
+  elements.cycleShowPaused?.addEventListener("change", () => {
+    runtime.cycleShowPaused = Boolean(elements.cycleShowPaused.checked);
+    renderCycleHistoryPage();
+  });
   elements.summerEventFilter?.addEventListener("change", () => renderSummerEventPage());
   elements.summerRuleset?.addEventListener("change", () => {
     state.settings.summerRuleset = elements.summerRuleset.value || "auto";
@@ -1031,11 +1061,17 @@ function renderMemberOverview() {
   // Signals the app already computes but never surfaced per member: who owes a
   // penalty right now, and who still has a cycle giveaway to create this month.
   const flags = buildMemberFlagIndex();
+  // Pauses are stored per cycle, and the current month is not always inside one
+  // (summer event, pause months). Fall back to the most recent cycle so a paused
+  // member still reads as paused between cycles instead of silently as normal.
+  const currentMonth = monthKey(state.settings.currentDate || "");
+  const pauseCycle = getCyclePeriodInfo(currentMonth) || getAvailableCycles()[0] || null;
+  const pauseCycleKey = pauseCycle?.key || "";
+
   const decorated = activeMembers.map((member) => {
     const stateMember = findMemberByUsername(member.username);
-    const currentMonth = monthKey(state.settings.currentDate || "");
-    const overrideKey = stateMember ? getCycleMemberOverrideKey(stateMember, currentMonth) : "";
-    const paused = overrideKey ? getCycleMemberStatus(stateMember, currentMonth) === "paused" : false;
+    const overrideKey = stateMember && pauseCycleKey ? getCycleMemberOverrideKey(stateMember, pauseCycleKey) : "";
+    const paused = overrideKey ? getCycleMemberStatus(stateMember, pauseCycleKey) === "paused" : false;
     const name = String(member.username || "");
     return {
       member,
@@ -1062,7 +1098,15 @@ function renderMemberOverview() {
   // Undated members sort last in both directions rather than pretending to be
   // the oldest or the newest.
   const lastWin = (row, fallback) => (Number.isFinite(row.lastWinTime) ? row.lastWinTime : fallback);
+  // Paused members sort to the end: they owe nothing this cycle, so they are the
+  // least actionable rows. A penalty outranks that, because an unpaid penalty is
+  // still owed whether or not the member is paused.
+  const sinksToBottom = (row) => (row.paused && !row.penalties ? 1 : 0);
   visible.sort((left, right) => {
+    const pausedCompare = sinksToBottom(left) - sinksToBottom(right);
+    if (pausedCompare !== 0) {
+      return pausedCompare;
+    }
     if (sortMode === "wins-desc") {
       return right.winsCount - left.winsCount || byName(left, right);
     }
@@ -1638,10 +1682,27 @@ function renderCycleHistoryPage() {
   const bestGifterAward = buildCycleBestGifterAward(selectedCycle, cycleMonths, cycleGiveaways);
   const rule9Carryover = getRule9CarryoverForCycle(selectedCycle);
 
-  elements.cycleSummary.textContent = `${selectedCycle.label} • ${cycleMonths.map(formatMonthKey).join(" • ")} • ${cycleOnlyWins.length} cycle win(s) • ${cycleGiveawayCount} cycle giveaway(s) • ${extraGiveawayCount} extra giveaway(s)`;
+  // Five figures written as a sentence made you read a paragraph to learn what a
+  // row of tiles says at a glance.
+  const isComplete = cycleMonths.length === selectedCycle.months.length;
+  elements.cycleSummary.innerHTML = [
+    { label: isComplete ? "Cycle complete" : "In progress", value: escapeHtml(cycleMonths.map(formatMonthKey).join(" → ")), wide: true },
+    { label: "Cycle wins", value: cycleOnlyWins.length },
+    { label: "Cycle giveaways", value: cycleGiveawayCount },
+    { label: "Extra giveaways", value: extraGiveawayCount },
+  ]
+    .map(
+      (card) => `
+        <article class="summary-card cycle-summary-card${card.wide ? " wide" : ""}">
+          <strong>${card.value}</strong>
+          <span>${escapeHtml(card.label)}</span>
+        </article>
+      `,
+    )
+    .join("");
   renderCycleBestGifterWarning(bestGifterAward, selectedCycle, cycleMonths, rule9Carryover);
 
-  renderCycleHistoryMembersTable(selectedCycle, cycleMonths, cycleWins, cycleGiveaways, rule9Carryover);
+  renderCycleHistoryMembersTable(selectedCycle, cycleMonths, cycleWins, cycleGiveaways, rule9Carryover, bestGifterAward);
 
   if (elements.cycleGiveawayMonthFilter) {
     const previousMonth = elements.cycleGiveawayMonthFilter.value;
@@ -1660,42 +1721,52 @@ function renderCycleBestGifterWarning(bestGifterAward, selectedCycle, cycleMonth
   }
 
   const articles = [];
+  const note = (level, label, text) => `
+    <p class="cycle-note ${level}">
+      <span class="cycle-note-label">${escapeHtml(label)}</span>
+      <span>${text}</span>
+    </p>
+  `;
 
   if (rule9Carryover?.status === "winner" && rule9Carryover.monthKey) {
-    articles.push(`
-      <article class="alert-card info compact-alert">
-        <h3>Previous cycle exemption</h3>
-        <p><strong>${escapeHtml(rule9Carryover.memberName)}</strong> won Rule 9 in ${escapeHtml(rule9Carryover.previousCycle.label)} and is exempt from the regular mandatory giveaway in ${escapeHtml(formatMonthKey(rule9Carryover.monthKey))}.</p>
-      </article>
-    `);
+    articles.push(
+      note(
+        "info",
+        "Carryover",
+        `<strong>${escapeHtml(rule9Carryover.memberName)}</strong> won Rule 9 in ${escapeHtml(rule9Carryover.previousCycle.label)}, so the regular mandatory giveaway in ${escapeHtml(formatMonthKey(rule9Carryover.monthKey))} is waived.`,
+      ),
+    );
   } else if (rule9Carryover?.status === "tie" && rule9Carryover.monthKey) {
-    articles.push(`
-      <article class="alert-card warning compact-alert">
-        <h3>Previous cycle exemption pending</h3>
-        <p>${escapeHtml(rule9Carryover.tieMembers.join(", "))} are tied for Rule 9 in ${escapeHtml(rule9Carryover.previousCycle.label)}, so the month 1 exemption for ${escapeHtml(formatMonthKey(rule9Carryover.monthKey))} still needs an admin tie-break.</p>
-      </article>
-    `);
+    articles.push(
+      note(
+        "warning",
+        "Carryover tie",
+        `${escapeHtml(rule9Carryover.tieMembers.join(", "))} tied for Rule 9 in ${escapeHtml(rule9Carryover.previousCycle.label)}; the ${escapeHtml(formatMonthKey(rule9Carryover.monthKey))} exemption needs an admin tie-break.`,
+      ),
+    );
   }
 
   if (!bestGifterAward.eligibleCount) {
-    articles.push(`
-      <article class="alert-card info compact-alert">
-        <h3>Best gifter not decided yet</h3>
-        <p>Rule 9 needs at least 2 cycle giveaways from a member before someone can take the exemption lead in ${escapeHtml(selectedCycle.label)}.</p>
-      </article>
-    `);
+    articles.push(
+      note(
+        "info",
+        "Best gifter",
+        `Not decided yet: Rule 9 needs at least 2 cycle giveaways from one member in ${escapeHtml(selectedCycle.label)}.`,
+      ),
+    );
     elements.cycleBestGifterWarning.innerHTML = articles.join("");
     return;
   }
 
   const nextMonthInfo = getNextCycleExemptionInfo(selectedCycle.months);
   if (bestGifterAward.tieMembers.length > 1) {
-    articles.push(`
-      <article class="alert-card warning compact-alert">
-        <h3>Best gifter tie</h3>
-        <p>${escapeHtml(bestGifterAward.tieMembers.join(", "))} are tied on average entries in ${escapeHtml(selectedCycle.label)}. Highest single giveaway entries are also tied, so this still needs an admin tie-break.</p>
-      </article>
-    `);
+    articles.push(
+      note(
+        "warning",
+        "Best gifter tie",
+        `${escapeHtml(bestGifterAward.tieMembers.join(", "))} are tied on average entries and on best single result, so this needs an admin tie-break.`,
+      ),
+    );
     elements.cycleBestGifterWarning.innerHTML = articles.join("");
     return;
   }
@@ -1708,20 +1779,36 @@ function renderCycleBestGifterWarning(bestGifterAward, selectedCycle, cycleMonth
     : nextMonthInfo.hasMandatoryGiveaway
       ? `If ${bestGifterAward.winnerName} stays ahead through the end of the cycle, the Rule 9 exemption will apply in ${nextMonthInfo.label}.`
       : `If ${bestGifterAward.winnerName} stays ahead through the end of the cycle, the exemption lands in ${nextMonthInfo.label}, which has no regular mandatory giveaway.`;
-  articles.push(`
-    <article class="alert-card warning compact-alert">
-      <h3>${escapeHtml(gifterLabel)}</h3>
-      <p>
-        <strong>${escapeHtml(bestGifterAward.winnerName)}</strong> averages ${bestGifterAward.averageEntries.toFixed(1)} entries across ${bestGifterAward.giveawayCount} cycle giveaway(s), with a best single result of ${bestGifterAward.bestSingleEntries.toLocaleString("en-US")} entries.<br />
-        ${escapeHtml(exemptionText)}
-      </p>
-    </article>
-  `);
+  // The winner's figures now live on their marked row, so this line only has to
+  // carry the consequence: where the exemption lands.
+  articles.push(
+    note(
+      "warning",
+      gifterLabel,
+      `<strong>${escapeHtml(bestGifterAward.winnerName)}</strong> at ${bestGifterAward.averageEntries.toFixed(1)} avg over ${bestGifterAward.giveawayCount} giveaway${bestGifterAward.giveawayCount === 1 ? "" : "s"}. ${escapeHtml(exemptionText)}`,
+    ),
+  );
   elements.cycleBestGifterWarning.innerHTML = articles.join("");
 }
 
-function renderCycleHistoryMembersTable(selectedCycle, cycleMonths, cycleWins, cycleGiveaways, rule9Carryover) {
-  const rows = getCycleHistoryVisibleMembers(selectedCycle, cycleWins, cycleGiveaways)
+// buildCycleHistoryStatus always returns a sentence, falling back to this filler
+// when no actual rule fired. It carries nothing, so it never reaches the tooltip.
+function isFillerCycleNote(note) {
+  return /^Compact cycle totals/.test(String(note || ""));
+}
+
+function renderCycleHistoryMembersTable(selectedCycle, cycleMonths, cycleWins, cycleGiveaways, rule9Carryover, bestGifterAward) {
+  const showEveryone = Boolean(runtime.cycleShowPaused);
+  // Rule 9 is the point of this page, but the winner used to be named only in an
+  // alert above the table while their row looked like everyone else's.
+  const rule9Names = new Set((bestGifterAward?.tieMembers || []).map((name) => String(name).toLowerCase()));
+  const rule9Decided = Boolean(bestGifterAward?.eligibleCount) && (bestGifterAward?.tieMembers || []).length === 1;
+  const columnCount = 6;
+
+  const search = String(runtime.cycleMemberSearch || "").trim().toLowerCase();
+  const sortMode = elements.cycleMemberSort?.value || "entries";
+
+  const rows = getCycleHistoryVisibleMembers(selectedCycle, cycleWins, cycleGiveaways, showEveryone)
     .map((member) => {
       const memberCycleStatus = getCycleMemberStatus(member, selectedCycle.key);
       const paused = memberCycleStatus === "paused";
@@ -1775,65 +1862,127 @@ function renderCycleHistoryMembersTable(selectedCycle, cycleMonths, cycleWins, c
         paused,
       });
 
+      // The rule sentences are audit trail: useful when a number looks wrong, not
+      // at a glance. They ride on the row's title instead of a visible line.
+      const tooltip = isFillerCycleNote(status.note)
+        ? `${member.name}: ${status.label}`
+        : `${member.name}: ${status.note}`;
+      // LUCKY / UNLUCKY are neutral rule states (UNLUCKY means fewer giveaways
+      // owed), so they read as a quiet tag rather than a coloured badge.
+      const luckTag = status.memberTagLabel
+        ? `<span class="cycle-luck-tag">${escapeHtml(status.memberTagLabel)}</span>`
+        : "";
+
+      const participationCell = `
+            <td>
+              <select class="cell-select participation-${paused ? "paused" : "active"}" title="Whether the member takes part in this cycle" data-cycle-member-status-select="true" data-cycle-member-key="${escapeHtml(getCycleMemberOverrideKey(member, selectedCycle.key))}">
+                <option value="active" ${memberCycleStatus === "active" ? "selected" : ""}>Active</option>
+                <option value="paused" ${memberCycleStatus === "paused" ? "selected" : ""}>Paused</option>
+              </select>
+            </td>`;
+
+      // Rule 9 needs at least two cycle giveaways, so an average built on one is
+      // not a ranking position. Say so instead of letting it sort to the top.
+      const rule9Eligible = cycleGiveawaysTotal >= 2;
+      const isRule9Leader = rule9Names.has(String(member.name || "").toLowerCase());
+      const rule9Mark = isRule9Leader
+        ? `<span class="cycle-rule9-mark" title="${escapeHtml(
+            rule9Decided
+              ? `Best gifter of the cycle (Rule 9): ${averageEntries === null ? "-" : averageEntries.toFixed(1)} average entries.`
+              : "Currently tied for best gifter of the cycle (Rule 9).",
+          )}">${rule9Decided ? "Best gifter" : "Best gifter tie"}</span>`
+        : "";
+
       return {
         name: member.name,
+        winsTotal: cycleWinsTotal,
+        // Ineligible members sort below everyone with a real ranking position.
+        averageEntries: rule9Eligible && averageEntries !== null ? averageEntries : -1,
+        shortfall: Math.max(0, requiredGiveaways - cycleGiveawaysTotal),
         markup: `
-          <tr>
-            <td>${escapeHtml(member.name)}</td>
-            <td>
-              <strong>${cycleWinsTotal}</strong>
-              <span class="meta-line">Before M3: ${winsBeforeMonthThree}</span>
-            </td>
-            <td>
-              <strong>${cycleGiveawaysTotal}</strong>
-              <span class="meta-line">Extra: ${extraGiveawaysTotal} • Required: ${requiredGiveaways}</span>
-            </td>
-            <td>
-              <strong>${averageEntries === null ? "-" : averageEntries.toFixed(1)}</strong>
-              <span class="meta-line">Best: ${bestEntries ? bestEntries.toLocaleString("en-US") : "-"}</span>
-            </td>
-            <td>
-              <label class="inline-select-wrap compact-select-wrap">
-                <select class="inline-select" data-cycle-member-status-select="true" data-cycle-member-key="${escapeHtml(getCycleMemberOverrideKey(member, selectedCycle.key))}">
-                  <option value="active" ${memberCycleStatus === "active" ? "selected" : ""}>Active</option>
-                  <option value="paused" ${memberCycleStatus === "paused" ? "selected" : ""}>Paused</option>
-                </select>
-              </label>
-            </td>
-            <td>
-              ${status.memberTagLabel ? `${buildBadge(status.memberTagLevel, status.memberTagLabel)} ` : ""}${buildBadge(status.level, status.label)}
-              <span class="meta-line compact-meta-line">${escapeHtml(status.note)}</span>
-            </td>
+          <tr title="${escapeHtml(tooltip)}"${paused ? ' class="cycle-row-paused"' : ""}>
+            <td>${escapeHtml(member.name)}${rule9Mark}</td>
+            <td>${cycleWinsTotal}<span class="cell-note" title="Cycle wins before month 3, which is what sets the month-3 requirement">${winsBeforeMonthThree} before M3</span></td>
+            <td>${cycleGiveawaysTotal} / ${requiredGiveaways}${extraGiveawaysTotal ? `<span class="cell-note" title="Extra giveaways, which do not count toward the cycle requirement">+${extraGiveawaysTotal} extra</span>` : ""}</td>
+            <td>${averageEntries === null ? "-" : averageEntries.toFixed(1)}${
+              rule9Eligible
+                ? bestEntries
+                  ? `<span class="cell-note" title="Highest entry count on a single cycle giveaway">best ${bestEntries.toLocaleString("en-US")}</span>`
+                  : ""
+                : `<span class="cell-note" title="Rule 9 needs at least 2 cycle giveaways from a member">not eligible</span>`
+            }</td>
+            <td>${buildBadge(status.level, status.label)}${luckTag}</td>
+            ${participationCell}
           </tr>
         `,
       };
     })
-    .sort((left, right) => left.name.localeCompare(right.name, "en-US", { sensitivity: "base" }));
+    .filter((row) => !search || row.name.toLowerCase().includes(search));
 
-  elements.cycleTable.innerHTML = rows.length
-    ? rows.map((row) => row.markup).join("")
-    : buildMessageRow(6, "No tracked members in this cycle.", "Wins and giveaway creators for the selected cycle will appear here.");
+  const byName = (left, right) => left.name.localeCompare(right.name, "en-US", { sensitivity: "base" });
+  rows.sort((left, right) => {
+    if (sortMode === "shortfall") {
+      return right.shortfall - left.shortfall || byName(left, right);
+    }
+    if (sortMode === "wins") {
+      return right.winsTotal - left.winsTotal || byName(left, right);
+    }
+    if (sortMode === "entries") {
+      return right.averageEntries - left.averageEntries || byName(left, right);
+    }
+    return byName(left, right);
+  });
+
+  if (!rows.length) {
+    elements.cycleTable.innerHTML = search
+      ? buildMessageRow(columnCount, "No match.", `No member in this cycle matches "${search}".`)
+      : buildMessageRow(
+          columnCount,
+          "No tracked members in this cycle.",
+          "Wins and giveaway creators for the selected cycle will appear here.",
+        );
+    return;
+  }
+
+  elements.cycleTable.innerHTML = rows.map((row) => row.markup).join("");
 }
 
-function getCycleHistoryVisibleMembers(selectedCycle, cycleWins, cycleGiveaways) {
+function getCycleHistoryVisibleMembers(selectedCycle, cycleWins, cycleGiveaways, showEveryone = false) {
   const cycleKey = String(selectedCycle?.key || "").trim();
-  // Inclusion is about CREATING cycle giveaways, not winning. Winning a giveaway
-  // never puts someone on this list.
-  const cycleCreatorIds = new Set(
-    cycleGiveaways
-      .filter((giveaway) => getGiveawayKind(giveaway) === "cycle")
-      .map((giveaway) => giveaway.creatorId)
-      .filter(Boolean),
-  );
+  // Inclusion is about CREATING giveaways, not winning. Winning a giveaway never
+  // puts someone on this list.
+  const cycleCreatorIds = new Set(cycleGiveaways.map((giveaway) => giveaway.creatorId).filter(Boolean));
+
+  // Obligations only apply to the cycle in progress. In a finished cycle an
+  // active member who never created anything simply was not there, so listing
+  // them as "Needs 2 more" invents a retroactive debt: eight of the twenty-one
+  // members showed up that way in Cycle 1 (2026).
+  const currentCycle = getCyclePeriodInfo(monthKey(state.settings.currentDate || ""));
+  const isCurrentCycle = Boolean(cycleKey) && currentCycle?.key === cycleKey;
+
+  // "Show all" is the full roster, editable. Anything narrower makes the toggle a
+  // one-way door: a paused member creates nothing by definition, so filtering on
+  // participation hides exactly the people you need to reach, and un-pausing a
+  // non-participant would make their row vanish mid-edit.
+  if (showEveryone) {
+    // state.members holds every member ever synced (357 of them), so "all" means
+    // the current roster plus anyone tied to this cycle, not the full history.
+    return state.members.filter(
+      (member) =>
+        member.isActiveMember ||
+        cycleCreatorIds.has(member.id) ||
+        (cycleKey && getCycleMemberStatus(member, cycleKey) === "paused"),
+    );
+  }
 
   return state.members.filter((member) => {
-    // Paused = exempt this cycle, so hide them from the obligations list.
+    // Paused = exempt this cycle, so they stay out of the obligations list.
     if (cycleKey && getCycleMemberStatus(member, cycleKey) === "paused") {
       return false;
     }
-    // Every active member (so those who still owe a cycle giveaway are flagged
-    // as pending), plus anyone who created a cycle giveaway even if now inactive.
-    return member.isActiveMember || cycleCreatorIds.has(member.id);
+    // Anyone who created a giveaway in the cycle, plus - only while the cycle is
+    // still running - every active member, so pending obligations stay visible.
+    return cycleCreatorIds.has(member.id) || (isCurrentCycle && member.isActiveMember);
   });
 }
 
@@ -1889,16 +2038,43 @@ function sortCycleGiveaways(giveaways, sortValue) {
 }
 
 function renderCycleHistoryResultsTable(cycleGiveaways) {
+  const editing = Boolean(runtime.cycleEditMode);
   const monthFilter = String(elements.cycleGiveawayMonthFilter?.value || "all");
   const sortValue = String(elements.cycleGiveawaySort?.value || "created-desc");
-  const filteredGiveaways = sortCycleGiveaways(
-    monthFilter === "all" ? cycleGiveaways : cycleGiveaways.filter((giveaway) => getGiveawayMonth(giveaway) === monthFilter),
-    sortValue,
+  const search = String(runtime.cycleGiveawaySearch || "").trim().toLowerCase();
+
+  const byMonth =
+    monthFilter === "all"
+      ? cycleGiveaways
+      : cycleGiveaways.filter((giveaway) => getGiveawayMonth(giveaway) === monthFilter);
+  // Search over the same labels the sort uses, so what you type matches what you
+  // see ordered.
+  const searched = search
+    ? byMonth.filter((giveaway) =>
+        `${getCycleGiveawayCreatorLabel(giveaway)} ${giveaway.title || ""} ${getCycleGiveawayWinnerLabel(giveaway)}`
+          .toLowerCase()
+          .includes(search),
+      )
+    : byMonth;
+  const filteredGiveaways = sortCycleGiveaways(searched, sortValue);
+
+  // Grouped by month: the Month column restated the same value fourteen or
+  // fifteen times per month. Group order follows the date sort direction; the
+  // chosen sort still orders the rows inside each group.
+  const groups = new Map();
+  for (const giveaway of filteredGiveaways) {
+    const key = getGiveawayMonth(giveaway) || "";
+    if (!groups.has(key)) {
+      groups.set(key, []);
+    }
+    groups.get(key).push(giveaway);
+  }
+  const oldestFirst = sortValue === "created-asc";
+  const orderedGroups = Array.from(groups.entries()).sort(([left], [right]) =>
+    oldestFirst ? String(left).localeCompare(String(right)) : String(right).localeCompare(String(left)),
   );
 
-  elements.cycleGiveawaysTable.innerHTML = filteredGiveaways.length
-    ? filteredGiveaways
-        .map((giveaway) => {
+  const renderRow = (giveaway) => {
           const creator = findById("members", giveaway.creatorId);
           const giveawayWins = findWinsForGiveaway(giveaway);
           const manualWinners = getGiveawayManualWinners(giveaway);
@@ -1920,39 +2096,55 @@ function renderCycleHistoryResultsTable(cycleGiveaways) {
           const giveawayUrl = String(giveaway.notes || "").trim();
           const kind = getGiveawayKind(giveaway);
           const giveawayMonth = getGiveawayMonth(giveaway);
+
+          // The kind description used to print on every row, but it has only three
+          // possible values and cycle/pop_free/penalty share one. It is a legend,
+          // so it becomes the badge's tooltip.
+          const typeCell = `<select class="cell-select kind-${escapeHtml(kind)}" title="${escapeHtml(describeGiveawayKind(kind))}" data-giveaway-kind-select="true" data-giveaway-id="${giveaway.id}">
+              <option value="cycle" ${kind === "cycle" ? "selected" : ""}>Cycle</option>
+              <option value="extra" ${kind === "extra" ? "selected" : ""}>Extra</option>
+              <option value="pop_free" ${kind === "pop_free" ? "selected" : ""}>PoP Free</option>
+              <option value="penalty" ${kind === "penalty" ? "selected" : ""}>Penalty</option>
+              <option value="summer_event" ${kind === "summer_event" ? "selected" : ""}>Summer event</option>
+            </select>`;
+
           return `
             <tr>
-              <td>
-                <div>${giveawayMonth ? formatMonthKey(giveawayMonth) : "-"}</div>
-                <button class="inline-action" data-edit-action="giveaway-month" data-giveaway-id="${giveaway.id}">Edit month</button>
-              </td>
               <td>${escapeHtml(creator?.name || "Unknown member")}</td>
               <td>
-                <strong>${giveawayUrl ? `<a class="linked-title" href="${escapeHtml(giveawayUrl)}" target="_blank" rel="noreferrer">${escapeHtml(giveaway.title)}</a>` : escapeHtml(giveaway.title)}</strong>
-                <span class="meta-line">${formatDate(giveaway.createdAt)}</span>
+                ${giveawayUrl ? `<a class="linked-title" href="${escapeHtml(giveawayUrl)}" target="_blank" rel="noreferrer">${escapeHtml(giveaway.title)}</a>` : escapeHtml(giveaway.title)}
+                <span class="cell-note">${escapeHtml(formatDate(giveaway.createdAt))}</span>
+                ${editing ? `<button class="inline-action" data-edit-action="giveaway-month" data-giveaway-id="${giveaway.id}">Edit month</button>` : ""}
               </td>
               <td>
-                <div>${winnerMarkup}${manualWinners.length ? ` ${buildBadge("info", "Manual")}` : ""}</div>
-                ${canEditGiveawayWinner(giveaway) ? `<button class="inline-action" data-edit-action="winner" data-giveaway-key="${escapeHtml(winnerKey)}" data-current-winners="${escapeHtml(currentWinnerNames)}">Edit winner</button>` : ""}
+                ${winnerMarkup}${manualWinners.length ? ` ${buildBadge("info", "Manual")}` : ""}
+                ${editing && canEditGiveawayWinner(giveaway) ? `<button class="inline-action" data-edit-action="winner" data-giveaway-key="${escapeHtml(winnerKey)}" data-current-winners="${escapeHtml(currentWinnerNames)}">Edit winner</button>` : ""}
               </td>
               <td>${Number(giveaway.entriesCount || 0).toLocaleString("en-US")}</td>
-              <td>
-                <label class="inline-select-wrap compact-select-wrap">
-                  <select class="inline-select" data-giveaway-kind-select="true" data-giveaway-id="${giveaway.id}">
-                    <option value="cycle" ${kind === "cycle" ? "selected" : ""}>Cycle</option>
-                    <option value="extra" ${kind === "extra" ? "selected" : ""}>Extra</option>
-                    <option value="pop_free" ${kind === "pop_free" ? "selected" : ""}>PoP Free</option>
-                    <option value="penalty" ${kind === "penalty" ? "selected" : ""}>Penalty</option>
-                    <option value="summer_event" ${kind === "summer_event" ? "selected" : ""}>Summer event</option>
-                  </select>
-                </label>
-                <span class="meta-line compact-meta-line">${describeGiveawayKind(kind)}</span>
-              </td>
+              <td>${typeCell}</td>
             </tr>
           `;
-        })
+  };
+
+  elements.cycleGiveawaysTable.innerHTML = filteredGiveaways.length
+    ? orderedGroups
+        .map(
+          ([month, giveaways]) => `
+            <tr class="table-group-row">
+              <th colspan="5" scope="rowgroup">
+                ${escapeHtml(month ? formatMonthKey(month) : "Month unknown")}
+                <span class="cell-note">${giveaways.length} giveaway${giveaways.length === 1 ? "" : "s"}</span>
+              </th>
+            </tr>
+            ${giveaways.map(renderRow).join("")}
+          `,
+        )
         .join("")
-    : buildMessageRow(6, "No giveaways match the current filters.", "Giveaways from the selected cycle will appear here.");
+    : buildMessageRow(
+        5,
+        search ? "No match." : "No giveaways match the current filters.",
+        search ? `Nothing in this cycle matches "${search}".` : "Giveaways from the selected cycle will appear here.",
+      );
 }
 
 function renderSummerEventPage() {

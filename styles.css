@@ -1591,7 +1591,194 @@ td small,
 
 .dense-table th,
 .dense-table td {
-  padding: 8px 8px;
+  padding: 6px 8px;
+  vertical-align: middle;
+}
+
+/* Full-width tables run long, so the header has to survive the scroll. */
+.dense-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--panel-strong);
+}
+
+/* Cycle summary as tiles: the same five figures used to be one prose sentence. */
+.cycle-summary-grid {
+  grid-template-columns: 2fr repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.cycle-summary-card {
+  padding: 10px 13px;
+}
+
+.cycle-summary-card strong {
+  font-size: 1.35rem;
+  margin-bottom: 2px;
+}
+
+.cycle-summary-card.wide strong {
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+.cycle-summary-card span {
+  font-size: 0.78rem;
+}
+
+/* A select sized to a badge, so the Type column stays editable without costing
+   the 8px per row a full-size control would add. */
+.cell-select {
+  max-width: 116px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  border: 1px solid rgba(157, 168, 187, 0.25);
+  background: rgba(157, 168, 187, 0.12);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.76rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cell-select:hover {
+  border-color: rgba(110, 168, 254, 0.5);
+}
+
+.cell-select.kind-extra {
+  color: #ffe3ad;
+  background: rgba(245, 158, 11, 0.14);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.cell-select.kind-penalty {
+  color: #ffd0d0;
+  background: rgba(239, 68, 68, 0.14);
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.cell-select.participation-paused {
+  color: #ffe3ad;
+  background: rgba(245, 158, 11, 0.14);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.cell-select.kind-pop_free,
+.cell-select.kind-summer_event {
+  color: #d4e5ff;
+  background: rgba(110, 168, 254, 0.14);
+  border-color: rgba(110, 168, 254, 0.3);
+}
+
+/* Month bands replace the column that restated the month on every row. */
+.table-group-row th {
+  position: static;
+  padding: 22px 8px 6px;
+  text-align: left;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text);
+  text-transform: none;
+  letter-spacing: 0;
+  background: transparent;
+  border-bottom: 1px solid var(--line);
+}
+
+.dense-table .table-group-row:first-child th {
+  padding-top: 2px;
+}
+
+/* The row closing a month gets no divider, so the gap above the next band reads
+   as the separator instead of a doubled line. */
+.table-group-row + tr td {
+  border-top: 0;
+}
+
+/* One line per note instead of a bordered alert card each: two cards were 168px
+   of a 360px header, and the winner's figures now live on their marked row. */
+.cycle-note {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  margin: 0 0 5px;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+.cycle-note:last-child {
+  margin-bottom: 0;
+}
+
+.cycle-note strong {
+  color: var(--text);
+}
+
+.cycle-note-label {
+  flex: 0 0 auto;
+  padding: 1px 7px;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.cycle-note.info .cycle-note-label {
+  background: rgba(110, 168, 254, 0.16);
+  color: #d4e5ff;
+}
+
+.cycle-note.warning .cycle-note-label {
+  background: rgba(245, 158, 11, 0.16);
+  color: #ffe3ad;
+}
+
+/* The Rule 9 leader used to be named only in an alert above the table. */
+.cycle-rule9-mark {
+  margin-left: 7px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: rgba(245, 158, 11, 0.16);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  color: #ffe3ad;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.th-note {
+  margin-left: 5px;
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 600;
+}
+
+/* Secondary figures sit inline instead of on their own block line: three stacked
+   sub-values per row were most of this table's height. */
+.cell-note {
+  margin-left: 6px;
+  color: var(--muted);
+  font-size: 0.74rem;
+  white-space: nowrap;
+}
+
+/* LUCKY / UNLUCKY are neutral rule states, not problems, so they get a quiet tag
+   rather than a coloured badge competing with the real status. */
+.cycle-luck-tag {
+  margin-left: 6px;
+  color: var(--muted);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.cycle-row-paused td {
+  opacity: 0.6;
 }
 
 .compact-meta-line {
@@ -1603,12 +1790,8 @@ td small,
   font-size: 0.88rem;
 }
 
-.cycle-page-grid {
-  margin-top: 0;
-}
-
 #cycle-best-gifter-warning {
-  margin-top: 14px;
+  margin-top: 4px;
 }
 
 .modal-backdrop {

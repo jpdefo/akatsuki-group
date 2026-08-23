@@ -49,7 +49,7 @@
             <div>
               <h2>Cycle history</h2>
               <p class="section-copy">
-                Review one full cycle at a time in a denser layout. Rule 9 highlights the best gifter using average entries on cycle giveaways only.
+                Rule 9 goes to the best gifter by average entries on cycle giveaways.
               </p>
             </div>
             <div class="section-summary">
@@ -62,80 +62,104 @@
               </label>
             </div>
           </div>
-          <p id="cycle-summary" class="section-copy"></p>
+          <div id="cycle-summary" class="summary-grid cycle-summary-grid"></div>
           <div id="cycle-best-gifter-warning" class="stack"></div>
         </section>
 
-        <div class="grid two-columns cycle-page-grid">
-          <section class="card">
-            <div class="section-heading">
-              <div>
-                <h2>Members</h2>
-                <p class="section-copy">
-                  Compact cycle status, giveaways logged, and pause controls.
-                </p>
-              </div>
+        <section class="card">
+          <div class="section-heading">
+            <div>
+              <h2>Members</h2>
+              <p class="section-copy">
+                Cycle totals per member, ranked by best gifter. Hover a row for the rules behind its status.
+              </p>
             </div>
-            <div class="table-wrap">
-              <table class="dense-table">
-                <thead>
-                  <tr>
-                    <th>Member</th>
-                    <th>Wins</th>
-                    <th>Giveaways</th>
-                    <th>Avg entries</th>
-                    <th>Participation</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody id="cycle-table"></tbody>
-              </table>
+            <div class="section-filters">
+              <label class="inline-filter">
+                Search
+                <input id="cycle-member-search" type="search" placeholder="Member" autocomplete="off" />
+              </label>
+              <label class="inline-filter">
+                Sort
+                <select id="cycle-member-sort">
+                  <option value="entries" selected>Best gifter rank</option>
+                  <option value="name">Name (A-Z)</option>
+                  <option value="shortfall">Needs the most</option>
+                  <option value="wins">Most wins</option>
+                </select>
+              </label>
+              <label class="inline-toggle">
+                <input id="cycle-show-paused" type="checkbox" />
+                Show all members
+              </label>
             </div>
-          </section>
+          </div>
+          <div class="table-wrap">
+            <table class="dense-table">
+              <thead>
+                <tr id="cycle-table-head">
+                  <th>Member</th>
+                  <th>Wins</th>
+                  <th>Giveaways</th>
+                  <th>Avg entries <span class="th-note">best gifter</span></th>
+                  <th>Status</th>
+                  <th>Participation</th>
+                </tr>
+              </thead>
+              <tbody id="cycle-table"></tbody>
+            </table>
+          </div>
+        </section>
 
-          <section class="card">
-            <div class="section-heading">
-              <div>
-                <h2>Giveaways and winners</h2>
-                <p class="section-copy">
-                  One row per giveaway, with its winner included so the cycle page stays compact.
-                </p>
-              </div>
-              <div class="section-filters">
-                <label class="inline-filter">
-                  Month
-                  <select id="cycle-giveaway-month-filter"></select>
-                </label>
-                <label class="inline-filter">
-                  Sort
-                  <select id="cycle-giveaway-sort">
-                    <option value="created-desc">Latest first</option>
-                    <option value="created-asc">Oldest first</option>
-                    <option value="creator-asc">Creator A-Z</option>
-                    <option value="creator-desc">Creator Z-A</option>
-                    <option value="winner-asc">Winner A-Z</option>
-                    <option value="winner-desc">Winner Z-A</option>
-                  </select>
-                </label>
-              </div>
+        <section class="card">
+          <div class="section-heading">
+            <div>
+              <h2>Giveaways and winners</h2>
+              <p class="section-copy">
+                One row per giveaway, with its winner. Hover a type badge for what it counts toward.
+              </p>
             </div>
-            <div class="table-wrap">
-              <table class="dense-table">
-                <thead>
-                  <tr>
-                    <th>Month</th>
-                    <th>Creator</th>
-                    <th>Giveaway</th>
-                    <th>Winner</th>
-                    <th>Entries</th>
-                    <th>Type</th>
-                  </tr>
-                </thead>
-                <tbody id="cycle-giveaways-table"></tbody>
-              </table>
+            <div class="section-filters">
+              <label class="inline-filter">
+                Search
+                <input id="cycle-giveaway-search" type="search" placeholder="Creator, game or winner" autocomplete="off" />
+              </label>
+              <label class="inline-filter">
+                Month
+                <select id="cycle-giveaway-month-filter"></select>
+              </label>
+              <label class="inline-filter">
+                Sort
+                <select id="cycle-giveaway-sort">
+                  <option value="created-desc">Latest first</option>
+                  <option value="created-asc">Oldest first</option>
+                  <option value="creator-asc">Creator A-Z</option>
+                  <option value="creator-desc">Creator Z-A</option>
+                  <option value="winner-asc">Winner A-Z</option>
+                  <option value="winner-desc">Winner Z-A</option>
+                </select>
+              </label>
+              <label class="inline-toggle">
+                <input id="cycle-edit-mode" type="checkbox" />
+                Edit month / winner
+              </label>
             </div>
-          </section>
-        </div>
+          </div>
+          <div class="table-wrap">
+            <table class="dense-table">
+              <thead>
+                <tr id="cycle-giveaways-head">
+                  <th>Creator</th>
+                  <th>Giveaway</th>
+                  <th>Winner</th>
+                  <th>Entries</th>
+                  <th>Type</th>
+                </tr>
+              </thead>
+              <tbody id="cycle-giveaways-table"></tbody>
+            </table>
+          </div>
+        </section>
       </main>
     </div>
 
