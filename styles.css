@@ -1036,10 +1036,12 @@ h2 {
   object-fit: cover;
 }
 
+/* The thumbnail set the row height at 94px across 100 rows. Half the size still
+   identifies the game and lets the text decide how tall a row is. */
 #summer-event-giveaways-table .giveaway-thumb {
-  width: 185px;
-  min-width: 185px;
-  height: 81px;
+  width: 96px;
+  min-width: 96px;
+  height: 45px;
 }
 
 .giveaway-thumb.placeholder {
@@ -1595,12 +1597,148 @@ td small,
   vertical-align: middle;
 }
 
+/* A badge is a fixed label; wrapping it ("Final / snapshot") makes one column
+   set the height of the whole row. */
+.dense-table .badge {
+  white-space: nowrap;
+}
+
 /* Full-width tables run long, so the header has to survive the scroll. */
 .dense-table thead th {
   position: sticky;
   top: 0;
   z-index: 1;
   background: var(--panel-strong);
+}
+
+/* --- Summer event standings ---------------------------------------------- */
+
+.summer-standings {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 10px;
+}
+
+.summer-standing {
+  display: grid;
+  gap: 7px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel-strong);
+}
+
+.summer-standing.podium {
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+.summer-standing.neutral {
+  border-color: rgba(245, 158, 11, 0.45);
+}
+
+.summer-standing.negative {
+  border-color: rgba(239, 68, 68, 0.45);
+}
+
+.summer-standing-head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Rank was implicit in card order; make the leaderboard position visible. */
+.summer-rank {
+  display: grid;
+  place-items: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 5px;
+  border-radius: 7px;
+  background: rgba(157, 168, 187, 0.14);
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.summer-standing.podium .summer-rank {
+  background: rgba(245, 158, 11, 0.2);
+  color: #ffe3ad;
+}
+
+.summer-standing-name {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.summer-balance {
+  margin-left: auto;
+  font-size: 1.1rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.summer-standing.negative .summer-balance {
+  color: #fca5a5;
+}
+
+/* Balance relative to the leader, so rank reads as length and not just order. */
+.summer-bar {
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.16);
+  overflow: hidden;
+}
+
+.summer-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.summer-standing.podium .summer-bar-fill {
+  background: var(--warning);
+}
+
+/* The balance is an equation; show the terms that add up to it. */
+.summer-terms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.summer-term {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  font-weight: 600;
+}
+
+.summer-term em {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.summer-term.plus {
+  color: #86efac;
+}
+
+.summer-term.minus {
+  color: #fca5a5;
+}
+
+.summer-standing-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px 11px;
+  color: var(--muted);
+  font-size: 0.73rem;
 }
 
 /* Cycle summary as tiles: the same five figures used to be one prose sentence. */

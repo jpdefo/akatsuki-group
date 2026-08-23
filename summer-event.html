@@ -48,9 +48,7 @@
           <div class="section-heading">
             <div>
               <h2>Event summary</h2>
-              <p id="summer-event-description" class="section-copy">
-                Summer-event balances are calculated from giveaway value, tracked entrants, and each participant's join costs.
-              </p>
+              <p id="summer-event-description" class="section-copy"></p>
             </div>
             <div class="section-summary">
               <div id="storage-status" class="pill"></div>
@@ -76,13 +74,13 @@
         <section class="card">
           <div class="section-heading">
             <div>
-              <h2>Participants</h2>
+              <h2>Standings</h2>
               <p class="section-copy">
-                Square cards show each participant's current summer-event balance and whether they can still enter giveaways.
+                Ranked by balance. Each card shows where the points came from: giveaways created, entries received, and joins paid for.
               </p>
             </div>
           </div>
-          <div id="summer-event-member-grid" class="member-grid"></div>
+          <div id="summer-event-member-grid" class="summer-standings"></div>
         </section>
 
         <section class="card">
@@ -97,8 +95,8 @@
               <label class="inline-filter">
                 Status
                 <select id="summer-event-status-filter">
-                  <option value="all">All giveaways</option>
-                  <option value="active" selected>Active (still running)</option>
+                  <option value="all" selected>All giveaways</option>
+                  <option value="active">Active (still running)</option>
                   <option value="finished">Finished</option>
                 </select>
               </label>
@@ -120,12 +118,12 @@
                 </select>
               </label>
               <label class="inline-filter">
-                Creator
-                <input id="summer-event-creator-filter" type="search" placeholder="Filter by creator" />
+                Search
+                <input id="summer-event-search" type="search" placeholder="Creator, game or winner" autocomplete="off" />
               </label>
-              <label class="inline-filter">
-                Winner
-                <input id="summer-event-winner-filter" type="search" placeholder="Filter by winner" />
+              <label class="inline-toggle">
+                <input id="summer-edit-mode" type="checkbox" />
+                Edit base / winner
               </label>
             </div>
           </div>
@@ -141,7 +139,6 @@
                   <th>Total points</th>
                   <th>Entries tracked</th>
                   <th>Winner</th>
-                  <th>Result</th>
                   <th>Snapshot</th>
                 </tr>
               </thead>

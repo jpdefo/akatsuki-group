@@ -118,6 +118,8 @@ const runtime = {
   // is edited, so the inline editors stay out of the way until asked for.
   cycleEditMode: false,
   cycleShowPaused: false,
+  summerEditMode: false,
+  summerSearch: "",
   cycleMemberSearch: "",
   cycleGiveawaySearch: "",
 };
@@ -180,8 +182,8 @@ const elements = {
   summerRuleset: document.querySelector("#summer-ruleset"),
   summerEventStatusFilter: document.querySelector("#summer-event-status-filter"),
   summerEventSort: document.querySelector("#summer-event-sort"),
-  summerEventCreatorFilter: document.querySelector("#summer-event-creator-filter"),
-  summerEventWinnerFilter: document.querySelector("#summer-event-winner-filter"),
+  summerEventSearch: document.querySelector("#summer-event-search"),
+  summerEditMode: document.querySelector("#summer-edit-mode"),
   summerEventDescription: document.querySelector("#summer-event-description"),
   summerEventSummaryCards: document.querySelector("#summer-event-summary-cards"),
   summerEventMemberGrid: document.querySelector("#summer-event-member-grid"),
@@ -380,8 +382,14 @@ function bindEvents() {
   });
   elements.summerEventStatusFilter?.addEventListener("change", () => renderSummerEventPage());
   elements.summerEventSort?.addEventListener("change", () => renderSummerEventPage());
-  elements.summerEventCreatorFilter?.addEventListener("input", () => renderSummerEventPage());
-  elements.summerEventWinnerFilter?.addEventListener("input", () => renderSummerEventPage());
+  elements.summerEventSearch?.addEventListener("input", () => {
+    runtime.summerSearch = elements.summerEventSearch.value || "";
+    renderSummerEventPage();
+  });
+  elements.summerEditMode?.addEventListener("change", () => {
+    runtime.summerEditMode = Boolean(elements.summerEditMode.checked);
+    renderSummerEventPage();
+  });
   elements.giveawaysSearch?.addEventListener("input", () => renderAllGiveawaysPage());
   elements.giveawaysKindFilter?.addEventListener("change", () => renderAllGiveawaysPage());
   elements.giveawaysMonthFilter?.addEventListener("change", () => renderAllGiveawaysPage());
@@ -2215,10 +2223,12 @@ function renderSummerEventPage() {
   const blockedParticipants = standings.filter((participant) => participant.balance < 0).length;
 
   if (elements.summerEventDescription) {
-    const blockedLabel = blockedParticipants
-      ? ` ${blockedParticipants} participant${blockedParticipants === 1 ? " is" : "s are"} below zero and should stop entering new giveaways.`
+    // The old sentence restated four of the five tiles sitting right below it.
+    // Say only what the tiles cannot: whether anyone is over their entry budget.
+    elements.summerEventDescription.textContent = blockedParticipants
+      ? `${blockedParticipants} participant${blockedParticipants === 1 ? " is" : "s are"} below zero and should stop entering new giveaways.`
       : "";
-    elements.summerEventDescription.textContent = `${selectedPeriod.label} has ${giveawaysWithEntries} tracked giveaway${giveawaysWithEntries === 1 ? "" : "s"} with entries, ${giveawaysWithWinner} with a winner, ${trackedEntries.toLocaleString("en-US")} tracked entr${trackedEntries === 1 ? "y" : "ies"}, and ${pendingSnapshots} snapshot${pendingSnapshots === 1 ? "" : "s"} still waiting for a final post-close capture.${blockedLabel}`;
+    elements.summerEventDescription.hidden = !blockedParticipants;
   }
 
   if (elements.summerEventSummaryCards) {
@@ -2242,35 +2252,10 @@ function renderSummerEventPage() {
   }
 
   if (elements.summerEventMemberGrid) {
+    const topBalance = standings.reduce((best, participant) => Math.max(best, participant.balance), 0);
     elements.summerEventMemberGrid.innerHTML = standings.length
       ? standings
-          .map((participant) => {
-            const profileMarkup = participant.profileUrl
-              ? `<a class="linked-title" href="${escapeHtml(participant.profileUrl)}" target="_blank" rel="noreferrer">${escapeHtml(participant.displayName)}</a>`
-              : escapeHtml(participant.displayName);
-            const balanceBadge = participant.balance < 0
-              ? buildBadge("danger", "ENTRY BLOCKED")
-              : participant.balance === 0
-                ? buildBadge("warning", "AT LIMIT")
-                : buildBadge("success", "CAN ENTER");
-            const activityBadge = participant.isActiveMember ? buildBadge("info", "Active member") : "";
-            const wonCreatedRatio = buildSummerEventRatioMarkup(participant.wonGiveaways, participant.createdGiveaways);
-            const wonPointsCreatedRatio = buildSummerEventRatioMarkup(participant.wonPoints, participant.createdPoints);
-            return `
-              <article class="member-card${participant.balance < 0 ? " negative" : participant.balance === 0 ? " neutral" : ""}">
-                <h3>${profileMarkup}</h3>
-                <div class="member-card-badges">${balanceBadge}${activityBadge ? ` ${activityBadge}` : ""}</div>
-                <strong>${escapeHtml(formatPointBalance(participant.balance))}</strong>
-                <div class="member-card-meta">
-                  <span>Created: ${participant.createdGiveaways} • +${participant.createdPoints.toLocaleString("en-US")} P</span>
-                  <span>Won: ${participant.wonGiveaways} • Won/Created ratio: ${wonCreatedRatio}</span>
-                  <span>Won base: +${participant.wonPoints.toLocaleString("en-US")} P • Base ratio: ${wonPointsCreatedRatio}</span>
-                  <span>Entry bonus: +${participant.entryBonusPoints.toLocaleString("en-US")} P from ${participant.receivedEntries.toLocaleString("en-US")} entr${participant.receivedEntries === 1 ? "y" : "ies"}</span>
-                  <span>Joined: ${participant.joinedGiveaways} • -${participant.entryCostPoints.toLocaleString("en-US")} P</span>
-                </div>
-              </article>
-            `;
-          })
+          .map((participant, index) => buildSummerStandingCard(participant, index + 1, topBalance))
           .join("")
       : buildEmptyPanel(
           "No participant balances yet.",
@@ -2279,21 +2264,19 @@ function renderSummerEventPage() {
   }
 
   if (elements.summerEventGiveawaysTable) {
-    const creatorFilter = String(elements.summerEventCreatorFilter?.value || "").trim().toLowerCase();
-    const winnerFilter = String(elements.summerEventWinnerFilter?.value || "").trim().toLowerCase();
-    const statusFilter = String(elements.summerEventStatusFilter?.value || "active").toLowerCase();
+    const search = String(runtime.summerSearch || "").trim().toLowerCase();
+    const editing = Boolean(runtime.summerEditMode);
+    const statusFilter = String(elements.summerEventStatusFilter?.value || "all").toLowerCase();
     const sortValue = String(elements.summerEventSort?.value || "ended-asc");
     const filteredGiveaways = sortSummerEventGiveaways(
       giveaways.filter((giveaway) => {
-        const creatorLabel = getSummerEventCreatorLabel(giveaway, summerEventMemberIndex).toLowerCase();
-        const winnerLabels = getSummerEventWinnerUsers(giveaway).map((winner) => winner.toLowerCase());
-        const matchesCreator = !creatorFilter || creatorLabel.includes(creatorFilter);
-        const matchesWinner = !winnerFilter || winnerLabels.some((winner) => winner.includes(winnerFilter));
+        const haystack = `${getSummerEventCreatorLabel(giveaway, summerEventMemberIndex)} ${giveaway.title || ""} ${getSummerEventWinnerUsers(giveaway).join(" ")}`.toLowerCase();
+        const matchesSearch = !search || haystack.includes(search);
         const active = isSummerEventGiveawayActive(giveaway);
         const matchesStatus = statusFilter === "all"
           || (statusFilter === "active" && active)
           || (statusFilter === "finished" && !active);
-        return matchesCreator && matchesWinner && matchesStatus;
+        return matchesSearch && matchesStatus;
       }),
       sortValue,
       summerEventMemberIndex,
@@ -2356,52 +2339,104 @@ function renderSummerEventPage() {
               <tr>
                 <td>${thumbCell}</td>
                 <td>
-                  <strong>${titleMarkup}</strong>
-                  <span class="meta-line">Created: ${escapeHtml(formatDateTime(getGiveawayCreatedDisplay(giveaway)))}</span>
-                  <span class="meta-line">End date: ${escapeHtml(formatDateTime(getGiveawayEndedDisplay(giveaway)))}</span>
+                  ${titleMarkup}
+                  <span class="cell-note" title="${escapeHtml(`Created ${formatDateTime(getGiveawayCreatedDisplay(giveaway))}, ended ${formatDateTime(getGiveawayEndedDisplay(giveaway))}`)}">ended ${escapeHtml(formatDate(getGiveawayEndedDisplay(giveaway)))}</span>
+                </td>
+                <td>${creatorMarkup}</td>
+                <td>
+                  ${rewardPoints.toLocaleString("en-US")} P
+                  ${getSummerEventBasePointsOverride(giveaway) !== null ? `<span class="cell-note override-note">manual</span>` : ""}
+                  <span class="cell-note">${getSummerEventValueMeta(giveaway)}</span>
+                  ${editing ? `<button class="inline-action" data-edit-action="summer-base-points" data-giveaway-key="${escapeHtml(winnerKey)}" data-giveaway-title="${escapeHtml(giveaway.title || "")}" data-current-base="${escapeHtml(String(getSummerEventBasePointsOverride(giveaway) ?? ""))}">Edit base</button>` : ""}
                 </td>
                 <td>
-                  <strong>${creatorMarkup}</strong>
+                  ${entryPoints.toLocaleString("en-US")} P
+                  <span class="cell-note">${entryUsers.length.toLocaleString("en-US")} × ${entryDelta} P</span>
                 </td>
-                <td>
-                  <strong>${rewardPoints.toLocaleString("en-US")} P</strong>
-                  <span class="meta-line">${getSummerEventValueMeta(giveaway)}</span>
-                  ${getSummerEventBasePointsOverride(giveaway) !== null ? `<span class="meta-line override-note">Manual base</span>` : ""}
-                  <button class="inline-action" data-edit-action="summer-base-points" data-giveaway-key="${escapeHtml(winnerKey)}" data-giveaway-title="${escapeHtml(giveaway.title || "")}" data-current-base="${escapeHtml(String(getSummerEventBasePointsOverride(giveaway) ?? ""))}">Edit base</button>
+                <td><strong>${totalPoints.toLocaleString("en-US")} P</strong></td>
+                <td>${entryUsers.length.toLocaleString("en-US")}</td>
+                <td title="${escapeHtml(resultMeta)}">
+                  ${winners.length ? winnerMarkup : resultBadge}${manualWinnerSet ? ` ${buildBadge("info", "Manual")}` : ""}
+                  ${winners.length > 1 ? `<span class="cell-note">${winners.length} winners</span>` : ""}
+                  ${editing && canEditGiveawayWinner(giveaway) ? `<button class="inline-action" data-edit-action="winner" data-giveaway-key="${escapeHtml(winnerKey)}" data-current-winners="${escapeHtml(winners.join(", "))}">Edit winner</button>` : ""}
                 </td>
-                <td>
-                  <strong>${entryPoints.toLocaleString("en-US")} P</strong>
-                  <span class="meta-line">${entryUsers.length.toLocaleString("en-US")} × ${entryDelta} P</span>
-                </td>
-                <td>
-                  <strong>${totalPoints.toLocaleString("en-US")} P</strong>
-                </td>
-                <td>
-                  <strong>${entryUsers.length.toLocaleString("en-US")}</strong>
-                </td>
-                <td>
-                  <strong>${winnerMarkup}</strong>${manualWinnerSet ? ` ${buildBadge("info", "Manual")}` : ""}
-                  <span class="meta-line">${escapeHtml(winners.length ? `${winners.length} winner${winners.length === 1 ? "" : "s"}` : resultStatus === "no_winners" ? "No winners" : "No winner yet")}</span>
-                  ${canEditGiveawayWinner(giveaway) ? `<button class="inline-action" data-edit-action="winner" data-giveaway-key="${escapeHtml(winnerKey)}" data-current-winners="${escapeHtml(winners.join(", "))}">Edit winner</button>` : ""}
-                </td>
-                <td>
-                  ${resultBadge}
-                  <span class="meta-line">${escapeHtml(resultMeta)}</span>
-                </td>
-                <td>
+                <td title="${escapeHtml(giveaway.entriesSnapshotAt ? `Updated ${formatDateTime(giveaway.entriesSnapshotAt)}` : "No entries snapshot yet")}">
                   ${buildSummerEventSnapshotBadge(giveaway)}
-                  <span class="meta-line">${escapeHtml(giveaway.entriesSnapshotAt ? `Updated ${formatDateTime(giveaway.entriesSnapshotAt)}` : "No entries snapshot yet")}</span>
                 </td>
               </tr>
             `;
           })
           .join("")
       : buildMessageRow(
-          10,
-          giveaways.length ? "No summer-event giveaways match the current filters." : "No summer-event giveaways in this event.",
-          giveaways.length ? "Adjust the creator, winner, or sort controls to see more giveaways." : "Choose another event or tag more giveaways as Summer event.",
+          9,
+          giveaways.length ? "No giveaways match the current filters." : "No summer-event giveaways in this event.",
+          giveaways.length
+            ? statusFilter === "active"
+              ? "This event has no giveaways still running. Switch Status to All or Finished."
+              : "Clear the search or change the status filter to see more."
+            : "Choose another event or tag more giveaways as Summer event.",
         );
   }
+}
+
+// The standings are a leaderboard, so they are ranked and weighted like one. The
+// old cards were a uniform grid whose order carried the ranking invisibly, with
+// two badges ("CAN ENTER", "Active member") that every participant had.
+function buildSummerStandingCard(participant, rank, topBalance) {
+  const profileMarkup = participant.profileUrl
+    ? `<a class="linked-title" href="${escapeHtml(participant.profileUrl)}" target="_blank" rel="noreferrer">${escapeHtml(participant.displayName)}</a>`
+    : escapeHtml(participant.displayName);
+
+  // Only exceptions get a badge: everyone who can enter is the normal case.
+  const badges = [];
+  if (participant.balance < 0) {
+    badges.push(buildBadge("danger", "Entry blocked"));
+  } else if (participant.balance === 0) {
+    badges.push(buildBadge("warning", "At limit"));
+  }
+  if (!participant.isActiveMember) {
+    badges.push(buildBadge("info", "Left group"));
+  }
+
+  // Balance relative to the leader, so rank is visible as length, not just order.
+  const share = topBalance > 0 ? Math.max(0, (participant.balance / topBalance) * 100) : 0;
+
+  const wonCreatedRatio = buildSummerEventRatioMarkup(participant.wonGiveaways, participant.createdGiveaways);
+  const wonPointsRatio = buildSummerEventRatioMarkup(participant.wonPoints, participant.createdPoints);
+
+  // The balance is an equation; the old card made you assemble it from five
+  // prose lines. Show the terms that add up to it.
+  const terms = [
+    { label: "created", value: participant.createdPoints, tone: "plus" },
+    { label: "entries", value: participant.entryBonusPoints, tone: "plus" },
+    { label: "joined", value: -participant.entryCostPoints, tone: "minus" },
+  ]
+    .filter((term) => term.value !== 0)
+    .map(
+      (term) =>
+        `<span class="summer-term ${term.tone}">${escapeHtml(formatPointBalance(term.value))}<em>${escapeHtml(term.label)}</em></span>`,
+    )
+    .join("");
+
+  return `
+    <article class="summer-standing${participant.balance < 0 ? " negative" : participant.balance === 0 ? " neutral" : ""}${rank <= 3 ? " podium" : ""}">
+      <div class="summer-standing-head">
+        <span class="summer-rank">${rank}</span>
+        <span class="summer-standing-name">${profileMarkup}</span>
+        ${badges.join("")}
+        <span class="summer-balance">${escapeHtml(formatPointBalance(participant.balance))}</span>
+      </div>
+      <div class="summer-bar"><div class="summer-bar-fill" style="width: ${share.toFixed(1)}%"></div></div>
+      <div class="summer-terms">${terms}</div>
+      <div class="summer-standing-meta">
+        <span title="Summer-event giveaways this member created">${participant.createdGiveaways} created</span>
+        <span title="Summer-event giveaways this member won">${participant.wonGiveaways} won</span>
+        <span title="Summer-event giveaways this member joined">${participant.joinedGiveaways} joined</span>
+        <span title="Giveaways won versus created. Above 100% means the member has won more than they have put back into the event.">win/create ${wonCreatedRatio}</span>
+        <span title="Base points won versus base points created. Above 100% means the member has taken more value than they contributed.">value ${wonPointsRatio}</span>
+      </div>
+    </article>
+  `;
 }
 
 function renderSummerEventEntriesPage() {
