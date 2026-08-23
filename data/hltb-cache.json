@@ -14715,5 +14715,21 @@
     "gameId": 71509,
     "url": "https://howlongtobeat.com/game/71509",
     "checkedAt": "2026-07-23T08:17:19.662768+00:00"
+  },
+  "dying light": {
+    "title": "Dying Light",
+    "hltbHours": 18.27,
+    "matchedTitle": "Dying Light",
+    "gameId": 21252,
+    "url": "https://howlongtobeat.com/game/21252",
+    "checkedAt": "2026-08-23T18:29:32.805486+00:00"
+  },
+  "hatoful boyfriend": {
+    "title": "Hatoful Boyfriend",
+    "hltbHours": 1.5,
+    "matchedTitle": "Hatoful Boyfriend",
+    "gameId": 4347,
+    "url": "https://howlongtobeat.com/game/4347",
+    "checkedAt": "2026-08-23T18:29:34.438643+00:00"
   }
 }

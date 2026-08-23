@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-06T18:13:43.339291+00:00",
+  "updatedAt": "2026-08-23T18:36:34.701229+00:00",
   "items": {
     "sub:427289": {
       "checkedAt": "2026-05-12T18:33:49.536681+00:00",
@@ -2045,6 +2045,28 @@
       "finalPriceCents": 2999,
       "discountPercent": 50,
       "pricePoints": 60,
+      "available": true
+    },
+    "app:1340990": {
+      "checkedAt": "2026-08-23T18:36:34.428709+00:00",
+      "storeType": "app",
+      "storeId": 1340990,
+      "currency": "USD",
+      "listPriceCents": 4999,
+      "finalPriceCents": 4999,
+      "discountPercent": 0,
+      "pricePoints": 50,
+      "available": true
+    },
+    "app:2255370": {
+      "checkedAt": "2026-08-23T18:36:34.701212+00:00",
+      "storeType": "app",
+      "storeId": 2255370,
+      "currency": "USD",
+      "listPriceCents": 4999,
+      "finalPriceCents": 4999,
+      "discountPercent": 0,
+      "pricePoints": 50,
       "available": true
     }
   }

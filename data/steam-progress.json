@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T18:00:17.983967+00:00",
+  "updatedAt": "2026-08-23T18:39:40.410865+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -21,51 +21,20 @@
     {
       "username": "BojanNS987",
       "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
-      "appId": 88801,
+      "appId": 239140,
       "title": "Dying Light Enhanced Edition ROW",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/88801/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 5.6,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/239140/achievements/",
+      "playtimeHours": 29.8,
+      "visible": true,
+      "earnedAchievements": 32,
+      "totalAchievements": 78,
+      "achievementPercent": 41,
+      "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "popThresholdMetAt": "2026-07-07T09:04:22.700973+00:00"
-    },
-    {
-      "username": "BojanNS987",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
-      "appId": 198297,
-      "title": "Ni no Kuni II: Revenant Kingdom - The...",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/198297/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 5.6,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true
-    },
-    {
-      "username": "BojanNS987",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
-      "appId": 238819,
-      "title": "Pillars of Eternity II: Deadfire - Ob...",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/238819/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 5.6,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true
+      "error": null,
+      "achievementsPlaytimeHours": 29.8,
+      "popThresholdMetAt": "2026-08-23T18:30:52.613002+00:00"
     },
     {
       "username": "BojanNS987",
@@ -195,6 +164,24 @@
     {
       "username": "BojanNS987",
       "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 560130,
+      "title": "Pillars of Eternity II: Deadfire - Ob...",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/560130/achievements/",
+      "playtimeHours": 15.15,
+      "visible": true,
+      "earnedAchievements": 8,
+      "totalAchievements": 55,
+      "achievementPercent": 15,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 15.15,
+      "popThresholdMetAt": "2026-08-23T18:30:52.612998+00:00"
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
       "appId": 567640,
       "title": "Danganronpa V3: Killing Harmony",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/567640/achievements/",
@@ -245,6 +232,24 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 31.98,
       "popThresholdMetAt": "2026-06-26T07:11:08.797128+00:00"
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 589360,
+      "title": "Ni no Kuni II: Revenant Kingdom - The...",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/589360/achievements/",
+      "playtimeHours": 40.92,
+      "visible": true,
+      "earnedAchievements": 28,
+      "totalAchievements": 63,
+      "achievementPercent": 44,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 40.92,
+      "popThresholdMetAt": "2026-08-23T18:30:52.613004+00:00"
     },
     {
       "username": "BojanNS987",
@@ -353,22 +358,6 @@
       "gamesVisible": true,
       "popThresholdMetAt": "2026-06-26T07:11:08.797146+00:00",
       "achievementsPlaytimeHours": 30.77
-    },
-    {
-      "username": "BojanNS987",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
-      "appId": 791761,
-      "title": "Assassin's Creed Valhalla - Complete ...",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/791761/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 5.6,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true
     },
     {
       "username": "BojanNS987",
@@ -2347,7 +2336,7 @@
       "appId": 2172010,
       "title": "Until Dawn",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2172010/achievements/",
-      "playtimeHours": 3.0,
+      "playtimeHours": 3.58,
       "visible": true,
       "earnedAchievements": 2,
       "totalAchievements": 29,
@@ -2356,7 +2345,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 3.0,
+      "achievementsPlaytimeHours": 3.58,
       "popThresholdMetAt": "2026-08-23T13:26:12.859340+00:00"
     },
     {
@@ -2603,25 +2592,6 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 20.62,
       "popThresholdMetAt": "2026-06-26T07:11:08.797412+00:00"
-    },
-    {
-      "username": "BojanNS987",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
-      "appId": 2552430,
-      "title": "KINGDOM HEARTS INTEGRUM MASTERPIECE",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2552430/achievements/",
-      "playtimeHours": 6.18,
-      "visible": true,
-      "earnedAchievements": 3,
-      "totalAchievements": 197,
-      "achievementPercent": 2,
-      "playtimeCheckedAt": "2026-06-10T07:20:22.909377+00:00",
-      "playtimeSource": "steam-web-api",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "error": null,
-      "checkedAt": "2026-06-10T07:21:04.880922+00:00",
-      "achievementsPlaytimeHours": 6.18
     },
     {
       "username": "BojanNS987",
@@ -6165,26 +6135,6 @@
     {
       "username": "burntreynolds444",
       "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
-      "appId": 1265920,
-      "title": "Life is Strange Remastered Collection",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1265920/achievements/",
-      "playtimeHours": 14.57,
-      "visible": true,
-      "earnedAchievements": 60,
-      "totalAchievements": 60,
-      "achievementPercent": 100,
-      "playtimeCheckedAt": "2026-06-10T07:20:23.888438+00:00",
-      "playtimeSource": "steam-web-api",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "error": null,
-      "checkedAt": "2026-06-11T07:31:17.788154+00:00",
-      "achievementsPlaytimeHours": 14.57,
-      "popThresholdMetAt": "2026-06-26T07:11:08.797776+00:00"
-    },
-    {
-      "username": "burntreynolds444",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
       "appId": 1272160,
       "title": "The Life and Suffering of Sir Brante",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1272160/achievements/",
@@ -7384,23 +7334,6 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "achievementsPlaytimeHours": 21.93
-    },
-    {
-      "username": "chOOkity",
-      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
-      "appId": 785847,
-      "title": "LEGO Star Wars: The Skywalker Saga Ga...",
-      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/785847/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 32.0,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "popThresholdMetAt": "2026-07-06T18:27:00.286792+00:00"
     },
     {
       "username": "chOOkity",
@@ -9263,12 +9196,12 @@
       "earnedAchievements": 33,
       "totalAchievements": 34,
       "achievementPercent": 97,
-      "playtimeHours": 24.68,
+      "playtimeHours": 24.9,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 24.68,
+      "achievementsPlaytimeHours": 24.9,
       "popThresholdMetAt": "2026-07-25T07:47:27.673974+00:00"
     },
     {
@@ -11790,26 +11723,6 @@
     {
       "username": "eledhrim",
       "steamProfile": "https://steamcommunity.com/profiles/76561199085338397",
-      "appId": 1265920,
-      "title": "Life is Strange Remastered Collection",
-      "progressUrl": "https://steamcommunity.com/profiles/76561199085338397/stats/1265920/achievements/",
-      "visible": true,
-      "earnedAchievements": 60,
-      "totalAchievements": 60,
-      "achievementPercent": 100,
-      "playtimeHours": 14.62,
-      "playtimeCheckedAt": "2026-06-10T07:20:24.579093+00:00",
-      "playtimeSource": "steam-web-api",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "error": null,
-      "checkedAt": "2026-06-11T07:31:30.510591+00:00",
-      "achievementsPlaytimeHours": 14.62,
-      "popThresholdMetAt": "2026-06-26T07:11:08.798450+00:00"
-    },
-    {
-      "username": "eledhrim",
-      "steamProfile": "https://steamcommunity.com/profiles/76561199085338397",
       "appId": 1313140,
       "title": "Cult of the Lamb",
       "progressUrl": "https://steamcommunity.com/profiles/76561199085338397/stats/1313140/achievements/",
@@ -12862,22 +12775,6 @@
     {
       "username": "Ernesttico",
       "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
-      "appId": 575970,
-      "title": "Golem Gates",
-      "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/575970/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": null,
-      "error": "HTTP Error 403: Forbidden",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true
-    },
-    {
-      "username": "Ernesttico",
-      "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
       "appId": 589780,
       "title": "The Red Strings Club",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/589780/achievements/",
@@ -13450,22 +13347,6 @@
     {
       "username": "Ernesttico",
       "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
-      "appId": 1111230,
-      "title": "FINAL FANTASY XVI COMPLETE EDITION",
-      "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/1111230/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": null,
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "error": "HTTP Error 400: Bad Request"
-    },
-    {
-      "username": "Ernesttico",
-      "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
       "appId": 1121640,
       "title": "The Wandering Village",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/1121640/achievements/",
@@ -13717,19 +13598,17 @@
       "username": "Ernesttico",
       "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
       "appId": 1286680,
-      "title": "Tiny Tina's Wonderlands",
+      "title": "Golem Gates",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/1286680/achievements/",
       "playtimeHours": 4.7,
       "visible": true,
       "earnedAchievements": 5,
       "totalAchievements": 47,
       "achievementPercent": 11,
-      "playtimeCheckedAt": "2026-06-10T07:20:24.727285+00:00",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "checkedAt": "2026-06-11T07:31:18.825762+00:00",
       "achievementsPlaytimeHours": 4.7,
       "popThresholdMetAt": "2026-06-26T07:11:08.798681+00:00"
     },
@@ -14905,22 +14784,6 @@
     {
       "username": "Horseflesh",
       "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
-      "appId": 427289,
-      "title": "Borderlands 3: Super Deluxe Edition",
-      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/427289/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 2.449,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true
-    },
-    {
-      "username": "Horseflesh",
-      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
       "appId": 427290,
       "title": "Vampyr",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/427290/achievements/",
@@ -14934,24 +14797,6 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "achievementsPlaytimeHours": 0.0
-    },
-    {
-      "username": "Horseflesh",
-      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
-      "appId": 436040,
-      "title": "METAL GEAR ONLINE \"BASIC APPEAL PACK\"",
-      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/436040/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": null,
-      "playtimeCheckedAt": null,
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "error": "HTTP Error 400: Bad Request",
-      "checkedAt": "2026-06-15T07:48:16.948115+00:00"
     },
     {
       "username": "Horseflesh",
@@ -19946,40 +19791,6 @@
     {
       "username": "Koalala",
       "steamProfile": "https://steamcommunity.com/profiles/76561198065466175",
-      "appId": 401587,
-      "title": "STAR WARS Jedi: Fallen Order Deluxe E...",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/401587/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 16.4,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "popThresholdMetAt": "2026-07-06T18:27:00.287061+00:00"
-    },
-    {
-      "username": "Koalala",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198065466175",
-      "appId": 634166,
-      "title": "SCARLET NEXUS Ultimate Edition",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/634166/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 16.4,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "popThresholdMetAt": "2026-07-06T18:27:00.287068+00:00"
-    },
-    {
-      "username": "Koalala",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198065466175",
       "appId": 647830,
       "title": "LEGO Marvel Super Heroes 2",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/647830/achievements/",
@@ -20919,26 +20730,6 @@
     {
       "username": "Koalala",
       "steamProfile": "https://steamcommunity.com/profiles/76561198065466175",
-      "appId": 2552430,
-      "title": "KINGDOM HEARTS INTEGRUM MASTERPIECE",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/2552430/achievements/",
-      "playtimeHours": 97.13,
-      "visible": true,
-      "earnedAchievements": 55,
-      "totalAchievements": 197,
-      "achievementPercent": 28,
-      "playtimeCheckedAt": "2026-06-10T07:20:25.741901+00:00",
-      "playtimeSource": "steam-web-api",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "error": null,
-      "checkedAt": "2026-06-10T07:21:04.880685+00:00",
-      "achievementsPlaytimeHours": 97.13,
-      "popThresholdMetAt": "2026-07-06T18:27:00.287094+00:00"
-    },
-    {
-      "username": "Koalala",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198065466175",
       "appId": 2582320,
       "title": "Mixtape",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/2582320/achievements/",
@@ -21200,23 +20991,6 @@
     {
       "username": "Krlesnik",
       "steamProfile": "https://steamcommunity.com/profiles/76561198010348380",
-      "appId": 48515,
-      "title": "Hatoful Boyfriend Collector's Edition",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198010348380/stats/48515/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 36.0,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "popThresholdMetAt": "2026-07-07T09:04:22.701626+00:00"
-    },
-    {
-      "username": "Krlesnik",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198010348380",
       "appId": 76083,
       "title": "Volume: Quadrilateral Edition",
       "progressUrl": "https://steamcommunity.com/profiles/76561198010348380/stats/220780/achievements/",
@@ -21241,40 +21015,6 @@
         }
       ],
       "achievementsPlaytimeHours": 5.9
-    },
-    {
-      "username": "Krlesnik",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198010348380",
-      "appId": 76328,
-      "title": "Men of War: Assault Squad 2 - Gold Ed...",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198010348380/stats/76328/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 36.0,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "popThresholdMetAt": "2026-07-06T18:27:00.287106+00:00"
-    },
-    {
-      "username": "Krlesnik",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198010348380",
-      "appId": 92660,
-      "title": "LEGO STAR WARS: The Force Awakens - D...",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198010348380/stats/92660/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 36.0,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "popThresholdMetAt": "2026-07-06T18:27:00.287108+00:00"
     },
     {
       "username": "Krlesnik",
@@ -21329,25 +21069,6 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 4.95,
       "popThresholdMetAt": "2026-06-26T07:11:08.799507+00:00"
-    },
-    {
-      "username": "Krlesnik",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198010348380",
-      "appId": 220780,
-      "title": "Volume: Quadrilateral Edition",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198010348380/stats/220780/achievements/",
-      "visible": true,
-      "earnedAchievements": 0,
-      "totalAchievements": 35,
-      "achievementPercent": 0,
-      "playtimeHours": 0.0,
-      "playtimeCheckedAt": "2026-06-15T07:46:05.718812+00:00",
-      "playtimeSource": "steam-web-api",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "error": null,
-      "checkedAt": "2026-06-17T07:40:18.525882+00:00",
-      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "Krlesnik",
@@ -21473,23 +21194,6 @@
     {
       "username": "Krlesnik",
       "steamProfile": "https://steamcommunity.com/profiles/76561198010348380",
-      "appId": 272962,
-      "title": "HITMAN 2 - Standard Edition",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198010348380/stats/272962/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 36.0,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "popThresholdMetAt": "2026-07-07T09:04:22.701638+00:00"
-    },
-    {
-      "username": "Krlesnik",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198010348380",
       "appId": 278080,
       "title": "DYNASTY WARRIORS 8: Xtreme Legends Complete Edition",
       "progressUrl": "https://steamcommunity.com/profiles/76561198010348380/stats/278080/achievements/",
@@ -21593,6 +21297,23 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 7.38,
       "popThresholdMetAt": "2026-06-26T07:11:08.799531+00:00"
+    },
+    {
+      "username": "Krlesnik",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198010348380",
+      "appId": 310080,
+      "title": "Hatoful Boyfriend Collector's Edition",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198010348380/stats/310080/achievements/",
+      "playtimeHours": 2.45,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 16,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 2.45
     },
     {
       "username": "Krlesnik",
@@ -22864,6 +22585,24 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 3.12,
       "popThresholdMetAt": "2026-06-26T07:11:08.799671+00:00"
+    },
+    {
+      "username": "Krlesnik",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198010348380",
+      "appId": 863550,
+      "title": "HITMAN 2 - Standard Edition",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198010348380/stats/863550/achievements/",
+      "playtimeHours": 52.47,
+      "visible": true,
+      "earnedAchievements": 53,
+      "totalAchievements": 146,
+      "achievementPercent": 36,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 52.47,
+      "popThresholdMetAt": "2026-08-23T18:30:52.613010+00:00"
     },
     {
       "username": "Krlesnik",
@@ -24802,23 +24541,6 @@
     {
       "username": "leniu",
       "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
-      "appId": 504022,
-      "title": "OUTRIDERS",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/504022/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 167.0,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "popThresholdMetAt": "2026-06-26T07:11:08.799912+00:00"
-    },
-    {
-      "username": "leniu",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
       "appId": 504230,
       "title": "Celeste",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/504230/achievements/",
@@ -25052,6 +24774,24 @@
     {
       "username": "leniu",
       "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
+      "appId": 680420,
+      "title": "OUTRIDERS",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/680420/achievements/",
+      "playtimeHours": 23.32,
+      "visible": true,
+      "earnedAchievements": 23,
+      "totalAchievements": 52,
+      "achievementPercent": 44,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 23.32,
+      "popThresholdMetAt": "2026-08-23T18:30:52.613007+00:00"
+    },
+    {
+      "username": "leniu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
       "appId": 695330,
       "title": "SEASON: A letter to the future",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/695330/achievements/",
@@ -25245,23 +24985,6 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 23.45,
       "popThresholdMetAt": "2026-06-26T07:11:08.799969+00:00"
-    },
-    {
-      "username": "leniu",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
-      "appId": 785847,
-      "title": "LEGO Star Wars: The Skywalker Saga Ga...",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/785847/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 167.0,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "popThresholdMetAt": "2026-07-06T18:27:00.287180+00:00"
     },
     {
       "username": "leniu",
@@ -27199,16 +26922,16 @@
       "appId": 2677660,
       "title": "Indiana Jones and the Great Circle",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2677660/achievements/",
-      "playtimeHours": 41.03,
+      "playtimeHours": 41.83,
       "visible": true,
-      "earnedAchievements": 31,
+      "earnedAchievements": 34,
       "totalAchievements": 55,
-      "achievementPercent": 56,
+      "achievementPercent": 62,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 41.03,
+      "achievementsPlaytimeHours": 41.83,
       "popThresholdMetAt": "2026-08-03T08:57:10.551642+00:00"
     },
     {
@@ -27442,23 +27165,6 @@
     {
       "username": "Millsshogun",
       "steamProfile": "https://steamcommunity.com/profiles/76561198075996214",
-      "appId": 290658,
-      "title": "Assassin's Creed Odyssey - Ultimate E...",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/290658/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 15.8,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "popThresholdMetAt": "2026-07-06T18:27:00.287213+00:00"
-    },
-    {
-      "username": "Millsshogun",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198075996214",
       "appId": 368260,
       "title": "Marvel's Midnight Suns",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/368260/achievements/",
@@ -27509,23 +27215,6 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 15.77,
       "popThresholdMetAt": "2026-06-26T07:11:08.800247+00:00"
-    },
-    {
-      "username": "Millsshogun",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198075996214",
-      "appId": 785847,
-      "title": "LEGO Star Wars: The Skywalker Saga Ga...",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/785847/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 15.8,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "popThresholdMetAt": "2026-07-06T18:27:00.287215+00:00"
     },
     {
       "username": "Millsshogun",
@@ -28652,22 +28341,6 @@
     {
       "username": "Oozyyy",
       "steamProfile": "https://steamcommunity.com/profiles/76561197985486812",
-      "appId": 1044729,
-      "title": "Crime Boss: Rockay City",
-      "progressUrl": "https://steamcommunity.com/profiles/76561197985486812/stats/1044729/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 1.4,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true
-    },
-    {
-      "username": "Oozyyy",
-      "steamProfile": "https://steamcommunity.com/profiles/76561197985486812",
       "appId": 1086940,
       "title": "Baldur's Gate 3",
       "progressUrl": "https://steamcommunity.com/profiles/76561197985486812/stats/1086940/achievements/",
@@ -29059,6 +28732,24 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 6.03,
       "popThresholdMetAt": "2026-06-26T07:11:08.800419+00:00"
+    },
+    {
+      "username": "Oozyyy",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197985486812",
+      "appId": 2933080,
+      "title": "Crime Boss: Rockay City",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197985486812/stats/2933080/achievements/",
+      "playtimeHours": 14.43,
+      "visible": true,
+      "earnedAchievements": 12,
+      "totalAchievements": 45,
+      "achievementPercent": 27,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 14.43,
+      "popThresholdMetAt": "2026-08-23T18:30:52.612986+00:00"
     },
     {
       "username": "Oozyyy",
@@ -30289,23 +29980,6 @@
     {
       "username": "skAd42",
       "steamProfile": "https://steamcommunity.com/profiles/76561198110002845",
-      "appId": 298833,
-      "title": "Metro Exodus - Gold Edition",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198110002845/stats/298833/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 75.0,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "popThresholdMetAt": "2026-07-06T18:27:00.287264+00:00"
-    },
-    {
-      "username": "skAd42",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198110002845",
       "appId": 320240,
       "title": "We Happy Few",
       "progressUrl": "https://steamcommunity.com/profiles/76561198110002845/stats/320240/achievements/",
@@ -31023,39 +30697,6 @@
     {
       "username": "Skull18",
       "steamProfile": "https://steamcommunity.com/profiles/76561198107454289",
-      "appId": 50854,
-      "title": "Resident Evil Revelations - Complete ...",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198107454289/stats/50854/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 2.4,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "popThresholdMetAt": "2026-07-07T09:04:22.701879+00:00"
-    },
-    {
-      "username": "Skull18",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198107454289",
-      "appId": 65812,
-      "title": "The Evil Within Bundle",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198107454289/stats/65812/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 2.4,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true
-    },
-    {
-      "username": "Skull18",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198107454289",
       "appId": 208200,
       "title": "DOOM 3",
       "progressUrl": "https://steamcommunity.com/profiles/76561198107454289/stats/208200/achievements/",
@@ -31069,6 +30710,23 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "achievementsPlaytimeHours": 0.77
+    },
+    {
+      "username": "Skull18",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198107454289",
+      "appId": 222480,
+      "title": "Resident Evil Revelations - Complete ...",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198107454289/stats/222480/achievements/",
+      "playtimeHours": 6.62,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 50,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 6.62
     },
     {
       "username": "Skull18",
@@ -31390,22 +31048,6 @@
     {
       "username": "Skull18",
       "steamProfile": "https://steamcommunity.com/profiles/76561198107454289",
-      "appId": 411862,
-      "title": "Warhammer 40,000: Inquisitor - Martyr...",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198107454289/stats/411862/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 2.4,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true
-    },
-    {
-      "username": "Skull18",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198107454289",
       "appId": 453310,
       "title": "Blackwood Crossing",
       "progressUrl": "https://steamcommunity.com/profiles/76561198107454289/stats/453310/achievements/",
@@ -31527,6 +31169,24 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "achievementsPlaytimeHours": 3.67
+    },
+    {
+      "username": "Skull18",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198107454289",
+      "appId": 527430,
+      "title": "Warhammer 40,000: Inquisitor - Martyr...",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198107454289/stats/527430/achievements/",
+      "playtimeHours": 36.27,
+      "visible": true,
+      "earnedAchievements": 55,
+      "totalAchievements": 95,
+      "achievementPercent": 58,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 36.27,
+      "popThresholdMetAt": "2026-08-23T18:30:52.613001+00:00"
     },
     {
       "username": "Skull18",
@@ -32704,25 +32364,6 @@
     {
       "username": "Skull18",
       "steamProfile": "https://steamcommunity.com/profiles/76561198107454289",
-      "appId": 1369760,
-      "title": "NINJA GAIDEN: Master Collection",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198107454289/stats/1369760/achievements/",
-      "visible": true,
-      "earnedAchievements": 0,
-      "totalAchievements": 48,
-      "achievementPercent": 0,
-      "playtimeHours": 3.9,
-      "playtimeCheckedAt": "2026-06-12T07:29:07.478132+00:00",
-      "playtimeSource": "steam-web-api",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "error": null,
-      "checkedAt": "2026-06-12T07:30:07.125301+00:00",
-      "achievementsPlaytimeHours": 3.9
-    },
-    {
-      "username": "Skull18",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198107454289",
       "appId": 1370050,
       "title": "Trek to Yomi",
       "progressUrl": "https://steamcommunity.com/profiles/76561198107454289/stats/1370050/achievements/",
@@ -33558,22 +33199,6 @@
     {
       "username": "Thedogma",
       "steamProfile": "https://steamcommunity.com/profiles/76561198011705129",
-      "appId": 785847,
-      "title": "LEGO Star Wars: The Skywalker Saga Ga...",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198011705129/stats/785847/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": null,
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "error": "HTTP Error 400: Bad Request"
-    },
-    {
-      "username": "Thedogma",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198011705129",
       "appId": 920210,
       "title": "LEGO Star Wars: The Skywalker Saga Ga...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198011705129/stats/920210/achievements/",
@@ -33623,23 +33248,6 @@
       "gamesVisible": true,
       "error": null,
       "achievementsPlaytimeHours": 2.18
-    },
-    {
-      "username": "Wintermute101",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
-      "appId": 215277,
-      "title": "Assassin's Creed Origins - Gold Edition",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/215277/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 17.6,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "popThresholdMetAt": "2026-07-06T18:27:00.287320+00:00"
     },
     {
       "username": "Wintermute101",
@@ -36058,23 +35666,6 @@
     {
       "username": "WNDRLST",
       "steamProfile": "https://steamcommunity.com/profiles/76561198125763485",
-      "appId": 822364,
-      "title": "Hogwarts Legacy: Digital Deluxe Edition",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198125763485/stats/822364/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 6.7,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "popThresholdMetAt": "2026-07-06T18:27:00.287358+00:00"
-    },
-    {
-      "username": "WNDRLST",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198125763485",
       "appId": 934700,
       "title": "Dead Island 2 Ultimate Edition",
       "progressUrl": "https://steamcommunity.com/profiles/76561198125763485/stats/934700/achievements/",
@@ -36107,23 +35698,6 @@
       "error": null,
       "popThresholdMetAt": "2026-06-26T07:11:08.801215+00:00",
       "achievementsPlaytimeHours": 9.92
-    },
-    {
-      "username": "WNDRLST",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198125763485",
-      "appId": 1004410,
-      "title": "Dead Island 2 Ultimate Edition",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198125763485/stats/1004410/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 6.7,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "popThresholdMetAt": "2026-07-06T18:27:00.287361+00:00"
     },
     {
       "username": "WNDRLST",
@@ -36410,36 +35984,30 @@
     {
       "username": "xMisiu",
       "steamProfile": "https://steamcommunity.com/profiles/76561198082091554",
-      "appId": 504022,
-      "title": "OUTRIDERS",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/504022/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 7.1,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "popThresholdMetAt": "2026-06-26T07:11:08.801248+00:00"
-    },
-    {
-      "username": "xMisiu",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198082091554",
       "appId": 538757,
       "title": "Resident Evil Village & Resident Evil...",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/538757/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 7.1,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/1196590/achievements/",
+      "visible": true,
+      "earnedAchievements": 61,
+      "totalAchievements": 114,
+      "achievementPercent": 54,
+      "playtimeHours": 25.96,
+      "error": null,
+      "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "popThresholdMetAt": "2026-07-07T09:04:22.702004+00:00"
+      "popThresholdMetAt": "2026-07-07T09:04:22.702004+00:00",
+      "progressUrls": [
+        {
+          "url": "https://steamcommunity.com/profiles/76561198082091554/stats/1196590/achievements/",
+          "title": "Resident Evil Village"
+        },
+        {
+          "url": "https://steamcommunity.com/profiles/76561198082091554/stats/418370/achievements/",
+          "title": "Resident Evil 7 Biohazard"
+        }
+      ],
+      "achievementsPlaytimeHours": 25.96
     },
     {
       "username": "xMisiu",
@@ -36494,6 +36062,24 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 47.32,
       "popThresholdMetAt": "2026-06-26T07:11:08.801256+00:00"
+    },
+    {
+      "username": "xMisiu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198082091554",
+      "appId": 680420,
+      "title": "OUTRIDERS",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/680420/achievements/",
+      "playtimeHours": 68.9,
+      "visible": true,
+      "earnedAchievements": 43,
+      "totalAchievements": 52,
+      "achievementPercent": 83,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 68.9,
+      "popThresholdMetAt": "2026-08-23T18:30:52.613008+00:00"
     },
     {
       "username": "xMisiu",
@@ -36853,22 +36439,6 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 6.87,
       "popThresholdMetAt": "2026-06-26T07:11:08.801302+00:00"
-    },
-    {
-      "username": "xMisiu",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198082091554",
-      "appId": 1111230,
-      "title": "FINAL FANTASY XVI COMPLETE EDITION",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/1111230/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 7.1,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true
     },
     {
       "username": "xMisiu",
@@ -37802,23 +37372,6 @@
     {
       "username": "Youdontknow",
       "steamProfile": "https://steamcommunity.com/profiles/76561198121640255",
-      "appId": 198297,
-      "title": "Ni no Kuni II: Revenant Kingdom - The...",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198121640255/stats/198297/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 264.0,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "popThresholdMetAt": "2026-07-07T09:04:22.702037+00:00"
-    },
-    {
-      "username": "Youdontknow",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198121640255",
       "appId": 230190,
       "title": "War for the Overworld",
       "progressUrl": "https://steamcommunity.com/profiles/76561198121640255/stats/230190/achievements/",
@@ -37919,23 +37472,6 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "achievementsPlaytimeHours": 0.2
-    },
-    {
-      "username": "Youdontknow",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198121640255",
-      "appId": 290658,
-      "title": "Assassin's Creed Odyssey - Ultimate E...",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198121640255/stats/290658/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 264.0,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "popThresholdMetAt": "2026-07-06T18:27:00.287391+00:00"
     },
     {
       "username": "Youdontknow",
@@ -38132,23 +37668,6 @@
     {
       "username": "Youdontknow",
       "steamProfile": "https://steamcommunity.com/profiles/76561198121640255",
-      "appId": 427289,
-      "title": "Borderlands 3: Super Deluxe Edition",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198121640255/stats/427289/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 264.0,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "popThresholdMetAt": "2026-07-06T18:27:00.287398+00:00"
-    },
-    {
-      "username": "Youdontknow",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198121640255",
       "appId": 427410,
       "title": "Abiotic Factor",
       "progressUrl": "https://steamcommunity.com/profiles/76561198121640255/stats/427410/achievements/",
@@ -38233,23 +37752,6 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 14.88,
       "popThresholdMetAt": "2026-06-26T07:11:08.801445+00:00"
-    },
-    {
-      "username": "Youdontknow",
-      "steamProfile": "https://steamcommunity.com/profiles/76561198121640255",
-      "appId": 452685,
-      "title": "Crusader Kings III Royal Edition",
-      "progressUrl": "https://steamcommunity.com/profiles/76561198121640255/stats/452685/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 264.0,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true,
-      "popThresholdMetAt": "2026-07-07T09:04:22.702052+00:00"
     },
     {
       "username": "Youdontknow",
@@ -38638,6 +38140,24 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 24.55,
       "popThresholdMetAt": "2026-06-26T07:11:08.801485+00:00"
+    },
+    {
+      "username": "Youdontknow",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198121640255",
+      "appId": 589360,
+      "title": "Ni no Kuni II: Revenant Kingdom - The...",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198121640255/stats/589360/achievements/",
+      "playtimeHours": 23.33,
+      "visible": true,
+      "earnedAchievements": 8,
+      "totalAchievements": 63,
+      "achievementPercent": 13,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 23.33,
+      "popThresholdMetAt": "2026-08-23T18:30:52.612996+00:00"
     },
     {
       "username": "Youdontknow",
@@ -39747,6 +39267,23 @@
     {
       "username": "Youdontknow",
       "steamProfile": "https://steamcommunity.com/profiles/76561198121640255",
+      "appId": 1158310,
+      "title": "Crusader Kings III Royal Edition",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198121640255/stats/1158310/achievements/",
+      "playtimeHours": 37.0,
+      "visible": true,
+      "earnedAchievements": 7,
+      "totalAchievements": 188,
+      "achievementPercent": 4,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 37.0
+    },
+    {
+      "username": "Youdontknow",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198121640255",
       "appId": 1172380,
       "title": "STAR WARS Jedi: Fallen Order",
       "progressUrl": "https://steamcommunity.com/profiles/76561198121640255/stats/1172380/achievements/",
@@ -40781,22 +40318,6 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "popThresholdMetAt": "2026-06-26T07:11:08.801747+00:00"
-    },
-    {
-      "username": "zettaivanugen",
-      "steamProfile": "https://steamcommunity.com/profiles/76561197975039366",
-      "appId": 40061,
-      "title": "The Council - Complete Season",
-      "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/40061/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 0.3,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
-      "playtimeVisible": true,
-      "gamesVisible": true
     },
     {
       "username": "zettaivanugen",
@@ -41968,16 +41489,31 @@
       "steamProfile": "https://steamcommunity.com/profiles/76561197975039366",
       "appId": 886310,
       "title": "METAL GEAR SOLID: MASTER COLLECTION V...",
-      "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/886310/achievements/",
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
-      "playtimeHours": 0.3,
-      "error": "HTTP Error 400: Bad Request",
-      "playtimeSource": "",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/2131630/achievements/",
+      "visible": true,
+      "earnedAchievements": 8,
+      "totalAchievements": 120,
+      "achievementPercent": 7,
+      "playtimeHours": 30.48,
+      "error": null,
+      "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
-      "gamesVisible": true
+      "gamesVisible": true,
+      "progressUrls": [
+        {
+          "url": "https://steamcommunity.com/profiles/76561197975039366/stats/2131630/achievements/",
+          "title": "METAL GEAR SOLID - Master Collection Version"
+        },
+        {
+          "url": "https://steamcommunity.com/profiles/76561197975039366/stats/2131640/achievements/",
+          "title": "METAL GEAR SOLID 2: Sons of Liberty - Master Collection Version"
+        },
+        {
+          "url": "https://steamcommunity.com/profiles/76561197975039366/stats/2131650/achievements/",
+          "title": "METAL GEAR SOLID 3: Snake Eater - Master Collection Version"
+        }
+      ],
+      "achievementsPlaytimeHours": 30.48
     },
     {
       "username": "zettaivanugen",
@@ -46863,7 +46399,7 @@
     },
     {
       "title": "Crime Boss: Rockay City",
-      "appId": 1044729,
+      "appId": 2933080,
       "hltbHours": 11.68,
       "matchedTitle": "Crime Boss: Rockay City",
       "url": "https://howlongtobeat.com/game/118228"
@@ -48717,11 +48253,11 @@
       "url": "https://howlongtobeat.com/game/75163"
     },
     {
-      "title": "Golem Gates",
-      "appId": 575970,
-      "hltbHours": 0.0,
-      "matchedTitle": "Golem Gates",
-      "url": "https://howlongtobeat.com/game/57143"
+      "title": "Tiny Tina's Wonderlands",
+      "appId": 1286680,
+      "hltbHours": 16.11,
+      "matchedTitle": "Tiny Tina's Wonderlands",
+      "url": "https://howlongtobeat.com/game/93455"
     },
     {
       "title": "South Park™: The Fractured But Whole™",
@@ -48829,9 +48365,9 @@
       "url": "https://howlongtobeat.com/game/52546"
     },
     {
-      "title": "Ni no Kuni II: Revenant Kingdom - The...",
-      "appId": 198297,
-      "hltbHours": 38.71,
+      "title": "Ni no Kuni™ II: Revenant Kingdom",
+      "appId": 589360,
+      "hltbHours": 38.72,
       "matchedTitle": "Ni no Kuni II: Revenant Kingdom",
       "url": "https://howlongtobeat.com/game/46445"
     },
@@ -48963,10 +48499,10 @@
     },
     {
       "title": "Tales of Arise: Ultimate Edition",
-      "appId": 568629,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "appId": 740130,
+      "hltbHours": 41.16,
+      "matchedTitle": "Tales of Arise",
+      "url": "https://howlongtobeat.com/game/68118"
     },
     {
       "title": "Persona 5 Royal",
@@ -49627,13 +49163,6 @@
       "url": "https://howlongtobeat.com/game/118227"
     },
     {
-      "title": "METAL GEAR SOLID: MASTER COLLECTION V...",
-      "appId": 886310,
-      "hltbHours": 40.57,
-      "matchedTitle": "Metal Gear Solid: Master Collection Vol. 1",
-      "url": "https://howlongtobeat.com/game/129257"
-    },
-    {
       "title": "REMNANT II",
       "appId": 1282100,
       "hltbHours": 18.22,
@@ -49669,11 +49198,11 @@
       "url": "https://howlongtobeat.com/game/85967"
     },
     {
-      "title": "Golem Gates",
-      "appId": 575970,
-      "hltbHours": 0.0,
-      "matchedTitle": "Golem Gates",
-      "url": "https://howlongtobeat.com/game/57143"
+      "title": "Tiny Tina's Wonderlands",
+      "appId": 1286680,
+      "hltbHours": 16.11,
+      "matchedTitle": "Tiny Tina's Wonderlands",
+      "url": "https://howlongtobeat.com/game/93455"
     },
     {
       "title": "Moonscars",
@@ -51503,9 +51032,9 @@
       "url": "https://howlongtobeat.com/game/85969"
     },
     {
-      "title": "Pillars of Eternity II: Deadfire - Ob...",
-      "appId": 238819,
-      "hltbHours": 41.73,
+      "title": "Pillars of Eternity II: Deadfire",
+      "appId": 560130,
+      "hltbHours": 41.87,
       "matchedTitle": "Pillars of Eternity II: Deadfire",
       "url": "https://howlongtobeat.com/game/44045"
     },
@@ -52490,9 +52019,9 @@
       "url": "https://howlongtobeat.com/game/83169"
     },
     {
-      "title": "Ni no Kuni II: Revenant Kingdom - The...",
-      "appId": 198297,
-      "hltbHours": 38.71,
+      "title": "Ni no Kuni™ II: Revenant Kingdom",
+      "appId": 589360,
+      "hltbHours": 38.72,
       "matchedTitle": "Ni no Kuni II: Revenant Kingdom",
       "url": "https://howlongtobeat.com/game/46445"
     },
@@ -54835,9 +54364,9 @@
       "url": "https://howlongtobeat.com/game/6974"
     },
     {
-      "title": "Pillars of Eternity II: Deadfire - Ob...",
-      "appId": 238819,
-      "hltbHours": 41.73,
+      "title": "Pillars of Eternity II: Deadfire",
+      "appId": 560130,
+      "hltbHours": 41.87,
       "matchedTitle": "Pillars of Eternity II: Deadfire",
       "url": "https://howlongtobeat.com/game/44045"
     },
@@ -54877,8 +54406,8 @@
       "url": "https://howlongtobeat.com/game/75164"
     },
     {
-      "title": "Warhammer 40,000: Inquisitor - Martyr...",
-      "appId": 411862,
+      "title": "Warhammer 40,000: Inquisitor - Martyr",
+      "appId": 527430,
       "hltbHours": 22.74,
       "matchedTitle": "Warhammer 40,000: Inquisitor - Martyr",
       "url": "https://howlongtobeat.com/game/49052"
@@ -55032,10 +54561,10 @@
     },
     {
       "title": "Dying Light Enhanced Edition ROW",
-      "appId": 88801,
-      "hltbHours": 19.92,
-      "matchedTitle": "Dying Light: The Following - Enhanced Edition",
-      "url": "https://howlongtobeat.com/game/34561"
+      "appId": 239140,
+      "hltbHours": 18.27,
+      "matchedTitle": "Dying Light",
+      "url": "https://howlongtobeat.com/game/21252"
     },
     {
       "title": "CARRION",
@@ -55886,8 +55415,8 @@
     },
     {
       "title": "Crusader Kings III Royal Edition",
-      "appId": 452685,
-      "hltbHours": 72.56,
+      "appId": 1158310,
+      "hltbHours": 74.7,
       "matchedTitle": "Crusader Kings III",
       "url": "https://howlongtobeat.com/game/71763"
     },
@@ -56305,9 +55834,9 @@
       "url": "https://howlongtobeat.com/game/71931"
     },
     {
-      "title": "Ni no Kuni II: Revenant Kingdom - The...",
-      "appId": 198297,
-      "hltbHours": 38.71,
+      "title": "Ni no Kuni™ II: Revenant Kingdom",
+      "appId": 589360,
+      "hltbHours": 38.72,
       "matchedTitle": "Ni no Kuni II: Revenant Kingdom",
       "url": "https://howlongtobeat.com/game/46445"
     },
@@ -56404,7 +55933,7 @@
     },
     {
       "title": "OUTRIDERS",
-      "appId": 504022,
+      "appId": 680420,
       "hltbHours": 16.36,
       "matchedTitle": "Outriders",
       "url": "https://howlongtobeat.com/game/68276"
@@ -56433,8 +55962,8 @@
     {
       "title": "Resident Evil Village & Resident Evil...",
       "appId": 538757,
-      "hltbHours": 9.85,
-      "matchedTitle": "Resident Evil Village",
+      "hltbHours": 19.08,
+      "matchedTitle": "Resident Evil Village + Resident Evil 7: Biohazard",
       "url": "https://howlongtobeat.com/game/80038"
     },
     {
@@ -57027,7 +56556,7 @@
     },
     {
       "title": "OUTRIDERS",
-      "appId": 504022,
+      "appId": 680420,
       "hltbHours": 16.36,
       "matchedTitle": "Outriders",
       "url": "https://howlongtobeat.com/game/68276"
@@ -60590,7 +60119,7 @@
     },
     {
       "title": "HITMAN 2 - Standard Edition",
-      "appId": 272962,
+      "appId": 863550,
       "hltbHours": 10.17,
       "matchedTitle": "Hitman 2",
       "url": "https://howlongtobeat.com/game/57478"
@@ -61735,13 +61264,6 @@
       "hltbHours": 2.95,
       "matchedTitle": "Devotion",
       "url": "https://howlongtobeat.com/game/65068"
-    },
-    {
-      "title": "Sniper: Ghost Warrior Trilogy",
-      "appId": 36904,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
     },
     {
       "title": "HoPiKo",
@@ -63292,10 +62814,10 @@
     },
     {
       "title": "Dying Light Enhanced Edition ROW",
-      "appId": 88801,
-      "hltbHours": 19.92,
-      "matchedTitle": "Dying Light: The Following - Enhanced Edition",
-      "url": "https://howlongtobeat.com/game/34561"
+      "appId": 239140,
+      "hltbHours": 18.27,
+      "matchedTitle": "Dying Light",
+      "url": "https://howlongtobeat.com/game/21252"
     },
     {
       "title": "Pavilion",
@@ -63439,10 +62961,10 @@
     },
     {
       "title": "Just Cause 3 XL",
-      "appId": 76710,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "appId": 225540,
+      "hltbHours": 18.27,
+      "matchedTitle": "Just Cause 3",
+      "url": "https://howlongtobeat.com/game/26404"
     },
     {
       "title": "Ys Origin",
@@ -63747,7 +63269,7 @@
     },
     {
       "title": "Monster Hunter: World",
-      "appId": 149309,
+      "appId": 582010,
       "hltbHours": 46.49,
       "matchedTitle": "Monster Hunter: World",
       "url": "https://howlongtobeat.com/game/52493"
@@ -63964,7 +63486,7 @@
     },
     {
       "title": "Monster Hunter: World",
-      "appId": 149309,
+      "appId": 582010,
       "hltbHours": 46.49,
       "matchedTitle": "Monster Hunter: World",
       "url": "https://howlongtobeat.com/game/52493"
@@ -65818,13 +65340,6 @@
       "url": "https://howlongtobeat.com/game/50695"
     },
     {
-      "title": "Beat Hazard Complete",
-      "appId": 8500,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
-    },
-    {
       "title": "Nioh: Complete Edition",
       "appId": 485510,
       "hltbHours": 41.93,
@@ -66140,7 +65655,7 @@
       "url": "https://howlongtobeat.com/game/35857"
     },
     {
-      "title": "Stellar Impact - Carrier Ship DLC",
+      "title": "Divinity: Original Sin 2 - Definitive Edition",
       "appId": 435150,
       "hltbHours": 60.21,
       "matchedTitle": "Divinity: Original Sin - Enhanced Edition",
@@ -66847,13 +66362,6 @@
       "url": "https://howlongtobeat.com/game/21172"
     },
     {
-      "title": "Sacred Franchise Pack",
-      "appId": 67170,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
-    },
-    {
       "title": "Dishonored 2",
       "appId": 403640,
       "hltbHours": 12.52,
@@ -67261,10 +66769,10 @@
     },
     {
       "title": "Killing Floor 2 Digital Deluxe Edition",
-      "appId": 64300,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "appId": 232090,
+      "hltbHours": 16.32,
+      "matchedTitle": "Killing Floor 2",
+      "url": "https://howlongtobeat.com/game/25991"
     },
     {
       "title": "Beat Cop",
@@ -67918,13 +67426,6 @@
       "url": "https://howlongtobeat.com/game/29678"
     },
     {
-      "title": "Call of Duty: Advanced Warfare",
-      "appId": 54109,
-      "hltbHours": 7.11,
-      "matchedTitle": "Call of Duty: Advanced Warfare",
-      "url": "https://howlongtobeat.com/game/18220"
-    },
-    {
       "title": "SEUM: Speedrunners from Hell",
       "appId": 457210,
       "hltbHours": 3.68,
@@ -68059,10 +67560,10 @@
     },
     {
       "title": "Just Cause 3 XL",
-      "appId": 76710,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
+      "appId": 225540,
+      "hltbHours": 18.27,
+      "matchedTitle": "Just Cause 3",
+      "url": "https://howlongtobeat.com/game/26404"
     },
     {
       "title": "Onechanbara Z2: Chaos",
@@ -68317,8 +67818,8 @@
       "url": "https://howlongtobeat.com/game/28206"
     },
     {
-      "title": "Tom Clancy's Ghost Recon Wildlands - ...",
-      "appId": 111429,
+      "title": "Tom Clancy's Ghost Recon® Wildlands",
+      "appId": 460930,
       "hltbHours": null,
       "matchedTitle": "",
       "url": ""
@@ -68597,13 +68098,6 @@
       "url": "https://howlongtobeat.com/game/21172"
     },
     {
-      "title": "HITMAN: THE COMPLETE FIRST SEASON [Pr...",
-      "appId": 71223,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
-    },
-    {
       "title": "DOOM",
       "appId": 379720,
       "hltbHours": 11.57,
@@ -68758,13 +68252,6 @@
       "url": "https://howlongtobeat.com/game/11101"
     },
     {
-      "title": "Sniper: Ghost Warrior Trilogy",
-      "appId": 36904,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
-    },
-    {
       "title": "DARK SOULS II: Scholar of the First Sin",
       "appId": 335300,
       "hltbHours": 35.54,
@@ -68814,13 +68301,6 @@
       "url": "https://howlongtobeat.com/game/40911"
     },
     {
-      "title": "Sid Meier's Civilization VI - Digital...",
-      "appId": 123216,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
-    },
-    {
       "title": "LEGO MARVEL's Avengers",
       "appId": 405310,
       "hltbHours": 8.44,
@@ -68847,13 +68327,6 @@
       "hltbHours": 3.18,
       "matchedTitle": "The Town of Light",
       "url": "https://howlongtobeat.com/game/34947"
-    },
-    {
-      "title": "Call of Duty: Advanced Warfare",
-      "appId": 54109,
-      "hltbHours": 7.11,
-      "matchedTitle": "Call of Duty: Advanced Warfare",
-      "url": "https://howlongtobeat.com/game/18220"
     },
     {
       "title": "Deus Ex: Mankind Divided",
@@ -69255,13 +68728,6 @@
       "url": "https://howlongtobeat.com/game/26806"
     },
     {
-      "title": "Minion Masters Premium Edition",
-      "appId": 110589,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
-    },
-    {
       "title": "Hard West",
       "appId": 307670,
       "hltbHours": 12.06,
@@ -69402,9 +68868,9 @@
       "url": "https://howlongtobeat.com/game/26729"
     },
     {
-      "title": "Resident Evil Revelations - Complete ...",
-      "appId": 50854,
-      "hltbHours": 8.33,
+      "title": "Resident Evil Revelations",
+      "appId": 222480,
+      "hltbHours": 8.35,
       "matchedTitle": "Resident Evil: Revelations",
       "url": "https://howlongtobeat.com/game/7742"
     },
@@ -69809,7 +69275,7 @@
     },
     {
       "title": "Hatoful Boyfriend Collector's Edition",
-      "appId": 48515,
+      "appId": 310080,
       "hltbHours": 1.5,
       "matchedTitle": "Hatoful Boyfriend",
       "url": "https://howlongtobeat.com/game/4347"
@@ -70212,13 +69678,6 @@
       "hltbHours": 28.44,
       "matchedTitle": "Lords of the Fallen",
       "url": "https://howlongtobeat.com/game/112684"
-    },
-    {
-      "title": "Far Cry 3 - Deluxe Edition",
-      "appId": 17983,
-      "hltbHours": null,
-      "matchedTitle": "",
-      "url": ""
     },
     {
       "title": "Metro 2033 Redux",
@@ -71289,26 +70748,26 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-08-23T17:59:20.941568+00:00",
+  "libraryUpdatedAt": "2026-08-23T18:38:29.428144+00:00",
   "libraryStats": {
-    "durationSeconds": 5.88,
+    "durationSeconds": 16.71,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14312
+    "totalPlaytimeRows": 14501
   },
   "stats": {
-    "durationSeconds": 62.94,
+    "durationSeconds": 87.7,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
-    "libraryPlaytimeHits": 2365,
-    "cachedReuses": 2310,
-    "achievementSuccesses": 7,
-    "achievementErrors": 72,
-    "cachedFallbacks": 72,
+    "libraryPlaytimeHits": 2380,
+    "cachedReuses": 2327,
+    "achievementSuccesses": 5,
+    "achievementErrors": 57,
+    "cachedFallbacks": 57,
     "hltbTitlesRequested": 1292,
-    "hltbResultsAvailable": 4039
+    "hltbResultsAvailable": 4028
   }
 }

@@ -169,7 +169,8 @@
   },
   "29197": {
     "apps": [],
-    "headerImageUrl": ""
+    "headerImageUrl": "",
+    "fallbackTerm": "valve complete pack"
   },
   "785847": {
     "name": "LEGO® Star Wars™: The Skywalker Saga Galactic Edition",
@@ -226,8 +227,19 @@
     "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/822364/9ceb51a4a7d50af3e5949d38f4c9b8ac09d3f33f/capsule_231x87.jpg?t=1743609693"
   },
   "1044729": {
-    "apps": [],
-    "headerImageUrl": ""
+    "name": "",
+    "apps": [
+      {
+        "id": 2933080,
+        "name": "Crime Boss: Rockay City",
+        "type": "game"
+      }
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": "",
+    "resolvedFrom": "title",
+    "fallbackTerm": "crime boss rockay city"
   },
   "215277": {
     "name": "Assassin's Creed Origins - Gold Edition",
@@ -310,8 +322,19 @@
     "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/440247/capsule_231x87.jpg?t=1644953459"
   },
   "575970": {
-    "apps": [],
-    "headerImageUrl": ""
+    "name": "",
+    "apps": [
+      {
+        "id": 1286680,
+        "name": "Tiny Tina's Wonderlands",
+        "type": "game"
+      }
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": "",
+    "resolvedFrom": "title",
+    "fallbackTerm": "tiny tinas wonderlands chaotic great edition"
   },
   "242136": {
     "name": "South Park: The Fractured But Whole - Gold Edition",
@@ -327,20 +350,49 @@
     "capsuleSmallUrl": ""
   },
   "198297": {
-    "apps": [],
-    "headerImageUrl": ""
+    "name": "",
+    "apps": [
+      {
+        "id": 589360,
+        "name": "Ni no Kuni™ II: Revenant Kingdom",
+        "type": "game"
+      }
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": "",
+    "resolvedFrom": "title",
+    "fallbackTerm": "ni no kuni ii revenant kingdom the princes edition"
   },
   "568629": {
-    "apps": [],
-    "headerImageUrl": ""
-  },
-  "886310": {
-    "apps": [],
-    "headerImageUrl": ""
+    "name": "",
+    "apps": [
+      {
+        "id": 740130,
+        "name": "Tales of ARISE",
+        "type": "game"
+      }
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": "",
+    "resolvedFrom": "title",
+    "fallbackTerm": "tales of arise ultimate edition"
   },
   "238819": {
-    "apps": [],
-    "headerImageUrl": ""
+    "name": "",
+    "apps": [
+      {
+        "id": 560130,
+        "name": "Pillars of Eternity II: Deadfire",
+        "type": "game"
+      }
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": "",
+    "resolvedFrom": "title",
+    "fallbackTerm": "pillars of eternity ii deadfire obsidian edition"
   },
   "401587": {
     "name": "STAR WARS Jedi: Fallen Order Deluxe Edition",
@@ -389,16 +441,49 @@
     "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/258527/capsule_231x87.jpg?t=1561495634"
   },
   "411862": {
-    "apps": [],
-    "headerImageUrl": ""
+    "name": "",
+    "apps": [
+      {
+        "id": 527430,
+        "name": "Warhammer 40,000: Inquisitor - Martyr",
+        "type": "game"
+      }
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": "",
+    "resolvedFrom": "title",
+    "fallbackTerm": "warhammer 40000 inquisitor martyr complete collection"
   },
   "88801": {
-    "apps": [],
-    "headerImageUrl": ""
+    "name": "",
+    "apps": [
+      {
+        "id": 239140,
+        "name": "Dying Light",
+        "type": "game"
+      }
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": "",
+    "resolvedFrom": "title",
+    "fallbackTerm": "dying light enhanced edition row"
   },
   "452685": {
-    "apps": [],
-    "headerImageUrl": ""
+    "name": "",
+    "apps": [
+      {
+        "id": 1158310,
+        "name": "Crusader Kings III",
+        "type": "game"
+      }
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": "",
+    "resolvedFrom": "title",
+    "fallbackTerm": "crusader kings iii royal edition"
   },
   "575623": {
     "name": "NINJA GAIDEN: Master Collection",
@@ -424,12 +509,19 @@
     "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/575623/capsule_231x87.jpg?t=1623364941"
   },
   "504022": {
-    "apps": [],
-    "headerImageUrl": ""
-  },
-  "538757": {
-    "apps": [],
-    "headerImageUrl": ""
+    "name": "",
+    "apps": [
+      {
+        "id": 680420,
+        "name": "OUTRIDERS",
+        "type": "game"
+      }
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": "",
+    "resolvedFrom": "title",
+    "fallbackTerm": "outriders"
   },
   "298833": {
     "name": "Metro Exodus - Gold Edition",
@@ -480,10 +572,6 @@
     "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/40061/header_ratio.jpg?t=1585085524",
     "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/40061/capsule_231x87.jpg?t=1585085524"
   },
-  "272962": {
-    "apps": [],
-    "headerImageUrl": ""
-  },
   "74024": {
     "name": "Kyn Deluxe Edition",
     "apps": [
@@ -498,8 +586,19 @@
     "capsuleSmallUrl": ""
   },
   "36904": {
-    "apps": [],
-    "headerImageUrl": ""
+    "name": "",
+    "apps": [
+      {
+        "id": 34830,
+        "name": "Sniper: Ghost Warrior",
+        "type": "game"
+      }
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": "",
+    "resolvedFrom": "title",
+    "fallbackTerm": "sniper ghost warrior trilogy"
   },
   "62118": {
     "name": "Resident Evil 5 Gold Edition",
@@ -515,8 +614,19 @@
     "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/62118/capsule_231x87.jpg?t=1707269157"
   },
   "76710": {
-    "apps": [],
-    "headerImageUrl": ""
+    "name": "",
+    "apps": [
+      {
+        "id": 225540,
+        "name": "Just Cause™ 3",
+        "type": "game"
+      }
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": "",
+    "resolvedFrom": "title",
+    "fallbackTerm": "just cause 3 xl"
   },
   "133812": {
     "name": "Tyranny - Deluxe Edition",
@@ -628,8 +738,19 @@
     "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/183038/capsule_231x87.jpg?t=1505447818"
   },
   "149309": {
-    "apps": [],
-    "headerImageUrl": ""
+    "name": "",
+    "apps": [
+      {
+        "id": 582010,
+        "name": "Monster Hunter: World",
+        "type": "game"
+      }
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": "",
+    "resolvedFrom": "title",
+    "fallbackTerm": "monster hunter world"
   },
   "183036": {
     "name": "Wolfenstein II: The New Colossus Digital Deluxe Edition",
@@ -683,8 +804,19 @@
     "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/56692/capsule_231x87.jpg?t=1509147192"
   },
   "8500": {
-    "apps": [],
-    "headerImageUrl": ""
+    "name": "",
+    "apps": [
+      {
+        "id": 49600,
+        "name": "Beat Hazard",
+        "type": "game"
+      }
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": "",
+    "resolvedFrom": "title",
+    "fallbackTerm": "beat hazard complete"
   },
   "207167": {
     "name": "Divinity: Original Sin 2 - Divine Edition",
@@ -730,13 +862,20 @@
     "capsuleImageUrl": "",
     "capsuleSmallUrl": ""
   },
-  "67170": {
-    "apps": [],
-    "headerImageUrl": ""
-  },
   "64300": {
-    "apps": [],
-    "headerImageUrl": ""
+    "name": "",
+    "apps": [
+      {
+        "id": 232090,
+        "name": "Killing Floor 2",
+        "type": "game"
+      }
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": "",
+    "resolvedFrom": "title",
+    "fallbackTerm": "killing floor 2 digital deluxe edition"
   },
   "171306": {
     "name": "Rising Storm 2: Vietnam - Digital Deluxe Edition",
@@ -820,10 +959,6 @@
     "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/128345/header_ratio.jpg?t=1698957925",
     "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/128345/capsule_231x87.jpg?t=1698957925"
   },
-  "54109": {
-    "apps": [],
-    "headerImageUrl": ""
-  },
   "116814": {
     "name": "Layers of Fear: Masterpiece Edition",
     "apps": [
@@ -844,11 +979,23 @@
   },
   "53424": {
     "apps": [],
-    "headerImageUrl": ""
+    "headerImageUrl": "",
+    "fallbackTerm": "transformers cybertron experience"
   },
   "111429": {
-    "apps": [],
-    "headerImageUrl": ""
+    "name": "",
+    "apps": [
+      {
+        "id": 460930,
+        "name": "Tom Clancy's Ghost Recon® Wildlands",
+        "type": "game"
+      }
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": "",
+    "resolvedFrom": "title",
+    "fallbackTerm": "tom clancys ghost recon wildlands deluxe edition preorder"
   },
   "123425": {
     "name": "Sniper Elite 4 Deluxe Edition",
@@ -863,17 +1010,25 @@
     "capsuleImageUrl": "",
     "capsuleSmallUrl": ""
   },
-  "71223": {
-    "apps": [],
-    "headerImageUrl": ""
-  },
   "123216": {
-    "apps": [],
-    "headerImageUrl": ""
+    "name": "",
+    "apps": [
+      {
+        "id": 289070,
+        "name": "Sid Meier’s Civilization® VI",
+        "type": "game"
+      }
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": "",
+    "resolvedFrom": "title",
+    "fallbackTerm": "sid meiers civilization vi digital deluxe"
   },
   "53423": {
     "apps": [],
-    "headerImageUrl": ""
+    "headerImageUrl": "",
+    "fallbackTerm": "transformers rise of the dark spark bundle"
   },
   "85500": {
     "name": "Batman: Arkham Knight Premium Edition",
@@ -894,12 +1049,34 @@
     "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/85500/capsule_231x87.jpg?t=1454540990"
   },
   "110589": {
-    "apps": [],
-    "headerImageUrl": ""
+    "name": "",
+    "apps": [
+      {
+        "id": 489520,
+        "name": "Minion Masters",
+        "type": "game"
+      }
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": "",
+    "resolvedFrom": "title",
+    "fallbackTerm": "minion masters premium edition"
   },
   "50854": {
-    "apps": [],
-    "headerImageUrl": ""
+    "name": "",
+    "apps": [
+      {
+        "id": 222480,
+        "name": "Resident Evil Revelations",
+        "type": "game"
+      }
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": "",
+    "resolvedFrom": "title",
+    "fallbackTerm": "resident evil revelations complete pack"
   },
   "68765": {
     "name": "Asguaard - Deluxe Edition (contains Game+Guide+Goodies)",
@@ -981,8 +1158,19 @@
     "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/48346/capsule_231x87.jpg?t=1661279288"
   },
   "48515": {
-    "apps": [],
-    "headerImageUrl": ""
+    "name": "",
+    "apps": [
+      {
+        "id": 310080,
+        "name": "Hatoful Boyfriend",
+        "type": "game"
+      }
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": "",
+    "resolvedFrom": "title",
+    "fallbackTerm": "hatoful boyfriend collectors edition"
   },
   "76328": {
     "name": "Men of War: Assault Squad 2 - Gold Edition",
@@ -1049,8 +1237,19 @@
     "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/460/capsule_231x87.jpg?t=1769130741"
   },
   "17983": {
-    "apps": [],
-    "headerImageUrl": ""
+    "name": "",
+    "apps": [
+      {
+        "id": 220240,
+        "name": "Far Cry 3",
+        "type": "game"
+      }
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": "",
+    "resolvedFrom": "title",
+    "fallbackTerm": "far cry 3 deluxe edition"
   },
   "76083": {
     "name": "Volume: Quadrilateral Edition",
@@ -1079,5 +1278,120 @@
     "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/76083/header.jpg?t=1447461390",
     "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/76083/header_ratio.jpg?t=1447461390",
     "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/subs/76083/capsule_231x87.jpg?t=1447461390"
+  },
+  "886310": {
+    "name": "",
+    "apps": [
+      {
+        "id": 2131630,
+        "name": "METAL GEAR SOLID - Master Collection Version",
+        "type": "game"
+      },
+      {
+        "id": 2131640,
+        "name": "METAL GEAR SOLID 2: Sons of Liberty - Master Collection Version",
+        "type": "game"
+      },
+      {
+        "id": 2131650,
+        "name": "METAL GEAR SOLID 3: Snake Eater - Master Collection Version",
+        "type": "game"
+      }
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": "",
+    "resolvedFrom": "title",
+    "fallbackTerm": "metal gear solid master collection vol 1"
+  },
+  "538757": {
+    "name": "",
+    "apps": [
+      {
+        "id": 1196590,
+        "name": "Resident Evil Village",
+        "type": "game"
+      },
+      {
+        "id": 418370,
+        "name": "Resident Evil 7 Biohazard",
+        "type": "game"
+      }
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": "",
+    "resolvedFrom": "title",
+    "fallbackTerm": "resident evil village resident evil 7 complete bundle"
+  },
+  "272962": {
+    "name": "",
+    "apps": [
+      {
+        "id": 863550,
+        "name": "HITMAN™ 2",
+        "type": "game"
+      }
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": "",
+    "resolvedFrom": "title",
+    "fallbackTerm": "hitman 2 standard edition"
+  },
+  "67170": {
+    "name": "",
+    "apps": [
+      {
+        "id": 12320,
+        "name": "Sacred Gold",
+        "type": "game"
+      },
+      {
+        "id": 225640,
+        "name": "Sacred 2 Gold",
+        "type": "game"
+      },
+      {
+        "id": 207930,
+        "name": "Sacred Citadel",
+        "type": "game"
+      }
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": "",
+    "resolvedFrom": "title",
+    "fallbackTerm": "sacred franchise pack"
+  },
+  "54109": {
+    "name": "",
+    "apps": [
+      {
+        "id": 209650,
+        "name": "Call of Duty®: Advanced Warfare - Gold Edition",
+        "type": "game"
+      }
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": "",
+    "resolvedFrom": "title",
+    "fallbackTerm": "call of duty advanced warfare"
+  },
+  "71223": {
+    "name": "",
+    "apps": [
+      {
+        "id": 236870,
+        "name": "HITMAN™",
+        "type": "game"
+      }
+    ],
+    "headerImageUrl": "",
+    "capsuleImageUrl": "",
+    "capsuleSmallUrl": "",
+    "resolvedFrom": "title",
+    "fallbackTerm": "hitman the complete first season prologue episode 1 6 bonus episode"
   }
 }

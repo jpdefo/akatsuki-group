@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-06T18:31:00.652905+00:00",
+  "updatedAt": "2026-08-23T18:10:51.247911+00:00",
   "apps": {
     "3288210": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3288210/2e13226847bb546625411aed75e74471f6705b18/header.jpg?t=1777969480",
@@ -2988,7 +2988,8 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/589360/capsule_231x87.jpg?t=1718968277",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/589360/capsule_184x69.jpg?t=1718968277",
       "releaseDate": "2018-03-23",
-      "comingSoon": false
+      "comingSoon": false,
+      "name": "Ni no Kuni™ II: Revenant Kingdom"
     },
     "621060": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/621060/header.jpg?t=1653555111",
@@ -5222,6 +5223,46 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/265300/capsule_231x87.jpg?t=1728377554",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/265300/capsule_184x69.jpg?t=1728377554",
       "releaseDate": "2014-10-28",
+      "comingSoon": false
+    },
+    "527430": {
+      "name": "Warhammer 40,000: Inquisitor - Martyr",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/527430/header.jpg?t=1731442765",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/527430/capsule_231x87.jpg?t=1731442765",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/527430/capsule_184x69.jpg?t=1731442765",
+      "releaseDate": "2018-06-05",
+      "comingSoon": false
+    },
+    "460930": {
+      "name": "Tom Clancy's Ghost Recon® Wildlands",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/70a2312a82d3ad7ff685302441ea5f12395204a4/header_alt_assets_0.jpg?t=1786116240",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/36e1239af9ac7388129cb162940cf61d116f46fb/capsule_231x87_alt_assets_0.jpg?t=1786116240",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/36e1239af9ac7388129cb162940cf61d116f46fb/capsule_184x69_alt_assets_0.jpg?t=1786116240",
+      "releaseDate": "2017-03-06",
+      "comingSoon": false
+    },
+    "236870": {
+      "name": "HITMAN™",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/236870/header.jpg?t=1768906497",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/236870/capsule_231x87.jpg?t=1768906497",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/236870/capsule_184x69.jpg?t=1768906497",
+      "releaseDate": "2016-03-11",
+      "comingSoon": false
+    },
+    "289070": {
+      "name": "Sid Meier’s Civilization® VI",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/289070/header.jpg?t=1784651829",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/289070/capsule_231x87.jpg?t=1784651829",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/289070/capsule_184x69.jpg?t=1784651829",
+      "releaseDate": "2016-10-20",
+      "comingSoon": false
+    },
+    "222480": {
+      "name": "Resident Evil Revelations",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/222480/header.jpg?t=1769125357",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/222480/capsule_231x87.jpg?t=1769125357",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/222480/capsule_184x69.jpg?t=1769125357",
+      "releaseDate": "2013-05-20",
       "comingSoon": false
     }
   }

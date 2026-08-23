@@ -22780,7 +22780,7 @@
       "title": "Crime Boss: Rockay City",
       "creatorUsername": "BojanNS987",
       "creatorProfileUrl": "https://www.steamgifts.com/user/BojanNS987",
-      "appId": 1044729,
+      "appId": 2933080,
       "steamAppUrl": "https://store.steampowered.com/sub/1044729?utm_source=SteamGifts",
       "entriesCount": 4,
       "endDate": "2024-07-01T19:39:00.000Z",
@@ -22813,7 +22813,8 @@
       "entriesSnapshotAt": "2026-06-10T22:50:09.611Z",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "packageId": 1044729
     },
     {
       "code": "ls3qY",
@@ -32606,10 +32607,10 @@
     {
       "code": "ZFf9l",
       "url": "https://www.steamgifts.com/giveaway/ZFf9l/tiny-tinas-wonderlands-chaotic-great-edition",
-      "title": "Golem Gates",
+      "title": "Tiny Tina's Wonderlands",
       "creatorUsername": "leniu",
       "creatorProfileUrl": "https://www.steamgifts.com/user/leniu",
-      "appId": 575970,
+      "appId": 1286680,
       "steamAppUrl": "https://store.steampowered.com/sub/575970?utm_source=SteamGifts",
       "entriesCount": 5,
       "endDate": "2023-07-07T18:00:00.000Z",
@@ -33260,10 +33261,10 @@
     {
       "code": "fIidn",
       "url": "https://www.steamgifts.com/giveaway/fIidn/ni-no-kuni-ii-revenant-kingdom-the-princes-edition",
-      "title": "Ni no Kuni II: Revenant Kingdom - The...",
+      "title": "Ni no Kuni™ II: Revenant Kingdom",
       "creatorUsername": "Skull18",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Skull18",
-      "appId": 198297,
+      "appId": 589360,
       "steamAppUrl": "https://store.steampowered.com/sub/198297?utm_source=SteamGifts",
       "entriesCount": 1,
       "endDate": "2023-07-06T18:00:00.000Z",
@@ -33293,7 +33294,8 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "",
       "penaltyForCode": "",
-      "hltbHours": 38.71
+      "hltbHours": 38.72,
+      "packageId": 198297
     },
     {
       "code": "lA5Wo",
@@ -34011,7 +34013,7 @@
       "title": "Tales of Arise: Ultimate Edition",
       "creatorUsername": "Ernesttico",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Ernesttico",
-      "appId": 568629,
+      "appId": 740130,
       "steamAppUrl": "https://store.steampowered.com/sub/568629?utm_source=SteamGifts",
       "entriesCount": 3,
       "endDate": "2023-07-07T17:00:00.000Z",
@@ -34042,7 +34044,9 @@
       "entriesSnapshotAt": "2026-06-11T23:00:59.029Z",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "packageId": 568629,
+      "hltbHours": 41.16
     },
     {
       "code": "xhju7",
@@ -38110,7 +38114,7 @@
     {
       "code": "kDJA2",
       "url": "https://www.steamgifts.com/giveaway/kDJA2/metal-gear-solid-master-collection-vol-1",
-      "title": "METAL GEAR SOLID: MASTER COLLECTION V...",
+      "title": "Metal Gear Solid Master Collection Vol 1",
       "creatorUsername": "BojanNS987",
       "creatorProfileUrl": "https://www.steamgifts.com/user/BojanNS987",
       "appId": 886310,
@@ -38147,7 +38151,13 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "",
       "penaltyForCode": "",
-      "hltbHours": 40.57
+      "hltbHours": 40.57,
+      "packageId": 886310,
+      "packageAppIds": [
+        2131630,
+        2131640,
+        2131650
+      ]
     },
     {
       "code": "mcH7V",
@@ -38373,10 +38383,10 @@
     {
       "code": "7861o",
       "url": "https://www.steamgifts.com/giveaway/7861o/tiny-tinas-wonderlands-chaotic-great-edition",
-      "title": "Golem Gates",
+      "title": "Tiny Tina's Wonderlands",
       "creatorUsername": "Kodeta",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Kodeta",
-      "appId": 575970,
+      "appId": 1286680,
       "steamAppUrl": "https://store.steampowered.com/sub/575970?utm_source=SteamGifts",
       "entriesCount": 4,
       "endDate": "2023-07-04T19:00:00.000Z",
@@ -48206,10 +48216,10 @@
     {
       "code": "ttoQw",
       "url": "https://www.steamgifts.com/giveaway/ttoQw/pillars-of-eternity-ii-deadfire-obsidian-edition",
-      "title": "Pillars of Eternity II: Deadfire - Ob...",
+      "title": "Pillars of Eternity II: Deadfire",
       "creatorUsername": "xMisiu",
       "creatorProfileUrl": "https://www.steamgifts.com/user/xMisiu",
-      "appId": 238819,
+      "appId": 560130,
       "steamAppUrl": "https://store.steampowered.com/sub/238819?utm_source=SteamGifts",
       "entriesCount": 0,
       "endDate": "2022-07-03T16:00:00.000Z",
@@ -48230,7 +48240,8 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "",
       "penaltyForCode": "",
-      "hltbHours": 41.73
+      "hltbHours": 41.87,
+      "packageId": 238819
     },
     {
       "code": "BKIdd",
@@ -54234,10 +54245,10 @@
     {
       "code": "0t6mf",
       "url": "https://www.steamgifts.com/giveaway/0t6mf/ni-no-kuni-ii-revenant-kingdom-the-princes-edition",
-      "title": "Ni no Kuni II: Revenant Kingdom - The...",
+      "title": "Ni no Kuni™ II: Revenant Kingdom",
       "creatorUsername": "Koalala",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Koalala",
-      "appId": 198297,
+      "appId": 589360,
       "steamAppUrl": "https://store.steampowered.com/sub/198297?utm_source=SteamGifts",
       "entriesCount": 0,
       "endDate": "2022-06-27T05:13:00.000Z",
@@ -54258,7 +54269,8 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "",
       "penaltyForCode": "",
-      "hltbHours": 38.71
+      "hltbHours": 38.72,
+      "packageId": 198297
     },
     {
       "code": "BvkVQ",
@@ -66782,10 +66794,10 @@
     {
       "code": "fzBZF",
       "url": "https://www.steamgifts.com/giveaway/fzBZF/pillars-of-eternity-ii-deadfire-obsidian-edition",
-      "title": "Pillars of Eternity II: Deadfire - Ob...",
+      "title": "Pillars of Eternity II: Deadfire",
       "creatorUsername": "ChessPie",
       "creatorProfileUrl": "https://www.steamgifts.com/user/ChessPie",
-      "appId": 238819,
+      "appId": 560130,
       "steamAppUrl": "https://store.steampowered.com/sub/238819?utm_source=SteamGifts",
       "entriesCount": 2,
       "endDate": "2021-07-06T16:00:00.000Z",
@@ -66816,7 +66828,8 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "",
       "penaltyForCode": "",
-      "hltbHours": 41.73
+      "hltbHours": 41.87,
+      "packageId": 238819
     },
     {
       "code": "g2Rup",
@@ -67049,10 +67062,10 @@
     {
       "code": "GIljP",
       "url": "https://www.steamgifts.com/giveaway/GIljP/warhammer-40000-inquisitor-martyr-complete-collection",
-      "title": "Warhammer 40,000: Inquisitor - Martyr...",
+      "title": "Warhammer 40,000: Inquisitor - Martyr",
       "creatorUsername": "kasztoix",
       "creatorProfileUrl": "https://www.steamgifts.com/user/kasztoix",
-      "appId": 411862,
+      "appId": 527430,
       "steamAppUrl": "https://store.steampowered.com/sub/411862?utm_source=SteamGifts",
       "entriesCount": 1,
       "endDate": "2021-07-06T17:53:00.000Z",
@@ -67082,7 +67095,8 @@
       "entryUsers": [
         "Skull18"
       ],
-      "hltbHours": 22.74
+      "hltbHours": 22.74,
+      "packageId": 411862
     },
     {
       "code": "m0L9v",
@@ -67941,7 +67955,7 @@
       "title": "Dying Light Enhanced Edition ROW",
       "creatorUsername": "BarbaricGenie",
       "creatorProfileUrl": "https://www.steamgifts.com/user/BarbaricGenie",
-      "appId": 88801,
+      "appId": 239140,
       "steamAppUrl": "https://store.steampowered.com/sub/88801?utm_source=SteamGifts",
       "entriesCount": 2,
       "endDate": "2021-07-05T02:48:00.000Z",
@@ -67972,7 +67986,8 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "",
       "penaltyForCode": "",
-      "hltbHours": 19.92
+      "hltbHours": 18.27,
+      "packageId": 88801
     },
     {
       "code": "myOgP",
@@ -73088,7 +73103,7 @@
       "title": "Crusader Kings III Royal Edition",
       "creatorUsername": "Ernesttico",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Ernesttico",
-      "appId": 452685,
+      "appId": 1158310,
       "steamAppUrl": "https://store.steampowered.com/sub/452685?utm_source=SteamGifts",
       "entriesCount": 5,
       "endDate": "2021-07-06T11:00:00.000Z",
@@ -73122,7 +73137,8 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "",
       "penaltyForCode": "",
-      "hltbHours": 72.56
+      "hltbHours": 74.7,
+      "packageId": 452685
     },
     {
       "code": "fevbp",
@@ -75232,10 +75248,10 @@
     {
       "code": "YU8lb",
       "url": "https://www.steamgifts.com/giveaway/YU8lb/ni-no-kuni-ii-revenant-kingdom-the-princes-edition",
-      "title": "Ni no Kuni II: Revenant Kingdom - The...",
+      "title": "Ni no Kuni™ II: Revenant Kingdom",
       "creatorUsername": "Wintermute101",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Wintermute101",
-      "appId": 198297,
+      "appId": 589360,
       "steamAppUrl": "https://store.steampowered.com/sub/198297?utm_source=SteamGifts",
       "entriesCount": 4,
       "endDate": "2021-04-30T18:00:00.000Z",
@@ -75262,7 +75278,8 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "2021-04",
       "penaltyForCode": "",
-      "hltbHours": 38.71
+      "hltbHours": 38.72,
+      "packageId": 198297
     },
     {
       "code": "uzggj",
@@ -75725,7 +75742,7 @@
       "title": "OUTRIDERS",
       "creatorUsername": "BojanNS987",
       "creatorProfileUrl": "https://www.steamgifts.com/user/BojanNS987",
-      "appId": 504022,
+      "appId": 680420,
       "steamAppUrl": "https://store.steampowered.com/sub/504022?utm_source=SteamGifts",
       "entriesCount": 9,
       "endDate": "2021-04-30T17:00:00.000Z",
@@ -75752,7 +75769,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2021-04",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "packageId": 504022
     },
     {
       "code": "m9jZ2",
@@ -75892,7 +75910,12 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "2021-03",
       "penaltyForCode": "",
-      "hltbHours": 9.85
+      "hltbHours": 19.08,
+      "packageId": 538757,
+      "packageAppIds": [
+        1196590,
+        418370
+      ]
     },
     {
       "code": "Ygy6p",
@@ -78902,7 +78925,7 @@
       "title": "OUTRIDERS",
       "creatorUsername": "bron99",
       "creatorProfileUrl": "https://www.steamgifts.com/user/bron99",
-      "appId": 504022,
+      "appId": 680420,
       "steamAppUrl": "https://store.steampowered.com/sub/504022?utm_source=SteamGifts",
       "entriesCount": 11,
       "endDate": "2020-12-30T18:00:00.000Z",
@@ -78929,7 +78952,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2020-12",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "packageId": 504022
     },
     {
       "code": "h6p1P",
@@ -96950,7 +96974,7 @@
       "title": "HITMAN 2 - Standard Edition",
       "creatorUsername": "ChessPie",
       "creatorProfileUrl": "https://www.steamgifts.com/user/ChessPie",
-      "appId": 272962,
+      "appId": 863550,
       "steamAppUrl": "https://store.steampowered.com/sub/272962?utm_source=SteamGifts",
       "entriesCount": 5,
       "endDate": "2019-06-30T18:00:00.000Z",
@@ -96977,7 +97001,8 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "2019-06",
       "penaltyForCode": "",
-      "hltbHours": 10.17
+      "hltbHours": 10.17,
+      "packageId": 272962
     },
     {
       "code": "iWcDF",
@@ -102809,7 +102834,7 @@
       "title": "Sniper: Ghost Warrior Trilogy",
       "creatorUsername": "Deleted-6983004",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Deleted-6983004",
-      "appId": 36904,
+      "appId": 34830,
       "steamAppUrl": "https://store.steampowered.com/sub/36904?utm_source=SteamGifts",
       "entriesCount": 17,
       "endDate": "2019-02-21T02:00:00.000Z",
@@ -102835,7 +102860,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "packageId": 36904
     },
     {
       "code": "9nLeD",
@@ -110748,7 +110774,7 @@
       "title": "Dying Light Enhanced Edition ROW",
       "creatorUsername": "Youdontknow",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Youdontknow",
-      "appId": 88801,
+      "appId": 239140,
       "steamAppUrl": "https://store.steampowered.com/sub/88801?utm_source=SteamGifts",
       "entriesCount": 5,
       "endDate": "2018-09-30T18:00:00.000Z",
@@ -110775,7 +110801,8 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "2018-09",
       "penaltyForCode": "",
-      "hltbHours": 19.92
+      "hltbHours": 18.27,
+      "packageId": 88801
     },
     {
       "code": "giitC",
@@ -111516,7 +111543,7 @@
       "title": "Just Cause 3 XL",
       "creatorUsername": "Wintermute75",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Wintermute75",
-      "appId": 76710,
+      "appId": 225540,
       "steamAppUrl": "https://store.steampowered.com/sub/76710?utm_source=SteamGifts",
       "entriesCount": 15,
       "endDate": "2018-08-21T20:00:00.000Z",
@@ -111542,7 +111569,9 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "packageId": 76710,
+      "hltbHours": 18.27
     },
     {
       "code": "ISCZW",
@@ -113092,7 +113121,7 @@
       "title": "Monster Hunter: World",
       "creatorUsername": "bron99",
       "creatorProfileUrl": "https://www.steamgifts.com/user/bron99",
-      "appId": 149309,
+      "appId": 582010,
       "steamAppUrl": "https://store.steampowered.com/sub/149309?utm_source=SteamGifts",
       "entriesCount": 19,
       "endDate": "2018-08-30T18:00:00.000Z",
@@ -113119,7 +113148,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2018-08",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "packageId": 149309
     },
     {
       "code": "ugMvC",
@@ -114174,7 +114204,7 @@
       "title": "Monster Hunter: World",
       "creatorUsername": "Krlesnik",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Krlesnik",
-      "appId": 149309,
+      "appId": 582010,
       "steamAppUrl": "https://store.steampowered.com/sub/149309?utm_source=SteamGifts",
       "entriesCount": 20,
       "endDate": "2018-07-30T18:00:00.000Z",
@@ -114201,7 +114231,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2018-07",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "packageId": 149309
     },
     {
       "code": "xI2oQ",
@@ -123595,7 +123626,7 @@
       "title": "Beat Hazard Complete",
       "creatorUsername": "Deleted-6983004",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Deleted-6983004",
-      "appId": 8500,
+      "appId": 49600,
       "steamAppUrl": "https://store.steampowered.com/sub/8500?utm_source=SteamGifts",
       "entriesCount": 14,
       "endDate": "2017-12-30T18:00:00.000Z",
@@ -123621,7 +123652,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "packageId": 8500
     },
     {
       "code": "rM0zJ",
@@ -125200,7 +125232,7 @@
     {
       "code": "ePVg7",
       "url": "https://www.steamgifts.com/giveaway/ePVg7/divinity-original-sin-2-divine-edition",
-      "title": "Stellar Impact - Carrier Ship DLC",
+      "title": "Divinity: Original Sin 2 - Definitive Edition",
       "creatorUsername": "zettaivanugen",
       "creatorProfileUrl": "https://www.steamgifts.com/user/zettaivanugen",
       "appId": 435150,
@@ -128888,7 +128920,13 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "packageId": 67170,
+      "packageAppIds": [
+        12320,
+        225640,
+        207930
+      ]
     },
     {
       "code": "NMGca",
@@ -130990,7 +131028,7 @@
       "title": "Killing Floor 2 Digital Deluxe Edition",
       "creatorUsername": "gizzy831",
       "creatorProfileUrl": "https://www.steamgifts.com/user/gizzy831",
-      "appId": 64300,
+      "appId": 232090,
       "steamAppUrl": "https://store.steampowered.com/sub/64300?utm_source=SteamGifts",
       "entriesCount": 8,
       "endDate": "2017-07-30T17:00:00.000Z",
@@ -131016,7 +131054,9 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "packageId": 64300,
+      "hltbHours": 16.32
     },
     {
       "code": "ABMcU",
@@ -134314,7 +134354,7 @@
       "title": "Call of Duty: Advanced Warfare",
       "creatorUsername": "ercalote",
       "creatorProfileUrl": "https://www.steamgifts.com/user/ercalote",
-      "appId": 54109,
+      "appId": 209650,
       "steamAppUrl": "https://store.steampowered.com/sub/54109?utm_source=SteamGifts",
       "entriesCount": 14,
       "endDate": "2017-04-30T18:00:00.000Z",
@@ -134341,7 +134381,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "packageId": 54109
     },
     {
       "code": "uBx32",
@@ -135047,7 +135088,7 @@
       "title": "Just Cause 3 XL",
       "creatorUsername": "Rimberse",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Rimberse",
-      "appId": 76710,
+      "appId": 225540,
       "steamAppUrl": "https://store.steampowered.com/sub/76710?utm_source=SteamGifts",
       "entriesCount": 13,
       "endDate": "2017-04-30T18:00:00.000Z",
@@ -135073,7 +135114,9 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2017-04",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "packageId": 76710,
+      "hltbHours": 18.27
     },
     {
       "code": "FNiQU",
@@ -136335,10 +136378,10 @@
     {
       "code": "mefLN",
       "url": "https://www.steamgifts.com/giveaway/mefLN/tom-clancys-ghost-recon-wildlands-deluxe-edition-preorder",
-      "title": "Tom Clancy's Ghost Recon Wildlands - ...",
+      "title": "Tom Clancy's Ghost Recon® Wildlands",
       "creatorUsername": "Koalix",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Koalix",
-      "appId": 111429,
+      "appId": 460930,
       "steamAppUrl": "https://store.steampowered.com/sub/111429?utm_source=SteamGifts",
       "entriesCount": 25,
       "endDate": "2017-03-30T18:00:00.000Z",
@@ -136364,7 +136407,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "packageId": 111429
     },
     {
       "code": "wRFog",
@@ -137770,10 +137814,10 @@
     {
       "code": "j56Lr",
       "url": "https://www.steamgifts.com/giveaway/j56Lr/hitman-the-complete-first-season-prologue-episode-1-6-bonus-episode",
-      "title": "HITMAN: THE COMPLETE FIRST SEASON [Pr...",
+      "title": "HITMAN™",
       "creatorUsername": "ReptilianWorldOrder",
       "creatorProfileUrl": "https://www.steamgifts.com/user/ReptilianWorldOrder",
-      "appId": 71223,
+      "appId": 236870,
       "steamAppUrl": "https://store.steampowered.com/sub/71223?utm_source=SteamGifts",
       "entriesCount": 15,
       "endDate": "2017-03-01T05:59:00.000Z",
@@ -137799,7 +137843,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "packageId": 71223
     },
     {
       "code": "eFwVT",
@@ -138611,7 +138656,7 @@
       "title": "Sniper: Ghost Warrior Trilogy",
       "creatorUsername": "Skull18",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Skull18",
-      "appId": 36904,
+      "appId": 34830,
       "steamAppUrl": "https://store.steampowered.com/sub/36904?utm_source=SteamGifts",
       "entriesCount": 8,
       "endDate": "2017-01-15T18:00:00.000Z",
@@ -138637,7 +138682,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "packageId": 36904
     },
     {
       "code": "5O9wB",
@@ -138920,10 +138966,10 @@
     {
       "code": "RJeG3",
       "url": "https://www.steamgifts.com/giveaway/RJeG3/sid-meiers-civilization-vi-digital-deluxe",
-      "title": "Sid Meier's Civilization VI - Digital...",
+      "title": "Sid Meier’s Civilization® VI",
       "creatorUsername": "AJIam",
       "creatorProfileUrl": "https://www.steamgifts.com/user/AJIam",
-      "appId": 123216,
+      "appId": 289070,
       "steamAppUrl": "https://store.steampowered.com/sub/123216?utm_source=SteamGifts",
       "entriesCount": 21,
       "endDate": "2017-01-30T18:00:00.000Z",
@@ -138949,7 +138995,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "2017-01",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "packageId": 123216
     },
     {
       "code": "llu92",
@@ -139096,7 +139143,7 @@
       "title": "Call of Duty: Advanced Warfare",
       "creatorUsername": "ercalote",
       "creatorProfileUrl": "https://www.steamgifts.com/user/ercalote",
-      "appId": 54109,
+      "appId": 209650,
       "steamAppUrl": "https://store.steampowered.com/sub/54109?utm_source=SteamGifts",
       "entriesCount": 14,
       "endDate": "2017-01-30T18:00:00.000Z",
@@ -139123,7 +139170,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "packageId": 54109
     },
     {
       "code": "evnIC",
@@ -141217,7 +141265,7 @@
       "title": "Minion Masters Premium Edition",
       "creatorUsername": "LastM",
       "creatorProfileUrl": "https://www.steamgifts.com/user/LastM",
-      "appId": 110589,
+      "appId": 489520,
       "steamAppUrl": "https://store.steampowered.com/sub/110589?utm_source=SteamGifts",
       "entriesCount": 27,
       "endDate": "2016-12-11T21:32:00.000Z",
@@ -141243,7 +141291,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "packageId": 110589
     },
     {
       "code": "Omzk7",
@@ -141982,10 +142031,10 @@
     {
       "code": "wGOlH",
       "url": "https://www.steamgifts.com/giveaway/wGOlH/resident-evil-revelations-complete-pack",
-      "title": "Resident Evil Revelations - Complete ...",
+      "title": "Resident Evil Revelations",
       "creatorUsername": "Rimberse",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Rimberse",
-      "appId": 50854,
+      "appId": 222480,
       "steamAppUrl": "https://store.steampowered.com/sub/50854?utm_source=SteamGifts",
       "entriesCount": 11,
       "endDate": "2016-11-30T16:00:00.000Z",
@@ -142012,7 +142061,8 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "",
       "penaltyForCode": "",
-      "hltbHours": 8.33
+      "hltbHours": 8.35,
+      "packageId": 50854
     },
     {
       "code": "UeLWh",
@@ -144106,7 +144156,7 @@
       "title": "Hatoful Boyfriend Collector's Edition",
       "creatorUsername": "marpenorj",
       "creatorProfileUrl": "https://www.steamgifts.com/user/marpenorj",
-      "appId": 48515,
+      "appId": 310080,
       "steamAppUrl": "https://store.steampowered.com/sub/48515?utm_source=SteamGifts",
       "entriesCount": 5,
       "endDate": "2016-10-30T17:00:00.000Z",
@@ -144133,7 +144183,8 @@
       "regionRestricted": false,
       "giveawayMonthOverride": "",
       "penaltyForCode": "",
-      "hltbHours": 1.5
+      "hltbHours": 1.5,
+      "packageId": 48515
     },
     {
       "code": "aQRhS",
@@ -146240,7 +146291,7 @@
       "title": "Far Cry 3 - Deluxe Edition",
       "creatorUsername": "Swordkill",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Swordkill",
-      "appId": 17983,
+      "appId": 220240,
       "steamAppUrl": "https://store.steampowered.com/sub/17983?utm_source=SteamGifts",
       "entriesCount": 11,
       "endDate": "2016-09-30T15:00:00.000Z",
@@ -146266,7 +146317,8 @@
       "entriesSnapshotAt": "",
       "regionRestricted": false,
       "giveawayMonthOverride": "",
-      "penaltyForCode": ""
+      "penaltyForCode": "",
+      "packageId": 17983
     },
     {
       "code": "DheuL",
@@ -156705,7 +156757,7 @@
     {
       "giveawayCode": "iDjie",
       "title": "Crime Boss: Rockay City",
-      "appId": 1044729,
+      "appId": 2933080,
       "winnerUsername": "Oozyyy",
       "creatorUsername": "BojanNS987",
       "entriesCount": 4,
@@ -159081,7 +159133,7 @@
     {
       "giveawayCode": "ZFf9l",
       "title": "Golem Gates",
-      "appId": 575970,
+      "appId": 1286680,
       "winnerUsername": "Kodeta",
       "creatorUsername": "leniu",
       "entriesCount": 5,
@@ -159207,7 +159259,7 @@
     {
       "giveawayCode": "fIidn",
       "title": "Ni no Kuni II: Revenant Kingdom - The...",
-      "appId": 198297,
+      "appId": 589360,
       "winnerUsername": "Youdontknow",
       "creatorUsername": "Skull18",
       "entriesCount": 1,
@@ -159360,7 +159412,7 @@
     {
       "giveawayCode": "xLs0j",
       "title": "Tales of Arise: Ultimate Edition",
-      "appId": 568629,
+      "appId": 740130,
       "winnerUsername": "BarbaricGenie",
       "creatorUsername": "Ernesttico",
       "entriesCount": 3,
@@ -160233,7 +160285,7 @@
     {
       "giveawayCode": "7861o",
       "title": "Golem Gates",
-      "appId": 575970,
+      "appId": 1286680,
       "winnerUsername": "Ernesttico",
       "creatorUsername": "Kodeta",
       "entriesCount": 4,
@@ -166803,7 +166855,7 @@
     {
       "giveawayCode": "fzBZF",
       "title": "Pillars of Eternity II: Deadfire - Ob...",
-      "appId": 238819,
+      "appId": 560130,
       "winnerUsername": "BojanNS987",
       "creatorUsername": "ChessPie",
       "entriesCount": 2,
@@ -166857,7 +166909,7 @@
     {
       "giveawayCode": "GIljP",
       "title": "Warhammer 40,000: Inquisitor - Martyr...",
-      "appId": 411862,
+      "appId": 527430,
       "winnerUsername": "Skull18",
       "creatorUsername": "kasztoix",
       "entriesCount": 1,
@@ -167046,7 +167098,7 @@
     {
       "giveawayCode": "kFFmb",
       "title": "Dying Light Enhanced Edition ROW",
-      "appId": 88801,
+      "appId": 239140,
       "winnerUsername": "BojanNS987",
       "creatorUsername": "BarbaricGenie",
       "entriesCount": 2,
@@ -168117,7 +168169,7 @@
     {
       "giveawayCode": "4UzR5",
       "title": "Crusader Kings III Royal Edition",
-      "appId": 452685,
+      "appId": 1158310,
       "winnerUsername": "Youdontknow",
       "creatorUsername": "Ernesttico",
       "entriesCount": 5,
@@ -168648,7 +168700,7 @@
     {
       "giveawayCode": "YU8lb",
       "title": "Ni no Kuni II: Revenant Kingdom - The...",
-      "appId": 198297,
+      "appId": 589360,
       "winnerUsername": "BojanNS987",
       "creatorUsername": "Wintermute101",
       "entriesCount": 4,
@@ -168774,7 +168826,7 @@
     {
       "giveawayCode": "PD9rx",
       "title": "OUTRIDERS",
-      "appId": 504022,
+      "appId": 680420,
       "winnerUsername": "leniu",
       "creatorUsername": "BojanNS987",
       "entriesCount": 9,
@@ -169584,7 +169636,7 @@
     {
       "giveawayCode": "LXzem",
       "title": "OUTRIDERS",
-      "appId": 504022,
+      "appId": 680420,
       "winnerUsername": "xMisiu",
       "creatorUsername": "bron99",
       "entriesCount": 11,
@@ -174192,7 +174244,7 @@
     {
       "giveawayCode": "US0cZ",
       "title": "HITMAN 2 - Standard Edition",
-      "appId": 272962,
+      "appId": 863550,
       "winnerUsername": "Krlesnik",
       "creatorUsername": "ChessPie",
       "entriesCount": 5,
@@ -175695,7 +175747,7 @@
     {
       "giveawayCode": "WXRSw",
       "title": "Sniper: Ghost Warrior Trilogy",
-      "appId": 36904,
+      "appId": 34830,
       "winnerUsername": "rEDkILLER",
       "creatorUsername": "Deleted-6983004",
       "entriesCount": 17,
@@ -177711,7 +177763,7 @@
     {
       "giveawayCode": "IFBU8",
       "title": "Dying Light Enhanced Edition ROW",
-      "appId": 88801,
+      "appId": 239140,
       "winnerUsername": "MachinesAreHuman",
       "creatorUsername": "Youdontknow",
       "entriesCount": 5,
@@ -177909,7 +177961,7 @@
     {
       "giveawayCode": "VZLnw",
       "title": "Just Cause 3 XL",
-      "appId": 76710,
+      "appId": 225540,
       "winnerUsername": "gameggorder",
       "creatorUsername": "Wintermute75",
       "entriesCount": 15,
@@ -178305,7 +178357,7 @@
     {
       "giveawayCode": "RnYas",
       "title": "Monster Hunter: World",
-      "appId": 149309,
+      "appId": 582010,
       "winnerUsername": "nopzor",
       "creatorUsername": "bron99",
       "entriesCount": 19,
@@ -178584,7 +178636,7 @@
     {
       "giveawayCode": "pJ8No",
       "title": "Monster Hunter: World",
-      "appId": 149309,
+      "appId": 582010,
       "winnerUsername": "gizzy831",
       "creatorUsername": "Krlesnik",
       "entriesCount": 20,
@@ -180996,7 +181048,7 @@
     {
       "giveawayCode": "EGmF3",
       "title": "Beat Hazard Complete",
-      "appId": 8500,
+      "appId": 49600,
       "winnerUsername": "picnic1996",
       "creatorUsername": "Deleted-6983004",
       "entriesCount": 14,
@@ -182886,7 +182938,7 @@
     {
       "giveawayCode": "pN4ex",
       "title": "Killing Floor 2 Digital Deluxe Edition",
-      "appId": 64300,
+      "appId": 232090,
       "winnerUsername": "Koalix",
       "creatorUsername": "gizzy831",
       "entriesCount": 8,
@@ -183741,7 +183793,7 @@
     {
       "giveawayCode": "KrFyy",
       "title": "Call of Duty: Advanced Warfare",
-      "appId": 54109,
+      "appId": 209650,
       "winnerUsername": "StankoBubalo",
       "creatorUsername": "ercalote",
       "entriesCount": 14,
@@ -183930,7 +183982,7 @@
     {
       "giveawayCode": "ZhgT8",
       "title": "Just Cause 3 XL",
-      "appId": 76710,
+      "appId": 225540,
       "winnerUsername": "ercalote",
       "creatorUsername": "Rimberse",
       "entriesCount": 13,
@@ -184263,7 +184315,7 @@
     {
       "giveawayCode": "mefLN",
       "title": "Tom Clancy's Ghost Recon Wildlands - ...",
-      "appId": 111429,
+      "appId": 460930,
       "winnerUsername": "Mikros7",
       "creatorUsername": "Koalix",
       "entriesCount": 25,
@@ -184632,7 +184684,7 @@
     {
       "giveawayCode": "j56Lr",
       "title": "HITMAN: THE COMPLETE FIRST SEASON [Pr...",
-      "appId": 71223,
+      "appId": 236870,
       "winnerUsername": "varmas",
       "creatorUsername": "ReptilianWorldOrder",
       "entriesCount": 15,
@@ -184848,7 +184900,7 @@
     {
       "giveawayCode": "sP2Go",
       "title": "Sniper: Ghost Warrior Trilogy",
-      "appId": 36904,
+      "appId": 34830,
       "winnerUsername": "JabbaFatt",
       "creatorUsername": "Skull18",
       "entriesCount": 8,
@@ -184929,7 +184981,7 @@
     {
       "giveawayCode": "RJeG3",
       "title": "Sid Meier's Civilization VI - Digital...",
-      "appId": 123216,
+      "appId": 289070,
       "winnerUsername": "varmas",
       "creatorUsername": "AJIam",
       "entriesCount": 21,
@@ -184974,7 +185026,7 @@
     {
       "giveawayCode": "VwMY6",
       "title": "Call of Duty: Advanced Warfare",
-      "appId": 54109,
+      "appId": 209650,
       "winnerUsername": "Rimberse",
       "creatorUsername": "ercalote",
       "entriesCount": 14,
@@ -185523,7 +185575,7 @@
     {
       "giveawayCode": "8ZuPo",
       "title": "Minion Masters Premium Edition",
-      "appId": 110589,
+      "appId": 489520,
       "winnerUsername": "Merliin",
       "creatorUsername": "LastM",
       "entriesCount": 27,
@@ -185721,7 +185773,7 @@
     {
       "giveawayCode": "wGOlH",
       "title": "Resident Evil Revelations - Complete ...",
-      "appId": 50854,
+      "appId": 222480,
       "winnerUsername": "Skull18",
       "creatorUsername": "Rimberse",
       "entriesCount": 11,
@@ -186270,7 +186322,7 @@
     {
       "giveawayCode": "2ISwp",
       "title": "Hatoful Boyfriend Collector's Edition",
-      "appId": 48515,
+      "appId": 310080,
       "winnerUsername": "Krlesnik",
       "creatorUsername": "marpenorj",
       "entriesCount": 5,
@@ -186819,7 +186871,7 @@
     {
       "giveawayCode": "oN561",
       "title": "Far Cry 3 - Deluxe Edition",
-      "appId": 17983,
+      "appId": 220240,
       "winnerUsername": "HBRugeO",
       "creatorUsername": "Swordkill",
       "entriesCount": 11,

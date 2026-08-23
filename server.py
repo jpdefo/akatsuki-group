@@ -9,6 +9,7 @@ import tempfile
 import threading
 import time
 import traceback
+import unicodedata
 from datetime import datetime, timedelta, timezone
 from difflib import SequenceMatcher
 from email.utils import parsedate_to_datetime
@@ -466,7 +467,93 @@ def fetch_app_type(app_id: int) -> str:
     return str(data.get("type") or "")
 
 
-def get_package_cache_entry(package_id: int, cache: dict) -> dict | None:
+# Packages that Steam has delisted: /api/packagedetails returns success=false
+# forever, so their contents can only come from the giveaway title. Titles that
+# name one game are resolved by store search (see resolve_delisted_package);
+# these are the ones search cannot get right on its own, each verified by hand
+# against the store. A 2+ entry list becomes a multi-game collection downstream.
+DELISTED_PACKAGE_APPS: dict[int, list[int]] = {
+    54109: [209650],  # Call of Duty: Advanced Warfare (store name is "- Gold Edition")
+    67170: [12320, 225640, 207930],  # Sacred Franchise Pack: Gold, 2 Gold, Citadel
+    71223: [236870],  # HITMAN: The Complete First Season -> HITMAN (2016)
+    272962: [863550],  # HITMAN 2 (2018); search matches Hitman 2: Silent Assassin instead
+    538757: [1196590, 418370],  # Resident Evil Village & Resident Evil 7 bundle
+    886310: [2131630, 2131640, 2131650],  # MGS Master Collection Vol.1: MGS, MGS2, MGS3
+}
+
+# Words that describe how a game was packaged rather than which game it is.
+PACKAGE_EDITION_NOISE = (
+    r"(?:enhanced|complete|ultimate|deluxe|digital\s+deluxe|premium|collector'?s|standard|royal|"
+    r"obsidian|definitive|game\s+of\s+the\s+year|goty|anniversary|gold|platinum|legendary|"
+    r"prince'?s|chaotic\s+great)"
+)
+
+
+def strip_edition_words(title: str) -> str:
+    """"Dying Light Enhanced Edition ROW" -> "Dying Light"."""
+    text = re.sub(r"\[[^\]]*\]|\([^)]*\)", " ", title)
+    text = re.sub(r"\b(?:pre-?order|preorder|row|xl)\b", " ", text, flags=re.I)
+    text = re.sub(rf"\b{PACKAGE_EDITION_NOISE}\b", " ", text, flags=re.I)
+    text = re.sub(r"\b(?:edition|bundle|pack|collection|trilogy|franchise|experience)\b", " ", text, flags=re.I)
+    text = re.sub(r"\bthe\s*$", " ", text, flags=re.I)
+    text = re.sub(r"[-–—:]\s*$", " ", text)
+    return re.sub(r"\s+", " ", text).strip(" -–—:&")
+
+
+def normalize_store_name(value: str) -> str:
+    """Fold accents, trademark marks and punctuation so names compare equal."""
+    text = str(value or "").replace("™", " ").replace("®", " ").replace("’", "'")
+    text = unicodedata.normalize("NFKD", text)
+    text = "".join(char for char in text if not unicodedata.combining(char))
+    return re.sub(r"[^a-z0-9]+", "", text.lower())
+
+
+def search_steam_store(term: str) -> list[dict]:
+    payload = fetch_json(
+        f"https://store.steampowered.com/api/storesearch/?{urlencode({'term': term, 'cc': 'us', 'l': 'english'})}"
+    )
+    items = payload.get("items") if isinstance(payload, dict) else None
+    return items if isinstance(items, list) else []
+
+
+def resolve_delisted_package(package_id: int, search_term: str) -> list[dict]:
+    """Games in a delisted package, from the curated table or by store search.
+
+    Only an exact name match on the edition-stripped title is accepted: a
+    near-miss is far worse than leaving the package unresolved, because the
+    giveaway would then track playtime for the wrong game. Returns [] when
+    nothing is confidently identified.
+    """
+    manual = DELISTED_PACKAGE_APPS.get(package_id)
+    if manual:
+        # Names are looked up so a collection's per-game achievement links read
+        # as the game rather than "App 2131640"; a lookup failure is cosmetic.
+        games = []
+        for app_id in manual:
+            try:
+                name = fetch_store_media(app_id).get("name") or ""
+            except (HTTPError, URLError, TimeoutError, json.JSONDecodeError):
+                name = ""
+            games.append({"id": app_id, "name": name, "type": "game"})
+        return games
+    base = strip_edition_words(search_term)
+    if not base:
+        return []
+    try:
+        items = search_steam_store(base)
+    except (HTTPError, URLError, TimeoutError, json.JSONDecodeError):
+        return []
+    wanted = normalize_store_name(base)
+    for item in items:
+        app_id = parse_int(item.get("id"))
+        if not app_id or item.get("type") != "app":
+            continue
+        if normalize_store_name(item.get("name", "")) == wanted:
+            return [{"id": app_id, "name": str(item.get("name") or ""), "type": "game"}]
+    return []
+
+
+def get_package_cache_entry(package_id: int, cache: dict, search_term: str = "") -> dict | None:
     """Cached package contents + art ({"apps": [...], "name", header/capsule
     urls}), or None.
 
@@ -480,7 +567,13 @@ def get_package_cache_entry(package_id: int, cache: dict) -> dict | None:
     key = str(package_id)
     entry = cache.get(key)
     if isinstance(entry, dict) and isinstance(entry.get("apps"), list) and "headerImageUrl" in entry:
-        return entry
+        # An empty entry means the store has no data for the package. Retry it
+        # through the title fallback once per search term, so a package cached
+        # as dead before the fallback existed (or under a wrong title) is
+        # reconsidered, while a genuinely unresolvable one is not re-searched
+        # on every run.
+        if entry.get("apps") or entry.get("fallbackTerm") == search_term:
+            return entry
     known_types = {}
     if isinstance(entry, dict):
         known_types = {
@@ -496,6 +589,19 @@ def get_package_cache_entry(package_id: int, cache: dict) -> dict | None:
         return None
     # Misses keep a headerImageUrl key so they read as fully-fetched above.
     entry = details or {"apps": [], "headerImageUrl": ""}
+    if not entry.get("apps"):
+        # Delisted package: the store knows nothing, so fall back to the title.
+        fallback = resolve_delisted_package(package_id, search_term)
+        if fallback:
+            entry = {
+                "name": "",
+                "apps": fallback,
+                "headerImageUrl": "",
+                "capsuleImageUrl": "",
+                "capsuleSmallUrl": "",
+                "resolvedFrom": "title",
+            }
+        entry["fallbackTerm"] = search_term
     cache[key] = entry
     return entry
 
@@ -543,7 +649,12 @@ def resolve_package_app_ids(sync_payload: dict) -> int:
         package_id = parse_int(giveaway.get("packageId"), None) or (store_id if store_type == "sub" else None)
         if not package_id:
             continue
-        entry = get_package_cache_entry(package_id, cache)
+        # The giveaway URL slug carries the full, untruncated name and survives
+        # a mis-scraped title (sub 575970 is titled "Golem Gates" but its slug
+        # is tiny-tinas-wonderlands-chaotic-great-edition), so it is the better
+        # search term for a delisted package.
+        search_term = slug_words(giveaway) or str(giveaway.get("title") or "")
+        entry = get_package_cache_entry(package_id, cache, search_term)
         if entry is None:
             continue  # transient fetch failure — retry next run
         games = package_game_apps(entry)
@@ -623,6 +734,66 @@ def fix_truncated_titles(sync_payload: dict, media_cache: dict) -> int:
             name = entry.get("name")
         if name and name != giveaway.get("title"):
             giveaway["title"] = name
+            fixed += 1
+    if cache_dirty:
+        media_cache["updatedAt"] = utc_now()
+        save_json(MEDIA_CACHE_PATH, media_cache)
+    if fixed:
+        save_json(SYNC_PATH, sync_payload)
+    return fixed
+
+
+def slug_words(giveaway: dict) -> str:
+    """The giveaway URL slug as spaced words ("dying-light-row" -> "dying light row")."""
+    slug = str(giveaway.get("url") or "").rstrip("/").rsplit("/", 1)[-1]
+    return slug.replace("-", " ")
+
+
+def fix_package_collision_titles(sync_payload: dict, media_cache: dict) -> int:
+    """Retitle /sub/ giveaways that were named after an app sharing the sub's id.
+
+    Sub ids and app ids come from separate number spaces, so sub 575970 (Tiny
+    Tina's Wonderlands) and app 575970 (Golem Gates) both exist. A collector that
+    looked the id up as an app stored the wrong game's name, which then reads as
+    a real title: the giveaway showed "Golem Gates" while tracking Tiny Tina's.
+
+    The tell is exact: the stored title equals the store name of the app whose id
+    is the package id, and contradicts the giveaway's own URL slug. Only then is
+    the title replaced, with the resolved game's name (single-game package) or
+    the slug (a collection has no one name).
+    """
+    apps = media_cache.setdefault("apps", {})
+    package_cache = load_json(PACKAGE_CACHE_PATH, {})
+    fixed = 0
+    cache_dirty = False
+    for giveaway in sync_payload.get("giveaways", []):
+        if str(giveaway.get("steamStoreType") or "").lower() != "sub":
+            continue
+        title = str(giveaway.get("title") or "").strip()
+        words = slug_words(giveaway)
+        if not title or not words or normalize_store_name(title) in normalize_store_name(words):
+            continue  # title agrees with the slug, so it is the giveaway's own name
+        package_id = parse_int(giveaway.get("packageId"), None) or parse_int(giveaway.get("steamStoreId"), None)
+        if not package_id:
+            continue
+        entry = apps.get(str(package_id)) or {}
+        if "name" not in entry:
+            try:
+                entry = {**entry, **fetch_store_media(package_id)}
+            except (HTTPError, URLError, TimeoutError, json.JSONDecodeError):
+                continue
+            apps[str(package_id)] = entry
+            cache_dirty = True
+        if entry.get("name") != title:
+            continue  # title did not come from the colliding app; leave it alone
+        games = package_game_apps(package_cache.get(str(package_id)))
+        replacement = ""
+        if len(games) == 1:
+            replacement = str(games[0].get("name") or "")
+        if not replacement:
+            replacement = words.title()
+        if replacement and replacement != title:
+            giveaway["title"] = replacement
             fixed += 1
     if cache_dirty:
         media_cache["updatedAt"] = utc_now()
@@ -2376,6 +2547,20 @@ def refresh_steam_progress(
         progress_cache[(steam_profile, int(app_id))] = item
 
     # Permanently lock the "threshold met" status for entries that have reached it.
+    # Drop rows no win backs any more. Resolving a /sub/ giveaway to its base
+    # game re-keys the win's appId, and the cache still holds the row filed under
+    # the old sub id — a duplicate carrying the numbers scraped when the sub id
+    # was being treated as an app. Built from every win, not just this run's
+    # targets, so a scoped refresh never prunes someone it did not look at.
+    win_backed_keys = set()
+    for win in sync_payload.get("wins", []):
+        win_profile = members.get(win.get("winnerUsername") or win.get("username"), {}).get("steamProfile", "")
+        win_app_id = parse_int(win.get("appId"), None)
+        if win_profile and win_app_id:
+            win_backed_keys.add((win_profile, win_app_id))
+    for orphan_key in [key for key in progress_cache if key not in win_backed_keys]:
+        del progress_cache[orphan_key]
+
     latch_pop_threshold(progress_cache.values(), hltb_items)
 
     payload = {
@@ -2602,6 +2787,9 @@ def main() -> None:
         fixed_titles = fix_truncated_titles(sync_payload, media_cache)
         if fixed_titles:
             print(f"Fixed {fixed_titles} truncated giveaway title(s) using the Steam store name.")
+        fixed_collisions = fix_package_collision_titles(sync_payload, media_cache)
+        if fixed_collisions:
+            print(f"Retitled {fixed_collisions} package giveaway(s) named after a colliding app id.")
         missing_before = count_missing_media_entries(sync_payload, media_cache, recent_days=args.recent_days)
         media_cache = hydrate_media_cache_for_sync(sync_payload, media_cache, recent_days=args.recent_days)
         missing_after = count_missing_media_entries(sync_payload, media_cache, recent_days=args.recent_days)
