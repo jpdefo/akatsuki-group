@@ -44,6 +44,17 @@ function extractOverrides(payload) {
   return payload && typeof payload === "object" ? payload : {};
 }
 
+function attachReleaseDates(giveaways, mediaCache) {
+  const apps = (mediaCache && typeof mediaCache.apps === "object" && mediaCache.apps) || {};
+  return giveaways.map((giveaway) => {
+    if (giveaway?.releaseDate) {
+      return giveaway;
+    }
+    const releaseDate = apps[String(giveaway?.appId || "")]?.releaseDate;
+    return releaseDate ? { ...giveaway, releaseDate } : giveaway;
+  });
+}
+
 function todayISO() {
   return new Date().toISOString().slice(0, 10);
 }
@@ -55,8 +66,16 @@ function main() {
   const sync = readJson(join(inputDir, "steamgifts-sync.json"), {});
   const overrides = extractOverrides(readJson(join(inputDir, "overrides.json"), {}));
   const progress = readJson(join(inputDir, "steam-progress.json"), {});
+  const mediaCache = readJson(join(inputDir, "steam-media-cache.json"), {});
 
-  const giveaways = Array.isArray(sync.giveaways) ? sync.giveaways : [];
+  // Store release dates live only in the media cache, but the PoP month is
+  // release-aware: a game won in March and released in May is played (and judged)
+  // under May, so its penalty deadline is four months from May. Without this the
+  // precompute dated every win from its giveaway, marking not-yet-due wins as
+  // overdue months early — while the live app, which merges the media cache into
+  // its games, disagreed. Seed the dates onto the giveaways so getWinReleaseDate
+  // finds them exactly as it does in the browser.
+  const giveaways = attachReleaseDates(Array.isArray(sync.giveaways) ? sync.giveaways : [], mediaCache);
   const syncMembers = (Array.isArray(sync.members) ? sync.members : []).filter(
     (member) => String(member?.username || "").trim(),
   );
@@ -81,7 +100,8 @@ function main() {
   // Penalty timing runs off the Steam refresh date (playtime/achievements), which
   // buildPenaltyAndMemberDerived reads from the progress payload itself.
   const penaltiesAndMembers = buildPenaltyAndMemberDerived({
-    sync,
+    // ...with the release-dated giveaways, not the raw sync ones.
+    sync: { ...sync, giveaways },
     progress,
     overrides: mergedOverrides,
     settings: { currentDate },
@@ -116,7 +136,7 @@ function main() {
   };
 
   const derived = {
-    schemaVersion: 1,
+    schemaVersion: 2,
     generatedAt: new Date(now).toISOString(),
     source: {
       syncedAt: sync.syncedAt || sync.savedAt || null,
