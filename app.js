@@ -3522,17 +3522,31 @@ function compareMonthlyWins(left, right, sortMode) {
     return completionCompare;
   }
 
-  if (sortMode === "effort-desc" || sortMode === "effort-asc") {
-    const leftRatio = getPopEffort(left).ratio;
-    const rightRatio = getPopEffort(right).ratio;
-    // "Just the minimum" means closest to 1.0x, not lowest: someone at 0.0x did
-    // not scrape by, they did nothing. Rank by distance from the requirement.
-    const passed = (win) => evaluateMonthlyProgress(win).badge !== "danger";
-    const leftKey =
-      sortMode === "effort-desc" ? -(leftRatio ?? -1) : passed(left) ? (leftRatio ?? 99) : Infinity;
-    const rightKey =
-      sortMode === "effort-desc" ? -(rightRatio ?? -1) : passed(right) ? (rightRatio ?? 99) : Infinity;
-    const effortCompare = leftKey - rightKey;
+  if (isEffortSort) {
+    const leftEffort = getPopEffort(left);
+    const rightEffort = getPopEffort(right);
+    // Band first, the average only as a tie-break inside it. Sorting on the raw
+    // average alone let a lower band outrank a higher one: DOOM (100%/37%,
+    // averaging 69%) sat above Persona 3 Reload (65%/64%, averaging 65%) even
+    // though the weaker-measure condition puts Persona in "Well above" and DOOM
+    // in "Above". The order has to agree with the judgement it is showing.
+    const bandRank = (effort) => POP_EFFORT_BANDS.findIndex((band) => band.key === effort.band);
+    // "Just the minimum" asks who scraped by, so failures belong at the end
+    // rather than the front.
+    const ascRank = (effort) => {
+      const rank = bandRank(effort);
+      return rank <= 0 ? POP_EFFORT_BANDS.length : rank;
+    };
+    const bandCompare =
+      sortMode === "effort-desc"
+        ? bandRank(rightEffort) - bandRank(leftEffort)
+        : ascRank(leftEffort) - ascRank(rightEffort);
+    if (bandCompare !== 0) {
+      return bandCompare;
+    }
+    const leftRatio = leftEffort.completion ?? -1;
+    const rightRatio = rightEffort.completion ?? -1;
+    const effortCompare = sortMode === "effort-desc" ? rightRatio - leftRatio : leftRatio - rightRatio;
     if (effortCompare !== 0) {
       return effortCompare;
     }
