@@ -59,36 +59,33 @@
         <section class="card">
           <div class="section-heading">
             <div>
-              <h2>Active users</h2>
+              <h2>Scoreboard</h2>
               <p class="section-copy">
-                Current Akatsuki members, with totals built from synced wins and Steam progress.
+                How much of each won game members actually played. <strong>Past min</strong> is the
+                share of judged wins that got beyond the bare minimum. Click a band below to rank
+                everyone by it. Grey is too recent to judge: shown, but never counted against anyone.
               </p>
             </div>
-            <label class="inline-filter">
-              Sort
-              <select id="active-users-sort">
-                <option value="wins">Total wins</option>
-                <option value="name">User</option>
-                <option value="playtime">Total playtime</option>
-                <option value="achievements">Avg achv %</option>
-                <option value="threshold">Threshold met</option>
-              </select>
-            </label>
+            <div class="section-filters">
+              <label class="inline-filter">
+                Year
+                <select id="active-users-year"></select>
+              </label>
+              <label class="inline-filter">
+                Sort
+                <select id="active-users-sort">
+                  <option value="effort">Effort rating</option>
+                  <option value="wins">Total wins</option>
+                  <option value="playtime">Total playtime</option>
+                  <option value="achievements">Avg achv %</option>
+                  <option value="threshold">Threshold met</option>
+                  <option value="name">User</option>
+                </select>
+              </label>
+            </div>
           </div>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>User</th>
-                  <th>Total wins</th>
-                  <th>Total playtime</th>
-                  <th>Avg achv %</th>
-                  <th>Threshold met</th>
-                </tr>
-              </thead>
-              <tbody id="active-users-table"></tbody>
-            </table>
-          </div>
+          <div id="active-users-group" class="score-group"></div>
+          <div id="active-users-board" class="score-board"></div>
         </section>
       </main>
     </div>

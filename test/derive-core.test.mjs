@@ -17,6 +17,7 @@ import {
   getEffectiveMemberActive,
   getStableMemberKey,
   computeMinimumEntriesRequired,
+  effortScore,
 } from "../client/derive-core.js";
 
 // --- helpers to build synthetic sync records -----------------------------
@@ -426,4 +427,79 @@ test("threshold met is permanent: a latched win stays met even when now below re
     settings: { currentDate },
   });
   assert.equal(control.members.active.find((m) => m.name === "dave").thresholdMet, 0, "without the latch, 5h < 25h is below threshold");
+});
+
+// =========================================================================
+// Scoreboard effort bands
+// =========================================================================
+
+test("scoreboard: effort bands, the fresh grace bucket, and per-year buckets", () => {
+  // Ref date sits inside the 4-month penalty grace for the Jun 2026 wins but
+  // past it for the Jan 2026 one, which is what separates "below" from "fresh".
+  const currentDate = "2026-07-15";
+  const hundredHourGame = (appId) => ({ appId, hltbHours: 100 });
+  const sync = {
+    members: [member("dave", true, "p-dave")],
+    giveaways: [
+      // 2024, 5h of 100h, no achievements -> BELOW (deadline long past)
+      giveaway({ code: "OLD", appId: 100, winners: [{ username: "dave" }], startDate: "2024-03-01T00:00:00.000Z", endDate: "2024-03-05T00:00:00.000Z" }),
+      // 2025, 30h -> passes the 25% threshold, completion 0.30 -> AT MINIMUM
+      giveaway({ code: "MIN", appId: 200, winners: [{ username: "dave" }], startDate: "2025-03-01T00:00:00.000Z", endDate: "2025-03-05T00:00:00.000Z" }),
+      // 2025, 50h -> completion 0.50 -> ABOVE
+      giveaway({ code: "ABV", appId: 300, winners: [{ username: "dave" }], startDate: "2025-04-01T00:00:00.000Z", endDate: "2025-04-05T00:00:00.000Z" }),
+      // 2025, 80h + 8/10 achievements -> both measures deep -> WELL ABOVE
+      giveaway({ code: "WEL", appId: 400, winners: [{ username: "dave" }], startDate: "2025-05-01T00:00:00.000Z", endDate: "2025-05-05T00:00:00.000Z" }),
+      // 2025, every achievement earned -> COMPLETE
+      giveaway({ code: "CMP", appId: 500, winners: [{ username: "dave" }], startDate: "2025-06-01T00:00:00.000Z", endDate: "2025-06-05T00:00:00.000Z" }),
+      // Jun 2026, unplayed, still inside the 4-month grace -> FRESH, not below
+      giveaway({ code: "NEW", appId: 600, winners: [{ username: "dave" }], startDate: "2026-06-01T00:00:00.000Z", endDate: "2026-06-05T00:00:00.000Z" }),
+      // Jun 2026 but already played through -> grace must NOT steal a real band
+      giveaway({ code: "NWP", appId: 700, winners: [{ username: "dave" }], startDate: "2026-06-01T00:00:00.000Z", endDate: "2026-06-05T00:00:00.000Z" }),
+    ],
+  };
+  const progress = {
+    progress: [
+      progressEntry("p-dave", 100, 5),
+      progressEntry("p-dave", 200, 30),
+      progressEntry("p-dave", 300, 50),
+      progressEntry("p-dave", 400, 80, { earnedAchievements: 8, totalAchievements: 10 }),
+      progressEntry("p-dave", 500, 10, { earnedAchievements: 10, totalAchievements: 10 }),
+      progressEntry("p-dave", 600, 0),
+      progressEntry("p-dave", 700, 90, { earnedAchievements: 9, totalAchievements: 10 }),
+    ],
+    hltb: [100, 200, 300, 400, 500, 600, 700].map(hundredHourGame),
+  };
+
+  const { members } = buildPenaltyAndMemberDerived({ sync, progress, overrides: {}, settings: { currentDate } });
+  const dave = members.active.find((row) => row.name === "dave");
+
+  assert.deepEqual(
+    dave.bands,
+    { below: 1, minimum: 1, above: 1, "well-above": 2, complete: 1, fresh: 1 },
+    "one win in each band, the unplayed 2026 win held in fresh",
+  );
+  assert.equal(dave.totalWins, 7);
+
+  // Fresh only ever drains "below": a recent win that was actually played keeps
+  // the band it earned.
+  assert.equal(dave.years["2026"].bands.fresh, 1);
+  assert.equal(dave.years["2026"].bands["well-above"], 1);
+  assert.equal(dave.years["2026"].bands.below, undefined, "a played 2026 win is not fresh");
+
+  // Year buckets mirror the top-level stat fields and partition the wins.
+  assert.deepEqual(Object.keys(dave.years).sort(), ["2024", "2025", "2026"]);
+  assert.equal(dave.years["2024"].totalWins, 1);
+  assert.equal(dave.years["2025"].totalWins, 4);
+  assert.equal(dave.years["2026"].totalWins, 2);
+  assert.equal(
+    Object.values(dave.years).reduce((sum, year) => sum + year.totalWins, 0),
+    dave.totalWins,
+    "years partition the member's wins",
+  );
+
+  // effortScore: 4 of 6 judged wins (above, well-above x2, complete) reached at
+  // least "above"; the fresh win is excluded from the denominator entirely.
+  assert.equal(Math.round(effortScore(dave.bands) * 100), 67);
+  assert.equal(effortScore({ fresh: 3 }), null, "nothing judged yet has no score");
+  assert.equal(effortScore(undefined), null);
 });

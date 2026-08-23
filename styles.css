@@ -11,6 +11,15 @@
   --warning: #f59e0b;
   --danger: #ef4444;
   --shadow: 0 18px 45px rgba(0, 0, 0, 0.32);
+  /* Saturated band fills for the scoreboard bar. The .pop-effort-band rules are
+     light TEXT tints for the same bands and are deliberately separate values. */
+  --band-below: #e5484d;
+  --band-minimum: #f0883e;
+  --band-above: #d9c34a;
+  --band-well-above: #6ee7a0;
+  --band-complete: #16a34a;
+  /* Grey on purpose: "not due yet" is the absence of a grade, not a bad one. */
+  --band-fresh: rgba(148, 163, 184, 0.34);
   font-family: Inter, "Segoe UI", Roboto, sans-serif;
 }
 
@@ -2184,5 +2193,211 @@ td small,
 
   .giveaway-grid {
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+}
+
+/* --- Active users scoreboard ------------------------------------------------
+   One row per member; the bar is their mix of effort bands normalized to 100%,
+   so the page compares how people play rather than how much they have won. */
+.score-group {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.score-board {
+  display: grid;
+  gap: 4px;
+}
+
+.score-row {
+  display: grid;
+  grid-template-columns: 26px minmax(110px, 1fr) 74px minmax(160px, 2.6fr) 44px 62px 46px;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel-strong);
+  font-size: 0.85rem;
+}
+
+.score-row.podium {
+  border-color: rgba(245, 158, 11, 0.45);
+}
+
+.score-rank {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.score-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* The rating is the one number to read; everything else supports it. */
+.score-rating {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: right;
+}
+
+.score-rating.is-unranked {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* Right-aligned tabular figures so the numbers form readable columns down the
+   page instead of drifting with each name length. */
+.score-num {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.78rem;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.score-head {
+  background: none;
+  border-color: transparent;
+  padding-bottom: 0;
+  color: var(--muted);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.score-head .score-rating {
+  font-size: 0.66rem;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+}
+
+.score-bar-head {
+  font-size: 0.72rem;
+}
+
+.score-rating em,
+.score-total em {
+  margin-left: 3px;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.score-bar {
+  display: flex;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.16);
+  overflow: hidden;
+}
+
+.score-group .score-bar {
+  height: 12px;
+}
+
+.score-bar.is-empty {
+  opacity: 0.4;
+}
+
+.score-seg {
+  height: 100%;
+  transition: opacity 0.12s ease;
+}
+
+/* Picking a band drops the rest back so the chosen one is comparable across
+   rows, which a stacked bar otherwise makes impossible. */
+.score-seg.is-dimmed {
+  opacity: 0.16;
+}
+
+.score-seg.below { background: var(--band-below); }
+.score-seg.minimum { background: var(--band-minimum); }
+.score-seg.above { background: var(--band-above); }
+.score-seg.well-above { background: var(--band-well-above); }
+.score-seg.complete { background: var(--band-complete); }
+.score-seg.fresh { background: var(--band-fresh); }
+
+.score-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.score-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.score-legend-item:hover {
+  border-color: var(--line);
+}
+
+.score-legend-item.is-active {
+  border-color: var(--accent);
+  background: rgba(110, 168, 254, 0.12);
+  color: var(--text);
+}
+
+.score-legend-item b {
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.score-swatch {
+  width: 9px;
+  height: 9px;
+  border-radius: 3px;
+}
+
+.score-swatch.below { background: var(--band-below); }
+.score-swatch.minimum { background: var(--band-minimum); }
+.score-swatch.above { background: var(--band-above); }
+.score-swatch.well-above { background: var(--band-well-above); }
+.score-swatch.complete { background: var(--band-complete); }
+.score-swatch.fresh { background: var(--band-fresh); }
+
+.score-scope {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.score-scope strong {
+  color: var(--text);
+}
+
+@media (max-width: 720px) {
+  /* Two lines: identity and rating first, then the bar and its counts. */
+  .score-row {
+    grid-template-columns: 26px 1fr 74px 62px;
+    row-gap: 6px;
+  }
+
+  .score-bar {
+    grid-column: 1 / -1;
+  }
+
+  /* Playtime drops out first; wins and achv carry the row. */
+  .score-head,
+  .score-row .score-num:nth-of-type(2) {
+    display: none;
   }
 }

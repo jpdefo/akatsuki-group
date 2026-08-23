@@ -794,6 +794,178 @@ export function evaluateMonthlyProgress(win, ctx) {
   return base;
 }
 
+// Effort bands grade how much of the GAME was done, as opposed to
+// evaluateMonthlyProgress which is the pass/fail on the group's minimum. Array
+// order is load-bearing: it is the rank used for sorting and for the stacked
+// bar on the scoreboard. "fresh" is not a band - it is the scoreboard's holding
+// pen for failing wins still inside their penalty grace (see countMemberEffort).
+export const POP_EFFORT_BANDS = [
+  { key: "below", label: "Below", tone: "danger" },
+  { key: "minimum", label: "At minimum", tone: "warning" },
+  { key: "above", label: "Above", tone: "info" },
+  { key: "well-above", label: "Well above", tone: "success" },
+  // Every achievement earned. Amber rather than green so it reads as its own
+  // thing next to "well above" instead of just more of the same.
+  { key: "complete", label: "Complete", tone: "warning" },
+];
+
+// `progress` is injectable because app.js memoizes evaluateMonthlyProgress and
+// the PoP page grades a couple of thousand wins per render; recomputing it here
+// would undo that.
+export function getPopEffort(win, ctx, progress = evaluateMonthlyProgress(win, ctx)) {
+  const game = ctx?.gamesById?.get(win.gameId) || null;
+  const requiredHours = Number(progress.requiredHours || 0);
+  const requiredAchievements = Number(progress.requiredAchievements || 0);
+  const currentHours = Number(win.currentHours || 0);
+  const earnedAchievements = Number(win.earnedAchievements || 0);
+  const totalAchievements = getGameAchievementsTotal(game);
+  const fullyCompleted = totalAchievements > 0 && earnedAchievements >= totalAchievements;
+
+  const hltbHours = getGameHltbHours(game);
+  const hoursRatio = requiredHours > 0 ? currentHours / requiredHours : null;
+  const achievementRatio = requiredAchievements > 0 ? earnedAchievements / requiredAchievements : null;
+
+  // Grade on how much of the GAME was done, not on multiples of the requirement.
+  // The two requirements are different sizes (25% of playtime vs 10% of
+  // achievements), so "3x the minimum" means 75% of a game on one axis and 30% on
+  // the other. Completion percentages are the same unit on both sides, so they
+  // can be averaged; that also means heavy playtime with almost no achievements
+  // cannot reach the top on its own, without needing a special case for it.
+  const hoursCompletion = hltbHours > 0 ? Math.min(1, currentHours / hltbHours) : null;
+  const achievementCompletion = totalAchievements > 0 ? Math.min(1, earnedAchievements / totalAchievements) : null;
+  const measured = [hoursCompletion, achievementCompletion].filter((value) => value !== null);
+  const completion = measured.length ? measured.reduce((sum, value) => sum + value, 0) / measured.length : null;
+  const ratio = completion;
+
+  // Purely informational: the game is essentially played through but the
+  // achievements barely moved, which can mean it was left running.
+  const hoursOnlyOutlier =
+    !fullyCompleted &&
+    achievementCompletion !== null &&
+    achievementCompletion < 0.15 &&
+    (hoursCompletion ?? 0) >= 0.9;
+
+  // Pass/fail stays with evaluateMonthlyProgress, which carries the special cases
+  // (locked-in thresholds, all-achievements wins). The ratio only grades degree.
+  let band = "below";
+  if (fullyCompleted) {
+    band = "complete";
+  } else if (progress.badge !== "danger") {
+    // The top band needs depth on BOTH measures, not just a high average. Pure
+    // averaging cannot separate 65%/64% (deep and balanced) from 100%/29% (ran
+    // the clock out with a quarter of the achievements) - they score the same.
+    // So "well above" also requires the weaker of the two to be substantial.
+    const weakest = measured.length > 1 ? Math.min(...measured) : (completion ?? 0);
+    if (completion === null || completion < 0.35) {
+      band = "minimum";
+    } else if (completion < 0.6 || weakest < 0.45) {
+      band = "above";
+    } else {
+      band = "well-above";
+    }
+  }
+
+  return {
+    progress,
+    ratio,
+    band,
+    totalAchievements,
+    fullyCompleted,
+    hoursOnlyOutlier,
+    hoursCompletion,
+    achievementCompletion,
+    completion,
+    requiredHours,
+    requiredAchievements,
+    currentHours,
+    earnedAchievements,
+    hoursRatio,
+    achievementRatio,
+  };
+}
+
+// Not a band - the scoreboard's holding pen for failing wins still inside their
+// 4-month penalty grace (PENALTY_GRACE_MONTHS). Such a win has not actually
+// missed anything yet: games won weeks ago are unplayed far more often than not
+// (74% of wins aged 1-2 months sit below the threshold, against 5-11% once they
+// are over a year old), so counting them as failures would rank members by who
+// won most recently. It stays visible on the bar - only the verdict is withheld.
+export const EFFORT_FRESH_KEY = "fresh";
+
+// Named keys rather than a positional tuple: POP_EFFORT_BANDS order is
+// load-bearing for sorting and has been reordered before, and a reorder must not
+// silently reassign every count already published in derived.json.
+export function summarizeMemberWins(memberWins, ctx, options = {}) {
+  const bandFor = options.bandFor || ((win) => getPopEffort(win, ctx).band);
+  const penaltyStatusFor = options.penaltyStatusFor || ((win) => getWinPenaltyInfo(win, ctx)?.status || "");
+  const progressFor = options.progressFor || ((win) => evaluateMonthlyProgress(win, ctx));
+  const achievementPercentFor =
+    options.achievementPercentFor || ((win) => getAchievementPercent(win, ctx?.gamesById?.get(win.gameId)));
+
+  const bands = {};
+  let totalPlaytime = 0;
+  let thresholdMet = 0;
+  let achievementSum = 0;
+  let achievementCount = 0;
+  for (const win of memberWins) {
+    const band = bandFor(win);
+    const key = band === "below" && penaltyStatusFor(win) === "coming-due" ? EFFORT_FRESH_KEY : band;
+    bands[key] = (bands[key] || 0) + 1;
+    totalPlaytime += Number(win.currentHours || 0);
+    if (progressFor(win).badge !== "danger") {
+      thresholdMet += 1;
+    }
+    const percent = achievementPercentFor(win);
+    if (percent !== null) {
+      achievementSum += percent;
+      achievementCount += 1;
+    }
+  }
+  return {
+    totalWins: memberWins.length,
+    totalPlaytime: Math.round(totalPlaytime * 100) / 100,
+    averageAchievements: achievementCount ? Math.round(achievementSum / achievementCount) : null,
+    thresholdMet,
+    bands,
+  };
+}
+
+// Same stat bundle as the all-time one, keyed by the year of the win, so the
+// scoreboard's year filter is a lookup rather than a second code path.
+export function summarizeMemberWinsByYear(memberWins, ctx, options = {}) {
+  const byYear = new Map();
+  for (const win of memberWins) {
+    const year = String(win.winDate || "").slice(0, 4);
+    if (!/^\d{4}$/.test(year)) {
+      continue;
+    }
+    if (!byYear.has(year)) {
+      byYear.set(year, []);
+    }
+    byYear.get(year).push(win);
+  }
+  const years = {};
+  for (const year of [...byYear.keys()].sort()) {
+    years[year] = summarizeMemberWins(byYear.get(year), ctx, options);
+  }
+  return years;
+}
+
+// Share of JUDGED wins (grace excluded from the denominator) that reached at
+// least "above". Null when nothing is judged yet, so callers can say "no data"
+// rather than print a misleading 0%.
+export function effortScore(bands) {
+  if (!bands) {
+    return null;
+  }
+  const judged = POP_EFFORT_BANDS.reduce((sum, band) => sum + (bands[band.key] || 0), 0);
+  if (!judged) {
+    return null;
+  }
+  const reached = (bands.above || 0) + (bands["well-above"] || 0) + (bands.complete || 0);
+  return reached / judged;
+}
+
 export function getPenaltyForCodeKey(giveaway) {
   const raw = String(giveaway?.penaltyForCode || "").trim();
   if (!raw) {
@@ -911,31 +1083,38 @@ export function compareMemberBucketRows(left, right, sortMode) {
       );
     case "threshold":
       return right.thresholdMet - left.thresholdMet || right.totalWins - left.totalWins || compareMemberBucketRows(left, right, "name");
+    case "effort": {
+      // Members with nothing judged yet sink rather than tie at the top.
+      const leftScore = effortScore(left.bands) ?? -1;
+      const rightScore = effortScore(right.bands) ?? -1;
+      const finished = (row) => (row.bands?.["well-above"] || 0) + (row.bands?.complete || 0);
+      return (
+        rightScore - leftScore ||
+        finished(right) - finished(left) ||
+        right.totalWins - left.totalWins ||
+        compareMemberBucketRows(left, right, "name")
+      );
+    }
     case "wins":
     default:
       return right.totalWins - left.totalWins || right.totalPlaytime - left.totalPlaytime || compareMemberBucketRows(left, right, "name");
   }
 }
 
-export function computeMemberBucketRows(members, wins, ctx, isActiveMember, sortMode = "wins") {
+export function computeMemberBucketRows(members, wins, ctx, isActiveMember, sortMode = "wins", options = {}) {
   return members
     .filter((member) => Boolean(member.isActiveMember) === isActiveMember)
     .map((member) => {
       const memberWins = wins.filter((win) => win.memberId === member.id);
-      const achievementPercents = memberWins
-        .map((win) => getAchievementPercent(win, ctx?.gamesById?.get(win.gameId)))
-        .filter((value) => value !== null);
       const sgUsername = String(member.steamgiftsUsername || member.name || "").trim();
+      // The row IS the all-time bucket, and each year mirrors the same field
+      // names, so the scoreboard's year filter is `year === "all" ? row : row.years[year]`.
       return {
         name: member.name,
         overrideKey: getStableMemberKey(member),
         steamgiftsUrl: member.profileUrl || (sgUsername ? `https://www.steamgifts.com/user/${encodeURIComponent(sgUsername)}` : ""),
-        totalWins: memberWins.length,
-        totalPlaytime: memberWins.reduce((sum, win) => sum + Number(win.currentHours || 0), 0),
-        averageAchievements: achievementPercents.length
-          ? Math.round(achievementPercents.reduce((sum, value) => sum + value, 0) / achievementPercents.length)
-          : null,
-        thresholdMet: memberWins.filter((win) => evaluateMonthlyProgress(win, ctx).badge !== "danger").length,
+        ...summarizeMemberWins(memberWins, ctx, options),
+        years: summarizeMemberWinsByYear(memberWins, ctx, options),
       };
     })
     .filter((row) => row.totalWins > 0 || isActiveMember)

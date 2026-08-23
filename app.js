@@ -121,6 +121,8 @@ const runtime = {
   summerEditMode: false,
   summerSearch: "",
   popEffortFilter: "all",
+  // Which effort band the scoreboard is ranked by; "" means the overall rating.
+  scoreboardBand: "",
   cycleMemberSearch: "",
   cycleGiveawaySearch: "",
 };
@@ -203,7 +205,9 @@ const elements = {
   summerEntryDescription: document.querySelector("#summer-entry-description"),
   summerEntrySummaryCards: document.querySelector("#summer-entry-summary-cards"),
   summerEntryTable: document.querySelector("#summer-entry-table"),
-  activeUsersTable: document.querySelector("#active-users-table"),
+  activeUsersBoard: document.querySelector("#active-users-board"),
+  activeUsersGroup: document.querySelector("#active-users-group"),
+  activeUsersYear: document.querySelector("#active-users-year"),
   activeUsersSort: document.querySelector("#active-users-sort"),
   inactiveUsersTable: document.querySelector("#inactive-users-table"),
   totalProgressTable: document.querySelector("#total-progress-table"),
@@ -274,10 +278,14 @@ async function loadFullData() {
   void loadVisibleGameMedia({ silent: true });
 }
 
+// Bump in lockstep with tools/build-derived.mjs whenever the precomputed row
+// shape changes, so an older payload is rejected instead of rendered half-empty.
+const DERIVED_MIN_SCHEMA_VERSION = 2;
+
 // Pages fully served by derived.json: penalties + active/inactive member lists.
 // Their table ids appear only on those pages, so presence is a reliable signal.
 function detectDerivedFastPage() {
-  return Boolean(elements.penaltiesGroups || elements.activeUsersTable || elements.inactiveUsersTable);
+  return Boolean(elements.penaltiesGroups || elements.activeUsersBoard || elements.inactiveUsersTable);
 }
 
 function hasLocalOverrides() {
@@ -297,7 +305,10 @@ async function tryDerivedFastPath() {
       fetchApiJson("./api/dashboard"),
     ]);
     const payload = settledValue(derivedResult)?.payload;
-    if (!payload || !payload.schemaVersion) {
+    // A CDN still serving the previous schema would otherwise be accepted and
+    // render rows missing whatever the new schema added. Falling back to the
+    // live path is slower but correct, and self-heals when the cache expires.
+    if (!payload || Number(payload.schemaVersion) < DERIVED_MIN_SCHEMA_VERSION) {
       return false;
     }
     runtime.derived = payload;
@@ -401,6 +412,7 @@ function bindEvents() {
   elements.summerEntryCreatorFilter?.addEventListener("change", () => renderSummerEventEntriesPage());
   elements.summerEntrySort?.addEventListener("change", () => renderSummerEventEntriesPage());
   elements.activeUsersSort?.addEventListener("change", () => renderMemberBuckets());
+  elements.activeUsersYear?.addEventListener("change", () => renderMemberBuckets());
   elements.monthlyMemberFilter?.addEventListener("change", () => {
     // Looking at a single member's wins reads best newest-first; the all-members
     // view defaults back to winner order. The user can pick any sort afterwards
@@ -442,6 +454,15 @@ function bindEvents() {
     const copyPenaltyButton = event.target.closest("[data-copy-penalty]");
     if (copyPenaltyButton) {
       handleCopyPenaltyDescription(copyPenaltyButton);
+      return;
+    }
+
+    const scoreboardBandButton = event.target.closest("[data-scoreboard-band]");
+    if (scoreboardBandButton) {
+      const band = scoreboardBandButton.dataset.scoreboardBand || "";
+      // Clicking the focused band again clears it, so the legend is a toggle.
+      runtime.scoreboardBand = runtime.scoreboardBand === band ? "" : band;
+      renderMemberBuckets();
       return;
     }
 
@@ -2961,12 +2982,228 @@ function buildSummerEventRatioMarkup(numerator, denominator) {
 }
 
 function renderMemberBuckets() {
-  renderMemberBucketTable(elements.activeUsersTable, true);
+  renderActiveScoreboard();
   renderMemberBucketTable(elements.inactiveUsersTable, false);
 }
 
+// Every band the bar can draw, in draw order: the five effort grades plus the
+// grace bucket, which trails them because it is the absence of a grade.
+const SCORE_SEGMENTS = [
+  ...derive.POP_EFFORT_BANDS,
+  { key: derive.EFFORT_FRESH_KEY, label: "Not due yet", tone: "muted" },
+];
+
+// The row carries the all-time numbers and mirrors them per year, so picking a
+// year is a lookup rather than a second render path.
+const EMPTY_SCORE_STATS = { totalWins: 0, totalPlaytime: 0, averageAchievements: null, thresholdMet: 0, bands: {} };
+
+// Judged wins needed before a percentage is a fair comparison rather than noise.
+const SCORE_RANK_MINIMUM = 10;
+
+function countJudgedWins(bands) {
+  return derive.POP_EFFORT_BANDS.reduce((sum, band) => sum + (bands?.[band.key] || 0), 0);
+}
+
+function isRankable(row) {
+  return countJudgedWins(row.bands) >= SCORE_RANK_MINIMUM;
+}
+
+function getScoreboardYear() {
+  return elements.activeUsersYear?.value || "all";
+}
+
+function projectScoreboardRow(row, year) {
+  const stats = year === "all" ? row : row.years?.[year] || EMPTY_SCORE_STATS;
+  return { name: row.name, overrideKey: row.overrideKey, steamgiftsUrl: row.steamgiftsUrl, ...stats };
+}
+
+// Union of every year any member has a win in, newest first.
+function getScoreboardYears(rows) {
+  const years = new Set();
+  for (const row of rows) {
+    for (const year of Object.keys(row.years || {})) {
+      years.add(year);
+    }
+  }
+  return [...years].sort().reverse();
+}
+
+function renderScoreboardYearOptions(rows) {
+  const select = elements.activeUsersYear;
+  if (!select) {
+    return;
+  }
+  // Rewriting the options drops the selection, and render() runs on every load.
+  const previous = select.value;
+  const years = getScoreboardYears(rows);
+  select.innerHTML = [
+    '<option value="all">All years</option>',
+    ...years.map((year) => `<option value="${escapeHtml(year)}">${escapeHtml(year)}</option>`),
+  ].join("");
+  select.value = previous && (previous === "all" || years.includes(previous)) ? previous : "all";
+}
+
+function buildScoreBar(bands, totalWins, focusBand = "") {
+  if (!totalWins) {
+    return '<div class="score-bar is-empty"></div>';
+  }
+  // Normalized to 100% per member: the bar compares mixes, and scaling it by win
+  // count would shrink a nine-win member's bar to an unreadable sliver. Volume is
+  // carried by the trailing win count instead.
+  const segments = SCORE_SEGMENTS.filter((segment) => (bands?.[segment.key] || 0) > 0)
+    .map((segment) => {
+      const count = bands[segment.key];
+      const share = (count / totalWins) * 100;
+      const title = `${segment.label} — ${count} win${count === 1 ? "" : "s"} (${Math.round(share)}%)`;
+      const dimmed = focusBand && focusBand !== segment.key ? " is-dimmed" : "";
+      return `<span class="score-seg ${escapeHtml(segment.key)}${dimmed}" style="width:${share.toFixed(2)}%" title="${escapeHtml(title)}"></span>`;
+    })
+    .join("");
+  const label = SCORE_SEGMENTS.filter((segment) => (bands?.[segment.key] || 0) > 0)
+    .map((segment) => `${bands[segment.key]} ${segment.label.toLowerCase()}`)
+    .join(", ");
+  return `<div class="score-bar" role="img" aria-label="${escapeHtml(`${totalWins} wins: ${label}`)}">${segments}</div>`;
+}
+
+function renderActiveScoreboard() {
+  const board = elements.activeUsersBoard;
+  if (!board) {
+    return;
+  }
+  const source = getMemberBucketRows(true);
+  renderScoreboardYearOptions(source);
+  const year = getScoreboardYear();
+  const sortMode = elements.activeUsersSort?.value || "effort";
+  const band = runtime.scoreboardBand;
+  const bandLabel = SCORE_SEGMENTS.find((segment) => segment.key === band)?.label || "";
+  const rows = source
+    .map((row) => projectScoreboardRow(row, year))
+    .sort((left, right) => {
+      // A picked band is a raw count, so it ranks on its own and needs no
+      // minimum-sample guard.
+      if (band) {
+        return (
+          (right.bands?.[band] || 0) - (left.bands?.[band] || 0) ||
+          right.totalWins - left.totalWins ||
+          derive.compareMemberBucketRows(left, right, "name")
+        );
+      }
+      // A rate ranking rewards tiny samples: 3 wins all played beats 189 wins at
+      // 80%. Members under the bar still appear, with their real percentage, but
+      // below everyone who has enough judged wins to compare fairly.
+      if (sortMode === "effort" && isRankable(left) !== isRankable(right)) {
+        return isRankable(left) ? -1 : 1;
+      }
+      return derive.compareMemberBucketRows(left, right, sortMode);
+    });
+
+  renderScoreboardGroup(rows, year);
+
+  const ranked = rows.filter((row) => row.totalWins > 0);
+  if (!ranked.length) {
+    board.innerHTML = `<p class="empty-state">No wins recorded for ${escapeHtml(year === "all" ? "any year" : year)}.</p>`;
+    return;
+  }
+
+  // Column labels once at the top rather than a unit on every number: repeating
+  // them per row is what made the first cut unreadable.
+  const header = `
+    <div class="score-row score-head">
+      <span class="score-rank">#</span>
+      <span class="score-name">Member</span>
+      <span class="score-rating" title="${escapeHtml(
+        band
+          ? `Number of wins in the "${bandLabel}" band`
+          : 'Share of judged wins that got past the bare minimum (above, well above or complete)',
+      )}">${band ? escapeHtml(bandLabel) : "Past min"}</span>
+      <span class="score-bar-head">Effort mix${band ? ` &mdash; ${escapeHtml(bandLabel)} highlighted` : ""}</span>
+      <span class="score-num">Wins</span>
+      <span class="score-num">Playtime</span>
+      <span class="score-num">Achv</span>
+    </div>
+  `;
+
+  board.innerHTML = header + ranked
+    .map((row, index) => {
+      const score = derive.effortScore(row.bands);
+      const ranked = isRankable(row);
+      const rank = index + 1;
+      const playtimeNote = year === "all" ? "" : ` on games won in ${year}`;
+      const ratingTitle =
+        score === null
+          ? "Nothing judged yet — every win is still inside its penalty grace."
+          : ranked
+            ? `${Math.round(score * 100)}% of judged wins reached at least "above".`
+            : `Too few judged wins to rank (needs ${SCORE_RANK_MINIMUM}).`;
+      return `
+        <article class="score-row${rank <= 3 && (band || (ranked && sortMode === "effort")) ? " podium" : ""}">
+          <span class="score-rank">${band || ranked ? rank : "&middot;"}</span>
+          <span class="score-name">${
+            row.steamgiftsUrl
+              ? `<a class="linked-title" href="${escapeHtml(row.steamgiftsUrl)}" target="_blank" rel="noreferrer">${escapeHtml(row.name)}</a>`
+              : escapeHtml(row.name)
+          }</span>
+          <span class="score-rating${band ? "" : ranked ? "" : " is-unranked"}" title="${escapeHtml(
+            band ? `${row.bands?.[band] || 0} win(s) in "${bandLabel}"` : ratingTitle,
+          )}">${
+            band
+              ? `${row.bands?.[band] || 0}`
+              : score === null
+                ? "&mdash;"
+                : `${Math.round(score * 100)}<em>%</em>`
+          }</span>
+          ${buildScoreBar(row.bands, row.totalWins, band)}
+          <span class="score-num">${row.totalWins}</span>
+          <span class="score-num" title="${escapeHtml(`Total playtime${playtimeNote}`)}">${escapeHtml(formatHours(row.totalPlaytime))}</span>
+          <span class="score-num">${row.averageAchievements === null ? "&mdash;" : `${row.averageAchievements}%`}</span>
+        </article>
+      `;
+    })
+    .join("");
+}
+
+// Group mix for the selected year. Doubles as the bar's legend, which is why
+// every band is listed here even at zero.
+function renderScoreboardGroup(rows, year) {
+  const target = elements.activeUsersGroup;
+  if (!target) {
+    return;
+  }
+  const bands = {};
+  let totalWins = 0;
+  for (const row of rows) {
+    totalWins += row.totalWins;
+    for (const segment of SCORE_SEGMENTS) {
+      const count = row.bands?.[segment.key] || 0;
+      if (count) {
+        bands[segment.key] = (bands[segment.key] || 0) + count;
+      }
+    }
+  }
+  const fresh = bands[derive.EFFORT_FRESH_KEY] || 0;
+  const scope = year === "all" ? "all years" : year;
+  // Says plainly why a recent year looks unfinished, so nobody reads a young
+  // cohort as a verdict.
+  const note = fresh
+    ? `${scope} · ${totalWins} wins · <strong>${fresh}</strong> not due yet`
+    : `${scope} · ${totalWins} wins`;
+  // Clickable: a stacked bar cannot answer "who has the most at minimum?",
+  // because middle segments start at a different x on every row. Picking a band
+  // ranks by it and dims the rest, which can.
+  const focused = runtime.scoreboardBand;
+  const legend = SCORE_SEGMENTS.map(
+    (segment) =>
+      `<button type="button" class="score-legend-item${focused === segment.key ? " is-active" : ""}" data-scoreboard-band="${escapeHtml(segment.key)}" aria-pressed="${focused === segment.key}" title="${escapeHtml(`Rank members by "${segment.label}"`)}"><i class="score-swatch ${escapeHtml(segment.key)}"></i>${escapeHtml(segment.label)} <b>${bands[segment.key] || 0}</b></button>`,
+  ).join("");
+  target.innerHTML = `
+    ${buildScoreBar(bands, totalWins)}
+    <div class="score-legend">${legend}</div>
+    <p class="score-scope">${note}</p>
+  `;
+}
+
 function getMemberBucketRows(isActiveMember) {
-  const sortMode = isActiveMember ? elements.activeUsersSort?.value || "wins" : "wins";
+  const sortMode = isActiveMember ? elements.activeUsersSort?.value || "effort" : "wins";
   // Fast path: render the precomputed bucket rows from derived.json (same shape
   // as computeMemberBucketRows), re-sorted for the active page's sort control.
   if (runtime.derivedFastPath && runtime.derived?.members) {
@@ -2982,7 +3219,7 @@ function renderMemberBucketTable(target, isActiveMember) {
   }
   const rows = getMemberBucketRows(isActiveMember);
   if (!rows.length) {
-    target.innerHTML = buildEmptyRow(isActiveMember ? 5 : 6);
+    target.innerHTML = buildEmptyRow(6);
     return;
   }
 
@@ -3273,30 +3510,31 @@ async function handleImageFallback(event) {
 window.handleImageFallback = handleImageFallback;
 
 function computeMemberBucketRows(isActiveMember) {
-  const sortMode = isActiveMember ? elements.activeUsersSort?.value || "wins" : "wins";
+  const sortMode = isActiveMember ? elements.activeUsersSort?.value || "effort" : "wins";
+  // Fed this page's own state-based banding/progress so the live path and the
+  // precompute cannot disagree on what they are counting, only on the inputs.
+  const summaryOptions = {
+    bandFor: (win) => getPopEffort(win).band,
+    penaltyStatusFor: (win) => getWinPenaltyInfo(win)?.status || "",
+    progressFor: (win) => evaluateMonthlyProgress(win),
+    achievementPercentFor: (win) => getAchievementPercent(win, findById("games", win.gameId)),
+  };
   return state.members
     .filter((member) => Boolean(member.isActiveMember) === isActiveMember)
     .map((member) => {
       const memberWins = state.wins.filter((win) => win.memberId === member.id);
-      const achievementPercents = memberWins
-        .map((win) => getAchievementPercent(win, findById("games", win.gameId)))
-        .filter((value) => value !== null);
       const sgUsername = String(member.steamgiftsUsername || member.name || "").trim();
       return {
         name: member.name,
         overrideKey: getMemberOverrideKey(member),
         steamgiftsUrl:
           member.profileUrl || (sgUsername ? `https://www.steamgifts.com/user/${encodeURIComponent(sgUsername)}` : ""),
-        totalWins: memberWins.length,
-        totalPlaytime: memberWins.reduce((sum, win) => sum + Number(win.currentHours || 0), 0),
-        averageAchievements: achievementPercents.length
-          ? Math.round(achievementPercents.reduce((sum, value) => sum + value, 0) / achievementPercents.length)
-          : null,
-        thresholdMet: memberWins.filter((win) => evaluateMonthlyProgress(win).badge !== "danger").length,
+        ...derive.summarizeMemberWins(memberWins, null, summaryOptions),
+        years: derive.summarizeMemberWinsByYear(memberWins, null, summaryOptions),
       };
     })
     .filter((row) => row.totalWins > 0 || isActiveMember)
-    .sort((left, right) => compareMemberBucketRows(left, right, sortMode));
+    .sort((left, right) => derive.compareMemberBucketRows(left, right, sortMode));
 }
 
 function renderMonthlyDetailsTable(target, winsSubset, sortMode = elements.monthlySort?.value || "winner") {
@@ -3373,86 +3611,15 @@ function renderMonthlyDetailsTable(target, winsSubset, sortMode = elements.month
 // of achievements, so 1.0x is the bare minimum and 4.0x means they played roughly
 // the whole game. This is the question the PoP page exists to answer, and the old
 // five numeric columns made you divide two of them in your head to get it.
-const POP_EFFORT_BANDS = [
-  { key: "below", label: "Below", tone: "danger" },
-  { key: "minimum", label: "At minimum", tone: "warning" },
-  { key: "above", label: "Above", tone: "info" },
-  { key: "well-above", label: "Well above", tone: "success" },
-  // Every achievement earned is not a degree of "above", it is the end of the
-  // road: there is nothing left for that player to do on this game.
-  { key: "complete", label: "Complete", tone: "warning" },
-];
+//
+// The banding itself lives in derive-core so the scoreboard tally baked into
+// derived.json grades wins exactly the way this page draws them. Only the two
+// state-shaped inputs stay here: the games map, and the memoized progress (this
+// page grades every win several times per render).
+const POP_EFFORT_BANDS = derive.POP_EFFORT_BANDS;
 
 function getPopEffort(win) {
-  const progress = evaluateMonthlyProgress(win);
-  const requiredHours = Number(progress.requiredHours || 0);
-  const requiredAchievements = Number(progress.requiredAchievements || 0);
-  const currentHours = Number(win.currentHours || 0);
-  const earnedAchievements = Number(win.earnedAchievements || 0);
-  const totalAchievements = getGameAchievementsTotal(findById("games", win.gameId));
-  const fullyCompleted = totalAchievements > 0 && earnedAchievements >= totalAchievements;
-
-  const hltbHours = getGameHltbHours(findById("games", win.gameId));
-  const hoursRatio = requiredHours > 0 ? currentHours / requiredHours : null;
-  const achievementRatio = requiredAchievements > 0 ? earnedAchievements / requiredAchievements : null;
-
-  // Grade on how much of the GAME was done, not on multiples of the requirement.
-  // The two requirements are different sizes (25% of playtime vs 10% of
-  // achievements), so "3x the minimum" means 75% of a game on one axis and 30% on
-  // the other. Completion percentages are the same unit on both sides, so they
-  // can be averaged; that also means heavy playtime with almost no achievements
-  // cannot reach the top on its own, without needing a special case for it.
-  const hoursCompletion = hltbHours > 0 ? Math.min(1, currentHours / hltbHours) : null;
-  const achievementCompletion = totalAchievements > 0 ? Math.min(1, earnedAchievements / totalAchievements) : null;
-  const measured = [hoursCompletion, achievementCompletion].filter((value) => value !== null);
-  const completion = measured.length ? measured.reduce((sum, value) => sum + value, 0) / measured.length : null;
-  const ratio = completion;
-
-  // Purely informational: the game is essentially played through but the
-  // achievements barely moved, which can mean it was left running.
-  const hoursOnlyOutlier =
-    !fullyCompleted &&
-    achievementCompletion !== null &&
-    achievementCompletion < 0.15 &&
-    (hoursCompletion ?? 0) >= 0.9;
-
-  // Pass/fail stays with evaluateMonthlyProgress, which carries the special cases
-  // (locked-in thresholds, all-achievements wins). The ratio only grades degree.
-  let band = "below";
-  if (fullyCompleted) {
-    band = "complete";
-  } else if (progress.badge !== "danger") {
-    // The top band needs depth on BOTH measures, not just a high average. Pure
-    // averaging cannot separate 65%/64% (deep and balanced) from 100%/29% (ran
-    // the clock out with a quarter of the achievements) - they score the same.
-    // So "well above" also requires the weaker of the two to be substantial.
-    const weakest = measured.length > 1 ? Math.min(...measured) : (completion ?? 0);
-    if (completion === null || completion < 0.35) {
-      band = "minimum";
-    } else if (completion < 0.6 || weakest < 0.45) {
-      band = "above";
-    } else {
-      band = "well-above";
-    }
-  }
-
-  return {
-    progress,
-    ratio,
-    band,
-    totalAchievements,
-    fullyCompleted,
-    hoursOnlyOutlier,
-    hoursCompletion,
-    achievementCompletion,
-    completion,
-    requiredHours,
-    requiredAchievements,
-    currentHours,
-    earnedAchievements,
-    hoursRatio,
-    achievementRatio,
-  };
+  return derive.getPopEffort(win, { gamesById: getLookupCache().byId.games }, evaluateMonthlyProgress(win));
 }
 
 // Say which dimension earned the band, since "above" can now come from either.
@@ -7894,32 +8061,6 @@ function getDefaultProgressMonth(months) {
   // already arrived.
   const currentKey = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
   return months.find((month) => month <= currentKey) || months[0] || "";
-}
-
-function compareMemberBucketRows(left, right, sortMode) {
-  switch (sortMode) {
-    case "name":
-      return String(left.name || "").localeCompare(String(right.name || ""), "pt-BR", {
-        sensitivity: "base",
-      });
-    case "playtime":
-      return right.totalPlaytime - left.totalPlaytime || right.totalWins - left.totalWins || compareMemberBucketRows(left, right, "name");
-    case "achievements":
-      return (
-        (right.averageAchievements ?? -1) - (left.averageAchievements ?? -1) ||
-        right.totalWins - left.totalWins ||
-        compareMemberBucketRows(left, right, "name")
-      );
-    case "threshold":
-      return (
-        right.thresholdMet - left.thresholdMet ||
-        right.totalWins - left.totalWins ||
-        compareMemberBucketRows(left, right, "name")
-      );
-    case "wins":
-    default:
-      return right.totalWins - left.totalWins || right.totalPlaytime - left.totalPlaytime || compareMemberBucketRows(left, right, "name");
-  }
 }
 
 function buildPlaytimeSourceLabel(progress) {
