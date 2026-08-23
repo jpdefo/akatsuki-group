@@ -61,6 +61,7 @@
             <div class="section-summary">
               <div id="storage-status" class="pill"></div>
               <p id="period-summary" class="section-copy"></p>
+              <div id="pop-effort-cards" class="summary-grid pop-effort-grid"></div>
             </div>
             <div class="section-filters">
               <label class="inline-filter">
@@ -79,6 +80,8 @@
                 Sort
                 <select id="monthly-sort">
                   <option value="winner" selected>Winner (A-Z)</option>
+                  <option value="effort-desc">Most above the minimum</option>
+                  <option value="effort-asc">Just the minimum</option>
                   <option value="hours-asc">Total hours (least first)</option>
                   <option value="hours-desc">Total hours (most first)</option>
                   <option value="achievements-asc">Achievements % (least first)</option>
@@ -96,12 +99,10 @@
                   <th>Winner</th>
                   <th>Game won</th>
                   <th>Creator</th>
-                  <th>HLTB</th>
-                  <th>Req. 25%</th>
-                  <th>Player time</th>
-                  <th>Achs</th>
-                  <th>Req. 10%</th>
-                  <th>Status / notes</th>
+                  <th>Playtime <span class="th-note">vs required</span></th>
+                  <th>Achievements <span class="th-note">vs required</span></th>
+                  <th>Effort</th>
+                  <th>Status</th>
                 </tr>
               </thead>
               <tbody id="monthly-progress-table"></tbody>

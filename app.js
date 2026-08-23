@@ -120,6 +120,7 @@ const runtime = {
   cycleShowPaused: false,
   summerEditMode: false,
   summerSearch: "",
+  popEffortFilter: "all",
   cycleMemberSearch: "",
   cycleGiveawaySearch: "",
 };
@@ -153,6 +154,7 @@ const elements = {
   monthlyGameSearch: document.querySelector("#monthly-game-search"),
   monthlySort: document.querySelector("#monthly-sort"),
   monthlyProgressTable: document.querySelector("#monthly-progress-table"),
+  popEffortCards: document.querySelector("#pop-effort-cards"),
   penaltiesFilter: document.querySelector("#penalties-filter"),
   memberSearch: document.querySelector("#member-search"),
   memberSort: document.querySelector("#member-sort"),
@@ -440,6 +442,13 @@ function bindEvents() {
     const copyPenaltyButton = event.target.closest("[data-copy-penalty]");
     if (copyPenaltyButton) {
       handleCopyPenaltyDescription(copyPenaltyButton);
+      return;
+    }
+
+    const popEffortButton = event.target.closest("[data-pop-effort]");
+    if (popEffortButton) {
+      runtime.popEffortFilter = popEffortButton.dataset.popEffort || "all";
+      renderProgressViews();
       return;
     }
 
@@ -1518,8 +1527,44 @@ function renderProgressViews() {
     }
   }
 
-  renderMonthlyDetailsTable(elements.monthlyProgressTable, monthlyWins);
+  renderPopEffortCards(monthlyWins);
+  renderMonthlyDetailsTable(elements.monthlyProgressTable, applyPopEffortFilter(monthlyWins));
   renderCycleViews(selectedMonth === "all" ? "" : selectedMonth);
+}
+
+// The bands are the page's main lens: "is everyone doing the bare minimum, or
+// actually playing?" Clickable, like the penalties page counts.
+function renderPopEffortCards(monthlyWins) {
+  if (!elements.popEffortCards) {
+    return;
+  }
+  const counts = new Map(POP_EFFORT_BANDS.map((band) => [band.key, 0]));
+  for (const win of monthlyWins) {
+    const { band } = getPopEffort(win);
+    counts.set(band, (counts.get(band) || 0) + 1);
+  }
+  const cards = [{ key: "all", label: "All wins", tone: "", value: monthlyWins.length }].concat(
+    POP_EFFORT_BANDS.map((band) => ({ ...band, value: counts.get(band.key) || 0 })),
+  );
+  elements.popEffortCards.innerHTML = cards
+    .map((card) => {
+      const active = (runtime.popEffortFilter || "all") === card.key;
+      return `
+        <button type="button" class="summary-card penalties-summary-card ${card.tone}${active ? " is-active" : ""}" data-pop-effort="${escapeHtml(card.key)}" aria-pressed="${active}">
+          <strong>${card.value}</strong>
+          <span>${escapeHtml(card.label)}</span>
+        </button>
+      `;
+    })
+    .join("");
+}
+
+function applyPopEffortFilter(monthlyWins) {
+  const filter = runtime.popEffortFilter || "all";
+  if (filter === "all") {
+    return monthlyWins;
+  }
+  return monthlyWins.filter((win) => getPopEffort(win).band === filter);
 }
 
 function renderCycleViews(selectedMonth) {
@@ -3256,7 +3301,7 @@ function computeMemberBucketRows(isActiveMember) {
 
 function renderMonthlyDetailsTable(target, winsSubset, sortMode = elements.monthlySort?.value || "winner") {
   if (!winsSubset.length) {
-    target.innerHTML = buildEmptyRow(9);
+    target.innerHTML = buildEmptyRow(7);
     return;
   }
 
@@ -3266,12 +3311,26 @@ function renderMonthlyDetailsTable(target, winsSubset, sortMode = elements.month
     .map((win) => {
       const member = findById("members", win.memberId);
       const game = findById("games", win.gameId);
-      const progress = evaluateMonthlyProgress(win);
+      const effort = getPopEffort(win);
+      const progress = effort.progress;
       const prereleaseNote = buildPrereleaseMonthNote(win, game);
       const hltbHours = getGameHltbHours(game);
       const hltbUrl = getGameHltbUrl(game);
       const totalAchievements = getGameAchievementsTotal(game);
       const effectiveMonth = getWinPlayMonth(win);
+      const band = POP_EFFORT_BANDS.find((item) => item.key === effort.band);
+      const hasOverride =
+        game?.hltbUrlOverride ||
+        (game?.hltbHoursOverride !== undefined && game?.hltbHoursOverride !== null) ||
+        hasGameAchievementTargetOverride(game) ||
+        hasWinAchievementTargetOverride(win);
+
+      // HLTB is the input to the required figure, not a fact you compare rows on,
+      // so it moves into the playtime cell's tooltip and the edit control.
+      const hltbLabel = hltbHours ? formatHours(hltbHours) : "no HLTB";
+      const hltbMarkup = hltbUrl
+        ? `<a class="linked-title" href="${escapeHtml(hltbUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(hltbLabel)}</a>`
+        : escapeHtml(hltbLabel);
 
       return `
         <tr class="progress-row ${progress.badge}">
@@ -3279,27 +3338,23 @@ function renderMonthlyDetailsTable(target, winsSubset, sortMode = elements.month
           <td>${buildGameCell(game, win)}</td>
           <td>${buildGiveawayCreatorMarkup(win)}</td>
           <td>
-            <div class="value-stack">
-              <span>${hltbHours ? (hltbUrl ? `<a class="linked-title" href="${escapeHtml(hltbUrl)}" target="_blank" rel="noopener noreferrer">${formatHours(hltbHours)}</a>` : formatHours(hltbHours)) : "-"}</span>
-              ${game?.hltbUrlOverride ? `<span class="meta-line override-note">Manual link override</span>` : game?.hltbHoursOverride !== undefined && game?.hltbHoursOverride !== null ? `<span class="meta-line override-note">Manual hours override</span>` : ""}
-              ${game ? `<button class="inline-action" data-edit-action="hltb" data-game-id="${game.id}">Edit HLTB</button>` : ""}
-            </div>
+            ${buildPopMeter(effort.currentHours, effort.requiredHours, hltbHours, formatHours)}
+            ${game ? `<button class="inline-action" data-edit-action="hltb" data-game-id="${game.id}">Edit HLTB ${hltbMarkup}</button>` : ""}
           </td>
-          <td>${progress.requiredHours ? formatHours(progress.requiredHours) : "-"}</td>
-          <td>${formatHours(win.currentHours || 0)}</td>
-          <td>${buildAchievementCell(win, totalAchievements)}</td>
           <td>
-            <div class="value-stack">
-              <span>${progress.requiredAchievements || 0}</span>
-              ${hasGameAchievementTargetOverride(game) || hasWinAchievementTargetOverride(win) ? `<span class="meta-line override-note">Manual override</span>` : ""}
-              <button class="inline-action" data-edit-action="achievement-target" data-win-id="${win.id}">Edit 10%</button>
-            </div>
+            ${buildPopMeter(effort.earnedAchievements, effort.requiredAchievements, totalAchievements, (value) => String(Math.round(value)), { completable: true })}
+            <button class="inline-action" data-edit-action="achievement-target" data-win-id="${win.id}">Edit 10%</button>
+          </td>
+          <td class="pop-effort-cell">
+            <span class="pop-effort-band ${escapeHtml(effort.band)}" title="${escapeHtml(buildPopEffortTooltip(effort))}">${escapeHtml(band?.label || "")}</span>
+            ${effort.hoursOnlyOutlier ? `<span class="cell-note pop-effort-warn" title="${escapeHtml("Plenty of playtime but the achievement count barely moved, which can mean the game was left running rather than played.")}">hours only</span>` : ""}
           </td>
           <td class="status-notes-cell">
             <div class="status-notes-stack">
               <div class="status-notes-line">
                 ${buildBadge(progress.badge, progress.label)}
                 ${effectiveMonth ? `<span class="meta-line">in ${escapeHtml(formatMonthKey(effectiveMonth))}${win?.monthOverride ? " (override)" : ""}</span>` : ""}
+                ${hasOverride ? `<span class="meta-line override-note" title="This row carries a manual override">edited</span>` : ""}
               </div>
               ${prereleaseNote ? `<span class="meta-line">${escapeHtml(prereleaseNote)}</span>` : ""}
               <div class="status-notes-line">
@@ -3314,6 +3369,139 @@ function renderMonthlyDetailsTable(target, winsSubset, sortMode = elements.month
     .join("");
 }
 
+// How far past the requirement a win went. The threshold is 25% of HLTB plus 10%
+// of achievements, so 1.0x is the bare minimum and 4.0x means they played roughly
+// the whole game. This is the question the PoP page exists to answer, and the old
+// five numeric columns made you divide two of them in your head to get it.
+const POP_EFFORT_BANDS = [
+  { key: "below", label: "Below", tone: "danger" },
+  { key: "minimum", label: "At minimum", tone: "warning" },
+  { key: "above", label: "Above", tone: "info" },
+  { key: "well-above", label: "Well above", tone: "success" },
+  // Every achievement earned is not a degree of "above", it is the end of the
+  // road: there is nothing left for that player to do on this game.
+  { key: "complete", label: "Complete", tone: "warning" },
+];
+
+function getPopEffort(win) {
+  const progress = evaluateMonthlyProgress(win);
+  const requiredHours = Number(progress.requiredHours || 0);
+  const requiredAchievements = Number(progress.requiredAchievements || 0);
+  const currentHours = Number(win.currentHours || 0);
+  const earnedAchievements = Number(win.earnedAchievements || 0);
+  const totalAchievements = getGameAchievementsTotal(findById("games", win.gameId));
+  const fullyCompleted = totalAchievements > 0 && earnedAchievements >= totalAchievements;
+
+  const hltbHours = getGameHltbHours(findById("games", win.gameId));
+  const hoursRatio = requiredHours > 0 ? currentHours / requiredHours : null;
+  const achievementRatio = requiredAchievements > 0 ? earnedAchievements / requiredAchievements : null;
+
+  // Grade on how much of the GAME was done, not on multiples of the requirement.
+  // The two requirements are different sizes (25% of playtime vs 10% of
+  // achievements), so "3x the minimum" means 75% of a game on one axis and 30% on
+  // the other. Completion percentages are the same unit on both sides, so they
+  // can be averaged; that also means heavy playtime with almost no achievements
+  // cannot reach the top on its own, without needing a special case for it.
+  const hoursCompletion = hltbHours > 0 ? Math.min(1, currentHours / hltbHours) : null;
+  const achievementCompletion = totalAchievements > 0 ? Math.min(1, earnedAchievements / totalAchievements) : null;
+  const measured = [hoursCompletion, achievementCompletion].filter((value) => value !== null);
+  const completion = measured.length ? measured.reduce((sum, value) => sum + value, 0) / measured.length : null;
+  const ratio = completion;
+
+  // Purely informational: the game is essentially played through but the
+  // achievements barely moved, which can mean it was left running.
+  const hoursOnlyOutlier =
+    !fullyCompleted &&
+    achievementCompletion !== null &&
+    achievementCompletion < 0.15 &&
+    (hoursCompletion ?? 0) >= 0.9;
+
+  // Pass/fail stays with evaluateMonthlyProgress, which carries the special cases
+  // (locked-in thresholds, all-achievements wins). The ratio only grades degree.
+  let band = "below";
+  if (fullyCompleted) {
+    band = "complete";
+  } else if (progress.badge !== "danger") {
+    // The top band needs depth on BOTH measures, not just a high average. Pure
+    // averaging cannot separate 65%/64% (deep and balanced) from 100%/29% (ran
+    // the clock out with a quarter of the achievements) - they score the same.
+    // So "well above" also requires the weaker of the two to be substantial.
+    const weakest = measured.length > 1 ? Math.min(...measured) : (completion ?? 0);
+    if (completion === null || completion < 0.35) {
+      band = "minimum";
+    } else if (completion < 0.6 || weakest < 0.45) {
+      band = "above";
+    } else {
+      band = "well-above";
+    }
+  }
+
+  return {
+    progress,
+    ratio,
+    band,
+    totalAchievements,
+    fullyCompleted,
+    hoursOnlyOutlier,
+    hoursCompletion,
+    achievementCompletion,
+    completion,
+    requiredHours,
+    requiredAchievements,
+    currentHours,
+    earnedAchievements,
+    hoursRatio,
+    achievementRatio,
+  };
+}
+
+// Say which dimension earned the band, since "above" can now come from either.
+function buildPopEffortTooltip(effort) {
+  if (effort.fullyCompleted) {
+    return `All ${effort.totalAchievements} achievements earned. Nothing left to do on this game.`;
+  }
+  const percent = (value) => `${Math.round(value * 100)}%`;
+  const parts = [];
+  if (effort.hoursCompletion !== null) {
+    parts.push(`${percent(effort.hoursCompletion)} of the playtime`);
+  }
+  if (effort.achievementCompletion !== null) {
+    parts.push(`${percent(effort.achievementCompletion)} of the achievements`);
+  }
+  if (!parts.length) {
+    return "No target to measure against.";
+  }
+  const base = `Did ${parts.join(" and ")}${effort.completion !== null && parts.length > 1 ? `, averaging ${percent(effort.completion)} of the game` : ""}.`;
+  return effort.hoursOnlyOutlier ? `${base} The hours are not backed by achievements.` : base;
+}
+
+// The bar spans the WHOLE game: all of its HLTB hours, or all of its
+// achievements. A full bar therefore means the player finished it. The tick is
+// the required minimum, which naturally lands at 25% for playtime and 10% for
+// achievements, so you can see both "did they clear the bar" and "how much of
+// the game did they actually do" in one mark.
+function buildPopMeter(current, required, total, format, { completable = false } = {}) {
+  if (!(total > 0)) {
+    return `<span class="cell-note">no target</span>`;
+  }
+  const clamp = (value) => Math.min(100, Math.max(0, value));
+  const markerPercent = clamp((required / total) * 100);
+  const fillPercent = clamp((current / total) * 100);
+  const met = required > 0 ? current >= required : false;
+  const completed = completable && current >= total;
+  const share = Math.round((current / total) * 100);
+  return `
+    <div class="pop-meter" title="${escapeHtml(`${format(current)} of ${format(total)} (${share}% of the game). Minimum required: ${format(required)}.`)}">
+      <span class="pop-meter-value">${escapeHtml(format(current))}<span class="cell-note">/ ${escapeHtml(format(total))}</span></span>
+      <div class="pop-meter-track">
+        <div class="pop-meter-fill${completed ? " is-complete" : met ? " is-met" : ""}" style="width: ${fillPercent.toFixed(1)}%"></div>
+        ${required > 0 ? `<span class="pop-meter-marker" style="left: ${markerPercent.toFixed(1)}%"></span>` : ""}
+      </div>
+      <span class="cell-note">min ${escapeHtml(format(required))}</span>
+    </div>
+  `;
+}
+
 function compareMonthlyWins(left, right, sortMode) {
   const leftMember = findById("members", left.memberId);
   const rightMember = findById("members", right.memberId);
@@ -3323,11 +3511,31 @@ function compareMonthlyWins(left, right, sortMode) {
   const rightProgress = evaluateMonthlyProgress(right);
 
   // Unmet thresholds first in every mode: the table exists to surface who still
-  // owes playtime, so a completed win never sits above an incomplete one.
+  // owes playtime, so a completed win never sits above an incomplete one. The
+  // effort sorts are the exception - they rank how far past the minimum someone
+  // went, which is a question about the completed wins, so grouping by pass/fail
+  // first would bury every high scorer below the failures.
+  const isEffortSort = sortMode === "effort-desc" || sortMode === "effort-asc";
   const thresholdRank = (progress) => (progress.badge === "danger" ? 0 : 1);
   const completionCompare = thresholdRank(leftProgress) - thresholdRank(rightProgress);
-  if (completionCompare !== 0) {
+  if (!isEffortSort && completionCompare !== 0) {
     return completionCompare;
+  }
+
+  if (sortMode === "effort-desc" || sortMode === "effort-asc") {
+    const leftRatio = getPopEffort(left).ratio;
+    const rightRatio = getPopEffort(right).ratio;
+    // "Just the minimum" means closest to 1.0x, not lowest: someone at 0.0x did
+    // not scrape by, they did nothing. Rank by distance from the requirement.
+    const passed = (win) => evaluateMonthlyProgress(win).badge !== "danger";
+    const leftKey =
+      sortMode === "effort-desc" ? -(leftRatio ?? -1) : passed(left) ? (leftRatio ?? 99) : Infinity;
+    const rightKey =
+      sortMode === "effort-desc" ? -(rightRatio ?? -1) : passed(right) ? (rightRatio ?? 99) : Infinity;
+    const effortCompare = leftKey - rightKey;
+    if (effortCompare !== 0) {
+      return effortCompare;
+    }
   }
 
   if (sortMode === "winner") {
@@ -3450,9 +3658,8 @@ function buildGameCell(game, win) {
   return `
     <div class="game-cell">
       ${imageMarkup}
-      <div>
-        <strong>${titleMarkup}</strong>
-        ${game?.appId ? `<span class="meta-line">App ${game.appId}</span>` : ""}
+      <div class="game-cell-body">
+        <span class="game-cell-title">${titleMarkup}</span>
       </div>
     </div>
   `;
