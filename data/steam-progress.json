@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T18:39:40.410865+00:00",
+  "updatedAt": "2026-08-24T06:31:36.829034+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2336,7 +2336,7 @@
       "appId": 2172010,
       "title": "Until Dawn",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2172010/achievements/",
-      "playtimeHours": 3.58,
+      "playtimeHours": 4.2,
       "visible": true,
       "earnedAchievements": 2,
       "totalAchievements": 29,
@@ -2345,7 +2345,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 3.58,
+      "achievementsPlaytimeHours": 4.2,
       "popThresholdMetAt": "2026-08-23T13:26:12.859340+00:00"
     },
     {
@@ -9351,16 +9351,16 @@
       "appId": 2582320,
       "title": "Mixtape",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2582320/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 0.75,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 2,
       "totalAchievements": 26,
-      "achievementPercent": 0,
+      "achievementPercent": 8,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 0.75
     },
     {
       "username": "chOOkity",
@@ -9851,12 +9851,12 @@
       "earnedAchievements": 10,
       "totalAchievements": 281,
       "achievementPercent": 4,
-      "playtimeHours": 14.13,
+      "playtimeHours": 16.35,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 14.13
+      "achievementsPlaytimeHours": 16.35
     },
     {
       "username": "Drain",
@@ -20959,7 +20959,7 @@
       "appId": 3751950,
       "title": "Assassin's Creed Black Flag Resynced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/3751950/achievements/",
-      "playtimeHours": 50.88,
+      "playtimeHours": 52.2,
       "visible": true,
       "earnedAchievements": 27,
       "totalAchievements": 49,
@@ -20968,7 +20968,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 50.88,
+      "achievementsPlaytimeHours": 52.2,
       "popThresholdMetAt": "2026-07-20T08:33:24.271635+00:00"
     },
     {
@@ -41491,10 +41491,10 @@
       "title": "METAL GEAR SOLID: MASTER COLLECTION V...",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/2131630/achievements/",
       "visible": true,
-      "earnedAchievements": 8,
+      "earnedAchievements": 13,
       "totalAchievements": 120,
-      "achievementPercent": 7,
-      "playtimeHours": 30.48,
+      "achievementPercent": 11,
+      "playtimeHours": 32.65,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -41513,7 +41513,7 @@
           "title": "METAL GEAR SOLID 3: Snake Eater - Master Collection Version"
         }
       ],
-      "achievementsPlaytimeHours": 30.48
+      "achievementsPlaytimeHours": 32.65
     },
     {
       "username": "zettaivanugen",
@@ -42501,15 +42501,15 @@
       "title": "Heroes of Might and Magic: Olden Era",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/3105440/achievements/",
       "visible": true,
-      "earnedAchievements": 1,
+      "earnedAchievements": 3,
       "totalAchievements": 22,
-      "achievementPercent": 5,
-      "playtimeHours": 0.42,
+      "achievementPercent": 14,
+      "playtimeHours": 2.53,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.42
+      "achievementsPlaytimeHours": 2.53
     },
     {
       "username": "zettaivanugen",
@@ -70748,9 +70748,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-08-23T18:38:29.428144+00:00",
+  "libraryUpdatedAt": "2026-08-24T06:30:41.899450+00:00",
   "libraryStats": {
-    "durationSeconds": 16.71,
+    "durationSeconds": 5.49,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -70759,12 +70759,12 @@
     "totalPlaytimeRows": 14501
   },
   "stats": {
-    "durationSeconds": 87.7,
+    "durationSeconds": 60.44,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
-    "cachedReuses": 2327,
-    "achievementSuccesses": 5,
+    "cachedReuses": 2322,
+    "achievementSuccesses": 10,
     "achievementErrors": 57,
     "cachedFallbacks": 57,
     "hltbTitlesRequested": 1292,
