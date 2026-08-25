@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T06:31:36.829034+00:00",
+  "updatedAt": "2026-08-25T06:23:19.525024+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2336,16 +2336,16 @@
       "appId": 2172010,
       "title": "Until Dawn",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2172010/achievements/",
-      "playtimeHours": 4.2,
+      "playtimeHours": 7.02,
       "visible": true,
-      "earnedAchievements": 2,
+      "earnedAchievements": 8,
       "totalAchievements": 29,
-      "achievementPercent": 7,
+      "achievementPercent": 28,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 4.2,
+      "achievementsPlaytimeHours": 7.02,
       "popThresholdMetAt": "2026-08-23T13:26:12.859340+00:00"
     },
     {
@@ -9848,15 +9848,15 @@
       "title": "Mewgenics",
       "progressUrl": "https://steamcommunity.com/profiles/76561197970556600/stats/686060/achievements/",
       "visible": true,
-      "earnedAchievements": 10,
+      "earnedAchievements": 11,
       "totalAchievements": 281,
       "achievementPercent": 4,
-      "playtimeHours": 16.35,
+      "playtimeHours": 21.1,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 16.35
+      "achievementsPlaytimeHours": 21.1
     },
     {
       "username": "Drain",
@@ -19296,12 +19296,12 @@
       "earnedAchievements": 33,
       "totalAchievements": 62,
       "achievementPercent": 53,
-      "playtimeHours": 90.37,
+      "playtimeHours": 90.98,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 90.37,
+      "achievementsPlaytimeHours": 90.98,
       "popThresholdMetAt": "2026-06-26T07:11:08.799308+00:00"
     },
     {
@@ -26922,7 +26922,7 @@
       "appId": 2677660,
       "title": "Indiana Jones and the Great Circle",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2677660/achievements/",
-      "playtimeHours": 41.83,
+      "playtimeHours": 43.25,
       "visible": true,
       "earnedAchievements": 34,
       "totalAchievements": 55,
@@ -26931,7 +26931,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 41.83,
+      "achievementsPlaytimeHours": 43.25,
       "popThresholdMetAt": "2026-08-03T08:57:10.551642+00:00"
     },
     {
@@ -27794,16 +27794,16 @@
       "appId": 1888160,
       "title": "ARMORED CORE VI FIRES OF RUBICON",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/1888160/achievements/",
-      "playtimeHours": 10.27,
+      "playtimeHours": 11.73,
       "visible": true,
-      "earnedAchievements": 10,
+      "earnedAchievements": 11,
       "totalAchievements": 30,
-      "achievementPercent": 33,
+      "achievementPercent": 37,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 10.27,
+      "achievementsPlaytimeHours": 11.73,
       "popThresholdMetAt": "2026-07-31T08:28:37.889064+00:00"
     },
     {
@@ -33238,7 +33238,7 @@
       "appId": 1774580,
       "title": "STAR WARS Jedi: Survivor",
       "progressUrl": "https://steamcommunity.com/profiles/76561198011705129/stats/1774580/achievements/",
-      "playtimeHours": 2.18,
+      "playtimeHours": 3.28,
       "visible": true,
       "earnedAchievements": 2,
       "totalAchievements": 53,
@@ -33247,7 +33247,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.18
+      "achievementsPlaytimeHours": 3.28
     },
     {
       "username": "Wintermute101",
@@ -36895,15 +36895,15 @@
       "title": "UNCHARTED: Legacy of Thieves Collection",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/1659420/achievements/",
       "visible": true,
-      "earnedAchievements": 24,
+      "earnedAchievements": 29,
       "totalAchievements": 101,
-      "achievementPercent": 24,
-      "playtimeHours": 27.38,
+      "achievementPercent": 29,
+      "playtimeHours": 32.05,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 27.38,
+      "achievementsPlaytimeHours": 32.05,
       "popThresholdMetAt": "2026-06-26T07:11:08.801361+00:00"
     },
     {
@@ -38365,12 +38365,12 @@
       "earnedAchievements": 31,
       "totalAchievements": 35,
       "achievementPercent": 89,
-      "playtimeHours": 973.67,
+      "playtimeHours": 976.53,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 973.67,
+      "achievementsPlaytimeHours": 976.53,
       "popThresholdMetAt": "2026-06-26T07:11:08.801512+00:00"
     },
     {
@@ -42148,7 +42148,7 @@
       "appId": 1962700,
       "title": "Subnautica 2",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/1962700/achievements/",
-      "playtimeHours": 6.78,
+      "playtimeHours": 10.87,
       "visible": false,
       "earnedAchievements": 0,
       "totalAchievements": 0,
@@ -42411,15 +42411,15 @@
       "title": "Indiana Jones and the Great Circle",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/2677660/achievements/",
       "visible": true,
-      "earnedAchievements": 45,
+      "earnedAchievements": 55,
       "totalAchievements": 55,
-      "achievementPercent": 82,
-      "playtimeHours": 50.2,
+      "achievementPercent": 100,
+      "playtimeHours": 50.23,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 50.2,
+      "achievementsPlaytimeHours": 50.23,
       "popThresholdMetAt": "2026-06-26T07:11:08.801973+00:00"
     },
     {
@@ -42501,15 +42501,16 @@
       "title": "Heroes of Might and Magic: Olden Era",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/3105440/achievements/",
       "visible": true,
-      "earnedAchievements": 3,
+      "earnedAchievements": 8,
       "totalAchievements": 22,
-      "achievementPercent": 14,
-      "playtimeHours": 2.53,
+      "achievementPercent": 36,
+      "playtimeHours": 4.9,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.53
+      "achievementsPlaytimeHours": 4.9,
+      "popThresholdMetAt": "2026-08-25T06:23:19.524984+00:00"
     },
     {
       "username": "zettaivanugen",
@@ -42557,9 +42558,9 @@
     {
       "title": "HUNTDOWN: OVERTIME",
       "appId": 2473350,
-      "hltbHours": 0.0,
-      "matchedTitle": "Huntdown: Overtime",
-      "url": "https://howlongtobeat.com/game/181324"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "Directive 8020",
@@ -42683,9 +42684,9 @@
     {
       "title": "Pluto",
       "appId": 3057670,
-      "hltbHours": 0.0,
-      "matchedTitle": "Pluto",
-      "url": "https://howlongtobeat.com/game/182978"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "Banquet for Fools",
@@ -43201,9 +43202,9 @@
     {
       "title": "Star Birds",
       "appId": 2719750,
-      "hltbHours": 0.0,
-      "matchedTitle": "Star Birds",
-      "url": "https://howlongtobeat.com/game/152044"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "The Killing Antidote",
@@ -45462,9 +45463,9 @@
     {
       "title": "The Forever Winter",
       "appId": 2828860,
-      "hltbHours": 0.0,
-      "matchedTitle": "The Forever Winter",
-      "url": "https://howlongtobeat.com/game/145877"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "Frostpunk 2",
@@ -45490,9 +45491,9 @@
     {
       "title": "REKA",
       "appId": 1737870,
-      "hltbHours": 0.0,
-      "matchedTitle": "REKA",
-      "url": "https://howlongtobeat.com/game/112259"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "Nine Sols",
@@ -47261,9 +47262,9 @@
     {
       "title": "Moonbreaker",
       "appId": 845890,
-      "hltbHours": 0.0,
-      "matchedTitle": "Moonbreaker",
-      "url": "https://howlongtobeat.com/game/112672"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "Thronebreaker: The Witcher Tales",
@@ -47975,9 +47976,9 @@
     {
       "title": "Frequent Flyer",
       "appId": 554150,
-      "hltbHours": 0.0,
-      "matchedTitle": "Frequent Flyer",
-      "url": "https://howlongtobeat.com/game/45771"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "Halls of Torment",
@@ -57593,9 +57594,9 @@
     {
       "title": "Salt",
       "appId": 327860,
-      "hltbHours": 0.0,
-      "matchedTitle": "Salt",
-      "url": "https://howlongtobeat.com/game/24367"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "Serious Sam 4",
@@ -58328,9 +58329,9 @@
     {
       "title": "Good Company",
       "appId": 911430,
-      "hltbHours": 0.0,
-      "matchedTitle": "Good company",
-      "url": "https://howlongtobeat.com/game/67672"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "A Plague Tale: Innocence",
@@ -60057,9 +60058,9 @@
     {
       "title": "Grimshade",
       "appId": 858100,
-      "hltbHours": 0.0,
-      "matchedTitle": "Grimshade",
-      "url": "https://howlongtobeat.com/game/66513"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "Whispers of a Machine",
@@ -60162,9 +60163,9 @@
     {
       "title": "Journey Of Life",
       "appId": 794490,
-      "hltbHours": 0.0,
-      "matchedTitle": "Journey of Life",
-      "url": "https://howlongtobeat.com/game/68961"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "GRIS",
@@ -60463,9 +60464,9 @@
     {
       "title": "Your Diary +",
       "appId": 761700,
-      "hltbHours": 0.0,
-      "matchedTitle": "your diary+",
-      "url": "https://howlongtobeat.com/game/64373"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "Wolfenstein: Youngblood",
@@ -69024,9 +69025,9 @@
     {
       "title": "Salt",
       "appId": 327860,
-      "hltbHours": 0.0,
-      "matchedTitle": "Salt",
-      "url": "https://howlongtobeat.com/game/24367"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "DreadOut",
@@ -69136,9 +69137,9 @@
     {
       "title": "I am Weapon: Revival",
       "appId": 335700,
-      "hltbHours": 0.0,
-      "matchedTitle": "I Am Weapon: Revival",
-      "url": "https://howlongtobeat.com/game/31262"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "ZOMBI",
@@ -70074,16 +70075,16 @@
     {
       "title": "The Blood of Dawnwalker",
       "appId": 3751260,
-      "hltbHours": 0.0,
-      "matchedTitle": "The Blood of Dawnwalker",
-      "url": "https://howlongtobeat.com/game/144338"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "Tomb Raider: Legacy of Atlantis",
       "appId": 3558670,
-      "hltbHours": 0.0,
-      "matchedTitle": "Tomb Raider: Legacy of Atlantis",
-      "url": "https://howlongtobeat.com/game/178948"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "ZERO PARADES: For Dead Spies",
@@ -70123,23 +70124,23 @@
     {
       "title": "CONTROL Resonant",
       "appId": 3669870,
-      "hltbHours": 0.0,
-      "matchedTitle": "Control: Resonant",
-      "url": "https://howlongtobeat.com/game/116190"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "Resonance: A Plague Tale Legacy",
       "appId": 2713000,
-      "hltbHours": 0.0,
-      "matchedTitle": "Resonance: A Plague Tale Legacy",
-      "url": "https://howlongtobeat.com/game/169336"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "FINAL FANTASY RESONANCE",
       "appId": 3259780,
-      "hltbHours": 0.0,
-      "matchedTitle": "Final Fantasy Resonance",
-      "url": "https://howlongtobeat.com/game/187293"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "Dying Light: The Beast",
@@ -70151,9 +70152,9 @@
     {
       "title": "Warhammer 40,000: Dawn of War IV",
       "appId": 2272360,
-      "hltbHours": 0.0,
-      "matchedTitle": "Warhammer 40,000: Dawn of War IV",
-      "url": "https://howlongtobeat.com/game/172963"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "Dead Space",
@@ -70228,9 +70229,9 @@
     {
       "title": "Gears of War: E-Day",
       "appId": 3010850,
-      "hltbHours": 0.0,
-      "matchedTitle": "Gears of War: E-Day",
-      "url": "https://howlongtobeat.com/game/152017"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "DEATH STRANDING 2: ON THE BEACH",
@@ -70305,9 +70306,9 @@
     {
       "title": "CONTROL Resonant",
       "appId": 3669870,
-      "hltbHours": 0.0,
-      "matchedTitle": "Control: Resonant",
-      "url": "https://howlongtobeat.com/game/116190"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "Moons Of Darsalon",
@@ -70368,9 +70369,9 @@
     {
       "title": "Heroes of Science and Fiction",
       "appId": 2147380,
-      "hltbHours": 0.0,
-      "matchedTitle": "Heroes of Science and Fiction",
-      "url": "https://howlongtobeat.com/game/188179"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "Echoes of the End: Enhanced Edition",
@@ -70571,9 +70572,9 @@
     {
       "title": "Gears of War: E-Day",
       "appId": 3010850,
-      "hltbHours": 0.0,
-      "matchedTitle": "Gears of War: E-Day",
-      "url": "https://howlongtobeat.com/game/152017"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "METAL GEAR SOLID Δ: SNAKE EATER",
@@ -70748,9 +70749,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-08-24T06:30:41.899450+00:00",
+  "libraryUpdatedAt": "2026-08-25T06:22:13.970532+00:00",
   "libraryStats": {
-    "durationSeconds": 5.49,
+    "durationSeconds": 8.77,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -70759,12 +70760,12 @@
     "totalPlaytimeRows": 14501
   },
   "stats": {
-    "durationSeconds": 60.44,
+    "durationSeconds": 74.34,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
-    "cachedReuses": 2322,
-    "achievementSuccesses": 10,
+    "cachedReuses": 2318,
+    "achievementSuccesses": 14,
     "achievementErrors": 57,
     "cachedFallbacks": 57,
     "hltbTitlesRequested": 1292,
