@@ -238,15 +238,15 @@ function bootstrap() {
 }
 
 function updateRefreshControlVisibility() {
-  const hidden = runtime.staticApi;
+  const canRefresh = !runtime.staticApi || Boolean(getStoredGithubToken());
   if (elements.syncRefreshButton) {
-    elements.syncRefreshButton.hidden = hidden;
+    elements.syncRefreshButton.hidden = runtime.staticApi;
   }
   if (elements.steamRefreshButton) {
-    elements.steamRefreshButton.hidden = hidden;
+    elements.steamRefreshButton.hidden = runtime.staticApi;
   }
   if (elements.steamRefreshAllButton) {
-    elements.steamRefreshAllButton.hidden = hidden;
+    elements.steamRefreshAllButton.hidden = !canRefresh;
   }
 }
 
@@ -355,6 +355,7 @@ function bindEvents() {
   elements.githubTokenButton?.addEventListener("click", () => {
     promptForGithubToken({ announce: true });
     updateQuickPublishVisibility();
+    updateRefreshControlVisibility();
   });
   elements.clearGithubTokenButton?.addEventListener("click", () => {
     if (!getStoredGithubToken()) {
@@ -366,6 +367,7 @@ function bindEvents() {
     }
     setStoredGithubToken("");
     updateQuickPublishVisibility();
+    updateRefreshControlVisibility();
     window.alert("GitHub token removed from this browser.");
   });
   elements.quickPublishButton?.addEventListener("click", () => publishOverridesToGitHub());
@@ -373,7 +375,13 @@ function bindEvents() {
   elements.resetButton?.addEventListener("click", resetData);
   elements.syncRefreshButton?.addEventListener("click", () => refreshRemoteSync());
   elements.steamRefreshButton?.addEventListener("click", () => refreshSteamProgress());
-  elements.steamRefreshAllButton?.addEventListener("click", () => refreshSteamProgress({ fullRefresh: true }));
+  elements.steamRefreshAllButton?.addEventListener("click", () => {
+    if (runtime.staticApi) {
+      void triggerDataRefresh({ button: elements.steamRefreshAllButton });
+      return;
+    }
+    void refreshSteamProgress({ fullRefresh: true });
+  });
   elements.monthlyYearFilter?.addEventListener("change", () => {
     renderProgressViews();
     void loadVisibleGameMedia({ silent: true });
@@ -5038,8 +5046,8 @@ async function publishOverridesToGitHub() {
 // Kick off the daily refresh workflow on demand (workflow_dispatch). Uses the
 // same browser-stored token as publishing; a classic token with the `repo`
 // scope (or a fine-grained token with `Actions: write`) is sufficient.
-async function triggerDataRefresh() {
-  const button = elements.forceRefreshButton;
+async function triggerDataRefresh(options = {}) {
+  const button = options.button || elements.forceRefreshButton;
   const originalLabel = button?.textContent;
 
   let token = getStoredGithubToken();
