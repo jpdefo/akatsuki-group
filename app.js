@@ -43,6 +43,48 @@ const GITHUB_PUBLISH_REPO = { owner: "jpdefo", name: "akatsuki-group", branch: "
 const GITHUB_OVERRIDES_PATH = "data/overrides.json";
 const GITHUB_REFRESH_WORKFLOW = "daily-refresh.yml";
 const GITHUB_TOKEN_STORAGE_KEY = "akatsuki-github-token";
+const PAGE_NAV_PRIMARY_ITEMS = [
+  { href: "index.html", label: "Overview" },
+  { href: "cycles.html", label: "Cycles" },
+  { href: "monthly-progress.html", label: "PoP" },
+  { href: "penalties.html", label: "Penalties" },
+  { href: "summer-event.html", label: "Summer event" },
+  { href: "giveaways.html", label: "Giveaways" },
+  { href: "active-users.html", label: "Active users" },
+  { href: "inactive-users.html", label: "Inactive users" },
+  { href: "summer-event-entries.html", label: "Entry ledger" },
+];
+const PAGE_NAV_ADMIN_ITEM = { href: "admin.html", label: "Admin" };
+
+function renderPageNavigation() {
+  const navigation = document.querySelector("[data-page-nav]");
+  if (!navigation) {
+    return;
+  }
+
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  const renderLink = (item) => {
+    const currentAttribute = item.href === currentPage ? ' aria-current="page"' : "";
+    return `<a class="button secondary" href="${escapeHtml(item.href)}"${currentAttribute}>${escapeHtml(item.label)}</a>`;
+  };
+  const secondaryActions = currentPage === "admin.html"
+    ? renderLink(PAGE_NAV_ADMIN_ITEM)
+    : `${renderLink(PAGE_NAV_ADMIN_ITEM)}
+            <span class="hero-sync-actions">
+              <button id="steam-refresh-all" class="button secondary">Refresh Steam data</button>
+            </span>
+            <button id="quick-publish" class="button primary" hidden>Publish to GitHub Pages</button>`;
+
+  navigation.innerHTML = `
+          <div class="page-nav-primary">
+            ${PAGE_NAV_PRIMARY_ITEMS.map(renderLink).join("")}
+          </div>
+          <div class="page-nav-secondary">
+            ${secondaryActions}
+          </div>`;
+}
+
+renderPageNavigation();
 
 // Last applied Steam progress. Kept at module scope so reconcileManualWinnerWins
 // (which rebuilds manual-winner wins/games on every override edit, not just on a
