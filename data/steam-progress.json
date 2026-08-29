@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-29T11:51:33.191746+00:00",
+  "updatedAt": "2026-08-29T22:58:19.025604+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -7683,12 +7683,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 138.6,
+      "playtimeHours": 138.92,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 138.6,
+      "achievementsPlaytimeHours": 138.92,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -9351,16 +9351,16 @@
       "appId": 2582320,
       "title": "Mixtape",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2582320/achievements/",
-      "playtimeHours": 3.52,
+      "playtimeHours": 4.32,
       "visible": true,
-      "earnedAchievements": 13,
+      "earnedAchievements": 19,
       "totalAchievements": 26,
-      "achievementPercent": 50,
+      "achievementPercent": 73,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 3.52,
+      "achievementsPlaytimeHours": 4.32,
       "popThresholdMetAt": "2026-08-26T06:25:27.117413+00:00"
     },
     {
@@ -9409,12 +9409,12 @@
       "earnedAchievements": 4,
       "totalAchievements": 59,
       "achievementPercent": 7,
-      "playtimeHours": 3.58,
+      "playtimeHours": 4.05,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 3.58
+      "achievementsPlaytimeHours": 4.05
     },
     {
       "username": "chOOkity",
@@ -10667,15 +10667,16 @@
       "title": "REPLACED",
       "progressUrl": "https://steamcommunity.com/profiles/76561197970556600/stats/1663850/achievements/",
       "visible": true,
-      "earnedAchievements": 2,
+      "earnedAchievements": 8,
       "totalAchievements": 34,
-      "achievementPercent": 6,
-      "playtimeHours": 1.6,
+      "achievementPercent": 24,
+      "playtimeHours": 6.3,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 1.6
+      "achievementsPlaytimeHours": 6.3,
+      "popThresholdMetAt": "2026-08-29T22:58:19.024850+00:00"
     },
     {
       "username": "Drain",
@@ -14557,12 +14558,12 @@
       "earnedAchievements": 9,
       "totalAchievements": 18,
       "achievementPercent": 50,
-      "playtimeHours": 8.0,
+      "playtimeHours": 8.05,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 8.0,
+      "achievementsPlaytimeHours": 8.05,
       "popThresholdMetAt": "2026-08-27T16:57:07.725852+00:00"
     },
     {
@@ -20896,12 +20897,12 @@
       "earnedAchievements": 0,
       "totalAchievements": 20,
       "achievementPercent": 0,
-      "playtimeHours": 0.0,
+      "playtimeHours": 0.82,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 0.82
     },
     {
       "username": "Koalala",
@@ -26977,16 +26978,16 @@
       "appId": 2713000,
       "title": "Resonance: A Plague Tale Legacy",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2713000/achievements/",
-      "playtimeHours": 6.32,
+      "playtimeHours": 12.15,
       "visible": true,
-      "earnedAchievements": 5,
+      "earnedAchievements": 13,
       "totalAchievements": 36,
-      "achievementPercent": 14,
+      "achievementPercent": 36,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 6.32
+      "achievementsPlaytimeHours": 12.15
     },
     {
       "username": "leniu",
@@ -27797,16 +27798,16 @@
       "appId": 1888160,
       "title": "ARMORED CORE VI FIRES OF RUBICON",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/1888160/achievements/",
-      "playtimeHours": 22.57,
+      "playtimeHours": 26.27,
       "visible": true,
-      "earnedAchievements": 16,
+      "earnedAchievements": 20,
       "totalAchievements": 30,
-      "achievementPercent": 53,
+      "achievementPercent": 67,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 22.57,
+      "achievementsPlaytimeHours": 26.27,
       "popThresholdMetAt": "2026-07-31T08:28:37.889064+00:00"
     },
     {
@@ -35520,7 +35521,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 66.12,
+      "playtimeHours": 66.38,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -70759,9 +70760,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-08-29T11:50:26.337468+00:00",
+  "libraryUpdatedAt": "2026-08-29T22:57:14.125581+00:00",
   "libraryStats": {
-    "durationSeconds": 8.34,
+    "durationSeconds": 6.99,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -70770,12 +70771,12 @@
     "totalPlaytimeRows": 14506
   },
   "stats": {
-    "durationSeconds": 75.2,
+    "durationSeconds": 71.9,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
-    "cachedReuses": 2324,
-    "achievementSuccesses": 9,
+    "cachedReuses": 2321,
+    "achievementSuccesses": 12,
     "achievementErrors": 56,
     "cachedFallbacks": 56,
     "hltbTitlesRequested": 1290,
