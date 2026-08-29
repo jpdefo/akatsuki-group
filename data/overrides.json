@@ -1,5 +1,5 @@
 {
-  "savedAt": "2026-08-23T20:17:40.624Z",
+  "savedAt": "2026-08-29T20:34:17.465Z",
   "overrides": {
     "games": {
       "app:534380": {
@@ -13,6 +13,10 @@
       },
       "app:2246670": {
         "achievementTargetOverride": 1
+      },
+      "app:686060": {
+        "hltbHoursOverride": 60,
+        "achievementTargetOverride": 13
       }
     },
     "wins": {
@@ -51,9 +55,7 @@
           }
         ]
       },
-      "sg-R91uQ": {
-        "cycleMonthOverride": "2026-04"
-      },
+      "sg-R91uQ": {},
       "sg-LqrvT": {
         "giveawayKindOverride": "extra"
       },
