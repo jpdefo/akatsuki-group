@@ -1,5 +1,5 @@
 {
-  "savedAt": "2026-08-29T20:34:17.465Z",
+  "savedAt": "2026-08-29T21:05:08.075Z",
   "overrides": {
     "games": {
       "app:534380": {
@@ -17,6 +17,9 @@
       "app:686060": {
         "hltbHoursOverride": 60,
         "achievementTargetOverride": 13
+      },
+      "app:3288210": {
+        "achievementTargetOverride": 0
       }
     },
     "wins": {
