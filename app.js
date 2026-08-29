@@ -230,10 +230,24 @@ bootstrap();
 function bootstrap() {
   ensureEditModal();
   bindEvents();
+  updateRefreshControlVisibility();
   // No eager render: painting from stale localStorage is what shows the
   // "22 members / 11 penalties" values that then correct themselves. The first
   // paint happens once, after the initial load below has applied real data.
   loadInitialData();
+}
+
+function updateRefreshControlVisibility() {
+  const hidden = runtime.staticApi;
+  if (elements.syncRefreshButton) {
+    elements.syncRefreshButton.hidden = hidden;
+  }
+  if (elements.steamRefreshButton) {
+    elements.steamRefreshButton.hidden = hidden;
+  }
+  if (elements.steamRefreshAllButton) {
+    elements.steamRefreshAllButton.hidden = hidden;
+  }
 }
 
 async function loadInitialData() {
@@ -980,15 +994,7 @@ function renderSyncStatus() {
     return;
   }
 
-  if (elements.syncRefreshButton) {
-    elements.syncRefreshButton.hidden = runtime.staticApi;
-  }
-  if (elements.steamRefreshButton) {
-    elements.steamRefreshButton.hidden = runtime.staticApi;
-  }
-  if (elements.steamRefreshAllButton) {
-    elements.steamRefreshAllButton.hidden = runtime.staticApi;
-  }
+  updateRefreshControlVisibility();
 
   const playtimeUpdatedAt = librarySummary?.libraryUpdatedAt;
   const effectiveActiveMembers = state.members.filter((member) => member.isActiveMember).length;
@@ -4811,9 +4817,6 @@ async function fetchApiJson(path, options = {}) {
         continue;
       }
       const payload = await response.json().catch(() => null);
-      if (candidate.endsWith(".json")) {
-        runtime.staticApi = true;
-      }
       return { response, payload, staticApi: runtime.staticApi };
     } catch (error) {
       lastError = error;
