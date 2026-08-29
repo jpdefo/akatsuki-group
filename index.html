@@ -29,7 +29,6 @@
           <a class="button secondary" href="giveaways.html">Giveaways</a>
           <a class="button secondary" href="admin.html">Admin</a>
           <span class="hero-sync-actions">
-              <button id="sync-refresh" class="button primary">Load server sync</button>
               <button id="steam-refresh-all" class="button secondary">Refresh Steam data</button>
           </span>
           <button id="quick-publish" class="button primary" hidden>Publish to GitHub Pages</button>
@@ -104,7 +103,7 @@
                 Threshold = 25% of HLTB time + 10% of achievements.
               </p>
               <p class="section-copy">
-                Use the row actions to correct HLTB, the required 10%, or the counted month without letting the next sync overwrite your edit.
+                Use Year and Month together to narrow the view, or choose All months for a full year. Row actions correct HLTB, the required 10%, or the counted month without letting the next sync overwrite your edit.
               </p>
             </div>
             <div class="section-summary">
@@ -112,6 +111,10 @@
               <p id="period-summary" class="section-copy"></p>
             </div>
             <div class="section-filters">
+              <label class="inline-filter">
+                Year
+                <select id="monthly-year-filter"></select>
+              </label>
               <label class="inline-filter">
                 Month
                 <select id="monthly-filter"></select>
