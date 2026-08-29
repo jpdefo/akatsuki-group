@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-28T17:47:11.421560+00:00",
+  "updatedAt": "2026-08-29T11:51:33.191746+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -9528,15 +9528,15 @@
       "title": "007 First Light",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/3768760/achievements/",
       "visible": true,
-      "earnedAchievements": 2,
+      "earnedAchievements": 3,
       "totalAchievements": 37,
-      "achievementPercent": 5,
-      "playtimeHours": 2.43,
+      "achievementPercent": 8,
+      "playtimeHours": 3.4,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 2.43
+      "achievementsPlaytimeHours": 3.4
     },
     {
       "username": "chOOkity",
@@ -14557,12 +14557,12 @@
       "earnedAchievements": 9,
       "totalAchievements": 18,
       "achievementPercent": 50,
-      "playtimeHours": 7.52,
+      "playtimeHours": 8.0,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 7.52,
+      "achievementsPlaytimeHours": 8.0,
       "popThresholdMetAt": "2026-08-27T16:57:07.725852+00:00"
     },
     {
@@ -20791,12 +20791,12 @@
       "earnedAchievements": 20,
       "totalAchievements": 44,
       "achievementPercent": 45,
-      "playtimeHours": 46.55,
+      "playtimeHours": 46.58,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 46.55,
+      "achievementsPlaytimeHours": 46.58,
       "popThresholdMetAt": "2026-06-26T07:11:08.799484+00:00"
     },
     {
@@ -26977,16 +26977,16 @@
       "appId": 2713000,
       "title": "Resonance: A Plague Tale Legacy",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2713000/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 6.32,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 5,
       "totalAchievements": 36,
-      "achievementPercent": 0,
+      "achievementPercent": 14,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 6.32
     },
     {
       "username": "leniu",
@@ -27797,7 +27797,7 @@
       "appId": 1888160,
       "title": "ARMORED CORE VI FIRES OF RUBICON",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/1888160/achievements/",
-      "playtimeHours": 21.45,
+      "playtimeHours": 22.57,
       "visible": true,
       "earnedAchievements": 16,
       "totalAchievements": 30,
@@ -27806,7 +27806,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 21.45,
+      "achievementsPlaytimeHours": 22.57,
       "popThresholdMetAt": "2026-07-31T08:28:37.889064+00:00"
     },
     {
@@ -35520,7 +35520,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 65.13,
+      "playtimeHours": 66.12,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -70759,9 +70759,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-08-28T17:46:14.812462+00:00",
+  "libraryUpdatedAt": "2026-08-29T11:50:26.337468+00:00",
   "libraryStats": {
-    "durationSeconds": 4.54,
+    "durationSeconds": 8.34,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -70770,12 +70770,12 @@
     "totalPlaytimeRows": 14506
   },
   "stats": {
-    "durationSeconds": 61.16,
+    "durationSeconds": 75.2,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
-    "cachedReuses": 2321,
-    "achievementSuccesses": 12,
+    "cachedReuses": 2324,
+    "achievementSuccesses": 9,
     "achievementErrors": 56,
     "cachedFallbacks": 56,
     "hltbTitlesRequested": 1290,
