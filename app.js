@@ -127,7 +127,7 @@ const runtime = {
   cycleGiveawaySearch: "",
 };
 const GAME_OVERRIDE_FIELDS = ["hltbHoursOverride", "hltbUrlOverride", "achievementTargetOverride"];
-const WIN_OVERRIDE_FIELDS = ["requiredAchievementsOverride", "monthOverride"];
+const WIN_OVERRIDE_FIELDS = ["requiredAchievementsOverride", "monthOverride", "completionOverride"];
 const GIVEAWAY_OVERRIDE_FIELDS = ["giveawayKindOverride", "manualWinners", "cycleMonthOverride", "summerBasePointsOverride"];
 const MEMBER_OVERRIDE_FIELDS = ["membershipStatus"];
 
@@ -151,6 +151,7 @@ const elements = {
   syncStatus: document.querySelector("#sync-status"),
   memberOverview: document.querySelector("#member-overview"),
   recentGiveaways: document.querySelector("#recent-giveaways"),
+  monthlyYearFilter: document.querySelector("#monthly-year-filter"),
   monthlyFilter: document.querySelector("#monthly-filter"),
   monthlyMemberFilter: document.querySelector("#monthly-member-filter"),
   monthlyGameSearch: document.querySelector("#monthly-game-search"),
@@ -359,6 +360,10 @@ function bindEvents() {
   elements.syncRefreshButton?.addEventListener("click", () => refreshRemoteSync());
   elements.steamRefreshButton?.addEventListener("click", () => refreshSteamProgress());
   elements.steamRefreshAllButton?.addEventListener("click", () => refreshSteamProgress({ fullRefresh: true }));
+  elements.monthlyYearFilter?.addEventListener("change", () => {
+    renderProgressViews();
+    void loadVisibleGameMedia({ silent: true });
+  });
   elements.monthlyFilter?.addEventListener("change", () => {
     renderProgressViews();
     void loadVisibleGameMedia({ silent: true });
@@ -1449,6 +1454,7 @@ function renderProgressViews() {
   }
 
   const months = getAvailableMonths({ includeFuturePlayMonths: true });
+  const progressDate = getProgressDateFilter(months);
 
   // Optional per-member filter (merges the old User progress page in here):
   // pick a member to scope the table to their wins, across one month or all.
@@ -1464,11 +1470,7 @@ function renderProgressViews() {
       String(left.name || "").localeCompare(String(right.name || ""), "en", { sensitivity: "base" }),
     );
 
-  const monthSelection = elements.monthlyFilter.value;
-  const selectedMonth =
-    monthSelection === "all" || months.includes(monthSelection)
-      ? monthSelection
-      : getDefaultProgressMonth(months);
+  const { selectedYear, selectedMonth, selectedMonthKey, years, monthNumbers } = progressDate;
   const memberSelection = elements.monthlyMemberFilter?.value || "all";
   const selectedMember =
     memberSelection !== "all" && filterMembers.some((member) => member.id === memberSelection)
@@ -1481,7 +1483,11 @@ function renderProgressViews() {
   const gameSearch = String(elements.monthlyGameSearch?.value || "").trim().toLowerCase();
 
   const monthlyWins = state.wins.filter((win) => {
-    if (selectedMonth && selectedMonth !== "all" && getWinPlayMonth(win) !== selectedMonth) {
+    const playMonth = getWinPlayMonth(win);
+    if (selectedYear && selectedYear !== "all" && playMonth.slice(0, 4) !== selectedYear) {
+      return false;
+    }
+    if (selectedMonth && selectedMonth !== "all" && playMonth.slice(5, 7) !== selectedMonth) {
       return false;
     }
     if (selectedMember !== "all" && win.memberId !== selectedMember) {
@@ -1494,21 +1500,36 @@ function renderProgressViews() {
         return false;
       }
     }
-    return Boolean(selectedMonth) || selectedMember !== "all" || Boolean(gameSearch);
+    return Boolean(selectedYear || selectedMonth) || selectedMember !== "all" || Boolean(gameSearch);
   });
-  const monthlyGiveaways = selectedMonth && selectedMonth !== "all" ? getGiveawaysForMonth(selectedMonth) : [];
-  const period = selectedMonth && selectedMonth !== "all" ? getPeriodInfo(`${selectedMonth}-01`) : null;
+  const monthlyGiveaways = selectedMonthKey ? getGiveawaysForMonth(selectedMonthKey) : [];
+  const period = selectedMonthKey ? getPeriodInfo(`${selectedMonthKey}-01`) : null;
 
   // Future months exist because an unreleased-game win was pushed to its release
   // month; label them so they read as deliberate, not a data glitch.
   const pickerCurrentMonth = monthKey(state.settings.currentDate || "");
-  elements.monthlyFilter.innerHTML = months.length
+  if (elements.monthlyYearFilter) {
+    elements.monthlyYearFilter.innerHTML = years.length
+      ? [`<option value="all" ${selectedYear === "all" ? "selected" : ""}>All years</option>`]
+          .concat(
+            years.map(
+              (year) => `<option value="${year}" ${year === selectedYear ? "selected" : ""}>${year}</option>`,
+            ),
+          )
+          .join("")
+      : `<option value="">No wins</option>`;
+  }
+
+  elements.monthlyFilter.innerHTML = monthNumbers.length
     ? [`<option value="all" ${selectedMonth === "all" ? "selected" : ""}>All months</option>`]
         .concat(
-          months.map(
-            (month) =>
-              `<option value="${month}" ${month === selectedMonth ? "selected" : ""}>${formatMonthKey(month)}${pickerCurrentMonth && month > pickerCurrentMonth ? " (upcoming)" : ""}</option>`,
-          ),
+          monthNumbers.map((month) => {
+            const monthKeyForLabel = `${selectedYear === "all" ? "2000" : selectedYear || "2000"}-${month}`;
+            const isUpcoming = months.some(
+              (availableMonth) => availableMonth === monthKeyForLabel && pickerCurrentMonth && availableMonth > pickerCurrentMonth,
+            );
+            return `<option value="${month}" ${month === selectedMonth ? "selected" : ""}>${formatMonthName(month)}${isUpcoming ? " (upcoming)" : ""}</option>`;
+          }),
         )
         .join("")
     : `<option value="">No wins</option>`;
@@ -1527,7 +1548,15 @@ function renderProgressViews() {
   }
 
   if (elements.periodSummary) {
-    const scope = selectedMonth === "all" ? "All months" : selectedMonth ? formatMonthKey(selectedMonth) : "";
+    const scope = selectedYear === "all"
+      ? selectedMonth === "all"
+        ? "All years"
+        : `${formatMonthName(selectedMonth)} (all years)`
+      : selectedYear
+        ? selectedMonth === "all"
+          ? `${selectedYear} • All months`
+          : formatMonthKey(selectedMonthKey)
+        : "";
     if (!scope && selectedMember === "all") {
       elements.periodSummary.textContent = "Waiting for synced wins.";
     } else {
@@ -1550,7 +1579,7 @@ function renderProgressViews() {
 
   renderPopEffortCards(monthlyWins);
   renderMonthlyDetailsTable(elements.monthlyProgressTable, applyPopEffortFilter(monthlyWins));
-  renderCycleViews(selectedMonth === "all" ? "" : selectedMonth);
+  renderCycleViews(selectedMonthKey);
 }
 
 // The bands are the page's main lens: "is everyone doing the bare minimum, or
@@ -3561,7 +3590,8 @@ function renderMonthlyDetailsTable(target, winsSubset, sortMode = elements.month
         game?.hltbUrlOverride ||
         (game?.hltbHoursOverride !== undefined && game?.hltbHoursOverride !== null) ||
         hasGameAchievementTargetOverride(game) ||
-        hasWinAchievementTargetOverride(win);
+        hasWinAchievementTargetOverride(win) ||
+        hasWinCompletionOverride(win);
 
       // HLTB is the input to the required figure, not a fact you compare rows on,
       // so it moves into the playtime cell's tooltip and the edit control.
@@ -3582,6 +3612,7 @@ function renderMonthlyDetailsTable(target, winsSubset, sortMode = elements.month
           <td>
             ${buildPopMeter(effort.earnedAchievements, effort.requiredAchievements, totalAchievements, (value) => String(Math.round(value)), { completable: true })}
             <button class="inline-action" data-edit-action="achievement-target" data-win-id="${win.id}">Edit 10%</button>
+            <button class="inline-action" data-edit-action="completion" data-win-id="${win.id}">${win.completionOverride === true ? "Clear completion" : "Mark complete"}</button>
           </td>
           <td class="pop-effort-cell">
             <span class="pop-effort-band ${escapeHtml(effort.band)}" title="${escapeHtml(buildPopEffortTooltip(effort))}">${escapeHtml(band?.label || "")}</span>
@@ -4444,6 +4475,16 @@ function evaluateBaseMonthlyProgress(win) {
   const meetsHours = requiredHours === 0 || currentHours >= requiredHours;
   const meetsAchievements = requiredAchievements === 0 || currentAchievements >= requiredAchievements;
   const allAchievementsDone = totalAchievements > 0 && currentAchievements >= totalAchievements;
+
+  if (win.completionOverride === true) {
+    return {
+      badge: "success",
+      label: "Marked complete",
+      note: "Marked complete manually; future requirement changes do not affect this win.",
+      requiredHours,
+      requiredAchievements,
+    };
+  }
 
   // Once a win has genuinely reached the threshold it stays met forever, even if
   // the game's HLTB later grows (expansions) and pushes the required hours up.
@@ -5356,9 +5397,17 @@ function normalizeGiveawayMedia(giveaway) {
 function getVisibleMediaAppIds() {
   const appIds = new Set();
   const months = getAvailableMonths({ includeFuturePlayMonths: true });
-  const selectedMonth =
-    months.includes(elements.monthlyFilter?.value || "") ? elements.monthlyFilter.value : months[0] || "";
-  const monthlyWins = selectedMonth ? state.wins.filter((win) => getWinPlayMonth(win) === selectedMonth) : [];
+  const { selectedYear, selectedMonth } = getProgressDateFilter(months);
+  const monthlyWins = state.wins.filter((win) => {
+    const playMonth = getWinPlayMonth(win);
+    if (selectedYear && selectedYear !== "all" && playMonth.slice(0, 4) !== selectedYear) {
+      return false;
+    }
+    if (selectedMonth && selectedMonth !== "all" && playMonth.slice(5, 7) !== selectedMonth) {
+      return false;
+    }
+    return Boolean(selectedYear || selectedMonth);
+  });
   for (const win of monthlyWins) {
     const game = findById("games", win.gameId);
     const appId = Number(game?.appId || 0);
@@ -7105,6 +7154,10 @@ function hasWinAchievementTargetOverride(win) {
   );
 }
 
+function hasWinCompletionOverride(win) {
+  return win?.completionOverride === true;
+}
+
 function getRequiredAchievementsTarget(win, game) {
   // A game-level override applies to every win/giveaway of that game; a legacy
   // per-win override is still honored as a fallback where no game override exists.
@@ -7451,6 +7504,20 @@ function handleEditAction(button) {
         );
       },
     });
+    return;
+  }
+
+  if (action === "completion") {
+    const win = findById("wins", button.dataset.winId);
+    if (!win) {
+      return;
+    }
+    updateOverrideField(
+      "wins",
+      getWinOverrideKey(win),
+      "completionOverride",
+      win.completionOverride === true ? null : true,
+    );
     return;
   }
 
@@ -8044,6 +8111,42 @@ function getAvailableMonths(options) {
     .filter((month) => includeFuturePlayMonths || !currentMonth || month <= currentMonth)
     .sort()
     .reverse();
+}
+
+function formatMonthName(month) {
+  return new Date(2000, Number(month) - 1, 1).toLocaleDateString("en-US", { month: "long" });
+}
+
+function getProgressDateFilter(months) {
+  const years = Array.from(new Set(months.map((month) => month.slice(0, 4)))).sort().reverse();
+  const defaultMonthKey = getDefaultProgressMonth(months);
+  const defaultYear = defaultMonthKey.slice(0, 4) || years[0] || "";
+  const rawMonth = String(elements.monthlyFilter?.value || "");
+  const legacyMonthKey = /^\d{4}-\d{2}$/.test(rawMonth) ? rawMonth : "";
+  const rawYear = String(elements.monthlyYearFilter?.value || "") || legacyMonthKey.slice(0, 4);
+  const selectedYear = rawYear === "all" || years.includes(rawYear) ? rawYear : defaultYear;
+  const monthNumbers = Array.from(
+    new Set(
+      months
+        .filter((month) => selectedYear === "all" || month.startsWith(`${selectedYear}-`))
+        .map((month) => month.slice(5, 7)),
+    ),
+  ).sort();
+  const rawMonthNumber = legacyMonthKey ? legacyMonthKey.slice(5, 7) : rawMonth;
+  const defaultMonthNumber = defaultMonthKey.slice(5, 7);
+  const selectedMonth = rawMonthNumber === "all"
+    ? "all"
+    : monthNumbers.includes(rawMonthNumber)
+      ? rawMonthNumber
+      : rawMonthNumber
+        ? "all"
+        : monthNumbers.includes(defaultMonthNumber) && (!selectedYear || selectedYear === "all" || selectedYear === defaultYear)
+          ? defaultMonthNumber
+          : "all";
+  const selectedMonthKey = selectedYear && selectedYear !== "all" && selectedMonth !== "all"
+    ? `${selectedYear}-${selectedMonth}`
+    : "";
+  return { years, monthNumbers, selectedYear, selectedMonth, selectedMonthKey };
 }
 
 // PoP defaults to the previous calendar month (e.g. in July, June is selected),

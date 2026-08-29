@@ -429,6 +429,34 @@ test("threshold met is permanent: a latched win stays met even when now below re
   assert.equal(control.members.active.find((m) => m.name === "dave").thresholdMet, 0, "without the latch, 5h < 25h is below threshold");
 });
 
+test("manual completion override is per-win and preserves the normal achievement target", () => {
+  const currentDate = "2026-06-15";
+  const sync = {
+    members: [member("dave", true, "p-dave"), member("eve", true, "p-eve")],
+    giveaways: [
+      giveaway({ code: "A", creatorUsername: "x", appId: 100, winners: [{ username: "dave" }], startDate: "2026-01-05T00:00:00.000Z", endDate: "2026-01-10T00:00:00.000Z" }),
+      giveaway({ code: "B", creatorUsername: "x", appId: 100, winners: [{ username: "eve" }], startDate: "2026-01-05T00:00:00.000Z", endDate: "2026-01-10T00:00:00.000Z" }),
+    ],
+  };
+  const progress = {
+    progress: [
+      progressEntry("p-dave", 100, 5, { totalAchievements: 7 }),
+      progressEntry("p-eve", 100, 25, { totalAchievements: 7 }),
+    ],
+    hltb: [{ appId: 100, hltbHours: 100 }],
+  };
+  const derived = buildPenaltyAndMemberDerived({
+    sync,
+    progress,
+    overrides: { wins: { "sg-win-A-dave": { completionOverride: true } } },
+    settings: { currentDate },
+  });
+
+  const active = Object.fromEntries(derived.members.active.map((row) => [row.name, row]));
+  assert.equal(active.dave.thresholdMet, 1, "the manually completed win counts as met");
+  assert.equal(active.eve.thresholdMet, 0, "another player still has to earn the one-achievement target");
+});
+
 // =========================================================================
 // Scoreboard effort bands
 // =========================================================================

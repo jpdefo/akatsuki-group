@@ -521,7 +521,7 @@ export function buildSummerEventDerived({
 // }
 
 export const GAME_OVERRIDE_FIELDS = ["hltbHoursOverride", "achievementTargetOverride"];
-export const WIN_OVERRIDE_FIELDS = ["requiredAchievementsOverride", "monthOverride"];
+export const WIN_OVERRIDE_FIELDS = ["requiredAchievementsOverride", "monthOverride", "completionOverride"];
 export const GIVEAWAY_OVERRIDE_FIELDS = ["giveawayKindOverride", "manualWinners", "cycleMonthOverride", "summerBasePointsOverride"];
 export const MEMBER_OVERRIDE_FIELDS = ["membershipStatus"];
 export const PENALTY_GRACE_MONTHS = 4;
@@ -760,6 +760,10 @@ export function evaluateBaseMonthlyProgress(win, ctx) {
   const meetsHours = requiredHours === 0 || currentHours >= requiredHours;
   const meetsAchievements = requiredAchievements === 0 || currentAchievements >= requiredAchievements;
   const allAchievementsDone = totalAchievements > 0 && currentAchievements >= totalAchievements;
+
+  if (win.completionOverride === true) {
+    return { badge: "success", label: "Marked complete", note: "Marked complete manually; future requirement changes do not affect this win.", requiredHours, requiredAchievements };
+  }
 
   // Once a win has genuinely reached the threshold it stays met forever, even if
   // the game's HLTB later grows (expansions) and pushes the required hours up.
