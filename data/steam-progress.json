@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-31T11:58:07.271893+00:00",
+  "updatedAt": "2026-09-01T02:17:13.901742+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2689,16 +2689,16 @@
       "appId": 2668510,
       "title": "Red Dead Redemption",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2668510/achievements/",
-      "playtimeHours": 3.85,
+      "playtimeHours": 6.1,
       "visible": true,
-      "earnedAchievements": 2,
+      "earnedAchievements": 3,
       "totalAchievements": 51,
-      "achievementPercent": 4,
+      "achievementPercent": 6,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 3.85
+      "achievementsPlaytimeHours": 6.1
     },
     {
       "username": "BojanNS987",
@@ -7091,7 +7091,7 @@
       "username": "burntreynolds444",
       "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
       "appId": 3321460,
-      "title": "Crimson Desert",
+      "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
       "playtimeHours": 1.45,
       "visible": true,
@@ -7683,12 +7683,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 138.92,
+      "playtimeHours": 139.45,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 138.92,
+      "achievementsPlaytimeHours": 139.45,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -14520,15 +14520,16 @@
       "title": "Stellar Blade",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/3489700/achievements/",
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 4,
       "totalAchievements": 45,
-      "achievementPercent": 0,
-      "playtimeHours": 0.0,
+      "achievementPercent": 9,
+      "playtimeHours": 7.88,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 7.88,
+      "popThresholdMetAt": "2026-09-01T02:17:13.901111+00:00"
     },
     {
       "username": "Ernesttico",
@@ -17443,7 +17444,7 @@
       "username": "Horseflesh",
       "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
       "appId": 3321460,
-      "title": "Crimson Desert",
+      "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/3321460/achievements/",
       "playtimeHours": 0.0,
       "visible": true,
@@ -20894,15 +20895,16 @@
       "title": "Darwin's Paradox!",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/2989180/achievements/",
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 5,
       "totalAchievements": 20,
-      "achievementPercent": 0,
-      "playtimeHours": 0.82,
+      "achievementPercent": 25,
+      "playtimeHours": 1.82,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 0.82
+      "achievementsPlaytimeHours": 1.82,
+      "popThresholdMetAt": "2026-09-01T02:17:13.901286+00:00"
     },
     {
       "username": "Koalala",
@@ -27798,7 +27800,7 @@
       "appId": 1888160,
       "title": "ARMORED CORE VI FIRES OF RUBICON",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/1888160/achievements/",
-      "playtimeHours": 28.22,
+      "playtimeHours": 29.27,
       "visible": true,
       "earnedAchievements": 20,
       "totalAchievements": 30,
@@ -27807,7 +27809,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 28.22,
+      "achievementsPlaytimeHours": 29.27,
       "popThresholdMetAt": "2026-07-31T08:28:37.889064+00:00"
     },
     {
@@ -29968,7 +29970,7 @@
       "username": "Saikania",
       "steamProfile": "https://steamcommunity.com/profiles/76561198262118401",
       "appId": 3321460,
-      "title": "Crimson Desert",
+      "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/3321460/achievements/",
       "visible": true,
       "earnedAchievements": 0,
@@ -33206,7 +33208,7 @@
       "appId": 920210,
       "title": "LEGO Star Wars: The Skywalker Saga Ga...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198011705129/stats/920210/achievements/",
-      "playtimeHours": 37.93,
+      "playtimeHours": 38.43,
       "visible": true,
       "earnedAchievements": 20,
       "totalAchievements": 45,
@@ -33215,7 +33217,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 37.93,
+      "achievementsPlaytimeHours": 38.43,
       "popThresholdMetAt": "2026-08-07T06:56:57.656809+00:00"
     },
     {
@@ -35521,7 +35523,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 66.38,
+      "playtimeHours": 66.65,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -42917,11 +42919,11 @@
       "url": "https://howlongtobeat.com/game/135404"
     },
     {
-      "title": "Crimson Desert",
+      "title": "Crimson Desert Enhanced",
       "appId": 3321460,
-      "hltbHours": 62.73,
-      "matchedTitle": "Crimson Desert",
-      "url": "https://howlongtobeat.com/game/94122"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "Little Nightmares III",
@@ -70525,11 +70527,11 @@
       "url": "https://howlongtobeat.com/game/143794"
     },
     {
-      "title": "Crimson Desert",
+      "title": "Crimson Desert Enhanced",
       "appId": 3321460,
-      "hltbHours": 62.73,
-      "matchedTitle": "Crimson Desert",
-      "url": "https://howlongtobeat.com/game/94122"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "Planet of Lana II",
@@ -70658,11 +70660,11 @@
       "url": "https://howlongtobeat.com/game/124067"
     },
     {
-      "title": "Crimson Desert",
+      "title": "Crimson Desert Enhanced",
       "appId": 3321460,
-      "hltbHours": 62.73,
-      "matchedTitle": "Crimson Desert",
-      "url": "https://howlongtobeat.com/game/94122"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "Dying Light 2 Stay Human: Reloaded Edition",
@@ -70760,9 +70762,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-08-31T11:57:01.580512+00:00",
+  "libraryUpdatedAt": "2026-09-01T02:16:04.533023+00:00",
   "libraryStats": {
-    "durationSeconds": 7.27,
+    "durationSeconds": 8.04,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -70771,12 +70773,12 @@
     "totalPlaytimeRows": 14508
   },
   "stats": {
-    "durationSeconds": 72.97,
+    "durationSeconds": 77.41,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
-    "cachedReuses": 2322,
-    "achievementSuccesses": 11,
+    "cachedReuses": 2323,
+    "achievementSuccesses": 10,
     "achievementErrors": 56,
     "cachedFallbacks": 56,
     "hltbTitlesRequested": 1290,
