@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-01T02:17:13.901742+00:00",
+  "updatedAt": "2026-09-01T10:37:23.964398+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -20898,12 +20898,12 @@
       "earnedAchievements": 5,
       "totalAchievements": 20,
       "achievementPercent": 25,
-      "playtimeHours": 1.82,
+      "playtimeHours": 2.23,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 1.82,
+      "achievementsPlaytimeHours": 2.23,
       "popThresholdMetAt": "2026-09-01T02:17:13.901286+00:00"
     },
     {
@@ -33208,7 +33208,7 @@
       "appId": 920210,
       "title": "LEGO Star Wars: The Skywalker Saga Ga...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198011705129/stats/920210/achievements/",
-      "playtimeHours": 38.43,
+      "playtimeHours": 38.87,
       "visible": true,
       "earnedAchievements": 20,
       "totalAchievements": 45,
@@ -33217,7 +33217,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 38.43,
+      "achievementsPlaytimeHours": 38.87,
       "popThresholdMetAt": "2026-08-07T06:56:57.656809+00:00"
     },
     {
@@ -38371,12 +38371,12 @@
       "earnedAchievements": 31,
       "totalAchievements": 35,
       "achievementPercent": 89,
-      "playtimeHours": 976.53,
+      "playtimeHours": 978.88,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 976.53,
+      "achievementsPlaytimeHours": 978.88,
       "popThresholdMetAt": "2026-06-26T07:11:08.801512+00:00"
     },
     {
@@ -70762,9 +70762,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-09-01T02:16:04.533023+00:00",
+  "libraryUpdatedAt": "2026-09-01T10:36:31.933153+00:00",
   "libraryStats": {
-    "durationSeconds": 8.04,
+    "durationSeconds": 4.91,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -70773,12 +70773,12 @@
     "totalPlaytimeRows": 14508
   },
   "stats": {
-    "durationSeconds": 77.41,
+    "durationSeconds": 56.95,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
-    "cachedReuses": 2323,
-    "achievementSuccesses": 10,
+    "cachedReuses": 2326,
+    "achievementSuccesses": 7,
     "achievementErrors": 56,
     "cachedFallbacks": 56,
     "hltbTitlesRequested": 1290,
