@@ -1282,34 +1282,25 @@ function buildPenaltiesOwedCard() {
     return "";
   }
 
-  // Grouped by member so someone who owes several games reads as one block.
-  // buildPenaltiesPageData sorts by deadline, so the most urgent member is first.
-  const groups = new Map();
-  for (const row of debts) {
-    const name = String(row.member || "Unknown member");
-    if (!groups.has(name)) {
-      groups.set(name, []);
-    }
-    groups.get(name).push(row);
-  }
-
-  const groupsMarkup = Array.from(groups.entries())
-    .map(([name, rows]) => {
-      const count = rows.length > 1 ? `<span class="penalty-group-count">${rows.length}</span>` : "";
-      return `
+  // Keep one block per debt so multiple games owed by one member use the same
+  // layout as debts owed by different members, with the member name repeated.
+  const groupsMarkup = debts
+    .map(
+      (row) => `
         <section class="penalty-group">
-          <h4 class="penalty-group-name">${escapeHtml(name)}${count}</h4>
-          <div class="penalty-tiles">${rows.map((row) => buildPenaltyRowTile(row)).join("")}</div>
+          <h4 class="penalty-group-name">${escapeHtml(row.member || "Unknown member")}</h4>
+          <div class="penalty-tiles">${buildPenaltyRowTile(row)}</div>
         </section>
-      `;
-    })
+      `,
+    )
     .join("");
 
   // Which Steam refresh the "Overdue Xd" counters are measured from, so a stale
   // sync is visible instead of silently skewing them.
   const reference = formatDate(getPenaltyReferenceDate());
   const timedFrom = reference && reference !== "-" ? ` Timed from the ${reference} Steam sync.` : "";
-  const memberNote = groups.size > 1 ? ` across ${groups.size} members` : "";
+  const memberCount = new Set(debts.map((row) => String(row.member || "Unknown member"))).size;
+  const memberNote = memberCount > 1 ? ` across ${memberCount} members` : "";
 
   return `
     <article class="member-card negative penalty-owed-card">
