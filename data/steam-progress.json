@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-01T10:37:23.964398+00:00",
+  "updatedAt": "2026-09-02T10:02:37.553955+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2086,16 +2086,16 @@
       "appId": 1941540,
       "title": "Mafia: The Old Country",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/1941540/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 2.0,
       "visible": true,
-      "earnedAchievements": 0,
-      "totalAchievements": 55,
-      "achievementPercent": 0,
+      "earnedAchievements": 5,
+      "totalAchievements": 62,
+      "achievementPercent": 8,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 2.0
     },
     {
       "username": "BojanNS987",
@@ -2689,7 +2689,7 @@
       "appId": 2668510,
       "title": "Red Dead Redemption",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2668510/achievements/",
-      "playtimeHours": 6.1,
+      "playtimeHours": 6.87,
       "visible": true,
       "earnedAchievements": 3,
       "totalAchievements": 51,
@@ -2698,7 +2698,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 6.1
+      "achievementsPlaytimeHours": 6.87
     },
     {
       "username": "BojanNS987",
@@ -19297,15 +19297,15 @@
       "title": "Trine 5: A Clockwork Conspiracy",
       "progressUrl": "https://steamcommunity.com/profiles/76561198043996154/stats/1436700/achievements/",
       "visible": true,
-      "earnedAchievements": 37,
+      "earnedAchievements": 39,
       "totalAchievements": 62,
-      "achievementPercent": 60,
-      "playtimeHours": 92.78,
+      "achievementPercent": 63,
+      "playtimeHours": 93.43,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 92.78,
+      "achievementsPlaytimeHours": 93.43,
       "popThresholdMetAt": "2026-06-26T07:11:08.799308+00:00"
     },
     {
@@ -33208,7 +33208,7 @@
       "appId": 920210,
       "title": "LEGO Star Wars: The Skywalker Saga Ga...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198011705129/stats/920210/achievements/",
-      "playtimeHours": 38.87,
+      "playtimeHours": 40.33,
       "visible": true,
       "earnedAchievements": 20,
       "totalAchievements": 45,
@@ -33217,7 +33217,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 38.87,
+      "achievementsPlaytimeHours": 40.33,
       "popThresholdMetAt": "2026-08-07T06:56:57.656809+00:00"
     },
     {
@@ -35523,7 +35523,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 66.65,
+      "playtimeHours": 66.95,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -36363,15 +36363,15 @@
       "title": "FINAL FANTASY TACTICS - The Ivalice C...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/1004640/achievements/",
       "visible": true,
-      "earnedAchievements": 22,
+      "earnedAchievements": 26,
       "totalAchievements": 50,
-      "achievementPercent": 44,
-      "playtimeHours": 22.52,
+      "achievementPercent": 52,
+      "playtimeHours": 23.97,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 22.52,
+      "achievementsPlaytimeHours": 23.97,
       "popThresholdMetAt": "2026-07-06T18:27:00.287372+00:00"
     },
     {
@@ -70756,32 +70756,53 @@
       "hltbHours": 7.84,
       "matchedTitle": "Directive 8020",
       "url": "https://howlongtobeat.com/game/116632"
+    },
+    {
+      "title": "The Séance of Blake Manor",
+      "appId": 1395520,
+      "hltbHours": 14.76,
+      "matchedTitle": "The Séance of Blake Manor",
+      "url": "https://howlongtobeat.com/game/165387"
+    },
+    {
+      "title": "METAL GEAR SOLID Δ: SNAKE EATER",
+      "appId": 2417610,
+      "hltbHours": 12.18,
+      "matchedTitle": "Metal Gear Solid Δ: Snake Eater",
+      "url": "https://howlongtobeat.com/game/129234"
+    },
+    {
+      "title": "Resonance: A Plague Tale Legacy",
+      "appId": 2713000,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     }
   ],
   "steamApiEnabled": true,
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-09-01T10:36:31.933153+00:00",
+  "libraryUpdatedAt": "2026-09-02T10:01:31.668437+00:00",
   "libraryStats": {
-    "durationSeconds": 4.91,
+    "durationSeconds": 7.34,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14508
+    "totalPlaytimeRows": 14510
   },
   "stats": {
-    "durationSeconds": 56.95,
+    "durationSeconds": 73.23,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
-    "cachedReuses": 2326,
-    "achievementSuccesses": 7,
+    "cachedReuses": 2324,
+    "achievementSuccesses": 9,
     "achievementErrors": 56,
     "cachedFallbacks": 56,
     "hltbTitlesRequested": 1290,
-    "hltbResultsAvailable": 4029
+    "hltbResultsAvailable": 4032
   }
 }
