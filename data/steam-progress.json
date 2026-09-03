@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-02T10:02:37.553955+00:00",
+  "updatedAt": "2026-09-03T10:13:21.820608+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2086,16 +2086,17 @@
       "appId": 1941540,
       "title": "Mafia: The Old Country",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/1941540/achievements/",
-      "playtimeHours": 2.0,
+      "playtimeHours": 4.45,
       "visible": true,
-      "earnedAchievements": 5,
+      "earnedAchievements": 14,
       "totalAchievements": 62,
-      "achievementPercent": 8,
+      "achievementPercent": 23,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.0
+      "achievementsPlaytimeHours": 4.45,
+      "popThresholdMetAt": "2026-09-03T10:13:21.819679+00:00"
     },
     {
       "username": "BojanNS987",
@@ -26980,16 +26981,16 @@
       "appId": 2713000,
       "title": "Resonance: A Plague Tale Legacy",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2713000/achievements/",
-      "playtimeHours": 13.78,
+      "playtimeHours": 16.28,
       "visible": true,
-      "earnedAchievements": 15,
+      "earnedAchievements": 18,
       "totalAchievements": 36,
-      "achievementPercent": 42,
+      "achievementPercent": 50,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 13.78
+      "achievementsPlaytimeHours": 16.28
     },
     {
       "username": "leniu",
@@ -33208,16 +33209,16 @@
       "appId": 920210,
       "title": "LEGO Star Wars: The Skywalker Saga Ga...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198011705129/stats/920210/achievements/",
-      "playtimeHours": 40.33,
+      "playtimeHours": 42.05,
       "visible": true,
-      "earnedAchievements": 20,
+      "earnedAchievements": 22,
       "totalAchievements": 45,
-      "achievementPercent": 44,
+      "achievementPercent": 49,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 40.33,
+      "achievementsPlaytimeHours": 42.05,
       "popThresholdMetAt": "2026-08-07T06:56:57.656809+00:00"
     },
     {
@@ -35523,7 +35524,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 66.95,
+      "playtimeHours": 67.15,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -36363,15 +36364,15 @@
       "title": "FINAL FANTASY TACTICS - The Ivalice C...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/1004640/achievements/",
       "visible": true,
-      "earnedAchievements": 26,
+      "earnedAchievements": 28,
       "totalAchievements": 50,
-      "achievementPercent": 52,
-      "playtimeHours": 23.97,
+      "achievementPercent": 56,
+      "playtimeHours": 26.4,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 23.97,
+      "achievementsPlaytimeHours": 26.4,
       "popThresholdMetAt": "2026-07-06T18:27:00.287372+00:00"
     },
     {
@@ -42542,15 +42543,16 @@
       "appId": 3751260,
       "title": "The Blood of Dawnwalker",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/3751260/achievements/",
-      "playtimeHours": 0.0,
-      "visible": false,
+      "playtimeHours": 1.33,
+      "visible": true,
       "earnedAchievements": 0,
-      "totalAchievements": 0,
+      "totalAchievements": 46,
       "achievementPercent": 0,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "error": "HTTP Error 403: Forbidden"
+      "error": null,
+      "achievementsPlaytimeHours": 1.33
     }
   ],
   "hltb": [
@@ -70783,25 +70785,25 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-09-02T10:01:31.668437+00:00",
+  "libraryUpdatedAt": "2026-09-03T10:12:20.926598+00:00",
   "libraryStats": {
-    "durationSeconds": 7.34,
+    "durationSeconds": 5.98,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14510
+    "totalPlaytimeRows": 14512
   },
   "stats": {
-    "durationSeconds": 73.23,
+    "durationSeconds": 66.89,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
-    "cachedReuses": 2324,
+    "cachedReuses": 2325,
     "achievementSuccesses": 9,
-    "achievementErrors": 56,
-    "cachedFallbacks": 56,
+    "achievementErrors": 55,
+    "cachedFallbacks": 55,
     "hltbTitlesRequested": 1290,
     "hltbResultsAvailable": 4032
   }
