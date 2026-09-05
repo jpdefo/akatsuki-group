@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T10:03:27.141926+00:00",
+  "updatedAt": "2026-09-05T09:32:47.900024+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -20966,7 +20966,7 @@
       "appId": 3751950,
       "title": "Assassin's Creed Black Flag Resynced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/3751950/achievements/",
-      "playtimeHours": 58.7,
+      "playtimeHours": 58.72,
       "visible": true,
       "earnedAchievements": 30,
       "totalAchievements": 49,
@@ -20975,7 +20975,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 58.7,
+      "achievementsPlaytimeHours": 58.72,
       "popThresholdMetAt": "2026-07-20T08:33:24.271635+00:00"
     },
     {
@@ -27802,7 +27802,7 @@
       "appId": 1888160,
       "title": "ARMORED CORE VI FIRES OF RUBICON",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/1888160/achievements/",
-      "playtimeHours": 29.27,
+      "playtimeHours": 30.03,
       "visible": true,
       "earnedAchievements": 20,
       "totalAchievements": 30,
@@ -27811,7 +27811,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 29.27,
+      "achievementsPlaytimeHours": 30.03,
       "popThresholdMetAt": "2026-07-31T08:28:37.889064+00:00"
     },
     {
@@ -28000,7 +28000,7 @@
       "appId": 3357650,
       "title": "PRAGMATA",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/3357650/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 0.13,
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 35,
@@ -28009,7 +28009,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 0.13
     },
     {
       "username": "Millsshogun",
@@ -36365,15 +36365,15 @@
       "title": "FINAL FANTASY TACTICS - The Ivalice C...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/1004640/achievements/",
       "visible": true,
-      "earnedAchievements": 28,
+      "earnedAchievements": 30,
       "totalAchievements": 50,
-      "achievementPercent": 56,
-      "playtimeHours": 27.68,
+      "achievementPercent": 60,
+      "playtimeHours": 29.8,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 27.68,
+      "achievementsPlaytimeHours": 29.8,
       "popThresholdMetAt": "2026-07-06T18:27:00.287372+00:00"
     },
     {
@@ -42544,7 +42544,7 @@
       "appId": 3751260,
       "title": "The Blood of Dawnwalker",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/3751260/achievements/",
-      "playtimeHours": 12.72,
+      "playtimeHours": 13.85,
       "visible": true,
       "earnedAchievements": 10,
       "totalAchievements": 46,
@@ -42553,7 +42553,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 12.72
+      "achievementsPlaytimeHours": 13.85
     }
   ],
   "hltb": [
@@ -70786,9 +70786,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-09-04T10:02:18.368094+00:00",
+  "libraryUpdatedAt": "2026-09-05T09:31:38.809162+00:00",
   "libraryStats": {
-    "durationSeconds": 8.22,
+    "durationSeconds": 7.46,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -70797,12 +70797,12 @@
     "totalPlaytimeRows": 14512
   },
   "stats": {
-    "durationSeconds": 77.01,
+    "durationSeconds": 76.56,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
-    "cachedReuses": 2322,
-    "achievementSuccesses": 12,
+    "cachedReuses": 2325,
+    "achievementSuccesses": 9,
     "achievementErrors": 55,
     "cachedFallbacks": 55,
     "hltbTitlesRequested": 1290,
