@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T09:32:47.900024+00:00",
+  "updatedAt": "2026-09-06T09:46:46.875155+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2086,16 +2086,16 @@
       "appId": 1941540,
       "title": "Mafia: The Old Country",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/1941540/achievements/",
-      "playtimeHours": 5.43,
+      "playtimeHours": 6.37,
       "visible": true,
-      "earnedAchievements": 15,
+      "earnedAchievements": 20,
       "totalAchievements": 62,
-      "achievementPercent": 24,
+      "achievementPercent": 32,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 5.43,
+      "achievementsPlaytimeHours": 6.37,
       "popThresholdMetAt": "2026-09-03T10:13:21.819679+00:00"
     },
     {
@@ -9529,15 +9529,15 @@
       "title": "007 First Light",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/3768760/achievements/",
       "visible": true,
-      "earnedAchievements": 4,
+      "earnedAchievements": 5,
       "totalAchievements": 37,
-      "achievementPercent": 11,
-      "playtimeHours": 4.27,
+      "achievementPercent": 14,
+      "playtimeHours": 6.33,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 4.27,
+      "achievementsPlaytimeHours": 6.33,
       "popThresholdMetAt": "2026-09-04T10:03:27.141144+00:00"
     },
     {
@@ -26982,16 +26982,16 @@
       "appId": 2713000,
       "title": "Resonance: A Plague Tale Legacy",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2713000/achievements/",
-      "playtimeHours": 16.28,
+      "playtimeHours": 19.42,
       "visible": true,
-      "earnedAchievements": 18,
+      "earnedAchievements": 26,
       "totalAchievements": 36,
-      "achievementPercent": 50,
+      "achievementPercent": 72,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 16.28
+      "achievementsPlaytimeHours": 19.42
     },
     {
       "username": "leniu",
@@ -35359,7 +35359,7 @@
       "appId": 2350790,
       "title": "Moonlighter 2: The Endless Vault",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2350790/achievements/",
-      "playtimeHours": 24.3,
+      "playtimeHours": 24.95,
       "visible": true,
       "earnedAchievements": 39,
       "totalAchievements": 56,
@@ -35368,7 +35368,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 24.3,
+      "achievementsPlaytimeHours": 24.95,
       "popThresholdMetAt": "2026-07-02T07:02:25.511035+00:00"
     },
     {
@@ -42544,16 +42544,16 @@
       "appId": 3751260,
       "title": "The Blood of Dawnwalker",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/3751260/achievements/",
-      "playtimeHours": 13.85,
+      "playtimeHours": 16.95,
       "visible": true,
-      "earnedAchievements": 10,
+      "earnedAchievements": 12,
       "totalAchievements": 46,
-      "achievementPercent": 22,
+      "achievementPercent": 26,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 13.85
+      "achievementsPlaytimeHours": 16.95
     }
   ],
   "hltb": [
@@ -70786,18 +70786,18 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-09-05T09:31:38.809162+00:00",
+  "libraryUpdatedAt": "2026-09-06T09:45:46.655656+00:00",
   "libraryStats": {
-    "durationSeconds": 7.46,
+    "durationSeconds": 9.28,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14512
+    "totalPlaytimeRows": 14516
   },
   "stats": {
-    "durationSeconds": 76.56,
+    "durationSeconds": 69.51,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
