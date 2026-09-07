@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T09:46:46.875155+00:00",
+  "updatedAt": "2026-09-07T10:51:24.047289+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2086,16 +2086,16 @@
       "appId": 1941540,
       "title": "Mafia: The Old Country",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/1941540/achievements/",
-      "playtimeHours": 6.37,
+      "playtimeHours": 8.88,
       "visible": true,
-      "earnedAchievements": 20,
+      "earnedAchievements": 26,
       "totalAchievements": 62,
-      "achievementPercent": 32,
+      "achievementPercent": 42,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 6.37,
+      "achievementsPlaytimeHours": 8.88,
       "popThresholdMetAt": "2026-09-03T10:13:21.819679+00:00"
     },
     {
@@ -27802,7 +27802,7 @@
       "appId": 1888160,
       "title": "ARMORED CORE VI FIRES OF RUBICON",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/1888160/achievements/",
-      "playtimeHours": 30.03,
+      "playtimeHours": 32.43,
       "visible": true,
       "earnedAchievements": 20,
       "totalAchievements": 30,
@@ -27811,7 +27811,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 30.03,
+      "achievementsPlaytimeHours": 32.43,
       "popThresholdMetAt": "2026-07-31T08:28:37.889064+00:00"
     },
     {
@@ -35525,7 +35525,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 67.9,
+      "playtimeHours": 68.28,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -42544,16 +42544,16 @@
       "appId": 3751260,
       "title": "The Blood of Dawnwalker",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/3751260/achievements/",
-      "playtimeHours": 16.95,
+      "playtimeHours": 18.72,
       "visible": true,
-      "earnedAchievements": 12,
+      "earnedAchievements": 14,
       "totalAchievements": 46,
-      "achievementPercent": 26,
+      "achievementPercent": 30,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 16.95
+      "achievementsPlaytimeHours": 18.72
     }
   ],
   "hltb": [
@@ -70786,9 +70786,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-09-06T09:45:46.655656+00:00",
+  "libraryUpdatedAt": "2026-09-07T10:50:25.162719+00:00",
   "libraryStats": {
-    "durationSeconds": 9.28,
+    "durationSeconds": 6.77,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -70797,12 +70797,12 @@
     "totalPlaytimeRows": 14516
   },
   "stats": {
-    "durationSeconds": 69.51,
+    "durationSeconds": 65.66,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
-    "cachedReuses": 2325,
-    "achievementSuccesses": 9,
+    "cachedReuses": 2327,
+    "achievementSuccesses": 7,
     "achievementErrors": 55,
     "cachedFallbacks": 55,
     "hltbTitlesRequested": 1290,
