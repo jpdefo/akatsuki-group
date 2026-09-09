@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-08T10:10:33.179265+00:00",
+  "updatedAt": "2026-09-09T10:13:44.349518+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -9529,15 +9529,15 @@
       "title": "007 First Light",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/3768760/achievements/",
       "visible": true,
-      "earnedAchievements": 7,
+      "earnedAchievements": 8,
       "totalAchievements": 37,
-      "achievementPercent": 19,
-      "playtimeHours": 7.0,
+      "achievementPercent": 22,
+      "playtimeHours": 8.02,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 7.0,
+      "achievementsPlaytimeHours": 8.02,
       "popThresholdMetAt": "2026-09-04T10:03:27.141144+00:00"
     },
     {
@@ -20897,15 +20897,15 @@
       "title": "Darwin's Paradox!",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/2989180/achievements/",
       "visible": true,
-      "earnedAchievements": 15,
+      "earnedAchievements": 20,
       "totalAchievements": 20,
-      "achievementPercent": 75,
-      "playtimeHours": 8.32,
+      "achievementPercent": 100,
+      "playtimeHours": 9.5,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 8.32,
+      "achievementsPlaytimeHours": 9.5,
       "popThresholdMetAt": "2026-09-01T02:17:13.901286+00:00"
     },
     {
@@ -20966,7 +20966,7 @@
       "appId": 3751950,
       "title": "Assassin's Creed Black Flag Resynced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/3751950/achievements/",
-      "playtimeHours": 58.72,
+      "playtimeHours": 61.87,
       "visible": true,
       "earnedAchievements": 30,
       "totalAchievements": 49,
@@ -20975,7 +20975,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 58.72,
+      "achievementsPlaytimeHours": 61.87,
       "popThresholdMetAt": "2026-07-20T08:33:24.271635+00:00"
     },
     {
@@ -28000,16 +28000,16 @@
       "appId": 3357650,
       "title": "PRAGMATA",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/3357650/achievements/",
-      "playtimeHours": 3.82,
+      "playtimeHours": 4.37,
       "visible": true,
-      "earnedAchievements": 11,
+      "earnedAchievements": 14,
       "totalAchievements": 35,
-      "achievementPercent": 31,
+      "achievementPercent": 40,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 3.82,
+      "achievementsPlaytimeHours": 4.37,
       "popThresholdMetAt": "2026-09-08T10:10:33.178905+00:00"
     },
     {
@@ -36369,12 +36369,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 50,
       "achievementPercent": 64,
-      "playtimeHours": 32.28,
+      "playtimeHours": 33.87,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 32.28,
+      "achievementsPlaytimeHours": 33.87,
       "popThresholdMetAt": "2026-07-06T18:27:00.287372+00:00"
     },
     {
@@ -42545,16 +42545,16 @@
       "appId": 3751260,
       "title": "The Blood of Dawnwalker",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/3751260/achievements/",
-      "playtimeHours": 24.47,
+      "playtimeHours": 27.33,
       "visible": true,
-      "earnedAchievements": 16,
+      "earnedAchievements": 21,
       "totalAchievements": 46,
-      "achievementPercent": 35,
+      "achievementPercent": 46,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 24.47
+      "achievementsPlaytimeHours": 27.33
     }
   ],
   "hltb": [
@@ -70787,23 +70787,23 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-09-08T10:09:32.112493+00:00",
+  "libraryUpdatedAt": "2026-09-09T10:12:50.614533+00:00",
   "libraryStats": {
-    "durationSeconds": 4.86,
+    "durationSeconds": 4.02,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14518
+    "totalPlaytimeRows": 14520
   },
   "stats": {
-    "durationSeconds": 65.94,
+    "durationSeconds": 57.77,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
-    "cachedReuses": 2321,
-    "achievementSuccesses": 13,
+    "cachedReuses": 2324,
+    "achievementSuccesses": 10,
     "achievementErrors": 55,
     "cachedFallbacks": 55,
     "hltbTitlesRequested": 1290,
