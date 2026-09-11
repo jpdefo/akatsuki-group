@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-10T10:08:31.794803+00:00",
+  "updatedAt": "2026-09-11T10:05:59.843937+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2849,7 +2849,7 @@
       "appId": 2863680,
       "title": "ZERO PARADES: For Dead Spies",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2863680/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 1.03,
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 55,
@@ -2858,7 +2858,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 1.03
     },
     {
       "username": "BojanNS987",
@@ -9532,12 +9532,12 @@
       "earnedAchievements": 9,
       "totalAchievements": 37,
       "achievementPercent": 24,
-      "playtimeHours": 8.52,
+      "playtimeHours": 9.23,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 8.52,
+      "achievementsPlaytimeHours": 9.23,
       "popThresholdMetAt": "2026-09-04T10:03:27.141144+00:00"
     },
     {
@@ -14558,15 +14558,15 @@
       "title": "Retro Rewind - Video Store Simulator",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/3552140/achievements/",
       "visible": true,
-      "earnedAchievements": 11,
+      "earnedAchievements": 15,
       "totalAchievements": 18,
-      "achievementPercent": 61,
-      "playtimeHours": 11.03,
+      "achievementPercent": 83,
+      "playtimeHours": 16.08,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 11.03,
+      "achievementsPlaytimeHours": 16.08,
       "popThresholdMetAt": "2026-08-27T16:57:07.725852+00:00"
     },
     {
@@ -17481,7 +17481,7 @@
       "username": "Horseflesh",
       "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
       "appId": 3527760,
-      "title": "RoboCop: Rogue City - Unfinished Busi...",
+      "title": "RoboCop: Rogue City - Unfinished Business",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/3527760/achievements/",
       "visible": true,
       "earnedAchievements": 5,
@@ -20966,7 +20966,7 @@
       "appId": 3751950,
       "title": "Assassin's Creed Black Flag Resynced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/3751950/achievements/",
-      "playtimeHours": 69.48,
+      "playtimeHours": 79.77,
       "visible": true,
       "earnedAchievements": 35,
       "totalAchievements": 49,
@@ -20975,7 +20975,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 69.48,
+      "achievementsPlaytimeHours": 79.77,
       "popThresholdMetAt": "2026-07-20T08:33:24.271635+00:00"
     },
     {
@@ -28000,16 +28000,16 @@
       "appId": 3357650,
       "title": "PRAGMATA",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/3357650/achievements/",
-      "playtimeHours": 8.83,
+      "playtimeHours": 11.27,
       "visible": true,
-      "earnedAchievements": 19,
+      "earnedAchievements": 22,
       "totalAchievements": 35,
-      "achievementPercent": 54,
+      "achievementPercent": 63,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 8.83,
+      "achievementsPlaytimeHours": 11.27,
       "popThresholdMetAt": "2026-09-08T10:10:33.178905+00:00"
     },
     {
@@ -35360,7 +35360,7 @@
       "appId": 2350790,
       "title": "Moonlighter 2: The Endless Vault",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2350790/achievements/",
-      "playtimeHours": 24.95,
+      "playtimeHours": 26.42,
       "visible": true,
       "earnedAchievements": 39,
       "totalAchievements": 56,
@@ -35369,7 +35369,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 24.95,
+      "achievementsPlaytimeHours": 26.42,
       "popThresholdMetAt": "2026-07-02T07:02:25.511035+00:00"
     },
     {
@@ -42545,7 +42545,7 @@
       "appId": 3751260,
       "title": "The Blood of Dawnwalker",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/3751260/achievements/",
-      "playtimeHours": 35.28,
+      "playtimeHours": 40.43,
       "visible": true,
       "earnedAchievements": 25,
       "totalAchievements": 46,
@@ -42554,7 +42554,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 35.28
+      "achievementsPlaytimeHours": 40.43
     }
   ],
   "hltb": [
@@ -70781,32 +70781,46 @@
       "hltbHours": null,
       "matchedTitle": "",
       "url": ""
+    },
+    {
+      "title": "The Blood of Dawnwalker",
+      "appId": 3751260,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Black Myth: Wukong",
+      "appId": 2358720,
+      "hltbHours": 38.23,
+      "matchedTitle": "Black Myth: Wukong",
+      "url": "https://howlongtobeat.com/game/82089"
     }
   ],
   "steamApiEnabled": true,
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-09-10T10:07:33.035326+00:00",
+  "libraryUpdatedAt": "2026-09-11T10:04:58.751538+00:00",
   "libraryStats": {
-    "durationSeconds": 4.45,
+    "durationSeconds": 5.61,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14520
+    "totalPlaytimeRows": 14521
   },
   "stats": {
-    "durationSeconds": 63.22,
+    "durationSeconds": 66.72,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
-    "cachedReuses": 2325,
-    "achievementSuccesses": 9,
+    "cachedReuses": 2323,
+    "achievementSuccesses": 11,
     "achievementErrors": 55,
     "cachedFallbacks": 55,
     "hltbTitlesRequested": 1290,
-    "hltbResultsAvailable": 4032
+    "hltbResultsAvailable": 4034
   }
 }
