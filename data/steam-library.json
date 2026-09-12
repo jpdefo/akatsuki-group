@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-11T10:04:58.751538+00:00",
+  "updatedAt": "2026-09-12T09:40:10.640592+00:00",
   "apiEnabled": true,
   "refreshedScope": "all",
   "refreshedMonth": null,
@@ -19,7 +19,7 @@
       "steamId": "76561198073410742",
       "gamesVisible": true,
       "playtimeVisible": true,
-      "gameCount": 10221,
+      "gameCount": 10222,
       "error": null
     },
     {
@@ -91,7 +91,7 @@
       "steamId": "76561198065466175",
       "gamesVisible": true,
       "playtimeVisible": true,
-      "gameCount": 8898,
+      "gameCount": 8897,
       "error": null
     },
     {
@@ -4409,8 +4409,8 @@
       "username": "BojanNS987",
       "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
       "appId": 2863680,
-      "playtimeMinutes": 62,
-      "playtimeHours": 1.03,
+      "playtimeMinutes": 192,
+      "playtimeHours": 3.2,
       "source": "steam-web-api"
     },
     {
@@ -9177,6 +9177,14 @@
       "username": "bron99",
       "steamProfile": "https://steamcommunity.com/profiles/76561198073410742",
       "appId": 760620,
+      "playtimeMinutes": 0,
+      "playtimeHours": 0.0,
+      "source": "steam-web-api"
+    },
+    {
+      "username": "bron99",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198073410742",
+      "appId": 761700,
       "playtimeMinutes": 0,
       "playtimeHours": 0.0,
       "source": "steam-web-api"
@@ -22577,8 +22585,8 @@
       "username": "burntreynolds444",
       "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
       "appId": 1875580,
-      "playtimeMinutes": 210,
-      "playtimeHours": 3.5,
+      "playtimeMinutes": 215,
+      "playtimeHours": 3.58,
       "source": "steam-web-api"
     },
     {
@@ -33073,8 +33081,8 @@
       "username": "chOOkity",
       "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
       "appId": 3768760,
-      "playtimeMinutes": 554,
-      "playtimeHours": 9.23,
+      "playtimeMinutes": 690,
+      "playtimeHours": 11.5,
       "source": "steam-web-api"
     },
     {
@@ -63641,8 +63649,8 @@
       "username": "Koalala",
       "steamProfile": "https://steamcommunity.com/profiles/76561198065466175",
       "appId": 3751950,
-      "playtimeMinutes": 4786,
-      "playtimeHours": 79.77,
+      "playtimeMinutes": 4803,
+      "playtimeHours": 80.05,
       "source": "steam-web-api"
     },
     {
@@ -75809,8 +75817,8 @@
       "username": "leniu",
       "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
       "appId": 3751260,
-      "playtimeMinutes": 724,
-      "playtimeHours": 12.07,
+      "playtimeMinutes": 955,
+      "playtimeHours": 15.92,
       "source": "steam-web-api"
     },
     {
@@ -78273,8 +78281,8 @@
       "username": "Millsshogun",
       "steamProfile": "https://steamcommunity.com/profiles/76561198075996214",
       "appId": 3357650,
-      "playtimeMinutes": 676,
-      "playtimeHours": 11.27,
+      "playtimeMinutes": 861,
+      "playtimeHours": 14.35,
       "source": "steam-web-api"
     },
     {
@@ -99977,8 +99985,8 @@
       "username": "Wintermute101",
       "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
       "appId": 2350790,
-      "playtimeMinutes": 1585,
-      "playtimeHours": 26.42,
+      "playtimeMinutes": 1685,
+      "playtimeHours": 28.08,
       "source": "steam-web-api"
     },
     {
@@ -103065,8 +103073,8 @@
       "username": "xMisiu",
       "steamProfile": "https://steamcommunity.com/profiles/76561198082091554",
       "appId": 1004640,
-      "playtimeMinutes": 2032,
-      "playtimeHours": 33.87,
+      "playtimeMinutes": 2110,
+      "playtimeHours": 35.17,
       "source": "steam-web-api"
     },
     {
@@ -116384,12 +116392,12 @@
   ],
   "source": "steam-web-api",
   "stats": {
-    "durationSeconds": 5.61,
+    "durationSeconds": 6.56,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14521
+    "totalPlaytimeRows": 14522
   }
 }

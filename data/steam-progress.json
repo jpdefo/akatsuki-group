@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-11T10:05:59.843937+00:00",
+  "updatedAt": "2026-09-12T09:41:10.121245+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2849,7 +2849,7 @@
       "appId": 2863680,
       "title": "ZERO PARADES: For Dead Spies",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2863680/achievements/",
-      "playtimeHours": 1.03,
+      "playtimeHours": 3.2,
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 55,
@@ -2858,7 +2858,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.03
+      "achievementsPlaytimeHours": 3.2
     },
     {
       "username": "BojanNS987",
@@ -6671,7 +6671,7 @@
       "appId": 1875580,
       "title": "Mina the Hollower",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1875580/achievements/",
-      "playtimeHours": 3.5,
+      "playtimeHours": 3.58,
       "visible": true,
       "earnedAchievements": 1,
       "totalAchievements": 50,
@@ -6680,7 +6680,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 3.5
+      "achievementsPlaytimeHours": 3.58
     },
     {
       "username": "burntreynolds444",
@@ -9529,15 +9529,15 @@
       "title": "007 First Light",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/3768760/achievements/",
       "visible": true,
-      "earnedAchievements": 9,
+      "earnedAchievements": 17,
       "totalAchievements": 37,
-      "achievementPercent": 24,
-      "playtimeHours": 9.23,
+      "achievementPercent": 46,
+      "playtimeHours": 11.5,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 9.23,
+      "achievementsPlaytimeHours": 11.5,
       "popThresholdMetAt": "2026-09-04T10:03:27.141144+00:00"
     },
     {
@@ -20966,7 +20966,7 @@
       "appId": 3751950,
       "title": "Assassin's Creed Black Flag Resynced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/3751950/achievements/",
-      "playtimeHours": 79.77,
+      "playtimeHours": 80.05,
       "visible": true,
       "earnedAchievements": 35,
       "totalAchievements": 49,
@@ -20975,7 +20975,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 79.77,
+      "achievementsPlaytimeHours": 80.05,
       "popThresholdMetAt": "2026-07-20T08:33:24.271635+00:00"
     },
     {
@@ -28000,16 +28000,16 @@
       "appId": 3357650,
       "title": "PRAGMATA",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/3357650/achievements/",
-      "playtimeHours": 11.27,
+      "playtimeHours": 14.35,
       "visible": true,
-      "earnedAchievements": 22,
+      "earnedAchievements": 25,
       "totalAchievements": 35,
-      "achievementPercent": 63,
+      "achievementPercent": 71,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 11.27,
+      "achievementsPlaytimeHours": 14.35,
       "popThresholdMetAt": "2026-09-08T10:10:33.178905+00:00"
     },
     {
@@ -35360,7 +35360,7 @@
       "appId": 2350790,
       "title": "Moonlighter 2: The Endless Vault",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2350790/achievements/",
-      "playtimeHours": 26.42,
+      "playtimeHours": 28.08,
       "visible": true,
       "earnedAchievements": 39,
       "totalAchievements": 56,
@@ -35369,7 +35369,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 26.42,
+      "achievementsPlaytimeHours": 28.08,
       "popThresholdMetAt": "2026-07-02T07:02:25.511035+00:00"
     },
     {
@@ -36366,15 +36366,15 @@
       "title": "FINAL FANTASY TACTICS - The Ivalice C...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/1004640/achievements/",
       "visible": true,
-      "earnedAchievements": 32,
+      "earnedAchievements": 33,
       "totalAchievements": 50,
-      "achievementPercent": 64,
-      "playtimeHours": 33.87,
+      "achievementPercent": 66,
+      "playtimeHours": 35.17,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 33.87,
+      "achievementsPlaytimeHours": 35.17,
       "popThresholdMetAt": "2026-07-06T18:27:00.287372+00:00"
     },
     {
@@ -70801,18 +70801,18 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-09-11T10:04:58.751538+00:00",
+  "libraryUpdatedAt": "2026-09-12T09:40:10.640592+00:00",
   "libraryStats": {
-    "durationSeconds": 5.61,
+    "durationSeconds": 6.56,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14521
+    "totalPlaytimeRows": 14522
   },
   "stats": {
-    "durationSeconds": 66.72,
+    "durationSeconds": 66.05,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
