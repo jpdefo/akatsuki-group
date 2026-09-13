@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-12T09:41:10.121245+00:00",
+  "updatedAt": "2026-09-13T10:42:45.811921+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -7684,12 +7684,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 139.45,
+      "playtimeHours": 140.08,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 139.45,
+      "achievementsPlaytimeHours": 140.08,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -9529,15 +9529,15 @@
       "title": "007 First Light",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/3768760/achievements/",
       "visible": true,
-      "earnedAchievements": 17,
+      "earnedAchievements": 18,
       "totalAchievements": 37,
-      "achievementPercent": 46,
-      "playtimeHours": 11.5,
+      "achievementPercent": 49,
+      "playtimeHours": 12.5,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 11.5,
+      "achievementsPlaytimeHours": 12.5,
       "popThresholdMetAt": "2026-09-04T10:03:27.141144+00:00"
     },
     {
@@ -14558,15 +14558,15 @@
       "title": "Retro Rewind - Video Store Simulator",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/3552140/achievements/",
       "visible": true,
-      "earnedAchievements": 15,
+      "earnedAchievements": 17,
       "totalAchievements": 18,
-      "achievementPercent": 83,
-      "playtimeHours": 16.08,
+      "achievementPercent": 94,
+      "playtimeHours": 21.17,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 16.08,
+      "achievementsPlaytimeHours": 21.17,
       "popThresholdMetAt": "2026-08-27T16:57:07.725852+00:00"
     },
     {
@@ -28000,16 +28000,16 @@
       "appId": 3357650,
       "title": "PRAGMATA",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/3357650/achievements/",
-      "playtimeHours": 14.35,
+      "playtimeHours": 15.75,
       "visible": true,
-      "earnedAchievements": 25,
+      "earnedAchievements": 30,
       "totalAchievements": 35,
-      "achievementPercent": 71,
+      "achievementPercent": 86,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 14.35,
+      "achievementsPlaytimeHours": 15.75,
       "popThresholdMetAt": "2026-09-08T10:10:33.178905+00:00"
     },
     {
@@ -33211,7 +33211,7 @@
       "appId": 920210,
       "title": "LEGO Star Wars: The Skywalker Saga Ga...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198011705129/stats/920210/achievements/",
-      "playtimeHours": 46.18,
+      "playtimeHours": 47.27,
       "visible": true,
       "earnedAchievements": 22,
       "totalAchievements": 45,
@@ -33220,7 +33220,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 46.18,
+      "achievementsPlaytimeHours": 47.27,
       "popThresholdMetAt": "2026-08-07T06:56:57.656809+00:00"
     },
     {
@@ -35526,7 +35526,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 69.58,
+      "playtimeHours": 70.13,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -42545,16 +42545,16 @@
       "appId": 3751260,
       "title": "The Blood of Dawnwalker",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/3751260/achievements/",
-      "playtimeHours": 40.43,
+      "playtimeHours": 46.43,
       "visible": true,
-      "earnedAchievements": 25,
+      "earnedAchievements": 30,
       "totalAchievements": 46,
-      "achievementPercent": 54,
+      "achievementPercent": 65,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 40.43
+      "achievementsPlaytimeHours": 46.43
     }
   ],
   "hltb": [
@@ -70801,9 +70801,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-09-12T09:40:10.640592+00:00",
+  "libraryUpdatedAt": "2026-09-13T10:41:37.431068+00:00",
   "libraryStats": {
-    "durationSeconds": 6.56,
+    "durationSeconds": 9.59,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -70812,12 +70812,12 @@
     "totalPlaytimeRows": 14522
   },
   "stats": {
-    "durationSeconds": 66.05,
+    "durationSeconds": 77.98,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
-    "cachedReuses": 2323,
-    "achievementSuccesses": 11,
+    "cachedReuses": 2324,
+    "achievementSuccesses": 10,
     "achievementErrors": 55,
     "cachedFallbacks": 55,
     "hltbTitlesRequested": 1290,
