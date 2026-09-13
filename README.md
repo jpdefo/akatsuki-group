@@ -1,39 +1,49 @@
 # Akatsuki Group Monitor
 
-Personal project focused on building a practical dashboard for a SteamGifts giveaway group. The goal was to turn messy operational data into a clear, usable system for tracking activity, winners, progress, and event scoring without relying on a heavy framework.
+Live project: https://jpdefo.github.io/akatsuki-group/
 
-## What I built
+Akatsuki Group Monitor is a personal project designed to manage the operational complexity of a SteamGifts giveaway community. The goal was to build a lightweight, data-driven dashboard that helps track member activity, cycle performance, giveaway outcomes, and event scoring in a single place.
 
-- Group dashboard for member activity, giveaway history, and status overview
-- Cycle tracking and monthly progress reporting
+## Project overview
+
+This project solves a real operational problem: community group management generates large volumes of data from SteamGifts, member progress, and recurring events. Instead of relying on scattered spreadsheets or manual tracking, I built an application that consolidates that information into a structured, readable system.
+
+## What was implemented
+
+- Dashboard for recent activity, member status, and giveaway history
+- Cycle tracking and monthly progress monitoring
 - Summer event scoring with creator and entrant point calculations
-- Admin workflow for manual corrections while preserving synced data integrity
-- Automated refresh jobs for Steam library and progress data
-- Static site export for GitHub Pages deployment
+- Manual override system to correct synced records without destroying source data
+- Steam data refresh automation for library and progress insights
+- Static export pipeline for GitHub Pages deployment
+- Validation and quality checks for frontend and data integrity
 
-## Stack
+## Technical approach
 
-- Python for the backend, automation jobs, data processing, and API serving
-- JavaScript for the frontend rendering and client-side state management
-- JSON as the app’s persistent data layer
-- GitHub Pages for public deployment of the static dashboard
-- Node + ESLint + tests for validation and code quality
+- Python backend for data processing, refresh jobs, and serving local APIs
+- Vanilla JavaScript frontend for a lightweight, dependency-free UI
+- JSON-based persistence to store synced data, metadata, and overrides
+- GitHub Pages deployment for a static public version of the dashboard
+- Node-based validation with linting and tests to maintain reliability
 
-## Architecture
+## Why this project is interesting
 
-The project follows a simple but effective pattern: the Python backend ingests and normalizes external data, the frontend renders dashboards from that state, and the JSON files under data/ act as the source of truth. This makes the app easy to run locally while still supporting a publishable static version.
+This project combines product thinking, data engineering, and frontend implementation in a single workflow. It required solving problems around:
 
-## Why this project matters
+- data normalization from multiple sources
+- maintaining data quality in the presence of manual edits
+- designing a UI that turns operational data into useful decisions
+- creating automated refresh workflows without adding unnecessary complexity
+- building something usable as both a local tool and a public web dashboard
 
-This project reflects a real-world workflow problem: managing a community-driven giveaway group requires data cleanup, tracking, rules enforcement, and reporting. I built it to solve that with a clean and maintainable approach that combines data processing, automation, and user-facing reporting.
+## Skills demonstrated
 
-It also gave me experience with:
-
-- data modeling and normalization
-- API-driven and file-based persistence patterns
-- frontend state handling in vanilla JavaScript
-- operational automation and validation workflows
-- building a project that can be deployed as a lightweight static site
+- Full-stack project design for a small but real-world application
+- Backend automation with Python
+- Frontend development without frameworks
+- Data modeling and state management
+- Deployment and static hosting workflows
+- Practical problem solving in a domain-specific system
 
 ## Run locally
 
@@ -44,8 +54,8 @@ npm install
 python server.py
 ```
 
-Then open: http://127.0.0.1:4173
+Open: http://127.0.0.1:4173
 
 ## Notes
 
-This is a personal project with a clear focus on real-world utility, maintainability, and automation. The goal was not only to build a dashboard, but to create a structured system that could support ongoing operational decisions over time.
+This project reflects my approach to building maintainable tools: simple architecture, clear data flow, and real utility over unnecessary complexity. It is a focused example of turning messy operational data into a structured system that is understandable, reliable, and easy to extend.
