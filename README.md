@@ -1,174 +1,110 @@
 # Akatsuki Group Monitor
 
-## Overview
+A lightweight operations dashboard for running a SteamGifts group, tracking member progress, and keeping cycle and summer-event data aligned with the live state of the giveaway history.
 
-Akatsuki Group Monitor is a small SteamGifts operations dashboard for managing an Akatsuki giveaway group. It combines local data entry, SteamGifts sync collectors, Steam progress refresh jobs, and a static export pipeline so the same information can be used both locally and on GitHub Pages.
+This project combines a Python server, a static vanilla HTML/JS frontend, and JSON-backed data files under `data/` so the same dataset can be used locally and exported for GitHub Pages.
 
-The project is optimized for a practical workflow rather than a framework-heavy stack:
+## What it does
 
-- a Python server for local APIs, JSON persistence, refresh jobs, and static export
-- a vanilla HTML/CSS/JavaScript frontend for dashboards and admin pages
-- SteamGifts collectors for authenticated and public sync flows
-- JSON snapshots under `data/` as the main source of persisted operational state
+- Tracks group activity, recent giveaways, and member status
+- Maintains cycle history and monthly progress reporting
+- Scores summer-event giveways and entry balances
+- Stores overrides for manual corrections without overwriting synced data
+- Refreshes Steam library/progress data from Steam-backed sources
+- Merges SteamGifts sync snapshots into a persistent local state
+- Exports a static site suitable for GitHub Pages publishing
 
-It keeps group giveaway history, cycle rules, winner progress, and special-event accounting in one place while supporting both local usage and GitHub Pages publication.
+## Project structure
 
-## What The Project Does
+```text
+.
+├── app.js                    # Main frontend runtime
+├── styles.css               # Shared styling
+├── server.py                # Local server, data refresh jobs, export pipeline
+├── package.json             # Node checks and lint/test scripts
+├── index.html               # Overview dashboard
+├── cycles.html              # Cycle history and rules
+├── monthly-progress.html    # Monthly progress tracking
+├── summer-event.html        # Summer event standings
+├── summer-event-entries.html
+├── active-users.html        # Active member summaries
+├── inactive-users.html      # Inactive member summaries
+├── admin.html               # Manager/admin UI
+├── giveaways.html           # Giveaway browsing
+├── penalties.html           # Penalty / rule views
+├── akatsuki-steamgifts-sync.user.js
+├── client/
+│   ├── utils.js
+│   ├── cycle-rules.js
+│   └── derive-core.js
+├── data/
+│   ├── steamgifts-sync.json
+│   ├── steam-progress.json
+│   ├── steam-library.json
+│   ├── hltb-cache.json
+│   ├── steam-media-cache.json
+│   ├── steam-package-cache.json
+│   ├── steam-price-cache.json
+│   └── overrides.json
+├── docs/
+│   ├── ARCHITECTURE.md
+│   ├── CODE_REVIEW.md
+│   └── POSSIBLE_IMPROVEMENTS.md
+├── test/
+│   └── derive-core.test.mjs
+├── tools/
+│   └── build-derived.mjs
+├── site/                   # Local static export output
+├── .github/workflows/      # GitHub Pages and refresh automation
+└── README.md
+```
 
-The current system covers these areas:
+## Architecture at a glance
 
-1. Dashboard and overview pages
-   - Group summary cards
-   - Alerts for overdue wins, penalties, and cycle status
-   - Recent giveaways and active member overview
+### Frontend
 
-2. Monthly and cycle tracking
-   - Monthly progress tables based on HLTB time and achievement thresholds
-   - Cycle history, cycle giveaway counts, rule-based exemptions, and penalties
-   - Manual override support for wins, games, giveaways, and cycle member state
+The frontend is intentionally simple and dependency-free:
 
-3. Summer event tracking
-   - Dedicated summer-event page
-   - Tracked entrants, creator balances, winner data, and snapshot finalization
-   - Sorting and filtering by creator and winner
+- `app.js` loads state, applies overrides, and renders each page
+- `client/utils.js` contains shared formatting and data helpers
+- `client/cycle-rules.js` contains cycle-specific rules and period logic
+- The HTML pages are thin shells that fill the same shared UI with data-driven tables and panels
 
-4. SteamGifts synchronization
-   - Authenticated sync via userscript
-   - Merge logic on the server to combine collected batches safely
+### Backend
 
-5. Steam and HLTB enrichment
-   - Steam library and progress refreshes for tracked members
-   - HLTB lookups and cached playtime targets
-   - Steam media caching for synced giveaways
+`server.py` acts as the app's control plane:
 
-6. Static publishing
-   - Static export for GitHub Pages
-   - Snapshot validation before deployment
-   - GitHub Actions workflow that rebuilds the public site from source on push to `main`
+- serves the local dashboard and JSON APIs
+- merges SteamGifts sync payloads into persisted local data
+- refreshes Steam library and achievement/progress data
+- hydrates Steam media metadata and giveway info
+- exports static HTML/JS assets for GitHub Pages
+- validates the static snapshot contract before publication
 
-## High-Level Architecture
+### Data model
 
-### 1. Frontend
+The project uses JSON files under `data/` as its operational database. The most important ones are:
 
-The frontend is a multi-page vanilla app.
+- `steamgifts-sync.json` — normalized SteamGifts state, members, giveaways, and wins
+- `steam-progress.json` — refreshed progress data for tracked members
+- `steam-library.json` — Steam library snapshot and playtime data
+- `hltb-cache.json` — HowLongToBeat lookup cache
+- `steam-media-cache.json` — cached game/media metadata
+- `overrides.json` — manual corrections published through the admin flow
 
-- `app.js` is the main runtime. It loads remote JSON, normalizes sync payloads, manages local state, applies overrides, and renders all dashboard views.
-- `client/utils.js` contains shared formatting, date, ID, and helper utilities.
-- `client/cycle-rules.js` contains cycle-specific rule and period logic.
-- HTML files such as `index.html`, `cycles.html`, `monthly-progress.html`, `summer-event.html`, `active-users.html`, `inactive-users.html`, and `admin.html` expose focused views over the same shared runtime.
-- `styles.css` provides the shared visual system across all pages.
+## Local setup
 
-### 2. Backend / Local Server
-
-`server.py` is both the local server and the main data utility entry point.
-
-It is responsible for:
-
-- serving the local site and API endpoints on `http://127.0.0.1:4173`
-- merging incoming SteamGifts sync payloads into `data/steamgifts-sync.json`
-- refreshing Steam library and Steam progress snapshots
-- hydrating cached Steam media and release metadata
-- exporting a static version of the site
-- validating the exported static snapshot contract
-
-### 3. Collectors
-
-There are three collection paths:
-
-- `akatsuki-steamgifts-sync.user.js`
-  - authenticated userscript collector intended for normal logged-in usage (install/update via its raw GitHub `.user.js` URL in Tampermonkey)
-
-This collector enriches SteamGifts giveaway data with creator, winner, description-derived metadata, point cost, entries, and result state before the server merges the result.
-
-### 4. Persistent Data
-
-The project stores operational state as JSON under `data/`.
-
-Important files:
-
-- `data/steamgifts-sync.json`
-  - main SteamGifts sync payload, including members, giveaways, and wins
-
-- `data/steam-progress.json`
-  - cached progress refresh output
-
-- `data/steam-library.json`
-  - cached Steam library snapshots and playtime data
-
-- `data/hltb-cache.json`
-  - HLTB lookup cache
-
-- `data/steam-media-cache.json`
-  - cached media and release metadata for synced games
-
-- `data/overrides.json`
-  - shared overrides published by the admin UI
-
-### 5. Deployment
-
-Deployment is source-driven, not artifact-driven.
-
-- The GitHub Pages workflow in `.github/workflows/pages.yml` checks out the repo.
-- It installs Node 24 dependencies.
-- It runs `npm run check:node24`.
-- It runs `python server.py --export-static --output-dir dist`.
-- It runs `python server.py --validate-static --output-dir dist`.
-- It uploads `dist/` as the Pages artifact.
-
-That means the public site is rebuilt in CI from the committed source files. The local `site/` folder is useful for local export and validation, but GitHub Pages is not relying on committed exported artifacts.
-
-## Repository Layout
-
-### Core application files
-
-- `app.js` - main frontend runtime
-- `styles.css` - shared styling
-- `server.py` - local API server, refresh jobs, export pipeline
-
-### Page entry points
-
-- `index.html` - main overview dashboard
-- `cycles.html` - cycle history and giveaway accounting
-- `monthly-progress.html` - monthly progress tracking
-- `summer-event.html` - summer event statistics and balances
-- `active-users.html` - active user summaries
-- `inactive-users.html` - inactive user summaries
-- `admin.html` - admin and override workflows
-
-### Client modules
-
-- `client/utils.js`
-- `client/cycle-rules.js`
-
-### Collector scripts
-
-- `akatsuki-steamgifts-sync.user.js`
-
-### Data and export folders
-
-- `data/` - local JSON state and caches
-- `site/` - local static export output
-- `dist/` - CI export output during GitHub Pages deployment
-
-## Current Runtime Requirements
-
-### Required
+### Requirements
 
 - Python 3.13 recommended
 - Node.js 24.x
 - npm
 
-### Optional but important
+Optional but important for live data refreshes:
 
-- `STEAM_WEB_API_KEY` in environment or `.env`
-  - required for Steam library/progress refreshes
+- `STEAM_WEB_API_KEY` in your environment or a `.env` file
 
-- Google Chrome or Microsoft Edge
-  - useful for the authenticated collection workflow
-
-## Recommended Local Setup
-
-### 1. Install dependencies
+### Install
 
 ```powershell
 npm install
@@ -176,38 +112,38 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
-### 2. Configure Steam API access
+### Environment
 
-Create a `.env` file when you need Steam library or progress refreshes:
+If you need Steam library progress refreshes, create a `.env` file in the project root:
 
 ```env
 STEAM_WEB_API_KEY=your_key_here
 ```
 
-### 3. Start the local server
+## Run the app locally
 
 ```powershell
 python server.py
 ```
 
-The local app will be available at:
+Then open:
 
 ```text
 http://127.0.0.1:4173
 ```
 
-## Common Workflows
+## Common commands
 
-### Run the local dashboard
-
-```powershell
-python server.py
-```
-
-### Check JavaScript syntax
+### Check frontend and script health
 
 ```powershell
 npm run check:node24
+```
+
+### Run the JavaScript tests
+
+```powershell
+npm test
 ```
 
 ### Refresh Steam progress
@@ -216,33 +152,60 @@ npm run check:node24
 python server.py --refresh-steam-progress
 ```
 
-### Refresh Steam library snapshot
+### Refresh the Steam library snapshot
 
 ```powershell
 python server.py --refresh-steam-library
 ```
 
-### Hydrate missing media for synced giveaways
+### Hydrate missing media data for synced giveaways
 
 ```powershell
 python server.py --hydrate-sync-media --recent-days 365
 ```
 
-### Export the static site locally
+### Export and validate the static site locally
 
 ```powershell
 python server.py --export-static
 python server.py --validate-static
 ```
 
-### Publish overrides to the live site
+## Manual override model
 
-Edit overrides in the dashboard, then click **Publish to GitHub Pages**. That
-commits `data/overrides.json` straight to the repo through the GitHub API (using
-a fine-grained token you paste once), and the public site rebuilds automatically
-via the `pages.yml` workflow. Steam data refreshes on its own through the daily
-`daily-refresh.yml` cron.
+A key part of the project is that synced data is never blindly overwritten with manual edits.
 
-## Further Planning
+Instead, the app stores override data separately and reapplies it at render time. This lets the system keep group data current while preserving corrections like:
 
-For the current roadmap, modernization work, and longer-term improvement plan, see [docs/POSSIBLE_IMPROVEMENTS.md](docs/POSSIBLE_IMPROVEMENTS.md). For the developer/architecture tour, see [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
+- game metadata fixes
+- manual winner assignments
+- giveaway classification adjustments
+- cycle member status changes
+
+This is handled in the frontend and shared through the server's override payload flow.
+
+## Deployment
+
+The site is designed to be published from source rather than by committing built artifacts.
+
+- GitHub Actions rebuilds the public site from source on push to `main`
+- `site/` is a local export area and is not treated as the source of truth
+- `dist/` is the export folder generated during CI publication
+- the dashboard can publish shared override updates via GitHub-backed workflows
+
+## Notes for contributors
+
+- `node --check` catches syntax issues, but browser validation is still important for UI behavior
+- the app is intentionally plain JavaScript and Python; it avoids a heavy framework
+- `data/` is the real operational store for the project
+- static export and validation are part of the normal release flow
+
+## Related docs
+
+- `docs/ARCHITECTURE.md` — deeper technical walkthrough of how the system fits together
+- `docs/POSSIBLE_IMPROVEMENTS.md` — roadmap and modernization ideas
+- `docs/CODE_REVIEW.md` — review notes and implementation observations
+
+## Summary
+
+Akatsuki Group Monitor is a practical dashboard for managing a SteamGifts giveaway group with a strong emphasis on data correctness, automation, and static publishing. It is built around simple, transparent tooling: Python for the server and refresh jobs, vanilla JavaScript for the UI, and JSON files under `data/` for persistent state.
