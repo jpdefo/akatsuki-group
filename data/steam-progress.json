@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-13T10:42:45.811921+00:00",
+  "updatedAt": "2026-09-14T11:04:19.201206+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -897,7 +897,7 @@
       "appId": 1118520,
       "title": "Paralives",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/1118520/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 0.1,
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 0,
@@ -906,7 +906,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 0.1
     },
     {
       "username": "BojanNS987",
@@ -6671,7 +6671,7 @@
       "appId": 1875580,
       "title": "Mina the Hollower",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1875580/achievements/",
-      "playtimeHours": 3.58,
+      "playtimeHours": 4.1,
       "visible": true,
       "earnedAchievements": 1,
       "totalAchievements": 50,
@@ -6680,7 +6680,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 3.58
+      "achievementsPlaytimeHours": 4.1
     },
     {
       "username": "burntreynolds444",
@@ -9529,15 +9529,15 @@
       "title": "007 First Light",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/3768760/achievements/",
       "visible": true,
-      "earnedAchievements": 18,
+      "earnedAchievements": 20,
       "totalAchievements": 37,
-      "achievementPercent": 49,
-      "playtimeHours": 12.5,
+      "achievementPercent": 54,
+      "playtimeHours": 14.63,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 12.5,
+      "achievementsPlaytimeHours": 14.63,
       "popThresholdMetAt": "2026-09-04T10:03:27.141144+00:00"
     },
     {
@@ -14558,15 +14558,15 @@
       "title": "Retro Rewind - Video Store Simulator",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/3552140/achievements/",
       "visible": true,
-      "earnedAchievements": 17,
+      "earnedAchievements": 18,
       "totalAchievements": 18,
-      "achievementPercent": 94,
-      "playtimeHours": 21.17,
+      "achievementPercent": 100,
+      "playtimeHours": 24.0,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 21.17,
+      "achievementsPlaytimeHours": 24.0,
       "popThresholdMetAt": "2026-08-27T16:57:07.725852+00:00"
     },
     {
@@ -17098,16 +17098,17 @@
       "appId": 2416450,
       "title": "MOUSE: P.I. For Hire",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/2416450/achievements/",
-      "playtimeHours": 0.02,
+      "playtimeHours": 4.85,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 5,
       "totalAchievements": 34,
-      "achievementPercent": 0,
+      "achievementPercent": 15,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.02
+      "achievementsPlaytimeHours": 4.85,
+      "popThresholdMetAt": "2026-09-14T11:04:19.200542+00:00"
     },
     {
       "username": "Horseflesh",
@@ -28000,16 +28001,16 @@
       "appId": 3357650,
       "title": "PRAGMATA",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/3357650/achievements/",
-      "playtimeHours": 15.75,
+      "playtimeHours": 19.45,
       "visible": true,
-      "earnedAchievements": 30,
+      "earnedAchievements": 34,
       "totalAchievements": 35,
-      "achievementPercent": 86,
+      "achievementPercent": 97,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 15.75,
+      "achievementsPlaytimeHours": 19.45,
       "popThresholdMetAt": "2026-09-08T10:10:33.178905+00:00"
     },
     {
@@ -35526,7 +35527,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 70.13,
+      "playtimeHours": 71.73,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -42545,16 +42546,16 @@
       "appId": 3751260,
       "title": "The Blood of Dawnwalker",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/3751260/achievements/",
-      "playtimeHours": 46.43,
+      "playtimeHours": 55.0,
       "visible": true,
-      "earnedAchievements": 30,
+      "earnedAchievements": 40,
       "totalAchievements": 46,
-      "achievementPercent": 65,
+      "achievementPercent": 87,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 46.43
+      "achievementsPlaytimeHours": 55.0
     }
   ],
   "hltb": [
@@ -70795,15 +70796,22 @@
       "hltbHours": 38.23,
       "matchedTitle": "Black Myth: Wukong",
       "url": "https://howlongtobeat.com/game/82089"
+    },
+    {
+      "title": "CONTROL Resonant",
+      "appId": 3669870,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     }
   ],
   "steamApiEnabled": true,
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-09-13T10:41:37.431068+00:00",
+  "libraryUpdatedAt": "2026-09-14T11:03:24.085807+00:00",
   "libraryStats": {
-    "durationSeconds": 9.59,
+    "durationSeconds": 5.16,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -70812,15 +70820,15 @@
     "totalPlaytimeRows": 14522
   },
   "stats": {
-    "durationSeconds": 77.98,
+    "durationSeconds": 60.28,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
-    "cachedReuses": 2324,
-    "achievementSuccesses": 10,
+    "cachedReuses": 2323,
+    "achievementSuccesses": 11,
     "achievementErrors": 55,
     "cachedFallbacks": 55,
     "hltbTitlesRequested": 1290,
-    "hltbResultsAvailable": 4034
+    "hltbResultsAvailable": 4035
   }
 }
