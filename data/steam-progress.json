@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-14T11:04:19.201206+00:00",
+  "updatedAt": "2026-09-15T10:33:49.481906+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -9529,15 +9529,15 @@
       "title": "007 First Light",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/3768760/achievements/",
       "visible": true,
-      "earnedAchievements": 20,
+      "earnedAchievements": 24,
       "totalAchievements": 37,
-      "achievementPercent": 54,
-      "playtimeHours": 14.63,
+      "achievementPercent": 65,
+      "playtimeHours": 16.18,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 14.63,
+      "achievementsPlaytimeHours": 16.18,
       "popThresholdMetAt": "2026-09-04T10:03:27.141144+00:00"
     },
     {
@@ -16233,14 +16233,14 @@
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/1285190/achievements/",
       "visible": true,
       "earnedAchievements": 0,
-      "totalAchievements": 49,
+      "totalAchievements": 63,
       "achievementPercent": 0,
-      "playtimeHours": 0.0,
+      "playtimeHours": 0.03,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 0.03
     },
     {
       "username": "Horseflesh",
@@ -28001,7 +28001,7 @@
       "appId": 3357650,
       "title": "PRAGMATA",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/3357650/achievements/",
-      "playtimeHours": 19.45,
+      "playtimeHours": 22.65,
       "visible": true,
       "earnedAchievements": 34,
       "totalAchievements": 35,
@@ -28010,7 +28010,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 19.45,
+      "achievementsPlaytimeHours": 22.65,
       "popThresholdMetAt": "2026-09-08T10:10:33.178905+00:00"
     },
     {
@@ -35527,7 +35527,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 71.73,
+      "playtimeHours": 72.75,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -36905,15 +36905,15 @@
       "title": "UNCHARTED: Legacy of Thieves Collection",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/1659420/achievements/",
       "visible": true,
-      "earnedAchievements": 33,
+      "earnedAchievements": 42,
       "totalAchievements": 101,
-      "achievementPercent": 33,
-      "playtimeHours": 35.2,
+      "achievementPercent": 42,
+      "playtimeHours": 36.47,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 35.2,
+      "achievementsPlaytimeHours": 36.47,
       "popThresholdMetAt": "2026-06-26T07:11:08.801361+00:00"
     },
     {
@@ -38375,12 +38375,12 @@
       "earnedAchievements": 31,
       "totalAchievements": 35,
       "achievementPercent": 89,
-      "playtimeHours": 978.88,
+      "playtimeHours": 981.13,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 978.88,
+      "achievementsPlaytimeHours": 981.13,
       "popThresholdMetAt": "2026-06-26T07:11:08.801512+00:00"
     },
     {
@@ -42546,16 +42546,16 @@
       "appId": 3751260,
       "title": "The Blood of Dawnwalker",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/3751260/achievements/",
-      "playtimeHours": 55.0,
+      "playtimeHours": 55.48,
       "visible": true,
-      "earnedAchievements": 40,
+      "earnedAchievements": 46,
       "totalAchievements": 46,
-      "achievementPercent": 87,
+      "achievementPercent": 100,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 55.0
+      "achievementsPlaytimeHours": 55.48
     }
   ],
   "hltb": [
@@ -70803,32 +70803,39 @@
       "hltbHours": null,
       "matchedTitle": "",
       "url": ""
+    },
+    {
+      "title": "PRAGMATA",
+      "appId": 3357650,
+      "hltbHours": 11.51,
+      "matchedTitle": "Pragmata",
+      "url": "https://howlongtobeat.com/game/80101"
     }
   ],
   "steamApiEnabled": true,
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-09-14T11:03:24.085807+00:00",
+  "libraryUpdatedAt": "2026-09-15T10:32:55.334855+00:00",
   "libraryStats": {
-    "durationSeconds": 5.16,
+    "durationSeconds": 4.98,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14522
+    "totalPlaytimeRows": 14523
   },
   "stats": {
-    "durationSeconds": 60.28,
+    "durationSeconds": 59.14,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
-    "cachedReuses": 2323,
-    "achievementSuccesses": 11,
+    "cachedReuses": 2324,
+    "achievementSuccesses": 10,
     "achievementErrors": 55,
     "cachedFallbacks": 55,
     "hltbTitlesRequested": 1290,
-    "hltbResultsAvailable": 4035
+    "hltbResultsAvailable": 4036
   }
 }
