@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-15T10:33:49.481906+00:00",
+  "updatedAt": "2026-09-16T10:23:02.658024+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -9529,15 +9529,15 @@
       "title": "007 First Light",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/3768760/achievements/",
       "visible": true,
-      "earnedAchievements": 24,
+      "earnedAchievements": 26,
       "totalAchievements": 37,
-      "achievementPercent": 65,
-      "playtimeHours": 16.18,
+      "achievementPercent": 70,
+      "playtimeHours": 18.43,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 16.18,
+      "achievementsPlaytimeHours": 18.43,
       "popThresholdMetAt": "2026-09-04T10:03:27.141144+00:00"
     },
     {
@@ -20967,16 +20967,16 @@
       "appId": 3751950,
       "title": "Assassin's Creed Black Flag Resynced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/3751950/achievements/",
-      "playtimeHours": 80.05,
+      "playtimeHours": 83.07,
       "visible": true,
-      "earnedAchievements": 35,
+      "earnedAchievements": 36,
       "totalAchievements": 49,
-      "achievementPercent": 71,
+      "achievementPercent": 73,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 80.05,
+      "achievementsPlaytimeHours": 83.07,
       "popThresholdMetAt": "2026-07-20T08:33:24.271635+00:00"
     },
     {
@@ -28001,7 +28001,7 @@
       "appId": 3357650,
       "title": "PRAGMATA",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/3357650/achievements/",
-      "playtimeHours": 22.65,
+      "playtimeHours": 23.55,
       "visible": true,
       "earnedAchievements": 34,
       "totalAchievements": 35,
@@ -28010,7 +28010,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 22.65,
+      "achievementsPlaytimeHours": 23.55,
       "popThresholdMetAt": "2026-09-08T10:10:33.178905+00:00"
     },
     {
@@ -35361,7 +35361,7 @@
       "appId": 2350790,
       "title": "Moonlighter 2: The Endless Vault",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2350790/achievements/",
-      "playtimeHours": 28.08,
+      "playtimeHours": 28.17,
       "visible": true,
       "earnedAchievements": 39,
       "totalAchievements": 56,
@@ -35370,7 +35370,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 28.08,
+      "achievementsPlaytimeHours": 28.17,
       "popThresholdMetAt": "2026-07-02T07:02:25.511035+00:00"
     },
     {
@@ -35527,7 +35527,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 72.75,
+      "playtimeHours": 75.73,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -70816,9 +70816,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-09-15T10:32:55.334855+00:00",
+  "libraryUpdatedAt": "2026-09-16T10:22:04.327213+00:00",
   "libraryStats": {
-    "durationSeconds": 4.98,
+    "durationSeconds": 6.46,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -70827,12 +70827,12 @@
     "totalPlaytimeRows": 14523
   },
   "stats": {
-    "durationSeconds": 59.14,
+    "durationSeconds": 64.8,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
-    "cachedReuses": 2324,
-    "achievementSuccesses": 10,
+    "cachedReuses": 2326,
+    "achievementSuccesses": 8,
     "achievementErrors": 55,
     "cachedFallbacks": 55,
     "hltbTitlesRequested": 1290,

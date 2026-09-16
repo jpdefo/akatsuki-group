@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-11T10:04:52.657217+00:00",
+  "updatedAt": "2026-09-16T10:21:57.498679+00:00",
   "apps": {
     "3288210": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3288210/2e13226847bb546625411aed75e74471f6705b18/header.jpg?t=1777969480",
@@ -5272,6 +5272,15 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2542020/fd8911e8ecfdd361b1fd50a565d98ad526f903ff/capsule_231x87.jpg?t=1786631734",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2542020/fd8911e8ecfdd361b1fd50a565d98ad526f903ff/capsule_184x69.jpg?t=1786631734",
       "releaseDate": "2026-08-13",
+      "comingSoon": false
+    },
+    "4570720": {
+      "appId": 4570720,
+      "name": "DragonSword : Awakening",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4570720/96a897e98f4472e656fbe6681191b3066cab6056/header.jpg?t=1788398112",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4570720/ad4778acc2facf46b58f6c66492e925c9efd5cb7/capsule_231x87.jpg?t=1788398112",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4570720/ad4778acc2facf46b58f6c66492e925c9efd5cb7/capsule_184x69.jpg?t=1788398112",
+      "releaseDate": "2026-07-22",
       "comingSoon": false
     }
   }
