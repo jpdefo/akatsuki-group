@@ -1,7 +1,7 @@
 {
   "source": "akatsuki-steamgifts-sync",
   "collectorVersion": "1.13.2",
-  "syncedAt": "2026-09-16T20:52:37.954Z",
+  "syncedAt": "2026-09-16T23:03:30.955Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -2769,7 +2769,7 @@
       "steamPricePoints": 70,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1285190/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1285190/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1285190/7f4b1a9cbe01d19fdcbf10ef5dce492098ef0ba8/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1285190/capsule_184x69.jpg",
       "startDate": "2026-05-04T10:03:27.000Z",
       "entriesSnapshotAt": ""
     },
@@ -152204,7 +152204,7 @@
       "points": 50,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2277560/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2277560/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2277560/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2277560/7ad08d174b97880d3f611a068991b98471d1eb9c/capsule_184x69.jpg",
       "entriesCount": 0,
       "startDate": "2026-09-16T20:50:49.000Z",
       "endDate": "2026-09-30T18:00:00.000Z",
