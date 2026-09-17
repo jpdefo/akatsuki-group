@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-16T10:23:02.658024+00:00",
+  "updatedAt": "2026-09-17T10:32:40.600778+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -9529,15 +9529,15 @@
       "title": "007 First Light",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/3768760/achievements/",
       "visible": true,
-      "earnedAchievements": 26,
+      "earnedAchievements": 27,
       "totalAchievements": 37,
-      "achievementPercent": 70,
-      "playtimeHours": 18.43,
+      "achievementPercent": 73,
+      "playtimeHours": 19.03,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 18.43,
+      "achievementsPlaytimeHours": 19.03,
       "popThresholdMetAt": "2026-09-04T10:03:27.141144+00:00"
     },
     {
@@ -20967,16 +20967,16 @@
       "appId": 3751950,
       "title": "Assassin's Creed Black Flag Resynced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/3751950/achievements/",
-      "playtimeHours": 83.07,
+      "playtimeHours": 86.27,
       "visible": true,
-      "earnedAchievements": 36,
+      "earnedAchievements": 38,
       "totalAchievements": 49,
-      "achievementPercent": 73,
+      "achievementPercent": 78,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 83.07,
+      "achievementsPlaytimeHours": 86.27,
       "popThresholdMetAt": "2026-07-20T08:33:24.271635+00:00"
     },
     {
@@ -27803,7 +27803,7 @@
       "appId": 1888160,
       "title": "ARMORED CORE VI FIRES OF RUBICON",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/1888160/achievements/",
-      "playtimeHours": 32.43,
+      "playtimeHours": 33.32,
       "visible": true,
       "earnedAchievements": 20,
       "totalAchievements": 30,
@@ -27812,7 +27812,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 32.43,
+      "achievementsPlaytimeHours": 33.32,
       "popThresholdMetAt": "2026-07-31T08:28:37.889064+00:00"
     },
     {
@@ -28001,16 +28001,16 @@
       "appId": 3357650,
       "title": "PRAGMATA",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/3357650/achievements/",
-      "playtimeHours": 23.55,
+      "playtimeHours": 26.22,
       "visible": true,
-      "earnedAchievements": 34,
+      "earnedAchievements": 35,
       "totalAchievements": 35,
-      "achievementPercent": 97,
+      "achievementPercent": 100,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 23.55,
+      "achievementsPlaytimeHours": 26.22,
       "popThresholdMetAt": "2026-09-08T10:10:33.178905+00:00"
     },
     {
@@ -35361,7 +35361,7 @@
       "appId": 2350790,
       "title": "Moonlighter 2: The Endless Vault",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2350790/achievements/",
-      "playtimeHours": 28.17,
+      "playtimeHours": 29.32,
       "visible": true,
       "earnedAchievements": 39,
       "totalAchievements": 56,
@@ -35370,7 +35370,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 28.17,
+      "achievementsPlaytimeHours": 29.32,
       "popThresholdMetAt": "2026-07-02T07:02:25.511035+00:00"
     },
     {
@@ -35527,7 +35527,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 75.73,
+      "playtimeHours": 80.03,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -36908,12 +36908,12 @@
       "earnedAchievements": 42,
       "totalAchievements": 101,
       "achievementPercent": 42,
-      "playtimeHours": 36.47,
+      "playtimeHours": 37.02,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 36.47,
+      "achievementsPlaytimeHours": 37.02,
       "popThresholdMetAt": "2026-06-26T07:11:08.801361+00:00"
     },
     {
@@ -70810,32 +70810,39 @@
       "hltbHours": 11.51,
       "matchedTitle": "Pragmata",
       "url": "https://howlongtobeat.com/game/80101"
+    },
+    {
+      "title": "WUCHANG: Fallen Feathers",
+      "appId": 2277560,
+      "hltbHours": 30.97,
+      "matchedTitle": "Wuchang: Fallen Feathers",
+      "url": "https://howlongtobeat.com/game/152015"
     }
   ],
   "steamApiEnabled": true,
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-09-16T10:22:04.327213+00:00",
+  "libraryUpdatedAt": "2026-09-17T10:31:35.763195+00:00",
   "libraryStats": {
-    "durationSeconds": 6.46,
+    "durationSeconds": 9.9,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14523
+    "totalPlaytimeRows": 14525
   },
   "stats": {
-    "durationSeconds": 64.8,
+    "durationSeconds": 74.74,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
-    "cachedReuses": 2326,
-    "achievementSuccesses": 8,
+    "cachedReuses": 2324,
+    "achievementSuccesses": 10,
     "achievementErrors": 55,
     "cachedFallbacks": 55,
     "hltbTitlesRequested": 1290,
-    "hltbResultsAvailable": 4036
+    "hltbResultsAvailable": 4037
   }
 }
