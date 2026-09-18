@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T10:32:40.600778+00:00",
+  "updatedAt": "2026-09-18T10:08:43.093631+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -6671,7 +6671,7 @@
       "appId": 1875580,
       "title": "Mina the Hollower",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1875580/achievements/",
-      "playtimeHours": 4.1,
+      "playtimeHours": 4.32,
       "visible": true,
       "earnedAchievements": 1,
       "totalAchievements": 50,
@@ -6680,7 +6680,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 4.1
+      "achievementsPlaytimeHours": 4.32
     },
     {
       "username": "burntreynolds444",
@@ -9532,12 +9532,12 @@
       "earnedAchievements": 27,
       "totalAchievements": 37,
       "achievementPercent": 73,
-      "playtimeHours": 19.03,
+      "playtimeHours": 20.03,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 19.03,
+      "achievementsPlaytimeHours": 20.03,
       "popThresholdMetAt": "2026-09-04T10:03:27.141144+00:00"
     },
     {
@@ -27803,16 +27803,16 @@
       "appId": 1888160,
       "title": "ARMORED CORE VI FIRES OF RUBICON",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/1888160/achievements/",
-      "playtimeHours": 33.32,
+      "playtimeHours": 33.82,
       "visible": true,
-      "earnedAchievements": 20,
+      "earnedAchievements": 21,
       "totalAchievements": 30,
-      "achievementPercent": 67,
+      "achievementPercent": 70,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 33.32,
+      "achievementsPlaytimeHours": 33.82,
       "popThresholdMetAt": "2026-07-31T08:28:37.889064+00:00"
     },
     {
@@ -35361,16 +35361,16 @@
       "appId": 2350790,
       "title": "Moonlighter 2: The Endless Vault",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2350790/achievements/",
-      "playtimeHours": 29.32,
+      "playtimeHours": 32.82,
       "visible": true,
-      "earnedAchievements": 39,
+      "earnedAchievements": 41,
       "totalAchievements": 56,
-      "achievementPercent": 70,
+      "achievementPercent": 73,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 29.32,
+      "achievementsPlaytimeHours": 32.82,
       "popThresholdMetAt": "2026-07-02T07:02:25.511035+00:00"
     },
     {
@@ -35527,7 +35527,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 80.03,
+      "playtimeHours": 83.63,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -70823,23 +70823,23 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-09-17T10:31:35.763195+00:00",
+  "libraryUpdatedAt": "2026-09-18T10:07:47.099754+00:00",
   "libraryStats": {
-    "durationSeconds": 9.9,
+    "durationSeconds": 4.55,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14525
+    "totalPlaytimeRows": 14526
   },
   "stats": {
-    "durationSeconds": 74.74,
+    "durationSeconds": 60.55,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
-    "cachedReuses": 2324,
-    "achievementSuccesses": 10,
+    "cachedReuses": 2326,
+    "achievementSuccesses": 8,
     "achievementErrors": 55,
     "cachedFallbacks": 55,
     "hltbTitlesRequested": 1290,
