@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-20T10:11:54.667071+00:00",
+  "updatedAt": "2026-09-21T11:14:13.462300+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2390,16 +2390,17 @@
       "appId": 2246340,
       "title": "Monster Hunter Wilds",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2246340/achievements/",
-      "playtimeHours": 2.18,
+      "playtimeHours": 4.65,
       "visible": true,
-      "earnedAchievements": 2,
+      "earnedAchievements": 5,
       "totalAchievements": 50,
-      "achievementPercent": 4,
+      "achievementPercent": 10,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.18
+      "achievementsPlaytimeHours": 4.65,
+      "popThresholdMetAt": "2026-09-21T11:14:13.461472+00:00"
     },
     {
       "username": "BojanNS987",
@@ -7094,16 +7095,16 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 1.45,
+      "playtimeHours": 5.27,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 1,
       "totalAchievements": 34,
-      "achievementPercent": 0,
+      "achievementPercent": 3,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.45
+      "achievementsPlaytimeHours": 5.27
     },
     {
       "username": "burntreynolds444",
@@ -7684,12 +7685,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 140.87,
+      "playtimeHours": 141.38,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 140.87,
+      "achievementsPlaytimeHours": 141.38,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -9529,15 +9530,15 @@
       "title": "007 First Light",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/3768760/achievements/",
       "visible": true,
-      "earnedAchievements": 32,
+      "earnedAchievements": 33,
       "totalAchievements": 37,
-      "achievementPercent": 86,
-      "playtimeHours": 23.92,
+      "achievementPercent": 89,
+      "playtimeHours": 25.98,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 23.92,
+      "achievementsPlaytimeHours": 25.98,
       "popThresholdMetAt": "2026-09-04T10:03:27.141144+00:00"
     },
     {
@@ -16796,16 +16797,16 @@
       "appId": 1823990,
       "title": "Gravelord",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/1823990/achievements/",
-      "playtimeHours": 0.87,
+      "playtimeHours": 1.63,
       "visible": true,
-      "earnedAchievements": 6,
+      "earnedAchievements": 10,
       "totalAchievements": 62,
-      "achievementPercent": 10,
+      "achievementPercent": 16,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.87
+      "achievementsPlaytimeHours": 1.63
     },
     {
       "username": "Horseflesh",
@@ -33213,7 +33214,7 @@
       "appId": 920210,
       "title": "LEGO Star Wars: The Skywalker Saga Ga...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198011705129/stats/920210/achievements/",
-      "playtimeHours": 49.25,
+      "playtimeHours": 49.63,
       "visible": true,
       "earnedAchievements": 22,
       "totalAchievements": 45,
@@ -33222,7 +33223,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 49.25,
+      "achievementsPlaytimeHours": 49.63,
       "popThresholdMetAt": "2026-08-07T06:56:57.656809+00:00"
     },
     {
@@ -35362,7 +35363,7 @@
       "appId": 2350790,
       "title": "Moonlighter 2: The Endless Vault",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2350790/achievements/",
-      "playtimeHours": 33.4,
+      "playtimeHours": 34.07,
       "visible": true,
       "earnedAchievements": 41,
       "totalAchievements": 56,
@@ -35371,7 +35372,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 33.4,
+      "achievementsPlaytimeHours": 34.07,
       "popThresholdMetAt": "2026-07-02T07:02:25.511035+00:00"
     },
     {
@@ -35528,7 +35529,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 89.95,
+      "playtimeHours": 93.32,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -38376,12 +38377,12 @@
       "earnedAchievements": 31,
       "totalAchievements": 35,
       "achievementPercent": 89,
-      "playtimeHours": 981.13,
+      "playtimeHours": 985.37,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 981.13,
+      "achievementsPlaytimeHours": 985.37,
       "popThresholdMetAt": "2026-06-26T07:11:08.801512+00:00"
     },
     {
@@ -70824,18 +70825,18 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-09-20T10:10:47.588657+00:00",
+  "libraryUpdatedAt": "2026-09-21T11:13:11.557309+00:00",
   "libraryStats": {
-    "durationSeconds": 8.96,
+    "durationSeconds": 5.34,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14530
+    "totalPlaytimeRows": 14531
   },
   "stats": {
-    "durationSeconds": 76.05,
+    "durationSeconds": 67.25,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
