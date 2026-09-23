@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T10:26:41.332725+00:00",
+  "updatedAt": "2026-09-23T10:21:49.373629+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -7095,7 +7095,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 8.53,
+      "playtimeHours": 13.95,
       "visible": true,
       "earnedAchievements": 1,
       "totalAchievements": 34,
@@ -7104,7 +7104,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 8.53
+      "achievementsPlaytimeHours": 13.95
     },
     {
       "username": "burntreynolds444",
@@ -20673,16 +20673,16 @@
       "appId": 2369390,
       "title": "Far Cry 6",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/2369390/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 0.32,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 1,
       "totalAchievements": 99,
-      "achievementPercent": 0,
+      "achievementPercent": 1,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 0.32
     },
     {
       "username": "Koalala",
@@ -35531,7 +35531,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 94.68,
+      "playtimeHours": 95.27,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -70827,9 +70827,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-09-22T10:25:48.925983+00:00",
+  "libraryUpdatedAt": "2026-09-23T10:20:52.544967+00:00",
   "libraryStats": {
-    "durationSeconds": 4.38,
+    "durationSeconds": 4.62,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -70838,12 +70838,12 @@
     "totalPlaytimeRows": 14531
   },
   "stats": {
-    "durationSeconds": 56.8,
+    "durationSeconds": 61.46,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
-    "cachedReuses": 2321,
-    "achievementSuccesses": 13,
+    "cachedReuses": 2328,
+    "achievementSuccesses": 6,
     "achievementErrors": 55,
     "cachedFallbacks": 55,
     "hltbTitlesRequested": 1290,
