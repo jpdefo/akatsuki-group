@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-23T10:21:49.373629+00:00",
+  "updatedAt": "2026-09-24T10:36:50.356746+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -7095,7 +7095,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 13.95,
+      "playtimeHours": 17.03,
       "visible": true,
       "earnedAchievements": 1,
       "totalAchievements": 34,
@@ -7104,7 +7104,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 13.95
+      "achievementsPlaytimeHours": 17.03
     },
     {
       "username": "burntreynolds444",
@@ -7685,12 +7685,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 141.93,
+      "playtimeHours": 142.43,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 141.93,
+      "achievementsPlaytimeHours": 142.43,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -8395,16 +8395,16 @@
       "appId": 1491410,
       "title": "Eternal Strands",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/1491410/achievements/",
-      "playtimeHours": 0.9,
+      "playtimeHours": 3.0,
       "visible": true,
-      "earnedAchievements": 1,
+      "earnedAchievements": 2,
       "totalAchievements": 44,
-      "achievementPercent": 2,
+      "achievementPercent": 5,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.9
+      "achievementsPlaytimeHours": 3.0
     },
     {
       "username": "chOOkity",
@@ -16233,15 +16233,15 @@
       "title": "Borderlands 4",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/1285190/achievements/",
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 2,
       "totalAchievements": 63,
-      "achievementPercent": 0,
-      "playtimeHours": 3.95,
+      "achievementPercent": 3,
+      "playtimeHours": 5.32,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 3.95
+      "achievementsPlaytimeHours": 5.32
     },
     {
       "username": "Horseflesh",
@@ -35531,7 +35531,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 95.27,
+      "playtimeHours": 96.3,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -36371,15 +36371,15 @@
       "title": "FINAL FANTASY TACTICS - The Ivalice C...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/1004640/achievements/",
       "visible": true,
-      "earnedAchievements": 33,
+      "earnedAchievements": 34,
       "totalAchievements": 50,
-      "achievementPercent": 66,
-      "playtimeHours": 35.17,
+      "achievementPercent": 68,
+      "playtimeHours": 36.15,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 35.17,
+      "achievementsPlaytimeHours": 36.15,
       "popThresholdMetAt": "2026-07-06T18:27:00.287372+00:00"
     },
     {
@@ -36909,15 +36909,15 @@
       "title": "UNCHARTED: Legacy of Thieves Collection",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/1659420/achievements/",
       "visible": true,
-      "earnedAchievements": 42,
+      "earnedAchievements": 49,
       "totalAchievements": 101,
-      "achievementPercent": 42,
-      "playtimeHours": 37.02,
+      "achievementPercent": 49,
+      "playtimeHours": 38.15,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 37.02,
+      "achievementsPlaytimeHours": 38.15,
       "popThresholdMetAt": "2026-06-26T07:11:08.801361+00:00"
     },
     {
@@ -70827,23 +70827,23 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-09-23T10:20:52.544967+00:00",
+  "libraryUpdatedAt": "2026-09-24T10:35:52.856111+00:00",
   "libraryStats": {
-    "durationSeconds": 4.62,
+    "durationSeconds": 6.74,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14531
+    "totalPlaytimeRows": 14532
   },
   "stats": {
-    "durationSeconds": 61.46,
+    "durationSeconds": 64.25,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
-    "cachedReuses": 2328,
-    "achievementSuccesses": 6,
+    "cachedReuses": 2324,
+    "achievementSuccesses": 10,
     "achievementErrors": 55,
     "cachedFallbacks": 55,
     "hltbTitlesRequested": 1290,
