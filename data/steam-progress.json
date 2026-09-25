@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-24T10:36:50.356746+00:00",
+  "updatedAt": "2026-09-25T10:40:16.773496+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -8395,16 +8395,16 @@
       "appId": 1491410,
       "title": "Eternal Strands",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/1491410/achievements/",
-      "playtimeHours": 3.0,
+      "playtimeHours": 4.53,
       "visible": true,
-      "earnedAchievements": 2,
+      "earnedAchievements": 6,
       "totalAchievements": 44,
-      "achievementPercent": 5,
+      "achievementPercent": 14,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 3.0
+      "achievementsPlaytimeHours": 4.53
     },
     {
       "username": "chOOkity",
@@ -16233,15 +16233,15 @@
       "title": "Borderlands 4",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/1285190/achievements/",
       "visible": true,
-      "earnedAchievements": 2,
+      "earnedAchievements": 3,
       "totalAchievements": 63,
-      "achievementPercent": 3,
-      "playtimeHours": 5.32,
+      "achievementPercent": 5,
+      "playtimeHours": 6.75,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 5.32
+      "achievementsPlaytimeHours": 6.75
     },
     {
       "username": "Horseflesh",
@@ -28042,14 +28042,15 @@
       "title": "CONTROL Resonant",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/3669870/achievements/",
       "playtimeHours": 0.0,
-      "visible": false,
+      "visible": true,
       "earnedAchievements": 0,
-      "totalAchievements": 0,
+      "totalAchievements": 49,
       "achievementPercent": 0,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "error": "HTTP Error 403: Forbidden"
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "Millsshogun",
@@ -35531,7 +35532,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 96.3,
+      "playtimeHours": 96.58,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -35631,15 +35632,16 @@
       "appId": 3669870,
       "title": "CONTROL Resonant",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3669870/achievements/",
-      "playtimeHours": 0.0,
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
+      "playtimeHours": 5.08,
+      "visible": true,
+      "earnedAchievements": 12,
+      "totalAchievements": 49,
+      "achievementPercent": 24,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "error": "HTTP Error 403: Forbidden"
+      "error": null,
+      "achievementsPlaytimeHours": 5.08
     },
     {
       "username": "WNDRLST",
@@ -70827,25 +70829,25 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-09-24T10:35:52.856111+00:00",
+  "libraryUpdatedAt": "2026-09-25T10:39:25.566661+00:00",
   "libraryStats": {
-    "durationSeconds": 6.74,
+    "durationSeconds": 3.99,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14532
+    "totalPlaytimeRows": 14533
   },
   "stats": {
-    "durationSeconds": 64.25,
+    "durationSeconds": 55.2,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
-    "cachedReuses": 2324,
-    "achievementSuccesses": 10,
-    "achievementErrors": 55,
-    "cachedFallbacks": 55,
+    "cachedReuses": 2328,
+    "achievementSuccesses": 8,
+    "achievementErrors": 53,
+    "cachedFallbacks": 53,
     "hltbTitlesRequested": 1290,
     "hltbResultsAvailable": 4037
   }
