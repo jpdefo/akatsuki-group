@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-25T10:40:16.773496+00:00",
+  "updatedAt": "2026-09-26T10:23:56.446790+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -7095,7 +7095,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 17.03,
+      "playtimeHours": 20.75,
       "visible": true,
       "earnedAchievements": 1,
       "totalAchievements": 34,
@@ -7104,7 +7104,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 17.03
+      "achievementsPlaytimeHours": 20.75
     },
     {
       "username": "burntreynolds444",
@@ -7685,12 +7685,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 142.43,
+      "playtimeHours": 143.08,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 142.43,
+      "achievementsPlaytimeHours": 143.08,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -8395,16 +8395,17 @@
       "appId": 1491410,
       "title": "Eternal Strands",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/1491410/achievements/",
-      "playtimeHours": 4.53,
+      "playtimeHours": 7.27,
       "visible": true,
-      "earnedAchievements": 6,
+      "earnedAchievements": 9,
       "totalAchievements": 44,
-      "achievementPercent": 14,
+      "achievementPercent": 20,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 4.53
+      "achievementsPlaytimeHours": 7.27,
+      "popThresholdMetAt": "2026-09-26T10:23:56.446031+00:00"
     },
     {
       "username": "chOOkity",
@@ -38381,12 +38382,12 @@
       "earnedAchievements": 31,
       "totalAchievements": 35,
       "achievementPercent": 89,
-      "playtimeHours": 985.37,
+      "playtimeHours": 985.38,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 985.37,
+      "achievementsPlaytimeHours": 985.38,
       "popThresholdMetAt": "2026-06-26T07:11:08.801512+00:00"
     },
     {
@@ -70829,18 +70830,18 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-09-25T10:39:25.566661+00:00",
+  "libraryUpdatedAt": "2026-09-26T10:22:56.981974+00:00",
   "libraryStats": {
-    "durationSeconds": 3.99,
+    "durationSeconds": 7.72,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14533
+    "totalPlaytimeRows": 14535
   },
   "stats": {
-    "durationSeconds": 55.2,
+    "durationSeconds": 67.19,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
