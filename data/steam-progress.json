@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-26T10:23:56.446790+00:00",
+  "updatedAt": "2026-09-27T10:55:19.087594+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -6742,7 +6742,7 @@
       "appId": 2001760,
       "title": "Beast of Reincarnation",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/2001760/achievements/",
-      "playtimeHours": 1.02,
+      "playtimeHours": 3.45,
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 46,
@@ -6751,7 +6751,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.02
+      "achievementsPlaytimeHours": 3.45
     },
     {
       "username": "burntreynolds444",
@@ -7095,7 +7095,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 20.75,
+      "playtimeHours": 23.47,
       "visible": true,
       "earnedAchievements": 1,
       "totalAchievements": 34,
@@ -7104,7 +7104,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 20.75
+      "achievementsPlaytimeHours": 23.47
     },
     {
       "username": "burntreynolds444",
@@ -7685,12 +7685,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 143.08,
+      "playtimeHours": 143.88,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 143.08,
+      "achievementsPlaytimeHours": 143.88,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -16234,15 +16234,16 @@
       "title": "Borderlands 4",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/1285190/achievements/",
       "visible": true,
-      "earnedAchievements": 3,
+      "earnedAchievements": 7,
       "totalAchievements": 63,
-      "achievementPercent": 5,
-      "playtimeHours": 6.75,
+      "achievementPercent": 11,
+      "playtimeHours": 9.1,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 6.75
+      "achievementsPlaytimeHours": 9.1,
+      "popThresholdMetAt": "2026-09-27T10:55:19.087065+00:00"
     },
     {
       "username": "Horseflesh",
@@ -70830,9 +70831,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-09-26T10:22:56.981974+00:00",
+  "libraryUpdatedAt": "2026-09-27T10:54:27.979449+00:00",
   "libraryStats": {
-    "durationSeconds": 7.72,
+    "durationSeconds": 3.9,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -70841,7 +70842,7 @@
     "totalPlaytimeRows": 14535
   },
   "stats": {
-    "durationSeconds": 67.19,
+    "durationSeconds": 55.02,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
