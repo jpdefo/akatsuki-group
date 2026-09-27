@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Akatsuki SteamGifts Sync
 // @namespace    akatsuki-monitor
-// @version      1.13.2
+// @version      1.13.3
 // @author       Koalala
 // @description  Collect Akatsuki members, giveaways, entries and winners from the logged-in SteamGifts session and publish them straight to GitHub.
 // @match        https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts
@@ -328,8 +328,9 @@
       log(`Members found: ${members.length}`);
 
       log(`Reading the ${maxPages} most recent giveaway page(s)...`);
-      const giveaways = await collectGiveaways(existingSync, maxPages);
-      log(`Giveaways scraped: ${giveaways.length}`);
+      const scrapedGiveaways = await collectGiveaways(existingSync, maxPages);
+      log(`Giveaways scraped: ${scrapedGiveaways.length}`);
+      const giveaways = getGiveawaysForDetailRefresh(scrapedGiveaways, existingGiveaways);
 
       let detailedGiveaways = giveaways;
       const unresolvedGiveaways = giveaways.filter(needsGiveawayDetails);
@@ -1186,11 +1187,27 @@
     return Array.from(byUsername.values()).sort((left, right) => left.username.localeCompare(right.username));
   }
 
+  function needsGiveawayMonthCheck(giveaway) {
+    const kind = String(giveaway?.giveawayKind || "").trim().toLowerCase()
+    // Missing means a legacy record never stored a month check. An empty
+    // string means the description was checked but had no unambiguous month.
+    return Boolean(giveaway?.url)
+      && (!kind || kind === "cycle")
+      && typeof giveaway.giveawayMonthOverride !== "string"
+  }
+
+  function getGiveawaysForDetailRefresh(scraped, existing) {
+    // Include legacy records outside the recent-page window. Keep fresh rows
+    // when both sources contain the same giveaway.
+    return unionByKey(scraped, existing.filter(needsGiveawayMonthCheck), (item) => item.code)
+  }
+
   function needsGiveawayDetails(giveaway) {
     const ended = isGiveawayEnded(giveaway);
     return (
       !giveaway.appId ||
       !giveaway.giveawayKindChecked ||
+      needsGiveawayMonthCheck(giveaway) ||
       shouldRefreshSummerEventEntries(giveaway) ||
       (ended && ["open", "awaiting_feedback", "unknown"].includes(String(giveaway.resultStatus || "")))
     );
