@@ -1,7 +1,7 @@
 {
   "source": "akatsuki-steamgifts-sync",
-  "collectorVersion": "1.13.2",
-  "syncedAt": "2026-09-26T10:25:52.566Z",
+  "collectorVersion": "1.13.3",
+  "syncedAt": "2026-09-27T10:39:48.746Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -2834,10 +2834,12 @@
       "steamStoreId": 3057670,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3057670/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3057670/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3057670/0c72feeff69a5a0b958604cb42ff24957b923010/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3057670/capsule_184x69.jpg",
       "startDate": "2026-05-01T23:26:23.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-04",
+      "penaltyForCode": ""
     },
     {
       "code": "bvc8x",
@@ -3038,10 +3040,12 @@
       "steamStoreId": 1297900,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1297900/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1297900/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1297900/65bac0ffa9e365a6591c984c1dd6273ccf502665/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1297900/capsule_184x69.jpg",
       "startDate": "2026-04-15T20:33:50.000Z",
       "entriesSnapshotAt": "",
-      "hltbHours": 27.5
+      "hltbHours": 27.5,
+      "giveawayMonthOverride": "",
+      "penaltyForCode": ""
     },
     {
       "code": "cnObM",
@@ -3061,14 +3065,16 @@
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true,
-      "entriesFinalized": false,
+      "entriesFinalized": true,
       "steamStoreType": "app",
       "steamStoreId": 2997230,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2997230/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2997230/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2997230/5980b81c301edbca8163ca0df484af8b18f25da6/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2997230/capsule_184x69.jpg",
       "startDate": "2026-04-14T17:27:01.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-04",
+      "penaltyForCode": ""
     },
     {
       "code": "W2Nnj",
@@ -3099,9 +3105,11 @@
       "steamStoreId": 1626170,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1626170/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1626170/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1626170/90325a0ba70ed9523b1c487e1867972a219ccf97/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1626170/capsule_184x69.jpg",
       "startDate": "2026-04-14T13:23:43.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-04",
+      "penaltyForCode": ""
     },
     {
       "code": "vWNke",
@@ -3165,9 +3173,11 @@
       "steamStoreId": 1783560,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1783560/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1783560/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1783560/510c957c49f2db52a9965a84a2189e65ca31aa37/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1783560/capsule_184x69.jpg",
       "startDate": "2026-04-13T19:07:15.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-04",
+      "penaltyForCode": ""
     },
     {
       "code": "je9HF",
@@ -3187,14 +3197,16 @@
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true,
-      "entriesFinalized": false,
+      "entriesFinalized": true,
       "steamStoreType": "app",
       "steamStoreId": 2529790,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2529790/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2529790/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2529790/aeeae883aabb1a2633194cbeff5a4b64f7a80340/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2529790/capsule_184x69.jpg",
       "startDate": "2026-04-13T04:55:50.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-04",
+      "penaltyForCode": ""
     },
     {
       "code": "1HSP9",
@@ -3225,9 +3237,11 @@
       "steamStoreId": 3552140,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3552140/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3552140/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3552140/942cdcf14d5185e5f2f8e3999e79ab062b4aad22/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3552140/capsule_184x69.jpg",
       "startDate": "2026-04-12T13:53:30.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-04",
+      "penaltyForCode": ""
     },
     {
       "code": "XAkzm",
@@ -3258,9 +3272,11 @@
       "steamStoreId": 686060,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/686060/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/686060/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/686060/b00ca313f3ac970c3e412280ecc8a5ed65813a0e/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/686060/capsule_184x69.jpg",
       "startDate": "2026-04-12T11:21:22.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-04",
+      "penaltyForCode": ""
     },
     {
       "code": "zEwc3",
@@ -3291,9 +3307,11 @@
       "steamStoreId": 1663850,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1663850/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1663850/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1663850/dc8b06f173ef6404a646accdb0f5efe3824668ff/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1663850/capsule_184x69.jpg",
       "startDate": "2026-04-06T12:06:40.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-04",
+      "penaltyForCode": ""
     },
     {
       "code": "Cufm2",
@@ -3358,9 +3376,11 @@
       "steamStoreId": 2868840,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2868840/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2868840/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2868840/fb0ad136e9eaa4297a1ab3440d88ecb7209f44a2/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2868840/capsule_184x69.jpg",
       "startDate": "2026-04-05T09:49:08.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-04",
+      "penaltyForCode": ""
     },
     {
       "code": "iWDQT",
@@ -3391,9 +3411,11 @@
       "steamStoreId": 3288210,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3288210/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3288210/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3288210/3de894351f35432432eaf1f38459365d7cc75c82/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3288210/capsule_184x69.jpg",
       "startDate": "2026-04-02T20:21:23.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "",
+      "penaltyForCode": ""
     },
     {
       "code": "XMRO7",
@@ -3424,9 +3446,11 @@
       "steamStoreId": 2432860,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2432860/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2432860/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2432860/f3da7e906c7a3126ad95691f10ee9e8eb8650e09/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2432860/capsule_184x69.jpg",
       "startDate": "2026-04-01T15:58:28.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-04",
+      "penaltyForCode": ""
     },
     {
       "code": "9So0q",
@@ -3457,9 +3481,11 @@
       "steamStoreId": 2416450,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2416450/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2416450/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2416450/772ae02fc6ab5734887bc6621ed5cf7bcc739050/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2416450/capsule_184x69.jpg",
       "startDate": "2026-04-01T07:27:07.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-04",
+      "penaltyForCode": ""
     },
     {
       "code": "9At4Y",
@@ -3489,10 +3515,12 @@
       "steamStoreId": 2989180,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2989180/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2989180/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2989180/85e634c779471ff86f90a844bca712f488a7b13c/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2989180/capsule_184x69.jpg",
       "startDate": "2026-03-31T18:29:32.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-03",
+      "penaltyForCode": ""
     },
     {
       "code": "BHHqT",
@@ -3511,14 +3539,16 @@
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true,
-      "entriesFinalized": false,
+      "entriesFinalized": true,
       "steamStoreType": "app",
       "steamStoreId": 2975950,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2975950/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2975950/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2975950/capsule_184x69.jpg",
       "startDate": "2026-03-16T18:39:34.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-03",
+      "penaltyForCode": ""
     },
     {
       "code": "8ll4Q",
@@ -3537,14 +3567,16 @@
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true,
-      "entriesFinalized": false,
+      "entriesFinalized": true,
       "steamStoreType": "app",
       "steamStoreId": 3917090,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3917090/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3917090/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3917090/capsule_184x69.jpg",
       "startDate": "2026-03-12T22:52:49.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-03",
+      "penaltyForCode": ""
     },
     {
       "code": "Ct2Oa",
@@ -3575,9 +3607,11 @@
       "steamStoreId": 2057760,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2057760/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2057760/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2057760/0c8f3c4b30a022b6ce816096db0dfd385199226b/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2057760/capsule_184x69.jpg",
       "startDate": "2026-03-12T22:49:18.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-03",
+      "penaltyForCode": ""
     },
     {
       "code": "LzlgY",
@@ -3608,9 +3642,11 @@
       "steamStoreId": 2208350,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2208350/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2208350/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2208350/62eeae4a07071720d184accd218c18ef10c21eaf/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2208350/capsule_184x69.jpg",
       "startDate": "2026-03-08T19:30:21.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-03",
+      "penaltyForCode": ""
     },
     {
       "code": "G2RfG",
@@ -3640,10 +3676,12 @@
       "steamStoreId": 2997230,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2997230/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2997230/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2997230/5980b81c301edbca8163ca0df484af8b18f25da6/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2997230/capsule_184x69.jpg",
       "startDate": "2026-03-07T18:23:47.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-03",
+      "penaltyForCode": ""
     },
     {
       "code": "Hvrml",
@@ -3674,9 +3712,11 @@
       "steamStoreId": 3065800,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3065800/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3065800/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3065800/ffd23760ec97b7d9915c69bed729b1d416a5a7b1/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3065800/capsule_184x69.jpg",
       "startDate": "2026-03-07T17:51:49.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-03",
+      "penaltyForCode": ""
     },
     {
       "code": "Cdy3v",
@@ -3706,10 +3746,12 @@
       "steamStoreId": 2868840,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2868840/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2868840/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2868840/fb0ad136e9eaa4297a1ab3440d88ecb7209f44a2/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2868840/capsule_184x69.jpg",
       "startDate": "2026-03-07T17:01:37.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-03",
+      "penaltyForCode": ""
     },
     {
       "code": "zkP7M",
@@ -3740,9 +3782,11 @@
       "steamStoreId": 2416450,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2416450/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2416450/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2416450/772ae02fc6ab5734887bc6621ed5cf7bcc739050/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2416450/capsule_184x69.jpg",
       "startDate": "2026-03-06T21:52:27.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "",
+      "penaltyForCode": ""
     },
     {
       "code": "x1bLK",
@@ -3778,10 +3822,12 @@
       "steamPricePoints": 70,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2677660/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2677660/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2677660/13f13e9124e41f9b931d2f286f4012cb9444c853/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2677660/capsule_184x69.jpg",
       "startDate": "2026-03-06T01:02:50.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-03",
+      "penaltyForCode": ""
     },
     {
       "code": "onN8N",
@@ -3817,10 +3863,12 @@
       "steamPricePoints": 60,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3489700/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3489700/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3489700/75914656cad450124a18fef914c5a5f4866ffb67/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3489700/capsule_184x69.jpg",
       "startDate": "2026-03-04T06:57:38.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-03",
+      "penaltyForCode": ""
     },
     {
       "code": "tA4L6",
@@ -3884,10 +3932,12 @@
       "steamStoreId": 686060,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/686060/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/686060/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/686060/b00ca313f3ac970c3e412280ecc8a5ed65813a0e/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/686060/capsule_184x69.jpg",
       "startDate": "2026-03-01T20:14:02.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "",
+      "penaltyForCode": ""
     },
     {
       "code": "kaiKt",
@@ -3918,9 +3968,11 @@
       "steamStoreId": 3321460,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3321460/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3321460/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3321460/9fef3b5648defc30432d4b3221296350354b8742/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3321460/capsule_184x69.jpg",
       "startDate": "2026-03-01T15:10:49.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-03",
+      "penaltyForCode": ""
     },
     {
       "code": "xfwEj",
@@ -3957,9 +4009,11 @@
       "steamPricePoints": 60,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1392860/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1392860/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1392860/6fbaf98a2692a036262ddae76963a3f41dba3edd/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1392860/capsule_184x69.jpg",
       "startDate": "2026-02-23T18:39:32.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-02",
+      "penaltyForCode": ""
     },
     {
       "code": "Xk2A9",
@@ -3990,9 +4044,11 @@
       "steamStoreId": 3747730,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3747730/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3747730/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3747730/83687f8b1db69ad128d82176958b3617164aa91c/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3747730/capsule_184x69.jpg",
       "startDate": "2026-02-15T01:50:52.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-02",
+      "penaltyForCode": ""
     },
     {
       "code": "qJDwI",
@@ -4023,9 +4079,11 @@
       "steamStoreId": 2393920,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2393920/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2393920/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2393920/e4b57be7d5b2ddf4d386f236a6d098ec9ba8eb57/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2393920/capsule_184x69.jpg",
       "startDate": "2026-02-14T12:52:38.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-02",
+      "penaltyForCode": ""
     },
     {
       "code": "2HgW9",
@@ -4056,9 +4114,11 @@
       "steamStoreId": 686060,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/686060/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/686060/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/686060/b00ca313f3ac970c3e412280ecc8a5ed65813a0e/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/686060/capsule_184x69.jpg",
       "startDate": "2026-02-14T10:08:49.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-02",
+      "penaltyForCode": ""
     },
     {
       "code": "erGtr",
@@ -4089,9 +4149,11 @@
       "steamStoreId": 2624870,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2624870/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2624870/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2624870/93e13a4730eb8b2cb6cbd1697b9eb6f1cdc9bac7/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2624870/capsule_184x69.jpg",
       "startDate": "2026-02-13T17:20:53.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "",
+      "penaltyForCode": ""
     },
     {
       "code": "qqB8C",
@@ -4122,9 +4184,11 @@
       "steamStoreId": 3050900,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3050900/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3050900/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3050900/8710a03b942defa8444d3d7724ab258051b65552/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3050900/capsule_184x69.jpg",
       "startDate": "2026-02-12T13:26:37.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-02",
+      "penaltyForCode": ""
     },
     {
       "code": "gSzJG",
@@ -4155,9 +4219,11 @@
       "steamStoreId": 1880620,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1880620/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1880620/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1880620/f39936735a9721b8307b7d486c9fb06dfc3e1ddc/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1880620/capsule_184x69.jpg",
       "startDate": "2026-02-03T11:19:28.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-02",
+      "penaltyForCode": ""
     },
     {
       "code": "HKrbj",
@@ -4190,7 +4256,9 @@
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3419520/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3419520/capsule_184x69.jpg",
       "startDate": "2026-02-02T13:44:51.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-02",
+      "penaltyForCode": ""
     },
     {
       "code": "sWkbw",
@@ -4221,9 +4289,11 @@
       "steamStoreId": 1588550,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1588550/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1588550/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1588550/b46958afa6fe4a8da8329782be422284e184661b/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1588550/capsule_184x69.jpg",
       "startDate": "2026-02-01T21:26:43.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-02",
+      "penaltyForCode": ""
     },
     {
       "code": "q6xBB",
@@ -4260,9 +4330,11 @@
       "steamPricePoints": 60,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1941540/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1941540/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1941540/4cba4ed7de77ea84d94e22eef5cd8c9b284e5b25/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1941540/capsule_184x69.jpg",
       "startDate": "2026-02-01T16:20:32.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-02",
+      "penaltyForCode": ""
     },
     {
       "code": "1ioqU",
@@ -4293,9 +4365,11 @@
       "steamStoreId": 3483740,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3483740/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3483740/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3483740/69a88dc7c3311e0db03d43816ceb585f49295113/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3483740/capsule_184x69.jpg",
       "startDate": "2026-01-31T15:51:18.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-02",
+      "penaltyForCode": ""
     },
     {
       "code": "egRov",
@@ -4326,9 +4400,11 @@
       "steamStoreId": 2129530,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2129530/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2129530/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2129530/0e28f1b3446dd979013ca3df83a3ced5d7ca611b/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2129530/capsule_184x69.jpg",
       "startDate": "2026-01-31T15:48:04.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-02",
+      "penaltyForCode": ""
     },
     {
       "code": "3FjZo",
@@ -4359,9 +4435,11 @@
       "steamStoreId": 1718460,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1718460/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1718460/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1718460/8287bc2b3b4647bc55d6cb13a7ac893629da4851/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1718460/capsule_184x69.jpg",
       "startDate": "2026-01-31T07:57:08.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-02",
+      "penaltyForCode": ""
     },
     {
       "code": "mez0s",
@@ -4398,9 +4476,11 @@
       "steamPricePoints": 50,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2668510/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2668510/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2668510/c9c0dd50da5b3543c74beb11b6c806fb9fd88a8c/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2668510/capsule_184x69.jpg",
       "startDate": "2026-01-28T18:47:43.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "",
+      "penaltyForCode": ""
     },
     {
       "code": "LgQJ6",
@@ -4436,10 +4516,12 @@
       "steamPricePoints": 50,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1004640/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1004640/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1004640/12bdfff11d35dbd64055124bcdbf690f49d6ce46/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1004640/capsule_184x69.jpg",
       "startDate": "2026-01-26T12:37:29.000Z",
       "entriesSnapshotAt": "",
-      "hltbHours": 36.81
+      "hltbHours": 36.81,
+      "giveawayMonthOverride": "2026-01",
+      "penaltyForCode": ""
     },
     {
       "code": "auhIy",
@@ -4470,9 +4552,11 @@
       "steamStoreId": 3483740,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3483740/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3483740/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3483740/69a88dc7c3311e0db03d43816ceb585f49295113/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3483740/capsule_184x69.jpg",
       "startDate": "2026-01-13T18:29:58.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-01",
+      "penaltyForCode": ""
     },
     {
       "code": "O753M",
@@ -4503,9 +4587,11 @@
       "steamStoreId": 3290690,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3290690/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3290690/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3290690/24e1044981a0637b97586ba55ef2d269651f3cac/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3290690/capsule_184x69.jpg",
       "startDate": "2026-01-13T16:32:22.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-01",
+      "penaltyForCode": ""
     },
     {
       "code": "iCOz3",
@@ -4536,9 +4622,11 @@
       "steamStoreId": 1718460,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1718460/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1718460/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1718460/8287bc2b3b4647bc55d6cb13a7ac893629da4851/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1718460/capsule_184x69.jpg",
       "startDate": "2026-01-06T17:55:13.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-01",
+      "penaltyForCode": ""
     },
     {
       "code": "p3a3r",
@@ -4569,9 +4657,11 @@
       "steamStoreId": 2101960,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2101960/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2101960/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2101960/a9c0e9e0e5ed7b191b8efc25d496003c4296bc76/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2101960/capsule_184x69.jpg",
       "startDate": "2026-01-06T06:42:19.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-01",
+      "penaltyForCode": ""
     },
     {
       "code": "uEE3O",
@@ -4602,9 +4692,11 @@
       "steamStoreId": 2592160,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2592160/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2592160/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2592160/925ffa7e3699d5c9c1369be5d4c3369f0e907e00/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2592160/capsule_184x69.jpg",
       "startDate": "2026-01-05T20:42:40.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-01",
+      "penaltyForCode": ""
     },
     {
       "code": "TTAT4",
@@ -4641,9 +4733,11 @@
       "steamPricePoints": 60,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2680010/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2680010/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2680010/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2680010/capsule_184x69.jpg",
       "startDate": "2026-01-03T20:12:28.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-01",
+      "penaltyForCode": ""
     },
     {
       "code": "3Klb9",
@@ -4679,10 +4773,12 @@
       "steamPricePoints": 50,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2623190/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2623190/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2623190/4efc3257aabd776d4624da40146fb021d1ef5b38/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2623190/capsule_184x69.jpg",
       "startDate": "2026-01-02T20:03:37.000Z",
       "entriesSnapshotAt": "",
-      "hltbHours": 17.5
+      "hltbHours": 17.5,
+      "giveawayMonthOverride": "2026-01",
+      "penaltyForCode": ""
     },
     {
       "code": "8ADOY",
@@ -4713,9 +4809,11 @@
       "steamStoreId": 2377280,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2377280/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2377280/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2377280/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2377280/capsule_184x69.jpg",
       "startDate": "2026-01-01T20:25:08.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-01",
+      "penaltyForCode": ""
     },
     {
       "code": "3e4UV",
@@ -4752,9 +4850,11 @@
       "steamPricePoints": 60,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3489700/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3489700/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3489700/75914656cad450124a18fef914c5a5f4866ffb67/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3489700/capsule_184x69.jpg",
       "startDate": "2026-01-01T18:16:21.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-01",
+      "penaltyForCode": ""
     },
     {
       "code": "wsLa6",
@@ -4785,9 +4885,11 @@
       "steamStoreId": 2362060,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2362060/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2362060/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2362060/6d3b367ffaa2fb432f891978e18248466972c0b6/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2362060/capsule_184x69.jpg",
       "startDate": "2026-01-01T17:33:50.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2026-01",
+      "penaltyForCode": ""
     },
     {
       "code": "eGZbH",
@@ -4820,7 +4922,9 @@
       "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2062430/capsule_184x69.jpg",
       "startDate": "2025-12-21T13:38:22.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "",
+      "penaltyForCode": ""
     },
     {
       "code": "9zzHp",
@@ -4853,7 +4957,9 @@
       "startDate": "2025-12-14T16:07:01.000Z",
       "giveawayKind": "",
       "entriesSnapshotAt": "",
-      "hltbHours": 15.37
+      "hltbHours": 15.37,
+      "giveawayMonthOverride": "2025-11",
+      "penaltyForCode": ""
     },
     {
       "code": "CzQVS",
@@ -4889,10 +4995,12 @@
       "steamPricePoints": 70,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2677660/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2677660/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2677660/13f13e9124e41f9b931d2f286f4012cb9444c853/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2677660/capsule_184x69.jpg",
       "startDate": "2025-12-14T15:51:57.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-11",
+      "penaltyForCode": ""
     },
     {
       "code": "paT3e",
@@ -4922,10 +5030,12 @@
       "steamStoreId": 2101960,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2101960/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2101960/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2101960/a9c0e9e0e5ed7b191b8efc25d496003c4296bc76/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2101960/capsule_184x69.jpg",
       "startDate": "2025-12-14T15:51:13.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-11",
+      "penaltyForCode": ""
     },
     {
       "code": "Ss2Am",
@@ -4955,10 +5065,12 @@
       "steamStoreId": 2239710,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2239710/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2239710/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2239710/7edb6735a24328eeb5d5d04f3f66579127812aab/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2239710/capsule_184x69.jpg",
       "startDate": "2025-12-11T18:13:48.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-11",
+      "penaltyForCode": ""
     },
     {
       "code": "nU9ju",
@@ -4988,10 +5100,12 @@
       "steamStoreId": 1030300,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1030300/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1030300/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1030300/b73ec03fbdb9e21e3c59eb7e59966949d0c17f29/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1030300/capsule_184x69.jpg",
       "startDate": "2025-12-08T20:29:42.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-11",
+      "penaltyForCode": ""
     },
     {
       "code": "LqrvT",
@@ -5102,10 +5216,12 @@
       "steamStoreId": 3017860,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3017860/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3017860/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3017860/4b39d554fb3b3a48ff02e2f05bba7186a58052ce/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3017860/capsule_184x69.jpg",
       "startDate": "2025-12-05T18:09:23.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-11",
+      "penaltyForCode": ""
     },
     {
       "code": "ss1t3",
@@ -5136,9 +5252,11 @@
       "steamStoreId": 2753970,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2753970/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2753970/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2753970/80dddb5e9ce0ff4919a2ba57b59aee09f194f917/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2753970/capsule_184x69.jpg",
       "startDate": "2025-12-04T00:18:43.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-11",
+      "penaltyForCode": ""
     },
     {
       "code": "Pur9v",
@@ -5174,10 +5292,12 @@
       "steamPricePoints": 70,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2417610/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2417610/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2417610/fcf468fafa62aa13ac11f1ad2f84cab740eac6af/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2417610/capsule_184x69.jpg",
       "startDate": "2025-12-02T16:57:53.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-11",
+      "penaltyForCode": ""
     },
     {
       "code": "sggkD",
@@ -5207,10 +5327,12 @@
       "steamStoreId": 2592160,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2592160/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2592160/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2592160/925ffa7e3699d5c9c1369be5d4c3369f0e907e00/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2592160/capsule_184x69.jpg",
       "startDate": "2025-11-29T17:20:11.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-11",
+      "penaltyForCode": ""
     },
     {
       "code": "3tY9I",
@@ -5241,9 +5363,11 @@
       "steamStoreId": 2968420,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2968420/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2968420/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2968420/33ef3ac597ce9813b4eb8da4eace0f5cb51869e5/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2968420/capsule_184x69.jpg",
       "startDate": "2025-11-20T15:07:17.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-11",
+      "penaltyForCode": ""
     },
     {
       "code": "aQMBR",
@@ -5273,10 +5397,12 @@
       "steamStoreId": 3527760,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3527760/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3527760/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527760/48709bff73af97051fc8c912a2aea6f38920d4ac/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3527760/capsule_184x69.jpg",
       "startDate": "2025-11-15T20:59:56.000Z",
       "entriesSnapshotAt": "",
-      "hltbHours": 7.81
+      "hltbHours": 7.81,
+      "giveawayMonthOverride": "2025-11",
+      "penaltyForCode": ""
     },
     {
       "code": "bpRih",
@@ -5296,14 +5422,16 @@
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true,
-      "entriesFinalized": false,
+      "entriesFinalized": true,
       "steamStoreType": "app",
       "steamStoreId": 2576150,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2576150/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2576150/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2576150/a57aa4244fe7ba1564918b806a923a71806f39b3/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2576150/capsule_184x69.jpg",
       "startDate": "2025-11-14T16:46:12.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-11",
+      "penaltyForCode": ""
     },
     {
       "code": "YibWp",
@@ -5333,9 +5461,11 @@
       "steamStoreId": 2719750,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2719750/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2719750/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2719750/fb81b59aefd07896fa0778a851234465614b92c6/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2719750/capsule_184x69.jpg",
       "startDate": "2025-11-12T22:44:26.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-11",
+      "penaltyForCode": ""
     },
     {
       "code": "i5PSb",
@@ -5366,9 +5496,11 @@
       "steamStoreId": 2254890,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2254890/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2254890/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2254890/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2254890/capsule_184x69.jpg",
       "startDate": "2025-11-03T20:43:10.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-11",
+      "penaltyForCode": ""
     },
     {
       "code": "1FE9d",
@@ -5399,9 +5531,11 @@
       "steamStoreId": 1395520,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1395520/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1395520/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1395520/f996db16dd5305969f0c28e2cdb44b240a56e4f8/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1395520/capsule_184x69.jpg",
       "startDate": "2025-11-02T14:47:15.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-11",
+      "penaltyForCode": ""
     },
     {
       "code": "bnjU6",
@@ -5432,9 +5566,11 @@
       "steamStoreId": 2246670,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2246670/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2246670/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2246670/6480a05fb67ed5d30818cb66f5b6895e03e83f17/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2246670/capsule_184x69.jpg",
       "startDate": "2025-11-02T14:45:12.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-11",
+      "penaltyForCode": ""
     },
     {
       "code": "jNPYz",
@@ -5497,10 +5633,12 @@
       "steamStoreId": 2592160,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2592160/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2592160/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2592160/925ffa7e3699d5c9c1369be5d4c3369f0e907e00/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2592160/capsule_184x69.jpg",
       "startDate": "2025-11-01T19:25:04.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-11",
+      "penaltyForCode": ""
     },
     {
       "code": "QozX3",
@@ -5531,9 +5669,11 @@
       "steamStoreId": 1154030,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1154030/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1154030/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1154030/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1154030/capsule_184x69.jpg",
       "startDate": "2025-11-01T19:23:29.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-11",
+      "penaltyForCode": ""
     },
     {
       "code": "LKEa4",
@@ -5564,9 +5704,11 @@
       "steamStoreId": 1808500,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1808500/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1808500/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1808500/542a243d39bd7ed791359be9e96c82f419b81475/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1808500/capsule_184x69.jpg",
       "startDate": "2025-11-01T18:48:09.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-11",
+      "penaltyForCode": ""
     },
     {
       "code": "TOvlq",
@@ -5596,10 +5738,12 @@
       "steamStoreId": 2968420,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2968420/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2968420/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2968420/33ef3ac597ce9813b4eb8da4eace0f5cb51869e5/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2968420/capsule_184x69.jpg",
       "startDate": "2025-10-31T14:23:39.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-10",
+      "penaltyForCode": ""
     },
     {
       "code": "AytCz",
@@ -5662,10 +5806,12 @@
       "steamStoreId": 2288350,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2288350/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2288350/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2288350/120562651f1b34cdf731543795a78b86b89d8d08/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2288350/capsule_184x69.jpg",
       "startDate": "2025-10-23T13:47:44.000Z",
       "entriesSnapshotAt": "",
-      "hltbHours": 18.96
+      "hltbHours": 18.96,
+      "giveawayMonthOverride": "2025-10",
+      "penaltyForCode": ""
     },
     {
       "code": "AAyJb",
@@ -5696,9 +5842,11 @@
       "steamStoreId": 2592160,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2592160/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2592160/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2592160/925ffa7e3699d5c9c1369be5d4c3369f0e907e00/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2592160/capsule_184x69.jpg",
       "startDate": "2025-10-23T03:57:12.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-10",
+      "penaltyForCode": ""
     },
     {
       "code": "ZpqY9",
@@ -5729,9 +5877,11 @@
       "steamStoreId": 1969370,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1969370/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1969370/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1969370/3111f3ef942ec1c342f019d26a2f9bae7a00940b/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1969370/capsule_184x69.jpg",
       "startDate": "2025-10-15T03:43:26.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-10",
+      "penaltyForCode": ""
     },
     {
       "code": "0i0bS",
@@ -5762,9 +5912,11 @@
       "steamStoreId": 2530490,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2530490/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2530490/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2530490/8a78bc77d8a1bf4cfd083a1f742bc2fb57acd9cc/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2530490/capsule_184x69.jpg",
       "startDate": "2025-10-14T15:21:22.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-10",
+      "penaltyForCode": ""
     },
     {
       "code": "UJg4K",
@@ -5800,10 +5952,12 @@
       "steamPricePoints": 50,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1608070/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1608070/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1608070/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1608070/capsule_184x69.jpg",
       "startDate": "2025-10-11T17:29:49.000Z",
       "entriesSnapshotAt": "",
-      "hltbHours": 13.77
+      "hltbHours": 13.77,
+      "giveawayMonthOverride": "2025-10",
+      "penaltyForCode": ""
     },
     {
       "code": "t1axg",
@@ -5840,9 +5994,11 @@
       "steamPricePoints": 60,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1941540/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1941540/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1941540/4cba4ed7de77ea84d94e22eef5cd8c9b284e5b25/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1941540/capsule_184x69.jpg",
       "startDate": "2025-10-06T18:44:39.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-10",
+      "penaltyForCode": ""
     },
     {
       "code": "fn63t",
@@ -5873,9 +6029,11 @@
       "steamStoreId": 3061810,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3061810/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3061810/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3061810/99ff0f2acf35c829ffea33c2c463beae64999b3a/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3061810/capsule_184x69.jpg",
       "startDate": "2025-10-05T15:59:44.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-10",
+      "penaltyForCode": ""
     },
     {
       "code": "RxszA",
@@ -5906,9 +6064,11 @@
       "steamStoreId": 3156770,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3156770/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3156770/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3156770/8534175074606b4c36191d3446d10d5e377dc6c3/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3156770/capsule_184x69.jpg",
       "startDate": "2025-10-04T13:51:40.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-09",
+      "penaltyForCode": ""
     },
     {
       "code": "QTSky",
@@ -5928,7 +6088,7 @@
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true,
-      "entriesFinalized": false,
+      "entriesFinalized": true,
       "steamStoreType": "app",
       "steamStoreId": 668580,
       "steamPriceChecked": true,
@@ -5939,9 +6099,11 @@
       "steamPricePoints": 60,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/668580/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/668580/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/668580/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/668580/capsule_184x69.jpg",
       "startDate": "2025-10-03T14:19:19.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-10",
+      "penaltyForCode": ""
     },
     {
       "code": "uXSqW",
@@ -5978,9 +6140,11 @@
       "steamPricePoints": 60,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2420110/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2420110/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2420110/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2420110/capsule_184x69.jpg",
       "startDate": "2025-10-03T04:40:00.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-10",
+      "penaltyForCode": ""
     },
     {
       "code": "MQTKP",
@@ -6044,9 +6208,11 @@
       "steamStoreId": 3655390,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3655390/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3655390/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3655390/308a4947264bdaaeb951a7811418fdb934220c58/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3655390/capsule_184x69.jpg",
       "startDate": "2025-10-01T22:40:38.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-10",
+      "penaltyForCode": ""
     },
     {
       "code": "SYvWa",
@@ -6077,9 +6243,11 @@
       "steamStoreId": 2101960,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2101960/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2101960/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2101960/a9c0e9e0e5ed7b191b8efc25d496003c4296bc76/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2101960/capsule_184x69.jpg",
       "startDate": "2025-10-01T21:36:06.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-10",
+      "penaltyForCode": ""
     },
     {
       "code": "KjJkB",
@@ -6116,9 +6284,11 @@
       "steamPricePoints": 50,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1903340/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1903340/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1903340/001d4a5d81e4bb9055b789240e78e04ef6e6da38/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1903340/capsule_184x69.jpg",
       "startDate": "2025-10-01T13:30:28.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-09",
+      "penaltyForCode": ""
     },
     {
       "code": "uknvG",
@@ -6149,9 +6319,11 @@
       "steamStoreId": 1154030,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1154030/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1154030/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1154030/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1154030/capsule_184x69.jpg",
       "startDate": "2025-10-01T10:15:25.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-10",
+      "penaltyForCode": ""
     },
     {
       "code": "YahmR",
@@ -6181,10 +6353,12 @@
       "steamStoreId": 3008130,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3008130/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3008130/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3008130/121bbff32c3e334ffcd3167af007cb8c0513d558/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3008130/capsule_184x69.jpg",
       "startDate": "2025-10-01T10:06:21.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-09",
+      "penaltyForCode": ""
     },
     {
       "code": "1bFHU",
@@ -6215,9 +6389,11 @@
       "steamStoreId": 3047750,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3047750/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3047750/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3047750/e95aa0db210f958399209b028a609dde063c7ecb/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3047750/capsule_184x69.jpg",
       "startDate": "2025-10-01T09:28:00.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-10",
+      "penaltyForCode": ""
     },
     {
       "code": "4dZgE",
@@ -6276,14 +6452,16 @@
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true,
-      "entriesFinalized": false,
+      "entriesFinalized": true,
       "steamStoreType": "app",
       "steamStoreId": 2230650,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2230650/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2230650/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2230650/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2230650/capsule_184x69.jpg",
       "startDate": "2025-09-16T08:25:11.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-09",
+      "penaltyForCode": ""
     },
     {
       "code": "b4hcd",
@@ -6314,9 +6492,11 @@
       "steamStoreId": 1888930,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1888930/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1888930/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1888930/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1888930/capsule_184x69.jpg",
       "startDate": "2025-09-16T01:13:21.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-09",
+      "penaltyForCode": ""
     },
     {
       "code": "24ANf",
@@ -6347,9 +6527,11 @@
       "steamStoreId": 532790,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/532790/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/532790/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/532790/88ffb5c9f4564c0760c45e6e4de10ebf60b85a5f/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/532790/capsule_184x69.jpg",
       "startDate": "2025-09-15T16:44:32.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-09",
+      "penaltyForCode": ""
     },
     {
       "code": "cB09w",
@@ -6380,9 +6562,11 @@
       "steamStoreId": 1466060,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1466060/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1466060/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1466060/b206ec038e28366626149529b8e873d1ed9d7a7a/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1466060/capsule_184x69.jpg",
       "startDate": "2025-09-14T14:48:23.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-09",
+      "penaltyForCode": ""
     },
     {
       "code": "xGxIJ",
@@ -6458,9 +6642,11 @@
       "steamPricePoints": 70,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2679460/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2679460/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2679460/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2679460/capsule_184x69.jpg",
       "startDate": "2025-09-12T14:59:06.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-09",
+      "penaltyForCode": ""
     },
     {
       "code": "kt3Pk",
@@ -6491,9 +6677,11 @@
       "steamStoreId": 1601570,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1601570/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1601570/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1601570/5934a27732c4867d605121201078eae8bd46ef4e/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1601570/capsule_184x69.jpg",
       "startDate": "2025-09-09T01:20:32.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-09",
+      "penaltyForCode": ""
     },
     {
       "code": "nLp5y",
@@ -6524,9 +6712,11 @@
       "steamStoreId": 2300120,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2300120/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2300120/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2300120/2d3fd1096153816c18349faff897271e93eb1840/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2300120/capsule_184x69.jpg",
       "startDate": "2025-09-06T17:08:32.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-09",
+      "penaltyForCode": ""
     },
     {
       "code": "BHcmi",
@@ -6546,14 +6736,16 @@
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayKindChecked": true,
-      "entriesFinalized": false,
+      "entriesFinalized": true,
       "steamStoreType": "app",
       "steamStoreId": 2753900,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2753900/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2753900/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2753900/capsule_184x69.jpg",
       "startDate": "2025-09-05T18:54:48.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-09",
+      "penaltyForCode": ""
     },
     {
       "code": "3DiHc",
@@ -6584,9 +6776,11 @@
       "steamStoreId": 2377280,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2377280/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2377280/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2377280/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2377280/capsule_184x69.jpg",
       "startDate": "2025-09-05T18:31:45.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-09",
+      "penaltyForCode": ""
     },
     {
       "code": "VyiPT",
@@ -6617,9 +6811,11 @@
       "steamStoreId": 1569580,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1569580/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1569580/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1569580/4f81a42ebaca088b16d5501914c6885e49f6c411/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1569580/capsule_184x69.jpg",
       "startDate": "2025-09-02T16:38:19.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-09",
+      "penaltyForCode": ""
     },
     {
       "code": "dXMS8",
@@ -6650,9 +6846,11 @@
       "steamStoreId": 2453160,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2453160/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2453160/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2453160/b6859cb09811648599bc738a2309b68046a5e6d9/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2453160/capsule_184x69.jpg",
       "startDate": "2025-09-01T17:51:33.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-09",
+      "penaltyForCode": ""
     },
     {
       "code": "zJXO8",
@@ -6683,9 +6881,11 @@
       "steamStoreId": 1154030,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1154030/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1154030/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1154030/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1154030/capsule_184x69.jpg",
       "startDate": "2025-09-01T17:25:01.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-09",
+      "penaltyForCode": ""
     },
     {
       "code": "UtTqc",
@@ -6715,10 +6915,12 @@
       "steamStoreId": 3527760,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3527760/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3527760/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527760/48709bff73af97051fc8c912a2aea6f38920d4ac/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3527760/capsule_184x69.jpg",
       "startDate": "2025-09-01T16:37:10.000Z",
       "entriesSnapshotAt": "",
-      "hltbHours": 7.81
+      "hltbHours": 7.81,
+      "giveawayMonthOverride": "2025-09",
+      "penaltyForCode": ""
     },
     {
       "code": "La736",
@@ -6749,9 +6951,11 @@
       "steamStoreId": 1030300,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1030300/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1030300/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1030300/b73ec03fbdb9e21e3c59eb7e59966949d0c17f29/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1030300/capsule_184x69.jpg",
       "startDate": "2025-09-01T10:37:58.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-09",
+      "penaltyForCode": ""
     },
     {
       "code": "JBiM3",
@@ -6790,7 +6994,9 @@
       "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1941540/capsule_184x69.jpg",
       "startDate": "2025-07-25T19:43:07.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-12",
+      "penaltyForCode": ""
     },
     {
       "code": "5mcKW",
@@ -7257,17 +7463,19 @@
       "steamStoreId": 2784470,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2784470/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2784470/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2784470/52914cecbaa148fd0533aff3c5297306757cd4a0/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2784470/capsule_184x69.jpg",
       "startDate": "2025-07-03T23:37:46.000Z",
-      "giveawayKind": "",
-      "entriesSnapshotAt": "2026-06-07T22:22:20.543Z",
+      "giveawayKind": "summer_event",
+      "entriesSnapshotAt": "",
       "entryUsers": [
         "BojanNS987",
         "Saikania",
         "Wintermute101",
         "xMisiu",
         "DeliberateTaco"
-      ]
+      ],
+      "giveawayMonthOverride": "",
+      "penaltyForCode": ""
     },
     {
       "code": "C4h91",
@@ -7711,15 +7919,17 @@
       "steamStoreId": 1876590,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1876590/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1876590/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1876590/9baf542a9b11a6be6b621de35b41ab4ed744725c/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1876590/capsule_184x69.jpg",
       "startDate": "2025-07-01T19:14:35.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": "2026-06-07T22:22:20.905Z",
+      "entriesSnapshotAt": "",
       "entryUsers": [
         "Oozyyy",
         "BojanNS987",
         "leniu"
-      ]
+      ],
+      "giveawayMonthOverride": "",
+      "penaltyForCode": ""
     },
     {
       "code": "aByGi",
@@ -10180,16 +10390,18 @@
       "steamStoreId": 1771300,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1771300/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1771300/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1771300/93e28946c46f09d761bbfab1e17e8c1c4a8323a0/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1771300/capsule_184x69.jpg",
       "startDate": "2025-06-27T09:13:02.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": "2026-06-07T22:22:21.237Z",
+      "entriesSnapshotAt": "",
       "entryUsers": [
         "Krlesnik",
         "zettaivanugen",
         "Saikania",
         "burntreynolds444"
-      ]
+      ],
+      "giveawayMonthOverride": "",
+      "penaltyForCode": ""
     },
     {
       "code": "Zr1zf",
@@ -11016,10 +11228,10 @@
       "steamStoreId": 1934570,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1934570/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1934570/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1934570/01f2b028cd34f164748efd277d43f55b1c7e9b31/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1934570/capsule_184x69.jpg",
       "startDate": "2025-06-26T18:22:06.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": "2026-06-07T22:22:21.602Z",
+      "entriesSnapshotAt": "",
       "entryUsers": [
         "DeliberateTaco",
         "chOOkity",
@@ -11027,7 +11239,9 @@
         "Ernesttico",
         "leniu",
         "Saikania"
-      ]
+      ],
+      "giveawayMonthOverride": "",
+      "penaltyForCode": ""
     },
     {
       "code": "1iJMP",
@@ -11057,16 +11271,18 @@
       "steamStoreId": 1569580,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1569580/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1569580/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1569580/4f81a42ebaca088b16d5501914c6885e49f6c411/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1569580/capsule_184x69.jpg",
       "startDate": "2025-06-26T18:17:46.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": "2026-06-07T22:22:21.924Z",
+      "entriesSnapshotAt": "",
       "entryUsers": [
         "Millsshogun",
         "Ernesttico",
         "BojanNS987",
         "xMisiu"
-      ]
+      ],
+      "giveawayMonthOverride": "",
+      "penaltyForCode": ""
     },
     {
       "code": "mxsyt",
@@ -11132,17 +11348,19 @@
       "steamStoreId": 2215430,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2215430/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2215430/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215430/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2215430/capsule_184x69.jpg",
       "startDate": "2025-06-26T18:15:27.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": "2026-06-07T22:22:22.291Z",
+      "entriesSnapshotAt": "",
       "entryUsers": [
         "chOOkity",
         "xMisiu",
         "Krlesnik",
         "Wintermute101",
         "Youdontknow"
-      ]
+      ],
+      "giveawayMonthOverride": "",
+      "penaltyForCode": ""
     },
     {
       "code": "K55XI",
@@ -11987,9 +12205,11 @@
       "steamStoreId": 1671210,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1671210/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1671210/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1671210/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1671210/capsule_184x69.jpg",
       "startDate": "2025-06-14T23:01:34.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-06",
+      "penaltyForCode": ""
     },
     {
       "code": "N9qOg",
@@ -12020,9 +12240,11 @@
       "steamStoreId": 1809540,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1809540/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1809540/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1809540/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1809540/capsule_184x69.jpg",
       "startDate": "2025-06-12T08:23:14.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-06",
+      "penaltyForCode": ""
     },
     {
       "code": "x3Klc",
@@ -12051,11 +12273,13 @@
       "steamStoreId": 2521380,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2521380/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2521380/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2521380/66108d2f93d2c57c0c7feefee875236971c84327/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2521380/capsule_184x69.jpg",
       "startDate": "2025-06-04T08:16:10.000Z",
       "giveawayKind": "",
       "entriesSnapshotAt": "",
-      "hltbHours": 17.95
+      "hltbHours": 17.95,
+      "giveawayMonthOverride": "",
+      "penaltyForCode": ""
     },
     {
       "code": "IrKLd",
@@ -12086,9 +12310,11 @@
       "steamStoreId": 2420660,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2420660/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2420660/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2420660/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2420660/capsule_184x69.jpg",
       "startDate": "2025-06-02T10:09:29.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-06",
+      "penaltyForCode": ""
     },
     {
       "code": "s3OjE",
@@ -12125,9 +12351,11 @@
       "steamPricePoints": 60,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3489700/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3489700/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3489700/75914656cad450124a18fef914c5a5f4866ffb67/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3489700/capsule_184x69.jpg",
       "startDate": "2025-06-02T10:07:25.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-06",
+      "penaltyForCode": ""
     },
     {
       "code": "NLhhA",
@@ -12158,9 +12386,11 @@
       "steamStoreId": 1486920,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1486920/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1486920/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1486920/d95b5528c7c6ba1a433d5b10c47fbaa222396d0a/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1486920/capsule_184x69.jpg",
       "startDate": "2025-06-01T17:25:44.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-06",
+      "penaltyForCode": ""
     },
     {
       "code": "qL3YC",
@@ -12191,9 +12421,11 @@
       "steamStoreId": 3179730,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3179730/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3179730/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3179730/fac37b35e4d19cf8a754554e30b944ab8a56e338/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3179730/capsule_184x69.jpg",
       "startDate": "2025-06-01T17:25:19.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-06",
+      "penaltyForCode": ""
     },
     {
       "code": "1TdVE",
@@ -12224,9 +12456,11 @@
       "steamStoreId": 2756920,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2756920/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2756920/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2756920/66761a59e36c29839be0a2917df4a2dbac6620e8/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2756920/capsule_184x69.jpg",
       "startDate": "2025-06-01T16:12:55.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-06",
+      "penaltyForCode": ""
     },
     {
       "code": "orFmd",
@@ -12257,9 +12491,11 @@
       "steamStoreId": 2277560,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2277560/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2277560/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2277560/7ad08d174b97880d3f611a068991b98471d1eb9c/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2277560/capsule_184x69.jpg",
       "startDate": "2025-06-01T16:12:00.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-06",
+      "penaltyForCode": ""
     },
     {
       "code": "wmwSr",
@@ -12290,9 +12526,11 @@
       "steamStoreId": 1466060,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1466060/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1466060/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1466060/b206ec038e28366626149529b8e873d1ed9d7a7a/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1466060/capsule_184x69.jpg",
       "startDate": "2025-06-01T15:29:38.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-06",
+      "penaltyForCode": ""
     },
     {
       "code": "I1p2T",
@@ -12329,9 +12567,11 @@
       "steamPricePoints": 50,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1903340/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1903340/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1903340/001d4a5d81e4bb9055b789240e78e04ef6e6da38/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1903340/capsule_184x69.jpg",
       "startDate": "2025-06-01T15:28:24.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-06",
+      "penaltyForCode": ""
     },
     {
       "code": "TBK7w",
@@ -12362,9 +12602,11 @@
       "steamStoreId": 1934570,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1934570/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1934570/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1934570/01f2b028cd34f164748efd277d43f55b1c7e9b31/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1934570/capsule_184x69.jpg",
       "startDate": "2025-06-01T07:53:20.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-06",
+      "penaltyForCode": ""
     },
     {
       "code": "U27Lp",
@@ -12401,9 +12643,11 @@
       "steamPricePoints": 50,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2668510/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2668510/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2668510/c9c0dd50da5b3543c74beb11b6c806fb9fd88a8c/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2668510/capsule_184x69.jpg",
       "startDate": "2025-06-01T07:53:15.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-06",
+      "penaltyForCode": ""
     },
     {
       "code": "XL7zN",
@@ -12436,7 +12680,9 @@
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/490110/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/490110/capsule_184x69.jpg",
       "startDate": "2025-05-31T06:47:30.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-06",
+      "penaltyForCode": ""
     },
     {
       "code": "zYKdC",
@@ -12467,9 +12713,11 @@
       "steamStoreId": 2277560,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2277560/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2277560/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2277560/7ad08d174b97880d3f611a068991b98471d1eb9c/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2277560/capsule_184x69.jpg",
       "startDate": "2025-05-25T21:21:00.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "",
+      "penaltyForCode": ""
     },
     {
       "code": "6yU4n",
@@ -12499,10 +12747,12 @@
       "steamStoreId": 1065310,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1065310/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1065310/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1065310/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1065310/capsule_184x69.jpg",
       "startDate": "2025-05-24T08:42:27.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "",
+      "penaltyForCode": ""
     },
     {
       "code": "VJMc9",
@@ -12535,7 +12785,9 @@
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/490110/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/490110/capsule_184x69.jpg",
       "startDate": "2025-05-21T07:23:18.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-05",
+      "penaltyForCode": ""
     },
     {
       "code": "IVfRE",
@@ -12565,10 +12817,12 @@
       "steamStoreId": 1684350,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1684350/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1684350/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1684350/448960e01c761c4b9a4046ee47b44b409c813313/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1684350/capsule_184x69.jpg",
       "startDate": "2025-05-16T14:05:53.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "",
+      "penaltyForCode": ""
     },
     {
       "code": "djAmk",
@@ -12599,9 +12853,11 @@
       "steamStoreId": 1875830,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1875830/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1875830/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1875830/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1875830/capsule_184x69.jpg",
       "startDate": "2025-05-14T10:21:18.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-05",
+      "penaltyForCode": ""
     },
     {
       "code": "1GlTp",
@@ -12632,9 +12888,11 @@
       "steamStoreId": 1627570,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1627570/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1627570/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1627570/eee6343d7a26cea6e2bd2c241300f971a526ba31/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1627570/capsule_184x69.jpg",
       "startDate": "2025-05-14T09:53:23.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-05",
+      "penaltyForCode": ""
     },
     {
       "code": "8CkPj",
@@ -12671,9 +12929,11 @@
       "steamPricePoints": 70,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2679460/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2679460/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2679460/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2679460/capsule_184x69.jpg",
       "startDate": "2025-05-12T22:32:43.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-05",
+      "penaltyForCode": ""
     },
     {
       "code": "8la0R",
@@ -12703,9 +12963,11 @@
       "steamStoreId": 2429190,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2429190/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2429190/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2429190/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2429190/capsule_184x69.jpg",
       "startDate": "2025-05-05T21:27:38.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-05",
+      "penaltyForCode": ""
     },
     {
       "code": "srBY1",
@@ -12775,9 +13037,11 @@
       "steamPricePoints": 50,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1903340/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1903340/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1903340/001d4a5d81e4bb9055b789240e78e04ef6e6da38/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1903340/capsule_184x69.jpg",
       "startDate": "2025-05-05T07:26:57.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-05",
+      "penaltyForCode": ""
     },
     {
       "code": "zuQiZ",
@@ -12808,9 +13072,11 @@
       "steamStoreId": 1299460,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1299460/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1299460/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1299460/68355c76a5d03c7156ba4d0edfaf51c9989d1cc8/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1299460/capsule_184x69.jpg",
       "startDate": "2025-05-01T18:01:04.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-05",
+      "penaltyForCode": ""
     },
     {
       "code": "wv8G4",
@@ -12841,9 +13107,11 @@
       "steamStoreId": 3017860,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3017860/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3017860/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3017860/4b39d554fb3b3a48ff02e2f05bba7186a58052ce/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3017860/capsule_184x69.jpg",
       "startDate": "2025-05-01T15:23:33.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-05",
+      "penaltyForCode": ""
     },
     {
       "code": "GeTI9",
@@ -12876,7 +13144,9 @@
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2239710/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2239710/capsule_184x69.jpg",
       "startDate": "2025-05-01T13:52:07.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-05",
+      "penaltyForCode": ""
     },
     {
       "code": "pzZOS",
@@ -12907,9 +13177,11 @@
       "steamStoreId": 2622380,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2622380/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2622380/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2622380/8ebc4260af27bc55ba8b88982fd7eb7f970d43c9/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2622380/capsule_184x69.jpg",
       "startDate": "2025-05-01T13:23:37.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-05",
+      "penaltyForCode": ""
     },
     {
       "code": "9mCfa",
@@ -12940,9 +13212,11 @@
       "steamStoreId": 2585830,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2585830/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2585830/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2585830/4742d744a7080c9bdeba967b5ff1ab4d143c6ae2/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2585830/capsule_184x69.jpg",
       "startDate": "2025-05-01T12:10:38.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-05",
+      "penaltyForCode": ""
     },
     {
       "code": "FbxDh",
@@ -12973,9 +13247,11 @@
       "steamStoreId": 1880610,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1880610/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1880610/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1880610/f56e56f1a8e6f8c9d49834a604636106f4d9b358/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1880610/capsule_184x69.jpg",
       "startDate": "2025-05-01T10:56:36.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-05",
+      "penaltyForCode": ""
     },
     {
       "code": "hfaC1",
@@ -13005,10 +13281,12 @@
       "steamStoreId": 1932640,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1932640/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1932640/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1932640/59838dd70e49aa7c0128921378f509f21fdf242e/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1932640/capsule_184x69.jpg",
       "startDate": "2025-05-01T08:38:04.000Z",
       "entriesSnapshotAt": "",
-      "hltbHours": 32.89
+      "hltbHours": 32.89,
+      "giveawayMonthOverride": "2025-05",
+      "penaltyForCode": ""
     },
     {
       "code": "thn7B",
@@ -13044,10 +13322,12 @@
       "steamPricePoints": 50,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2623190/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2623190/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2623190/4efc3257aabd776d4624da40146fb021d1ef5b38/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2623190/capsule_184x69.jpg",
       "startDate": "2025-04-30T20:08:33.000Z",
       "entriesSnapshotAt": "",
-      "hltbHours": 17.5
+      "hltbHours": 17.5,
+      "giveawayMonthOverride": "2025-05",
+      "penaltyForCode": ""
     },
     {
       "code": "VtIvk",
@@ -13078,9 +13358,11 @@
       "steamStoreId": 1346360,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1346360/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1346360/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1346360/573b6389f00af0e0b3fd2d5b678d5ba27cfc63e6/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1346360/capsule_184x69.jpg",
       "startDate": "2025-04-25T22:57:23.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-04",
+      "penaltyForCode": ""
     },
     {
       "code": "mceGt",
@@ -13111,9 +13393,11 @@
       "steamStoreId": 2622380,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2622380/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2622380/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2622380/8ebc4260af27bc55ba8b88982fd7eb7f970d43c9/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2622380/capsule_184x69.jpg",
       "startDate": "2025-04-25T02:29:54.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-04",
+      "penaltyForCode": ""
     },
     {
       "code": "UxcEs",
@@ -13144,9 +13428,11 @@
       "steamStoreId": 2407270,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2407270/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2407270/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2407270/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2407270/capsule_184x69.jpg",
       "startDate": "2025-04-14T18:18:26.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-04",
+      "penaltyForCode": ""
     },
     {
       "code": "4Kwjb",
@@ -13177,9 +13463,11 @@
       "steamStoreId": 1569580,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1569580/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1569580/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1569580/4f81a42ebaca088b16d5501914c6885e49f6c411/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1569580/capsule_184x69.jpg",
       "startDate": "2025-04-14T10:24:09.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-04",
+      "penaltyForCode": ""
     },
     {
       "code": "4Bj1b",
@@ -13210,9 +13498,11 @@
       "steamStoreId": 3164500,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3164500/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3164500/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3164500/986ee9a7a25cb0e61d1530cc3cd7e3e06aa68733/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3164500/capsule_184x69.jpg",
       "startDate": "2025-04-10T17:26:02.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-04",
+      "penaltyForCode": ""
     },
     {
       "code": "QbQrc",
@@ -13242,10 +13532,12 @@
       "hltbHours": 38.64,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2478970/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2478970/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2478970/f927574d6540b84ccb18922e46d85865bb8d6799/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2478970/capsule_184x69.jpg",
       "startDate": "2025-04-10T09:19:20.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "",
+      "penaltyForCode": ""
     },
     {
       "code": "eLJpO",
@@ -13267,7 +13559,7 @@
       "resultStatus": "won",
       "resultLabel": "axlnase",
       "hltbHours": 9.69,
-      "points": 25,
+      "points": 40,
       "regionRestricted": false,
       "giveawayKindChecked": true,
       "entriesFinalized": false,
@@ -13275,10 +13567,12 @@
       "steamStoreId": 1562430,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1562430/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1562430/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1562430/d6c28e6402e85395421ac06ac86cdb0e28b48e27/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1562430/capsule_184x69.jpg",
       "startDate": "2025-04-10T09:03:03.000Z",
       "giveawayKind": "",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "",
+      "penaltyForCode": ""
     },
     {
       "code": "Za8zj",
@@ -13309,9 +13603,11 @@
       "steamStoreId": 2456740,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2456740/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2456740/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2456740/db7e09bed342057b3ae057d5a2fcfb94a37f0762/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2456740/capsule_184x69.jpg",
       "startDate": "2025-04-02T20:50:50.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-04",
+      "penaltyForCode": ""
     },
     {
       "code": "0QaN1",
@@ -13348,9 +13644,11 @@
       "steamPricePoints": 70,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2679460/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2679460/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2679460/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2679460/capsule_184x69.jpg",
       "startDate": "2025-04-02T11:28:57.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-04",
+      "penaltyForCode": ""
     },
     {
       "code": "F4aA7",
@@ -13381,9 +13679,11 @@
       "steamStoreId": 1902960,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1902960/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1902960/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1902960/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1902960/capsule_184x69.jpg",
       "startDate": "2025-04-01T17:11:18.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-04",
+      "penaltyForCode": ""
     },
     {
       "code": "fqKqw",
@@ -13414,9 +13714,11 @@
       "steamStoreId": 1522160,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1522160/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1522160/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1522160/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1522160/capsule_184x69.jpg",
       "startDate": "2025-04-01T10:15:48.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-04",
+      "penaltyForCode": ""
     },
     {
       "code": "GPv2c",
@@ -13453,9 +13755,11 @@
       "steamPricePoints": 60,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2680010/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2680010/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2680010/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2680010/capsule_184x69.jpg",
       "startDate": "2025-04-01T09:47:23.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-04",
+      "penaltyForCode": ""
     },
     {
       "code": "lltN3",
@@ -13486,9 +13790,11 @@
       "steamStoreId": 801800,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/801800/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/801800/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/801800/98d248a974dce69aa492fda6e933e6b6613c0881/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/801800/capsule_184x69.jpg",
       "startDate": "2025-04-01T09:21:24.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-04",
+      "penaltyForCode": ""
     },
     {
       "code": "g9zfs",
@@ -13525,9 +13831,11 @@
       "steamPricePoints": 50,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1903340/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1903340/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1903340/001d4a5d81e4bb9055b789240e78e04ef6e6da38/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1903340/capsule_184x69.jpg",
       "startDate": "2025-04-01T00:21:54.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-04",
+      "penaltyForCode": ""
     },
     {
       "code": "ishte",
@@ -13558,9 +13866,11 @@
       "steamStoreId": 1299460,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1299460/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1299460/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1299460/68355c76a5d03c7156ba4d0edfaf51c9989d1cc8/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1299460/capsule_184x69.jpg",
       "startDate": "2025-03-31T22:16:35.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-04",
+      "penaltyForCode": ""
     },
     {
       "code": "dT8wp",
@@ -13590,10 +13900,12 @@
       "steamStoreId": 3159330,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3159330/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3159330/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3159330/fe6c8f40f405c8bb3a05788d1316ebd8e3c31b6a/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3159330/capsule_184x69.jpg",
       "startDate": "2025-03-31T18:46:26.000Z",
       "entriesSnapshotAt": "",
-      "hltbHours": 35.58
+      "hltbHours": 35.58,
+      "giveawayMonthOverride": "2025-04",
+      "penaltyForCode": ""
     },
     {
       "code": "JyI0M",
@@ -13624,9 +13936,11 @@
       "steamStoreId": 1299460,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1299460/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1299460/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1299460/68355c76a5d03c7156ba4d0edfaf51c9989d1cc8/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1299460/capsule_184x69.jpg",
       "startDate": "2025-03-14T17:42:53.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-03",
+      "penaltyForCode": ""
     },
     {
       "code": "x7G0p",
@@ -13657,9 +13971,11 @@
       "steamStoreId": 1902960,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1902960/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1902960/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1902960/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1902960/capsule_184x69.jpg",
       "startDate": "2025-03-14T17:40:54.000Z",
-      "entriesSnapshotAt": ""
+      "entriesSnapshotAt": "",
+      "giveawayMonthOverride": "2025-03",
+      "penaltyForCode": ""
     },
     {
       "code": "23bD7",
@@ -152048,7 +152364,7 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3751260/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3751260/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3751260/512cea7b8d6470681fc081ab933290bf14a8f956/capsule_184x69.jpg",
-      "entriesCount": 5,
+      "entriesCount": 6,
       "startDate": "2026-09-02T08:12:30.000Z",
       "endDate": "2026-09-30T17:00:00.000Z",
       "winners": [],
@@ -152127,7 +152443,7 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3669870/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3669870/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3669870/867a73afa5f21c28aaa14e9b0a4d895c540d4a0c/capsule_184x69.jpg",
-      "entriesCount": 2,
+      "entriesCount": 3,
       "startDate": "2026-09-13T21:51:53.000Z",
       "endDate": "2026-09-30T18:00:00.000Z",
       "winners": [],
@@ -152180,7 +152496,7 @@
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/4570720/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/4570720/capsule_616x353.jpg",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4570720/ad4778acc2facf46b58f6c66492e925c9efd5cb7/capsule_184x69.jpg",
-      "entriesCount": 1,
+      "entriesCount": 2,
       "startDate": "2026-09-15T06:28:29.000Z",
       "endDate": "2026-09-30T18:00:00.000Z",
       "winners": [],
