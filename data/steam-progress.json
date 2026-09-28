@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-27T10:55:19.087594+00:00",
+  "updatedAt": "2026-09-28T12:08:26.370156+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -6918,7 +6918,7 @@
       "appId": 2358720,
       "title": "Black Myth: Wukong",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/2358720/achievements/",
-      "playtimeHours": 1.02,
+      "playtimeHours": 6.62,
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 81,
@@ -6927,7 +6927,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.02
+      "achievementsPlaytimeHours": 6.62
     },
     {
       "username": "burntreynolds444",
@@ -7095,16 +7095,16 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 23.47,
+      "playtimeHours": 34.52,
       "visible": true,
-      "earnedAchievements": 1,
+      "earnedAchievements": 2,
       "totalAchievements": 34,
-      "achievementPercent": 3,
+      "achievementPercent": 6,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 23.47
+      "achievementsPlaytimeHours": 34.52
     },
     {
       "username": "burntreynolds444",
@@ -7685,12 +7685,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 143.88,
+      "playtimeHours": 144.05,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 143.88,
+      "achievementsPlaytimeHours": 144.05,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -17226,16 +17226,16 @@
       "appId": 2651280,
       "title": "Marvel's Spider-Man 2",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/2651280/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 1.08,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 1,
       "totalAchievements": 43,
-      "achievementPercent": 0,
+      "achievementPercent": 2,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 1.08
     },
     {
       "username": "Horseflesh",
@@ -20675,16 +20675,16 @@
       "appId": 2369390,
       "title": "Far Cry 6",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/2369390/achievements/",
-      "playtimeHours": 0.32,
+      "playtimeHours": 7.6,
       "visible": true,
-      "earnedAchievements": 1,
+      "earnedAchievements": 5,
       "totalAchievements": 99,
-      "achievementPercent": 1,
+      "achievementPercent": 5,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.32
+      "achievementsPlaytimeHours": 7.6
     },
     {
       "username": "Koalala",
@@ -29967,15 +29967,16 @@
       "title": "Heroes of Might and Magic: Olden Era",
       "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/3105440/achievements/",
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 3,
       "totalAchievements": 22,
-      "achievementPercent": 0,
-      "playtimeHours": 1.37,
+      "achievementPercent": 14,
+      "playtimeHours": 5.6,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.37
+      "achievementsPlaytimeHours": 5.6,
+      "popThresholdMetAt": "2026-09-28T12:08:26.369817+00:00"
     },
     {
       "username": "Saikania",
@@ -35534,7 +35535,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 96.58,
+      "playtimeHours": 96.93,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -35634,16 +35635,16 @@
       "appId": 3669870,
       "title": "CONTROL Resonant",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3669870/achievements/",
-      "playtimeHours": 5.08,
+      "playtimeHours": 9.32,
       "visible": true,
-      "earnedAchievements": 12,
+      "earnedAchievements": 14,
       "totalAchievements": 49,
-      "achievementPercent": 24,
+      "achievementPercent": 29,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 5.08
+      "achievementsPlaytimeHours": 9.32
     },
     {
       "username": "WNDRLST",
@@ -70831,9 +70832,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-09-27T10:54:27.979449+00:00",
+  "libraryUpdatedAt": "2026-09-28T12:07:28.551789+00:00",
   "libraryStats": {
-    "durationSeconds": 3.9,
+    "durationSeconds": 5.18,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -70842,12 +70843,12 @@
     "totalPlaytimeRows": 14535
   },
   "stats": {
-    "durationSeconds": 55.02,
+    "durationSeconds": 63.01,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
-    "cachedReuses": 2328,
-    "achievementSuccesses": 8,
+    "cachedReuses": 2325,
+    "achievementSuccesses": 11,
     "achievementErrors": 53,
     "cachedFallbacks": 53,
     "hltbTitlesRequested": 1290,
