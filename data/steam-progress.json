@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-28T12:08:26.370156+00:00",
+  "updatedAt": "2026-09-29T11:41:00.703365+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -6795,7 +6795,7 @@
       "appId": 2091020,
       "title": "Blades of Fire",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/2091020/achievements/",
-      "playtimeHours": 1.02,
+      "playtimeHours": 8.45,
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 45,
@@ -6804,7 +6804,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.02
+      "achievementsPlaytimeHours": 8.45
     },
     {
       "username": "burntreynolds444",
@@ -7095,7 +7095,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 34.52,
+      "playtimeHours": 40.53,
       "visible": true,
       "earnedAchievements": 2,
       "totalAchievements": 34,
@@ -7104,7 +7104,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 34.52
+      "achievementsPlaytimeHours": 40.53
     },
     {
       "username": "burntreynolds444",
@@ -35535,7 +35535,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 96.93,
+      "playtimeHours": 98.53,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -35635,16 +35635,16 @@
       "appId": 3669870,
       "title": "CONTROL Resonant",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3669870/achievements/",
-      "playtimeHours": 9.32,
+      "playtimeHours": 11.3,
       "visible": true,
-      "earnedAchievements": 14,
+      "earnedAchievements": 15,
       "totalAchievements": 49,
-      "achievementPercent": 29,
+      "achievementPercent": 31,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 9.32
+      "achievementsPlaytimeHours": 11.3
     },
     {
       "username": "WNDRLST",
@@ -36914,15 +36914,15 @@
       "title": "UNCHARTED: Legacy of Thieves Collection",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/1659420/achievements/",
       "visible": true,
-      "earnedAchievements": 49,
+      "earnedAchievements": 50,
       "totalAchievements": 101,
-      "achievementPercent": 49,
-      "playtimeHours": 38.15,
+      "achievementPercent": 50,
+      "playtimeHours": 39.6,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 38.15,
+      "achievementsPlaytimeHours": 39.6,
       "popThresholdMetAt": "2026-06-26T07:11:08.801361+00:00"
     },
     {
@@ -70832,23 +70832,23 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-09-28T12:07:28.551789+00:00",
+  "libraryUpdatedAt": "2026-09-29T11:39:55.489752+00:00",
   "libraryStats": {
-    "durationSeconds": 5.18,
+    "durationSeconds": 8.98,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14535
+    "totalPlaytimeRows": 14537
   },
   "stats": {
-    "durationSeconds": 63.01,
+    "durationSeconds": 74.2,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
-    "cachedReuses": 2325,
-    "achievementSuccesses": 11,
+    "cachedReuses": 2328,
+    "achievementSuccesses": 8,
     "achievementErrors": 53,
     "cachedFallbacks": 53,
     "hltbTitlesRequested": 1290,
