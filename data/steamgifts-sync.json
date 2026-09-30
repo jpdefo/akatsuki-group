@@ -1,7 +1,7 @@
 {
   "source": "akatsuki-steamgifts-sync",
   "collectorVersion": "1.13.3",
-  "syncedAt": "2026-09-30T18:26:23.518Z",
+  "syncedAt": "2026-09-30T19:55:31.069Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -152389,13 +152389,19 @@
       "points": 50,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2358720/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2358720/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2358720/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/b7f722ddd5e23503f598586aa3700dd4d827bb2d/capsule_184x69.jpg",
       "entriesCount": 1,
       "startDate": "2026-09-08T19:02:47.000Z",
       "endDate": "2026-09-30T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "leniu",
+          "profileUrl": "https://www.steamgifts.com/user/leniu",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "leniu",
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayMonthOverride": "2026-09",
@@ -188769,6 +188775,15 @@
       "creatorUsername": "chOOkity",
       "entriesCount": 2,
       "winDate": "2026-07-08T18:00:00.000Z"
+    },
+    {
+      "giveawayCode": "pWspv",
+      "title": "Black Myth: Wukong",
+      "appId": 2358720,
+      "winnerUsername": "leniu",
+      "creatorUsername": "Horseflesh",
+      "entriesCount": 1,
+      "winDate": "2026-09-30T18:00:00.000Z"
     },
     {
       "giveawayCode": "D0mKT",
