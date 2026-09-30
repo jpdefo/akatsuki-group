@@ -1,7 +1,7 @@
 {
   "source": "akatsuki-steamgifts-sync",
   "collectorVersion": "1.13.3",
-  "syncedAt": "2026-09-30T19:55:31.069Z",
+  "syncedAt": "2026-09-30T20:25:04.780Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -152310,13 +152310,19 @@
       "points": 50,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2417610/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2417610/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2417610/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2417610/fcf468fafa62aa13ac11f1ad2f84cab740eac6af/capsule_184x69.jpg",
       "entriesCount": 2,
       "startDate": "2026-09-01T17:53:36.000Z",
       "endDate": "2026-09-30T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "BojanNS987",
+          "profileUrl": "https://www.steamgifts.com/user/BojanNS987",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "BojanNS987",
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayMonthOverride": "2026-09",
@@ -152363,13 +152369,19 @@
       "points": 50,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3751260/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3751260/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3751260/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3751260/512cea7b8d6470681fc081ab933290bf14a8f956/capsule_184x69.jpg",
       "entriesCount": 6,
       "startDate": "2026-09-02T08:12:30.000Z",
       "endDate": "2026-09-30T17:00:00.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "Wintermute101",
+          "profileUrl": "https://www.steamgifts.com/user/Wintermute101",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "Wintermute101",
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayMonthOverride": "2026-09",
@@ -152422,13 +152434,19 @@
       "points": 30,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2542020/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2542020/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2542020/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2542020/fd8911e8ecfdd361b1fd50a565d98ad526f903ff/capsule_184x69.jpg",
       "entriesCount": 1,
       "startDate": "2026-09-02T04:55:52.000Z",
       "endDate": "2026-09-30T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "Wintermute101",
+          "profileUrl": "https://www.steamgifts.com/user/Wintermute101",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "Wintermute101",
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayMonthOverride": "2026-09",
@@ -188777,11 +188795,38 @@
       "winDate": "2026-07-08T18:00:00.000Z"
     },
     {
+      "giveawayCode": "sOMAM",
+      "title": "METAL GEAR SOLID Δ: SNAKE EATER",
+      "appId": 2417610,
+      "winnerUsername": "BojanNS987",
+      "creatorUsername": "Wintermute101",
+      "entriesCount": 2,
+      "winDate": "2026-09-30T18:00:00.000Z"
+    },
+    {
+      "giveawayCode": "GDM38",
+      "title": "The Blood of Dawnwalker",
+      "appId": 3751260,
+      "winnerUsername": "Wintermute101",
+      "creatorUsername": "BojanNS987",
+      "entriesCount": 6,
+      "winDate": "2026-09-30T17:00:00.000Z"
+    },
+    {
       "giveawayCode": "pWspv",
       "title": "Black Myth: Wukong",
       "appId": 2358720,
       "winnerUsername": "leniu",
       "creatorUsername": "Horseflesh",
+      "entriesCount": 1,
+      "winDate": "2026-09-30T18:00:00.000Z"
+    },
+    {
+      "giveawayCode": "prh2O",
+      "title": "Duskfade",
+      "appId": 2542020,
+      "winnerUsername": "Wintermute101",
+      "creatorUsername": "chOOkity",
       "entriesCount": 1,
       "winDate": "2026-09-30T18:00:00.000Z"
     },
