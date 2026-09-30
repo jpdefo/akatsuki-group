@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T11:41:00.703365+00:00",
+  "updatedAt": "2026-09-30T11:27:55.827354+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -6795,7 +6795,7 @@
       "appId": 2091020,
       "title": "Blades of Fire",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/2091020/achievements/",
-      "playtimeHours": 8.45,
+      "playtimeHours": 9.95,
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 45,
@@ -6804,7 +6804,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 8.45
+      "achievementsPlaytimeHours": 9.95
     },
     {
       "username": "burntreynolds444",
@@ -7095,7 +7095,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 40.53,
+      "playtimeHours": 43.67,
       "visible": true,
       "earnedAchievements": 2,
       "totalAchievements": 34,
@@ -7104,7 +7104,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 40.53
+      "achievementsPlaytimeHours": 43.67
     },
     {
       "username": "burntreynolds444",
@@ -8395,16 +8395,16 @@
       "appId": 1491410,
       "title": "Eternal Strands",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/1491410/achievements/",
-      "playtimeHours": 7.27,
+      "playtimeHours": 8.82,
       "visible": true,
-      "earnedAchievements": 9,
+      "earnedAchievements": 11,
       "totalAchievements": 44,
-      "achievementPercent": 20,
+      "achievementPercent": 25,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 7.27,
+      "achievementsPlaytimeHours": 8.82,
       "popThresholdMetAt": "2026-09-26T10:23:56.446031+00:00"
     },
     {
@@ -35535,7 +35535,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 98.53,
+      "playtimeHours": 100.47,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -35635,16 +35635,16 @@
       "appId": 3669870,
       "title": "CONTROL Resonant",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3669870/achievements/",
-      "playtimeHours": 11.3,
+      "playtimeHours": 16.3,
       "visible": true,
-      "earnedAchievements": 15,
+      "earnedAchievements": 17,
       "totalAchievements": 49,
-      "achievementPercent": 31,
+      "achievementPercent": 35,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 11.3
+      "achievementsPlaytimeHours": 16.3
     },
     {
       "username": "WNDRLST",
@@ -36376,15 +36376,15 @@
       "title": "FINAL FANTASY TACTICS - The Ivalice C...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/1004640/achievements/",
       "visible": true,
-      "earnedAchievements": 34,
+      "earnedAchievements": 35,
       "totalAchievements": 50,
-      "achievementPercent": 68,
-      "playtimeHours": 36.15,
+      "achievementPercent": 70,
+      "playtimeHours": 36.78,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 36.15,
+      "achievementsPlaytimeHours": 36.78,
       "popThresholdMetAt": "2026-07-06T18:27:00.287372+00:00"
     },
     {
@@ -37344,16 +37344,16 @@
       "appId": 3768760,
       "title": "007 First Light",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/3768760/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 1.5,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 4,
       "totalAchievements": 37,
-      "achievementPercent": 0,
+      "achievementPercent": 11,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 1.5
     },
     {
       "username": "Youdontknow",
@@ -70832,23 +70832,23 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-09-29T11:39:55.489752+00:00",
+  "libraryUpdatedAt": "2026-09-30T11:26:58.837378+00:00",
   "libraryStats": {
-    "durationSeconds": 8.98,
+    "durationSeconds": 6.16,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14537
+    "totalPlaytimeRows": 14538
   },
   "stats": {
-    "durationSeconds": 74.2,
+    "durationSeconds": 63.16,
     "targetWins": 2394,
     "uniqueProgressTargets": 2389,
     "libraryPlaytimeHits": 2380,
-    "cachedReuses": 2328,
-    "achievementSuccesses": 8,
+    "cachedReuses": 2326,
+    "achievementSuccesses": 10,
     "achievementErrors": 53,
     "cachedFallbacks": 53,
     "hltbTitlesRequested": 1290,
