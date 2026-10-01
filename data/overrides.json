@@ -1,5 +1,5 @@
 {
-  "savedAt": "2026-08-29T21:05:08.075Z",
+  "savedAt": "2026-10-01T12:01:40.404Z",
   "overrides": {
     "games": {
       "app:534380": {
@@ -26,9 +26,9 @@
       "sg-win-COnkv-Ernesttico": {
         "requiredAchievementsOverride": 2
       },
-        "sg-win-bvc8x-Wintermute101": {
-          "completionOverride": true
-        },
+      "sg-win-bvc8x-Wintermute101": {
+        "completionOverride": true
+      },
       "sg-win-LqrvT-Youdontknow": {
         "requiredAchievementsOverride": 5
       }
@@ -374,6 +374,36 @@
         "status": "paused"
       },
       "2026-cycle-2:xmisiu": {
+        "status": "paused"
+      },
+      "2026-cycle-3:bron99": {
+        "status": "paused"
+      },
+      "2026-cycle-3:drain": {
+        "status": "paused"
+      },
+      "2026-cycle-3:eledhrim": {
+        "status": "paused"
+      },
+      "2026-cycle-3:millsshogun": {
+        "status": "paused"
+      },
+      "2026-cycle-3:oozyyy": {
+        "status": "paused"
+      },
+      "2026-cycle-3:skull18": {
+        "status": "paused"
+      },
+      "2026-cycle-3:thedogma": {
+        "status": "paused"
+      },
+      "2026-cycle-3:wndrlst": {
+        "status": "paused"
+      },
+      "2026-cycle-3:xmisiu": {
+        "status": "paused"
+      },
+      "2026-cycle-3:zettaivanugen": {
         "status": "paused"
       }
     },
