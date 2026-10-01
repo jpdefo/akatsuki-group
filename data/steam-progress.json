@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-30T11:27:55.827354+00:00",
+  "updatedAt": "2026-10-01T11:55:41.638640+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2500,6 +2500,23 @@
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 34,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 2417610,
+      "title": "METAL GEAR SOLID Δ: SNAKE EATER",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2417610/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 45,
       "achievementPercent": 0,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -7095,7 +7112,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 43.67,
+      "playtimeHours": 44.92,
       "visible": true,
       "earnedAchievements": 2,
       "totalAchievements": 34,
@@ -7104,7 +7121,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 43.67
+      "achievementsPlaytimeHours": 44.92
     },
     {
       "username": "burntreynolds444",
@@ -7141,6 +7158,22 @@
       "error": null,
       "achievementsPlaytimeHours": 2.5,
       "popThresholdMetAt": "2026-08-23T13:26:12.859455+00:00"
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 3669870,
+      "title": "CONTROL Resonant",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3669870/achievements/",
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeHours": null,
+      "playtimeSource": "",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": "HTTP Error 403: Forbidden"
     },
     {
       "username": "chOOkity",
@@ -7685,12 +7718,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 144.05,
+      "playtimeHours": 144.57,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 144.05,
+      "achievementsPlaytimeHours": 144.57,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -9401,6 +9434,23 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 57.23,
       "popThresholdMetAt": "2026-06-26T07:11:08.798174+00:00"
+    },
+    {
+      "username": "chOOkity",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
+      "appId": 2713000,
+      "title": "Resonance: A Plague Tale Legacy",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2713000/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 36,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "chOOkity",
@@ -26736,6 +26786,23 @@
     {
       "username": "leniu",
       "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
+      "appId": 2358720,
+      "title": "Black Myth: Wukong",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2358720/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 81,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "leniu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
       "appId": 2369390,
       "title": "Far Cry 6",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2369390/achievements/",
@@ -35438,6 +35505,23 @@
     {
       "username": "Wintermute101",
       "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
+      "appId": 2542020,
+      "title": "Duskfade",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2542020/achievements/",
+      "playtimeHours": 0.47,
+      "visible": true,
+      "earnedAchievements": 2,
+      "totalAchievements": 25,
+      "achievementPercent": 8,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.47
+    },
+    {
+      "username": "Wintermute101",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
       "appId": 2592160,
       "title": "Dispatch",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2592160/achievements/",
@@ -35635,16 +35719,33 @@
       "appId": 3669870,
       "title": "CONTROL Resonant",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3669870/achievements/",
-      "playtimeHours": 16.3,
+      "playtimeHours": 21.23,
       "visible": true,
-      "earnedAchievements": 17,
+      "earnedAchievements": 23,
       "totalAchievements": 49,
-      "achievementPercent": 35,
+      "achievementPercent": 47,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 16.3
+      "achievementsPlaytimeHours": 21.23
+    },
+    {
+      "username": "Wintermute101",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
+      "appId": 3751260,
+      "title": "The Blood of Dawnwalker",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3751260/achievements/",
+      "playtimeHours": 0.55,
+      "visible": true,
+      "earnedAchievements": 1,
+      "totalAchievements": 46,
+      "achievementPercent": 2,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.55
     },
     {
       "username": "WNDRLST",
@@ -37344,16 +37445,17 @@
       "appId": 3768760,
       "title": "007 First Light",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/3768760/achievements/",
-      "playtimeHours": 1.5,
+      "playtimeHours": 4.33,
       "visible": true,
-      "earnedAchievements": 4,
+      "earnedAchievements": 5,
       "totalAchievements": 37,
-      "achievementPercent": 11,
+      "achievementPercent": 14,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.5
+      "achievementsPlaytimeHours": 4.33,
+      "popThresholdMetAt": "2026-10-01T11:55:41.638499+00:00"
     },
     {
       "username": "Youdontknow",
@@ -70807,6 +70909,13 @@
       "url": "https://howlongtobeat.com/game/82089"
     },
     {
+      "title": "Duskfade",
+      "appId": 2542020,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
       "title": "CONTROL Resonant",
       "appId": 3669870,
       "hltbHours": null,
@@ -70826,32 +70935,39 @@
       "hltbHours": 30.97,
       "matchedTitle": "Wuchang: Fallen Feathers",
       "url": "https://howlongtobeat.com/game/152015"
+    },
+    {
+      "title": "Resonance: A Plague Tale Legacy",
+      "appId": 2713000,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     }
   ],
   "steamApiEnabled": true,
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-09-30T11:26:58.837378+00:00",
+  "libraryUpdatedAt": "2026-10-01T11:54:49.299214+00:00",
   "libraryStats": {
-    "durationSeconds": 6.16,
+    "durationSeconds": 4.77,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14538
+    "totalPlaytimeRows": 14545
   },
   "stats": {
-    "durationSeconds": 63.16,
-    "targetWins": 2394,
-    "uniqueProgressTargets": 2389,
-    "libraryPlaytimeHits": 2380,
-    "cachedReuses": 2326,
-    "achievementSuccesses": 10,
-    "achievementErrors": 53,
+    "durationSeconds": 57.12,
+    "targetWins": 2400,
+    "uniqueProgressTargets": 2395,
+    "libraryPlaytimeHits": 2385,
+    "cachedReuses": 2328,
+    "achievementSuccesses": 13,
+    "achievementErrors": 54,
     "cachedFallbacks": 53,
-    "hltbTitlesRequested": 1290,
-    "hltbResultsAvailable": 4037
+    "hltbTitlesRequested": 1291,
+    "hltbResultsAvailable": 4039
   }
 }
