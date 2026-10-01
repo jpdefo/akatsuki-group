@@ -1,7 +1,7 @@
 {
   "source": "akatsuki-steamgifts-sync",
   "collectorVersion": "1.13.3",
-  "syncedAt": "2026-09-30T21:08:34.879Z",
+  "syncedAt": "2026-10-01T07:48:39.642Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -152343,13 +152343,19 @@
       "points": 50,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2713000/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2713000/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2713000/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2713000/0d06636f2a2c3dcf0b473c91212f36a0b3e2e1a8/capsule_184x69.jpg",
       "entriesCount": 5,
       "startDate": "2026-09-01T16:54:00.000Z",
       "endDate": "2026-09-30T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "chOOkity",
+          "profileUrl": "https://www.steamgifts.com/user/chOOkity",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "chOOkity",
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayMonthOverride": "2026-09",
@@ -152578,7 +152584,7 @@
       "points": 25,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/4358690/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/4358690/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/4358690/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4358690/c74bedb07502eb35eedcb3990e44c9593875a1ef/capsule_184x69.jpg",
       "entriesCount": 0,
       "startDate": "2026-09-30T20:56:16.000Z",
       "endDate": "2026-10-30T17:00:00.000Z",
@@ -152604,8 +152610,8 @@
       "points": 50,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2713000/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2713000/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2713000/capsule_184x69.jpg",
-      "entriesCount": 0,
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2713000/0d06636f2a2c3dcf0b473c91212f36a0b3e2e1a8/capsule_184x69.jpg",
+      "entriesCount": 1,
       "startDate": "2026-09-30T20:58:01.000Z",
       "endDate": "2026-10-30T18:00:00.000Z",
       "winners": [],
@@ -188853,6 +188859,15 @@
       "winnerUsername": "BojanNS987",
       "creatorUsername": "Wintermute101",
       "entriesCount": 2,
+      "winDate": "2026-09-30T18:00:00.000Z"
+    },
+    {
+      "giveawayCode": "eZPQZ",
+      "title": "Resonance: A Plague Tale Legacy",
+      "appId": 2713000,
+      "winnerUsername": "chOOkity",
+      "creatorUsername": "leniu",
+      "entriesCount": 5,
       "winDate": "2026-09-30T18:00:00.000Z"
     },
     {
