@@ -1,7 +1,7 @@
 {
   "source": "akatsuki-steamgifts-sync",
   "collectorVersion": "1.13.3",
-  "syncedAt": "2026-10-02T15:18:40.503Z",
+  "syncedAt": "2026-10-02T22:25:25.103Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -152531,13 +152531,19 @@
       "points": 30,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/4570720/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/4570720/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/4570720/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4570720/ad4778acc2facf46b58f6c66492e925c9efd5cb7/capsule_184x69.jpg",
       "entriesCount": 2,
       "startDate": "2026-09-15T06:28:29.000Z",
       "endDate": "2026-09-30T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "leniu",
+          "profileUrl": "https://www.steamgifts.com/user/leniu",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "leniu",
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayMonthOverride": "2026-09",
@@ -188962,6 +188968,15 @@
       "winnerUsername": "burntreynolds444",
       "creatorUsername": "Ernesttico",
       "entriesCount": 4,
+      "winDate": "2026-09-30T18:00:00.000Z"
+    },
+    {
+      "giveawayCode": "CFkNU",
+      "title": "DragonSword : Awakening",
+      "appId": 4570720,
+      "winnerUsername": "leniu",
+      "creatorUsername": "Youdontknow",
+      "entriesCount": 2,
       "winDate": "2026-09-30T18:00:00.000Z"
     },
     {
