@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-01T11:54:43.520841+00:00",
+  "updatedAt": "2026-10-02T11:26:23.901511+00:00",
   "apps": {
     "3288210": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3288210/2e13226847bb546625411aed75e74471f6705b18/header.jpg?t=1777969480",
@@ -5291,6 +5291,22 @@
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4358690/c74bedb07502eb35eedcb3990e44c9593875a1ef/capsule_184x69.jpg?t=1790169326",
       "releaseDate": "2026-09-22",
       "comingSoon": false
+    },
+    "3812600": {
+      "name": "ReStory: Chill Electronics Repairs",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3812600/c07daeca18353c666d51462d2e69c30ec68094ad/header_alt_assets_3.jpg?t=1790169325",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3812600/fcf913006c05b4afafbfd25388bf4e3fe8bb1f04/capsule_231x87.jpg?t=1790169325",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3812600/fcf913006c05b4afafbfd25388bf4e3fe8bb1f04/capsule_184x69.jpg?t=1790169325",
+      "releaseDate": "2026-08-06",
+      "comingSoon": false
+    },
+    "4115450": {
+      "name": "Phantom Blade Zero",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4115450/7f882f889630270d3d3fb93825ac6f55b55e7a6c/header.jpg?t=1787142639",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4115450/aef06490c9a4ad912142fe3b766ee08a2b38ef80/capsule_231x87.jpg?t=1787142639",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4115450/aef06490c9a4ad912142fe3b766ee08a2b38ef80/capsule_184x69.jpg?t=1787142639",
+      "releaseDate": "2026-10-28",
+      "comingSoon": true
     }
   }
 }
