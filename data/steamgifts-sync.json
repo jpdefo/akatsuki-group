@@ -1,7 +1,7 @@
 {
   "source": "akatsuki-steamgifts-sync",
   "collectorVersion": "1.13.3",
-  "syncedAt": "2026-10-01T20:09:18.521Z",
+  "syncedAt": "2026-10-02T08:12:11.201Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -152668,8 +152668,8 @@
       "points": 20,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3812600/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3812600/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3812600/capsule_184x69.jpg",
-      "entriesCount": 0,
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3812600/fcf913006c05b4afafbfd25388bf4e3fe8bb1f04/capsule_184x69.jpg",
+      "entriesCount": 1,
       "startDate": "2026-10-01T19:58:21.000Z",
       "endDate": "2026-10-30T17:00:00.000Z",
       "winners": [],
