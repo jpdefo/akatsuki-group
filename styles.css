@@ -33,6 +33,17 @@ body {
   color: var(--text);
 }
 
+/* Native dropdown menus must keep readable text even on a light OS theme. */
+select {
+  color-scheme: dark;
+}
+
+select option,
+select optgroup {
+  color: var(--text);
+  background-color: var(--panel);
+}
+
 .app-shell {
   width: min(1400px, calc(100% - 32px));
   margin: 0 auto;

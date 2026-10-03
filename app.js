@@ -779,12 +779,12 @@ function renderAllGiveawaysPage() {
             sources: [giveaway.capsuleSmallUrl, giveaway.headerImageUrl, giveaway.capsuleImageUrl],
             placeholder: "—",
           });
-          const thumbCell = giveaway.steamAppUrl
-            ? `<a href="${escapeHtml(giveaway.steamAppUrl)}" target="_blank" rel="noreferrer">${thumb}</a>`
-            : thumb;
           const giveawayUrl = String(giveaway.notes || "").trim();
-          const titleMarkup = giveawayUrl
-            ? `<a class="linked-title" href="${escapeHtml(giveawayUrl)}" target="_blank" rel="noreferrer">${title}</a>`
+          const thumbCell = giveawayUrl
+            ? `<a href="${escapeHtml(giveawayUrl)}" target="_blank" rel="noreferrer" title="Open giveaway on SteamGifts">${thumb}</a>`
+            : thumb;
+          const titleMarkup = giveaway.steamAppUrl
+            ? `<a class="linked-title" href="${escapeHtml(giveaway.steamAppUrl)}" target="_blank" rel="noreferrer" title="View game on Steam">${title}</a>`
             : title;
           const creator = findById("members", giveaway.creatorId);
           const kind = getGiveawayKind(giveaway);
@@ -1329,8 +1329,8 @@ function buildPenaltyRowTile(row, { showMember = false } = {}) {
   const settled = row.status === "settled";
   const title = String(row.game || "a won game");
   const linkUrl = settled ? row.wonGiveawayUrl || row.giveawayPageUrl : row.giveawayUrl;
-  const titleMarkup = linkUrl
-    ? `<a class="linked-title" href="${escapeHtml(linkUrl)}" target="_blank" rel="noreferrer">${escapeHtml(title)}</a>`
+  const titleMarkup = row.steamAppUrl
+    ? `<a class="linked-title" href="${escapeHtml(row.steamAppUrl)}" target="_blank" rel="noreferrer" title="View game on Steam">${escapeHtml(title)}</a>`
     : escapeHtml(title);
 
   // The synced URLs first: guessing header.jpg from an appId 404s for packages and
@@ -1351,8 +1351,8 @@ function buildPenaltyRowTile(row, { showMember = false } = {}) {
     ],
     placeholder: "No art",
   });
-  const imageMarkup = row.steamAppUrl
-    ? `<a class="penalty-thumb-link" href="${escapeHtml(row.steamAppUrl)}" target="_blank" rel="noreferrer">${image}</a>`
+  const imageMarkup = linkUrl
+    ? `<a class="penalty-thumb-link" href="${escapeHtml(linkUrl)}" target="_blank" rel="noreferrer" title="Open giveaway on SteamGifts">${image}</a>`
     : image;
 
   const metaParts = [];
@@ -2448,8 +2448,8 @@ function renderSummerEventPage() {
               ? `<a class="linked-title" href="${escapeHtml(creator.profileUrl)}" target="_blank" rel="noreferrer">${escapeHtml(creatorLabel)}</a>`
               : escapeHtml(creatorLabel);
             const giveawayUrl = String(giveaway.url || "").trim();
-            const titleMarkup = giveawayUrl
-              ? `<a class="linked-title" href="${escapeHtml(giveawayUrl)}" target="_blank" rel="noreferrer">${escapeHtml(giveaway.title || "Untitled giveaway")}</a>`
+            const titleMarkup = giveaway.steamAppUrl
+              ? `<a class="linked-title" href="${escapeHtml(giveaway.steamAppUrl)}" target="_blank" rel="noreferrer" title="View game on Steam">${escapeHtml(giveaway.title || "Untitled giveaway")}</a>`
               : escapeHtml(giveaway.title || "Untitled giveaway");
             const entryUsers = getSummerEventEntryUsers(giveaway);
             const rewardPoints = getSummerEventBasePoints(giveaway);
@@ -2489,8 +2489,8 @@ function renderSummerEventPage() {
               sources: [giveaway.capsuleSmallUrl, giveaway.headerImageUrl, giveaway.capsuleImageUrl],
               placeholder: "—",
             });
-            const thumbCell = giveaway.steamAppUrl
-              ? `<a href="${escapeHtml(giveaway.steamAppUrl)}" target="_blank" rel="noreferrer">${thumb}</a>`
+            const thumbCell = giveawayUrl
+              ? `<a href="${escapeHtml(giveawayUrl)}" target="_blank" rel="noreferrer" title="Open giveaway on SteamGifts">${thumb}</a>`
               : thumb;
             return `
               <tr>
@@ -3564,10 +3564,10 @@ function buildGiveawayCard(giveaway) {
 
   return `
     <article class="giveaway-card">
-      ${giveaway.steamAppUrl ? `<a class="giveaway-image-link" href="${escapeHtml(giveaway.steamAppUrl)}" target="_blank" rel="noreferrer">${image}</a>` : image}
+      ${giveaway.url ? `<a class="giveaway-image-link" href="${escapeHtml(giveaway.url)}" target="_blank" rel="noreferrer" title="Open giveaway on SteamGifts">${image}</a>` : image}
       <div class="giveaway-card-body">
         <h3 class="giveaway-title">
-          ${giveaway.url ? `<a href="${escapeHtml(giveaway.url)}" target="_blank" rel="noreferrer">${title}</a>` : title}
+          ${giveaway.steamAppUrl ? `<a href="${escapeHtml(giveaway.steamAppUrl)}" target="_blank" rel="noreferrer" title="View game on Steam">${title}</a>` : title}
         </h3>
         ${buildGiveawayPenaltyMarkup(giveaway)}
         ${winnerMarkup}
@@ -3950,14 +3950,13 @@ function buildGameCell(game, win) {
     placeholder: "No art",
   });
   const steamAppUrl = game?.steamAppUrl || syncedGiveaway?.steamAppUrl || "";
-  // Image -> the game's Steam store page; name -> the giveaway (matches the
-  // giveaways and summer-event tables).
-  const imageMarkup = steamAppUrl
-    ? `<a href="${escapeHtml(steamAppUrl)}" target="_blank" rel="noreferrer">${image}</a>`
-    : image;
   const giveawayUrl = getGiveawayUrl(win);
-  const titleMarkup = giveawayUrl
-    ? `<a class="linked-title" href="${escapeHtml(giveawayUrl)}" target="_blank" rel="noreferrer">${title}</a>`
+  // Image opens the giveaway, while the game name opens its Steam store page.
+  const imageMarkup = giveawayUrl
+    ? `<a href="${escapeHtml(giveawayUrl)}" target="_blank" rel="noreferrer" title="Open giveaway on SteamGifts">${image}</a>`
+    : image;
+  const titleMarkup = steamAppUrl
+    ? `<a class="linked-title" href="${escapeHtml(steamAppUrl)}" target="_blank" rel="noreferrer" title="View game on Steam">${title}</a>`
     : title;
 
   return `
