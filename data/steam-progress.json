@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02T11:27:21.243433+00:00",
+  "updatedAt": "2026-10-03T10:44:00.109069+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -7112,7 +7112,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 48.8,
+      "playtimeHours": 53.25,
       "visible": true,
       "earnedAchievements": 2,
       "totalAchievements": 34,
@@ -7121,7 +7121,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 48.8
+      "achievementsPlaytimeHours": 53.25
     },
     {
       "username": "burntreynolds444",
@@ -7719,12 +7719,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 145.25,
+      "playtimeHours": 146.33,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 145.25,
+      "achievementsPlaytimeHours": 146.33,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -8839,15 +8839,15 @@
       "title": "Once Upon A KATAMARI",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/1880620/achievements/",
       "visible": true,
-      "earnedAchievements": 9,
+      "earnedAchievements": 10,
       "totalAchievements": 38,
-      "achievementPercent": 24,
-      "playtimeHours": 7.18,
+      "achievementPercent": 26,
+      "playtimeHours": 8.15,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 7.18,
+      "achievementsPlaytimeHours": 8.15,
       "popThresholdMetAt": "2026-06-26T07:11:08.798106+00:00"
     },
     {
@@ -9599,16 +9599,16 @@
       "appId": 3920610,
       "title": "FATAL FRAME II: Crimson Butterfly REMAKE",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/3920610/achievements/",
-      "playtimeHours": 0.53,
+      "playtimeHours": 1.13,
       "visible": true,
-      "earnedAchievements": 1,
+      "earnedAchievements": 2,
       "totalAchievements": 51,
-      "achievementPercent": 2,
+      "achievementPercent": 4,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.53
+      "achievementsPlaytimeHours": 1.13
     },
     {
       "username": "Drain",
@@ -13810,6 +13810,23 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 1.83,
       "popThresholdMetAt": "2026-06-26T07:11:08.798697+00:00"
+    },
+    {
+      "username": "Ernesttico",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
+      "appId": 1395520,
+      "title": "The Séance of Blake Manor",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/1395520/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 45,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "Ernesttico",
@@ -27245,6 +27262,23 @@
       "popThresholdMetAt": "2026-07-09T20:00:17.924095+00:00"
     },
     {
+      "username": "leniu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
+      "appId": 4570720,
+      "title": "DragonSword : Awakening",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/4570720/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 60,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
       "username": "Millsshogun",
       "steamProfile": "https://steamcommunity.com/profiles/76561198075996214",
       "appId": 268910,
@@ -35526,16 +35560,16 @@
       "appId": 2542020,
       "title": "Duskfade",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2542020/achievements/",
-      "playtimeHours": 3.33,
+      "playtimeHours": 4.72,
       "visible": true,
-      "earnedAchievements": 4,
+      "earnedAchievements": 6,
       "totalAchievements": 25,
-      "achievementPercent": 16,
+      "achievementPercent": 24,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 3.33
+      "achievementsPlaytimeHours": 4.72
     },
     {
       "username": "Wintermute101",
@@ -35637,7 +35671,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 100.88,
+      "playtimeHours": 103.1,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -35754,16 +35788,16 @@
       "appId": 3751260,
       "title": "The Blood of Dawnwalker",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3751260/achievements/",
-      "playtimeHours": 0.55,
+      "playtimeHours": 4.98,
       "visible": true,
-      "earnedAchievements": 1,
+      "earnedAchievements": 4,
       "totalAchievements": 46,
-      "achievementPercent": 2,
+      "achievementPercent": 9,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.55
+      "achievementsPlaytimeHours": 4.98
     },
     {
       "username": "WNDRLST",
@@ -70948,6 +70982,13 @@
       "url": "https://howlongtobeat.com/game/80101"
     },
     {
+      "title": "DragonSword : Awakening",
+      "appId": 4570720,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
       "title": "WUCHANG: Fallen Feathers",
       "appId": 2277560,
       "hltbHours": 30.97,
@@ -70960,32 +71001,39 @@
       "hltbHours": null,
       "matchedTitle": "",
       "url": ""
+    },
+    {
+      "title": "REPLACED",
+      "appId": 1663850,
+      "hltbHours": 10.8,
+      "matchedTitle": "Replaced",
+      "url": "https://howlongtobeat.com/game/93944"
     }
   ],
   "steamApiEnabled": true,
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-10-02T11:26:28.751904+00:00",
+  "libraryUpdatedAt": "2026-10-03T10:43:07.217303+00:00",
   "libraryStats": {
-    "durationSeconds": 4.51,
+    "durationSeconds": 4.24,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14550
+    "totalPlaytimeRows": 14554
   },
   "stats": {
-    "durationSeconds": 57.01,
-    "targetWins": 2401,
-    "uniqueProgressTargets": 2396,
-    "libraryPlaytimeHits": 2387,
-    "cachedReuses": 2330,
-    "achievementSuccesses": 13,
+    "durationSeconds": 57.14,
+    "targetWins": 2403,
+    "uniqueProgressTargets": 2398,
+    "libraryPlaytimeHits": 2389,
+    "cachedReuses": 2333,
+    "achievementSuccesses": 12,
     "achievementErrors": 53,
     "cachedFallbacks": 53,
-    "hltbTitlesRequested": 1291,
-    "hltbResultsAvailable": 4039
+    "hltbTitlesRequested": 1292,
+    "hltbResultsAvailable": 4041
   }
 }
