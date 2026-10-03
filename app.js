@@ -1691,9 +1691,9 @@ function renderCycleViews(selectedMonth) {
   }
 
   const period = getPeriodInfo(`${selectedMonth}-01`);
-  const monthlyGiveaways = getGiveawaysForMonth(selectedMonth).sort(
-    (left, right) => parseDate(right.createdAt) - parseDate(left.createdAt),
-  );
+  const monthlyGiveaways = getGiveawaysForMonth(selectedMonth)
+    .filter((giveaway) => getGiveawayKind(giveaway) !== "penalty")
+    .sort((left, right) => parseDate(right.createdAt) - parseDate(left.createdAt));
 
   elements.cycleSummary.textContent =
     period.kind === "cycle"
@@ -1837,7 +1837,7 @@ function renderCycleHistoryPage() {
         parseDate(right.winDate) - parseDate(left.winDate),
     );
   const cycleGiveaways = state.giveaways
-    .filter((giveaway) => getGiveawayKind(giveaway) !== "summer_event" && cycleMonths.includes(getGiveawayMonth(giveaway)))
+    .filter((giveaway) => !["summer_event", "penalty"].includes(getGiveawayKind(giveaway)) && cycleMonths.includes(getGiveawayMonth(giveaway)))
     .sort((left, right) => parseDate(right.createdAt) - parseDate(left.createdAt));
   const countableCycleGiveaways = cycleGiveaways.filter((giveaway) => doesGiveawayCountForCycleMath(giveaway));
   const cycleOnlyWins = cycleWins.filter((win) => getWinTrackKind(win) === "cycle");
@@ -3455,7 +3455,7 @@ function getCurrentCycleMissingGiveawaySummary() {
   const cycleMonths = getRenderableCycleMonths(cycle);
   const cycleWins = state.wins.filter((win) => cycleMonths.includes(getEffectiveWinMonth(win)));
   const cycleGiveaways = state.giveaways.filter(
-    (giveaway) => getGiveawayKind(giveaway) !== "summer_event" && cycleMonths.includes(getGiveawayMonth(giveaway)),
+    (giveaway) => !["summer_event", "penalty"].includes(getGiveawayKind(giveaway)) && cycleMonths.includes(getGiveawayMonth(giveaway)),
   );
   const rule9Carryover = getRule9CarryoverForCycle(cycle);
   const members = getCycleHistoryVisibleMembers(cycle, cycleWins, cycleGiveaways)
