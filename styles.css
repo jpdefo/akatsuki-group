@@ -472,7 +472,7 @@ h2 {
    of deadlines at once. */
 .penalty-groups {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
   align-items: start;
   gap: 12px;
   margin-top: 12px;
@@ -482,6 +482,7 @@ h2 {
 
 .penalty-group {
   display: grid;
+  max-width: 250px;
   gap: 6px;
   align-content: start;
 }
@@ -1013,6 +1014,51 @@ h2 {
   display: grid;
   gap: 4px;
   align-content: start;
+}
+
+.giveaway-penalty-link {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 4px 0;
+  padding: 5px 8px;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 8px;
+  background: rgba(239, 68, 68, 0.12);
+  color: #ffd0d0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+.giveaway-penalty-link.is-settled {
+  border-color: rgba(34, 197, 94, 0.3);
+  background: rgba(34, 197, 94, 0.12);
+  color: #c7f9d6;
+}
+
+.giveaway-penalty-link.is-in-progress {
+  border-color: rgba(244, 184, 83, 0.35);
+  background: rgba(244, 184, 83, 0.1);
+  color: #ffe2ad;
+}
+
+.penalty-tile.in-progress {
+  border-color: rgba(244, 184, 83, 0.35);
+}
+
+.penalty-tile.in-progress .penalty-tile-head {
+  flex-direction: column;
+}
+
+.penalty-tile.in-progress .penalty-tile-title {
+  display: block;
+}
+
+a.giveaway-penalty-link:hover {
+  text-decoration: underline;
 }
 
 .giveaway-winner {
@@ -2159,10 +2205,6 @@ td small,
     grid-column: auto;
   }
 
-
-  .penalty-groups {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 760px) {

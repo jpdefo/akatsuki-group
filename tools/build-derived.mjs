@@ -157,7 +157,7 @@ function main() {
   );
   const pen = penaltiesAndMembers.penalties;
   process.stdout.write(
-    `  penalties: ${pen.counts.overdue} owed now, ${pen.counts.comingDue} coming due, ${pen.counts.settled} settled`
+    `  penalties: ${pen.counts.overdue} owed now, ${pen.counts.comingDue} coming due, ${pen.counts.inProgress} in progress, ${pen.counts.settled} settled`
     + `${pen.owedNow.length ? ` — ${pen.owedNow.slice(0, 8).map((p) => `${p.member} (${p.game})`).join("; ")}${pen.owedNow.length > 8 ? " …" : ""}` : ""}\n`,
   );
   const periods = summerEvent.periods

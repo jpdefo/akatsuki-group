@@ -211,10 +211,10 @@ test("penalties: overdue / coming-due / grandfathered / complete / paid / pop_fr
       giveaway({ code: "CMP", creatorUsername: "dave", appId: 400, winners: [{ username: "eve" }], startDate: "2026-01-05T00:00:00.000Z", endDate: "2026-01-10T00:00:00.000Z" }),
       // dave, Jan 2026, below, but tagged pop_free -> EXEMPT
       giveaway({ code: "POF", creatorUsername: "eve", appId: 500, winners: [{ username: "dave" }], startDate: "2026-01-05T00:00:00.000Z", endDate: "2026-01-10T00:00:00.000Z" }),
-      // eve, Jan 2026, below, but a penalty GA is attached -> PAID
+      // eve, Jan 2026, below, but a penalty GA ended with a winner -> PAID
       giveaway({ code: "PAD", creatorUsername: "dave", appId: 600, winners: [{ username: "eve" }], startDate: "2026-01-05T00:00:00.000Z", endDate: "2026-01-10T00:00:00.000Z" }),
       // the penalty giveaway that settles PAD (kind via override below)
-      giveaway({ code: "PEN", creatorUsername: "eve", appId: 700, penaltyForCode: "PAD", startDate: "2026-03-01T00:00:00.000Z", endDate: "2026-03-02T00:00:00.000Z" }),
+      giveaway({ code: "PEN", creatorUsername: "eve", appId: 700, penaltyForCode: "PAD", startDate: "2026-03-01T00:00:00.000Z", endDate: "2026-03-02T00:00:00.000Z", resultStatus: "won", winners: [{ username: "dave" }] }),
       // legacy penalty giveaway with no "Penalty GA - <link>" target -> NOT settled
       giveaway({ code: "LGC", creatorUsername: "eve", appId: 800, startDate: "2024-03-01T00:00:00.000Z", endDate: "2024-03-02T00:00:00.000Z" }),
     ],

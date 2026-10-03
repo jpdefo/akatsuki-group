@@ -599,13 +599,13 @@ export function getReleaseMonthKey(releaseDate) {
 }
 
 export function getBaseGiveawayKind(giveaway) {
-  const kind = String(giveaway?.giveawayKind || giveaway?.type || "").toLowerCase();
-  const penaltyText = `${String(giveaway?.title || "")} ${String(giveaway?.notes || "")}`;
-  if (kind === "summer_event" || kind === "summer-event") {
-    return "summer_event";
+  const kind = normalizeGiveawayKindValue(giveaway?.giveawayKind || giveaway?.type);
+  if (kind !== "cycle") {
+    return kind;
   }
-  if (kind === "extra" || /\bpenalty\b/i.test(penaltyText)) {
-    return "extra";
+  const penaltyText = `${String(giveaway?.title || "")} ${String(giveaway?.notes || "")}`;
+  if (/\bpenalty\b/i.test(penaltyText)) {
+    return "penalty";
   }
   if (/\bsummer event\b/i.test(penaltyText)) {
     return "summer_event";
@@ -983,14 +983,45 @@ export function getWinGiveawayCodeKey(win, ctx) {
   return giveaway ? getGiveawayCodeKey(giveaway) : "";
 }
 
-export function isWinPenaltyPaid(win, ctx) {
+// Creation starts a payment. Settlement requires a closed giveaway with a
+// recorded winner, independently of the Steam progress clock used for debts.
+export function getPenaltyGiveawayStatus(giveaway, ctx = {}) {
+  const codeKey = getGiveawayCodeKey(giveaway);
+  const synced = (ctx.syncGiveaways || []).find((item) => getGiveawayCodeKey(item) === codeKey);
+  const record = synced || giveaway;
+  const end = new Date(record?.endDate || "").getTime();
+  const now = new Date(ctx.giveawayReferenceDate || ctx.currentDate || Date.now()).getTime();
+  if (!Number.isFinite(end) || !Number.isFinite(now) || end > now) {
+    return "in-progress";
+  }
+  const manual = getGiveawayManualWinners(record, ctx.overrides);
+  if (!manual.length && String(record?.resultStatus || "").toLowerCase() === "no_winners") {
+    return "no-winner";
+  }
+  return manual.length || normalizeGiveawaySyncWinners(record).length ? "settled" : "in-progress";
+}
+
+export function getWinPenaltyGiveaways(win, ctx) {
   const codeKey = getWinGiveawayCodeKey(win, ctx);
   if (!codeKey) {
-    return false;
+    return [];
   }
-  return (ctx?.giveaways || []).some(
+  return (ctx?.giveaways || []).filter(
     (giveaway) => getGiveawayKind(giveaway) === "penalty" && getPenaltyForCodeKey(giveaway) === codeKey,
   );
+}
+
+export function isWinPenaltyPaid(win, ctx) {
+  return getWinPenaltyGiveaways(win, ctx).some((giveaway) => getPenaltyGiveawayStatus(giveaway, ctx) === "settled");
+}
+
+export function getPenaltyGiveawayLinks(win, ctx) {
+  return getWinPenaltyGiveaways(win, ctx).map((giveaway) => ({
+    title: giveaway.title,
+    url: getGiveawayPageUrl(giveaway),
+    endDate: giveaway.endDate || null,
+    status: getPenaltyGiveawayStatus(giveaway, ctx),
+  }));
 }
 
 // Reference "today" for penalty timing (overdue / days left). The judgement is
@@ -1046,6 +1077,9 @@ export function getWinPenaltyInfo(win, ctx) {
   }
   if (isWinPenaltyPaid(win, ctx)) {
     return { status: "paid", popMonth, deadline };
+  }
+  if (getWinPenaltyGiveaways(win, ctx).some((giveaway) => getPenaltyGiveawayStatus(giveaway, ctx) === "in-progress")) {
+    return { status: "in-progress", popMonth, deadline };
   }
   // Timed against the Steam refresh, not the SteamGifts sync — see
   // resolvePenaltyReferenceDate.
@@ -1450,14 +1484,14 @@ export function getGiveawayPageUrl(giveaway) {
   return code ? `https://www.steamgifts.com/giveaway/${code}/` : "";
 }
 
-// Penalty giveaways that have been created, resolved to the won giveaway they
+// Closed penalty giveaways with a winner, resolved to the won giveaway they
 // settle (the audit/settled list). Mirrors app.js getPenaltyGiveawayRecords.
 // Penalty giveaways without a resolvable "Penalty GA - <link>" target (legacy,
 // pre-2026) are excluded: with no known paid-for game they aren't "settled".
 export function getPenaltyGiveawayRecords(wins, ctx) {
   const giveaways = ctx?.giveaways || [];
   return giveaways
-    .filter((giveaway) => getGiveawayKind(giveaway) === "penalty")
+    .filter((giveaway) => getGiveawayKind(giveaway) === "penalty" && getPenaltyGiveawayStatus(giveaway, ctx) === "settled")
     .map((giveaway) => {
       const targetKey = getPenaltyForCodeKey(giveaway);
       const target = targetKey ? giveaways.find((item) => getGiveawayCodeKey(item) === targetKey) || null : null;
@@ -1509,6 +1543,8 @@ export function buildPenaltyAndMemberDerived({ sync = {}, progress = {}, overrid
     gamesById: graph.gamesById,
     membersById: graph.membersById,
     syncGiveaways: graph.syncGiveaways,
+    overrides,
+    giveawayReferenceDate: settings.giveawayReferenceDate || sync.syncedAt || settings.currentDate || "",
     currentDate: settings.currentDate || "",
     penaltyReferenceDate,
     penaltyReady: true,
@@ -1535,9 +1571,10 @@ export function buildPenaltyAndMemberDerived({ sync = {}, progress = {}, overrid
 
   const owedNow = [];
   const comingDue = [];
+  const inProgress = [];
   for (const win of graph.wins) {
     const info = getWinPenaltyInfo(win, ctx);
-    if (!info || (info.status !== "overdue" && info.status !== "coming-due")) {
+    if (!info || !["overdue", "coming-due", "in-progress"].includes(info.status)) {
       continue;
     }
     const member = ctx.membersById.get(win.memberId);
@@ -1555,9 +1592,12 @@ export function buildPenaltyAndMemberDerived({ sync = {}, progress = {}, overrid
       deadline: info.deadline instanceof Date ? info.deadline.toISOString() : null,
       popMonth: info.popMonth,
       manualWinner: Boolean(win.manualWinner),
+      penaltyGiveaways: getPenaltyGiveawayLinks(win, ctx),
       ...penaltyProgressFigures(win, ctx),
     };
-    if (info.status === "overdue") {
+    if (info.status === "in-progress") {
+      inProgress.push(row);
+    } else if (info.status === "overdue") {
       row.daysOverdue = info.daysOverdue;
       owedNow.push(row);
     } else {
@@ -1568,6 +1608,7 @@ export function buildPenaltyAndMemberDerived({ sync = {}, progress = {}, overrid
   const byDeadline = (left, right) => new Date(left.deadline || 0).getTime() - new Date(right.deadline || 0).getTime();
   owedNow.sort(byDeadline);
   comingDue.sort(byDeadline);
+  inProgress.sort(byDeadline);
 
   const settled = getPenaltyGiveawayRecords(graph.wins, ctx).map((record) => ({
     payer: record.creator?.name || record.giveaway.creatorUsername || "Unknown member",
@@ -1578,6 +1619,8 @@ export function buildPenaltyAndMemberDerived({ sync = {}, progress = {}, overrid
     giveawayPageUrl: getGiveawayPageUrl(record.giveaway),
     wonGiveawayUrl: getGiveawayPageUrl(record.target),
     createdAt: record.giveaway.createdAt || null,
+    settledAt: record.giveaway.endDate || null,
+    penaltyTitle: record.giveaway.title,
     manualWinner: Boolean(record.targetWin?.manualWinner),
     ...penaltyProgressFigures(record.targetWin, ctx),
   }));
@@ -1588,9 +1631,10 @@ export function buildPenaltyAndMemberDerived({ sync = {}, progress = {}, overrid
   return {
     penalties: {
       referenceDate: penaltyReferenceDate,
-      counts: { overdue: owedNow.length, comingDue: comingDue.length, settled: settled.length },
+      counts: { overdue: owedNow.length, comingDue: comingDue.length, inProgress: inProgress.length, settled: settled.length },
       owedNow,
       comingDue,
+      inProgress,
       settled,
     },
     members: {

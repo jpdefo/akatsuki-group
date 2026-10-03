@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Akatsuki Penalties</title>
     <link rel="icon" type="image/png" href="akatsuki.png" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20261003-penalties" />
   </head>
   <body>
     <div class="app-shell">
@@ -39,6 +39,8 @@
                   Settle it with a giveaway described
                   <code class="penalty-description">Penalty GA - &lt;won giveaway link&gt;</code>, which each card's
                   button copies for you. Finishing the game clears the debt at any point, even past the deadline.
+                  A penalty giveaway stays in progress until it ends with a recorded winner.
+                  If it ends without a winner, the penalty is still owed.
                   Wins from before January 2026 are grandfathered as paid.
                 </details>
               </p>
@@ -56,6 +58,7 @@
               <button type="button" class="segmented-option" data-penalties-filter="all">All</button>
               <button type="button" class="segmented-option" data-penalties-filter="overdue">Owed now</button>
               <button type="button" class="segmented-option" data-penalties-filter="coming-due">Coming due</button>
+              <button type="button" class="segmented-option" data-penalties-filter="in-progress">In progress</button>
               <button type="button" class="segmented-option" data-penalties-filter="settled">Settled</button>
             </div>
             <div class="penalties-controls-right">
