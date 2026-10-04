@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T10:44:00.109069+00:00",
+  "updatedAt": "2026-10-04T11:25:26.507174+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -7719,12 +7719,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 146.33,
+      "playtimeHours": 147.32,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 146.33,
+      "achievementsPlaytimeHours": 147.32,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -8842,12 +8842,12 @@
       "earnedAchievements": 10,
       "totalAchievements": 38,
       "achievementPercent": 26,
-      "playtimeHours": 8.15,
+      "playtimeHours": 8.78,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 8.15,
+      "achievementsPlaytimeHours": 8.78,
       "popThresholdMetAt": "2026-06-26T07:11:08.798106+00:00"
     },
     {
@@ -21007,6 +21007,22 @@
       "appId": 3259780,
       "title": "FINAL FANTASY RESONANCE",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/3259780/achievements/",
+      "playtimeHours": 0.0,
+      "visible": false,
+      "earnedAchievements": 0,
+      "totalAchievements": 0,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "username": "Koalala",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198065466175",
+      "appId": 3357650,
+      "title": "PRAGMATA",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/3357650/achievements/",
       "playtimeHours": 0.0,
       "visible": false,
       "earnedAchievements": 0,
@@ -35788,16 +35804,16 @@
       "appId": 3751260,
       "title": "The Blood of Dawnwalker",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3751260/achievements/",
-      "playtimeHours": 4.98,
+      "playtimeHours": 14.23,
       "visible": true,
-      "earnedAchievements": 4,
+      "earnedAchievements": 8,
       "totalAchievements": 46,
-      "achievementPercent": 9,
+      "achievementPercent": 17,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 4.98
+      "achievementsPlaytimeHours": 14.23
     },
     {
       "username": "WNDRLST",
@@ -37070,12 +37086,12 @@
       "earnedAchievements": 51,
       "totalAchievements": 101,
       "achievementPercent": 50,
-      "playtimeHours": 40.43,
+      "playtimeHours": 40.53,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 40.43,
+      "achievementsPlaytimeHours": 40.53,
       "popThresholdMetAt": "2026-06-26T07:11:08.801361+00:00"
     },
     {
@@ -71014,24 +71030,24 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-10-03T10:43:07.217303+00:00",
+  "libraryUpdatedAt": "2026-10-04T11:24:24.269366+00:00",
   "libraryStats": {
-    "durationSeconds": 4.24,
+    "durationSeconds": 8.24,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14554
+    "totalPlaytimeRows": 14563
   },
   "stats": {
-    "durationSeconds": 57.14,
-    "targetWins": 2403,
-    "uniqueProgressTargets": 2398,
-    "libraryPlaytimeHits": 2389,
-    "cachedReuses": 2333,
-    "achievementSuccesses": 12,
-    "achievementErrors": 53,
+    "durationSeconds": 70.49,
+    "targetWins": 2404,
+    "uniqueProgressTargets": 2399,
+    "libraryPlaytimeHits": 2390,
+    "cachedReuses": 2337,
+    "achievementSuccesses": 8,
+    "achievementErrors": 54,
     "cachedFallbacks": 53,
     "hltbTitlesRequested": 1292,
     "hltbResultsAvailable": 4041
