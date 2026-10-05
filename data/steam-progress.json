@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T11:25:26.507174+00:00",
+  "updatedAt": "2026-10-05T12:49:12.172799+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -7112,7 +7112,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 53.25,
+      "playtimeHours": 56.0,
       "visible": true,
       "earnedAchievements": 2,
       "totalAchievements": 34,
@@ -7121,7 +7121,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 53.25
+      "achievementsPlaytimeHours": 56.0
     },
     {
       "username": "burntreynolds444",
@@ -7719,12 +7719,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 147.32,
+      "playtimeHours": 148.1,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 147.32,
+      "achievementsPlaytimeHours": 148.1,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -8839,15 +8839,15 @@
       "title": "Once Upon A KATAMARI",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/1880620/achievements/",
       "visible": true,
-      "earnedAchievements": 10,
+      "earnedAchievements": 13,
       "totalAchievements": 38,
-      "achievementPercent": 26,
-      "playtimeHours": 8.78,
+      "achievementPercent": 34,
+      "playtimeHours": 11.1,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 8.78,
+      "achievementsPlaytimeHours": 11.1,
       "popThresholdMetAt": "2026-06-26T07:11:08.798106+00:00"
     },
     {
@@ -35687,7 +35687,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 103.1,
+      "playtimeHours": 104.45,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -35804,16 +35804,16 @@
       "appId": 3751260,
       "title": "The Blood of Dawnwalker",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3751260/achievements/",
-      "playtimeHours": 14.23,
+      "playtimeHours": 17.05,
       "visible": true,
-      "earnedAchievements": 8,
+      "earnedAchievements": 10,
       "totalAchievements": 46,
-      "achievementPercent": 17,
+      "achievementPercent": 22,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 14.23
+      "achievementsPlaytimeHours": 17.05
     },
     {
       "username": "WNDRLST",
@@ -37083,15 +37083,15 @@
       "title": "UNCHARTED: Legacy of Thieves Collection",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/1659420/achievements/",
       "visible": true,
-      "earnedAchievements": 51,
+      "earnedAchievements": 55,
       "totalAchievements": 101,
-      "achievementPercent": 50,
-      "playtimeHours": 40.53,
+      "achievementPercent": 54,
+      "playtimeHours": 42.27,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 40.53,
+      "achievementsPlaytimeHours": 42.27,
       "popThresholdMetAt": "2026-06-26T07:11:08.801361+00:00"
     },
     {
@@ -71030,25 +71030,25 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-10-04T11:24:24.269366+00:00",
+  "libraryUpdatedAt": "2026-10-05T12:48:07.311017+00:00",
   "libraryStats": {
-    "durationSeconds": 8.24,
+    "durationSeconds": 8.69,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14563
+    "totalPlaytimeRows": 14565
   },
   "stats": {
-    "durationSeconds": 70.49,
+    "durationSeconds": 73.56,
     "targetWins": 2404,
     "uniqueProgressTargets": 2399,
     "libraryPlaytimeHits": 2390,
-    "cachedReuses": 2337,
-    "achievementSuccesses": 8,
+    "cachedReuses": 2336,
+    "achievementSuccesses": 9,
     "achievementErrors": 54,
-    "cachedFallbacks": 53,
+    "cachedFallbacks": 54,
     "hltbTitlesRequested": 1292,
     "hltbResultsAvailable": 4041
   }
