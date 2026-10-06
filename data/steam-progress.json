@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T12:49:12.172799+00:00",
+  "updatedAt": "2026-10-06T12:18:27.287680+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -7112,7 +7112,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 56.0,
+      "playtimeHours": 62.33,
       "visible": true,
       "earnedAchievements": 2,
       "totalAchievements": 34,
@@ -7121,7 +7121,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 56.0
+      "achievementsPlaytimeHours": 62.33
     },
     {
       "username": "burntreynolds444",
@@ -7169,12 +7169,12 @@
       "earnedAchievements": 0,
       "totalAchievements": 49,
       "achievementPercent": 0,
-      "playtimeHours": 0.0,
+      "playtimeHours": 1.02,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 1.02
     },
     {
       "username": "chOOkity",
@@ -7719,12 +7719,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 148.1,
+      "playtimeHours": 148.48,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 148.1,
+      "achievementsPlaytimeHours": 148.48,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -9599,16 +9599,17 @@
       "appId": 3920610,
       "title": "FATAL FRAME II: Crimson Butterfly REMAKE",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/3920610/achievements/",
-      "playtimeHours": 1.13,
+      "playtimeHours": 3.6,
       "visible": true,
-      "earnedAchievements": 2,
+      "earnedAchievements": 12,
       "totalAchievements": 51,
-      "achievementPercent": 4,
+      "achievementPercent": 24,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.13
+      "achievementsPlaytimeHours": 3.6,
+      "popThresholdMetAt": "2026-10-06T12:18:27.286856+00:00"
     },
     {
       "username": "Drain",
@@ -20743,7 +20744,7 @@
       "appId": 2369390,
       "title": "Far Cry 6",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/2369390/achievements/",
-      "playtimeHours": 7.6,
+      "playtimeHours": 8.4,
       "visible": true,
       "earnedAchievements": 5,
       "totalAchievements": 99,
@@ -20752,7 +20753,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 7.6
+      "achievementsPlaytimeHours": 8.4
     },
     {
       "username": "Koalala",
@@ -35687,7 +35688,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 104.45,
+      "playtimeHours": 108.0,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -35804,16 +35805,16 @@
       "appId": 3751260,
       "title": "The Blood of Dawnwalker",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3751260/achievements/",
-      "playtimeHours": 17.05,
+      "playtimeHours": 23.87,
       "visible": true,
-      "earnedAchievements": 10,
+      "earnedAchievements": 13,
       "totalAchievements": 46,
-      "achievementPercent": 22,
+      "achievementPercent": 28,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 17.05
+      "achievementsPlaytimeHours": 23.87
     },
     {
       "username": "WNDRLST",
@@ -37083,15 +37084,15 @@
       "title": "UNCHARTED: Legacy of Thieves Collection",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/1659420/achievements/",
       "visible": true,
-      "earnedAchievements": 55,
+      "earnedAchievements": 59,
       "totalAchievements": 101,
-      "achievementPercent": 54,
-      "playtimeHours": 42.27,
+      "achievementPercent": 58,
+      "playtimeHours": 44.03,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 42.27,
+      "achievementsPlaytimeHours": 44.03,
       "popThresholdMetAt": "2026-06-26T07:11:08.801361+00:00"
     },
     {
@@ -71030,9 +71031,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-10-05T12:48:07.311017+00:00",
+  "libraryUpdatedAt": "2026-10-06T12:17:35.235259+00:00",
   "libraryStats": {
-    "durationSeconds": 8.69,
+    "durationSeconds": 4.28,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71041,12 +71042,12 @@
     "totalPlaytimeRows": 14565
   },
   "stats": {
-    "durationSeconds": 73.56,
+    "durationSeconds": 56.34,
     "targetWins": 2404,
     "uniqueProgressTargets": 2399,
     "libraryPlaytimeHits": 2390,
-    "cachedReuses": 2336,
-    "achievementSuccesses": 9,
+    "cachedReuses": 2334,
+    "achievementSuccesses": 11,
     "achievementErrors": 54,
     "cachedFallbacks": 54,
     "hltbTitlesRequested": 1292,
