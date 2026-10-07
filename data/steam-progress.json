@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-06T12:18:27.287680+00:00",
+  "updatedAt": "2026-10-07T12:09:57.631290+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -7112,7 +7112,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 62.33,
+      "playtimeHours": 65.02,
       "visible": true,
       "earnedAchievements": 2,
       "totalAchievements": 34,
@@ -7121,7 +7121,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 62.33
+      "achievementsPlaytimeHours": 65.02
     },
     {
       "username": "burntreynolds444",
@@ -7253,16 +7253,16 @@
       "appId": 534380,
       "title": "Dying Light 2 Stay Human: Reloaded Ed...",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/534380/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 1.83,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 3,
       "totalAchievements": 65,
-      "achievementPercent": 0,
+      "achievementPercent": 5,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 1.83
     },
     {
       "username": "chOOkity",
@@ -7719,12 +7719,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 148.48,
+      "playtimeHours": 148.97,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 148.48,
+      "achievementsPlaytimeHours": 148.97,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -17402,14 +17402,15 @@
       "title": "Gears of War: E-Day",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/3010850/achievements/",
       "playtimeHours": 0.0,
-      "visible": false,
+      "visible": true,
       "earnedAchievements": 0,
-      "totalAchievements": 0,
+      "totalAchievements": 55,
       "achievementPercent": 0,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "error": "HTTP Error 403: Forbidden"
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "Horseflesh",
@@ -35688,7 +35689,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 108.0,
+      "playtimeHours": 109.63,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -35719,15 +35720,16 @@
       "appId": 3010850,
       "title": "Gears of War: E-Day",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3010850/achievements/",
-      "playtimeHours": 0.0,
-      "visible": false,
-      "earnedAchievements": 0,
-      "totalAchievements": 0,
-      "achievementPercent": 0,
+      "playtimeHours": 3.22,
+      "visible": true,
+      "earnedAchievements": 7,
+      "totalAchievements": 55,
+      "achievementPercent": 13,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "error": "HTTP Error 403: Forbidden"
+      "error": null,
+      "achievementsPlaytimeHours": 3.22
     },
     {
       "username": "Wintermute101",
@@ -38555,12 +38557,12 @@
       "earnedAchievements": 31,
       "totalAchievements": 35,
       "achievementPercent": 89,
-      "playtimeHours": 985.38,
+      "playtimeHours": 990.47,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 985.38,
+      "achievementsPlaytimeHours": 990.47,
       "popThresholdMetAt": "2026-06-26T07:11:08.801512+00:00"
     },
     {
@@ -71031,25 +71033,25 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-10-06T12:17:35.235259+00:00",
+  "libraryUpdatedAt": "2026-10-07T12:08:57.704872+00:00",
   "libraryStats": {
-    "durationSeconds": 4.28,
+    "durationSeconds": 8.98,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14565
+    "totalPlaytimeRows": 14571
   },
   "stats": {
-    "durationSeconds": 56.34,
+    "durationSeconds": 68.92,
     "targetWins": 2404,
     "uniqueProgressTargets": 2399,
     "libraryPlaytimeHits": 2390,
-    "cachedReuses": 2334,
-    "achievementSuccesses": 11,
-    "achievementErrors": 54,
-    "cachedFallbacks": 54,
+    "cachedReuses": 2337,
+    "achievementSuccesses": 10,
+    "achievementErrors": 52,
+    "cachedFallbacks": 52,
     "hltbTitlesRequested": 1292,
     "hltbResultsAvailable": 4041
   }
