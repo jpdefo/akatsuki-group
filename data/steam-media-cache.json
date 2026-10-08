@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-06T12:17:30.621469+00:00",
+  "updatedAt": "2026-10-08T12:19:11.995707+00:00",
   "apps": {
     "3288210": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3288210/2e13226847bb546625411aed75e74471f6705b18/header.jpg?t=1777969480",
@@ -5334,6 +5334,15 @@
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3124540/396b26f278210ddfbb9e944d8b20da2e8bd17ded/capsule_184x69.jpg?t=1790863403",
       "releaseDate": "2026-04-28",
       "comingSoon": false
+    },
+    "2333000": {
+      "appId": 2333000,
+      "name": "Silver Pines",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2333000/2ce661be5b6e60b8fcc92ecdf3f9dc2dca2a9037/header.jpg?t=1790863271",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2333000/1d876833b58e192d06e6067a84da77c2768c30e4/capsule_231x87.jpg?t=1790863271",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2333000/1d876833b58e192d06e6067a84da77c2768c30e4/capsule_184x69.jpg?t=1790863271",
+      "releaseDate": "2026-10-08",
+      "comingSoon": true
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-07T12:09:57.631290+00:00",
+  "updatedAt": "2026-10-08T12:20:19.299403+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2865,7 +2865,7 @@
       "username": "BojanNS987",
       "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
       "appId": 2863680,
-      "title": "ZERO PARADES: For Dead Spies",
+      "title": "ZERO PARADES: Director's Cut",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2863680/achievements/",
       "playtimeHours": 5.13,
       "visible": true,
@@ -7719,12 +7719,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 148.97,
+      "playtimeHours": 149.55,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 148.97,
+      "achievementsPlaytimeHours": 149.55,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -14453,7 +14453,7 @@
       "username": "Ernesttico",
       "steamProfile": "https://steamcommunity.com/profiles/76561197978644420",
       "appId": 2863680,
-      "title": "ZERO PARADES: For Dead Spies",
+      "title": "ZERO PARADES: Director's Cut",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/2863680/achievements/",
       "playtimeHours": 0.0,
       "visible": true,
@@ -35689,7 +35689,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 109.63,
+      "playtimeHours": 111.33,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -35807,16 +35807,16 @@
       "appId": 3751260,
       "title": "The Blood of Dawnwalker",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3751260/achievements/",
-      "playtimeHours": 23.87,
+      "playtimeHours": 30.93,
       "visible": true,
-      "earnedAchievements": 13,
+      "earnedAchievements": 17,
       "totalAchievements": 46,
-      "achievementPercent": 28,
+      "achievementPercent": 37,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 23.87
+      "achievementsPlaytimeHours": 30.93
     },
     {
       "username": "WNDRLST",
@@ -37086,15 +37086,15 @@
       "title": "UNCHARTED: Legacy of Thieves Collection",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/1659420/achievements/",
       "visible": true,
-      "earnedAchievements": 59,
+      "earnedAchievements": 60,
       "totalAchievements": 101,
-      "achievementPercent": 58,
-      "playtimeHours": 44.03,
+      "achievementPercent": 59,
+      "playtimeHours": 44.95,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 44.03,
+      "achievementsPlaytimeHours": 44.95,
       "popThresholdMetAt": "2026-06-26T07:11:08.801361+00:00"
     },
     {
@@ -40481,7 +40481,7 @@
       "username": "Youdontknow",
       "steamProfile": "https://steamcommunity.com/profiles/76561198121640255",
       "appId": 2863680,
-      "title": "ZERO PARADES: For Dead Spies",
+      "title": "ZERO PARADES: Director's Cut",
       "progressUrl": "https://steamcommunity.com/profiles/76561198121640255/stats/2863680/achievements/",
       "playtimeHours": 0.0,
       "visible": true,
@@ -70287,11 +70287,11 @@
       "url": ""
     },
     {
-      "title": "ZERO PARADES: For Dead Spies",
+      "title": "ZERO PARADES: Director's Cut",
       "appId": 2863680,
-      "hltbHours": 21.07,
-      "matchedTitle": "Zero Parades: For Dead Spies",
-      "url": "https://howlongtobeat.com/game/172969"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "Fable",
@@ -70413,11 +70413,11 @@
       "url": "https://howlongtobeat.com/game/129948"
     },
     {
-      "title": "ZERO PARADES: For Dead Spies",
+      "title": "ZERO PARADES: Director's Cut",
       "appId": 2863680,
-      "hltbHours": 21.07,
-      "matchedTitle": "Zero Parades: For Dead Spies",
-      "url": "https://howlongtobeat.com/game/172969"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "The Midnight Walk",
@@ -70679,11 +70679,11 @@
       "url": "https://howlongtobeat.com/game/83152"
     },
     {
-      "title": "ZERO PARADES: For Dead Spies",
+      "title": "ZERO PARADES: Director's Cut",
       "appId": 2863680,
-      "hltbHours": 21.07,
-      "matchedTitle": "Zero Parades: For Dead Spies",
-      "url": "https://howlongtobeat.com/game/172969"
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "Deep Rock Galactic: Rogue Core",
@@ -71033,23 +71033,23 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-10-07T12:08:57.704872+00:00",
+  "libraryUpdatedAt": "2026-10-08T12:19:19.145593+00:00",
   "libraryStats": {
-    "durationSeconds": 8.98,
+    "durationSeconds": 6.75,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14571
+    "totalPlaytimeRows": 14578
   },
   "stats": {
-    "durationSeconds": 68.92,
+    "durationSeconds": 66.91,
     "targetWins": 2404,
     "uniqueProgressTargets": 2399,
     "libraryPlaytimeHits": 2390,
-    "cachedReuses": 2337,
-    "achievementSuccesses": 10,
+    "cachedReuses": 2340,
+    "achievementSuccesses": 7,
     "achievementErrors": 52,
     "cachedFallbacks": 52,
     "hltbTitlesRequested": 1292,
