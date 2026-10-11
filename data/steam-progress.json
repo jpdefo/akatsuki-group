@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T11:28:26.565395+00:00",
+  "updatedAt": "2026-10-11T11:41:44.966449+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -1784,16 +1784,16 @@
       "appId": 1699230,
       "title": "Hail to the Rainbow",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/1699230/achievements/",
-      "playtimeHours": 0.82,
+      "playtimeHours": 1.73,
       "visible": true,
-      "earnedAchievements": 3,
+      "earnedAchievements": 6,
       "totalAchievements": 46,
-      "achievementPercent": 7,
+      "achievementPercent": 13,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.82
+      "achievementsPlaytimeHours": 1.73
     },
     {
       "username": "BojanNS987",
@@ -7112,7 +7112,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 71.6,
+      "playtimeHours": 76.57,
       "visible": true,
       "earnedAchievements": 2,
       "totalAchievements": 34,
@@ -7121,7 +7121,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 71.6
+      "achievementsPlaytimeHours": 76.57
     },
     {
       "username": "burntreynolds444",
@@ -7253,16 +7253,17 @@
       "appId": 534380,
       "title": "Dying Light 2 Stay Human: Reloaded Ed...",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/534380/achievements/",
-      "playtimeHours": 4.38,
+      "playtimeHours": 9.6,
       "visible": true,
-      "earnedAchievements": 6,
+      "earnedAchievements": 7,
       "totalAchievements": 65,
-      "achievementPercent": 9,
+      "achievementPercent": 11,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 4.38
+      "achievementsPlaytimeHours": 9.6,
+      "popThresholdMetAt": "2026-10-11T11:41:44.965664+00:00"
     },
     {
       "username": "chOOkity",
@@ -27074,16 +27075,16 @@
       "appId": 2678080,
       "title": "Tides of Tomorrow 🌊",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2678080/achievements/",
-      "playtimeHours": 5.73,
+      "playtimeHours": 8.77,
       "visible": true,
-      "earnedAchievements": 13,
+      "earnedAchievements": 14,
       "totalAchievements": 39,
-      "achievementPercent": 33,
+      "achievementPercent": 36,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 5.73,
+      "achievementsPlaytimeHours": 8.77,
       "popThresholdMetAt": "2026-10-10T11:28:26.565096+00:00"
     },
     {
@@ -35690,7 +35691,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 116.2,
+      "playtimeHours": 120.22,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -35721,16 +35722,16 @@
       "appId": 3010850,
       "title": "Gears of War: E-Day",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3010850/achievements/",
-      "playtimeHours": 3.22,
+      "playtimeHours": 5.05,
       "visible": true,
-      "earnedAchievements": 7,
+      "earnedAchievements": 8,
       "totalAchievements": 55,
-      "achievementPercent": 13,
+      "achievementPercent": 15,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 3.22
+      "achievementsPlaytimeHours": 5.05
     },
     {
       "username": "Wintermute101",
@@ -37087,15 +37088,15 @@
       "title": "UNCHARTED: Legacy of Thieves Collection",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/1659420/achievements/",
       "visible": true,
-      "earnedAchievements": 67,
+      "earnedAchievements": 88,
       "totalAchievements": 101,
-      "achievementPercent": 66,
-      "playtimeHours": 47.73,
+      "achievementPercent": 87,
+      "playtimeHours": 52.53,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 47.73,
+      "achievementsPlaytimeHours": 52.53,
       "popThresholdMetAt": "2026-06-26T07:11:08.801361+00:00"
     },
     {
@@ -71034,9 +71035,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-10-10T11:27:22.432455+00:00",
+  "libraryUpdatedAt": "2026-10-11T11:40:53.144500+00:00",
   "libraryStats": {
-    "durationSeconds": 9.21,
+    "durationSeconds": 4.25,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71045,12 +71046,12 @@
     "totalPlaytimeRows": 14580
   },
   "stats": {
-    "durationSeconds": 73.36,
+    "durationSeconds": 56.08,
     "targetWins": 2404,
     "uniqueProgressTargets": 2399,
     "libraryPlaytimeHits": 2390,
-    "cachedReuses": 2336,
-    "achievementSuccesses": 11,
+    "cachedReuses": 2337,
+    "achievementSuccesses": 10,
     "achievementErrors": 52,
     "cachedFallbacks": 52,
     "hltbTitlesRequested": 1292,
