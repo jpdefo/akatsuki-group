@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T11:41:44.966449+00:00",
+  "updatedAt": "2026-10-12T13:40:11.948714+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -1784,7 +1784,7 @@
       "appId": 1699230,
       "title": "Hail to the Rainbow",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/1699230/achievements/",
-      "playtimeHours": 1.73,
+      "playtimeHours": 2.3,
       "visible": true,
       "earnedAchievements": 6,
       "totalAchievements": 46,
@@ -1793,7 +1793,8 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.73
+      "achievementsPlaytimeHours": 2.3,
+      "popThresholdMetAt": "2026-10-12T13:40:11.947847+00:00"
     },
     {
       "username": "BojanNS987",
@@ -7112,7 +7113,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 76.57,
+      "playtimeHours": 87.22,
       "visible": true,
       "earnedAchievements": 2,
       "totalAchievements": 34,
@@ -7121,7 +7122,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 76.57
+      "achievementsPlaytimeHours": 87.22
     },
     {
       "username": "burntreynolds444",
@@ -7253,16 +7254,16 @@
       "appId": 534380,
       "title": "Dying Light 2 Stay Human: Reloaded Ed...",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/534380/achievements/",
-      "playtimeHours": 9.6,
+      "playtimeHours": 11.45,
       "visible": true,
-      "earnedAchievements": 7,
+      "earnedAchievements": 8,
       "totalAchievements": 65,
-      "achievementPercent": 11,
+      "achievementPercent": 12,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 9.6,
+      "achievementsPlaytimeHours": 11.45,
       "popThresholdMetAt": "2026-10-11T11:41:44.965664+00:00"
     },
     {
@@ -7720,12 +7721,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 149.55,
+      "playtimeHours": 150.15,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 149.55,
+      "achievementsPlaytimeHours": 150.15,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -21046,12 +21047,12 @@
       "earnedAchievements": 6,
       "totalAchievements": 45,
       "achievementPercent": 13,
-      "playtimeHours": 23.32,
+      "playtimeHours": 25.98,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 23.32,
+      "achievementsPlaytimeHours": 25.98,
       "popThresholdMetAt": "2026-06-26T07:11:08.799495+00:00"
     },
     {
@@ -26702,16 +26703,16 @@
       "appId": 2057760,
       "title": "Esoteric Ebb",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2057760/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 1.25,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 4,
       "totalAchievements": 56,
-      "achievementPercent": 0,
+      "achievementPercent": 7,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 1.25
     },
     {
       "username": "leniu",
@@ -35691,7 +35692,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 120.22,
+      "playtimeHours": 123.37,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -35722,16 +35723,16 @@
       "appId": 3010850,
       "title": "Gears of War: E-Day",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3010850/achievements/",
-      "playtimeHours": 5.05,
+      "playtimeHours": 7.65,
       "visible": true,
-      "earnedAchievements": 8,
+      "earnedAchievements": 12,
       "totalAchievements": 55,
-      "achievementPercent": 15,
+      "achievementPercent": 22,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 5.05
+      "achievementsPlaytimeHours": 7.65
     },
     {
       "username": "Wintermute101",
@@ -37088,15 +37089,15 @@
       "title": "UNCHARTED: Legacy of Thieves Collection",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/1659420/achievements/",
       "visible": true,
-      "earnedAchievements": 88,
+      "earnedAchievements": 91,
       "totalAchievements": 101,
-      "achievementPercent": 87,
-      "playtimeHours": 52.53,
+      "achievementPercent": 90,
+      "playtimeHours": 53.38,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 52.53,
+      "achievementsPlaytimeHours": 53.38,
       "popThresholdMetAt": "2026-06-26T07:11:08.801361+00:00"
     },
     {
@@ -71029,15 +71030,22 @@
       "hltbHours": 10.8,
       "matchedTitle": "Replaced",
       "url": "https://howlongtobeat.com/game/93944"
+    },
+    {
+      "title": "MOUSE: P.I. For Hire",
+      "appId": 2416450,
+      "hltbHours": 12.08,
+      "matchedTitle": "MOUSE: P.I. For Hire",
+      "url": "https://howlongtobeat.com/game/128648"
     }
   ],
   "steamApiEnabled": true,
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-10-11T11:40:53.144500+00:00",
+  "libraryUpdatedAt": "2026-10-12T13:39:11.494274+00:00",
   "libraryStats": {
-    "durationSeconds": 4.25,
+    "durationSeconds": 6.48,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71046,15 +71054,15 @@
     "totalPlaytimeRows": 14580
   },
   "stats": {
-    "durationSeconds": 56.08,
+    "durationSeconds": 66.94,
     "targetWins": 2404,
     "uniqueProgressTargets": 2399,
     "libraryPlaytimeHits": 2390,
-    "cachedReuses": 2337,
-    "achievementSuccesses": 10,
+    "cachedReuses": 2335,
+    "achievementSuccesses": 12,
     "achievementErrors": 52,
     "cachedFallbacks": 52,
     "hltbTitlesRequested": 1292,
-    "hltbResultsAvailable": 4041
+    "hltbResultsAvailable": 4042
   }
 }
