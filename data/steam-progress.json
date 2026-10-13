@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-12T13:40:11.948714+00:00",
+  "updatedAt": "2026-10-13T13:02:40.773341+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -7113,7 +7113,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 87.22,
+      "playtimeHours": 95.2,
       "visible": true,
       "earnedAchievements": 2,
       "totalAchievements": 34,
@@ -7122,7 +7122,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 87.22
+      "achievementsPlaytimeHours": 95.2
     },
     {
       "username": "burntreynolds444",
@@ -35692,7 +35692,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 123.37,
+      "playtimeHours": 126.9,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -35723,16 +35723,16 @@
       "appId": 3010850,
       "title": "Gears of War: E-Day",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3010850/achievements/",
-      "playtimeHours": 7.65,
+      "playtimeHours": 8.37,
       "visible": true,
-      "earnedAchievements": 12,
+      "earnedAchievements": 13,
       "totalAchievements": 55,
-      "achievementPercent": 22,
+      "achievementPercent": 24,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 7.65
+      "achievementsPlaytimeHours": 8.37
     },
     {
       "username": "Wintermute101",
@@ -71043,23 +71043,23 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-10-12T13:39:11.494274+00:00",
+  "libraryUpdatedAt": "2026-10-13T13:01:37.425329+00:00",
   "libraryStats": {
-    "durationSeconds": 6.48,
+    "durationSeconds": 8.56,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14580
+    "totalPlaytimeRows": 14582
   },
   "stats": {
-    "durationSeconds": 66.94,
+    "durationSeconds": 71.93,
     "targetWins": 2404,
     "uniqueProgressTargets": 2399,
     "libraryPlaytimeHits": 2390,
-    "cachedReuses": 2335,
-    "achievementSuccesses": 12,
+    "cachedReuses": 2341,
+    "achievementSuccesses": 6,
     "achievementErrors": 52,
     "cachedFallbacks": 52,
     "hltbTitlesRequested": 1292,
