@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T12:09:42.268883+00:00",
+  "updatedAt": "2026-10-14T10:42:52.382239+00:00",
   "apps": {
     "3288210": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3288210/2e13226847bb546625411aed75e74471f6705b18/header.jpg?t=1777969480",
@@ -5352,6 +5352,15 @@
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2638890/4aa8bcfcb20173a0250f03ee15473abece15f6b0/capsule_184x69.jpg?t=1790383151",
       "releaseDate": "2026-09-03",
       "comingSoon": false
+    },
+    "4231820": {
+      "appId": 4231820,
+      "name": "Castlevania: Belmont's Curse",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4231820/6b65aec2c398006aea8b76e1463cc34d0e4ba68b/header.jpg?t=1788478863",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4231820/2ce9921d044de1c749da39763f8c03edd5c91d78/capsule_231x87.jpg?t=1788478863",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4231820/2ce9921d044de1c749da39763f8c03edd5c91d78/capsule_184x69.jpg?t=1788478863",
+      "releaseDate": "2026-10-14",
+      "comingSoon": true
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-13T13:02:40.773341+00:00",
+  "updatedAt": "2026-10-14T10:44:01.181458+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2902,7 +2902,7 @@
       "appId": 2997230,
       "title": "Planet of Lana II",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2997230/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 0.13,
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 25,
@@ -2911,7 +2911,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 0.13
     },
     {
       "username": "BojanNS987",
@@ -7721,12 +7721,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 150.15,
+      "playtimeHours": 150.7,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 150.15,
+      "achievementsPlaytimeHours": 150.7,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -35193,12 +35193,12 @@
       "earnedAchievements": 39,
       "totalAchievements": 43,
       "achievementPercent": 91,
-      "playtimeHours": 71.8,
+      "playtimeHours": 72.47,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 71.8,
+      "achievementsPlaytimeHours": 72.47,
       "popThresholdMetAt": "2026-06-26T07:11:08.801151+00:00"
     },
     {
@@ -35692,7 +35692,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 126.9,
+      "playtimeHours": 130.03,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -35723,7 +35723,7 @@
       "appId": 3010850,
       "title": "Gears of War: E-Day",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3010850/achievements/",
-      "playtimeHours": 8.37,
+      "playtimeHours": 8.9,
       "visible": true,
       "earnedAchievements": 13,
       "totalAchievements": 55,
@@ -35732,7 +35732,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 8.37
+      "achievementsPlaytimeHours": 8.9
     },
     {
       "username": "Wintermute101",
@@ -36551,15 +36551,15 @@
       "title": "FINAL FANTASY TACTICS - The Ivalice C...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/1004640/achievements/",
       "visible": true,
-      "earnedAchievements": 35,
+      "earnedAchievements": 38,
       "totalAchievements": 50,
-      "achievementPercent": 70,
-      "playtimeHours": 36.78,
+      "achievementPercent": 76,
+      "playtimeHours": 40.02,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 36.78,
+      "achievementsPlaytimeHours": 40.02,
       "popThresholdMetAt": "2026-07-06T18:27:00.287372+00:00"
     },
     {
@@ -71043,9 +71043,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-10-13T13:01:37.425329+00:00",
+  "libraryUpdatedAt": "2026-10-14T10:42:57.930655+00:00",
   "libraryStats": {
-    "durationSeconds": 8.56,
+    "durationSeconds": 5.18,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71054,12 +71054,12 @@
     "totalPlaytimeRows": 14582
   },
   "stats": {
-    "durationSeconds": 71.93,
+    "durationSeconds": 68.44,
     "targetWins": 2404,
     "uniqueProgressTargets": 2399,
     "libraryPlaytimeHits": 2390,
-    "cachedReuses": 2341,
-    "achievementSuccesses": 6,
+    "cachedReuses": 2338,
+    "achievementSuccesses": 9,
     "achievementErrors": 52,
     "cachedFallbacks": 52,
     "hltbTitlesRequested": 1292,
