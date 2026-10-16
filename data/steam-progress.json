@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T10:27:14.268149+00:00",
+  "updatedAt": "2026-10-16T10:14:41.320563+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2902,16 +2902,16 @@
       "appId": 2997230,
       "title": "Planet of Lana II",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2997230/achievements/",
-      "playtimeHours": 0.13,
+      "playtimeHours": 0.5,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 2,
       "totalAchievements": 25,
-      "achievementPercent": 0,
+      "achievementPercent": 8,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.13
+      "achievementsPlaytimeHours": 0.5
     },
     {
       "username": "BojanNS987",
@@ -7113,7 +7113,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 95.7,
+      "playtimeHours": 102.0,
       "visible": true,
       "earnedAchievements": 2,
       "totalAchievements": 34,
@@ -7122,7 +7122,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 95.7
+      "achievementsPlaytimeHours": 102.0
     },
     {
       "username": "burntreynolds444",
@@ -7788,16 +7788,17 @@
       "appId": 1154030,
       "title": "Titan Quest II",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/1154030/achievements/",
-      "visible": false,
+      "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
       "playtimeHours": 3.98,
-      "error": "HTTP Error 400: Bad Request",
+      "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "popThresholdMetAt": "2026-06-26T07:11:08.797961+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.797961+00:00",
+      "achievementsPlaytimeHours": 3.98
     },
     {
       "username": "chOOkity",
@@ -8199,16 +8200,17 @@
       "appId": 1340990,
       "title": "Rise of the Ronin",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/1340990/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 7.23,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 6,
       "totalAchievements": 51,
-      "achievementPercent": 0,
+      "achievementPercent": 12,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 7.23,
+      "popThresholdMetAt": "2026-10-16T10:14:41.319747+00:00"
     },
     {
       "username": "chOOkity",
@@ -8841,15 +8843,15 @@
       "title": "Once Upon A KATAMARI",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/1880620/achievements/",
       "visible": true,
-      "earnedAchievements": 13,
+      "earnedAchievements": 17,
       "totalAchievements": 38,
-      "achievementPercent": 34,
-      "playtimeHours": 11.1,
+      "achievementPercent": 45,
+      "playtimeHours": 13.17,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 11.1,
+      "achievementsPlaytimeHours": 13.17,
       "popThresholdMetAt": "2026-06-26T07:11:08.798106+00:00"
     },
     {
@@ -16042,16 +16044,17 @@
       "appId": 1154030,
       "title": "Titan Quest II",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/1154030/achievements/",
-      "visible": false,
+      "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
       "playtimeHours": 3.2,
-      "error": "HTTP Error 400: Bad Request",
+      "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "popThresholdMetAt": "2026-06-26T07:11:08.798911+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.798911+00:00",
+      "achievementsPlaytimeHours": 3.2
     },
     {
       "username": "Horseflesh",
@@ -26703,16 +26706,16 @@
       "appId": 2057760,
       "title": "Esoteric Ebb",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2057760/achievements/",
-      "playtimeHours": 2.52,
+      "playtimeHours": 5.17,
       "visible": true,
-      "earnedAchievements": 4,
+      "earnedAchievements": 7,
       "totalAchievements": 56,
-      "achievementPercent": 7,
+      "achievementPercent": 12,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.52
+      "achievementsPlaytimeHours": 5.17
     },
     {
       "username": "leniu",
@@ -29880,16 +29883,17 @@
       "appId": 1154030,
       "title": "Titan Quest II",
       "progressUrl": "https://steamcommunity.com/profiles/76561198262118401/stats/1154030/achievements/",
-      "visible": false,
+      "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
       "playtimeHours": 7.75,
-      "error": "HTTP Error 400: Bad Request",
+      "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "popThresholdMetAt": "2026-06-26T07:11:08.800517+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.800517+00:00",
+      "achievementsPlaytimeHours": 7.75
     },
     {
       "username": "Saikania",
@@ -35193,12 +35197,12 @@
       "earnedAchievements": 39,
       "totalAchievements": 43,
       "achievementPercent": 91,
-      "playtimeHours": 73.4,
+      "playtimeHours": 75.75,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 73.4,
+      "achievementsPlaytimeHours": 75.75,
       "popThresholdMetAt": "2026-06-26T07:11:08.801151+00:00"
     },
     {
@@ -35692,7 +35696,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 132.73,
+      "playtimeHours": 136.87,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -71043,9 +71047,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-10-15T10:26:12.334572+00:00",
+  "libraryUpdatedAt": "2026-10-16T10:13:32.968119+00:00",
   "libraryStats": {
-    "durationSeconds": 8.65,
+    "durationSeconds": 8.19,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71054,14 +71058,14 @@
     "totalPlaytimeRows": 14582
   },
   "stats": {
-    "durationSeconds": 70.59,
+    "durationSeconds": 76.56,
     "targetWins": 2404,
     "uniqueProgressTargets": 2399,
     "libraryPlaytimeHits": 2390,
-    "cachedReuses": 2338,
-    "achievementSuccesses": 9,
-    "achievementErrors": 52,
-    "cachedFallbacks": 52,
+    "cachedReuses": 2337,
+    "achievementSuccesses": 13,
+    "achievementErrors": 49,
+    "cachedFallbacks": 49,
     "hltbTitlesRequested": 1292,
     "hltbResultsAvailable": 4042
   }
