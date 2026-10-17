@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16T10:14:41.320563+00:00",
+  "updatedAt": "2026-10-17T09:48:04.561590+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -7721,12 +7721,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 151.08,
+      "playtimeHours": 151.68,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 151.08,
+      "achievementsPlaytimeHours": 151.68,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -8593,16 +8593,16 @@
       "appId": 1590230,
       "title": "Tyrion Cuthbert: Attorney of the Arcane",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/1590230/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 0.18,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 1,
       "totalAchievements": 8,
-      "achievementPercent": 0,
+      "achievementPercent": 12,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 0.18
     },
     {
       "username": "chOOkity",
@@ -20874,15 +20874,15 @@
       "title": "Metaphor: ReFantazio",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/2679460/achievements/",
       "visible": true,
-      "earnedAchievements": 20,
+      "earnedAchievements": 21,
       "totalAchievements": 44,
-      "achievementPercent": 45,
-      "playtimeHours": 46.58,
+      "achievementPercent": 48,
+      "playtimeHours": 47.3,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 46.58,
+      "achievementsPlaytimeHours": 47.3,
       "popThresholdMetAt": "2026-06-26T07:11:08.799484+00:00"
     },
     {
@@ -35197,12 +35197,12 @@
       "earnedAchievements": 39,
       "totalAchievements": 43,
       "achievementPercent": 91,
-      "playtimeHours": 75.75,
+      "playtimeHours": 77.33,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 75.75,
+      "achievementsPlaytimeHours": 77.33,
       "popThresholdMetAt": "2026-06-26T07:11:08.801151+00:00"
     },
     {
@@ -35696,7 +35696,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 136.87,
+      "playtimeHours": 139.22,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -71047,9 +71047,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-10-16T10:13:32.968119+00:00",
+  "libraryUpdatedAt": "2026-10-17T09:47:12.712724+00:00",
   "libraryStats": {
-    "durationSeconds": 8.19,
+    "durationSeconds": 4.21,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71058,12 +71058,12 @@
     "totalPlaytimeRows": 14582
   },
   "stats": {
-    "durationSeconds": 76.56,
+    "durationSeconds": 56.07,
     "targetWins": 2404,
     "uniqueProgressTargets": 2399,
     "libraryPlaytimeHits": 2390,
-    "cachedReuses": 2337,
-    "achievementSuccesses": 13,
+    "cachedReuses": 2342,
+    "achievementSuccesses": 8,
     "achievementErrors": 49,
     "cachedFallbacks": 49,
     "hltbTitlesRequested": 1292,
