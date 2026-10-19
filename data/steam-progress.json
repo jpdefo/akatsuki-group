@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-18T10:00:21.355767+00:00",
+  "updatedAt": "2026-10-19T11:23:11.093691+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2726,16 +2726,16 @@
       "appId": 2677660,
       "title": "Indiana Jones and the Great Circle",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2677660/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 0.98,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 3,
       "totalAchievements": 55,
-      "achievementPercent": 0,
+      "achievementPercent": 5,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 0.98
     },
     {
       "username": "BojanNS987",
@@ -7114,7 +7114,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 102.0,
+      "playtimeHours": 106.82,
       "visible": true,
       "earnedAchievements": 2,
       "totalAchievements": 34,
@@ -7123,7 +7123,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 102.0
+      "achievementsPlaytimeHours": 106.82
     },
     {
       "username": "burntreynolds444",
@@ -10905,16 +10905,17 @@
       "appId": 2239710,
       "title": "Into the Dead: Our Darkest Days",
       "progressUrl": "https://steamcommunity.com/profiles/76561197970556600/stats/2239710/achievements/",
-      "visible": false,
+      "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
       "playtimeHours": 4.6,
-      "error": "HTTP Error 400: Bad Request",
+      "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "popThresholdMetAt": "2026-06-26T07:11:08.798344+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.798344+00:00",
+      "achievementsPlaytimeHours": 4.6
     },
     {
       "username": "Drain",
@@ -12147,15 +12148,16 @@
       "appId": 1737870,
       "title": "REKA",
       "progressUrl": "https://steamcommunity.com/profiles/76561199085338397/stats/1737870/achievements/",
-      "visible": false,
+      "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
       "playtimeHours": 2.77,
-      "error": "HTTP Error 400: Bad Request",
+      "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
-      "gamesVisible": true
+      "gamesVisible": true,
+      "achievementsPlaytimeHours": 2.77
     },
     {
       "username": "eledhrim",
@@ -17160,16 +17162,17 @@
       "appId": 2239710,
       "title": "Into the Dead: Our Darkest Days",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/2239710/achievements/",
-      "visible": false,
+      "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
       "playtimeHours": 3.22,
-      "error": "HTTP Error 400: Bad Request",
+      "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "popThresholdMetAt": "2026-06-26T07:11:08.799050+00:00"
+      "popThresholdMetAt": "2026-06-26T07:11:08.799050+00:00",
+      "achievementsPlaytimeHours": 3.22
     },
     {
       "username": "Horseflesh",
@@ -20823,15 +20826,16 @@
       "title": "Mixtape",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/2582320/achievements/",
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 24,
       "totalAchievements": 26,
-      "achievementPercent": 0,
-      "playtimeHours": 0.0,
+      "achievementPercent": 92,
+      "playtimeHours": 5.92,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 5.92,
+      "popThresholdMetAt": "2026-10-19T11:23:11.093249+00:00"
     },
     {
       "username": "Koalala",
@@ -26707,16 +26711,16 @@
       "appId": 2057760,
       "title": "Esoteric Ebb",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2057760/achievements/",
-      "playtimeHours": 5.67,
+      "playtimeHours": 7.65,
       "visible": true,
-      "earnedAchievements": 7,
+      "earnedAchievements": 8,
       "totalAchievements": 56,
-      "achievementPercent": 12,
+      "achievementPercent": 14,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 5.67,
+      "achievementsPlaytimeHours": 7.65,
       "popThresholdMetAt": "2026-10-18T10:00:21.355515+00:00"
     },
     {
@@ -35199,12 +35203,12 @@
       "earnedAchievements": 39,
       "totalAchievements": 43,
       "achievementPercent": 91,
-      "playtimeHours": 78.12,
+      "playtimeHours": 78.93,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 78.12,
+      "achievementsPlaytimeHours": 78.93,
       "popThresholdMetAt": "2026-06-26T07:11:08.801151+00:00"
     },
     {
@@ -35267,7 +35271,7 @@
       "appId": 1962700,
       "title": "Subnautica 2",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/1962700/achievements/",
-      "playtimeHours": 7.63,
+      "playtimeHours": 12.63,
       "visible": false,
       "earnedAchievements": 0,
       "totalAchievements": 0,
@@ -35698,7 +35702,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 141.13,
+      "playtimeHours": 143.58,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -71049,9 +71053,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-10-18T09:59:26.483421+00:00",
+  "libraryUpdatedAt": "2026-10-19T11:22:13.582718+00:00",
   "libraryStats": {
-    "durationSeconds": 3.96,
+    "durationSeconds": 6.4,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71060,14 +71064,14 @@
     "totalPlaytimeRows": 14583
   },
   "stats": {
-    "durationSeconds": 58.84,
+    "durationSeconds": 63.93,
     "targetWins": 2404,
     "uniqueProgressTargets": 2399,
     "libraryPlaytimeHits": 2390,
-    "cachedReuses": 2342,
-    "achievementSuccesses": 8,
-    "achievementErrors": 49,
-    "cachedFallbacks": 49,
+    "cachedReuses": 2341,
+    "achievementSuccesses": 12,
+    "achievementErrors": 46,
+    "cachedFallbacks": 46,
     "hltbTitlesRequested": 1292,
     "hltbResultsAvailable": 4042
   }
