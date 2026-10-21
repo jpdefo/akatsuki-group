@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-20T10:31:09.798622+00:00",
+  "updatedAt": "2026-10-21T10:42:44.996824+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2726,16 +2726,16 @@
       "appId": 2677660,
       "title": "Indiana Jones and the Great Circle",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2677660/achievements/",
-      "playtimeHours": 1.95,
+      "playtimeHours": 2.8,
       "visible": true,
-      "earnedAchievements": 3,
+      "earnedAchievements": 4,
       "totalAchievements": 55,
-      "achievementPercent": 5,
+      "achievementPercent": 7,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.95
+      "achievementsPlaytimeHours": 2.8
     },
     {
       "username": "BojanNS987",
@@ -7114,7 +7114,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 114.35,
+      "playtimeHours": 115.85,
       "visible": true,
       "earnedAchievements": 2,
       "totalAchievements": 34,
@@ -7123,7 +7123,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 114.35
+      "achievementsPlaytimeHours": 115.85
     },
     {
       "username": "burntreynolds444",
@@ -7722,12 +7722,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 151.68,
+      "playtimeHours": 151.98,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 151.68,
+      "achievementsPlaytimeHours": 151.98,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -9323,7 +9323,7 @@
       "appId": 2457220,
       "title": "Avowed",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2457220/achievements/",
-      "playtimeHours": 1.73,
+      "playtimeHours": 2.73,
       "visible": true,
       "earnedAchievements": 1,
       "totalAchievements": 50,
@@ -9332,7 +9332,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.73
+      "achievementsPlaytimeHours": 2.73
     },
     {
       "username": "chOOkity",
@@ -19958,15 +19958,15 @@
       "title": "Sekiro: Shadows Die Twice - GOTY Edition",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/814380/achievements/",
       "visible": true,
-      "earnedAchievements": 26,
+      "earnedAchievements": 27,
       "totalAchievements": 34,
-      "achievementPercent": 76,
-      "playtimeHours": 65.07,
+      "achievementPercent": 79,
+      "playtimeHours": 66.95,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 65.07,
+      "achievementsPlaytimeHours": 66.95,
       "popThresholdMetAt": "2026-06-26T07:11:08.799381+00:00"
     },
     {
@@ -20826,15 +20826,15 @@
       "title": "Mixtape",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/2582320/achievements/",
       "visible": true,
-      "earnedAchievements": 25,
+      "earnedAchievements": 26,
       "totalAchievements": 26,
-      "achievementPercent": 96,
-      "playtimeHours": 6.72,
+      "achievementPercent": 100,
+      "playtimeHours": 7.68,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 6.72,
+      "achievementsPlaytimeHours": 7.68,
       "popThresholdMetAt": "2026-10-19T11:23:11.093249+00:00"
     },
     {
@@ -27174,16 +27174,16 @@
       "appId": 2840770,
       "title": "Avatar: Frontiers of Pandora",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2840770/achievements/",
-      "playtimeHours": 1.58,
+      "playtimeHours": 3.27,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 1,
       "totalAchievements": 52,
-      "achievementPercent": 0,
+      "achievementPercent": 2,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.58
+      "achievementsPlaytimeHours": 3.27
     },
     {
       "username": "leniu",
@@ -33406,7 +33406,7 @@
       "appId": 1774580,
       "title": "STAR WARS Jedi: Survivor",
       "progressUrl": "https://steamcommunity.com/profiles/76561198011705129/stats/1774580/achievements/",
-      "playtimeHours": 4.08,
+      "playtimeHours": 6.95,
       "visible": true,
       "earnedAchievements": 2,
       "totalAchievements": 53,
@@ -33415,7 +33415,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 4.08
+      "achievementsPlaytimeHours": 6.95
     },
     {
       "username": "Wintermute101",
@@ -33445,12 +33445,12 @@
       "earnedAchievements": 9,
       "totalAchievements": 56,
       "achievementPercent": 16,
-      "playtimeHours": 9.15,
+      "playtimeHours": 9.2,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 9.15,
+      "achievementsPlaytimeHours": 9.2,
       "popThresholdMetAt": "2026-06-26T07:11:08.800920+00:00"
     },
     {
@@ -34163,12 +34163,12 @@
       "earnedAchievements": 9,
       "totalAchievements": 42,
       "achievementPercent": 21,
-      "playtimeHours": 5.87,
+      "playtimeHours": 6.58,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 5.87,
+      "achievementsPlaytimeHours": 6.58,
       "popThresholdMetAt": "2026-06-26T07:11:08.801009+00:00"
     },
     {
@@ -35702,7 +35702,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 146.15,
+      "playtimeHours": 146.85,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -35733,16 +35733,16 @@
       "appId": 3010850,
       "title": "Gears of War: E-Day",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3010850/achievements/",
-      "playtimeHours": 9.42,
+      "playtimeHours": 13.95,
       "visible": true,
-      "earnedAchievements": 13,
+      "earnedAchievements": 17,
       "totalAchievements": 55,
-      "achievementPercent": 24,
+      "achievementPercent": 31,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 9.42
+      "achievementsPlaytimeHours": 13.95
     },
     {
       "username": "Wintermute101",
@@ -71053,9 +71053,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-10-20T10:30:10.983348+00:00",
+  "libraryUpdatedAt": "2026-10-21T10:41:51.871905+00:00",
   "libraryStats": {
-    "durationSeconds": 6.01,
+    "durationSeconds": 5.28,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71064,12 +71064,12 @@
     "totalPlaytimeRows": 14583
   },
   "stats": {
-    "durationSeconds": 64.84,
+    "durationSeconds": 58.42,
     "targetWins": 2404,
     "uniqueProgressTargets": 2399,
     "libraryPlaytimeHits": 2390,
-    "cachedReuses": 2340,
-    "achievementSuccesses": 13,
+    "cachedReuses": 2338,
+    "achievementSuccesses": 15,
     "achievementErrors": 46,
     "cachedFallbacks": 46,
     "hltbTitlesRequested": 1292,
