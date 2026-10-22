@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-21T10:42:44.996824+00:00",
+  "updatedAt": "2026-10-22T10:44:44.560588+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2726,16 +2726,17 @@
       "appId": 2677660,
       "title": "Indiana Jones and the Great Circle",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2677660/achievements/",
-      "playtimeHours": 2.8,
+      "playtimeHours": 4.9,
       "visible": true,
-      "earnedAchievements": 4,
+      "earnedAchievements": 5,
       "totalAchievements": 55,
-      "achievementPercent": 7,
+      "achievementPercent": 9,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.8
+      "achievementsPlaytimeHours": 4.9,
+      "popThresholdMetAt": "2026-10-22T10:44:44.559716+00:00"
     },
     {
       "username": "BojanNS987",
@@ -7114,7 +7115,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 115.85,
+      "playtimeHours": 120.73,
       "visible": true,
       "earnedAchievements": 2,
       "totalAchievements": 34,
@@ -7123,7 +7124,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 115.85
+      "achievementsPlaytimeHours": 120.73
     },
     {
       "username": "burntreynolds444",
@@ -9323,7 +9324,7 @@
       "appId": 2457220,
       "title": "Avowed",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2457220/achievements/",
-      "playtimeHours": 2.73,
+      "playtimeHours": 3.25,
       "visible": true,
       "earnedAchievements": 1,
       "totalAchievements": 50,
@@ -9332,7 +9333,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.73
+      "achievementsPlaytimeHours": 3.25
     },
     {
       "username": "chOOkity",
@@ -9578,7 +9579,7 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "error": "HTTP Error 400: Bad Request"
+      "error": "HTTP Error 403: Forbidden"
     },
     {
       "username": "chOOkity",
@@ -27174,7 +27175,7 @@
       "appId": 2840770,
       "title": "Avatar: Frontiers of Pandora",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2840770/achievements/",
-      "playtimeHours": 3.27,
+      "playtimeHours": 4.68,
       "visible": true,
       "earnedAchievements": 1,
       "totalAchievements": 52,
@@ -27183,7 +27184,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 3.27
+      "achievementsPlaytimeHours": 4.68
     },
     {
       "username": "leniu",
@@ -33406,16 +33407,17 @@
       "appId": 1774580,
       "title": "STAR WARS Jedi: Survivor",
       "progressUrl": "https://steamcommunity.com/profiles/76561198011705129/stats/1774580/achievements/",
-      "playtimeHours": 6.95,
+      "playtimeHours": 8.8,
       "visible": true,
-      "earnedAchievements": 2,
+      "earnedAchievements": 10,
       "totalAchievements": 53,
-      "achievementPercent": 4,
+      "achievementPercent": 19,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 6.95
+      "achievementsPlaytimeHours": 8.8,
+      "popThresholdMetAt": "2026-10-22T10:44:44.560412+00:00"
     },
     {
       "username": "Wintermute101",
@@ -33620,7 +33622,7 @@
       "appId": 686060,
       "title": "Mewgenics",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/686060/achievements/",
-      "playtimeHours": 20.83,
+      "playtimeHours": 21.3,
       "visible": true,
       "earnedAchievements": 29,
       "totalAchievements": 281,
@@ -33629,7 +33631,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 20.83,
+      "achievementsPlaytimeHours": 21.3,
       "popThresholdMetAt": "2026-07-13T08:41:31.886038+00:00"
     },
     {
@@ -35149,12 +35151,12 @@
       "earnedAchievements": 223,
       "totalAchievements": 243,
       "achievementPercent": 92,
-      "playtimeHours": 174.1,
+      "playtimeHours": 174.6,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 174.1,
+      "achievementsPlaytimeHours": 174.6,
       "popThresholdMetAt": "2026-06-26T07:11:08.801144+00:00"
     },
     {
@@ -35203,12 +35205,12 @@
       "earnedAchievements": 39,
       "totalAchievements": 43,
       "achievementPercent": 91,
-      "playtimeHours": 79.7,
+      "playtimeHours": 79.95,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 79.7,
+      "achievementsPlaytimeHours": 79.95,
       "popThresholdMetAt": "2026-06-26T07:11:08.801151+00:00"
     },
     {
@@ -35519,16 +35521,16 @@
       "appId": 2350790,
       "title": "Moonlighter 2: The Endless Vault",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2350790/achievements/",
-      "playtimeHours": 34.07,
+      "playtimeHours": 35.93,
       "visible": true,
-      "earnedAchievements": 41,
+      "earnedAchievements": 42,
       "totalAchievements": 56,
-      "achievementPercent": 73,
+      "achievementPercent": 75,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 34.07,
+      "achievementsPlaytimeHours": 35.93,
       "popThresholdMetAt": "2026-07-02T07:02:25.511035+00:00"
     },
     {
@@ -35702,7 +35704,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 146.85,
+      "playtimeHours": 148.77,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -42493,16 +42495,16 @@
       "appId": 2255370,
       "title": "Directive 8020",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/2255370/achievements/",
-      "playtimeHours": 0.37,
+      "playtimeHours": 9.6,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 2,
       "totalAchievements": 30,
-      "achievementPercent": 0,
+      "achievementPercent": 7,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.37
+      "achievementsPlaytimeHours": 9.6
     },
     {
       "username": "zettaivanugen",
@@ -71053,9 +71055,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-10-21T10:41:51.871905+00:00",
+  "libraryUpdatedAt": "2026-10-22T10:43:45.696024+00:00",
   "libraryStats": {
-    "durationSeconds": 5.28,
+    "durationSeconds": 6.25,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71064,12 +71066,12 @@
     "totalPlaytimeRows": 14583
   },
   "stats": {
-    "durationSeconds": 58.42,
+    "durationSeconds": 65.12,
     "targetWins": 2404,
     "uniqueProgressTargets": 2399,
     "libraryPlaytimeHits": 2390,
-    "cachedReuses": 2338,
-    "achievementSuccesses": 15,
+    "cachedReuses": 2339,
+    "achievementSuccesses": 14,
     "achievementErrors": 46,
     "cachedFallbacks": 46,
     "hltbTitlesRequested": 1292,
