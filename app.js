@@ -1407,8 +1407,13 @@ function buildPenaltyRowTile(row, { showMember = false } = {}) {
 // as a penalty, so it must say something rather than render empty bars).
 function buildPenaltyRowMeters(row) {
   const meters = [];
+  const profile = String(row.steamProfile || "").match(/^https?:\/\/steamcommunity\.com\/(id|profiles)\/([^/?#]+)/i);
+  const appId = Number(row.appId || 0);
+  const achievementsUrl = profile && Number.isSafeInteger(appId) && appId > 0
+    ? `https://steamcommunity.com/${profile[1]}/${profile[2]}/stats/${appId}/?tab=achievements`
+    : "";
   if (Number(row.requiredHours || 0) > 0) {
-    meters.push(buildPenaltyMeter("Playtime", Number(row.currentHours || 0), Number(row.requiredHours || 0), formatHours));
+    meters.push(buildPenaltyMeter("Playtime", Number(row.currentHours || 0), Number(row.requiredHours || 0), formatHours, achievementsUrl));
   }
   if (Number(row.requiredAchievements || 0) > 0) {
     // No "(N total)" here: it pushed the meter head onto a second line, and the
@@ -1419,6 +1424,7 @@ function buildPenaltyRowMeters(row) {
         Number(row.earnedAchievements || 0),
         Number(row.requiredAchievements || 0),
         (value) => String(Math.round(value)),
+        achievementsUrl,
       ),
     );
   }
@@ -1428,12 +1434,16 @@ function buildPenaltyRowMeters(row) {
   return `<div class="penalty-meters">${meters.join("")}</div>`;
 }
 
-function buildPenaltyMeter(label, current, required, format) {
+function buildPenaltyMeter(label, current, required, format, achievementsUrl = "") {
   const percent = required > 0 ? Math.min(100, Math.max(0, (current / required) * 100)) : 0;
   const shortfall = Math.max(0, required - current);
   const note = shortfall > 0 ? `${format(shortfall)} short` : "met";
+  const tag = achievementsUrl ? "a" : "div";
+  const attributes = achievementsUrl
+    ? ` href="${escapeHtml(achievementsUrl)}" target="_blank" rel="noopener noreferrer" title="View this player's game achievements on Steam"`
+    : "";
   return `
-    <div class="penalty-meter">
+    <${tag} class="penalty-meter${achievementsUrl ? " penalty-meter-link" : ""}"${attributes}>
       <div class="penalty-meter-head">
         <span class="penalty-meter-label">${escapeHtml(label)} <span class="penalty-meter-note${shortfall > 0 ? "" : " is-met"}">${escapeHtml(note)}</span></span>
         <span class="penalty-meter-value">${escapeHtml(`${format(current)} / ${format(required)}`)}</span>
@@ -1441,7 +1451,7 @@ function buildPenaltyMeter(label, current, required, format) {
       <div class="penalty-meter-track">
         <div class="penalty-meter-fill${shortfall > 0 ? "" : " is-met"}" style="width: ${percent.toFixed(1)}%"></div>
       </div>
-    </div>
+    </${tag}>
   `;
 }
 
@@ -4327,6 +4337,7 @@ function buildPenaltiesPageData() {
     const syncedGiveaway = findSyncedGiveawayForWin(win, game);
     const row = {
       member: member?.name || win.winnerUsername || "Unknown member",
+      steamProfile: member?.steamProfile || "",
       game: game?.title || win.title || "",
       appId: getResolvedGameAppId(game, syncedGiveaway) || null,
       steamAppUrl: game?.steamAppUrl || syncedGiveaway?.steamAppUrl || "",
@@ -4360,6 +4371,7 @@ function buildPenaltiesPageData() {
       : { currentHours: 0, requiredHours: 0, currentAchievements: 0, requiredAchievements: 0, totalAchievements: 0 };
     return {
       payer: record.creator?.name || record.giveaway.creatorUsername || "Unknown member",
+      steamProfile: findById("members", record.targetWin?.memberId)?.steamProfile || "",
       game: record.targetGame?.title || record.target?.title || record.giveaway.title || "",
       appId: Number(record.targetGame?.appId || 0) || null,
       steamAppUrl: record.targetGame?.steamAppUrl || "",

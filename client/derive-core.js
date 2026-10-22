@@ -1582,6 +1582,7 @@ export function buildPenaltyAndMemberDerived({ sync = {}, progress = {}, overrid
     const row = {
       member: member?.name || win.creatorUsername || "Unknown member",
       memberKey: member ? getStableMemberKey(member) : "",
+      steamProfile: member?.steamProfile || "",
       game: game?.title || win.title || "",
       // The frontend derives the store art from appId (getSteamMediaUrls), so the
       // penalty tiles look the same on the derived fast path as on the live one.
@@ -1612,6 +1613,7 @@ export function buildPenaltyAndMemberDerived({ sync = {}, progress = {}, overrid
 
   const settled = getPenaltyGiveawayRecords(graph.wins, ctx).map((record) => ({
     payer: record.creator?.name || record.giveaway.creatorUsername || "Unknown member",
+    steamProfile: ctx.membersById.get(record.targetWin?.memberId)?.steamProfile || "",
     game: record.targetGame?.title || record.target?.title || record.giveaway.title || "",
     appId: Number(record.targetGame?.appId || 0) || null,
     steamAppUrl: record.targetGame?.steamAppUrl || "",
