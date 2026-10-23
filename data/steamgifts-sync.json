@@ -1,7 +1,7 @@
 {
   "source": "akatsuki-steamgifts-sync",
   "collectorVersion": "1.13.3",
-  "syncedAt": "2026-10-23T11:03:25.823Z",
+  "syncedAt": "2026-10-23T19:45:50.477Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -152912,19 +152912,19 @@
       "entriesSnapshotAt": ""
     },
     {
-      "code": "kMFbH",
-      "url": "https://www.steamgifts.com/giveaway/kMFbH/one-piece-grand-gourmet",
-      "title": "ONE PIECE: Grand Gourmet",
+      "code": "0sSpb",
+      "url": "https://www.steamgifts.com/giveaway/0sSpb/tales-of-eternia-remastered",
+      "title": "Tales of Eternia Remastered",
       "creatorUsername": "Koalala",
       "creatorProfileUrl": "https://www.steamgifts.com/user/Koalala",
-      "appId": 3905010,
-      "steamAppUrl": "https://store.steampowered.com/app/3905010?utm_source=SteamGifts",
-      "points": 20,
-      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3905010/header.jpg",
-      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3905010/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3905010/4be1c8be5e3cbbcaa3f7183d5211dfa1c5b29088/capsule_184x69.jpg",
+      "appId": 3470960,
+      "steamAppUrl": "https://store.steampowered.com/app/3470960?utm_source=SteamGifts",
+      "points": 30,
+      "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3470960/header.jpg",
+      "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3470960/capsule_616x353.jpg",
+      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/3470960/capsule_184x69.jpg",
       "entriesCount": 0,
-      "startDate": "2026-10-20T19:16:14.000Z",
+      "startDate": "2026-10-23T12:16:32.000Z",
       "endDate": "2026-10-30T18:00:00.000Z",
       "winners": [],
       "resultStatus": "open",
