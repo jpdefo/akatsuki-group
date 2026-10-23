@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T10:44:44.560588+00:00",
+  "updatedAt": "2026-10-23T10:36:25.841794+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2726,7 +2726,7 @@
       "appId": 2677660,
       "title": "Indiana Jones and the Great Circle",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2677660/achievements/",
-      "playtimeHours": 4.9,
+      "playtimeHours": 5.45,
       "visible": true,
       "earnedAchievements": 5,
       "totalAchievements": 55,
@@ -2735,7 +2735,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 4.9,
+      "achievementsPlaytimeHours": 5.45,
       "popThresholdMetAt": "2026-10-22T10:44:44.559716+00:00"
     },
     {
@@ -7115,7 +7115,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 120.73,
+      "playtimeHours": 123.18,
       "visible": true,
       "earnedAchievements": 2,
       "totalAchievements": 34,
@@ -7124,7 +7124,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 120.73
+      "achievementsPlaytimeHours": 123.18
     },
     {
       "username": "burntreynolds444",
@@ -7723,12 +7723,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 151.98,
+      "playtimeHours": 152.53,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 151.98,
+      "achievementsPlaytimeHours": 152.53,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -9324,16 +9324,16 @@
       "appId": 2457220,
       "title": "Avowed",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2457220/achievements/",
-      "playtimeHours": 3.25,
+      "playtimeHours": 6.05,
       "visible": true,
-      "earnedAchievements": 1,
+      "earnedAchievements": 3,
       "totalAchievements": 50,
-      "achievementPercent": 2,
+      "achievementPercent": 6,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 3.25
+      "achievementsPlaytimeHours": 6.05
     },
     {
       "username": "chOOkity",
@@ -17376,16 +17376,16 @@
       "appId": 2947440,
       "title": "SILENT HILL f",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/2947440/achievements/",
-      "playtimeHours": 1.38,
+      "playtimeHours": 2.43,
       "visible": true,
-      "earnedAchievements": 1,
+      "earnedAchievements": 3,
       "totalAchievements": 56,
-      "achievementPercent": 2,
+      "achievementPercent": 5,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.38
+      "achievementsPlaytimeHours": 2.43
     },
     {
       "username": "Horseflesh",
@@ -20755,7 +20755,7 @@
       "appId": 2369390,
       "title": "Far Cry 6",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/2369390/achievements/",
-      "playtimeHours": 8.4,
+      "playtimeHours": 13.5,
       "visible": true,
       "earnedAchievements": 5,
       "totalAchievements": 99,
@@ -20764,7 +20764,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 8.4
+      "achievementsPlaytimeHours": 13.5
     },
     {
       "username": "Koalala",
@@ -21021,14 +21021,15 @@
       "title": "FINAL FANTASY RESONANCE",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/3259780/achievements/",
       "playtimeHours": 0.0,
-      "visible": false,
+      "visible": true,
       "earnedAchievements": 0,
-      "totalAchievements": 0,
+      "totalAchievements": 40,
       "achievementPercent": 0,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "error": "HTTP Error 403: Forbidden"
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "Koalala",
@@ -27175,16 +27176,16 @@
       "appId": 2840770,
       "title": "Avatar: Frontiers of Pandora",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2840770/achievements/",
-      "playtimeHours": 4.68,
+      "playtimeHours": 9.78,
       "visible": true,
-      "earnedAchievements": 1,
+      "earnedAchievements": 2,
       "totalAchievements": 52,
-      "achievementPercent": 2,
+      "achievementPercent": 4,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 4.68
+      "achievementsPlaytimeHours": 9.78
     },
     {
       "username": "leniu",
@@ -34736,14 +34737,14 @@
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/1486920/achievements/",
       "visible": true,
       "earnedAchievements": 19,
-      "totalAchievements": 98,
-      "achievementPercent": 19,
-      "playtimeHours": 9.05,
+      "totalAchievements": 148,
+      "achievementPercent": 13,
+      "playtimeHours": 9.1,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 9.05,
+      "achievementsPlaytimeHours": 9.1,
       "popThresholdMetAt": "2026-06-26T07:11:08.801092+00:00"
     },
     {
@@ -35151,12 +35152,12 @@
       "earnedAchievements": 223,
       "totalAchievements": 243,
       "achievementPercent": 92,
-      "playtimeHours": 174.6,
+      "playtimeHours": 175.5,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 174.6,
+      "achievementsPlaytimeHours": 175.5,
       "popThresholdMetAt": "2026-06-26T07:11:08.801144+00:00"
     },
     {
@@ -35704,7 +35705,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 148.77,
+      "playtimeHours": 152.75,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -36566,12 +36567,12 @@
       "earnedAchievements": 40,
       "totalAchievements": 50,
       "achievementPercent": 80,
-      "playtimeHours": 45.82,
+      "playtimeHours": 46.32,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 45.82,
+      "achievementsPlaytimeHours": 46.32,
       "popThresholdMetAt": "2026-07-06T18:27:00.287372+00:00"
     },
     {
@@ -37531,16 +37532,16 @@
       "appId": 3768760,
       "title": "007 First Light",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/3768760/achievements/",
-      "playtimeHours": 5.28,
+      "playtimeHours": 7.53,
       "visible": true,
-      "earnedAchievements": 7,
+      "earnedAchievements": 10,
       "totalAchievements": 37,
-      "achievementPercent": 19,
+      "achievementPercent": 27,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 5.28,
+      "achievementsPlaytimeHours": 7.53,
       "popThresholdMetAt": "2026-10-01T11:55:41.638499+00:00"
     },
     {
@@ -42495,16 +42496,17 @@
       "appId": 2255370,
       "title": "Directive 8020",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/2255370/achievements/",
-      "playtimeHours": 9.6,
+      "playtimeHours": 10.4,
       "visible": true,
-      "earnedAchievements": 2,
+      "earnedAchievements": 5,
       "totalAchievements": 30,
-      "achievementPercent": 7,
+      "achievementPercent": 17,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 9.6
+      "achievementsPlaytimeHours": 10.4,
+      "popThresholdMetAt": "2026-10-23T10:36:25.841747+00:00"
     },
     {
       "username": "zettaivanugen",
@@ -71055,25 +71057,25 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-10-22T10:43:45.696024+00:00",
+  "libraryUpdatedAt": "2026-10-23T10:35:32.860464+00:00",
   "libraryStats": {
-    "durationSeconds": 6.25,
+    "durationSeconds": 4.7,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14583
+    "totalPlaytimeRows": 14584
   },
   "stats": {
-    "durationSeconds": 65.12,
+    "durationSeconds": 57.7,
     "targetWins": 2404,
     "uniqueProgressTargets": 2399,
     "libraryPlaytimeHits": 2390,
-    "cachedReuses": 2339,
-    "achievementSuccesses": 14,
-    "achievementErrors": 46,
-    "cachedFallbacks": 46,
+    "cachedReuses": 2337,
+    "achievementSuccesses": 17,
+    "achievementErrors": 45,
+    "cachedFallbacks": 45,
     "hltbTitlesRequested": 1292,
     "hltbResultsAvailable": 4042
   }
