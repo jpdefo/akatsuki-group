@@ -1,5 +1,5 @@
 {
-  "savedAt": "2026-10-01T12:01:40.404Z",
+  "savedAt": "2026-10-24T11:34:23.025Z",
   "overrides": {
     "games": {
       "app:534380": {
@@ -20,6 +20,9 @@
       },
       "app:3288210": {
         "achievementTargetOverride": 0
+      },
+      "app:2473350": {
+        "hltbHoursOverride": 5
       }
     },
     "wins": {
@@ -31,6 +34,9 @@
       },
       "sg-win-LqrvT-Youdontknow": {
         "requiredAchievementsOverride": 5
+      },
+      "sg-win-1ioqU-Ernesttico": {
+        "monthOverride": "2026-02"
       }
     },
     "giveaways": {
@@ -58,7 +64,9 @@
           }
         ]
       },
-      "sg-R91uQ": {},
+      "sg-R91uQ": {
+        "cycleMonthOverride": "2026-04"
+      },
       "sg-LqrvT": {
         "giveawayKindOverride": "extra"
       },
@@ -352,30 +360,20 @@
       }
     },
     "cycleMembers": {
-      "2026-cycle-2:koalala": {
-        "status": "paused"
-      },
+      "2026-cycle-2:koalala": {},
       "2026-cycle-2:bron99": {
         "status": "paused"
       },
       "2026-cycle-2:eledhrim": {
         "status": "paused"
       },
-      "2026-cycle-2:krlesnik": {
-        "status": "paused"
-      },
+      "2026-cycle-2:krlesnik": {},
       "2026-cycle-2:skull18": {
         "status": "paused"
       },
-      "2026-cycle-2:millsshogun": {
-        "status": "paused"
-      },
-      "2026-cycle-2:oozyyy": {
-        "status": "paused"
-      },
-      "2026-cycle-2:xmisiu": {
-        "status": "paused"
-      },
+      "2026-cycle-2:millsshogun": {},
+      "2026-cycle-2:oozyyy": {},
+      "2026-cycle-2:xmisiu": {},
       "2026-cycle-3:bron99": {
         "status": "paused"
       },
@@ -404,6 +402,9 @@
         "status": "paused"
       },
       "2026-cycle-3:zettaivanugen": {
+        "status": "paused"
+      },
+      "2026-cycle-2:thedogma": {
         "status": "paused"
       }
     },
