@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-21T10:41:46.141717+00:00",
+  "updatedAt": "2026-10-24T09:53:32.578429+00:00",
   "apps": {
     "3288210": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3288210/2e13226847bb546625411aed75e74471f6705b18/header.jpg?t=1777969480",
@@ -5379,6 +5379,15 @@
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3905010/4be1c8be5e3cbbcaa3f7183d5211dfa1c5b29088/capsule_184x69.jpg?t=1789090874",
       "releaseDate": "2026-10-22",
       "comingSoon": true
+    },
+    "3470960": {
+      "appId": 3470960,
+      "name": "Tales of Eternia Remastered",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3470960/d66b38dc92c325a41f5dec3ecc8dfa1404563b47/header.jpg?t=1792404827",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3470960/21ef3b5cc2964971d83b1c9957d557a0a8a5a680/capsule_231x87.jpg?t=1792404827",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3470960/21ef3b5cc2964971d83b1c9957d557a0a8a5a680/capsule_184x69.jpg?t=1792404827",
+      "releaseDate": "2026-10-15",
+      "comingSoon": false
     }
   }
 }

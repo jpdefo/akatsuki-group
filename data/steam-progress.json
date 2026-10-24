@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-23T10:36:25.841794+00:00",
+  "updatedAt": "2026-10-24T09:54:33.349918+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2726,16 +2726,16 @@
       "appId": 2677660,
       "title": "Indiana Jones and the Great Circle",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2677660/achievements/",
-      "playtimeHours": 5.45,
+      "playtimeHours": 8.32,
       "visible": true,
-      "earnedAchievements": 5,
+      "earnedAchievements": 10,
       "totalAchievements": 55,
-      "achievementPercent": 9,
+      "achievementPercent": 18,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 5.45,
+      "achievementsPlaytimeHours": 8.32,
       "popThresholdMetAt": "2026-10-22T10:44:44.559716+00:00"
     },
     {
@@ -7115,7 +7115,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 123.18,
+      "playtimeHours": 134.97,
       "visible": true,
       "earnedAchievements": 2,
       "totalAchievements": 34,
@@ -7124,7 +7124,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 123.18
+      "achievementsPlaytimeHours": 134.97
     },
     {
       "username": "burntreynolds444",
@@ -7723,12 +7723,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 152.53,
+      "playtimeHours": 153.7,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 152.53,
+      "achievementsPlaytimeHours": 153.7,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -8595,7 +8595,7 @@
       "appId": 1590230,
       "title": "Tyrion Cuthbert: Attorney of the Arcane",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/1590230/achievements/",
-      "playtimeHours": 0.18,
+      "playtimeHours": 10.8,
       "visible": true,
       "earnedAchievements": 1,
       "totalAchievements": 8,
@@ -8604,7 +8604,8 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.18
+      "achievementsPlaytimeHours": 10.8,
+      "popThresholdMetAt": "2026-10-24T09:54:33.349279+00:00"
     },
     {
       "username": "chOOkity",
@@ -9324,7 +9325,7 @@
       "appId": 2457220,
       "title": "Avowed",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2457220/achievements/",
-      "playtimeHours": 6.05,
+      "playtimeHours": 7.77,
       "visible": true,
       "earnedAchievements": 3,
       "totalAchievements": 50,
@@ -9333,7 +9334,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 6.05
+      "achievementsPlaytimeHours": 7.77
     },
     {
       "username": "chOOkity",
@@ -20755,16 +20756,17 @@
       "appId": 2369390,
       "title": "Far Cry 6",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/2369390/achievements/",
-      "playtimeHours": 13.5,
+      "playtimeHours": 20.9,
       "visible": true,
-      "earnedAchievements": 5,
+      "earnedAchievements": 9,
       "totalAchievements": 99,
-      "achievementPercent": 5,
+      "achievementPercent": 9,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 13.5
+      "achievementsPlaytimeHours": 20.9,
+      "popThresholdMetAt": "2026-10-24T09:54:33.349545+00:00"
     },
     {
       "username": "Koalala",
@@ -27176,16 +27178,16 @@
       "appId": 2840770,
       "title": "Avatar: Frontiers of Pandora",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2840770/achievements/",
-      "playtimeHours": 9.78,
+      "playtimeHours": 13.12,
       "visible": true,
-      "earnedAchievements": 2,
+      "earnedAchievements": 3,
       "totalAchievements": 52,
-      "achievementPercent": 4,
+      "achievementPercent": 6,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 9.78
+      "achievementsPlaytimeHours": 13.12
     },
     {
       "username": "leniu",
@@ -35705,7 +35707,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 152.75,
+      "playtimeHours": 153.2,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -36567,12 +36569,12 @@
       "earnedAchievements": 40,
       "totalAchievements": 50,
       "achievementPercent": 80,
-      "playtimeHours": 46.32,
+      "playtimeHours": 46.65,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 46.32,
+      "achievementsPlaytimeHours": 46.65,
       "popThresholdMetAt": "2026-07-06T18:27:00.287372+00:00"
     },
     {
@@ -42496,7 +42498,7 @@
       "appId": 2255370,
       "title": "Directive 8020",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/2255370/achievements/",
-      "playtimeHours": 10.4,
+      "playtimeHours": 11.42,
       "visible": true,
       "earnedAchievements": 5,
       "totalAchievements": 30,
@@ -42505,7 +42507,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 10.4,
+      "achievementsPlaytimeHours": 11.42,
       "popThresholdMetAt": "2026-10-23T10:36:25.841747+00:00"
     },
     {
@@ -71057,9 +71059,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-10-23T10:35:32.860464+00:00",
+  "libraryUpdatedAt": "2026-10-24T09:53:37.670578+00:00",
   "libraryStats": {
-    "durationSeconds": 4.7,
+    "durationSeconds": 4.75,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71068,12 +71070,12 @@
     "totalPlaytimeRows": 14584
   },
   "stats": {
-    "durationSeconds": 57.7,
+    "durationSeconds": 60.44,
     "targetWins": 2404,
     "uniqueProgressTargets": 2399,
     "libraryPlaytimeHits": 2390,
-    "cachedReuses": 2337,
-    "achievementSuccesses": 17,
+    "cachedReuses": 2341,
+    "achievementSuccesses": 13,
     "achievementErrors": 45,
     "cachedFallbacks": 45,
     "hltbTitlesRequested": 1292,
