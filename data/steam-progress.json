@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-24T09:54:33.349918+00:00",
+  "updatedAt": "2026-10-25T10:16:51.034541+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2726,16 +2726,16 @@
       "appId": 2677660,
       "title": "Indiana Jones and the Great Circle",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2677660/achievements/",
-      "playtimeHours": 8.32,
+      "playtimeHours": 10.17,
       "visible": true,
-      "earnedAchievements": 10,
+      "earnedAchievements": 12,
       "totalAchievements": 55,
-      "achievementPercent": 18,
+      "achievementPercent": 22,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 8.32,
+      "achievementsPlaytimeHours": 10.17,
       "popThresholdMetAt": "2026-10-22T10:44:44.559716+00:00"
     },
     {
@@ -7115,7 +7115,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 134.97,
+      "playtimeHours": 145.05,
       "visible": true,
       "earnedAchievements": 2,
       "totalAchievements": 34,
@@ -7124,7 +7124,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 134.97
+      "achievementsPlaytimeHours": 145.05
     },
     {
       "username": "burntreynolds444",
@@ -7723,12 +7723,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 153.7,
+      "playtimeHours": 154.37,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 153.7,
+      "achievementsPlaytimeHours": 154.37,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -8846,15 +8846,15 @@
       "title": "Once Upon A KATAMARI",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/1880620/achievements/",
       "visible": true,
-      "earnedAchievements": 17,
+      "earnedAchievements": 18,
       "totalAchievements": 38,
-      "achievementPercent": 45,
-      "playtimeHours": 13.17,
+      "achievementPercent": 47,
+      "playtimeHours": 14.12,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 13.17,
+      "achievementsPlaytimeHours": 14.12,
       "popThresholdMetAt": "2026-06-26T07:11:08.798106+00:00"
     },
     {
@@ -9325,16 +9325,16 @@
       "appId": 2457220,
       "title": "Avowed",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2457220/achievements/",
-      "playtimeHours": 7.77,
+      "playtimeHours": 9.32,
       "visible": true,
-      "earnedAchievements": 3,
+      "earnedAchievements": 4,
       "totalAchievements": 50,
-      "achievementPercent": 6,
+      "achievementPercent": 8,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 7.77
+      "achievementsPlaytimeHours": 9.32
     },
     {
       "username": "chOOkity",
@@ -17377,16 +17377,17 @@
       "appId": 2947440,
       "title": "SILENT HILL f",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/2947440/achievements/",
-      "playtimeHours": 2.43,
+      "playtimeHours": 4.38,
       "visible": true,
-      "earnedAchievements": 3,
+      "earnedAchievements": 5,
       "totalAchievements": 56,
-      "achievementPercent": 5,
+      "achievementPercent": 9,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.43
+      "achievementsPlaytimeHours": 4.38,
+      "popThresholdMetAt": "2026-10-25T10:16:51.034070+00:00"
     },
     {
       "username": "Horseflesh",
@@ -17536,7 +17537,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/3321460/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 0.78,
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 34,
@@ -17545,7 +17546,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 0.78
     },
     {
       "username": "Horseflesh",
@@ -19963,12 +19964,12 @@
       "earnedAchievements": 27,
       "totalAchievements": 34,
       "achievementPercent": 79,
-      "playtimeHours": 66.95,
+      "playtimeHours": 68.3,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 66.95,
+      "achievementsPlaytimeHours": 68.3,
       "popThresholdMetAt": "2026-06-26T07:11:08.799381+00:00"
     },
     {
@@ -27178,7 +27179,7 @@
       "appId": 2840770,
       "title": "Avatar: Frontiers of Pandora",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2840770/achievements/",
-      "playtimeHours": 13.12,
+      "playtimeHours": 15.43,
       "visible": true,
       "earnedAchievements": 3,
       "totalAchievements": 52,
@@ -27187,7 +27188,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 13.12
+      "achievementsPlaytimeHours": 15.43
     },
     {
       "username": "leniu",
@@ -35707,7 +35708,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 153.2,
+      "playtimeHours": 154.05,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -36093,16 +36094,16 @@
       "appId": 2057760,
       "title": "Esoteric Ebb",
       "progressUrl": "https://steamcommunity.com/profiles/76561198125763485/stats/2057760/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 2.95,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 6,
       "totalAchievements": 56,
-      "achievementPercent": 0,
+      "achievementPercent": 11,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 2.95
     },
     {
       "username": "WNDRLST",
@@ -36566,15 +36567,15 @@
       "title": "FINAL FANTASY TACTICS - The Ivalice C...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/1004640/achievements/",
       "visible": true,
-      "earnedAchievements": 40,
+      "earnedAchievements": 43,
       "totalAchievements": 50,
-      "achievementPercent": 80,
-      "playtimeHours": 46.65,
+      "achievementPercent": 86,
+      "playtimeHours": 48.68,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 46.65,
+      "achievementsPlaytimeHours": 48.68,
       "popThresholdMetAt": "2026-07-06T18:27:00.287372+00:00"
     },
     {
@@ -42498,16 +42499,16 @@
       "appId": 2255370,
       "title": "Directive 8020",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/2255370/achievements/",
-      "playtimeHours": 11.42,
+      "playtimeHours": 23.43,
       "visible": true,
-      "earnedAchievements": 5,
+      "earnedAchievements": 15,
       "totalAchievements": 30,
-      "achievementPercent": 17,
+      "achievementPercent": 50,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 11.42,
+      "achievementsPlaytimeHours": 23.43,
       "popThresholdMetAt": "2026-10-23T10:36:25.841747+00:00"
     },
     {
@@ -71048,34 +71049,34 @@
       "url": "https://howlongtobeat.com/game/93944"
     },
     {
-      "title": "MOUSE: P.I. For Hire",
-      "appId": 2416450,
-      "hltbHours": 12.08,
-      "matchedTitle": "MOUSE: P.I. For Hire",
-      "url": "https://howlongtobeat.com/game/128648"
+      "title": "FINAL FANTASY RESONANCE",
+      "appId": 3259780,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     }
   ],
   "steamApiEnabled": true,
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-10-24T09:53:37.670578+00:00",
+  "libraryUpdatedAt": "2026-10-25T10:15:42.206316+00:00",
   "libraryStats": {
-    "durationSeconds": 4.75,
+    "durationSeconds": 22.54,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14584
+    "totalPlaytimeRows": 14588
   },
   "stats": {
-    "durationSeconds": 60.44,
+    "durationSeconds": 91.38,
     "targetWins": 2404,
     "uniqueProgressTargets": 2399,
     "libraryPlaytimeHits": 2390,
-    "cachedReuses": 2341,
-    "achievementSuccesses": 13,
+    "cachedReuses": 2338,
+    "achievementSuccesses": 16,
     "achievementErrors": 45,
     "cachedFallbacks": 45,
     "hltbTitlesRequested": 1292,
