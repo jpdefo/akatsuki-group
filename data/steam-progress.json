@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-26T11:40:06.180200+00:00",
+  "updatedAt": "2026-10-27T11:09:21.828797+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2410,16 +2410,17 @@
       "appId": 2255370,
       "title": "Directive 8020",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2255370/achievements/",
-      "playtimeHours": 0.35,
+      "playtimeHours": 2.03,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 4,
       "totalAchievements": 30,
-      "achievementPercent": 0,
+      "achievementPercent": 13,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.35
+      "achievementsPlaytimeHours": 2.03,
+      "popThresholdMetAt": "2026-10-27T11:09:21.827923+00:00"
     },
     {
       "username": "BojanNS987",
@@ -7116,7 +7117,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 163.07,
+      "playtimeHours": 167.38,
       "visible": true,
       "earnedAchievements": 2,
       "totalAchievements": 34,
@@ -7125,7 +7126,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 163.07
+      "achievementsPlaytimeHours": 167.38
     },
     {
       "username": "burntreynolds444",
@@ -7724,12 +7725,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 155.02,
+      "playtimeHours": 155.42,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 155.02,
+      "achievementsPlaytimeHours": 155.42,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -9326,7 +9327,7 @@
       "appId": 2457220,
       "title": "Avowed",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2457220/achievements/",
-      "playtimeHours": 10.12,
+      "playtimeHours": 10.63,
       "visible": true,
       "earnedAchievements": 4,
       "totalAchievements": 50,
@@ -9335,7 +9336,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 10.12
+      "achievementsPlaytimeHours": 10.63
     },
     {
       "username": "chOOkity",
@@ -16737,7 +16738,7 @@
       "appId": 1620730,
       "title": "Hell is Us",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/1620730/achievements/",
-      "playtimeHours": 0.58,
+      "playtimeHours": 1.07,
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 40,
@@ -16746,7 +16747,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.58
+      "achievementsPlaytimeHours": 1.07
     },
     {
       "username": "Horseflesh",
@@ -35711,7 +35712,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 155.02,
+      "playtimeHours": 157.02,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -36097,16 +36098,16 @@
       "appId": 2057760,
       "title": "Esoteric Ebb",
       "progressUrl": "https://steamcommunity.com/profiles/76561198125763485/stats/2057760/achievements/",
-      "playtimeHours": 2.95,
+      "playtimeHours": 3.45,
       "visible": true,
-      "earnedAchievements": 6,
+      "earnedAchievements": 7,
       "totalAchievements": 56,
-      "achievementPercent": 11,
+      "achievementPercent": 12,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.95
+      "achievementsPlaytimeHours": 3.45
     },
     {
       "username": "WNDRLST",
@@ -71064,9 +71065,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-10-26T11:39:09.445446+00:00",
+  "libraryUpdatedAt": "2026-10-27T11:08:17.825967+00:00",
   "libraryStats": {
-    "durationSeconds": 5.43,
+    "durationSeconds": 7.28,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71075,12 +71076,12 @@
     "totalPlaytimeRows": 14591
   },
   "stats": {
-    "durationSeconds": 62.18,
+    "durationSeconds": 71.29,
     "targetWins": 2404,
     "uniqueProgressTargets": 2399,
     "libraryPlaytimeHits": 2390,
-    "cachedReuses": 2336,
-    "achievementSuccesses": 18,
+    "cachedReuses": 2344,
+    "achievementSuccesses": 10,
     "achievementErrors": 45,
     "cachedFallbacks": 45,
     "hltbTitlesRequested": 1292,
