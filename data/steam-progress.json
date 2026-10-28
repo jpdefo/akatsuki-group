@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-27T11:09:21.828797+00:00",
+  "updatedAt": "2026-10-28T11:44:28.526870+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2410,16 +2410,16 @@
       "appId": 2255370,
       "title": "Directive 8020",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2255370/achievements/",
-      "playtimeHours": 2.03,
+      "playtimeHours": 2.8,
       "visible": true,
-      "earnedAchievements": 4,
+      "earnedAchievements": 5,
       "totalAchievements": 30,
-      "achievementPercent": 13,
+      "achievementPercent": 17,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.03,
+      "achievementsPlaytimeHours": 2.8,
       "popThresholdMetAt": "2026-10-27T11:09:21.827923+00:00"
     },
     {
@@ -9327,7 +9327,7 @@
       "appId": 2457220,
       "title": "Avowed",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2457220/achievements/",
-      "playtimeHours": 10.63,
+      "playtimeHours": 11.87,
       "visible": true,
       "earnedAchievements": 4,
       "totalAchievements": 50,
@@ -9336,7 +9336,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 10.63
+      "achievementsPlaytimeHours": 11.87
     },
     {
       "username": "chOOkity",
@@ -35712,7 +35712,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 157.02,
+      "playtimeHours": 159.5,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -36098,16 +36098,17 @@
       "appId": 2057760,
       "title": "Esoteric Ebb",
       "progressUrl": "https://steamcommunity.com/profiles/76561198125763485/stats/2057760/achievements/",
-      "playtimeHours": 3.45,
+      "playtimeHours": 8.4,
       "visible": true,
-      "earnedAchievements": 7,
+      "earnedAchievements": 21,
       "totalAchievements": 56,
-      "achievementPercent": 12,
+      "achievementPercent": 38,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 3.45
+      "achievementsPlaytimeHours": 8.4,
+      "popThresholdMetAt": "2026-10-28T11:44:28.526713+00:00"
     },
     {
       "username": "WNDRLST",
@@ -71065,23 +71066,23 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-10-27T11:08:17.825967+00:00",
+  "libraryUpdatedAt": "2026-10-28T11:43:34.297067+00:00",
   "libraryStats": {
-    "durationSeconds": 7.28,
+    "durationSeconds": 3.94,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14591
+    "totalPlaytimeRows": 14594
   },
   "stats": {
-    "durationSeconds": 71.29,
+    "durationSeconds": 58.19,
     "targetWins": 2404,
     "uniqueProgressTargets": 2399,
     "libraryPlaytimeHits": 2390,
-    "cachedReuses": 2344,
-    "achievementSuccesses": 10,
+    "cachedReuses": 2347,
+    "achievementSuccesses": 7,
     "achievementErrors": 45,
     "cachedFallbacks": 45,
     "hltbTitlesRequested": 1292,
