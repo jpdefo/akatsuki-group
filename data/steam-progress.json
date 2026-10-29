@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-28T11:44:28.526870+00:00",
+  "updatedAt": "2026-10-29T11:52:24.579850+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2410,7 +2410,7 @@
       "appId": 2255370,
       "title": "Directive 8020",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2255370/achievements/",
-      "playtimeHours": 2.8,
+      "playtimeHours": 2.97,
       "visible": true,
       "earnedAchievements": 5,
       "totalAchievements": 30,
@@ -2419,7 +2419,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.8,
+      "achievementsPlaytimeHours": 2.97,
       "popThresholdMetAt": "2026-10-27T11:09:21.827923+00:00"
     },
     {
@@ -7725,12 +7725,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 155.42,
+      "playtimeHours": 156.27,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 155.42,
+      "achievementsPlaytimeHours": 156.27,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -9327,16 +9327,17 @@
       "appId": 2457220,
       "title": "Avowed",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2457220/achievements/",
-      "playtimeHours": 11.87,
+      "playtimeHours": 13.13,
       "visible": true,
-      "earnedAchievements": 4,
+      "earnedAchievements": 5,
       "totalAchievements": 50,
-      "achievementPercent": 8,
+      "achievementPercent": 10,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 11.87
+      "achievementsPlaytimeHours": 13.13,
+      "popThresholdMetAt": "2026-10-29T11:52:24.578982+00:00"
     },
     {
       "username": "chOOkity",
@@ -35712,7 +35713,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 159.5,
+      "playtimeHours": 162.47,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -40507,16 +40508,16 @@
       "appId": 2863680,
       "title": "ZERO PARADES: Director's Cut",
       "progressUrl": "https://steamcommunity.com/profiles/76561198121640255/stats/2863680/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 1.73,
       "visible": true,
       "earnedAchievements": 0,
-      "totalAchievements": 55,
+      "totalAchievements": 61,
       "achievementPercent": 0,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 1.73
     },
     {
       "username": "Youdontknow",
@@ -71066,23 +71067,23 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-10-28T11:43:34.297067+00:00",
+  "libraryUpdatedAt": "2026-10-29T11:51:21.213159+00:00",
   "libraryStats": {
-    "durationSeconds": 3.94,
+    "durationSeconds": 8.3,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14594
+    "totalPlaytimeRows": 14597
   },
   "stats": {
-    "durationSeconds": 58.19,
+    "durationSeconds": 71.68,
     "targetWins": 2404,
     "uniqueProgressTargets": 2399,
     "libraryPlaytimeHits": 2390,
-    "cachedReuses": 2347,
-    "achievementSuccesses": 7,
+    "cachedReuses": 2346,
+    "achievementSuccesses": 8,
     "achievementErrors": 45,
     "cachedFallbacks": 45,
     "hltbTitlesRequested": 1292,
