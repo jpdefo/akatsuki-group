@@ -1,7 +1,7 @@
 {
   "source": "akatsuki-steamgifts-sync",
   "collectorVersion": "1.13.3",
-  "syncedAt": "2026-10-30T18:06:18.484Z",
+  "syncedAt": "2026-10-30T20:54:07.187Z",
   "group": {
     "url": "https://www.steamgifts.com/group/7Ypot/akatsukigamessteamgifts",
     "name": "AKATSUKI GAMES S.GIFTS"
@@ -152640,13 +152640,19 @@
       "points": 50,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2713000/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2713000/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2713000/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2713000/0d06636f2a2c3dcf0b473c91212f36a0b3e2e1a8/capsule_184x69.jpg",
       "entriesCount": 2,
       "startDate": "2026-09-30T20:58:01.000Z",
       "endDate": "2026-10-30T18:00:00.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "BojanNS987",
+          "profileUrl": "https://www.steamgifts.com/user/BojanNS987",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "BojanNS987",
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayMonthOverride": "2026-10",
@@ -152809,13 +152815,19 @@
       "points": 25,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1488490/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1488490/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/1488490/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1488490/7e483ece1117906b11bd6959a16e1f77f5a6e4d5/capsule_184x69.jpg",
       "entriesCount": 3,
       "startDate": "2026-10-05T06:10:25.000Z",
       "endDate": "2026-10-30T07:09:00.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "BojanNS987",
+          "profileUrl": "https://www.steamgifts.com/user/BojanNS987",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "BojanNS987",
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayMonthOverride": "2026-10",
@@ -152835,13 +152847,19 @@
       "points": 25,
       "headerImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2333000/header.jpg",
       "capsuleImageUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2333000/capsule_616x353.jpg",
-      "capsuleSmallUrl": "https://cdn.cloudflare.steamstatic.com/steam/apps/2333000/capsule_184x69.jpg",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2333000/1d876833b58e192d06e6067a84da77c2768c30e4/capsule_184x69.jpg",
       "entriesCount": 2,
       "startDate": "2026-10-07T10:55:31.000Z",
       "endDate": "2026-10-30T17:00:00.000Z",
-      "winners": [],
-      "resultStatus": "awaiting_feedback",
-      "resultLabel": "Awaiting feedback",
+      "winners": [
+        {
+          "username": "BojanNS987",
+          "profileUrl": "https://www.steamgifts.com/user/BojanNS987",
+          "status": "Won"
+        }
+      ],
+      "resultStatus": "won",
+      "resultLabel": "BojanNS987",
       "regionRestricted": false,
       "giveawayKind": "cycle",
       "giveawayMonthOverride": "2026-10",
@@ -189281,6 +189299,15 @@
       "winDate": "2026-10-30T17:00:00.000Z"
     },
     {
+      "giveawayCode": "o72ZY",
+      "title": "Resonance: A Plague Tale Legacy",
+      "appId": 2713000,
+      "winnerUsername": "BojanNS987",
+      "creatorUsername": "Wintermute101",
+      "entriesCount": 2,
+      "winDate": "2026-10-30T18:00:00.000Z"
+    },
+    {
       "giveawayCode": "pCRG2",
       "title": "Phantom Blade Zero",
       "appId": 4115450,
@@ -189295,6 +189322,24 @@
       "appId": 3812600,
       "winnerUsername": "burntreynolds444",
       "creatorUsername": "Ernesttico",
+      "entriesCount": 2,
+      "winDate": "2026-10-30T17:00:00.000Z"
+    },
+    {
+      "giveawayCode": "tNjdT",
+      "title": "Nivalis Nights",
+      "appId": 1488490,
+      "winnerUsername": "BojanNS987",
+      "creatorUsername": "chOOkity",
+      "entriesCount": 3,
+      "winDate": "2026-10-30T07:09:00.000Z"
+    },
+    {
+      "giveawayCode": "oEKjV",
+      "title": "Silver Pines",
+      "appId": 2333000,
+      "winnerUsername": "BojanNS987",
+      "creatorUsername": "Horseflesh",
       "entriesCount": 2,
       "winDate": "2026-10-30T17:00:00.000Z"
     }
