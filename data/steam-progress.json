@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-30T11:45:05.948004+00:00",
+  "updatedAt": "2026-10-31T11:18:40.408141+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -1428,6 +1428,23 @@
     {
       "username": "BojanNS987",
       "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 1488490,
+      "title": "Nivalis Nights",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/1488490/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 120,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
       "appId": 1493640,
       "title": "Banishers: Ghosts of New Eden",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/1493640/achievements/",
@@ -2410,7 +2427,7 @@
       "appId": 2255370,
       "title": "Directive 8020",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2255370/achievements/",
-      "playtimeHours": 2.97,
+      "playtimeHours": 2.98,
       "visible": true,
       "earnedAchievements": 5,
       "totalAchievements": 30,
@@ -2419,7 +2436,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.97,
+      "achievementsPlaytimeHours": 2.98,
       "popThresholdMetAt": "2026-10-27T11:09:21.827923+00:00"
     },
     {
@@ -2439,6 +2456,23 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 24.05,
       "popThresholdMetAt": "2026-06-26T07:11:08.797397+00:00"
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 2333000,
+      "title": "Silver Pines",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2333000/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 23,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "BojanNS987",
@@ -2775,6 +2809,23 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 8.95,
       "popThresholdMetAt": "2026-06-26T07:11:08.797430+00:00"
+    },
+    {
+      "username": "BojanNS987",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
+      "appId": 2713000,
+      "title": "Resonance: A Plague Tale Legacy",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2713000/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 36,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "BojanNS987",
@@ -6694,7 +6745,7 @@
       "appId": 1875580,
       "title": "Mina the Hollower",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1875580/achievements/",
-      "playtimeHours": 7.18,
+      "playtimeHours": 11.32,
       "visible": true,
       "earnedAchievements": 3,
       "totalAchievements": 50,
@@ -6703,7 +6754,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 7.18
+      "achievementsPlaytimeHours": 11.32
     },
     {
       "username": "burntreynolds444",
@@ -7180,6 +7231,23 @@
       "gamesVisible": true,
       "error": null,
       "achievementsPlaytimeHours": 2.52
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 3812600,
+      "title": "ReStory: Chill Electronics Repairs",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3812600/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 50,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "chOOkity",
@@ -7725,12 +7793,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 156.72,
+      "playtimeHours": 157.75,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 156.72,
+      "achievementsPlaytimeHours": 157.75,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -8848,15 +8916,15 @@
       "title": "Once Upon A KATAMARI",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/1880620/achievements/",
       "visible": true,
-      "earnedAchievements": 18,
+      "earnedAchievements": 20,
       "totalAchievements": 38,
-      "achievementPercent": 47,
-      "playtimeHours": 14.12,
+      "achievementPercent": 53,
+      "playtimeHours": 14.82,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 14.12,
+      "achievementsPlaytimeHours": 14.82,
       "popThresholdMetAt": "2026-06-26T07:11:08.798106+00:00"
     },
     {
@@ -17587,6 +17655,23 @@
       "gamesVisible": true,
       "achievementsPlaytimeHours": 2.48,
       "popThresholdMetAt": "2026-06-30T07:11:37.904606+00:00"
+    },
+    {
+      "username": "Horseflesh",
+      "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
+      "appId": 4358690,
+      "title": "Graveyard Keeper 2",
+      "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/4358690/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 38,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "kasztoix",
@@ -27055,6 +27140,23 @@
     {
       "username": "leniu",
       "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
+      "appId": 2638890,
+      "title": "Onimusha: Way of the Sword",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2638890/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 52,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "leniu",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
       "appId": 2668510,
       "title": "Red Dead Redemption",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2668510/achievements/",
@@ -35843,6 +35945,23 @@
       "achievementsPlaytimeHours": 39.3
     },
     {
+      "username": "Wintermute101",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
+      "appId": 4115450,
+      "title": "Phantom Blade Zero",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/4115450/achievements/",
+      "playtimeHours": 2.97,
+      "visible": true,
+      "earnedAchievements": 4,
+      "totalAchievements": 66,
+      "achievementPercent": 6,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 2.97
+    },
+    {
       "username": "WNDRLST",
       "steamProfile": "https://steamcommunity.com/profiles/76561198125763485",
       "appId": 553850,
@@ -36573,15 +36692,15 @@
       "title": "FINAL FANTASY TACTICS - The Ivalice C...",
       "progressUrl": "https://steamcommunity.com/profiles/76561198082091554/stats/1004640/achievements/",
       "visible": true,
-      "earnedAchievements": 44,
+      "earnedAchievements": 50,
       "totalAchievements": 50,
-      "achievementPercent": 88,
-      "playtimeHours": 52.42,
+      "achievementPercent": 100,
+      "playtimeHours": 54.73,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 52.42,
+      "achievementsPlaytimeHours": 54.73,
       "popThresholdMetAt": "2026-07-06T18:27:00.287372+00:00"
     },
     {
@@ -40508,16 +40627,16 @@
       "appId": 2863680,
       "title": "ZERO PARADES: Director's Cut",
       "progressUrl": "https://steamcommunity.com/profiles/76561198121640255/stats/2863680/achievements/",
-      "playtimeHours": 15.23,
+      "playtimeHours": 29.67,
       "visible": true,
-      "earnedAchievements": 3,
+      "earnedAchievements": 6,
       "totalAchievements": 61,
-      "achievementPercent": 5,
+      "achievementPercent": 10,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 15.23
+      "achievementsPlaytimeHours": 29.67
     },
     {
       "username": "Youdontknow",
@@ -71042,8 +71161,29 @@
       "url": "https://howlongtobeat.com/game/152015"
     },
     {
+      "title": "Graveyard Keeper 2",
+      "appId": 4358690,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
       "title": "Resonance: A Plague Tale Legacy",
       "appId": 2713000,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Phantom Blade Zero",
+      "appId": 4115450,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "ReStory: Chill Electronics Repairs",
+      "appId": 3812600,
       "hltbHours": null,
       "matchedTitle": "",
       "url": ""
@@ -71054,6 +71194,34 @@
       "hltbHours": 10.8,
       "matchedTitle": "Replaced",
       "url": "https://howlongtobeat.com/game/93944"
+    },
+    {
+      "title": "Nivalis Nights",
+      "appId": 1488490,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Nivalis Nights",
+      "appId": 1488490,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Silver Pines",
+      "appId": 2333000,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Onimusha: Way of the Sword",
+      "appId": 2638890,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     },
     {
       "title": "FINAL FANTASY RESONANCE",
@@ -71067,26 +71235,26 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-10-30T11:44:07.653744+00:00",
+  "libraryUpdatedAt": "2026-10-31T11:17:46.521061+00:00",
   "libraryStats": {
-    "durationSeconds": 7.11,
+    "durationSeconds": 3.93,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14598
+    "totalPlaytimeRows": 14606
   },
   "stats": {
-    "durationSeconds": 65.42,
-    "targetWins": 2404,
-    "uniqueProgressTargets": 2399,
-    "libraryPlaytimeHits": 2390,
-    "cachedReuses": 2345,
-    "achievementSuccesses": 9,
+    "durationSeconds": 57.83,
+    "targetWins": 2411,
+    "uniqueProgressTargets": 2406,
+    "libraryPlaytimeHits": 2397,
+    "cachedReuses": 2344,
+    "achievementSuccesses": 17,
     "achievementErrors": 45,
     "cachedFallbacks": 45,
-    "hltbTitlesRequested": 1292,
-    "hltbResultsAvailable": 4042
+    "hltbTitlesRequested": 1298,
+    "hltbResultsAvailable": 4049
   }
 }
