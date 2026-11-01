@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-24T09:53:32.578429+00:00",
+  "updatedAt": "2026-11-01T12:07:59.013168+00:00",
   "apps": {
     "3288210": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3288210/2e13226847bb546625411aed75e74471f6705b18/header.jpg?t=1777969480",
@@ -5387,6 +5387,15 @@
       "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3470960/21ef3b5cc2964971d83b1c9957d557a0a8a5a680/capsule_231x87.jpg?t=1792404827",
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3470960/21ef3b5cc2964971d83b1c9957d557a0a8a5a680/capsule_184x69.jpg?t=1792404827",
       "releaseDate": "2026-10-15",
+      "comingSoon": false
+    },
+    "2133760": {
+      "appId": 2133760,
+      "name": "Tiny Bookshop",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2133760/519031e524f64d61ea58b75df39dccfe31b68834/header.jpg?t=1793427140",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2133760/c4b48e332931007d7e6d295062cac226c40ab7a6/capsule_231x87.jpg?t=1793427140",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2133760/c4b48e332931007d7e6d295062cac226c40ab7a6/capsule_184x69.jpg?t=1793427140",
+      "releaseDate": "2025-08-07",
       "comingSoon": false
     }
   }
