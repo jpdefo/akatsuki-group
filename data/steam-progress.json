@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01T12:09:14.660491+00:00",
+  "updatedAt": "2026-11-02T13:58:03.724035+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2427,16 +2427,16 @@
       "appId": 2255370,
       "title": "Directive 8020",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2255370/achievements/",
-      "playtimeHours": 2.98,
+      "playtimeHours": 3.35,
       "visible": true,
-      "earnedAchievements": 5,
+      "earnedAchievements": 6,
       "totalAchievements": 30,
-      "achievementPercent": 17,
+      "achievementPercent": 20,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.98,
+      "achievementsPlaytimeHours": 3.35,
       "popThresholdMetAt": "2026-10-27T11:09:21.827923+00:00"
     },
     {
@@ -2745,7 +2745,7 @@
       "appId": 2668510,
       "title": "Red Dead Redemption",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2668510/achievements/",
-      "playtimeHours": 6.87,
+      "playtimeHours": 7.12,
       "visible": true,
       "earnedAchievements": 3,
       "totalAchievements": 51,
@@ -2754,7 +2754,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 6.87
+      "achievementsPlaytimeHours": 7.12
     },
     {
       "username": "BojanNS987",
@@ -2762,7 +2762,7 @@
       "appId": 2677660,
       "title": "Indiana Jones and the Great Circle",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2677660/achievements/",
-      "playtimeHours": 10.18,
+      "playtimeHours": 10.2,
       "visible": true,
       "earnedAchievements": 12,
       "totalAchievements": 55,
@@ -2771,7 +2771,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 10.18,
+      "achievementsPlaytimeHours": 10.2,
       "popThresholdMetAt": "2026-10-22T10:44:44.559716+00:00"
     },
     {
@@ -6657,7 +6657,7 @@
       "appId": 1771300,
       "title": "Kingdom Come: Deliverance II",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1771300/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 0.5,
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 83,
@@ -6666,7 +6666,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 0.5
     },
     {
       "username": "burntreynolds444",
@@ -6745,16 +6745,17 @@
       "appId": 1875580,
       "title": "Mina the Hollower",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1875580/achievements/",
-      "playtimeHours": 15.07,
+      "playtimeHours": 15.37,
       "visible": true,
-      "earnedAchievements": 4,
+      "earnedAchievements": 5,
       "totalAchievements": 50,
-      "achievementPercent": 8,
+      "achievementPercent": 10,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 15.07
+      "achievementsPlaytimeHours": 15.37,
+      "popThresholdMetAt": "2026-11-02T13:58:03.723314+00:00"
     },
     {
       "username": "burntreynolds444",
@@ -6868,16 +6869,16 @@
       "appId": 2091020,
       "title": "Blades of Fire",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/2091020/achievements/",
-      "playtimeHours": 9.95,
+      "playtimeHours": 13.72,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 2,
       "totalAchievements": 45,
-      "achievementPercent": 0,
+      "achievementPercent": 4,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 9.95
+      "achievementsPlaytimeHours": 13.72
     },
     {
       "username": "burntreynolds444",
@@ -7793,12 +7794,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 157.75,
+      "playtimeHours": 158.48,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 157.75,
+      "achievementsPlaytimeHours": 158.48,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -9431,16 +9432,16 @@
       "appId": 2515020,
       "title": "FINAL FANTASY XVI COMPLETE EDITION",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2515020/achievements/",
-      "playtimeHours": 3.0,
+      "playtimeHours": 7.62,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 1,
       "totalAchievements": 69,
-      "achievementPercent": 0,
+      "achievementPercent": 1,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 3.0
+      "achievementsPlaytimeHours": 7.62
     },
     {
       "username": "chOOkity",
@@ -16842,16 +16843,17 @@
       "appId": 1620730,
       "title": "Hell is Us",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/1620730/achievements/",
-      "playtimeHours": 2.78,
+      "playtimeHours": 12.53,
       "visible": true,
-      "earnedAchievements": 4,
+      "earnedAchievements": 40,
       "totalAchievements": 40,
-      "achievementPercent": 10,
+      "achievementPercent": 100,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.78
+      "achievementsPlaytimeHours": 12.53,
+      "popThresholdMetAt": "2026-11-02T13:58:03.723555+00:00"
     },
     {
       "username": "Horseflesh",
@@ -17644,16 +17646,16 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/3321460/achievements/",
-      "playtimeHours": 0.78,
+      "playtimeHours": 1.08,
       "visible": true,
       "earnedAchievements": 0,
-      "totalAchievements": 34,
+      "totalAchievements": 41,
       "achievementPercent": 0,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.78
+      "achievementsPlaytimeHours": 1.08
     },
     {
       "username": "Horseflesh",
@@ -27320,16 +27322,16 @@
       "appId": 2840770,
       "title": "Avatar: Frontiers of Pandora",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/2840770/achievements/",
-      "playtimeHours": 19.73,
+      "playtimeHours": 24.63,
       "visible": true,
-      "earnedAchievements": 8,
+      "earnedAchievements": 9,
       "totalAchievements": 52,
-      "achievementPercent": 15,
+      "achievementPercent": 17,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 19.73,
+      "achievementsPlaytimeHours": 24.63,
       "popThresholdMetAt": "2026-10-26T11:40:06.179910+00:00"
     },
     {
@@ -34898,16 +34900,16 @@
       "appId": 1488490,
       "title": "Nivalis Nights",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/1488490/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 1.0,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 9,
       "totalAchievements": 120,
-      "achievementPercent": 0,
+      "achievementPercent": 8,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 1.0
     },
     {
       "username": "Wintermute101",
@@ -71295,15 +71297,43 @@
       "hltbHours": 15.37,
       "matchedTitle": "007 First Light",
       "url": "https://howlongtobeat.com/game/85276"
+    },
+    {
+      "title": "FINAL FANTASY RESONANCE",
+      "appId": 3259780,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Phantom Blade Zero",
+      "appId": 4115450,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "REPLACED",
+      "appId": 1663850,
+      "hltbHours": 10.8,
+      "matchedTitle": "Replaced",
+      "url": "https://howlongtobeat.com/game/93944"
+    },
+    {
+      "title": "Nivalis Nights",
+      "appId": 1488490,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     }
   ],
   "steamApiEnabled": true,
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-11-01T12:08:09.442860+00:00",
+  "libraryUpdatedAt": "2026-11-02T13:57:03.261891+00:00",
   "libraryStats": {
-    "durationSeconds": 10.02,
+    "durationSeconds": 6.08,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71312,15 +71342,15 @@
     "totalPlaytimeRows": 14610
   },
   "stats": {
-    "durationSeconds": 75.24,
+    "durationSeconds": 66.55,
     "targetWins": 2414,
     "uniqueProgressTargets": 2409,
     "libraryPlaytimeHits": 2400,
-    "cachedReuses": 2353,
-    "achievementSuccesses": 11,
+    "cachedReuses": 2348,
+    "achievementSuccesses": 16,
     "achievementErrors": 45,
     "cachedFallbacks": 45,
     "hltbTitlesRequested": 1299,
-    "hltbResultsAvailable": 4051
+    "hltbResultsAvailable": 4055
   }
 }

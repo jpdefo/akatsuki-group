@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01T12:07:59.013168+00:00",
+  "updatedAt": "2026-11-02T13:56:56.829533+00:00",
   "apps": {
     "3288210": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3288210/2e13226847bb546625411aed75e74471f6705b18/header.jpg?t=1777969480",
@@ -5397,6 +5397,22 @@
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2133760/c4b48e332931007d7e6d295062cac226c40ab7a6/capsule_184x69.jpg?t=1793427140",
       "releaseDate": "2025-08-07",
       "comingSoon": false
+    },
+    "2828710": {
+      "name": "Valor Mortis",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2828710/e729c7f909db5c52ea780923d9b258517162866a/header.jpg?t=1793135279",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2828710/c845c26a71524fa38b25c3b3da23a384de7d1436/capsule_231x87.jpg?t=1793135279",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2828710/c845c26a71524fa38b25c3b3da23a384de7d1436/capsule_184x69.jpg?t=1793135279",
+      "releaseDate": "2026-10-13",
+      "comingSoon": false
+    },
+    "4260840": {
+      "name": "STRANGER THAN HEAVEN",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4260840/3e40b76faf9a3eafb4397dd51308eb2e48ac3660/header.jpg?t=1792676075",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4260840/9019bf1a7bd4bdc130d607dc7d9859b79d7cac28/capsule_231x87.jpg?t=1792676075",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4260840/9019bf1a7bd4bdc130d607dc7d9859b79d7cac28/capsule_184x69.jpg?t=1792676075",
+      "releaseDate": "2027-01-14",
+      "comingSoon": true
     }
   }
 }
