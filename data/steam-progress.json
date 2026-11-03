@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-02T13:58:03.724035+00:00",
+  "updatedAt": "2026-11-03T13:06:39.027868+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2533,16 +2533,16 @@
       "appId": 2416450,
       "title": "MOUSE: P.I. For Hire",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2416450/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 1.47,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 6,
       "totalAchievements": 34,
-      "achievementPercent": 0,
+      "achievementPercent": 18,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 1.47
     },
     {
       "username": "BojanNS987",
@@ -2745,7 +2745,7 @@
       "appId": 2668510,
       "title": "Red Dead Redemption",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2668510/achievements/",
-      "playtimeHours": 7.12,
+      "playtimeHours": 7.15,
       "visible": true,
       "earnedAchievements": 3,
       "totalAchievements": 51,
@@ -2754,7 +2754,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 7.12
+      "achievementsPlaytimeHours": 7.15
     },
     {
       "username": "BojanNS987",
@@ -2762,7 +2762,7 @@
       "appId": 2677660,
       "title": "Indiana Jones and the Great Circle",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2677660/achievements/",
-      "playtimeHours": 10.2,
+      "playtimeHours": 10.38,
       "visible": true,
       "earnedAchievements": 12,
       "totalAchievements": 55,
@@ -2771,7 +2771,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 10.2,
+      "achievementsPlaytimeHours": 10.38,
       "popThresholdMetAt": "2026-10-22T10:44:44.559716+00:00"
     },
     {
@@ -6178,16 +6178,16 @@
       "appId": 1234180,
       "title": "Moons Of Darsalon",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1234180/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 0.1,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 1,
       "totalAchievements": 16,
-      "achievementPercent": 0,
+      "achievementPercent": 6,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 0.1
     },
     {
       "username": "burntreynolds444",
@@ -7794,12 +7794,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 158.48,
+      "playtimeHours": 159.27,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 158.48,
+      "achievementsPlaytimeHours": 159.27,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -16843,7 +16843,7 @@
       "appId": 1620730,
       "title": "Hell is Us",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/1620730/achievements/",
-      "playtimeHours": 12.53,
+      "playtimeHours": 19.22,
       "visible": true,
       "earnedAchievements": 40,
       "totalAchievements": 40,
@@ -16852,7 +16852,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 12.53,
+      "achievementsPlaytimeHours": 19.22,
       "popThresholdMetAt": "2026-11-02T13:58:03.723555+00:00"
     },
     {
@@ -20189,16 +20189,17 @@
       "appId": 1145350,
       "title": "Hades II",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/1145350/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 9.98,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 5,
       "totalAchievements": 50,
-      "achievementPercent": 0,
+      "achievementPercent": 10,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 9.98,
+      "popThresholdMetAt": "2026-11-03T13:06:39.027409+00:00"
     },
     {
       "username": "Koalala",
@@ -34900,16 +34901,16 @@
       "appId": 1488490,
       "title": "Nivalis Nights",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/1488490/achievements/",
-      "playtimeHours": 1.0,
+      "playtimeHours": 2.6,
       "visible": true,
-      "earnedAchievements": 9,
+      "earnedAchievements": 17,
       "totalAchievements": 120,
-      "achievementPercent": 8,
+      "achievementPercent": 14,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.0
+      "achievementsPlaytimeHours": 2.6
     },
     {
       "username": "Wintermute101",
@@ -35642,7 +35643,7 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "error": "HTTP Error 400: Bad Request"
+      "error": "HTTP Error 403: Forbidden"
     },
     {
       "username": "Wintermute101",
@@ -36004,16 +36005,16 @@
       "appId": 4115450,
       "title": "Phantom Blade Zero",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/4115450/achievements/",
-      "playtimeHours": 2.97,
+      "playtimeHours": 4.62,
       "visible": true,
-      "earnedAchievements": 4,
+      "earnedAchievements": 7,
       "totalAchievements": 66,
-      "achievementPercent": 6,
+      "achievementPercent": 11,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.97
+      "achievementsPlaytimeHours": 4.62
     },
     {
       "username": "WNDRLST",
@@ -71331,23 +71332,23 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-11-02T13:57:03.261891+00:00",
+  "libraryUpdatedAt": "2026-11-03T13:05:37.665824+00:00",
   "libraryStats": {
-    "durationSeconds": 6.08,
+    "durationSeconds": 7.12,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14610
+    "totalPlaytimeRows": 14612
   },
   "stats": {
-    "durationSeconds": 66.55,
+    "durationSeconds": 68.49,
     "targetWins": 2414,
     "uniqueProgressTargets": 2409,
     "libraryPlaytimeHits": 2400,
-    "cachedReuses": 2348,
-    "achievementSuccesses": 16,
+    "cachedReuses": 2351,
+    "achievementSuccesses": 13,
     "achievementErrors": 45,
     "cachedFallbacks": 45,
     "hltbTitlesRequested": 1299,
