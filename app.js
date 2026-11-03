@@ -91,6 +91,8 @@ renderPageNavigation();
 // data load) can re-merge real playtime/achievements/HLTB onto them instead of
 // leaving a pre-release manual winner stuck at 0h / "Missing data".
 let steamProgressByKey = new Map(); // `${steamProfile}|${appId}` -> progress entry
+const isPopPage = window.location.pathname.split("/").pop() === "monthly-progress.html";
+let popDateFilterEdited = false;
 let steamProgressItems = []; // raw progress rows (game merge looks up by appId)
 let steamHltbByAppId = new Map();
 let steamHltbByTitle = new Map();
@@ -425,10 +427,12 @@ function bindEvents() {
     void refreshSteamProgress({ fullRefresh: true });
   });
   elements.monthlyYearFilter?.addEventListener("change", () => {
+    popDateFilterEdited = true;
     renderProgressViews();
     void loadVisibleGameMedia({ silent: true });
   });
   elements.monthlyFilter?.addEventListener("change", () => {
+    popDateFilterEdited = true;
     renderProgressViews();
     void loadVisibleGameMedia({ silent: true });
   });
@@ -1402,16 +1406,18 @@ function buildPenaltyRowTile(row, { showMember = false } = {}) {
   `;
 }
 
-// The two PoP requirements as meters. Falls back to a note when the game has no
-// HLTB time and no achievement total to measure against (that state still counts
-// as a penalty, so it must say something rather than render empty bars).
+function getSteamAchievementsUrl(steamProfile, appId) {
+  const profile = String(steamProfile || "").match(/^https?:\/\/steamcommunity\.com\/(id|profiles)\/([^/?#]+)/i);
+  const id = Number(appId);
+  return profile && Number.isSafeInteger(id) && id > 0
+    ? `https://steamcommunity.com/${profile[1]}/${profile[2]}/stats/${id}/?tab=achievements`
+    : "";
+}
+
+// Show a note when the game has no playtime or achievement target to measure.
 function buildPenaltyRowMeters(row) {
   const meters = [];
-  const profile = String(row.steamProfile || "").match(/^https?:\/\/steamcommunity\.com\/(id|profiles)\/([^/?#]+)/i);
-  const appId = Number(row.appId || 0);
-  const achievementsUrl = profile && Number.isSafeInteger(appId) && appId > 0
-    ? `https://steamcommunity.com/${profile[1]}/${profile[2]}/stats/${appId}/?tab=achievements`
-    : "";
+  const achievementsUrl = getSteamAchievementsUrl(row.steamProfile, row.appId);
   if (Number(row.requiredHours || 0) > 0) {
     meters.push(buildPenaltyMeter("Playtime", Number(row.currentHours || 0), Number(row.requiredHours || 0), formatHours, achievementsUrl));
   }
@@ -3731,7 +3737,9 @@ function renderMonthlyDetailsTable(target, winsSubset, sortMode = elements.month
               ${prereleaseNote ? `<span class="meta-line">${escapeHtml(prereleaseNote)}</span>` : ""}
               <div class="status-notes-line">
                 <button class="inline-action" data-edit-action="month" data-win-id="${win.id}">Edit month</button>
-                ${buildEvidenceNoteMarkup(win.evidenceNotes, win.progressLinks)}
+                ${buildEvidenceNoteMarkup(win.evidenceNotes, win.progressLinks, win.manualWinner
+                  ? getSteamAchievementsUrl(member?.steamProfile, game?.appId)
+                  : "")}
               </div>
             </div>
           </td>
@@ -6636,7 +6644,13 @@ function describeProgress(win, game, requiredHours, requiredAchievements, compli
   return progressBits.join(" • ");
 }
 
-function buildEvidenceNoteMarkup(note, progressLinks) {
+function buildSteamAchievementsLink(url) {
+  return url
+    ? `<span class="meta-line"><a class="linked-title" href="${escapeHtml(url)}" target="_blank" rel="noreferrer">Achievements &#8599;</a></span>`
+    : "";
+}
+
+function buildEvidenceNoteMarkup(note, progressLinks, achievementsUrl = "") {
   // A multi-game collection win tracks several apps; link each game's
   // achievements page instead of the single default link.
   if (Array.isArray(progressLinks) && progressLinks.length > 1) {
@@ -6651,20 +6665,20 @@ function buildEvidenceNoteMarkup(note, progressLinks) {
 
   const value = String(note || "").trim();
   if (!value) {
-    return "";
+    return buildSteamAchievementsLink(achievementsUrl);
   }
 
   const steamSyncMatch = value.match(/^Steam sync:\s*(https?:\/\/\S+)$/i);
   if (steamSyncMatch) {
-    return `<span class="meta-line"><a class="linked-title" href="${escapeHtml(steamSyncMatch[1])}" target="_blank" rel="noreferrer">Achievements &#8599;</a></span>`;
+    return buildSteamAchievementsLink(steamSyncMatch[1]);
   }
 
   const urlOnlyMatch = value.match(/^(https?:\/\/\S+)$/i);
   if (urlOnlyMatch) {
-    return `<span class="meta-line"><a class="linked-title" href="${escapeHtml(urlOnlyMatch[1])}" target="_blank" rel="noreferrer">Evidence &#8599;</a></span>`;
+    return `<span class="meta-line"><a class="linked-title" href="${escapeHtml(urlOnlyMatch[1])}" target="_blank" rel="noreferrer">Evidence &#8599;</a></span>${buildSteamAchievementsLink(achievementsUrl)}`;
   }
 
-  return `<span class="meta-line">${escapeHtml(value)}</span>`;
+  return `<span class="meta-line">${escapeHtml(value)}</span>${buildSteamAchievementsLink(achievementsUrl)}`;
 }
 
 function computeMinimumEntriesRequired() {
@@ -8245,9 +8259,10 @@ function getProgressDateFilter(months) {
   const years = Array.from(new Set(months.map((month) => month.slice(0, 4)))).sort().reverse();
   const defaultMonthKey = getDefaultProgressMonth(months);
   const defaultYear = defaultMonthKey.slice(0, 4) || years[0] || "";
-  const rawMonth = String(elements.monthlyFilter?.value || "");
+  const useDefault = isPopPage && !popDateFilterEdited;
+  const rawMonth = useDefault ? "" : String(elements.monthlyFilter?.value || "");
   const legacyMonthKey = /^\d{4}-\d{2}$/.test(rawMonth) ? rawMonth : "";
-  const rawYear = String(elements.monthlyYearFilter?.value || "") || legacyMonthKey.slice(0, 4);
+  const rawYear = useDefault ? "" : String(elements.monthlyYearFilter?.value || "") || legacyMonthKey.slice(0, 4);
   const selectedYear = rawYear === "all" || years.includes(rawYear) ? rawYear : defaultYear;
   const monthNumbers = Array.from(
     new Set(
@@ -8273,15 +8288,15 @@ function getProgressDateFilter(months) {
   return { years, monthNumbers, selectedYear, selectedMonth, selectedMonthKey };
 }
 
-// PoP defaults to the previous calendar month (e.g. in July, June is selected),
-// since the current month's wins are usually still in progress. Falls back to the
-// most recent month with data when the previous month has no wins yet.
+// PoP opens the month in its final grace month (July in November).
+// The homepage defaults to the previous calendar month.
 function getDefaultProgressMonth(months) {
   const now = new Date();
-  const previous = new Date(now.getFullYear(), now.getMonth() - 1, 1);
-  const previousKey = `${previous.getFullYear()}-${String(previous.getMonth() + 1).padStart(2, "0")}`;
-  if (months.includes(previousKey)) {
-    return previousKey;
+  const monthOffset = isPopPage ? PENALTY_GRACE_MONTHS : 1;
+  const target = new Date(now.getFullYear(), now.getMonth() - monthOffset, 1);
+  const targetKey = `${target.getFullYear()}-${String(target.getMonth() + 1).padStart(2, "0")}`;
+  if (months.includes(targetKey)) {
+    return targetKey;
   }
   // The list may contain upcoming release months (includeFuturePlayMonths); they
   // are selectable but never the default. Fall back to the newest month that has
