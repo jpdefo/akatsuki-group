@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T13:22:07.903297+00:00",
+  "updatedAt": "2026-11-05T13:35:48.685642+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2762,16 +2762,16 @@
       "appId": 2677660,
       "title": "Indiana Jones and the Great Circle",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2677660/achievements/",
-      "playtimeHours": 12.48,
+      "playtimeHours": 13.25,
       "visible": true,
-      "earnedAchievements": 14,
+      "earnedAchievements": 18,
       "totalAchievements": 55,
-      "achievementPercent": 25,
+      "achievementPercent": 33,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 12.48,
+      "achievementsPlaytimeHours": 13.25,
       "popThresholdMetAt": "2026-10-22T10:44:44.559716+00:00"
     },
     {
@@ -6178,7 +6178,7 @@
       "appId": 1234180,
       "title": "Moons Of Darsalon",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1234180/achievements/",
-      "playtimeHours": 0.72,
+      "playtimeHours": 2.62,
       "visible": true,
       "earnedAchievements": 1,
       "totalAchievements": 16,
@@ -6187,7 +6187,8 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.72
+      "achievementsPlaytimeHours": 2.62,
+      "popThresholdMetAt": "2026-11-05T13:35:48.684782+00:00"
     },
     {
       "username": "burntreynolds444",
@@ -7166,6 +7167,23 @@
     {
       "username": "burntreynolds444",
       "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 3259780,
+      "title": "FINAL FANTASY RESONANCE",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3259780/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 40,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
@@ -7794,12 +7812,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 159.27,
+      "playtimeHours": 159.75,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 159.27,
+      "achievementsPlaytimeHours": 159.75,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -17646,7 +17664,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/3321460/achievements/",
-      "playtimeHours": 1.08,
+      "playtimeHours": 1.1,
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 41,
@@ -17655,7 +17673,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.08
+      "achievementsPlaytimeHours": 1.1
     },
     {
       "username": "Horseflesh",
@@ -20189,16 +20207,16 @@
       "appId": 1145350,
       "title": "Hades II",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/1145350/achievements/",
-      "playtimeHours": 14.08,
+      "playtimeHours": 16.07,
       "visible": true,
-      "earnedAchievements": 12,
+      "earnedAchievements": 13,
       "totalAchievements": 50,
-      "achievementPercent": 24,
+      "achievementPercent": 26,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 14.08,
+      "achievementsPlaytimeHours": 16.07,
       "popThresholdMetAt": "2026-11-03T13:06:39.027409+00:00"
     },
     {
@@ -21212,6 +21230,23 @@
       "error": null,
       "achievementsPlaytimeHours": 110.02,
       "popThresholdMetAt": "2026-07-20T08:33:24.271635+00:00"
+    },
+    {
+      "username": "Koalala",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198065466175",
+      "appId": 3764200,
+      "title": "Resident Evil Requiem",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/3764200/achievements/",
+      "playtimeHours": 0.0,
+      "visible": true,
+      "earnedAchievements": 0,
+      "totalAchievements": 49,
+      "achievementPercent": 0,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 0.0
     },
     {
       "username": "Krlesnik",
@@ -34901,16 +34936,16 @@
       "appId": 1488490,
       "title": "Nivalis Nights",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/1488490/achievements/",
-      "playtimeHours": 6.35,
+      "playtimeHours": 7.1,
       "visible": true,
-      "earnedAchievements": 30,
+      "earnedAchievements": 31,
       "totalAchievements": 120,
-      "achievementPercent": 25,
+      "achievementPercent": 26,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 6.35
+      "achievementsPlaytimeHours": 7.1
     },
     {
       "username": "Wintermute101",
@@ -35946,6 +35981,23 @@
       "gamesVisible": true,
       "error": null,
       "achievementsPlaytimeHours": 17.72
+    },
+    {
+      "username": "Wintermute101",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
+      "appId": 3470960,
+      "title": "Tales of Eternia Remastered",
+      "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3470960/achievements/",
+      "playtimeHours": 1.0,
+      "visible": true,
+      "earnedAchievements": 1,
+      "totalAchievements": 50,
+      "achievementPercent": 2,
+      "playtimeSource": "steam-web-api",
+      "playtimeVisible": true,
+      "gamesVisible": true,
+      "error": null,
+      "achievementsPlaytimeHours": 1.0
     },
     {
       "username": "Wintermute101",
@@ -71258,6 +71310,13 @@
       "url": ""
     },
     {
+      "title": "Resident Evil Requiem",
+      "appId": 3764200,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
       "title": "Nivalis Nights",
       "appId": 1488490,
       "hltbHours": null,
@@ -71281,6 +71340,13 @@
     {
       "title": "Castlevania: Belmont's Curse",
       "appId": 4231820,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
+    },
+    {
+      "title": "Tales of Eternia Remastered",
+      "appId": 3470960,
       "hltbHours": null,
       "matchedTitle": "",
       "url": ""
@@ -71332,26 +71398,26 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-11-04T13:21:01.942584+00:00",
+  "libraryUpdatedAt": "2026-11-05T13:34:41.916688+00:00",
   "libraryStats": {
-    "durationSeconds": 9.96,
+    "durationSeconds": 10.09,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14617
+    "totalPlaytimeRows": 14621
   },
   "stats": {
-    "durationSeconds": 75.93,
-    "targetWins": 2414,
-    "uniqueProgressTargets": 2409,
-    "libraryPlaytimeHits": 2400,
-    "cachedReuses": 2353,
-    "achievementSuccesses": 11,
+    "durationSeconds": 76.87,
+    "targetWins": 2417,
+    "uniqueProgressTargets": 2412,
+    "libraryPlaytimeHits": 2403,
+    "cachedReuses": 2354,
+    "achievementSuccesses": 13,
     "achievementErrors": 45,
     "cachedFallbacks": 45,
-    "hltbTitlesRequested": 1299,
-    "hltbResultsAvailable": 4055
+    "hltbTitlesRequested": 1301,
+    "hltbResultsAvailable": 4057
   }
 }
