@@ -191,6 +191,7 @@ const elements = {
   winsTable: document.querySelector("#wins-table"),
   giveawaysTable: document.querySelector("#giveaways-table"),
   periodSummary: document.querySelector("#period-summary"),
+  popDeadline: document.querySelector("#pop-deadline"),
   storageStatus: document.querySelector("#storage-status"),
   syncStatus: document.querySelector("#sync-status"),
   memberOverview: document.querySelector("#member-overview"),
@@ -1652,6 +1653,10 @@ function renderProgressViews() {
       }
       elements.periodSummary.textContent = parts.join(" • ");
     }
+  }
+
+  if (elements.popDeadline) {
+    elements.popDeadline.textContent = getPopDeadlineText(selectedMonthKey);
   }
 
   renderPopEffortCards(monthlyWins);
@@ -4118,6 +4123,22 @@ function getPenaltyDeadlineForMonth(popMonth) {
 }
 
 // The deadline is a UTC calendar date (1st of the month); format it in UTC so it
+function getPopDeadlineText(popMonth) {
+  const deadline = getPenaltyDeadlineForMonth(popMonth);
+  if (!deadline) {
+    return "Select a year and month to see its PoP deadline.";
+  }
+  if (popMonth < PENALTY_TRACKING_START_MONTH) {
+    return "PoP months before January 2026 are exempt from penalties.";
+  }
+  const lastDay = new Date(deadline);
+  lastDay.setUTCDate(lastDay.getUTCDate() - 1);
+  const dateLabel = lastDay.toLocaleDateString("en-US", {
+    timeZone: "UTC", year: "numeric", month: "long", day: "numeric",
+  });
+  return `PoP deadline for ${formatMonthKey(popMonth)}: end of ${dateLabel}.`;
+}
+
 // reads "Jun 1" everywhere instead of slipping a day in negative timezones.
 function formatPenaltyDeadline(date) {
   if (!(date instanceof Date) || !Number.isFinite(date.getTime())) {
