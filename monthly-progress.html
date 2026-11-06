@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Akatsuki PoP Progress</title>
     <link rel="icon" type="image/png" href="akatsuki.png" />
-    <link rel="stylesheet" href="styles.css?v=20261105-pop-deadline" />
+    <link rel="stylesheet" href="styles.css?v=20261105-pop-balanced" />
   </head>
   <body>
     <div class="app-shell">
@@ -28,26 +28,18 @@
           </div>
         </section>
 
-        <section class="card">
-          <div class="section-heading">
-            <div>
-              <h2>PoP progress</h2>
-              <p class="section-copy">
-                Green = threshold met, yellow = all achievements completed, red = under the threshold.
-                Threshold = 25% of HLTB time + 10% of achievements.
-              </p>
-              <p class="section-copy">
-                Pick a <strong>Member</strong> to see all their wins (use Year + Month = All months for their full
-                year), or leave it on All members for the year/month view. Row actions correct HLTB, the required
-                10%, or the counted month without the next sync overwriting your edit.
-              </p>
-            </div>
-            <div class="section-summary">
-              <div id="storage-status" class="pill"></div>
-              <p id="period-summary" class="section-copy"></p>
-              <div id="pop-effort-cards" class="summary-grid pop-effort-grid"></div>
-            </div>
-            <div class="section-filters">
+        <section class="card pop-progress-card">
+          <h2 class="pop-heading">Monthly proof of play</h2>
+          <div class="pop-month-header">
+            <div class="pop-period-controls">
+              <label class="inline-filter">
+                Month
+                <select id="monthly-filter"></select>
+              </label>
+              <label class="inline-filter">
+                Year
+                <select id="monthly-year-filter"></select>
+              </label>
               <label class="inline-filter">
                 Game
                 <input id="monthly-game-search" type="search" placeholder="Search game…" autocomplete="off" />
@@ -55,14 +47,6 @@
               <label class="inline-filter">
                 Member
                 <select id="monthly-member-filter"></select>
-              </label>
-              <label class="inline-filter">
-                Year
-                <select id="monthly-year-filter"></select>
-              </label>
-              <label class="inline-filter">
-                Month
-                <select id="monthly-filter"></select>
               </label>
               <label class="inline-filter">
                 Sort
@@ -79,8 +63,25 @@
                 </select>
               </label>
             </div>
+            <div id="pop-deadline" class="pop-deadline" role="status" aria-live="polite"></div>
           </div>
-          <div id="pop-deadline" class="pop-deadline" role="status" aria-live="polite"></div>
+          <div class="pop-review-summary">
+            <p id="period-summary" class="section-copy"></p>
+            <details class="pop-help">
+              <summary>PoP rules &amp; editing</summary>
+              <p class="section-copy">
+                Green = threshold met, yellow = all achievements completed, red = under the threshold.
+                Threshold = 25% of HLTB time + 10% of achievements.
+              </p>
+              <p class="section-copy">
+                Pick a <strong>Member</strong> to see all their wins (use Year + Month = All months for their full
+                year), or leave it on All members for the year/month view. Row actions correct HLTB, the required
+                10%, or the counted month without the next sync overwriting your edit.
+              </p>
+            </details>
+            <div id="storage-status" class="pill"></div>
+          </div>
+          <div id="pop-effort-cards" class="summary-grid pop-effort-grid"></div>
           <div class="table-wrap">
             <table>
               <thead>

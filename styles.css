@@ -188,15 +188,54 @@ h2 {
   gap: 8px;
 }
 
+.pop-progress-card {
+  padding: 18px 20px;
+}
+
+.pop-heading {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.pop-month-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.pop-period-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.pop-period-controls .inline-filter select,
+.pop-period-controls .inline-filter input {
+  field-sizing: content;
+  min-width: 0;
+  max-width: 190px;
+  padding: 8px 10px;
+  font-size: 0.9rem;
+}
+
+.pop-period-controls .inline-filter input {
+  width: 150px;
+  field-sizing: fixed;
+}
+
 .pop-deadline {
   display: grid;
-  gap: 6px;
-  margin: 18px 0;
-  padding: clamp(18px, 3vw, 28px);
-  border: 1px solid rgba(245, 158, 11, 0.5);
-  border-left: 5px solid var(--warning);
-  border-radius: 12px;
-  background: rgba(245, 158, 11, 0.08);
+  gap: 3px;
+  max-width: 100%;
 }
 
 .pop-deadline:empty {
@@ -204,20 +243,65 @@ h2 {
 }
 
 .pop-deadline-label {
-  color: var(--warning);
-  font-size: 1rem;
-  font-weight: 700;
+  color: var(--muted);
+  font-size: 0.85rem;
 }
 
 .pop-deadline-date {
-  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
   line-height: 1.2;
 }
 
 .pop-deadline-copy {
   margin: 0;
   color: var(--muted);
+  font-size: 0.85rem;
   line-height: 1.5;
+}
+
+.pop-deadline-countdown {
+  color: #e7bd77;
+}
+
+.pop-help {
+  flex: 0 1 auto;
+  font-size: 0.85rem;
+}
+
+.pop-help[open] {
+  flex-basis: 100%;
+  order: 1;
+}
+
+.pop-help summary {
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.pop-help .section-copy {
+  margin-top: 10px;
+}
+
+.pop-review-summary {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+@media (max-width: 600px) {
+  .pop-progress-card {
+    padding: 18px 14px;
+  }
+
+  .pop-month-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 
 .section-filters {
