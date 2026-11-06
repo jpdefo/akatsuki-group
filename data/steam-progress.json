@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05T13:35:48.685642+00:00",
+  "updatedAt": "2026-11-06T13:19:54.949209+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -6178,7 +6178,7 @@
       "appId": 1234180,
       "title": "Moons Of Darsalon",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1234180/achievements/",
-      "playtimeHours": 2.62,
+      "playtimeHours": 2.77,
       "visible": true,
       "earnedAchievements": 1,
       "totalAchievements": 16,
@@ -6187,7 +6187,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.62,
+      "achievementsPlaytimeHours": 2.77,
       "popThresholdMetAt": "2026-11-05T13:35:48.684782+00:00"
     },
     {
@@ -6870,16 +6870,16 @@
       "appId": 2091020,
       "title": "Blades of Fire",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/2091020/achievements/",
-      "playtimeHours": 13.72,
+      "playtimeHours": 14.58,
       "visible": true,
-      "earnedAchievements": 2,
+      "earnedAchievements": 3,
       "totalAchievements": 45,
-      "achievementPercent": 4,
+      "achievementPercent": 7,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 13.72
+      "achievementsPlaytimeHours": 14.58
     },
     {
       "username": "burntreynolds444",
@@ -7812,12 +7812,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 159.75,
+      "playtimeHours": 160.22,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 159.75,
+      "achievementsPlaytimeHours": 160.22,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -9450,16 +9450,16 @@
       "appId": 2515020,
       "title": "FINAL FANTASY XVI COMPLETE EDITION",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2515020/achievements/",
-      "playtimeHours": 7.62,
+      "playtimeHours": 9.22,
       "visible": true,
-      "earnedAchievements": 1,
+      "earnedAchievements": 5,
       "totalAchievements": 69,
-      "achievementPercent": 1,
+      "achievementPercent": 7,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 7.62
+      "achievementsPlaytimeHours": 9.22
     },
     {
       "username": "chOOkity",
@@ -17664,16 +17664,16 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/3321460/achievements/",
-      "playtimeHours": 1.1,
+      "playtimeHours": 3.12,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 1,
       "totalAchievements": 41,
-      "achievementPercent": 0,
+      "achievementPercent": 2,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.1
+      "achievementsPlaytimeHours": 3.12
     },
     {
       "username": "Horseflesh",
@@ -26109,7 +26109,7 @@
       "appId": 1371980,
       "title": "No Rest for the Wicked",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/1371980/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 0.97,
       "visible": false,
       "earnedAchievements": 0,
       "totalAchievements": 0,
@@ -35988,16 +35988,16 @@
       "appId": 3470960,
       "title": "Tales of Eternia Remastered",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3470960/achievements/",
-      "playtimeHours": 1.0,
+      "playtimeHours": 2.25,
       "visible": true,
-      "earnedAchievements": 1,
+      "earnedAchievements": 2,
       "totalAchievements": 50,
-      "achievementPercent": 2,
+      "achievementPercent": 4,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.0
+      "achievementsPlaytimeHours": 2.25
     },
     {
       "username": "Wintermute101",
@@ -71398,23 +71398,23 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-11-05T13:34:41.916688+00:00",
+  "libraryUpdatedAt": "2026-11-06T13:18:53.720030+00:00",
   "libraryStats": {
-    "durationSeconds": 10.09,
+    "durationSeconds": 6.25,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14621
+    "totalPlaytimeRows": 14622
   },
   "stats": {
-    "durationSeconds": 76.87,
+    "durationSeconds": 67.49,
     "targetWins": 2417,
     "uniqueProgressTargets": 2412,
     "libraryPlaytimeHits": 2403,
-    "cachedReuses": 2354,
-    "achievementSuccesses": 13,
+    "cachedReuses": 2357,
+    "achievementSuccesses": 10,
     "achievementErrors": 45,
     "cachedFallbacks": 45,
     "hltbTitlesRequested": 1301,
