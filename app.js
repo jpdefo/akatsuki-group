@@ -4140,9 +4140,8 @@ function buildPopDeadlineMarkup(popMonth) {
     : daysLeft === 0 ? "Due today"
       : `${daysLeft} ${daysLeft === 1 ? "day" : "days"} left`;
   return `
-    <span class="pop-deadline-label">${escapeHtml(formatMonthKey(popMonth))} PoP · Complete by</span>
+    <span class="pop-deadline-label">${escapeHtml(formatMonthKey(popMonth))} PoP · Complete by <span class="pop-deadline-copy">· ${escapeHtml(countdown)}</span></span>
     <strong class="pop-deadline-date">${escapeHtml(dateLabel)}</strong>
-    <span class="pop-deadline-copy">${escapeHtml(countdown)}</span>
     <p class="pop-deadline-copy">Meet the PoP requirements by the end of this day.</p>
   `;
 }
