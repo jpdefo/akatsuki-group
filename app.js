@@ -1656,7 +1656,7 @@ function renderProgressViews() {
   }
 
   if (elements.popDeadline) {
-    elements.popDeadline.textContent = getPopDeadlineText(selectedMonthKey);
+    elements.popDeadline.innerHTML = buildPopDeadlineMarkup(selectedMonthKey);
   }
 
   renderPopEffortCards(monthlyWins);
@@ -4122,24 +4122,28 @@ function getPenaltyDeadlineForMonth(popMonth) {
   return new Date(Date.UTC(year, month + PENALTY_GRACE_MONTHS, 1));
 }
 
-// The deadline is a UTC calendar date (1st of the month); format it in UTC so it
-function getPopDeadlineText(popMonth) {
+function buildPopDeadlineMarkup(popMonth) {
   const deadline = getPenaltyDeadlineForMonth(popMonth);
   if (!deadline) {
-    return "Select a year and month to see its PoP deadline.";
+    return '<strong class="pop-deadline-label">PoP deadline</strong><p class="pop-deadline-copy">Select a year and month to see its deadline.</p>';
   }
   if (popMonth < PENALTY_TRACKING_START_MONTH) {
-    return "PoP months before January 2026 are exempt from penalties.";
+    return '<strong class="pop-deadline-label">No penalty deadline</strong><p class="pop-deadline-copy">PoP months before January 2026 are exempt from penalties.</p>';
   }
   const lastDay = new Date(deadline);
   lastDay.setUTCDate(lastDay.getUTCDate() - 1);
   const dateLabel = lastDay.toLocaleDateString("en-US", {
     timeZone: "UTC", year: "numeric", month: "long", day: "numeric",
   });
-  return `PoP deadline for ${formatMonthKey(popMonth)}: end of ${dateLabel}.`;
+  return `
+    <span class="pop-deadline-label">${escapeHtml(formatMonthKey(popMonth))} PoP · Complete by</span>
+    <strong class="pop-deadline-date">${escapeHtml(dateLabel)}</strong>
+    <p class="pop-deadline-copy">Meet the PoP requirements by the end of this day.</p>
+  `;
 }
 
 // reads "Jun 1" everywhere instead of slipping a day in negative timezones.
+// The deadline is a UTC calendar date (1st of the month); format it in UTC so it
 function formatPenaltyDeadline(date) {
   if (!(date instanceof Date) || !Number.isFinite(date.getTime())) {
     return "-";
