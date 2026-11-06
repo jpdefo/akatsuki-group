@@ -4135,19 +4135,15 @@ function buildPopDeadlineMarkup(popMonth) {
   const dateLabel = lastDay.toLocaleDateString("en-US", {
     timeZone: "UTC", year: "numeric", month: "long", day: "numeric",
   });
-  const daysLeft = Math.round((lastDay.getTime() - Date.parse(`${todayISO()}T00:00:00Z`)) / 86400000);
-  const countdown = daysLeft < 0 ? "Deadline passed"
-    : daysLeft === 0 ? "Due today"
-      : `${daysLeft} ${daysLeft === 1 ? "day" : "days"} left`;
   return `
-    <span class="pop-deadline-label">Complete by</span>
+    <span class="pop-deadline-label">${escapeHtml(formatMonthKey(popMonth))} PoP · Complete by</span>
     <strong class="pop-deadline-date">${escapeHtml(dateLabel)}</strong>
-    <p class="pop-deadline-copy"><span class="pop-deadline-countdown">${escapeHtml(countdown)}</span> · End of day</p>
+    <p class="pop-deadline-copy">Meet the PoP requirements by the end of this day.</p>
   `;
 }
 
-// The deadline is a UTC calendar date (1st of the month); format it in UTC so it
 // reads "Jun 1" everywhere instead of slipping a day in negative timezones.
+// The deadline is a UTC calendar date (1st of the month); format it in UTC so it
 function formatPenaltyDeadline(date) {
   if (!(date instanceof Date) || !Number.isFinite(date.getTime())) {
     return "-";
