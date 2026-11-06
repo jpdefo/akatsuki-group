@@ -4135,9 +4135,14 @@ function buildPopDeadlineMarkup(popMonth) {
   const dateLabel = lastDay.toLocaleDateString("en-US", {
     timeZone: "UTC", year: "numeric", month: "long", day: "numeric",
   });
+  const daysLeft = Math.round((lastDay.getTime() - Date.parse(`${todayISO()}T00:00:00Z`)) / 86400000);
+  const countdown = daysLeft < 0 ? "Deadline passed"
+    : daysLeft === 0 ? "Due today"
+      : `${daysLeft} ${daysLeft === 1 ? "day" : "days"} left`;
   return `
     <span class="pop-deadline-label">${escapeHtml(formatMonthKey(popMonth))} PoP · Complete by</span>
     <strong class="pop-deadline-date">${escapeHtml(dateLabel)}</strong>
+    <span class="pop-deadline-copy">${escapeHtml(countdown)}</span>
     <p class="pop-deadline-copy">Meet the PoP requirements by the end of this day.</p>
   `;
 }
