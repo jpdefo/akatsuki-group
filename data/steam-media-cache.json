@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-02T13:56:56.829533+00:00",
+  "updatedAt": "2026-11-07T11:58:16.581388+00:00",
   "apps": {
     "3288210": {
       "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3288210/2e13226847bb546625411aed75e74471f6705b18/header.jpg?t=1777969480",
@@ -5413,6 +5413,15 @@
       "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4260840/9019bf1a7bd4bdc130d607dc7d9859b79d7cac28/capsule_184x69.jpg?t=1792676075",
       "releaseDate": "2027-01-14",
       "comingSoon": true
+    },
+    "1636440": {
+      "appId": 1636440,
+      "name": "SILENT HILL: Townfall",
+      "headerImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1636440/0ed1cb4bc30631f95b92f7f13bb06c15d49b4afa/header.jpg?t=1792553312",
+      "capsuleImageUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1636440/f0dfc016ffde1f3001a60e106bc0c2063fefd695/capsule_231x87.jpg?t=1792553312",
+      "capsuleSmallUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1636440/f0dfc016ffde1f3001a60e106bc0c2063fefd695/capsule_184x69.jpg?t=1792553312",
+      "releaseDate": "2026-09-23",
+      "comingSoon": false
     }
   }
 }

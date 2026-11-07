@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-06T13:19:54.949209+00:00",
+  "updatedAt": "2026-11-07T11:59:18.670043+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2533,16 +2533,16 @@
       "appId": 2416450,
       "title": "MOUSE: P.I. For Hire",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2416450/achievements/",
-      "playtimeHours": 1.85,
+      "playtimeHours": 2.52,
       "visible": true,
-      "earnedAchievements": 8,
+      "earnedAchievements": 10,
       "totalAchievements": 34,
-      "achievementPercent": 24,
+      "achievementPercent": 29,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.85
+      "achievementsPlaytimeHours": 2.52
     },
     {
       "username": "BojanNS987",
@@ -2762,16 +2762,16 @@
       "appId": 2677660,
       "title": "Indiana Jones and the Great Circle",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2677660/achievements/",
-      "playtimeHours": 13.25,
+      "playtimeHours": 14.53,
       "visible": true,
-      "earnedAchievements": 18,
+      "earnedAchievements": 20,
       "totalAchievements": 55,
-      "achievementPercent": 33,
+      "achievementPercent": 36,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 13.25,
+      "achievementsPlaytimeHours": 14.53,
       "popThresholdMetAt": "2026-10-22T10:44:44.559716+00:00"
     },
     {
@@ -6658,7 +6658,7 @@
       "appId": 1771300,
       "title": "Kingdom Come: Deliverance II",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1771300/achievements/",
-      "playtimeHours": 0.5,
+      "playtimeHours": 1.02,
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 83,
@@ -6667,7 +6667,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.5
+      "achievementsPlaytimeHours": 1.02
     },
     {
       "username": "burntreynolds444",
@@ -6870,16 +6870,17 @@
       "appId": 2091020,
       "title": "Blades of Fire",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/2091020/achievements/",
-      "playtimeHours": 14.58,
+      "playtimeHours": 17.1,
       "visible": true,
-      "earnedAchievements": 3,
+      "earnedAchievements": 4,
       "totalAchievements": 45,
-      "achievementPercent": 7,
+      "achievementPercent": 9,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 14.58
+      "achievementsPlaytimeHours": 17.1,
+      "popThresholdMetAt": "2026-11-07T11:59:18.669351+00:00"
     },
     {
       "username": "burntreynolds444",
@@ -6993,16 +6994,16 @@
       "appId": 2358720,
       "title": "Black Myth: Wukong",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/2358720/achievements/",
-      "playtimeHours": 6.62,
+      "playtimeHours": 7.33,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 1,
       "totalAchievements": 81,
-      "achievementPercent": 0,
+      "achievementPercent": 1,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 6.62
+      "achievementsPlaytimeHours": 7.33
     },
     {
       "username": "burntreynolds444",
@@ -9450,7 +9451,7 @@
       "appId": 2515020,
       "title": "FINAL FANTASY XVI COMPLETE EDITION",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2515020/achievements/",
-      "playtimeHours": 9.22,
+      "playtimeHours": 10.6,
       "visible": true,
       "earnedAchievements": 5,
       "totalAchievements": 69,
@@ -9459,7 +9460,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 9.22
+      "achievementsPlaytimeHours": 10.6
     },
     {
       "username": "chOOkity",
@@ -17664,7 +17665,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/3321460/achievements/",
-      "playtimeHours": 3.12,
+      "playtimeHours": 4.55,
       "visible": true,
       "earnedAchievements": 1,
       "totalAchievements": 41,
@@ -17673,7 +17674,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 3.12
+      "achievementsPlaytimeHours": 4.55
     },
     {
       "username": "Horseflesh",
@@ -35988,16 +35989,16 @@
       "appId": 3470960,
       "title": "Tales of Eternia Remastered",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3470960/achievements/",
-      "playtimeHours": 2.25,
+      "playtimeHours": 10.48,
       "visible": true,
-      "earnedAchievements": 2,
+      "earnedAchievements": 7,
       "totalAchievements": 50,
-      "achievementPercent": 4,
+      "achievementPercent": 14,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.25
+      "achievementsPlaytimeHours": 10.48
     },
     {
       "username": "Wintermute101",
@@ -71398,9 +71399,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-11-06T13:18:53.720030+00:00",
+  "libraryUpdatedAt": "2026-11-07T11:58:20.473155+00:00",
   "libraryStats": {
-    "durationSeconds": 6.25,
+    "durationSeconds": 3.56,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71409,12 +71410,12 @@
     "totalPlaytimeRows": 14622
   },
   "stats": {
-    "durationSeconds": 67.49,
+    "durationSeconds": 61.76,
     "targetWins": 2417,
     "uniqueProgressTargets": 2412,
     "libraryPlaytimeHits": 2403,
-    "cachedReuses": 2357,
-    "achievementSuccesses": 10,
+    "cachedReuses": 2355,
+    "achievementSuccesses": 12,
     "achievementErrors": 45,
     "cachedFallbacks": 45,
     "hltbTitlesRequested": 1301,
