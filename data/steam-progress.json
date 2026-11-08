@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T11:59:18.670043+00:00",
+  "updatedAt": "2026-11-08T12:18:27.325721+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2427,16 +2427,16 @@
       "appId": 2255370,
       "title": "Directive 8020",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2255370/achievements/",
-      "playtimeHours": 3.35,
+      "playtimeHours": 4.12,
       "visible": true,
-      "earnedAchievements": 6,
+      "earnedAchievements": 7,
       "totalAchievements": 30,
-      "achievementPercent": 20,
+      "achievementPercent": 23,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 3.35,
+      "achievementsPlaytimeHours": 4.12,
       "popThresholdMetAt": "2026-10-27T11:09:21.827923+00:00"
     },
     {
@@ -2533,16 +2533,17 @@
       "appId": 2416450,
       "title": "MOUSE: P.I. For Hire",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2416450/achievements/",
-      "playtimeHours": 2.52,
+      "playtimeHours": 3.43,
       "visible": true,
-      "earnedAchievements": 10,
+      "earnedAchievements": 11,
       "totalAchievements": 34,
-      "achievementPercent": 29,
+      "achievementPercent": 32,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.52
+      "achievementsPlaytimeHours": 3.43,
+      "popThresholdMetAt": "2026-11-08T12:18:27.324787+00:00"
     },
     {
       "username": "BojanNS987",
@@ -6994,16 +6995,16 @@
       "appId": 2358720,
       "title": "Black Myth: Wukong",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/2358720/achievements/",
-      "playtimeHours": 7.33,
+      "playtimeHours": 11.1,
       "visible": true,
-      "earnedAchievements": 1,
+      "earnedAchievements": 2,
       "totalAchievements": 81,
-      "achievementPercent": 1,
+      "achievementPercent": 2,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 7.33
+      "achievementsPlaytimeHours": 11.1
     },
     {
       "username": "burntreynolds444",
@@ -7813,12 +7814,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 160.22,
+      "playtimeHours": 161.3,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 160.22,
+      "achievementsPlaytimeHours": 161.3,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -8936,15 +8937,15 @@
       "title": "Once Upon A KATAMARI",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/1880620/achievements/",
       "visible": true,
-      "earnedAchievements": 20,
+      "earnedAchievements": 23,
       "totalAchievements": 38,
-      "achievementPercent": 53,
-      "playtimeHours": 14.82,
+      "achievementPercent": 61,
+      "playtimeHours": 15.87,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 14.82,
+      "achievementsPlaytimeHours": 15.87,
       "popThresholdMetAt": "2026-06-26T07:11:08.798106+00:00"
     },
     {
@@ -14398,7 +14399,7 @@
       "appId": 1962700,
       "title": "Subnautica 2",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/1962700/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 0.03,
       "visible": false,
       "earnedAchievements": 0,
       "totalAchievements": 0,
@@ -14624,16 +14625,17 @@
       "appId": 2968420,
       "title": "PowerWash Simulator 2",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/2968420/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 8.98,
       "visible": true,
-      "earnedAchievements": 0,
-      "totalAchievements": 50,
-      "achievementPercent": 0,
+      "earnedAchievements": 13,
+      "totalAchievements": 60,
+      "achievementPercent": 22,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 8.98,
+      "popThresholdMetAt": "2026-11-08T12:18:27.325120+00:00"
     },
     {
       "username": "Ernesttico",
@@ -19698,12 +19700,12 @@
       "earnedAchievements": 36,
       "totalAchievements": 46,
       "achievementPercent": 78,
-      "playtimeHours": 64.17,
+      "playtimeHours": 64.7,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 64.17,
+      "achievementsPlaytimeHours": 64.7,
       "popThresholdMetAt": "2026-06-26T07:11:08.799330+00:00"
     },
     {
@@ -21186,7 +21188,7 @@
       "appId": 3357650,
       "title": "PRAGMATA",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/3357650/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 0.73,
       "visible": false,
       "earnedAchievements": 0,
       "totalAchievements": 0,
@@ -26110,7 +26112,7 @@
       "appId": 1371980,
       "title": "No Rest for the Wicked",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/1371980/achievements/",
-      "playtimeHours": 0.97,
+      "playtimeHours": 4.98,
       "visible": false,
       "earnedAchievements": 0,
       "totalAchievements": 0,
@@ -26118,7 +26120,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "error": "HTTP Error 400: Bad Request"
+      "error": "HTTP Error 400: Bad Request",
+      "popThresholdMetAt": "2026-11-08T12:18:27.325395+00:00"
     },
     {
       "username": "leniu",
@@ -35989,16 +35992,16 @@
       "appId": 3470960,
       "title": "Tales of Eternia Remastered",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3470960/achievements/",
-      "playtimeHours": 10.48,
+      "playtimeHours": 17.92,
       "visible": true,
-      "earnedAchievements": 7,
+      "earnedAchievements": 11,
       "totalAchievements": 50,
-      "achievementPercent": 14,
+      "achievementPercent": 22,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 10.48
+      "achievementsPlaytimeHours": 17.92
     },
     {
       "username": "Wintermute101",
@@ -71399,9 +71402,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-11-07T11:58:20.473155+00:00",
+  "libraryUpdatedAt": "2026-11-08T12:17:31.151374+00:00",
   "libraryStats": {
-    "durationSeconds": 3.56,
+    "durationSeconds": 5.15,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71410,7 +71413,7 @@
     "totalPlaytimeRows": 14622
   },
   "stats": {
-    "durationSeconds": 61.76,
+    "durationSeconds": 61.34,
     "targetWins": 2417,
     "uniqueProgressTargets": 2412,
     "libraryPlaytimeHits": 2403,
