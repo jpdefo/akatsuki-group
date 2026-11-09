@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T12:18:27.325721+00:00",
+  "updatedAt": "2026-11-09T14:30:09.182150+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2427,7 +2427,7 @@
       "appId": 2255370,
       "title": "Directive 8020",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2255370/achievements/",
-      "playtimeHours": 4.12,
+      "playtimeHours": 4.4,
       "visible": true,
       "earnedAchievements": 7,
       "totalAchievements": 30,
@@ -2436,7 +2436,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 4.12,
+      "achievementsPlaytimeHours": 4.4,
       "popThresholdMetAt": "2026-10-27T11:09:21.827923+00:00"
     },
     {
@@ -2533,16 +2533,16 @@
       "appId": 2416450,
       "title": "MOUSE: P.I. For Hire",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2416450/achievements/",
-      "playtimeHours": 3.43,
+      "playtimeHours": 3.72,
       "visible": true,
-      "earnedAchievements": 11,
+      "earnedAchievements": 12,
       "totalAchievements": 34,
-      "achievementPercent": 32,
+      "achievementPercent": 35,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 3.43,
+      "achievementsPlaytimeHours": 3.72,
       "popThresholdMetAt": "2026-11-08T12:18:27.324787+00:00"
     },
     {
@@ -2746,7 +2746,7 @@
       "appId": 2668510,
       "title": "Red Dead Redemption",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2668510/achievements/",
-      "playtimeHours": 7.15,
+      "playtimeHours": 7.18,
       "visible": true,
       "earnedAchievements": 3,
       "totalAchievements": 51,
@@ -2755,7 +2755,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 7.15
+      "achievementsPlaytimeHours": 7.18
     },
     {
       "username": "BojanNS987",
@@ -8937,15 +8937,15 @@
       "title": "Once Upon A KATAMARI",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/1880620/achievements/",
       "visible": true,
-      "earnedAchievements": 23,
+      "earnedAchievements": 28,
       "totalAchievements": 38,
-      "achievementPercent": 61,
-      "playtimeHours": 15.87,
+      "achievementPercent": 74,
+      "playtimeHours": 17.7,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 15.87,
+      "achievementsPlaytimeHours": 17.7,
       "popThresholdMetAt": "2026-06-26T07:11:08.798106+00:00"
     },
     {
@@ -13813,16 +13813,17 @@
       "appId": 1309710,
       "title": "The Stone of Madness",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/1309710/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 7.27,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 7,
       "totalAchievements": 41,
-      "achievementPercent": 0,
+      "achievementPercent": 17,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 7.27,
+      "popThresholdMetAt": "2026-11-09T14:30:09.181496+00:00"
     },
     {
       "username": "Ernesttico",
@@ -14399,7 +14400,7 @@
       "appId": 1962700,
       "title": "Subnautica 2",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/1962700/achievements/",
-      "playtimeHours": 0.03,
+      "playtimeHours": 4.0,
       "visible": false,
       "earnedAchievements": 0,
       "totalAchievements": 0,
@@ -14407,7 +14408,8 @@
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "error": "HTTP Error 400: Bad Request"
+      "error": "HTTP Error 400: Bad Request",
+      "popThresholdMetAt": "2026-11-09T14:30:09.181526+00:00"
     },
     {
       "username": "Ernesttico",
@@ -17667,7 +17669,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/3321460/achievements/",
-      "playtimeHours": 4.55,
+      "playtimeHours": 10.53,
       "visible": true,
       "earnedAchievements": 1,
       "totalAchievements": 41,
@@ -17676,7 +17678,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 4.55
+      "achievementsPlaytimeHours": 10.53
     },
     {
       "username": "Horseflesh",
@@ -35992,7 +35994,7 @@
       "appId": 3470960,
       "title": "Tales of Eternia Remastered",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3470960/achievements/",
-      "playtimeHours": 17.92,
+      "playtimeHours": 21.4,
       "visible": true,
       "earnedAchievements": 11,
       "totalAchievements": 50,
@@ -36001,7 +36003,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 17.92
+      "achievementsPlaytimeHours": 21.4
     },
     {
       "username": "Wintermute101",
@@ -71402,23 +71404,23 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-11-08T12:17:31.151374+00:00",
+  "libraryUpdatedAt": "2026-11-09T14:29:05.972542+00:00",
   "libraryStats": {
-    "durationSeconds": 5.15,
+    "durationSeconds": 7.48,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14622
+    "totalPlaytimeRows": 14624
   },
   "stats": {
-    "durationSeconds": 61.34,
+    "durationSeconds": 70.7,
     "targetWins": 2417,
     "uniqueProgressTargets": 2412,
     "libraryPlaytimeHits": 2403,
-    "cachedReuses": 2355,
-    "achievementSuccesses": 12,
+    "cachedReuses": 2356,
+    "achievementSuccesses": 11,
     "achievementErrors": 45,
     "cachedFallbacks": 45,
     "hltbTitlesRequested": 1301,
