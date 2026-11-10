@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T14:30:09.182150+00:00",
+  "updatedAt": "2026-11-10T13:51:46.440734+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -8937,15 +8937,15 @@
       "title": "Once Upon A KATAMARI",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/1880620/achievements/",
       "visible": true,
-      "earnedAchievements": 28,
+      "earnedAchievements": 30,
       "totalAchievements": 38,
-      "achievementPercent": 74,
-      "playtimeHours": 17.7,
+      "achievementPercent": 79,
+      "playtimeHours": 20.35,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 17.7,
+      "achievementsPlaytimeHours": 20.35,
       "popThresholdMetAt": "2026-06-26T07:11:08.798106+00:00"
     },
     {
@@ -17669,7 +17669,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/3321460/achievements/",
-      "playtimeHours": 10.53,
+      "playtimeHours": 12.5,
       "visible": true,
       "earnedAchievements": 1,
       "totalAchievements": 41,
@@ -17678,7 +17678,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 10.53
+      "achievementsPlaytimeHours": 12.5
     },
     {
       "username": "Horseflesh",
@@ -21050,16 +21050,16 @@
       "appId": 2680010,
       "title": "The First Berserker: Khazan",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/2680010/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 5.22,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 19,
       "totalAchievements": 57,
-      "achievementPercent": 0,
+      "achievementPercent": 33,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 5.22
     },
     {
       "username": "Koalala",
@@ -26114,7 +26114,7 @@
       "appId": 1371980,
       "title": "No Rest for the Wicked",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/1371980/achievements/",
-      "playtimeHours": 4.98,
+      "playtimeHours": 6.43,
       "visible": false,
       "earnedAchievements": 0,
       "totalAchievements": 0,
@@ -35994,16 +35994,16 @@
       "appId": 3470960,
       "title": "Tales of Eternia Remastered",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3470960/achievements/",
-      "playtimeHours": 21.4,
+      "playtimeHours": 22.58,
       "visible": true,
-      "earnedAchievements": 11,
+      "earnedAchievements": 13,
       "totalAchievements": 50,
-      "achievementPercent": 22,
+      "achievementPercent": 26,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 21.4
+      "achievementsPlaytimeHours": 22.58
     },
     {
       "username": "Wintermute101",
@@ -71404,23 +71404,23 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-11-09T14:29:05.972542+00:00",
+  "libraryUpdatedAt": "2026-11-10T13:50:45.646472+00:00",
   "libraryStats": {
-    "durationSeconds": 7.48,
+    "durationSeconds": 7.39,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14624
+    "totalPlaytimeRows": 14626
   },
   "stats": {
-    "durationSeconds": 70.7,
+    "durationSeconds": 68.2,
     "targetWins": 2417,
     "uniqueProgressTargets": 2412,
     "libraryPlaytimeHits": 2403,
-    "cachedReuses": 2356,
-    "achievementSuccesses": 11,
+    "cachedReuses": 2359,
+    "achievementSuccesses": 8,
     "achievementErrors": 45,
     "cachedFallbacks": 45,
     "hltbTitlesRequested": 1301,
