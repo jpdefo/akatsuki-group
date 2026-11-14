@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T13:30:51.156172+00:00",
+  "updatedAt": "2026-11-14T12:36:13.732070+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2428,16 +2428,16 @@
       "appId": 2255370,
       "title": "Directive 8020",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/2255370/achievements/",
-      "playtimeHours": 5.95,
+      "playtimeHours": 7.47,
       "visible": true,
-      "earnedAchievements": 9,
+      "earnedAchievements": 11,
       "totalAchievements": 30,
-      "achievementPercent": 30,
+      "achievementPercent": 37,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 5.95,
+      "achievementsPlaytimeHours": 7.47,
       "popThresholdMetAt": "2026-10-27T11:09:21.827923+00:00"
     },
     {
@@ -6996,16 +6996,17 @@
       "appId": 2358720,
       "title": "Black Myth: Wukong",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/2358720/achievements/",
-      "playtimeHours": 12.52,
+      "playtimeHours": 15.72,
       "visible": true,
-      "earnedAchievements": 4,
+      "earnedAchievements": 8,
       "totalAchievements": 81,
-      "achievementPercent": 5,
+      "achievementPercent": 10,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 12.52
+      "achievementsPlaytimeHours": 15.72,
+      "popThresholdMetAt": "2026-11-14T12:36:13.731311+00:00"
     },
     {
       "username": "burntreynolds444",
@@ -7815,12 +7816,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 161.72,
+      "playtimeHours": 162.13,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 161.72,
+      "achievementsPlaytimeHours": 162.13,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -9453,16 +9454,17 @@
       "appId": 2515020,
       "title": "FINAL FANTASY XVI COMPLETE EDITION",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2515020/achievements/",
-      "playtimeHours": 10.6,
+      "playtimeHours": 13.03,
       "visible": true,
-      "earnedAchievements": 5,
+      "earnedAchievements": 7,
       "totalAchievements": 69,
-      "achievementPercent": 7,
+      "achievementPercent": 10,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 10.6
+      "achievementsPlaytimeHours": 13.03,
+      "popThresholdMetAt": "2026-11-14T12:36:13.731378+00:00"
     },
     {
       "username": "chOOkity",
@@ -14595,16 +14597,16 @@
       "appId": 2863680,
       "title": "ZERO PARADES: Director's Cut",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/2863680/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 2.03,
       "visible": true,
-      "earnedAchievements": 0,
-      "totalAchievements": 55,
-      "achievementPercent": 0,
+      "earnedAchievements": 1,
+      "totalAchievements": 61,
+      "achievementPercent": 2,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 2.03
     },
     {
       "username": "Ernesttico",
@@ -27438,7 +27440,7 @@
       "appId": 3280350,
       "title": "DEATH STRANDING 2: ON THE BEACH",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/3280350/achievements/",
-      "playtimeHours": 13.57,
+      "playtimeHours": 14.73,
       "visible": true,
       "earnedAchievements": 10,
       "totalAchievements": 55,
@@ -27447,7 +27449,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 13.57,
+      "achievementsPlaytimeHours": 14.73,
       "popThresholdMetAt": "2026-11-13T13:30:51.155849+00:00"
     },
     {
@@ -35998,16 +36000,16 @@
       "appId": 3470960,
       "title": "Tales of Eternia Remastered",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/3470960/achievements/",
-      "playtimeHours": 30.8,
+      "playtimeHours": 34.88,
       "visible": true,
-      "earnedAchievements": 19,
+      "earnedAchievements": 23,
       "totalAchievements": 50,
-      "achievementPercent": 38,
+      "achievementPercent": 46,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 30.8
+      "achievementsPlaytimeHours": 34.88
     },
     {
       "username": "Wintermute101",
@@ -71408,9 +71410,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-11-13T13:29:46.880780+00:00",
+  "libraryUpdatedAt": "2026-11-14T12:35:14.087416+00:00",
   "libraryStats": {
-    "durationSeconds": 7.9,
+    "durationSeconds": 7.34,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71419,12 +71421,12 @@
     "totalPlaytimeRows": 14626
   },
   "stats": {
-    "durationSeconds": 72.18,
+    "durationSeconds": 66.99,
     "targetWins": 2417,
     "uniqueProgressTargets": 2412,
     "libraryPlaytimeHits": 2403,
-    "cachedReuses": 2358,
-    "achievementSuccesses": 9,
+    "cachedReuses": 2356,
+    "achievementSuccesses": 11,
     "achievementErrors": 45,
     "cachedFallbacks": 45,
     "hltbTitlesRequested": 1301,
