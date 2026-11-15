@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T12:36:13.732070+00:00",
+  "updatedAt": "2026-11-15T13:02:15.338238+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -6996,16 +6996,16 @@
       "appId": 2358720,
       "title": "Black Myth: Wukong",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/2358720/achievements/",
-      "playtimeHours": 15.72,
+      "playtimeHours": 16.87,
       "visible": true,
-      "earnedAchievements": 8,
+      "earnedAchievements": 9,
       "totalAchievements": 81,
-      "achievementPercent": 10,
+      "achievementPercent": 11,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 15.72,
+      "achievementsPlaytimeHours": 16.87,
       "popThresholdMetAt": "2026-11-14T12:36:13.731311+00:00"
     },
     {
@@ -7816,12 +7816,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 162.13,
+      "playtimeHours": 162.8,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 162.13,
+      "achievementsPlaytimeHours": 162.8,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -8939,15 +8939,15 @@
       "title": "Once Upon A KATAMARI",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/1880620/achievements/",
       "visible": true,
-      "earnedAchievements": 31,
+      "earnedAchievements": 33,
       "totalAchievements": 38,
-      "achievementPercent": 82,
-      "playtimeHours": 22.02,
+      "achievementPercent": 87,
+      "playtimeHours": 24.23,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 22.02,
+      "achievementsPlaytimeHours": 24.23,
       "popThresholdMetAt": "2026-06-26T07:11:08.798106+00:00"
     },
     {
@@ -12708,16 +12708,16 @@
       "appId": 359870,
       "title": "FINAL FANTASY X/X-2 HD Remaster",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/359870/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 1.23,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 2,
       "totalAchievements": 69,
-      "achievementPercent": 0,
+      "achievementPercent": 3,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 1.23
     },
     {
       "username": "Ernesttico",
@@ -14597,16 +14597,16 @@
       "appId": 2863680,
       "title": "ZERO PARADES: Director's Cut",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/2863680/achievements/",
-      "playtimeHours": 2.03,
+      "playtimeHours": 5.83,
       "visible": true,
-      "earnedAchievements": 1,
+      "earnedAchievements": 2,
       "totalAchievements": 61,
-      "achievementPercent": 2,
+      "achievementPercent": 3,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.03
+      "achievementsPlaytimeHours": 5.83
     },
     {
       "username": "Ernesttico",
@@ -27440,16 +27440,16 @@
       "appId": 3280350,
       "title": "DEATH STRANDING 2: ON THE BEACH",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/3280350/achievements/",
-      "playtimeHours": 14.73,
+      "playtimeHours": 19.68,
       "visible": true,
-      "earnedAchievements": 10,
+      "earnedAchievements": 13,
       "totalAchievements": 55,
-      "achievementPercent": 18,
+      "achievementPercent": 24,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 14.73,
+      "achievementsPlaytimeHours": 19.68,
       "popThresholdMetAt": "2026-11-13T13:30:51.155849+00:00"
     },
     {
@@ -42832,7 +42832,7 @@
       "appId": 2623190,
       "title": "The Elder Scrolls IV: Oblivion Remast...",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/2623190/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 0.13,
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 60,
@@ -42841,7 +42841,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 0.13
     },
     {
       "username": "zettaivanugen",
@@ -71410,9 +71410,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-11-14T12:35:14.087416+00:00",
+  "libraryUpdatedAt": "2026-11-15T13:01:12.863949+00:00",
   "libraryStats": {
-    "durationSeconds": 7.34,
+    "durationSeconds": 7.6,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71421,7 +71421,7 @@
     "totalPlaytimeRows": 14626
   },
   "stats": {
-    "durationSeconds": 66.99,
+    "durationSeconds": 70.09,
     "targetWins": 2417,
     "uniqueProgressTargets": 2412,
     "libraryPlaytimeHits": 2403,
