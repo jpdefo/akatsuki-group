@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T13:02:15.338238+00:00",
+  "updatedAt": "2026-11-16T14:06:32.023551+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -8939,15 +8939,15 @@
       "title": "Once Upon A KATAMARI",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/1880620/achievements/",
       "visible": true,
-      "earnedAchievements": 33,
+      "earnedAchievements": 35,
       "totalAchievements": 38,
-      "achievementPercent": 87,
-      "playtimeHours": 24.23,
+      "achievementPercent": 92,
+      "playtimeHours": 25.73,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 24.23,
+      "achievementsPlaytimeHours": 25.73,
       "popThresholdMetAt": "2026-06-26T07:11:08.798106+00:00"
     },
     {
@@ -12708,16 +12708,16 @@
       "appId": 359870,
       "title": "FINAL FANTASY X/X-2 HD Remaster",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/359870/achievements/",
-      "playtimeHours": 1.23,
+      "playtimeHours": 11.68,
       "visible": true,
-      "earnedAchievements": 2,
+      "earnedAchievements": 4,
       "totalAchievements": 69,
-      "achievementPercent": 3,
+      "achievementPercent": 6,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.23
+      "achievementsPlaytimeHours": 11.68
     },
     {
       "username": "Ernesttico",
@@ -17673,7 +17673,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/3321460/achievements/",
-      "playtimeHours": 20.4,
+      "playtimeHours": 22.18,
       "visible": true,
       "earnedAchievements": 2,
       "totalAchievements": 41,
@@ -17682,7 +17682,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 20.4
+      "achievementsPlaytimeHours": 22.18
     },
     {
       "username": "Horseflesh",
@@ -19706,12 +19706,12 @@
       "earnedAchievements": 36,
       "totalAchievements": 46,
       "achievementPercent": 78,
-      "playtimeHours": 65.53,
+      "playtimeHours": 66.18,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 65.53,
+      "achievementsPlaytimeHours": 66.18,
       "popThresholdMetAt": "2026-06-26T07:11:08.799330+00:00"
     },
     {
@@ -27440,16 +27440,16 @@
       "appId": 3280350,
       "title": "DEATH STRANDING 2: ON THE BEACH",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/3280350/achievements/",
-      "playtimeHours": 19.68,
+      "playtimeHours": 22.62,
       "visible": true,
-      "earnedAchievements": 13,
+      "earnedAchievements": 14,
       "totalAchievements": 55,
-      "achievementPercent": 24,
+      "achievementPercent": 25,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 19.68,
+      "achievementsPlaytimeHours": 22.62,
       "popThresholdMetAt": "2026-11-13T13:30:51.155849+00:00"
     },
     {
@@ -35917,7 +35917,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 165.07,
+      "playtimeHours": 168.22,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -42832,16 +42832,16 @@
       "appId": 2623190,
       "title": "The Elder Scrolls IV: Oblivion Remast...",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/2623190/achievements/",
-      "playtimeHours": 0.13,
+      "playtimeHours": 2.77,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 6,
       "totalAchievements": 60,
-      "achievementPercent": 0,
+      "achievementPercent": 10,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.13
+      "achievementsPlaytimeHours": 2.77
     },
     {
       "username": "zettaivanugen",
@@ -71410,23 +71410,23 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-11-15T13:01:12.863949+00:00",
+  "libraryUpdatedAt": "2026-11-16T14:05:28.386291+00:00",
   "libraryStats": {
-    "durationSeconds": 7.6,
+    "durationSeconds": 8.55,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14626
+    "totalPlaytimeRows": 14629
   },
   "stats": {
-    "durationSeconds": 70.09,
+    "durationSeconds": 72.19,
     "targetWins": 2417,
     "uniqueProgressTargets": 2412,
     "libraryPlaytimeHits": 2403,
-    "cachedReuses": 2356,
-    "achievementSuccesses": 11,
+    "cachedReuses": 2357,
+    "achievementSuccesses": 10,
     "achievementErrors": 45,
     "cachedFallbacks": 45,
     "hltbTitlesRequested": 1301,
