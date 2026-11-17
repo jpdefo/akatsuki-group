@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-16T14:06:32.023551+00:00",
+  "updatedAt": "2026-11-17T15:00:04.854864+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2053,7 +2053,7 @@
       "appId": 1933000,
       "title": "Luna Abyss",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/1933000/achievements/",
-      "playtimeHours": 2.65,
+      "playtimeHours": 2.93,
       "visible": true,
       "earnedAchievements": 9,
       "totalAchievements": 45,
@@ -2062,7 +2062,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.65,
+      "achievementsPlaytimeHours": 2.93,
       "popThresholdMetAt": "2026-11-13T13:30:51.155171+00:00"
     },
     {
@@ -2994,16 +2994,16 @@
       "appId": 3017860,
       "title": "DOOM: The Dark Ages",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/3017860/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 0.47,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 1,
       "totalAchievements": 38,
-      "achievementPercent": 0,
+      "achievementPercent": 3,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 0.47
     },
     {
       "username": "BojanNS987",
@@ -7816,12 +7816,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 162.8,
+      "playtimeHours": 163.22,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 162.8,
+      "achievementsPlaytimeHours": 163.22,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -8942,12 +8942,12 @@
       "earnedAchievements": 35,
       "totalAchievements": 38,
       "achievementPercent": 92,
-      "playtimeHours": 25.73,
+      "playtimeHours": 26.7,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 25.73,
+      "achievementsPlaytimeHours": 26.7,
       "popThresholdMetAt": "2026-06-26T07:11:08.798106+00:00"
     },
     {
@@ -12708,16 +12708,17 @@
       "appId": 359870,
       "title": "FINAL FANTASY X/X-2 HD Remaster",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/359870/achievements/",
-      "playtimeHours": 11.68,
+      "playtimeHours": 12.9,
       "visible": true,
-      "earnedAchievements": 4,
+      "earnedAchievements": 6,
       "totalAchievements": 69,
-      "achievementPercent": 6,
+      "achievementPercent": 9,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 11.68
+      "achievementsPlaytimeHours": 12.9,
+      "popThresholdMetAt": "2026-11-17T15:00:04.854255+00:00"
     },
     {
       "username": "Ernesttico",
@@ -17673,16 +17674,16 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561197971221929/stats/3321460/achievements/",
-      "playtimeHours": 22.18,
+      "playtimeHours": 24.2,
       "visible": true,
-      "earnedAchievements": 2,
+      "earnedAchievements": 3,
       "totalAchievements": 41,
-      "achievementPercent": 5,
+      "achievementPercent": 7,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 22.18
+      "achievementsPlaytimeHours": 24.2
     },
     {
       "username": "Horseflesh",
@@ -35770,16 +35771,16 @@
       "appId": 2417610,
       "title": "METAL GEAR SOLID Δ: SNAKE EATER",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2417610/achievements/",
-      "playtimeHours": 7.33,
+      "playtimeHours": 8.33,
       "visible": true,
-      "earnedAchievements": 14,
+      "earnedAchievements": 15,
       "totalAchievements": 45,
-      "achievementPercent": 31,
+      "achievementPercent": 33,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 7.33,
+      "achievementsPlaytimeHours": 8.33,
       "popThresholdMetAt": "2026-07-04T08:18:24.286908+00:00"
     },
     {
@@ -35917,7 +35918,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 168.22,
+      "playtimeHours": 170.58,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -71410,9 +71411,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-11-16T14:05:28.386291+00:00",
+  "libraryUpdatedAt": "2026-11-17T14:59:00.678562+00:00",
   "libraryStats": {
-    "durationSeconds": 8.55,
+    "durationSeconds": 8.25,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71421,12 +71422,12 @@
     "totalPlaytimeRows": 14629
   },
   "stats": {
-    "durationSeconds": 72.19,
+    "durationSeconds": 72.44,
     "targetWins": 2417,
     "uniqueProgressTargets": 2412,
     "libraryPlaytimeHits": 2403,
-    "cachedReuses": 2357,
-    "achievementSuccesses": 10,
+    "cachedReuses": 2356,
+    "achievementSuccesses": 11,
     "achievementErrors": 45,
     "cachedFallbacks": 45,
     "hltbTitlesRequested": 1301,
