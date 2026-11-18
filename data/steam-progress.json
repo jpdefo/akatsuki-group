@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-17T15:00:04.854864+00:00",
+  "updatedAt": "2026-11-18T14:41:00.767069+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -7191,16 +7191,16 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 167.38,
+      "playtimeHours": 175.4,
       "visible": true,
       "earnedAchievements": 2,
-      "totalAchievements": 34,
-      "achievementPercent": 6,
+      "totalAchievements": 41,
+      "achievementPercent": 5,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 167.38
+      "achievementsPlaytimeHours": 175.4
     },
     {
       "username": "burntreynolds444",
@@ -7816,12 +7816,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 163.22,
+      "playtimeHours": 164.02,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 163.22,
+      "achievementsPlaytimeHours": 164.02,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -8942,12 +8942,12 @@
       "earnedAchievements": 35,
       "totalAchievements": 38,
       "achievementPercent": 92,
-      "playtimeHours": 26.7,
+      "playtimeHours": 27.47,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 26.7,
+      "achievementsPlaytimeHours": 27.47,
       "popThresholdMetAt": "2026-06-26T07:11:08.798106+00:00"
     },
     {
@@ -12708,16 +12708,16 @@
       "appId": 359870,
       "title": "FINAL FANTASY X/X-2 HD Remaster",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/359870/achievements/",
-      "playtimeHours": 12.9,
+      "playtimeHours": 13.5,
       "visible": true,
-      "earnedAchievements": 6,
+      "earnedAchievements": 7,
       "totalAchievements": 69,
-      "achievementPercent": 9,
+      "achievementPercent": 10,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 12.9,
+      "achievementsPlaytimeHours": 13.5,
       "popThresholdMetAt": "2026-11-17T15:00:04.854255+00:00"
     },
     {
@@ -14684,16 +14684,16 @@
       "appId": 3357650,
       "title": "PRAGMATA",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/3357650/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 1.88,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 6,
       "totalAchievements": 35,
-      "achievementPercent": 0,
+      "achievementPercent": 17,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 1.88
     },
     {
       "username": "Ernesttico",
@@ -35771,7 +35771,7 @@
       "appId": 2417610,
       "title": "METAL GEAR SOLID Δ: SNAKE EATER",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2417610/achievements/",
-      "playtimeHours": 8.33,
+      "playtimeHours": 8.98,
       "visible": true,
       "earnedAchievements": 15,
       "totalAchievements": 45,
@@ -35780,7 +35780,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 8.33,
+      "achievementsPlaytimeHours": 8.98,
       "popThresholdMetAt": "2026-07-04T08:18:24.286908+00:00"
     },
     {
@@ -35918,7 +35918,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 170.58,
+      "playtimeHours": 172.05,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -71411,9 +71411,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-11-17T14:59:00.678562+00:00",
+  "libraryUpdatedAt": "2026-11-18T14:39:53.854728+00:00",
   "libraryStats": {
-    "durationSeconds": 8.25,
+    "durationSeconds": 6.73,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71422,12 +71422,12 @@
     "totalPlaytimeRows": 14629
   },
   "stats": {
-    "durationSeconds": 72.44,
+    "durationSeconds": 73.65,
     "targetWins": 2417,
     "uniqueProgressTargets": 2412,
     "libraryPlaytimeHits": 2403,
-    "cachedReuses": 2356,
-    "achievementSuccesses": 11,
+    "cachedReuses": 2357,
+    "achievementSuccesses": 10,
     "achievementErrors": 45,
     "cachedFallbacks": 45,
     "hltbTitlesRequested": 1301,
