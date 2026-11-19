@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T14:41:00.767069+00:00",
+  "updatedAt": "2026-11-19T14:47:18.526359+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -7191,7 +7191,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 175.4,
+      "playtimeHours": 180.58,
       "visible": true,
       "earnedAchievements": 2,
       "totalAchievements": 41,
@@ -7200,7 +7200,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 175.4
+      "achievementsPlaytimeHours": 180.58
     },
     {
       "username": "burntreynolds444",
@@ -8942,12 +8942,12 @@
       "earnedAchievements": 35,
       "totalAchievements": 38,
       "achievementPercent": 92,
-      "playtimeHours": 27.47,
+      "playtimeHours": 28.87,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 27.47,
+      "achievementsPlaytimeHours": 28.87,
       "popThresholdMetAt": "2026-06-26T07:11:08.798106+00:00"
     },
     {
@@ -14667,16 +14667,16 @@
       "appId": 3159330,
       "title": "Assassin’s Creed Shadows",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/3159330/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 1.83,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 4,
       "totalAchievements": 75,
-      "achievementPercent": 0,
+      "achievementPercent": 5,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 1.83
     },
     {
       "username": "Ernesttico",
@@ -14684,7 +14684,7 @@
       "appId": 3357650,
       "title": "PRAGMATA",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/3357650/achievements/",
-      "playtimeHours": 1.88,
+      "playtimeHours": 2.98,
       "visible": true,
       "earnedAchievements": 6,
       "totalAchievements": 35,
@@ -14693,7 +14693,8 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.88
+      "achievementsPlaytimeHours": 2.98,
+      "popThresholdMetAt": "2026-11-19T14:47:18.525564+00:00"
     },
     {
       "username": "Ernesttico",
@@ -19707,12 +19708,12 @@
       "earnedAchievements": 36,
       "totalAchievements": 46,
       "achievementPercent": 78,
-      "playtimeHours": 66.18,
+      "playtimeHours": 66.93,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 66.18,
+      "achievementsPlaytimeHours": 66.93,
       "popThresholdMetAt": "2026-06-26T07:11:08.799330+00:00"
     },
     {
@@ -21055,16 +21056,16 @@
       "appId": 2680010,
       "title": "The First Berserker: Khazan",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/2680010/achievements/",
-      "playtimeHours": 19.48,
+      "playtimeHours": 23.57,
       "visible": true,
-      "earnedAchievements": 31,
+      "earnedAchievements": 33,
       "totalAchievements": 57,
-      "achievementPercent": 54,
+      "achievementPercent": 58,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 19.48,
+      "achievementsPlaytimeHours": 23.57,
       "popThresholdMetAt": "2026-11-11T13:02:35.134518+00:00"
     },
     {
@@ -35918,7 +35919,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 172.05,
+      "playtimeHours": 174.85,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -71411,9 +71412,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-11-18T14:39:53.854728+00:00",
+  "libraryUpdatedAt": "2026-11-19T14:46:15.736888+00:00",
   "libraryStats": {
-    "durationSeconds": 6.73,
+    "durationSeconds": 10.23,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71422,7 +71423,7 @@
     "totalPlaytimeRows": 14629
   },
   "stats": {
-    "durationSeconds": 73.65,
+    "durationSeconds": 73.03,
     "targetWins": 2417,
     "uniqueProgressTargets": 2412,
     "libraryPlaytimeHits": 2403,
