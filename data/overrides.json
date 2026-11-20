@@ -1,5 +1,5 @@
 {
-  "savedAt": "2026-11-10T17:49:18.782Z",
+  "savedAt": "2026-11-20T03:09:33.472Z",
   "overrides": {
     "games": {
       "app:534380": {
@@ -25,6 +25,12 @@
         "hltbHoursOverride": 5
       },
       "app:2863680": {
+        "achievementTargetOverride": 2
+      },
+      "app:3321460": {
+        "achievementTargetOverride": 3
+      },
+      "app:3920610": {
         "achievementTargetOverride": 2
       }
     },
@@ -67,9 +73,7 @@
           }
         ]
       },
-      "sg-R91uQ": {
-        "cycleMonthOverride": "2026-04"
-      },
+      "sg-R91uQ": {},
       "sg-LqrvT": {
         "giveawayKindOverride": "extra"
       },
@@ -363,7 +367,9 @@
       }
     },
     "cycleMembers": {
-      "2026-cycle-2:koalala": {},
+      "2026-cycle-2:koalala": {
+        "status": "paused"
+      },
       "2026-cycle-2:bron99": {
         "status": "paused"
       },
