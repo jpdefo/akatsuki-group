@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T13:48:19.004302+00:00",
+  "updatedAt": "2026-11-22T13:41:30.075464+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2994,16 +2994,16 @@
       "appId": 3017860,
       "title": "DOOM: The Dark Ages",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/3017860/achievements/",
-      "playtimeHours": 1.12,
+      "playtimeHours": 1.72,
       "visible": true,
-      "earnedAchievements": 3,
+      "earnedAchievements": 5,
       "totalAchievements": 38,
-      "achievementPercent": 8,
+      "achievementPercent": 13,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.12
+      "achievementsPlaytimeHours": 1.72
     },
     {
       "username": "BojanNS987",
@@ -7191,16 +7191,16 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 194.37,
+      "playtimeHours": 202.62,
       "visible": true,
-      "earnedAchievements": 2,
+      "earnedAchievements": 3,
       "totalAchievements": 41,
-      "achievementPercent": 5,
+      "achievementPercent": 7,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 194.37
+      "achievementsPlaytimeHours": 202.62
     },
     {
       "username": "burntreynolds444",
@@ -7816,12 +7816,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 164.45,
+      "playtimeHours": 164.98,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 164.45,
+      "achievementsPlaytimeHours": 164.98,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -9578,7 +9578,7 @@
       "appId": 2863640,
       "title": "The Midnight Walk",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/2863640/achievements/",
-      "playtimeHours": 3.5,
+      "playtimeHours": 3.98,
       "visible": true,
       "earnedAchievements": 4,
       "totalAchievements": 16,
@@ -9587,7 +9587,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 3.5,
+      "achievementsPlaytimeHours": 3.98,
       "popThresholdMetAt": "2026-11-01T12:09:14.659912+00:00"
     },
     {
@@ -14704,16 +14704,17 @@
       "appId": 3375780,
       "title": "Trails in the Sky 1st Chapter",
       "progressUrl": "https://steamcommunity.com/profiles/76561197978644420/stats/3375780/achievements/",
-      "playtimeHours": 0.03,
+      "playtimeHours": 10.58,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 4,
       "totalAchievements": 43,
-      "achievementPercent": 0,
+      "achievementPercent": 9,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.03
+      "achievementsPlaytimeHours": 10.58,
+      "popThresholdMetAt": "2026-11-22T13:41:30.074878+00:00"
     },
     {
       "username": "Ernesttico",
@@ -21058,7 +21059,7 @@
       "appId": 2680010,
       "title": "The First Berserker: Khazan",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/2680010/achievements/",
-      "playtimeHours": 23.57,
+      "playtimeHours": 23.78,
       "visible": true,
       "earnedAchievements": 33,
       "totalAchievements": 57,
@@ -21067,7 +21068,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 23.57,
+      "achievementsPlaytimeHours": 23.78,
       "popThresholdMetAt": "2026-11-11T13:02:35.134518+00:00"
     },
     {
@@ -35774,16 +35775,16 @@
       "appId": 2417610,
       "title": "METAL GEAR SOLID Δ: SNAKE EATER",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/2417610/achievements/",
-      "playtimeHours": 9.4,
+      "playtimeHours": 15.63,
       "visible": true,
-      "earnedAchievements": 16,
+      "earnedAchievements": 22,
       "totalAchievements": 45,
-      "achievementPercent": 36,
+      "achievementPercent": 49,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 9.4,
+      "achievementsPlaytimeHours": 15.63,
       "popThresholdMetAt": "2026-07-04T08:18:24.286908+00:00"
     },
     {
@@ -35921,7 +35922,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 179.47,
+      "playtimeHours": 180.97,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -42836,7 +42837,7 @@
       "appId": 2623190,
       "title": "The Elder Scrolls IV: Oblivion Remast...",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/2623190/achievements/",
-      "playtimeHours": 2.77,
+      "playtimeHours": 4.77,
       "visible": true,
       "earnedAchievements": 6,
       "totalAchievements": 60,
@@ -42845,7 +42846,8 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 2.77
+      "achievementsPlaytimeHours": 4.77,
+      "popThresholdMetAt": "2026-11-22T13:41:30.075439+00:00"
     },
     {
       "username": "zettaivanugen",
@@ -71414,9 +71416,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-11-21T13:47:14.932880+00:00",
+  "libraryUpdatedAt": "2026-11-22T13:40:25.679334+00:00",
   "libraryStats": {
-    "durationSeconds": 7.72,
+    "durationSeconds": 8.93,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71425,12 +71427,12 @@
     "totalPlaytimeRows": 14633
   },
   "stats": {
-    "durationSeconds": 71.8,
+    "durationSeconds": 73.33,
     "targetWins": 2417,
     "uniqueProgressTargets": 2412,
     "libraryPlaytimeHits": 2403,
-    "cachedReuses": 2353,
-    "achievementSuccesses": 14,
+    "cachedReuses": 2355,
+    "achievementSuccesses": 12,
     "achievementErrors": 45,
     "cachedFallbacks": 45,
     "hltbTitlesRequested": 1301,
