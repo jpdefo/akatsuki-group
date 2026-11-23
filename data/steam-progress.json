@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T13:41:30.075464+00:00",
+  "updatedAt": "2026-11-23T16:38:58.921857+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2994,16 +2994,16 @@
       "appId": 3017860,
       "title": "DOOM: The Dark Ages",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/3017860/achievements/",
-      "playtimeHours": 1.72,
+      "playtimeHours": 2.52,
       "visible": true,
-      "earnedAchievements": 5,
+      "earnedAchievements": 6,
       "totalAchievements": 38,
-      "achievementPercent": 13,
+      "achievementPercent": 16,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.72
+      "achievementsPlaytimeHours": 2.52
     },
     {
       "username": "BojanNS987",
@@ -6660,16 +6660,16 @@
       "appId": 1771300,
       "title": "Kingdom Come: Deliverance II",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1771300/achievements/",
-      "playtimeHours": 1.02,
+      "playtimeHours": 2.05,
       "visible": true,
-      "earnedAchievements": 0,
+      "earnedAchievements": 1,
       "totalAchievements": 83,
-      "achievementPercent": 0,
+      "achievementPercent": 1,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 1.02
+      "achievementsPlaytimeHours": 2.05
     },
     {
       "username": "burntreynolds444",
@@ -7191,7 +7191,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 202.62,
+      "playtimeHours": 208.3,
       "visible": true,
       "earnedAchievements": 3,
       "totalAchievements": 41,
@@ -7200,7 +7200,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 202.62
+      "achievementsPlaytimeHours": 208.3
     },
     {
       "username": "burntreynolds444",
@@ -7816,12 +7816,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 164.98,
+      "playtimeHours": 165.8,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 164.98,
+      "achievementsPlaytimeHours": 165.8,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -21059,16 +21059,16 @@
       "appId": 2680010,
       "title": "The First Berserker: Khazan",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/2680010/achievements/",
-      "playtimeHours": 23.78,
+      "playtimeHours": 32.92,
       "visible": true,
-      "earnedAchievements": 33,
+      "earnedAchievements": 37,
       "totalAchievements": 57,
-      "achievementPercent": 58,
+      "achievementPercent": 65,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 23.78,
+      "achievementsPlaytimeHours": 32.92,
       "popThresholdMetAt": "2026-11-11T13:02:35.134518+00:00"
     },
     {
@@ -28411,16 +28411,17 @@
       "appId": 3681010,
       "title": "Nioh 3",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/3681010/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 7.75,
       "visible": true,
-      "earnedAchievements": 0,
-      "totalAchievements": 51,
-      "achievementPercent": 0,
+      "earnedAchievements": 11,
+      "totalAchievements": 76,
+      "achievementPercent": 14,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 7.75,
+      "popThresholdMetAt": "2026-11-23T16:38:58.921572+00:00"
     },
     {
       "username": "Oozyyy",
@@ -34452,15 +34453,16 @@
       "title": "NORCO",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/1221250/achievements/",
       "visible": true,
-      "earnedAchievements": 3,
+      "earnedAchievements": 12,
       "totalAchievements": 35,
-      "achievementPercent": 9,
-      "playtimeHours": 0.83,
+      "achievementPercent": 34,
+      "playtimeHours": 3.57,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 0.83
+      "achievementsPlaytimeHours": 3.57,
+      "popThresholdMetAt": "2026-11-23T16:38:58.921702+00:00"
     },
     {
       "username": "Wintermute101",
@@ -35922,7 +35924,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 180.97,
+      "playtimeHours": 181.75,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -42837,7 +42839,7 @@
       "appId": 2623190,
       "title": "The Elder Scrolls IV: Oblivion Remast...",
       "progressUrl": "https://steamcommunity.com/profiles/76561197975039366/stats/2623190/achievements/",
-      "playtimeHours": 4.77,
+      "playtimeHours": 9.92,
       "visible": true,
       "earnedAchievements": 6,
       "totalAchievements": 60,
@@ -42846,7 +42848,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 4.77,
+      "achievementsPlaytimeHours": 9.92,
       "popThresholdMetAt": "2026-11-22T13:41:30.075439+00:00"
     },
     {
@@ -71416,18 +71418,18 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-11-22T13:40:25.679334+00:00",
+  "libraryUpdatedAt": "2026-11-23T16:37:52.252525+00:00",
   "libraryStats": {
-    "durationSeconds": 8.93,
+    "durationSeconds": 11.02,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14633
+    "totalPlaytimeRows": 14634
   },
   "stats": {
-    "durationSeconds": 73.33,
+    "durationSeconds": 77.71,
     "targetWins": 2417,
     "uniqueProgressTargets": 2412,
     "libraryPlaytimeHits": 2403,
