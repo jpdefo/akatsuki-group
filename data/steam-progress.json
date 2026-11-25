@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T16:34:56.929998+00:00",
+  "updatedAt": "2026-11-25T16:17:54.012988+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -6660,7 +6660,7 @@
       "appId": 1771300,
       "title": "Kingdom Come: Deliverance II",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1771300/achievements/",
-      "playtimeHours": 6.3,
+      "playtimeHours": 6.95,
       "visible": true,
       "earnedAchievements": 2,
       "totalAchievements": 83,
@@ -6669,7 +6669,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 6.3
+      "achievementsPlaytimeHours": 6.95
     },
     {
       "username": "burntreynolds444",
@@ -27499,16 +27499,16 @@
       "appId": 4570720,
       "title": "DragonSword : Awakening",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/4570720/achievements/",
-      "playtimeHours": 8.97,
+      "playtimeHours": 13.35,
       "visible": true,
-      "earnedAchievements": 1,
+      "earnedAchievements": 2,
       "totalAchievements": 60,
-      "achievementPercent": 2,
+      "achievementPercent": 3,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 8.97
+      "achievementsPlaytimeHours": 13.35
     },
     {
       "username": "Millsshogun",
@@ -28411,16 +28411,16 @@
       "appId": 3681010,
       "title": "Nioh 3",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/3681010/achievements/",
-      "playtimeHours": 12.93,
+      "playtimeHours": 20.08,
       "visible": true,
-      "earnedAchievements": 13,
+      "earnedAchievements": 15,
       "totalAchievements": 76,
-      "achievementPercent": 17,
+      "achievementPercent": 20,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 12.93,
+      "achievementsPlaytimeHours": 20.08,
       "popThresholdMetAt": "2026-11-23T16:38:58.921572+00:00"
     },
     {
@@ -34758,15 +34758,15 @@
       "title": "Strangeland",
       "progressUrl": "https://steamcommunity.com/profiles/76561198039764534/stats/1369520/achievements/",
       "visible": true,
-      "earnedAchievements": 4,
+      "earnedAchievements": 15,
       "totalAchievements": 22,
-      "achievementPercent": 18,
-      "playtimeHours": 1.4,
+      "achievementPercent": 68,
+      "playtimeHours": 3.82,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 1.4,
+      "achievementsPlaytimeHours": 3.82,
       "popThresholdMetAt": "2026-06-26T07:11:08.801068+00:00"
     },
     {
@@ -35924,7 +35924,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 181.75,
+      "playtimeHours": 183.18,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -71412,32 +71412,39 @@
       "hltbHours": null,
       "matchedTitle": "",
       "url": ""
+    },
+    {
+      "title": "Tomb Raider: Legacy of Atlantis",
+      "appId": 3558670,
+      "hltbHours": null,
+      "matchedTitle": "",
+      "url": ""
     }
   ],
   "steamApiEnabled": true,
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-11-24T16:33:54.875321+00:00",
+  "libraryUpdatedAt": "2026-11-25T16:16:47.470033+00:00",
   "libraryStats": {
-    "durationSeconds": 6.04,
+    "durationSeconds": 10.43,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14636
+    "totalPlaytimeRows": 14637
   },
   "stats": {
-    "durationSeconds": 68.11,
+    "durationSeconds": 76.98,
     "targetWins": 2417,
     "uniqueProgressTargets": 2412,
     "libraryPlaytimeHits": 2403,
-    "cachedReuses": 2354,
-    "achievementSuccesses": 13,
+    "cachedReuses": 2359,
+    "achievementSuccesses": 8,
     "achievementErrors": 45,
     "cachedFallbacks": 45,
     "hltbTitlesRequested": 1301,
-    "hltbResultsAvailable": 4057
+    "hltbResultsAvailable": 4058
   }
 }
