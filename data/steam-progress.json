@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T16:17:54.012988+00:00",
+  "updatedAt": "2026-11-26T15:54:19.481782+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -2994,7 +2994,7 @@
       "appId": 3017860,
       "title": "DOOM: The Dark Ages",
       "progressUrl": "https://steamcommunity.com/profiles/76561198295302795/stats/3017860/achievements/",
-      "playtimeHours": 3.35,
+      "playtimeHours": 3.43,
       "visible": true,
       "earnedAchievements": 6,
       "totalAchievements": 38,
@@ -3003,7 +3003,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 3.35
+      "achievementsPlaytimeHours": 3.43
     },
     {
       "username": "BojanNS987",
@@ -6660,7 +6660,7 @@
       "appId": 1771300,
       "title": "Kingdom Come: Deliverance II",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1771300/achievements/",
-      "playtimeHours": 6.95,
+      "playtimeHours": 10.97,
       "visible": true,
       "earnedAchievements": 2,
       "totalAchievements": 83,
@@ -6669,7 +6669,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 6.95
+      "achievementsPlaytimeHours": 10.97
     },
     {
       "username": "burntreynolds444",
@@ -7191,7 +7191,7 @@
       "appId": 3321460,
       "title": "Crimson Desert Enhanced",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/3321460/achievements/",
-      "playtimeHours": 208.3,
+      "playtimeHours": 208.77,
       "visible": true,
       "earnedAchievements": 3,
       "totalAchievements": 41,
@@ -7200,7 +7200,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 208.3
+      "achievementsPlaytimeHours": 208.77
     },
     {
       "username": "burntreynolds444",
@@ -7816,12 +7816,12 @@
       "earnedAchievements": 32,
       "totalAchievements": 34,
       "achievementPercent": 94,
-      "playtimeHours": 166.35,
+      "playtimeHours": 166.75,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 166.35,
+      "achievementsPlaytimeHours": 166.75,
       "popThresholdMetAt": "2026-06-26T07:11:08.797952+00:00"
     },
     {
@@ -27499,16 +27499,16 @@
       "appId": 4570720,
       "title": "DragonSword : Awakening",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/4570720/achievements/",
-      "playtimeHours": 13.35,
+      "playtimeHours": 14.08,
       "visible": true,
-      "earnedAchievements": 2,
+      "earnedAchievements": 4,
       "totalAchievements": 60,
-      "achievementPercent": 3,
+      "achievementPercent": 7,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 13.35
+      "achievementsPlaytimeHours": 14.08
     },
     {
       "username": "Millsshogun",
@@ -28411,16 +28411,16 @@
       "appId": 3681010,
       "title": "Nioh 3",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/3681010/achievements/",
-      "playtimeHours": 20.08,
+      "playtimeHours": 22.92,
       "visible": true,
-      "earnedAchievements": 15,
+      "earnedAchievements": 19,
       "totalAchievements": 76,
-      "achievementPercent": 20,
+      "achievementPercent": 25,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 20.08,
+      "achievementsPlaytimeHours": 22.92,
       "popThresholdMetAt": "2026-11-23T16:38:58.921572+00:00"
     },
     {
@@ -35924,7 +35924,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 183.18,
+      "playtimeHours": 184.45,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -38827,12 +38827,12 @@
       "earnedAchievements": 31,
       "totalAchievements": 35,
       "achievementPercent": 89,
-      "playtimeHours": 990.47,
+      "playtimeHours": 993.23,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 990.47,
+      "achievementsPlaytimeHours": 993.23,
       "popThresholdMetAt": "2026-06-26T07:11:08.801512+00:00"
     },
     {
@@ -71425,23 +71425,23 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-11-25T16:16:47.470033+00:00",
+  "libraryUpdatedAt": "2026-11-26T15:53:17.229632+00:00",
   "libraryStats": {
-    "durationSeconds": 10.43,
+    "durationSeconds": 10.04,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14637
+    "totalPlaytimeRows": 14638
   },
   "stats": {
-    "durationSeconds": 76.98,
+    "durationSeconds": 72.3,
     "targetWins": 2417,
     "uniqueProgressTargets": 2412,
     "libraryPlaytimeHits": 2403,
-    "cachedReuses": 2359,
-    "achievementSuccesses": 8,
+    "cachedReuses": 2356,
+    "achievementSuccesses": 11,
     "achievementErrors": 45,
     "cachedFallbacks": 45,
     "hltbTitlesRequested": 1301,

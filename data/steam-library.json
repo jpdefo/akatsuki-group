@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T16:16:47.470033+00:00",
+  "updatedAt": "2026-11-26T15:53:17.229632+00:00",
   "apiEnabled": true,
   "refreshedScope": "all",
   "refreshedMonth": null,
@@ -19,7 +19,7 @@
       "steamId": "76561198073410742",
       "gamesVisible": true,
       "playtimeVisible": true,
-      "gameCount": 10485,
+      "gameCount": 10486,
       "error": null
     },
     {
@@ -28,7 +28,7 @@
       "steamId": "76561198106145311",
       "gamesVisible": true,
       "playtimeVisible": true,
-      "gameCount": 18295,
+      "gameCount": 18296,
       "error": null
     },
     {
@@ -4497,8 +4497,8 @@
       "username": "BojanNS987",
       "steamProfile": "https://steamcommunity.com/profiles/76561198295302795",
       "appId": 3017860,
-      "playtimeMinutes": 201,
-      "playtimeHours": 3.35,
+      "playtimeMinutes": 206,
+      "playtimeHours": 3.43,
       "source": "steam-web-api"
     },
     {
@@ -20752,6 +20752,14 @@
     {
       "username": "burntreynolds444",
       "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
+      "appId": 1157390,
+      "playtimeMinutes": 0,
+      "playtimeHours": 0.0,
+      "source": "steam-web-api"
+    },
+    {
+      "username": "burntreynolds444",
+      "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
       "appId": 1158310,
       "playtimeMinutes": 2020,
       "playtimeHours": 33.67,
@@ -22641,8 +22649,8 @@
       "username": "burntreynolds444",
       "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
       "appId": 1771300,
-      "playtimeMinutes": 417,
-      "playtimeHours": 6.95,
+      "playtimeMinutes": 658,
+      "playtimeHours": 10.97,
       "source": "steam-web-api"
     },
     {
@@ -23473,8 +23481,8 @@
       "username": "burntreynolds444",
       "steamProfile": "https://steamcommunity.com/profiles/76561198106145311",
       "appId": 3321460,
-      "playtimeMinutes": 12498,
-      "playtimeHours": 208.3,
+      "playtimeMinutes": 12526,
+      "playtimeHours": 208.77,
       "source": "steam-web-api"
     },
     {
@@ -30409,8 +30417,8 @@
       "username": "chOOkity",
       "steamProfile": "https://steamcommunity.com/profiles/76561197994366772",
       "appId": 1097150,
-      "playtimeMinutes": 9981,
-      "playtimeHours": 166.35,
+      "playtimeMinutes": 10005,
+      "playtimeHours": 166.75,
       "source": "steam-web-api"
     },
     {
@@ -36809,8 +36817,8 @@
       "username": "Drain",
       "steamProfile": "https://steamcommunity.com/profiles/76561197970556600",
       "appId": 1808500,
-      "playtimeMinutes": 31250,
-      "playtimeHours": 520.83,
+      "playtimeMinutes": 31418,
+      "playtimeHours": 523.63,
       "source": "steam-web-api"
     },
     {
@@ -47545,8 +47553,8 @@
       "username": "Horseflesh",
       "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
       "appId": 784080,
-      "playtimeMinutes": 18657,
-      "playtimeHours": 310.95,
+      "playtimeMinutes": 18672,
+      "playtimeHours": 311.2,
       "source": "steam-web-api"
     },
     {
@@ -48617,8 +48625,8 @@
       "username": "Horseflesh",
       "steamProfile": "https://steamcommunity.com/profiles/76561197971221929",
       "appId": 1361210,
-      "playtimeMinutes": 155157,
-      "playtimeHours": 2585.95,
+      "playtimeMinutes": 155158,
+      "playtimeHours": 2585.97,
       "source": "steam-web-api"
     },
     {
@@ -76521,8 +76529,8 @@
       "username": "leniu",
       "steamProfile": "https://steamcommunity.com/profiles/76561198092676316",
       "appId": 4570720,
-      "playtimeMinutes": 801,
-      "playtimeHours": 13.35,
+      "playtimeMinutes": 845,
+      "playtimeHours": 14.08,
       "source": "steam-web-api"
     },
     {
@@ -79025,8 +79033,8 @@
       "username": "Millsshogun",
       "steamProfile": "https://steamcommunity.com/profiles/76561198075996214",
       "appId": 3681010,
-      "playtimeMinutes": 1205,
-      "playtimeHours": 20.08,
+      "playtimeMinutes": 1375,
+      "playtimeHours": 22.92,
       "source": "steam-web-api"
     },
     {
@@ -96713,8 +96721,8 @@
       "username": "Thedogma",
       "steamProfile": "https://steamcommunity.com/profiles/76561198011705129",
       "appId": 2552430,
-      "playtimeMinutes": 3245,
-      "playtimeHours": 54.08,
+      "playtimeMinutes": 3347,
+      "playtimeHours": 55.78,
       "source": "steam-web-api"
     },
     {
@@ -100881,8 +100889,8 @@
       "username": "Wintermute101",
       "steamProfile": "https://steamcommunity.com/profiles/76561198039764534",
       "appId": 2868840,
-      "playtimeMinutes": 10991,
-      "playtimeHours": 183.18,
+      "playtimeMinutes": 11067,
+      "playtimeHours": 184.45,
       "source": "steam-web-api"
     },
     {
@@ -108193,8 +108201,8 @@
       "username": "Youdontknow",
       "steamProfile": "https://steamcommunity.com/profiles/76561198121640255",
       "appId": 678950,
-      "playtimeMinutes": 59428,
-      "playtimeHours": 990.47,
+      "playtimeMinutes": 59594,
+      "playtimeHours": 993.23,
       "source": "steam-web-api"
     },
     {
@@ -117312,12 +117320,12 @@
   ],
   "source": "steam-web-api",
   "stats": {
-    "durationSeconds": 10.43,
+    "durationSeconds": 10.04,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
     "missingApiProfiles": 0,
     "totalProfiles": 23,
-    "totalPlaytimeRows": 14637
+    "totalPlaytimeRows": 14638
   }
 }
