@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T15:54:19.481782+00:00",
+  "updatedAt": "2026-11-27T15:42:36.929521+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -6660,16 +6660,16 @@
       "appId": 1771300,
       "title": "Kingdom Come: Deliverance II",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1771300/achievements/",
-      "playtimeHours": 10.97,
+      "playtimeHours": 18.23,
       "visible": true,
-      "earnedAchievements": 2,
+      "earnedAchievements": 3,
       "totalAchievements": 83,
-      "achievementPercent": 2,
+      "achievementPercent": 4,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 10.97
+      "achievementsPlaytimeHours": 18.23
     },
     {
       "username": "burntreynolds444",
@@ -21113,7 +21113,7 @@
       "appId": 2909400,
       "title": "FINAL FANTASY VII REBIRTH",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/2909400/achievements/",
-      "playtimeHours": 0.0,
+      "playtimeHours": 0.08,
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 61,
@@ -21122,7 +21122,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.0
+      "achievementsPlaytimeHours": 0.08
     },
     {
       "username": "Koalala",
@@ -27499,16 +27499,16 @@
       "appId": 4570720,
       "title": "DragonSword : Awakening",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/4570720/achievements/",
-      "playtimeHours": 14.08,
+      "playtimeHours": 18.13,
       "visible": true,
-      "earnedAchievements": 4,
+      "earnedAchievements": 6,
       "totalAchievements": 60,
-      "achievementPercent": 7,
+      "achievementPercent": 10,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 14.08
+      "achievementsPlaytimeHours": 18.13
     },
     {
       "username": "Millsshogun",
@@ -28411,16 +28411,16 @@
       "appId": 3681010,
       "title": "Nioh 3",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/3681010/achievements/",
-      "playtimeHours": 22.92,
+      "playtimeHours": 27.28,
       "visible": true,
-      "earnedAchievements": 19,
+      "earnedAchievements": 20,
       "totalAchievements": 76,
-      "achievementPercent": 25,
+      "achievementPercent": 26,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 22.92,
+      "achievementsPlaytimeHours": 27.28,
       "popThresholdMetAt": "2026-11-23T16:38:58.921572+00:00"
     },
     {
@@ -35924,7 +35924,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 184.45,
+      "playtimeHours": 185.92,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -71425,9 +71425,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-11-26T15:53:17.229632+00:00",
+  "libraryUpdatedAt": "2026-11-27T15:41:31.673509+00:00",
   "libraryStats": {
-    "durationSeconds": 10.04,
+    "durationSeconds": 10.36,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71436,12 +71436,12 @@
     "totalPlaytimeRows": 14638
   },
   "stats": {
-    "durationSeconds": 72.3,
+    "durationSeconds": 75.62,
     "targetWins": 2417,
     "uniqueProgressTargets": 2412,
     "libraryPlaytimeHits": 2403,
-    "cachedReuses": 2356,
-    "achievementSuccesses": 11,
+    "cachedReuses": 2359,
+    "achievementSuccesses": 8,
     "achievementErrors": 45,
     "cachedFallbacks": 45,
     "hltbTitlesRequested": 1301,
