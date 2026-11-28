@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T15:42:36.929521+00:00",
+  "updatedAt": "2026-11-28T14:38:41.163955+00:00",
   "progress": [
     {
       "username": "BojanNS987",
@@ -6660,16 +6660,16 @@
       "appId": 1771300,
       "title": "Kingdom Come: Deliverance II",
       "progressUrl": "https://steamcommunity.com/profiles/76561198106145311/stats/1771300/achievements/",
-      "playtimeHours": 18.23,
+      "playtimeHours": 23.58,
       "visible": true,
-      "earnedAchievements": 3,
+      "earnedAchievements": 4,
       "totalAchievements": 83,
-      "achievementPercent": 4,
+      "achievementPercent": 5,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 18.23
+      "achievementsPlaytimeHours": 23.58
     },
     {
       "username": "burntreynolds444",
@@ -9651,15 +9651,15 @@
       "title": "RoboCop: Rogue City - Unfinished Business",
       "progressUrl": "https://steamcommunity.com/profiles/76561197994366772/stats/3527760/achievements/",
       "visible": true,
-      "earnedAchievements": 8,
+      "earnedAchievements": 10,
       "totalAchievements": 25,
-      "achievementPercent": 32,
-      "playtimeHours": 3.67,
+      "achievementPercent": 40,
+      "playtimeHours": 4.43,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 3.67,
+      "achievementsPlaytimeHours": 4.43,
       "popThresholdMetAt": "2026-06-30T07:11:37.904388+00:00"
     },
     {
@@ -20494,12 +20494,12 @@
       "earnedAchievements": 29,
       "totalAchievements": 63,
       "achievementPercent": 46,
-      "playtimeHours": 18.88,
+      "playtimeHours": 18.9,
       "error": null,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
-      "achievementsPlaytimeHours": 18.88,
+      "achievementsPlaytimeHours": 18.9,
       "popThresholdMetAt": "2026-06-26T07:11:08.799422+00:00"
     },
     {
@@ -21113,7 +21113,7 @@
       "appId": 2909400,
       "title": "FINAL FANTASY VII REBIRTH",
       "progressUrl": "https://steamcommunity.com/profiles/76561198065466175/stats/2909400/achievements/",
-      "playtimeHours": 0.08,
+      "playtimeHours": 0.78,
       "visible": true,
       "earnedAchievements": 0,
       "totalAchievements": 61,
@@ -21122,7 +21122,7 @@
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 0.08
+      "achievementsPlaytimeHours": 0.78
     },
     {
       "username": "Koalala",
@@ -27499,16 +27499,16 @@
       "appId": 4570720,
       "title": "DragonSword : Awakening",
       "progressUrl": "https://steamcommunity.com/profiles/76561198092676316/stats/4570720/achievements/",
-      "playtimeHours": 18.13,
+      "playtimeHours": 25.47,
       "visible": true,
-      "earnedAchievements": 6,
+      "earnedAchievements": 12,
       "totalAchievements": 60,
-      "achievementPercent": 10,
+      "achievementPercent": 20,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 18.13
+      "achievementsPlaytimeHours": 25.47
     },
     {
       "username": "Millsshogun",
@@ -28411,16 +28411,16 @@
       "appId": 3681010,
       "title": "Nioh 3",
       "progressUrl": "https://steamcommunity.com/profiles/76561198075996214/stats/3681010/achievements/",
-      "playtimeHours": 27.28,
+      "playtimeHours": 34.18,
       "visible": true,
-      "earnedAchievements": 20,
+      "earnedAchievements": 26,
       "totalAchievements": 76,
-      "achievementPercent": 26,
+      "achievementPercent": 34,
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
       "gamesVisible": true,
       "error": null,
-      "achievementsPlaytimeHours": 27.28,
+      "achievementsPlaytimeHours": 34.18,
       "popThresholdMetAt": "2026-11-23T16:38:58.921572+00:00"
     },
     {
@@ -35924,7 +35924,7 @@
       "earnedAchievements": 0,
       "totalAchievements": 0,
       "achievementPercent": 0,
-      "playtimeHours": 185.92,
+      "playtimeHours": 187.07,
       "error": "HTTP Error 500: Internal Server Error",
       "playtimeSource": "steam-web-api",
       "playtimeVisible": true,
@@ -71425,9 +71425,9 @@
   "activeOnly": true,
   "refreshedMonth": null,
   "refreshedScope": "all",
-  "libraryUpdatedAt": "2026-11-27T15:41:31.673509+00:00",
+  "libraryUpdatedAt": "2026-11-28T14:37:41.410448+00:00",
   "libraryStats": {
-    "durationSeconds": 10.36,
+    "durationSeconds": 6.41,
     "targetProfiles": 23,
     "refreshedProfiles": 23,
     "errorProfiles": 0,
@@ -71436,12 +71436,12 @@
     "totalPlaytimeRows": 14638
   },
   "stats": {
-    "durationSeconds": 75.62,
+    "durationSeconds": 66.17,
     "targetWins": 2417,
     "uniqueProgressTargets": 2412,
     "libraryPlaytimeHits": 2403,
-    "cachedReuses": 2359,
-    "achievementSuccesses": 8,
+    "cachedReuses": 2357,
+    "achievementSuccesses": 10,
     "achievementErrors": 45,
     "cachedFallbacks": 45,
     "hltbTitlesRequested": 1301,
